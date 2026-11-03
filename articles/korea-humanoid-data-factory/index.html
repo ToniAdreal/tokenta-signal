@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据 — Tokenta Signal</title><meta name="description" content="韩国科学技术信息通信部 11 月 3 日在大田 KIMM 总部为首个双足人形机器人数据工厂揭幕，KIMM 与 ETRI 共建，首批 12 台远程操控机器人采集任务数据，计划扩至 25 台，2027 年底起分阶段向企业、高校与研究所开放；该项目属 K-Moonshot 人形任务，政府已为 2030 年前的人形产业划出 2.3 万亿韩元（约 17 亿美元）。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 17:50 UTC</span><span><span class="live">● LIVE</span> ISSUE 178 · TUTOR × ROBOTICS × SERIES B · Tutor Intelligence 公司公告</span><span><span class="live">● LIVE</span> ISSUE 177 · GOOGLE × MANDIANT × LLMJACKING · Google Cloud 官方博客报告</span><span><span class="live">● LIVE</span> ISSUE 176 · KOREA × HUMANOID × DATA FACTORY · Seoul Economic Daily 报道</span><span><span class="live">● LIVE</span> ISSUE 175 · OPENAI × CHATGPT × SEARCH · Big Technology 访谈报道</span><span><span class="live">● LIVE</span> ISSUE 174 · NVIDIA × ATTRIBUTION × AI INFRASTRUCTURE · NVIDIA 官方技术博客</span><span><span class="live">● LIVE</span> ISSUE 173 · CISCO TALOS × VOLTA × AI MALWARE · Cisco Talos 官方报告</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
+<h1>韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据</h1>
+<p class="deck">韩国科学技术信息通信部 11 月 3 日在大田 KIMM 总部为首个双足人形机器人数据工厂揭幕，KIMM 与 ETRI 共建，首批 12 台远程操控机器人采集任务数据，计划扩至 25 台，2027 年底起分阶段向企业、高校与研究所开放；该项目属 K-Moonshot 人形任务，政府已为 2030 年前的人形产业划出 2.3 万亿韩元。</p>
+<div class="meta">ISSUE 176 · 2026-11-03 · SOURCE / Seoul Economic Daily 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">KOREA × HUMANOID × DATA FACTORY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE OPENING：韩国科学技术信息通信部 11 月 3 日在大田 KIMM 总部为 AI Humanoid Data Factory 揭幕，首批 12 台双足人形机器人投入任务数据采集。</li><li><b>02</b>THE CONFIRMATION：Seoul Economic Daily 与 Aju Press 两篇 11 月 3 日报道核对揭幕时间、规模、扩产计划与开放时间表一致。</li><li><b>03</b>THE WATCHPOINT：KIMM 自研人形机器人 KAIROS 1.0 版是否按期在 2027 年 4 月亮相，以及工厂 2027 年底分阶段开放的首批外部使用者与数据许可条款。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>韩国科学技术信息通信部 11 月 3 日在大田的韩国机械研究院（KIMM）总部为 AI Humanoid Data Factory 揭幕。该设施由 KIMM 与电子通信研究院（ETRI）共建，占地约 1000 平方米、上下两层，首批运行 12 台双足人形机器人，计划扩至 25 台。</p><p>揭幕演示里，研究人员远程操控人形机器人完成取冰箱物品、处理衣物、整理沙发、操作车内按钮与拉杆等任务。每一次动作都被记录下来，用于训练视觉语言动作模型，再把训好的模型装回机器人实测，实测数据又回流训练，形成采集与训练的闭环。</p><p>这个项目的直接对标是中国。Interact Analysis 的统计称，截至 4 月底中国已有至少 90 个人形数据采集与训练中心在运行或在建，其中至少 64 个已经运转，13 个部署超过 100 台机器人。上海 10 月底称已在浦东建成全球首个异构人形具身智能训练场，采集真实机器人多模态数据超过 5 万小时。</p><p>韩国政府把这座工厂放进 K-Moonshot 计划的人形任务线。企划财政部 8 月 27 日已为 2030 年前的人形产业划出 2.3 万亿韩元（约 17 亿美元），包括采购 1080 台国产人形机器人、把核心零部件国产化率从约 45% 提至 80%。KIMM 自研人形机器人 KAIROS 的 1.0 版定于 2027 年 4 月亮相，工厂则在 2027 年底起分阶段向企业、高校与研究所开放。</p>
+<h2><span class="en">WHY IT MATTERS</span>人形竞赛的瓶颈不在本体，在数据</h2><p>人形机器人硬件已经不缺玩家，缺的是让它学会干活的数据。语言模型有互联网文本可学，物理世界没有现成的记录可抄，每一段抓取、开门、叠衣的动作都得由真机在真环境里做出来。谁先把采集规模化，谁的模型就先学会通用任务，这就是韩国把数据工厂定性为国家级基础设施的原因。</p><p>韩国的打法是国家队先行：政府出资、研究院建厂、数据先在体系内循环，2027 年底再向产业开放。这个节奏比中国慢，中国已有 60 多个中心在运转，单中心百台规模并不罕见。韩国的 12 台起步更像一张入场券，真正的考验在扩到 25 台之后，采集速度能不能追上，以及 KAIROS 能不能在 2027 年 4 月拿出可用的 1.0 版。</p><h2><span class="en">WHY IT MATTERS</span>开放时间表比揭幕本身更值得盯</h2><p>工厂揭幕只是第一步，数据归谁、用何种许可、外部团队能否拿到原始轨迹数据，这些都没公布。韩国官方表述是分阶段向企业、高校与研究所开放使用设施，这与公开数据集是两回事。前者是预约进场，后者是下载即用，产业外溢速度差一个量级。</p><p>对中国读者而言，这条新闻的参照意义在方法论：当对手用国家预算把数据采集工业化，单点模型突破的新闻价值就让位于采集产能。下一条可验证的进展不在发布会，而在 2027 年的两个节点：KAIROS 1.0 是否按期交付，以及工厂开放后首批外部团队是谁。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>数据工厂才是人形竞赛的真实战场</h2><p>Tokenta Signal 判断：这条新闻的正确读法是把揭幕当成起点。12 台机器人、1000 平方米都不大，真正的信息在韩国承认了一件事：人形智能的胜负手在任务数据的规模化生产，不在单台机器人的演示效果。中国 60 多个中心在运转的对照摆在那里，韩国的追赶时钟从 11 月 3 日开始计时，2027 年 4 月的 KAIROS 1.0 与年底的开放名单是两次可验证的阅卷。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Seoul Economic Daily 11 月 3 日报道与 Aju Press 11 月 3 日报道为准，两篇均已直接打开核验，核心数字一致。韩国首家为 KIMM 与科学技术信息通信部口径，指韩国境内首个专用于双足人形机器人的数据生产设施。揭幕演示中的机器人由人远程操控，演示任务不等于已实现自主作业。2027 年底起向外部开放为计划时间表，数据与模型的公开程度与许可条款尚未公布。本文只做摘要与链接，不转载报道全文与图片。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>Seoul Economic Daily 报道页与 Aju Press 报道页均已直接打开核验，揭幕时间、12 台首批规模、约 1000 平方米、扩至 25 台、2027 年底分阶段开放等核心事实两边一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots" target="_blank" rel="noopener">Korea Opens First Data Factory to Train Humanoid Robots ↗</a><br>sedaily.com · 2026-11-03 · Seoul Economic Daily 报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Seoul Economic Daily 报道<br><a href="https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots" target="_blank" rel="noopener">https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots</a></li><li>Aju Press 报道<br><a href="https://www.ajupress.com//view/20261103143728182" target="_blank" rel="noopener">https://www.ajupress.com//view/20261103143728182</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">欧盟法院顾问：聊天机器人复用新闻可能侵权，训练除外</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">特斯拉无人驾驶出租车开进沃斯堡，第七城</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta的人形机器人，三个月就攒出来了</a> <span class="meta">ISSUE 138</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
