@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAI 自研 Git 后端 Pando：推送中位延迟降近 5 倍，日送出近 1 PB 数据 — Tokenta Signal</title><meta name="description" content="OpenAI 11 月 2 日公开自研 Git 后端 Pando：保留 Git 协议与客户端、只重建服务端，现已承载整个 monorepo 的开发。官方自报推送中位延迟降近 5 倍，每天送出近 1 PB Git 数据，单小时峰值超 57 TB；系统 10 周内由 Codex 智能体团队协助建成，但性能数字未经第三方验证，且暂不对外提供。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 17:04 UTC</span><span><span class="live">● LIVE</span> ISSUE 170 · OPENAI × DRISCOLL × NATIONAL SECURITY · Reuters 独立报道</span><span><span class="live">● LIVE</span> ISSUE 169 · ANTHROPIC × FLASHPROVE × PROVABLE INFERENCE · Anthropic 官方研究文章</span><span><span class="live">● LIVE</span> ISSUE 168 · OPENAI × PANDO × CODE AGENTS · OpenAI 官方工程博客</span><span><span class="live">● LIVE</span> ISSUE 167 · OPENAI × GRID PROTECTORS × ENERGY · OpenAI 官方公告</span><span><span class="live">● LIVE</span> ISSUE 166 · KASPERSKY × CYBERSTRIKEAI × AGENT ATTACK · 卡巴斯基 Securelist 官方报告</span><span><span class="live">● LIVE</span> ISSUE 165 · OPENAI × CATHEDRAL × BUG BOUNTY · OpenAI 官方博客</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>OpenAI 自研 Git 后端 Pando：推送中位延迟降近 5 倍，日送出近 1 PB 数据</h1>
+<p class="deck">OpenAI 11 月 2 日公开自研 Git 后端 Pando：保留 Git 协议只重建服务端，已承载整个 monorepo，推送中位延迟自报降近 5 倍，日送出近 1 PB 数据，但数字未经第三方验证，暂不对外提供。</p>
+<div class="meta">ISSUE 168 · 2026-11-02 · SOURCE / OpenAI 官方工程博客 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">OPENAI × PANDO × CODE AGENTS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：OpenAI 11 月 2 日发表官方工程博客，公开 Pando 的设计与生产数据。</li><li><b>02</b>THE CONFIRMATION：ExplainX 同日独立报道，核对近 5 倍延迟、近 1 PB 日流量与 10 周开发周期一致。</li><li><b>03</b>THE WATCHPOINT：Pando 是否对外提供、第三方能否复现其性能数据，以及依赖全局快照的工具如何适配松弛一致性。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>OpenAI 11 月 2 日在官方工程博客发表《Scaling Git at OpenAI》，公开自研 Git 后端 Pando：保留 Git 协议与客户端，只重建服务端，现已承载公司整个 monorepo 的开发。</p><p>动因是 Codex 带来的并行开发量：一位工程师可同时推进多个改动，每个推送触发多个 CI 任务拉取同一提交，旧系统出现推送与拉取变慢、合并失败，可靠性一度跌破 90%。</p><p>Pando 的两处取舍是放弃仓库级全局一致性与每位客户端专属 packfile：各分支更新独立协调，跨分支读取不保证同一时刻快照；服务端复用已存储的 packfile 供多客户端拉取，客户端可能多下载已有的对象。</p><p>官方自报的生产数据：推送中位延迟降近 5 倍（约 80%），每天送出近 1 PB Git 数据，单小时峰值超过 57 TB packfile，99% 以上字节来自本地磁盘缓存，2026 年 4 月起承载生产流量。</p><p>Pando 从立项到生产只用了约 10 周：核心由一位工程师设计，Codex 智能体团队负责实现，少数工程师部署，并用 Lean 与 TLA+ 形式化方法找 bug；部分客户端改进已回馈 Git 上游。</p>
+<h2><span class="en">WHY IT MATTERS</span>智能体先把版本控制写爆了</h2><p>Pando 的真正信号不在 Git 本身，而在工作量结构的变化：一个人加多个智能体会话，行为上等于一支小团队，短命分支与重复拉取成倍增加。旧 Git 服务端的全局协调点先成为瓶颈，而不是 Git 的对象模型。</p><p>OpenAI 的解法是保住接口、换掉服务端，让人类与智能体都不必重新学习工具。这条路线会被其他大规模工程团队复制：先问自家 Git 托管的推送延迟与合并失败率，而不是先换版本控制系统。</p><h2><span class="en">WHY IT MATTERS</span>数字是自报，取舍是公开的</h2><p>近 5 倍延迟、近 1 PB 日流量、57 TB 峰值小时，全部来自 OpenAI 对自家系统的描述，没有旧系统基线、硬件规格与误差范围，外部目前无法复现。交互式架构对比也明确标注为教学模型。</p><p>但取舍本身是公开且可验证的：跨分支读取不再是同一时刻快照，依赖全局快照的工具需要自行评估。Pando 是否对外提供仍是未知数，官方只说正在探索分享方式。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>接口不变，后端先行</h2><p>Tokenta Signal 判断：Pando 的信号不在又一个内部系统，而在智能体规模化之后，工程基础设施的瓶颈从模型能力移到了提交、拉取与合并的吞吐上。保住 Git 接口、只换服务端的选择，说明下一轮基建竞争拼的是让智能体无感扩容，而不是让人类换工具。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 OpenAI 官方工程博客与 ExplainX 独立报道为准；推送延迟、日数据量、峰值吞吐均为 OpenAI 自报的内部生产数据，未经第三方独立测量，交互式架构模拟为教学模型而非生产基准。Pando 目前仅供 OpenAI 内部使用，官方只说正在探索对外分享的方式，未公布产品、时间与价格。本文只做摘要与链接，不转载原文全文。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>OpenAI 官方工程博客与 ExplainX 独立报道双源确认，原文链接已打开验证。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://openai.com/index/scaling-git-at-openai" target="_blank" rel="noopener">Scaling Git at OpenAI ↗</a><br>openai.com · 2026-11-02 · OpenAI 官方工程博客</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>OpenAI 官方工程博客<br><a href="https://openai.com/index/scaling-git-at-openai" target="_blank" rel="noopener">https://openai.com/index/scaling-git-at-openai</a></li><li>ExplainX 独立报道<br><a href="https://explainx.ai/blog/openai-pando-git-backend-codex-monorepo-5x-faster-pushes-petabyte-per-day-2026" target="_blank" rel="noopener">https://explainx.ai/blog/openai-pando-git-backend-codex-monorepo-5x-faster-pushes-petabyte-per-day-2026</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-dan-driscoll-national-security/">OpenAI 请来前陆军部长 Driscoll：新设国家安全现代化高级顾问</a> <span class="meta">ISSUE 170</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-flashprove-provable-inference/">Anthropic 发布 FlashProve：给模型回答开密码学收据，证明是哪套权重算的</a> <span class="meta">ISSUE 169</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-grid-protectors-georgia/">OpenAI 推出 Grid Protectors：未来园区电网承压时让电，佐治亚试点最高可削 1000 MW</a> <span class="meta">ISSUE 167</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../kaspersky-cyberstrikeai-education/">大模型第一次实战带队入侵：卡巴斯基披露 CyberStrikeAI，3 天拿下学校域管理员</a> <span class="meta">ISSUE 166</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
