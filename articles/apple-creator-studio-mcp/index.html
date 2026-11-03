@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>苹果把文档，交给了外部AI助手 — Tokenta Signal</title><meta name="description" content="苹果宣布 Keynote、Pages 与 Numbers 11 月获内置 AI 助手，并通过 MCP 向外部智能体开放文档读写；Beta 版仅美国英语。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>苹果把文档，交给了外部AI助手</h1>
+<p class="deck">苹果 10 月 27 日宣布：Keynote、Pages 与 Numbers 将在 11 月获得内置 AI 助手，并通过 MCP 向外部智能体开放文档读写；助手为 Beta 版，仅美国英语。</p>
+<div class="meta">ISSUE 88 · 2026-10-27 · SOURCE / 苹果官方新闻稿 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">APPLE × AI AGENTS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">NOV</div><div class="lab">ARRIVES</div><div class="desc">Keynote、Pages、Numbers 与 Logic Pro 的助手上线时间，随 Creator Studio 更新免费提供给现有订阅用户。</div></div><div class="metric"><div class="num">$12.99/MO</div><div class="lab">SUBSCRIPTION</div><div class="desc">美国区 Creator Studio 订阅价，助手仅限订阅用户，免费版不包含。</div></div><div class="metric"><div class="num">US EN ONLY</div><div class="lab">LANGUAGE</div><div class="desc">助手 Beta 版的语言限制，MCP 支持则要求 macOS 27 及以上的 Mac。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCE：10 月 27 日，苹果发布 Creator Studio 更新新闻稿。</li><li><b>02</b>THE ASSISTANT：Keynote、Pages、Numbers 获得理解文档上下文的 Beta 助手。</li><li><b>03</b>THE PROTOCOL：MCP 支持让外部智能体在 macOS 27 的 Mac 上读写文档。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>10 月 27 日，苹果宣布 Creator Studio 更新：Keynote、Pages 与 Numbers 将在 11 月获得内置 AI 助手，另有 Logic Pro 助手、Pixelmator Pro 的 Generate Fill 与 Final Cut Pro 内置 MotionVFX 内容。</p><p>助手由苹果自研模型与 OpenAI 模型共同驱动，理解当前文档的上下文：在 Keynote 里设计与润色幻灯片，在 Pages 里起草与重组文字，在 Numbers 里计算、推荐图表并生成自定义表格。</p><p>更关键的一步是 MCP 支持：在 macOS 27 及以上的 Mac 上，外部 AI 助手可以通过 Model Context Protocol 读取、编辑文档并执行自动化操作。苹果的办公应用，第一次向外部智能体开放。</p>
+<h2><span class="en">THE CATCH-UP</span>苹果的助手，补的是落后三年的课</h2><p>在内置 AI 上，Keynote、Pages 与 Numbers 长期落后于微软 365 Copilot 与谷歌 Workspace 的 Gemini。苹果这次补课的方式不是自研到底，而是直接用上 OpenAI 的模型。</p><p>Siri 的 AI 对话记忆刚支持六种语言，文档助手却只支持美国英语。苹果的 AI 落地节奏，仍然是先英语、后全球。</p><h2><span class="en">THE PROTOCOL</span>MCP，比助手本身更重要</h2><p>助手只能服务苹果自己的用户，MCP 服务所有智能体。外部工具可以直接读写苹果文档，意味着文档不再是某个应用的私有领地，而成为智能体可以操作的工作面。</p><p>Keynote 同时新增 .keyx 开放格式：基于 JSON 的文件包，方便外部工具与开发者流程读取。格式开放与协议开放，是同一策略的两面。</p><h2><span class="en">THE PAYWALL</span>订阅墙，划定了受益人群</h2><p>助手只面向 Creator Studio 订阅用户：美国区每月 12.99 美元或每年 129 美元，新用户有一个月免费试用。免费版 Keynote、Pages 与 Numbers 不包含助手。</p><p>这是一次订阅价值的再定价：AI 功能正在从买断软件的附赠品，变成订阅服务的核心卖点。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>文档的下一层入口，是智能体不是菜单</h2><p>苹果把文档交给 MCP，等于承认一个现实：未来操作文档的不只是人，还有智能体。Tokenta Signal 的判断不变：办公软件的竞争，正在从功能清单转向谁的文档最容易被智能体操作。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：助手功能为 Beta 版，11 月随 Creator Studio 更新上架，仅限订阅用户；助手仅支持美国英语，MCP 支持仅限 Mac 的 macOS 27 及以上。具体上线日期苹果未公布。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认发布要点：苹果 10 月 27 日新闻稿宣布 Creator Studio 11 月更新，Keynote、Pages、Numbers 获 Beta 助手（苹果模型 + OpenAI），MCP 支持面向 macOS 27 及以上 Mac，助手仅美国英语。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.apple.com/hk/en/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/" target="_blank" rel="noopener">Apple Creator Studio adds powerful new AI features and even more creative tools ↗</a><br>apple.com · 2026-10-27 · 苹果官方新闻稿</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Apple Newsroom：Apple Creator Studio adds powerful new AI features and even more creative tools<br><a href="https://www.apple.com/hk/en/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/" target="_blank" rel="noopener">https://www.apple.com/hk/en/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/</a></li><li>MacRumors：Apple Updates Creator Studio With New Tools and AI Features<br><a href="https://www.macrumors.com/2026/10/27/apple-updates-creator-studio-ai-features/" target="_blank" rel="noopener">https://www.macrumors.com/2026/10/27/apple-updates-creator-studio-ai-features/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a> <span class="meta">ISSUE 145</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a> <span class="meta">ISSUE 142</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../marvell-lumentum-115b/">1150亿美元全股票，Marvell买下光模块巨头Lumentum</a> <span class="meta">ISSUE 141</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../doordash-agent-orders-hundreds/">几百单，对着十亿单，智能体购物还很小</a> <span class="meta">ISSUE 139</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

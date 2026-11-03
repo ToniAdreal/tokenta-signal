@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>韩国$35亿，主权从GPU货架开始 — Tokenta Signal</title><meta name="description" content="韩国将4.7万亿韩元（约$35亿）列入2027年预算案，启动frontier级国家模型计划，国会尚未批准。其中$26亿只够买1万张Nvidia Vera Rubin——主权从GPU货架开始。官方承认追不上美国，目标对标中国开源顶尖。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>韩国$35亿，主权从GPU货架开始</h1>
+<p class="deck">韩国把4.7万亿韩元（约$35亿）列入2027年预算案，启动frontier级国家模型计划。但$35亿里$26亿只够买1万张Nvidia Vera Rubin——所谓主权，第一步是先给美国芯片公司打钱。官方承认追不上美国巨头，目标是对标中国开源顶尖。</p>
+<div class="meta">ISSUE 52 · 2026-10-06 · SOURCE / Korea JoongAng Daily · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">SOVEREIGN AI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">₩4.7T</div><div class="lab">2027 BUDGET PROPOSAL</div><div class="desc">约$35亿美元，已列入2027年政府预算案，但国会尚未批准，仍是提案阶段。</div></div><div class="metric"><div class="num">₩3.5T</div><div class="lab">JUST FOR 10,000 CHIPS</div><div class="desc">约$26亿美元，部长原话：3.5万亿韩元&#x27;只够&#x27;买1万张Nvidia下半年发布的新卡。</div></div><div class="metric"><div class="num">260K</div><div class="lab">NVIDIA GPU DEAL</div><div class="desc">价值$98亿、到2030年交付，其中约5万张拨给政府/国家AI计算中心。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE SHOCK：4月Anthropic发布Claude Mythos 5，&#x27;Mythos Shock&#x27;触发韩国危机感。</li><li><b>02</b>THE PRICE TAG：7月部长发布会报价：3.5万亿韩元只够买1万张Vera Rubin。</li><li><b>03</b>THE CONFIRMATION：10月6日国会审计，裴庆勋确认frontier新计划，两赛道并行。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026年10月6日国会审计会上，科学技术信息通信部（MSIT）部长裴庆勋（Bae Kyung-hoon）亲自确认：韩国将启动一项全新的frontier级AI模型计划，预算4.7万亿韩元（约$35亿美元），已列入2027年政府预算案。注意：国会尚未批准，这仍是预算案阶段，不是已拨款。</p><p>钱怎么花，部长7月发布会就报过价：&#x27;Developing a frontier model would require about 3.5 trillion won just to purchase 10,000 of Nvidia&#x27;s new Vera Rubin chips.&#x27; 3.5万亿韩元（约$26亿美元）只够买1万张Nvidia下半年发布的新卡Vera Rubin，其余买训练数据，参与企业还必须配套等额私有资金。</p><p>这是韩国AI战略的&#x27;第二赛道&#x27;。原有&#x27;主权AI基础模型&#x27;项目是淘汰赛：最初5家公司分5300亿韩元（约$3.9亿），现剩LG AI Research、SK Telecom、Upstage等进入第三轮，年底决出2家。新计划另起炉灶——主权模型走&#x27;够用、公部门可用&#x27;，frontier计划的目标官方说得很实在：追不上美国巨头，对标中国开源顶尖模型掰手腕。</p><p>触发点叫&#x27;Mythos Shock&#x27;：Anthropic 4月发布Claude Mythos 5之后，裴庆勋说模型性能提升呈指数级，差距越拉越大，必须换个量级投资。而这套计划背后还有更大的拼图：2025年10月APEC期间韩国与Nvidia达成26万张GPU供应协议，价值$98亿，到2030年交付，其中约5万张拨给政府/国家AI计算中心。</p>
+<h2><span class="en">THE GPU BILL</span>3.5万亿只买卡：主权的第一张账单</h2><p>把预算拆开看，冲击力最强的是这个比例：$35亿里$26亿只买1万张美国芯片。所谓&#x27;国家定制模型&#x27;，第一步是先给Nvidia打钱。主权从GPU货架开始——这句话不是讽刺，是韩国预算案的字面意思。</p><p>更早的承诺已经把路铺好了：李在明政府承诺全国AI数据中心50,000+ GPU；APEC上26万张、$98亿的Nvidia协议签到2030年。4.7万亿韩元计划是这套国家算力拼图的&#x27;模型端&#x27;——硬件先行，模型随后。</p><p>但账不能这么算：10,000张Vera Rubin只是入场券。训练一个frontier级模型，电、数据、人才、试错成本全在后面。3.5万亿买卡只是第一张账单，后面还有的是账单。韩国这次是把&#x27;买不到主权&#x27;四个字写进了预算案：先承认依赖，再谈超越。</p><h2><span class="en">TWO TRACKS</span>淘汰赛+新赛道：官方承认追不上美国</h2><p>韩国这次诚实得反常。官方公开承认：frontier计划的目标不是追美国巨头，是和中国最强开源模型掰手腕。主权模型淘汰赛继续走&#x27;够用&#x27;路线——公部门能用、成本可控就行。</p><p>但淘汰赛本身已被业界质疑。Korea JoongAng Daily引用业内批评：&#x27;many in the industry also criticized the government&#x27;s attempt to pick AI models through competitive rounds as a failure.&#x27; 政府下场选模型，被批是&#x27;失败的尝试&#x27;——现在又要另起炉灶搞frontier赛道，等于官方承认第一条路走窄了。</p><p>国会审计会上裴庆勋的原话值得细品：&#x27;The sovereign model will stay on target, but we judged that a frontier AI project is additionally needed to tackle humanity&#x27;s unsolved problems and respond to cybersecurity threats.&#x27; 翻译：老的继续，新的加码——两条腿走路，免得一条腿瘸了全盘皆输。</p><h2><span class="en">AI FOR ALL</span>AI for All：全民免费不限量的阳谋</h2><p>配套野心比模型本身更大：&#x27;AI for All&#x27;免费不限量国民AI服务年底上线，要求至少50%跑在韩国国产模型上。主权模型淘汰赛的赢家，将成为这项全民服务的底座。</p><p>这招很高明：用国家级的流量入口给国产模型兜底。不管模型在国际基准上排第几，只要全民服务跑在上面，生态、使用数据、迭代飞轮就转起来了。这是把&#x27;主权&#x27;从论文指标变成了国民基础设施。</p><p>但风险也在这里：免费不限量意味着算力成本国家兜底。26万张GPU协议、4.7万亿预算、50%国产模型要求——这是一整套用财政换生态的打法。赌的是：今天烧的钱，能换来明天不被卡脖子。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>主权从GPU货架开始</h2><p>韩国第一次把&#x27;买不到主权&#x27;写进预算案：$35亿里$26亿先买美国芯片，参与企业还得配套等额资金。这不是示弱，是算账——先承认货架依赖，再谈模型超越。主权AI的真正起跑线不在论文里，在Nvidia的发货单上。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">注意：4.7万亿韩元目前只是列入2027年预算案，国会尚未批准。如果预算被砍或缩水，这个frontier计划第一步就塌在芯片订单上——主权这东西，批下来之前都是PPT。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>Korea JoongAng Daily：韩国将AI战略拆成两赛道，主权模型淘汰赛继续，新增frontier计划对标中国开源顶尖；4.7万亿韩元已列入2027预算案，国会尚未批准。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.koreajoongangdaily.com/business/korea-splits-ai-push-into-two-tracks-amid-confusion-over-sovereign-model-project/12904222" target="_blank" rel="noopener">Korea splits AI push into two tracks · 预算案待国会批准 ↗</a><br>koreajoongangdaily.com · 2026-10-06 · Korea JoongAng Daily</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Korea JoongAng Daily：Korea splits AI push into two tracks amid confusion over sovereign model project（2026-10-06）</li><li>Aju Press：韩国frontier AI计划预算报道（2026-10-06）</li><li>The Decoder：South Korea bets $3.49 billion on building a homegrown frontier AI model to rival China&#x27;s best</li><li>www.koreajoongangdaily.com 原文链接<br><a href="https://www.koreajoongangdaily.com/business/korea-splits-ai-push-into-two-tracks-amid-confusion-over-sovereign-model-project/12904222" target="_blank" rel="noopener">https://www.koreajoongangdaily.com/business/korea-splits-ai-push-into-two-tracks-amid-confusion-over-sovereign-model-project/12904222</a></li><li>the-decoder.com 原文链接<br><a href="https://the-decoder.com/south-korea-bets-3-49-billion-on-building-a-homegrown-frontier-ai-model-to-rival-chinas-best/" target="_blank" rel="noopener">https://the-decoder.com/south-korea-bets-3-49-billion-on-building-a-homegrown-frontier-ai-model-to-rival-chinas-best/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a> <span class="meta">ISSUE 145</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a> <span class="meta">ISSUE 142</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../marvell-lumentum-115b/">1150亿美元全股票，Marvell买下光模块巨头Lumentum</a> <span class="meta">ISSUE 141</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../doordash-agent-orders-hundreds/">几百单，对着十亿单，智能体购物还很小</a> <span class="meta">ISSUE 139</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

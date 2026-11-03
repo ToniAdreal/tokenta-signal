@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oracle把企业软件，装进ChatGPT里 — Tokenta Signal</title><meta name="description" content="Oracle 宣布与 OpenAI 扩大合作：ChatGPT 与 Codex 装进 Oracle 应用、数据与云，推出 AI Workspace 等四款产品，员工可在对话中跨系统完成工作。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>Oracle把企业软件，装进ChatGPT里</h1>
+<p class="deck">Oracle 10 月 27 日宣布与 OpenAI 扩大合作：ChatGPT 与 Codex 装进 Oracle 应用、数据与云，推出 AI Workspace 等四款产品，员工可在对话中跨系统完成审批内的工作。</p>
+<div class="meta">ISSUE 96 · 2026-10-27 · SOURCE / Oracle 官方新闻稿 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">ORACLE × OPENAI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">4</div><div class="lab">NEW OFFERINGS</div><div class="desc">本轮合作推出的新产品数量：Workspace、安全 Mesh、应用 Composer 与 SMB 套餐。</div></div><div class="metric"><div class="num">130K</div><div class="lab">ORACLE CHATGPT USERS</div><div class="desc">Oracle 内部 ChatGPT 活跃用户数，Codex 活跃用户超 9.5 万。</div></div><div class="metric"><div class="num">PERMISSIONS-FIRST</div><div class="lab">GOVERNANCE</div><div class="desc">员工在 Workspace 中跨系统工作的约束：遵循组织权限与审批链。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：10 月 27 日，Oracle 在 AI World 宣布扩大与 OpenAI 的合作。</li><li><b>02</b>THE WORKSPACE：AI Workspace：插件连接 Fusion、NetSuite、数据库与 OCI。</li><li><b>03</b>THE SUITE：安全 Mesh、应用 Composer 与 SMB 套餐同步推出。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>10 月 27 日，Oracle 在 AI World 大会上宣布与 OpenAI 扩大合作：把 ChatGPT、Codex 与 OpenAI 模型装进 Oracle 的应用、数据与云基础设施，推出四款新产品。</p><p>核心是 Oracle AI Workspace：员工在 ChatGPT 里描述目标，插件连接 Fusion 应用、NetSuite、AI 数据库与 OCI，在组织权限内跨系统找信息、走完审批流程。Oracle 称现有治理规则、审批链与访问控制保持不变。</p><p>其余三款各有分工：AI Security Mesh 用 OpenAI 网络安全模型探查系统漏洞；App Composer 用 Codex 搭建应用并部署到 OCI；AI SMB Bundle 把 ChatGPT Business、Codex 与 OCI 信用额度打包给中小企业。Oracle 披露其内部已有 13 万 ChatGPT 活跃用户与 9.5 万 Codex 活跃用户。</p>
+<h2><span class="en">THE NEW FRONT DOOR</span>聊天框变成企业软件的前台</h2><p>过去员工要在多个系统之间来回切换：查一笔费用在一个应用，批一个采购在另一个应用。Workspace 的设想是把对话变成统一入口，系统边界藏在插件后面。</p><p>关键约束写在前面：能查不等于能批。员工的角色决定其动作范围，审批仍需人工复核。便利性没有以牺牲权限结构为代价，至少在公告层面是这样。</p><h2><span class="en">THE MARKETPLACE ROUTE</span>采购路径：经销商、云市场与通用信用额度</h2><p>美国 Oracle 客户可通过 Oracle Marketplace，用符合条件的通用信用额度购买 OpenAI API、Codex 与 ChatGPT Work。模型采购第一次走进了企业软件厂商自己的结算体系。</p><p>这对 OpenAI 意味着分发：借 Oracle 的企业客户网络触达那些不会直接签 API 合同的公司；对 Oracle 意味着绑定：AI 能力成为其应用与云的增值层，而不是外挂。</p><h2><span class="en">THE COOPETITION</span>合作与竞争的同一张桌子</h2><p>Oracle 同时是 OpenAI 的云基础设施伙伴、芯片采购方与企业软件渠道。本轮合作把三层关系压进一个产品套件：算力、模型与应用。</p><p>上一批 61 号报道过 OpenAI 模型登陆谷歌云；本轮 Oracle 把同样的模型装进企业软件。模型厂商的分发战，正在从云货架打进业务系统内部。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>企业软件的前台，正在变成聊天框</h2><p>模型分发战的下一站不是云货架，而是员工每天打开的业务系统。Tokenta Signal 的判断不变：谁控制工作流的入口，谁就控制模型被使用的方式。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：Oracle AI Workspace 完整体验仍在开发中，目前上线的是单个插件；SMB 套餐的信用额度与适用条件以官方条款为准。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认发布要点：Oracle 10 月 27 日在 AI World 宣布与 OpenAI 扩大合作，推出 AI Workspace、AI Security Mesh、App Composer 与 AI SMB Bundle；Workspace 以插件连接 Fusion、NetSuite、AI 数据库与 OCI，遵循组织权限；Oracle 内部 13 万 ChatGPT 活跃用户、9.5 万 Codex 用户。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.oracle.com/anz/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/" target="_blank" rel="noopener">Oracle Reinvents Enterprise Computing for the AI Era with OpenAI ↗</a><br>oracle.com · 2026-10-27 · Oracle 官方新闻稿</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Oracle 官方新闻稿：Oracle Reinvents Enterprise Computing for the AI Era with OpenAI<br><a href="https://www.oracle.com/anz/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/" target="_blank" rel="noopener">https://www.oracle.com/anz/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/</a></li><li>The Neuron：Oracle AI Workspace: Business Workflows Through ChatGPT<br><a href="https://www.theneuron.ai/news/oracle-ai-workspace-chatgpt-business-workflows/" target="_blank" rel="noopener">https://www.theneuron.ai/news/oracle-ai-workspace-chatgpt-business-workflows/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a> <span class="meta">ISSUE 145</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a> <span class="meta">ISSUE 142</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../marvell-lumentum-115b/">1150亿美元全股票，Marvell买下光模块巨头Lumentum</a> <span class="meta">ISSUE 141</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../doordash-agent-orders-hundreds/">几百单，对着十亿单，智能体购物还很小</a> <span class="meta">ISSUE 139</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

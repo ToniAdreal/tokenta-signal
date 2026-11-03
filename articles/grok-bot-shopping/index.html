@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grok的机器人，开始替你花钱了 — Tokenta Signal</title><meta name="description" content="xAI Grok Bot 0.78.1 版上线购物卡片与立即购买，支持 Shop Pay 并跟踪订单，购买走先问批准卡，但 Vault 保存的卡结账时无需每次单独批准。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
+<h1>Grok的机器人，开始替你花钱了</h1>
+<p class="deck">xAI Grok Bot 0.78.1 版于 2026 年 10 月 27 日上线购物卡片与立即购买，支持连接 Shop Pay 并跟踪订单，购买走自动审核与先问批准卡，但 Vault 保存的卡结账时无需每次单独批准。</p>
+<div class="meta">ISSUE 120 · 2026-10-30 · SOURCE / AIToolsRecap 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">XAI × GROK BOT</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">8 / 13</div><div class="lab">COMMERCE ITEMS</div><div class="desc">0.78.1 版新功能里与购物、订单、支付或订阅相关的条数。</div></div><div class="metric"><div class="num">20</div><div class="lab">RULE CAP EACH</div><div class="desc">用户可设的自动允许规则与先问规则上限，各自条数。</div></div><div class="metric"><div class="num">1000</div><div class="lab">RULE LENGTH</div><div class="desc">单条规则的最长字符数，先问规则冲突时优先。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE RELEASE：2026 年 10 月 27 日，Grok Bot 0.78.1 版更新日志发布。</li><li><b>02</b>THE CARDS：商品卡片上线，有货选项优先，横向滑动浏览。</li><li><b>03</b>THE ORDER：立即购买启动需批准的订单，Bot 跟踪物流。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>xAI 的 Grok Bot 在 0.78.1 版里开始替用户花钱。更新日志日期为 2026 年 10 月 27 日，标题就是购物卡片与订阅模板。商品以带照片、评分、价格与店铺的卡片出现，三四张一排横向滑动，有货选项排在前面。</p><p>下单流程分两步。点立即购买会启动一笔需要用户批准的订单，订单成立后 Bot 会跟踪物流，并在发货与送达时告知用户。支付接 Shop Pay，用户先在 Vault 的支付页连接 Shop Pay，再选它作为首选支付方式。</p><p>审批模型是这件事真正的看点。xAI 文档规定，购买与资金转移属于应设明确边界的动作。每次动作都过自动审核，命中先问规则会弹出批准卡，显示操作与输入，给出单次允许、总是允许或拒绝。用户最多各设 20 条自动允许与先问规则，每条最多 1000 字，先问规则优先。</p>
+<h2><span class="en">FROM RESEARCH TO TRANSACTION</span>从研究助手，到交易主体</h2><p>Grok Bot 之前是起草与研究的角色，现在多了一个钱包。能下单的 agent 与只能建议的 agent，风险完全不在一个量级。一次提示注入的收益，从一段错误文字变成了真金白银。</p><p>xAI 的更新节奏也说明了方向。0.78.1 版 13 条新功能里 8 条与购物、订单、支付或订阅有关，而 0.77.0 版 18 条里只有 3 条相关。购物不是顺带功能，是这三版里权重最大的主线。</p><h2><span class="en">THE APPROVAL CARD</span>批准卡是防线，也是单点</h2><p>先问规则的设计本身不差。操作与输入先亮出来，用户点单次允许或拒绝，规则冲突时先问优先。问题出在支付环节的例外，Vault 里保存的卡在结账时无需每次单独批准。</p><p>这意味着批准的粒度在支付处变粗了。用户批准的是订单，不是每一次扣款动作。想要每笔都过目，就必须在规则里把支付动作单独圈出来，而不是依赖默认流程。</p><h2><span class="en">SUBSCRIPTIONS CHANGE THE MATH</span>订阅模板把一次性购买变长期</h2><p>同一版还加了订阅模板。Bot 不只买一件商品，还能按模板处理周期性订单。单次误操作损失有限，订阅误操作会按月复利。</p><p>对用户来说，检查清单因此多了一项。除了批准规则，还要定期看订阅清单与支付方式。Agent 的便利性越高，事后对账的习惯就越不能省。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>会花钱的助手，先问规则要写在支付前面</h2><p>Tokenta Signal 判断：Agent 的能力边界，现在由批准规则决定。默认流程越顺滑，用户越要在支付动作上单独设一道先问的墙。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：购物功能来自 xAI 官方更新日志与第三方梳理，未披露订单量、商家数与费率。Vault 保存的卡在结账时无需每次单独批准，属 xAI 文档原文，风险判断据此写出。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认 xAI Grok Bot 0.78.1 版上线购物卡片与立即购买，支持连接 Shop Pay，购买动作走自动审核与先问批准卡，Vault 保存的卡结账时无需每次单独批准。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://aitoolsrecap.com/Blog/ai-news-october-30-2026" target="_blank" rel="noopener">Grok Bot Can Now Buy Things, and Every Lab Suddenly Sells Cyber Defence ↗</a><br>aitoolsrecap.com · 2026-10-30 · AIToolsRecap 报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>AIToolsRecap：AI News 30 Oct: Grok Can Shop, Gemini 4 Carbon Is #1<br><a href="https://aitoolsrecap.com/Blog/ai-news-october-30-2026" target="_blank" rel="noopener">https://aitoolsrecap.com/Blog/ai-news-october-30-2026</a></li><li>CatchUpLah：Today in Grok, 30 Oct 2026: Grok Bot 0.78 adds shopping cards, order tracking and subscription templates<br><a href="https://www.catchuplah.com/grok/newsletter/2026-10-30" target="_blank" rel="noopener">https://www.catchuplah.com/grok/newsletter/2026-10-30</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta的人形机器人，三个月就攒出来了</a> <span class="meta">ISSUE 138</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../bedrock-robotics-600m/">6亿美元押注挖土机，自动驾驶先从工地开工</a> <span class="meta">ISSUE 124</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../toyota-waymo-bz4x/">丰田给Waymo造车，2027年先在日本上路</a> <span class="meta">ISSUE 114</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

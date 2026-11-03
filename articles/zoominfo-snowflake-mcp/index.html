@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1亿家公司的数据，装进了Snowflake的智能体 — Tokenta Signal</title><meta name="description" content="ZoomInfo 2026 年 10 月 30 日在 Snowflake 上线 MCP 连接器与 API，智能体可调用超 1 亿家公司与 5 亿联系人的图谱，调用继承用户角色权限并记入审计。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>1亿家公司的数据，装进了Snowflake的智能体</h1>
+<p class="deck">ZoomInfo 2026 年 10 月 30 日在 Snowflake 上线 MCP 连接器与 API，智能体可调用超 1 亿家公司与 5 亿联系人的图谱，批量单次最高 20 万条，调用继承用户角色权限并记入审计。</p>
+<div class="meta">ISSUE 121 · 2026-10-30 · SOURCE / Business Wire 通稿 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">ZOOMINFO × SNOWFLAKE</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">1亿+</div><div class="lab">COMPANIES</div><div class="desc">ZoomInfo 自述的 GTM 上下文图谱覆盖公司数。</div></div><div class="metric"><div class="num">5亿</div><div class="lab">CONTACTS</div><div class="desc">图谱覆盖的联系人数，与公司数据一同供智能体调用。</div></div><div class="metric"><div class="num">20万条</div><div class="lab">BULK PER QUERY</div><div class="desc">批量丰富单次查询的记录上限，单次请求为 1 万条。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE LAUNCH：2026 年 10 月 30 日，ZoomInfo 宣布连接器与 API 上线。</li><li><b>02</b>THE CONNECTOR：MCP 接入 CoWork 与 Cortex Agents，自然语言可问。</li><li><b>03</b>THE API：API 覆盖五个端点，支持实时与批量丰富。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>ZoomInfo 在 2026 年 10 月 30 日宣布，ZoomInfo MCP 与 ZoomInfo API 已进入 Snowflake AI Data Cloud。入口是 GTM.AI，ZoomInfo 的无头出海上下文层。业务用户可以在 Snowflake CoWork 里用自然语言问 ZoomInfo 的数据，数据团队可以实时或批量丰富 Snowflake 表格。</p><p>MCP 连接器接进 CoWork 与 Cortex Agents。接通后，智能体可以搜索、丰富与研究公司与联系人，返回结果与客户自己的 Snowflake 数据放在同一个带引用的答案里。API 则覆盖搜索、丰富、查询、批量与监测五个端点，可从任务、流与 Snowpark 管线调用。</p><p>权限设计是这则公告最值得看的部分。认证走 OAuth 2.0，每次调用继承用户本人的 ZoomInfo 角色权限。只有 Snowflake 管理员能把 ZoomInfo 暴露给 Cortex Agents，全部用量记进 ZoomInfo 的审计框架。</p>
+<h2><span class="en">CONTEXT BEFORE AGENT</span>智能体的粮草，先于智能体本身</h2><p>Cortex Agents 能不能答好企业问题，很大程度取决于它能读到什么。ZoomInfo 的图谱自述覆盖超过 1 亿家公司与 5 亿联系人，外加数十亿条购买信号。把这层上下文接进仓库，智能体才有企业级事实可用。</p><p>批量能力同样关键。单次请求可丰富 1 万条记录，单次查询可达 20 万条。没有批量接口，智能体只能一条一条问，规模上不去。</p><h2><span class="en">PERMISSION INHERITANCE</span>权限继承是真正的卖点</h2><p>很多 MCP 接入只谈能连什么，不谈谁能看什么。ZoomInfo 这次把权限继承写进了公告正文，每次调用跟随用户自己的角色权限，管理员才能开通智能体侧的暴露。</p><p>这个设计把数据泄露的责任边界划清楚了。智能体不会因为接了外部数据就看到超出用户权限的内容，审计日志也能事后追溯每一次调用。企业买 MCP，买的首先是这套治理。</p><h2><span class="en">ONE GRAPH, MANY SURFACES</span>同一图谱，多处复用</h2><p>Snowflake 加入的是一张已有的集成清单，Salesforce、HubSpot、微软、Gong、LeanData、Claude、ChatGPT、Replit 与 Superhuman 都在其中。各处读的是同一张 GTM 上下文图谱，走同一套治理。</p><p>对 ZoomInfo 来说，这是把数据资产变成基础设施的一步。图谱不再只是一个查询产品，而是智能体可以直接调用的上下文层。以后竞争的焦点，会从谁的数据更多，转向谁的治理更可信。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>MCP 的竞争，已经打到治理层</h2><p>Tokenta Signal 判断：连接器能不能卖给企业，不看能连多少数据，看权限与审计能不能过关。ZoomInfo 这次把治理写在前面，是对的顺序。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：价格未披露，也没有具名客户。连接器只面向同时拥有 Snowflake 账号与 ZoomInfo 订阅的客户，覆盖规模为 ZoomInfo 自述的图谱体量。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认 ZoomInfo 2026 年 10 月 30 日在 Snowflake 上线 MCP 连接器与 API，图谱覆盖超 1 亿家公司与 5 亿联系人，调用继承用户角色权限并记入审计框架。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.businesswire.com/news/home/20261030229214/en/ZoomInfo-launches-New-MCP-Connector-and-API-on-Snowflake" target="_blank" rel="noopener">ZoomInfo launches New MCP Connector and API on Snowflake ↗</a><br>businesswire.com · 2026-10-30 · Business Wire 通稿</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Business Wire：ZoomInfo launches New MCP Connector and API on Snowflake<br><a href="https://www.businesswire.com/news/home/20261030229214/en/ZoomInfo-launches-New-MCP-Connector-and-API-on-Snowflake" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20261030229214/en/ZoomInfo-launches-New-MCP-Connector-and-API-on-Snowflake</a></li><li>Morningstar：ZoomInfo launches New MCP Connector and API on Snowflake<br><a href="https://www.morningstar.com/news/business-wire/20261030229214/zoominfo-launches-new-mcp-connector-and-api-on-snowflake" target="_blank" rel="noopener">https://www.morningstar.com/news/business-wire/20261030229214/zoominfo-launches-new-mcp-connector-and-api-on-snowflake</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a> <span class="meta">ISSUE 145</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a> <span class="meta">ISSUE 142</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../marvell-lumentum-115b/">1150亿美元全股票，Marvell买下光模块巨头Lumentum</a> <span class="meta">ISSUE 141</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../doordash-agent-orders-hundreds/">几百单，对着十亿单，智能体购物还很小</a> <span class="meta">ISSUE 139</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

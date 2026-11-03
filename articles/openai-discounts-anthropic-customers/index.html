@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAI 用折扣，把客户从 Anthropic 手里接过来 — Tokenta Signal</title><meta name="description" content="据 The Information 报道，OpenAI 以三成以上折扣拿下 Replit 一年超 1 亿美元的合同，Rippling 的编码工作量份额也从 Anthropic 一边倒向 OpenAI。价格战打到了企业客户的账本上。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>OpenAI 用折扣，把客户从 Anthropic 手里接过来</h1>
+<p class="deck">The Information 在 10 月 24 日的报道中披露，OpenAI 正以大幅折扣争取 Anthropic 的企业客户。Replit 在获得超三成折扣后，把大部分 AI 开支转给 OpenAI；Rippling 的编码工作量中，OpenAI 份额从 5 月的 16% 升至 52%，Anthropic 从 57% 跌至 18%。</p>
+<div class="meta">ISSUE 70 · 2026-10-25 · SOURCE / SiliconReport 转述 The Information 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">AI PRICE WAR</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">30%+</div><div class="lab">REPLIT DISCOUNT</div><div class="desc">OpenAI 给 Replit 的折扣幅度，对应一年超 1 亿美元的 AI 合同。</div></div><div class="metric"><div class="num">16%→52%</div><div class="lab">OPENAI SHARE AT RIPPLING</div><div class="desc">Rippling 编码工作量中 OpenAI 模型的份额，从 5 月到 10 月的变化。</div></div><div class="metric"><div class="num">57%→18%</div><div class="lab">ANTHROPIC SHARE AT RIPPLING</div><div class="desc">同一时期，Rippling 编码工作量中 Anthropic 模型的份额变化。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE REPORT：10月24日，The Information 报道 OpenAI 以大幅折扣争取 Anthropic 企业客户。</li><li><b>02</b>THE DEALS：Replit 超三成折扣、超 1 亿美元年合同；DataCamp 约四成折扣。</li><li><b>03</b>THE SHIFT：Rippling 编码份额翻转：OpenAI 16% 至 52%，Anthropic 57% 至 18%。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Replit 的转单细节最具体：一年超 1 亿美元的合同，折扣超三成，前提是 Anthropic 不愿在不提高总开支的情况下延续此前的折扣。Replit 首席执行官后来把表述放软：OpenAI 是 Replit Agent 的首选合作方，Anthropic 的模型仍在产品目录中，客户可以自行选择。</p><p>Rippling 的数字来自公司内部统计：Anthropic 模型在 5 月承担 57% 的编码工作，OpenAI 为 16%；此后比例翻转。DataCamp 获得约四成折扣，首席执行官称成本下降八至九成；一家资产超 70 亿美元的美国银行以每用户不到 7 美元的价格把 ChatGPT 席位扩至 500 个，远低于 20 美元以上的标准价。</p>
+<h2><span class="en">THE MECHANISM</span>折扣不是降价，是抢客户的工具</h2><p>OpenAI 的折扣集中在 Sol 与 Luna 等更新、运行成本更低的模型线上。效率提升给了降价空间，降价又被用作争夺存量客户的武器，两者叠加，价格战的成本由模型效率来补贴。</p><p>Anthropic 一边的约束同样真实：此前不愿在不提高总开支的前提下延续折扣，等于把价格敏感型客户推向了谈判桌对面。定价策略的分歧，直接变成了客户份额的分歧。</p><h2><span class="en">THE NUANCE</span>转单的叙事，比转单本身更复杂</h2><p>Replit 的案例提醒读者注意措辞：首席执行官先是在公开场合说不再与 Anthropic 合作，一天内又收回表述，产品目录里仍保留多个 Claude 模型。OpenAI 成为默认选项，不等于 Anthropic 被彻底清出。</p><p>Rippling 的份额翻转同样需要限定：统计口径是编码工作量，不是全部 AI 开支，更不是公司整体的模型采购额。份额数字说明趋势，不说明终局。</p><h2><span class="en">THE COST</span>买份额的账，最终要算回来</h2><p>报道同时指出，OpenAI 的折扣部分是以牺牲利润率为代价换来的。买份额的策略成立的前提，是客户留存下来之后能产生持续收入，或者模型成本继续下降到覆盖折扣后的价格。</p><p>另一边的压力来自中国厂商：DeepSeek 与 Kimi 的低价模型让两家美国实验室都面临价格天花板下移。价格战一旦开打，停火的按钮不在任何一家公司手里。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>折扣能买来客户，买不来忠诚</h2><p>价格战的可怕之处不在降价本身，而在它把客户关系变成了可比价的商品。Tokenta Signal 的判断不变：当模型可以互换，留住客户的就不再是模型，而是迁移成本与服务深度，折扣只是入场券。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：核心信源为 The Information 的报道，经多家媒体转述，OpenAI 与 Anthropic 均未就全部交易细节公开置评；Rippling 的份额统计口径为编码工作量；Replit 与 Anthropic 的合作并未完全终止。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认三组关键数字：Replit 超三成折扣与超 1 亿美元年合同、Rippling 编码份额 16% 至 52% 与 57% 至 18% 的翻转、DataCamp 成本下降八至九成。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.siliconreport.com/openai-reportedly-pulls-major-customers-from-anthropic-with-discounts" target="_blank" rel="noopener">OpenAI reportedly pulls major customers from Anthropic with discounts ↗</a><br>siliconreport.com · 2026-10-25 · SiliconReport 转述 The Information 报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>SiliconReport：OpenAI reportedly pulls major customers from Anthropic with discounts<br><a href="https://www.siliconreport.com/openai-reportedly-pulls-major-customers-from-anthropic-with-discounts" target="_blank" rel="noopener">https://www.siliconreport.com/openai-reportedly-pulls-major-customers-from-anthropic-with-discounts</a></li><li>BigGo Finance：OpenAI Undercuts Anthropic&#x27;s Enterprise Customers With 20-40% Discounts<br><a href="https://finance.biggo.com/news/bacb02cc-a56f-4da2-8bde-08df9e24461a" target="_blank" rel="noopener">https://finance.biggo.com/news/bacb02cc-a56f-4da2-8bde-08df9e24461a</a></li><li>Dealroom：Anthropic&#x27;s Margin is OpenAI&#x27;s Opportunity<br><a href="https://dealroom.co/news/info-i3spou-anthropics-margin-is-openais-opportunity/" target="_blank" rel="noopener">https://dealroom.co/news/info-i3spou-anthropics-margin-is-openais-opportunity/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a> <span class="meta">ISSUE 145</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a> <span class="meta">ISSUE 142</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../marvell-lumentum-115b/">1150亿美元全股票，Marvell买下光模块巨头Lumentum</a> <span class="meta">ISSUE 141</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../doordash-agent-orders-hundreds/">几百单，对着十亿单，智能体购物还很小</a> <span class="meta">ISSUE 139</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

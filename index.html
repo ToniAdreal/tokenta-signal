@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tokenta Signal — 全球实时情报与事件智能平台</title><meta name="description" content="Tokenta Signal 追踪人工智能、财经、机器人、Web3 与科研前沿，把事件、来源和重要背景连接起来。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="latest/">LATEST</a><a href="desks/world/">WORLD</a><a href="desks/markets/">MARKETS</a><a href="desks/ai/">AI</a><a href="desks/robotics/">ROBOTICS</a><a href="desks/web3/">WEB3</a><a href="briefings/">BRIEFINGS</a><a href="search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="">中文</a> / <a href="en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><div class="wrap"><div class="hero">
+<span class="eyebrow">GLOBAL INTELLIGENCE / SIGNAL</span>
+<h1>穿透信息噪声<br>看清真正重要的变化</h1>
+<p class="lede">一个为理解世界变化而设计的情报平台。追踪人工智能、财经、机器人、Web3 与科研前沿，把事件、来源和重要背景连接起来。</p>
+<div class="ctas"><a class="btn primary" href="terminal/">探索 Signal Terminal ↗</a><a class="btn ghost" href="#how">了解 Signal 如何工作 ↓</a></div>
+<div class="trust"><span>公开资讯</span><span>来源可查</span><span>中文双语</span><span>已收录 99 篇深度情报 · ISSUE 50–148</span></div>
+</div></div>
+<section style="padding-top:0"><div class="wrap"><div class="sec-head"><span class="sec-title">今日头条 / The Lead</span><span class="eyebrow">01 / THE SIGNAL / NOW</span></div>
+<div class="lead-grid"><a class="lead-card" href="articles/apple-q4-memory-margins/"><span class="kick">APPLE × MEMORY</span><h2>营收1145亿还不够，苹果被内存涨价拖住了毛利</h2><p>苹果11月2日公布2026财年第四季度财报，营收1145亿美元，同比增长12%，净利润307亿美元，新任CEO Ternus称内存价格形势前所未有，假日季毛利率指引降至45%到46%。</p><div class="meta">SOURCE / MacRumors 报道 · ISSUE 148 · 2026-11-02</div></a>
+<div><span class="eyebrow">LIVE MONITOR / 实时监测</span><div class="wire-list" style="margin-top:14px"><a class="wire-row" href="articles/china-embodied-ai-13b/"><span class="t">11-01</span><span class="c">ROBOTICS &amp; AI</span><span class="h">上半年130亿美元，中国机器人先补脑子再拼动作</span><span class="s">SOURCE / 路透社转载报道 · ISSUE 147</span></a><a class="wire-row" href="articles/applied-compute-350m/"><span class="t">11-02</span><span class="c">MARKETS &amp; INDUSTRY</span><span class="h">18个月做到1亿美元年化，Applied Compute再融3.5亿</span><span class="s">SOURCE / Applied Compute 官方博客 · ISSUE 146</span></a><a class="wire-row" href="articles/openai-chatgpt-codex-shared-allowance/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">12月起，ChatGPT和Codex共用一个额度</span><span class="s">SOURCE / Silicon Report 报道 · ISSUE 145</span></a><a class="wire-row" href="articles/mit-weight-space-programming/"><span class="t">11-02</span><span class="c">RESEARCH &amp; SCIENCE</span><span class="h">改0.016%的权重，小模型数学成绩翻了六倍</span><span class="s">SOURCE / VentureBeat 报道 · ISSUE 144</span></a><a class="wire-row" href="articles/nyt-sues-brave/"><span class="t">11-02</span><span class="c">WORLD &amp; POLICY</span><span class="h">纽约时报告Brave，索赔索引里的300亿页</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 143</span></a></div></div></div></div></section>
+<section><div class="wrap"><div class="sec-head"><span class="sec-title">The Wire / 最新快讯</span><a class="eyebrow" href="latest/">全部 →</a></div>
+<div class="wire-list"><a class="wire-row" href="articles/apple-q4-memory-margins/"><span class="t">11-02</span><span class="c">MARKETS &amp; INDUSTRY</span><span class="h">营收1145亿还不够，苹果被内存涨价拖住了毛利</span><span class="s">SOURCE / MacRumors 报道 · ISSUE 148</span></a><a class="wire-row" href="articles/china-embodied-ai-13b/"><span class="t">11-01</span><span class="c">ROBOTICS &amp; AI</span><span class="h">上半年130亿美元，中国机器人先补脑子再拼动作</span><span class="s">SOURCE / 路透社转载报道 · ISSUE 147</span></a><a class="wire-row" href="articles/applied-compute-350m/"><span class="t">11-02</span><span class="c">MARKETS &amp; INDUSTRY</span><span class="h">18个月做到1亿美元年化，Applied Compute再融3.5亿</span><span class="s">SOURCE / Applied Compute 官方博客 · ISSUE 146</span></a><a class="wire-row" href="articles/openai-chatgpt-codex-shared-allowance/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">12月起，ChatGPT和Codex共用一个额度</span><span class="s">SOURCE / Silicon Report 报道 · ISSUE 145</span></a><a class="wire-row" href="articles/mit-weight-space-programming/"><span class="t">11-02</span><span class="c">RESEARCH &amp; SCIENCE</span><span class="h">改0.016%的权重，小模型数学成绩翻了六倍</span><span class="s">SOURCE / VentureBeat 报道 · ISSUE 144</span></a><a class="wire-row" href="articles/nyt-sues-brave/"><span class="t">11-02</span><span class="c">WORLD &amp; POLICY</span><span class="h">纽约时报告Brave，索赔索引里的300亿页</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 143</span></a><a class="wire-row" href="articles/salesforce-cresta-27b/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">27亿美元，Salesforce再买一家电话AI公司</span><span class="s">SOURCE / Salesforce 官方新闻稿 · ISSUE 142</span></a><a class="wire-row" href="articles/marvell-lumentum-115b/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">1150亿美元全股票，Marvell买下光模块巨头Lumentum</span><span class="s">SOURCE / The Motley Fool 报道 · ISSUE 141</span></a></div></div></section>
+<section><div class="wrap"><div class="sec-head"><span class="sec-title">覆盖世界的重要领域</span><span class="eyebrow">GLOBAL INTELLIGENCE / SIX DESKS</span></div>
+<div class="desks"><a class="desk-card" href="desks/world/"><span class="eyebrow">WORLD & POLICY</span><h3>世界与政策</h3><p>从政策、地缘与宏观经济中，识别影响世界走向的关键事件。</p><span class="go">进入专区 →</span> <span class="n">· 9 条情报</span></a><a class="desk-card" href="desks/markets/"><span class="eyebrow">MARKETS & INDUSTRY</span><h3>市场与产业</h3><p>追踪资本、交易与产业格局的变化，标注数字的来源与口径。</p><span class="go">进入专区 →</span> <span class="n">· 18 条情报</span></a><a class="desk-card" href="desks/ai/"><span class="eyebrow">AI FRONTIER</span><h3>AI 前沿</h3><p>模型、智能体与算力一线进展，双源核验后才进入情报流。</p><span class="go">进入专区 →</span> <span class="n">· 56 条情报</span></a><a class="desk-card" href="desks/robotics/"><span class="eyebrow">ROBOTICS & AI</span><h3>机器人与 AI</h3><p>人形机器人、具身智能与自动化的真实部署进展，区分演示与落地。</p><span class="go">进入专区 →</span> <span class="n">· 11 条情报</span></a><a class="desk-card" href="desks/web3/"><span class="eyebrow">WEB3 INFRASTRUCTURE</span><h3>Web3 基础设施</h3><p>区块链基础设施与行业动态，只记事实与来源，不给投资建议。</p><span class="go">进入专区 →</span> <span class="n">· 1 条情报</span></a><a class="desk-card" href="desks/research/"><span class="eyebrow">RESEARCH & SCIENCE</span><h3>研究与科学</h3><p>论文、实验室与科学前沿，把研究结论的边界写清楚。</p><span class="go">进入专区 →</span> <span class="n">· 4 条情报</span></a></div></div></section>
+<section><div class="wrap"><div class="sec-head"><span class="sec-title">最新情报</span><span class="eyebrow">LATEST / ALL DESKS · 显示 24 条</span></div>
+<div class="wire-list"><a class="wire-row" href="articles/apple-q4-memory-margins/"><span class="t">11-02</span><span class="c">MARKETS &amp; INDUSTRY</span><span class="h">营收1145亿还不够，苹果被内存涨价拖住了毛利</span><span class="s">SOURCE / MacRumors 报道 · ISSUE 148</span></a><a class="wire-row" href="articles/china-embodied-ai-13b/"><span class="t">11-01</span><span class="c">ROBOTICS &amp; AI</span><span class="h">上半年130亿美元，中国机器人先补脑子再拼动作</span><span class="s">SOURCE / 路透社转载报道 · ISSUE 147</span></a><a class="wire-row" href="articles/applied-compute-350m/"><span class="t">11-02</span><span class="c">MARKETS &amp; INDUSTRY</span><span class="h">18个月做到1亿美元年化，Applied Compute再融3.5亿</span><span class="s">SOURCE / Applied Compute 官方博客 · ISSUE 146</span></a><a class="wire-row" href="articles/openai-chatgpt-codex-shared-allowance/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">12月起，ChatGPT和Codex共用一个额度</span><span class="s">SOURCE / Silicon Report 报道 · ISSUE 145</span></a><a class="wire-row" href="articles/mit-weight-space-programming/"><span class="t">11-02</span><span class="c">RESEARCH &amp; SCIENCE</span><span class="h">改0.016%的权重，小模型数学成绩翻了六倍</span><span class="s">SOURCE / VentureBeat 报道 · ISSUE 144</span></a><a class="wire-row" href="articles/nyt-sues-brave/"><span class="t">11-02</span><span class="c">WORLD &amp; POLICY</span><span class="h">纽约时报告Brave，索赔索引里的300亿页</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 143</span></a><a class="wire-row" href="articles/salesforce-cresta-27b/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">27亿美元，Salesforce再买一家电话AI公司</span><span class="s">SOURCE / Salesforce 官方新闻稿 · ISSUE 142</span></a><a class="wire-row" href="articles/marvell-lumentum-115b/"><span class="t">11-02</span><span class="c">AI FRONTIER</span><span class="h">1150亿美元全股票，Marvell买下光模块巨头Lumentum</span><span class="s">SOURCE / The Motley Fool 报道 · ISSUE 141</span></a><a class="wire-row" href="articles/google-finland-forest-probe/"><span class="t">10-30</span><span class="c">RESEARCH &amp; SCIENCE</span><span class="h">砍了330公顷林，谷歌在芬兰被刑事调查</span><span class="s">SOURCE / The Europe Today 报道 · ISSUE 140</span></a><a class="wire-row" href="articles/doordash-agent-orders-hundreds/"><span class="t">10-30</span><span class="c">AI FRONTIER</span><span class="h">几百单，对着十亿单，智能体购物还很小</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 139</span></a><a class="wire-row" href="articles/meta-max-humanoid-fourier/"><span class="t">10-31</span><span class="c">ROBOTICS &amp; AI</span><span class="h">Meta的人形机器人，三个月就攒出来了</span><span class="s">SOURCE / ShiftDelete 报道 · ISSUE 138</span></a><a class="wire-row" href="articles/openai-compute-campuses/"><span class="t">11-01</span><span class="c">WORLD &amp; POLICY</span><span class="h">数据中心不受欢迎，OpenAI打算换个名字</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 137</span></a><a class="wire-row" href="articles/figma-weave-workflows/"><span class="t">10-30</span><span class="c">AI FRONTIER</span><span class="h">Figma把生成流程，包成了可复用的工具</span><span class="s">SOURCE / Figma 官方博客 · ISSUE 136</span></a><a class="wire-row" href="articles/nvidia-nscale-guarantee/"><span class="t">10-31</span><span class="c">AI FRONTIER</span><span class="h">英伟达可能要给别人的数据中心背书</span><span class="s">SOURCE / Skimwire 报道 · ISSUE 135</span></a><a class="wire-row" href="articles/deepseek-superagent-prototype/"><span class="t">10-31</span><span class="c">AI FRONTIER</span><span class="h">DeepSeek放出一个不用催的编程助手</span><span class="s">SOURCE / GitHub 项目页 · ISSUE 134</span></a><a class="wire-row" href="articles/apple-intelligence-china-qwen/"><span class="t">10-31</span><span class="c">WORLD &amp; POLICY</span><span class="h">苹果智能落地中国，Siri借用了通义</span><span class="s">SOURCE / 苹果中国新闻中心公告 · ISSUE 133</span></a><a class="wire-row" href="articles/claude-messages-rust-port/"><span class="t">10-31</span><span class="c">AI FRONTIER</span><span class="h">Claude自己动手，把接口从Python搬到Rust</span><span class="s">SOURCE / CellCog 报道 · ISSUE 132</span></a><a class="wire-row" href="articles/deepgram-daily-pipecat/"><span class="t">10-29</span><span class="c">AI FRONTIER</span><span class="h">语音Agent的开源底座，换了一家主人</span><span class="s">SOURCE / Deepgram 官方公告 · ISSUE 131</span></a><a class="wire-row" href="articles/openai-daybreak-blue-training/"><span class="t">11-01</span><span class="c">AI FRONTIER</span><span class="h">关掉训练开关，Daybreak会话照样进训练</span><span class="s">SOURCE / Abijita 报道 · ISSUE 130</span></a><a class="wire-row" href="articles/xai-naacp-turbines-court/"><span class="t">10-31</span><span class="c">WORLD &amp; POLICY</span><span class="h">法官没放行，xAI的涡轮机案子继续打</span><span class="s">SOURCE / TechCrunch 报道 · ISSUE 129</span></a><a class="wire-row" href="articles/anthropic-watermark-loophole/"><span class="t">10-31</span><span class="c">AI FRONTIER</span><span class="h">改一个参数，Claude的水印就没了</span><span class="s">SOURCE / The Decoder 报道 · ISSUE 128</span></a><a class="wire-row" href="articles/google-suncatcher-tpu-orbit/"><span class="t">10-30</span><span class="c">AI FRONTIER</span><span class="h">一首俳句，从轨道上的TPU发回地面</span><span class="s">SOURCE / OfficeChai 报道 · ISSUE 127</span></a><a class="wire-row" href="articles/harvey-aida-fifth-deal/"><span class="t">10-29</span><span class="c">AI FRONTIER</span><span class="h">第五次出手，Harvey买下销售AI团队</span><span class="s">SOURCE / Harvey 官方公告 · ISSUE 126</span></a><a class="wire-row" href="articles/doordash-instacart-17b/"><span class="t">10-29</span><span class="c">AI FRONTIER</span><span class="h">170亿美元，DoorDash把Instacart装进口袋</span><span class="s">SOURCE / Securities.io 报道 · ISSUE 125</span></a></div></div></section>
+<section><div class="wrap"><div class="sec-head"><span class="sec-title">Signal 简报</span><span class="eyebrow">BRIEFINGS / CURATED</span></div>
+<div class="brief"><span class="eyebrow">SIGNAL BRIEFINGS</span><h3>ISSUE 148 · 最新一期值得记住的七件事</h3><ol><li><b>01</b><a href="articles/apple-q4-memory-margins/">营收1145亿还不够，苹果被内存涨价拖住了毛利</a></li><li><b>02</b><a href="articles/china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a></li><li><b>03</b><a href="articles/applied-compute-350m/">18个月做到1亿美元年化，Applied Compute再融3.5亿</a></li><li><b>04</b><a href="articles/openai-chatgpt-codex-shared-allowance/">12月起，ChatGPT和Codex共用一个额度</a></li><li><b>05</b><a href="articles/mit-weight-space-programming/">改0.016%的权重，小模型数学成绩翻了六倍</a></li><li><b>06</b><a href="articles/nyt-sues-brave/">纽约时报告Brave，索赔索引里的300亿页</a></li><li><b>07</b><a href="articles/salesforce-cresta-27b/">27亿美元，Salesforce再买一家电话AI公司</a></li></ol><p style="margin-top:20px"><a class="go mono" style="color:var(--gold);font-weight:700;font-size:13px" href="briefings/">查看全部简报 →</a></p></div>
+<div class="sponsor" style="margin-top:24px"><div><div class="t">赞助位 / Sponsorship</div><p>每期简报与首页各设一个赞助位，价格随流量台阶上调，流量数字不虚报。</p></div><a class="btn primary" href="advertise/">查看赞助说明</a></div>
+</div></section>
+<section><div class="wrap"><div class="sec-head"><span class="sec-title">为什么选择 Signal</span><span class="eyebrow">WHY SIGNAL / DIFFERENT BY DESIGN</span></div>
+<div class="why">
+<div class="cell"><span class="eyebrow">FACTS BEFORE OPINION</span><h4>事实优先</h4><p>先给事实，再给分析。我们区分事实与观点，标注来源与不确定性。</p></div>
+<div class="cell"><span class="eyebrow">TRACEABLE SOURCES</span><h4>来源可查</h4><p>每条关键事实都标注来源链接与发布机构，不隐藏引用。</p></div>
+<div class="cell"><span class="eyebrow">BILINGUAL BY DESIGN</span><h4>中文双语</h4><p>中英双语对照阅读，关键术语与来源信息完整保留。</p></div>
+<div class="cell"><span class="eyebrow">CONTEXT THAT CONNECTS</span><h4>深度背景</h4><p>事件、时间线与相关实体彼此连接，而不是孤立的头条。</p></div>
+</div></div></section>
+<section id="how"><div class="wrap"><div class="sec-head"><span class="sec-title">如何工作</span><span class="eyebrow">HOW IT WORKS / METHOD</span></div>
+<div class="how">
+<div class="step"><b>01 / COLLECT</b><h4>收集与去重</h4><p>收集全球公开新闻与一线社交平台信号，识别同一事件的不同报道并去重。</p></div>
+<div class="step"><b>02 / VERIFY</b><h4>事实核查与结构化</h4><p>提取关键事实、来源与不确定性，形成可查证的事件结构，双源核验后发布。</p></div>
+<div class="step"><b>03 / CONNECT</b><h4>背景与意义</h4><p>连接背景、时间线与相关实体，解释事件为何重要，并持续更新后续进展。</p></div>
+</div><p style="margin-top:26px"><a class="mono" style="color:var(--gold);font-weight:700;font-size:13px" href="methodology/">查看方法论 →</a></p></div></section><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="">首页</a></li><li><a href="latest/">最新情报</a></li><li><a href="briefings/">简报</a></li><li><a href="terminal/">Signal Terminal</a></li><li><a href="methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="methodology/">来源标准</a></li><li><a href="methodology/">事实核查</a></li><li><a href="methodology/">更正政策</a></li><li><a href="advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

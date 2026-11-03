@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>人形机器人不抢饭碗，只替人去死 — Tokenta Signal</title><meta name="description" content="Minerva Humanoids 10月6日走出隐身，拿下$1000万pre-seed（General Catalyst领投）。不卷叠衣服不卷进厂，专做排爆、油气、高压电站——半自主+VR远程操控，&#x27;不抢人的饭碗，只替人去死&#x27;，今年秋季启动付费试点。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 14:28 UTC</span><span><span class="live">● LIVE</span> ISSUE 148 · APPLE × MEMORY · MacRumors 报道</span><span><span class="live">● LIVE</span> ISSUE 147 · CHINA × EMBODIED AI · 路透社转载报道</span><span><span class="live">● LIVE</span> ISSUE 146 · APPLIED COMPUTE × FUNDING · Applied Compute 官方博客</span><span><span class="live">● LIVE</span> ISSUE 145 · OPENAI × CODEX · Silicon Report 报道</span><span><span class="live">● LIVE</span> ISSUE 144 · MIT × WEIGHTS · VentureBeat 报道</span><span><span class="live">● LIVE</span> ISSUE 143 · NYT × BRAVE · TechCrunch 报道</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
+<h1>人形机器人不抢饭碗，只替人去死</h1>
+<p class="deck">Minerva Humanoids拿了$1000万pre-seed，不卷叠衣服不卷进厂，专做排爆、油气、高压电站——人形机器人里唯一没人卷的赛道。半自主+VR远程操控，&#x27;不抢人的饭碗，只替人去死&#x27;，今年秋天就开始付费试点。</p>
+<div class="meta">ISSUE 53 · 2026-10-06 · SOURCE / 公司官方新闻稿 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">HUMANOID ROBOTICS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<div class="metrics"><div class="metric"><div class="num">$10M</div><div class="lab">PRE-SEED ROUND</div><div class="desc">2026年10月6日官宣走出隐身，General Catalyst领投，Hugging Face、Codecademy跟投。</div></div><div class="metric"><div class="num">5 MO</div><div class="lab">PROTOTYPE IN 5 MONTHS</div><div class="desc">含定制设计、制造、组装，从立项到能走路的人形机器人只用了5个月（公司口径）。</div></div><div class="metric"><div class="num">7,000</div><div class="lab">ENERGY DEATHS / YEAR</div><div class="desc">据Minerva基于ILO/IEA数据的估算，全球能源行业每75分钟死1人，一年约7000人。</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>FOUNDED：2025年底成立，总部旧金山，另设剑桥（MA）与德国辛德尔芬根办公室。</li><li><b>02</b>BUILT IN 5 MONTHS：5个月造出能走路的人形机器人Roger，德国制造组装，不用中国零部件。</li><li><b>03</b>EMERGED：10月6日走出隐身，$1000万pre-seed，General Catalyst领投。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026年10月6日，Minerva Humanoids官宣走出隐身模式：完成约$1000万pre-seed轮融资，General Catalyst领投，Long Journey Ventures、Credo Ventures联合领投，跟投名单里还有Hugging Face、Codecademy。这家公司2025年底才成立——成立不到一年。</p><p>创始人配置是&#x27;梦之队&#x27;口径（公司官方新闻稿）：CEO Sandor Felber，曾在MIT CSAIL主导用人形机器人做AI研究的产品线，参与过Tesla Optimus项目；CTO Maurice Rahme，波士顿动力6年，Stretch机器人技术负责人之一，从早期原型一路带到商业化。团队里还有英国特种部队退伍的Dominic Asquith，负责Hazardous Operations。</p><p>Roger的特殊之处在于&#x27;半自主&#x27;三个字：专为世界最危险的工作设计——海上/陆上油气作业、高压电站、爆炸物处理（EOD）、危化品响应。专家戴VR头显远程操控，透过机器人的&#x27;眼睛&#x27;做精细操作。用官方的话说：&#x27;人的判断和手在设备上，身体留在指挥所。&#x27;</p><p>速度神话也很抓眼球：从立项到造出能走路的人形机器人只用了5个月（含定制设计、制造、组装）。首批原型在德国制造组装，计划德美两地生产，强调&#x27;不用中国单一来源零部件&#x27;——西方供应链叙事拉满。GC合伙人Robin Dechant说：&#x27;Building a humanoid from scratch is often a years-long project, but Sandor and Maurice did it in less than six months.&#x27;</p>
+<h2><span class="en">THE LANE NO ONE FIGHTS FOR</span>不卷叠衣服卷排爆：没人抢的赛道</h2><p>当所有人形机器人都在卷叠衣服、进工厂打工时，Minerva选了唯一没人卷的赛道：排爆和油气平台。Felber的金句把叙事定死了：&#x27;People are dying every day doing jobs the rest of the world takes for granted. We didn&#x27;t set out to replace the people doing them.&#x27; 不替代人，只替人去死。</p><p>需求数据是据Minerva估算的：官方引用ILO/IEA口径推算，全球能源行业每75分钟死1人，一年约7000人。NATO把EOD/危化品响应列为各单位风险最高的环节——现有履带式单臂排爆机器人&#x27;缺灵巧度&#x27;，完不成的活最后还得人穿排爆服走&#x27;the long walk&#x27;。</p><p>Asquith（特种部队退伍）的原话极具画面感：&#x27;Every EOD operator knows the long walk. When the robot can&#x27;t complete the task and the operator has to put the EOD suit on and approach the device alone.&#x27; 当机器人搞不定，人就得穿上排爆服独自走向炸弹——Roger要终结的，就是这段&#x27;长长的步行&#x27;。</p><h2><span class="en">TELEOPERATION, HONESTLY</span>半自主+VR：全行业最诚实的技术路线</h2><p>Minerva最聪明的一点，是不吹全自主。在一个人形机器人公司人均&#x27;通用智能&#x27;的年份，它公开承认：核心场景靠专家戴VR头显远程操控，机器人负责去，人负责判断。</p><p>这恰恰是它能收到钱的原因。今年秋季启动首批付费试点——注意，是付费试点，不是免费试用。排爆、高压电站、油气平台这些场景，客户买的不是&#x27;智能&#x27;，是&#x27;人不必到场&#x27;。半自主不是技术妥协，是产品诚实：先把人命保住，再谈智能升级。</p><p>合作版图已经铺开：在北约EOD卓越中心（斯洛伐克）做过展示；与阿联酋MBZUAI（能源场景）、滑铁卢大学（烟雾/黑暗/传感器失效等视觉拒止环境感知）建研究合作；正在全球最繁忙的10大机场中的2家谈部署，已完成现场测试。机场+能源+EOD，三条线都是&#x27;出一次事就上新闻&#x27;的高风险场景——付费意愿最强的地方。</p><h2><span class="en">MADE WITHOUT CHINA</span>德国制造：供应链也是一种宣言</h2><p>首批原型德国制造组装，德美两地生产，&#x27;不用中国单一来源零部件&#x27;——在人形机器人这个中国供应链深度渗透的行业里，这句话本身就是一种政治宣言。</p><p>算盘打得很精：客户是NATO体系、能源巨头、机场——这些买家对供应链安全的敏感度，远高于对价格的敏感度。&#x27;西方制造&#x27;在这里不是成本劣势，是投标资质。</p><p>但硬币的另一面是成本：5个月造出能走路的机器是速度神话，量产爬坡是另一回事。德国+美国双线生产的人形机器人，单机成本能压到能源和国防客户&#x27;闭眼买单&#x27;的水平吗？付费试点之后的第一批规模化订单，会给出答案。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>不抢饭碗，只替人去死</h2><p>当全行业都在讲&#x27;通用人形机器人替代人力&#x27;的故事时，Minerva讲了一个反故事：不替代人，只替人去死。排爆、高压电站、油气平台——这些场景的客户买的不是智能，是&#x27;人不必到场&#x27;。这是人形机器人第一个能收到钱的场景，因为这里的ROI不是效率，是人命。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">提醒：创始人履历、5个月造机、每年7000人死亡估算均来自公司官方新闻稿口径，第三方独立核验暂无。付费试点能不能续费、续费之后能不能规模化，才是这家公司的真正考试——故事讲得再好，发票开出来才算数。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>GlobeNewswire官方新闻稿：Minerva Humanoids 10月6日走出隐身，$1000万pre-seed由General Catalyst领投；Roger为排爆/油气/高压电站等最危险工作设计，5个月造出能走路的原型，秋季启动付费试点（公司口径，第三方暂无独立核验）。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://wrex.marketminute.com/article/gnwcq-2026-10-6-minerva-humanoids-emerges-from-stealth-with-10m-pre-seed-round-led-by-general-catalyst-to-build-humanoid-robots-for-the-worlds-most-dangerous-jobs" target="_blank" rel="noopener">Minerva Humanoids emerges from stealth · $10M pre-seed ↗</a><br>GlobeNewswire · 2026-10-06 · 公司官方新闻稿</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>GlobeNewswire官方新闻稿：Minerva Humanoids emerges from stealth with $10M pre-seed round led by General Catalyst（2026-10-06）</li><li>Minerva Humanoids公司官网：minervahumanoids.com</li><li>wrex.marketminute.com 原文链接<br><a href="https://wrex.marketminute.com/article/gnwcq-2026-10-6-minerva-humanoids-emerges-from-stealth-with-10m-pre-seed-round-led-by-general-catalyst-to-build-humanoid-robots-for-the-worlds-most-dangerous-jobs" target="_blank" rel="noopener">https://wrex.marketminute.com/article/gnwcq-2026-10-6-minerva-humanoids-emerges-from-stealth-with-10m-pre-seed-round-led-by-general-catalyst-to-build-humanoid-robots-for-the-worlds-most-dangerous-jobs</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta的人形机器人，三个月就攒出来了</a> <span class="meta">ISSUE 138</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../bedrock-robotics-600m/">6亿美元押注挖土机，自动驾驶先从工地开工</a> <span class="meta">ISSUE 124</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../grok-bot-shopping/">Grok的机器人，开始替你花钱了</a> <span class="meta">ISSUE 120</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
