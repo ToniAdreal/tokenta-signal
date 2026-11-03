@@ -68,9 +68,11 @@ def ref_parse(r):
     label = r.replace(url, "").strip(" ：:")
     return label, url
 
+FLASH_DIR = os.path.join(ROOT, "flashes")
+
 def load():
     arts = []
-    for f in glob.glob(os.path.join(SRC, "*.json")):
+    for f in glob.glob(os.path.join(FLASH_DIR, "*.json")) + glob.glob(os.path.join(SRC, "*.json")):
         try:
             d = json.load(open(f))
         except Exception:
