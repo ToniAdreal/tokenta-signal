@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Snowflake 推出常驻 CoCo 与 CoWork Bots，智能体开始在岗不在问 — Tokenta Signal</title><meta name="description" content="Snowflake 2026-11-03 在 Expedition 2026 宣布推出 CoCo 与 CoWork 常驻 Bots：用户设定高层目标后，Bot 在后台持续规划并完成工作，只在需要人类决策或最终批准时请示，且继承设定者的确切访问权与权限边界；Bots 即将开启私人预览。同批 CoCo Automations 与异步智能体 API 全面上市，Slack、Excel/Sheets 与移动端进入公开预览；CoWork 使用账户超 5800、CoCo 超 9100（截至 2026 年 7 月 31 日季度最后四周周均口径）。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 18:34 UTC</span><span><span class="live">● LIVE</span> ISSUE 180 · SNOWFLAKE × AGENTIC AI × EXPEDITION 2026 · Snowflake 官方博客</span><span><span class="live">● LIVE</span> ISSUE 179 · CROWDSTRIKE × AI SAFETY × ACQUISITIONS · CrowdStrike 官方新闻稿</span><span><span class="live">● LIVE</span> ISSUE 178 · TUTOR × ROBOTICS × SERIES B · Tutor Intelligence 公司公告</span><span><span class="live">● LIVE</span> ISSUE 177 · GOOGLE × MANDIANT × LLMJACKING · Google Cloud 官方博客报告</span><span><span class="live">● LIVE</span> ISSUE 176 · KOREA × HUMANOID × DATA FACTORY · Seoul Economic Daily 报道</span><span><span class="live">● LIVE</span> ISSUE 175 · OPENAI × CHATGPT × SEARCH · Big Technology 访谈报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>Snowflake 推出常驻 CoCo 与 CoWork Bots，智能体开始在岗不在问</h1>
+<p class="deck">Snowflake 2026-11-03 在 Expedition 2026 宣布 CoCo 与 CoWork 常驻 Bots（即将开启私人预览）：目标驱动、后台持续工作、继承用户权限、只在需要决策时请示人类；同批 CoCo Automations 与异步智能体 API 全面上市，CoWork 超 5800 账户、CoCo 超 9100 账户。</p>
+<div class="meta">ISSUE 180 · 2026-11-03 · SOURCE / Snowflake 官方博客 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">SNOWFLAKE × AGENTIC AI × EXPEDITION 2026</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：Snowflake 2026-11-03 在 Expedition 2026 宣布 CoCo 与 CoWork 常驻 Bots，目标驱动、后台持续工作。</li><li><b>02</b>THE CONFIRMATION：官方博客与 BusinessWire 新闻稿双源核对，Bots 定位、权限继承、可用性阶段与使用量口径一致。</li><li><b>03</b>THE WATCHPOINT：Bots 私人预览能否扩大并按期上市，预览客户的真实使用反馈，以及 Cortex Training 成本口径的第三方复现。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Snowflake 2026-11-03 在 Expedition 2026 大会上宣布，CoCo 与 CoWork 将推出常驻型 Bots：用户设定一个高层目标，例如为每次客户会议准备简报、保持数据管道健康，Bot 会在后台持续规划并完成工作，只在需要人类决策或最终批准时才把人拉进来。</p><p>关键约束写在官方口径里：Bot 不获得新的无限权限，它继承设定者的确切访问权、角色上下文与权限，在既有治理边界内运行。CoCo Automations 可把重复工作排程为自动化任务，每次运行留有审计轨迹与任务历史；CoWork 的异步智能体 API 让多步骤任务在后台持续运行、中断后可续跑。</p><p>同批更新还包括：CoCo 进 Slack、Excel 与 Sheets、移动端；CoWork Profiles 按团队配置智能体与路由；Cortex Training 进入公开预览，可在自有数据上微调 Qwen、DeepSeek、Mistral、Gemma 等开源权重模型，厂商称成本比同类无服务器方案低至 61%。</p><p>使用量基线：Snowflake 称 CoWork 已有超 5800 个账户使用，CoCo 超 9100 个账户，统计口径为截至 2026 年 7 月 31 日季度最后四周的周均使用量。</p><p>与本站存量文章的关系：存量 121 号为 ZoomInfo 与 Snowflake 的 MCP 合作，属于另一事件，不重复；本条为 Expedition 2026 当日智能体产品线更新。</p>
+<h2><span class="en">WHY IT MATTERS</span>从问答助手到持续在岗的同事</h2><p>此前的企业智能体大多是被动响应：等一个问题，再给一个答案。Snowflake 把 Bots 定义为目标驱动的常驻同事，工作模式从按次调用变成持续受托，真正的分水岭不在模型能力，而在企业敢不敢把后台任务交给它。</p><p>官方给出的答案是治理继承：权限、角色上下文、审计轨迹、人工批准点全部沿用现有体系。这是对 Capgemini 报告里企业对全自主智能体信任度一年内从 43% 跌至 27% 的直接回应，信任不靠口号，靠权限边界。</p><h2><span class="en">WHY IT MATTERS</span>私人预览阶段，信号在兑现节奏</h2><p>Bots 只是即将开启的私人预览，全面上市时间未公布，Slack、Excel 与移动端也还在公开预览。真正可验证的进展不在发布会，而在私人预览扩大后，Bot 在真实企业权限体系里能否长期跑下去而不越权、不返工。</p><p>下一条可验证的进展是预览客户的实际使用反馈与可用性升级，以及 Cortex Training 的成本口径能否经得起第三方复现。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>信号在权限继承，不在常驻本身</h2><p>Tokenta Signal 判断：常驻本身不是新闻，市面上的后台任务早已存在。真正的信号是 Snowflake 把 Bot 的权限钉死在用户已有的治理边界里，企业智能体从演示走向生产，卡住它的从来不是模型，而是出了错谁负责。限定同样明确：Bots 还没全面上市，成本数字是厂商自报，下一条可验证的进展在预览兑现。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Snowflake 官方博客与 BusinessWire 官方新闻稿为准，均已直接打开核验，Bots 定位、权限继承、可用性阶段与使用量口径两边一致。Bots 尚为即将开启的私人预览，不是已全面上市；CoCo Automations 与异步智能体 API 为全面上市，Slack、Excel/Sheets、移动端为公开预览，阶段不可混淆。使用量数字（CoWork 超 5800 账户、CoCo 超 9100 账户）为截至 2026 年 7 月 31 日季度最后四周的周均口径。Cortex Training 成本低至 61% 为厂商基于自选基准的自报，未经独立验证。本文只做摘要与链接，不转载新闻稿全文与图片。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>Snowflake 官方博客与 BusinessWire 官方新闻稿均已直接打开核验，Bots 定位、权限继承、可用性阶段与使用量口径两边一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/" target="_blank" rel="noopener">Snowflake CoCo and CoWork Power the Agentic Enterprise ↗</a><br>snowflake.com · 2026-11-03 · Snowflake 官方博客</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Snowflake 官方博客<br><a href="https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/" target="_blank" rel="noopener">https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/</a></li><li>BusinessWire 官方新闻稿<br><a href="https://www.businesswire.com/news/home/20261103426379/en/Snowflake-CoCo-and-CoWork-Power-the-Agentic-Enterprise-Grounded-in-Governed-Data-and-Built-for-Autonomous-Action" target="_blank" rel="noopener">https://www.businesswire.com/news/home/20261103426379/en/Snowflake-CoCo-and-CoWork-Power-the-Agentic-Enterprise-Grounded-in-Governed-Data-and-Built-for-Autonomous-Action</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-mandiant-llmjacking/">偷来的大模型额度正在被转卖：谷歌披露 LLMjacking，单日账单超 10 万美元</a> <span class="meta">ISSUE 177</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-search-fifth-google/">OpenAI 自称搜索量已达谷歌五分之一：口径是自家算法，份额别照单全收</a> <span class="meta">ISSUE 175</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-attribution-open-source/">报错雪崩先找真凶：NVIDIA 开源 Attribution，把 NCCL 报错追回源头 GPU</a> <span class="meta">ISSUE 174</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../cisco-talos-volta-infostealer/">偷完还让 AI 估价：Talos 披露 VOLTA 木马按变现价值给受害者排序</a> <span class="meta">ISSUE 173</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
