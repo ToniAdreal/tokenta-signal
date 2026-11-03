@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>最强智能体也只考 12%：SemiAnalysis 发布 GDPx，金融与法律全军覆没 — Tokenta Signal</title><meta name="description" content="SemiAnalysis 11 月 2 日发布 GDPx：206 个专家级长任务、11 个高价值领域，Claude Opus 5.5 以 12.0% 居首，Gemini 4 Carbon 与 GPT-6 Astra 分列二三位，金融与法律领域所有模型均为 0 分。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 16:19 UTC</span><span><span class="live">● LIVE</span> ISSUE 163 · SEMIANALYSIS × GDPX × AGENT BENCHMARK · SemiAnalysis 官方公告</span><span><span class="live">● LIVE</span> ISSUE 162 · ANTHROPIC × CLAUDE API × AGENT LATENCY · Anthropic 官方文章</span><span><span class="live">● LIVE</span> ISSUE 161 · OPENAI × LIFEVAL × AGENT BENCHMARK · OpenAI 官方页面</span><span><span class="live">● LIVE</span> ISSUE 160 · GOLDMAN SACHS × ENTERPRISE AI × GOVERNANCE · PYMNTS 转述彭博报道</span><span><span class="live">● LIVE</span> ISSUE 159 · WIRED × APP STORE × AI SAFETY · AppleInsider 报道</span><span><span class="live">● LIVE</span> ISSUE 158 · GOOGLE × EDUCATION × AI · Google 官方博客</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>最强智能体也只考 12%：SemiAnalysis 发布 GDPx，金融与法律全军覆没</h1>
+<p class="deck">SemiAnalysis 官方公告发布 GDPx：206 个专家长任务、11 个领域，Claude Opus 5.5 以 12.0% 居首，金融与法律领域所有模型均为 0 分，榜单为官方自家运行、未经独立重跑。</p>
+<div class="meta">ISSUE 163 · 2026-11-02 · SOURCE / SemiAnalysis 官方公告 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">SEMIANALYSIS × GDPX × AGENT BENCHMARK</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：SemiAnalysis 官方公告 11 月 2 日发布 GDPx 首版，206 个任务、11 个领域。</li><li><b>02</b>THE CONFIRMATION：Unite.AI 等独立报道核对榜单数字与领域结果，与官方口径一致。</li><li><b>03</b>THE WATCHPOINT：3 到 6 个月后的新版榜单，模型在长任务上的进展幅度。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>SemiAnalysis 11 月 2 日发布 GDPx，一套面向通用智能体能力的新基准：首版 206 个长任务，覆盖芯片设计、网络安全、生物、金融、法律、量化交易、递归自我改进、硬件设计、材料科学、对齐与软件工程 11 个领域，由 14 家专业数据伙伴共建。</p><p>首版 13 个模型的榜单上，Anthropic 的 Claude Opus 5.5 以 12.0% 居首，Google 的 Gemini 4 Carbon 以 10.9% 第二，OpenAI 的 GPT-6 Astra 以 9.6% 第三。排行榜报道口径的单任务成本：Opus 约 51.41 美元，Carbon 约 16.29 美元，Astra 约 53.99 美元。</p><p>最刺眼的数字在金融与法律：官方公告称，基本上所有模型在这两个领域都正好是 0 分，任务难到二元评分下无人过关，因此官方改报平均部分分。</p><p>官方同时主动写出拖累项：Opus 5.5 与 GPT-6 Astra 的总分被各自的安全分类器拉低，分类器在网络安全、生物与对齐领域会拦截或截断合法的专业工作；去掉这三个领域后排名会变化。</p><p>任务设计刻意贴近真实工作：默认单任务时限 8 小时，模型用各自原生工具链运行，金融任务复刻一桩真实私募交易，环境里有约 4000 份匿名文件。SemiAnalysis 把 GDPx 定位为 2025 年 9 月 OpenAI GDPval 的继任者，计划每 3 到 6 个月出新版。</p>
+<h2><span class="en">WHY IT MATTERS</span>12% 的天花板，才是这份榜单的新闻</h2><p>最强模型在专家级长任务上只完成约八分之一，这个数字本身就是对智能体叙事的一次校准：短任务、单提示词的基准分再高，也推导不出一个模型能独立扛下一整桩专业工作。</p><p>榜单的真正用途是定位短板：量化交易、芯片与硬件设计有人领先，生物与软件工程另有人领先，金融与法律全军覆没。选模型先看领域分，再看总分。</p><h2><span class="en">WHY IT MATTERS</span>与 LifeVal 对读，分数的口径比分数本身重要</h2><p>同一周里，OpenAI 的 LifeVal 在日常任务示例上给出 90% 以上的自报分数，SemiAnalysis 的 GDPx 在专家长任务上只给出 12% 的最高分。两个数字都不假，任务难度、评分方式与出题方完全不同。</p><p>读基准先问三件事：谁出的题、谁打的分、任务是不是真实工作环境。答不上来，任何分数都只是发布方的一面之词。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>天花板低，才是真实信号</h2><p>Tokenta Signal 判断：GDPx 的 12% 不是模型退步的证据，而是长任务基准终于开始量真实工作。下一信号是 3 到 6 个月后的新版，榜单动不动比首版数字更说明问题。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 SemiAnalysis 官方公告为准，榜单数字为 SemiAnalysis 自家运行结果，未经独立重跑；成本数字来自排行榜报道口径。本文只做摘要与链接，不转载原文全文。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>SemiAnalysis 官方公告与 Unite.AI 独立报道双源确认，原文链接已打开验证。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities" target="_blank" rel="noopener">GDPx: Measuring Frontier Model Capabilities Across the Most Valuable Domains ↗</a><br>newsletter.semianalysis.com · 2026-11-02 · SemiAnalysis 官方公告</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>SemiAnalysis 官方公告<br><a href="https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities" target="_blank" rel="noopener">https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities</a></li><li>Unite.AI 独立报道<br><a href="https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/" target="_blank" rel="noopener">https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-message-threads-beta/">Anthropic 给长会话智能体减负：消息线程公测，首字延迟降约 35%</a> <span class="meta">ISSUE 162</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-lifeval-everyday-tasks/">OpenAI 发布 LifeVal：用日常琐事考智能体，示例分最高 100%</a> <span class="meta">ISSUE 161</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../goldman-sachs-claude-code-engineers-only/">高盛收回交易员的 AI 编程工具：实验结束，只留给工程师</a> <span class="meta">ISSUE 160</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../wired-400-apps-hidden-deepfake/">400 多个应用伪装过审：修图工具外壳，暗地里是 deepfake 生成器</a> <span class="meta">ISSUE 159</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
