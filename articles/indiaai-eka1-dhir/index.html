@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>印度一次摆出三款本土模型：EKA-1 与 Dhīr 主打离线部署，主权模型先上货架 — Tokenta Signal</title><meta name="description" content="印度电子与信息技术部 2026-11-03 在新德里发布三款本土基础模型：Soket Labs 的 EKA-1（约 260 亿参数、训练量约 7.5 万亿 token，面向数学、编程与推理，支持 100 多种语言）与 ZenteiQ 的 Dhīr 2B（2.03B 参数稠密模型）、Dhīr 5B（5.09B 总参数、1.79B 激活参数的混合专家模型），三款均可离线或断网部署，Dhīr 权重以 Apache 2.0 协议经 AIKosh 开放。两家公司均为 IndiaAI Mission 遴选的承建方，Soket 另在推进 1200 亿参数开源模型，ZenteiQ 另有 Dhīr 9B 在研。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 20:05 UTC</span><span><span class="live">● LIVE</span> ISSUE 182 · INDIAAI × EKA-1 × DHĪR · ANI 通稿报道</span><span><span class="live">● LIVE</span> ISSUE 181 · FAL × AI INFERENCE × SERIES F · TechCrunch 报道</span><span><span class="live">● LIVE</span> ISSUE 180 · SNOWFLAKE × AGENTIC AI × EXPEDITION 2026 · Snowflake 官方博客</span><span><span class="live">● LIVE</span> ISSUE 179 · CROWDSTRIKE × AI SAFETY × ACQUISITIONS · CrowdStrike 官方新闻稿</span><span><span class="live">● LIVE</span> ISSUE 178 · TUTOR × ROBOTICS × SERIES B · Tutor Intelligence 公司公告</span><span><span class="live">● LIVE</span> ISSUE 177 · GOOGLE × MANDIANT × LLMJACKING · Google Cloud 官方博客报告</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>印度一次摆出三款本土模型：EKA-1 与 Dhīr 主打离线部署，主权模型先上货架</h1>
+<p class="deck">印度 2026-11-03 发布三款本土基础模型：Soket Labs 的 EKA-1（约 260 亿参数、7.5 万亿 token 训练量）与 ZenteiQ 的 Dhīr 2B（2.03B 稠密）、Dhīr 5B（5.09B 混合专家），均可离线部署，Dhīr 权重以 Apache 2.0 协议经 AIKosh 开放。</p>
+<div class="meta">ISSUE 182 · 2026-11-03 · SOURCE / ANI 通稿报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">INDIAAI × EKA-1 × DHĪR</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：MeitY 2026-11-03 在新德里发布 EKA-1、Dhīr 2B 与 Dhīr 5B，IndiaAI Mission 基础模型计划首批公开成果。</li><li><b>02</b>THE CONFIRMATION：ANI 通稿与 Elets CIO 报道双源核对，发布主体、三款模型与离线部署口径一致，架构细节以公司口径为准。</li><li><b>03</b>THE WATCHPOINT：AIKosh 上的权重与评测工具是否真实可用，Dhīr 9B 与 Soket 1200 亿参数模型能否按期交付，以及有无真实企业部署。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026-11-03，印度电子与信息技术部（MeitY）在新德里发布三款本土基础模型：Soket Labs 的 EKA-1，以及 ZenteiQ 的 Dhīr 2B 与 Dhīr 5B，均为 IndiaAI Mission 基础模型计划下的成果，由 MeitY 秘书 S. Krishnan 揭幕。</p><p>EKA-1 为约 260 亿参数的基础模型，训练量约 7.5 万亿 token，面向数学、编程与推理，支持 100 多种印度与国际语言及编程语言，可在本地、私有云与断网环境部署。</p><p>Dhīr 2B 为 2.03B 参数的稠密模型，Dhīr 5B 为 5.09B 总参数、1.79B 激活参数的混合专家模型，两款均从头预训练，可在笔记本与边缘设备上完全离线运行，企业可在自有基础设施上微调部署；ZenteiQ 称将通过 AIKosh 以 Apache 2.0 协议开放权重、技术文档与评测工具。</p><p>两家公司均为 IndiaAI Mission 遴选的承建方：Soket 于 2025 年 5 月入选，另在推进 1200 亿参数的印度语言开源模型；ZenteiQ 于 2025 年 9 月入选承建科学基础模型，首年约 7500 万卢比经费主要用于算力，另有 Dhīr 9B 在研。</p>
+<h2><span class="en">WHY IT MATTERS</span>主权模型的打法先变小，不再先变大</h2><p>印度这一批没有先拼最大参数，而是先拼能不能离线、能不能进企业内网。EKA-1 讲多语言与多步任务，Dhīr 讲笔记本上跑、断网可用，瞄准的是敏感数据出不了机房的政府与企业场景。</p><p>这个顺序本身就是判断：对后来者而言，先拿到可部署、可审计的模型，比先拿到一个跑分好看但只能云端调用的模型更有用。1200 亿参数的旗舰仍在路上，今天这三款是先把货架摆出来。</p><h2><span class="en">WHY IT MATTERS</span>发布只是起点，验证在部署一侧</h2><p>目前公开的都是发布方口径：参数、训练量、离线能力与开放协议，尚未见到独立基准复现，也没有银行、国防或政府系统的实际采用数据。Krishnan 关于断网部署能推动企业 AI 落地的表述，是政策预期，不是已发生的采用率。</p><p>下一条可验证的进展不在下一场发布会，而在 AIKosh 上的权重与评测工具是否真实可用，以及 Dhīr 9B 与 Soket 1200 亿参数模型能否按期交付。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>信号在可部署，不在参数表</h2><p>Tokenta Signal 判断：印度这批模型的信号不在参数数字，而在部署形态。能离线、能进内网、权重开放，才是主权模型从口号变成货架的第一步。限定同样明确：性能与采用率都还没有独立验证，旗舰大模型仍在路上，今天的发布只能算货架摆出来的那一天。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 ANI 2026-11-03 通稿与 Elets CIO 2026-11-03 报道为准，均已直接打开核验：发布主体、三款模型与离线部署口径两边一致。细节口径有两处出入，均已按更具体的来源取舍：ANI 通稿把 Dhīr 两款统称混合专家模型，ZenteiQ 公司口径则为 Dhīr 2B 稠密、Dhīr 5B 混合专家，以公司口径为准；EKA-1 参数 ANI 作约 260 亿，另有报道作 26.3B，属四舍五入差异。模型尚未有独立基准复现与企业部署数据，政府表述的战略意义不等于已验证的性能与采用率。本文只做摘要与链接，不转载报道全文与图片。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>ANI 2026-11-03 通稿与 Elets CIO 2026-11-03 报道均已直接打开核验，发布主体、三款模型与离线部署口径两边一致，Dhīr 架构细节以公司口径为准。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.dailyprabhat.com/meity-unveils-indigenous-ai-models-eka-1-dhir-2b-and-5b-under-indiaai-mission/" target="_blank" rel="noopener">MeitY unveils indigenous AI Models EKA-1, Dhīr 2B and 5B under IndiaAI mission ↗</a><br>dailyprabhat.com · 2026-11-03 · ANI 通稿报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>ANI 通稿报道<br><a href="https://www.dailyprabhat.com/meity-unveils-indigenous-ai-models-eka-1-dhir-2b-and-5b-under-indiaai-mission/" target="_blank" rel="noopener">https://www.dailyprabhat.com/meity-unveils-indigenous-ai-models-eka-1-dhir-2b-and-5b-under-indiaai-mission/</a></li><li>Elets CIO 报道<br><a href="https://cio.eletsonline.com/artificial-intelligence/indiaai-soket-zenteiq-foundation-models/76707/" target="_blank" rel="noopener">https://cio.eletsonline.com/artificial-intelligence/indiaai-soket-zenteiq-foundation-models/76707/</a></li><li>The 420 报道<br><a href="https://the420.in/india-launches-three-homegrown-ai-models-for-banking-cybersecurity-and-offline-use/" target="_blank" rel="noopener">https://the420.in/india-launches-three-homegrown-ai-models-for-banking-cybersecurity-and-offline-use/</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../snowflake-coco-cowork-bots/">Snowflake 推出常驻 CoCo 与 CoWork Bots，智能体开始在岗不在问</a> <span class="meta">ISSUE 180</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-mandiant-llmjacking/">偷来的大模型额度正在被转卖：谷歌披露 LLMjacking，单日账单超 10 万美元</a> <span class="meta">ISSUE 177</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-chatgpt-search-fifth-google/">OpenAI 自称搜索量已达谷歌五分之一：口径是自家算法，份额别照单全收</a> <span class="meta">ISSUE 175</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-attribution-open-source/">报错雪崩先找真凶：NVIDIA 开源 Attribution，把 NCCL 报错追回源头 GPU</a> <span class="meta">ISSUE 174</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
