@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAI 自称搜索量已达谷歌五分之一：口径是自家算法，份额别照单全收 — Tokenta Signal</title><meta name="description" content="OpenAI 消费产品负责人 Adam Fry 11 月 2 日对 Big Technology 表示，ChatGPT 触发联网搜索的问题量约等于谷歌查询量的五分之一，计数口径为每次触发联网搜索的问题；OpenAI 未披露绝对数字与谷歌量估算方法，第三方建模估算在 7.5% 至 12% 之间；同期 ChatGPT 周活 60 天内从 10 亿涨至 12 亿。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 17:34 UTC</span><span><span class="live">● LIVE</span> ISSUE 175 · OPENAI × CHATGPT × SEARCH · Big Technology 访谈报道</span><span><span class="live">● LIVE</span> ISSUE 174 · NVIDIA × ATTRIBUTION × AI INFRASTRUCTURE · NVIDIA 官方技术博客</span><span><span class="live">● LIVE</span> ISSUE 173 · CISCO TALOS × VOLTA × AI MALWARE · Cisco Talos 官方报告</span><span><span class="live">● LIVE</span> ISSUE 172 · CHINA × NDRC × AI REGULATION · Bloomberg Law 报道</span><span><span class="live">● LIVE</span> ISSUE 171 · OPENAI × ANTHROPIC × ELECTIONS · Nextgov 独立报道</span><span><span class="live">● LIVE</span> ISSUE 170 · OPENAI × DRISCOLL × NATIONAL SECURITY · Reuters 独立报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>OpenAI 自称搜索量已达谷歌五分之一：口径是自家算法，份额别照单全收</h1>
+<p class="deck">OpenAI 消费产品负责人 Adam Fry 11 月 2 日对 Big Technology 表示，ChatGPT 触发联网搜索的问题量约等于谷歌查询量的五分之一，计数口径为每次触发联网搜索的问题；OpenAI 未披露绝对数字与谷歌量估算方法，第三方建模估算在 7.5% 至 12% 之间；同期 ChatGPT 周活 60 天内从 10 亿涨至 12 亿。</p>
+<div class="meta">ISSUE 175 · 2026-11-02 · SOURCE / Big Technology 访谈报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">OPENAI × CHATGPT × SEARCH</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE DISCLOSURE：OpenAI 高管 Fry 11 月 2 日晚宴上对 Big Technology 披露 ChatGPT 类搜索量约等于谷歌五分之一。</li><li><b>02</b>THE CONFIRMATION：AIStockWire 11 月 3 日独立报道核对核心引述、计数口径与用户增长数字一致。</li><li><b>03</b>THE WATCHPOINT：OpenAI 是否在后续财报或官方披露中给出绝对搜索量与谷歌量估算方法，以及 Chat 与 Work 合并的上线时间。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>OpenAI 消费产品负责人 Adam Fry 在 11 月 2 日纽约一场 OpenAI 晚宴上对 Big Technology 的 Alex Kantrowitz 表示，ChatGPT 的类搜索查询量现在大约是谷歌查询量的五分之一。Fry 的计数口径是：每次用户提问并触发 ChatGPT 联网搜索，就算一次搜索，覆盖查人、查地、查物，以及需要最新信息的金融与健康问题。</p><p>Fry 没有给出绝对搜索数字，也没有说明 OpenAI 如何估算谷歌的量。被问及这是否意味着 ChatGPT 已数倍于市占约 5% 的 Bing 时，Fry 没有正面接茬，转而谈用户增长：ChatGPT 在 60 天内从每周 10 亿活跃用户涨到 12 亿。</p><p>同一场访谈里 Fry 还披露了另外几组数字：语音功能每周用户 2.5 亿，用户每周用 ChatGPT 生成 15 亿张图片，广告年化收入在 200 天内突破 10 亿美元（该里程碑 OpenAI 已于 8 月公布），Chat 与 Work 两种模式计划合并，具体时间只说即将推出。</p><p>对冲口径同样来自公开数字：Alphabet 10 月 29 日称谷歌搜索迎来五年来最快的同比增速；第三方建模估算则分歧明显，seoClarity 10 月估算 ChatGPT 的类搜索活动约为谷歌查询量的 7.5%，Ahrefs 2 月的估算约为 12%，口径不同，结果就不同。</p>
+<h2><span class="en">WHY IT MATTERS</span>五分之一这个数字，含金量在口径不在排名</h2><p>Fry 的说法很容易被读成市场份额，但它不是。OpenAI 比的是自家触发联网搜索的问题数与谷歌的查询数，两边统计口径并不对称：谷歌一次查询是一次搜索，ChatGPT 一段对话里多次触发联网搜索可以计多次，而纯对话、纯推理的问题根本不进这个数。</p><p>更关键的是分母没公开。没有 OpenAI 估算谷歌量的方法，没有绝对数字，这个五分之一就没法独立复算。它更像一家公司在晚宴上放出的定位信号，而不是一份可审计的份额报告。读的时候要按公司自述处理，不能当成第三方份额。</p><h2><span class="en">WHY IT MATTERS</span>真正的新闻在用户增速，不在搜索对比</h2><p>60 天新增 2 亿周活用户，比五分之一的比喻更硬。这组数字有明确的起止点和可对照的前值，说明 ChatGPT 的增长曲线还没有放缓。同时谷歌搜索还在以五年来最快速度增长，所谓替代叙事并不成立：蛋糕在变大，两边都在吃。</p><p>对普通用户而言，这场竞争的落点不在谁的查询量更大，而在入口习惯：越来越多的问题不再以搜索框开头，而是以对话开头。Fry 提到的 Chat 与 Work 合并，正是把这个习惯从问答推向办事。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>别把公司自述读成市场份额</h2><p>Tokenta Signal 判断：这条新闻的正确读法是分层。用户增速那层是硬数字，值得记；五分之一那层是 OpenAI 自家口径的定位表述，值得听，但不能当成份额。搜索市场没有被颠覆，谷歌还在加速增长，对话入口在分流问题，这才是同时成立的三句话。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Big Technology 11 月 2 日晚的 OpenAI 高管访谈与 AIStockWire 11 月 3 日独立报道为准；五分之一为 OpenAI 自家分析口径，非独立实测市场份额，OpenAI 未披露绝对搜索量，也未说明如何估算谷歌的量。本文只做摘要与链接，不转载访谈全文。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>Big Technology 原始访谈报道与 AIStockWire 独立报道双源确认，AIStockWire 报道页已打开验证，访谈核心引述与计数口径两边一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20" target="_blank" rel="noopener">OpenAI: ChatGPT Search Is About 20% of Google&#x27;s ↗</a><br>bigtechnology.com · 2026-11-02 · Big Technology 访谈报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Big Technology 访谈报道<br><a href="https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20" target="_blank" rel="noopener">https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20</a></li><li>AIStockWire 独立报道<br><a href="https://aistockwire.com/blog/openai-chatgpt-search-one-fifth-google-googl-what-counts-november-2026" target="_blank" rel="noopener">https://aistockwire.com/blog/openai-chatgpt-search-one-fifth-google-googl-what-counts-november-2026</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-attribution-open-source/">报错雪崩先找真凶：NVIDIA 开源 Attribution，把 NCCL 报错追回源头 GPU</a> <span class="meta">ISSUE 174</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../cisco-talos-volta-infostealer/">偷完还让 AI 估价：Talos 披露 VOLTA 木马按变现价值给受害者排序</a> <span class="meta">ISSUE 173</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-anthropic-election-war-rooms/">OpenAI 与 Anthropic 首次设立选举战情室：中期选举日的值班考验</a> <span class="meta">ISSUE 171</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-dan-driscoll-national-security/">OpenAI 请来前陆军部长 Driscoll：新设国家安全现代化高级顾问</a> <span class="meta">ISSUE 170</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
