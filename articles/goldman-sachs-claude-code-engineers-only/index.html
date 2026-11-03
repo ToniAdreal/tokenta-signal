@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高盛收回交易员的 AI 编程工具：实验结束，只留给工程师 — Tokenta Signal</title><meta name="description" content="彭博社 2026-11-02 报道：高盛 10 月内部指引把 Claude Code 与 GitHub 编程工具收回至工程师专用，交易员与投行员工失去访问权，结束数月 vibe coding 实验期；高盛称系按生产力与风险管理评估后的分层。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.03 16:04 UTC</span><span><span class="live">● LIVE</span> ISSUE 160 · GOLDMAN SACHS × ENTERPRISE AI × GOVERNANCE · PYMNTS 转述彭博报道</span><span><span class="live">● LIVE</span> ISSUE 159 · WIRED × APP STORE × AI SAFETY · AppleInsider 报道</span><span><span class="live">● LIVE</span> ISSUE 158 · GOOGLE × EDUCATION × AI · Google 官方博客</span><span><span class="live">● LIVE</span> ISSUE 157 · DRAX × BROOKFIELD × AI INFRASTRUCTURE · Drax 交易所公告</span><span><span class="live">● LIVE</span> ISSUE 156 · MENLO × ENTERPRISE AI · Menlo Ventures 官方新闻稿</span><span><span class="live">● LIVE</span> ISSUE 155 · CROWDSTRIKE × AI SAFETY · CrowdStrike 官方新闻稿</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>高盛收回交易员的 AI 编程工具：实验结束，只留给工程师</h1>
+<p class="deck">彭博社 2026-11-02 报道：高盛 10 月内部指引把 Claude Code 与 GitHub 编程工具收回至工程师专用，交易员与投行员工失去访问权，结束数月 vibe coding 实验期；高盛称系按生产力与风险管理评估后的分层。</p>
+<div class="meta">ISSUE 160 · 2026-11-02 · SOURCE / PYMNTS 转述彭博报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">GOLDMAN SACHS × ENTERPRISE AI × GOVERNANCE</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE RELEASE：彭博社 2026-11-02 报道高盛 10 月内部指引，编程工具收回至工程师专用。</li><li><b>02</b>THE CONFIRMATION：PYMNTS 与 SiliconReport 同日独立转述印证范围、背景与高盛发言人表态。</li><li><b>03</b>THE WATCHPOINT：其他大行是否跟进分层口径，业务团队是否转向合规替代方案。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>彭博社 2026-11-02 报道：高盛 10 月更新内部指引，把 Anthropic 的 Claude Code 与微软 GitHub 编程工具的使用权限收回到软件工程师，交易员与投行员工失去访问权，结束了数月来全员可用的实验期。</p><p>实验期的用法早已超出写代码：交易员与银行员工用这些工具监控客户交易流、模拟市场波动对头寸的影响、起草文字与图表材料；据知情人士称，权限收回已引起部分交易员的不满。</p><p>反转的幅度值得注意：2026 年 7 月，高盛首席信息官 Marco Argenti 还公开赞扬非技术员工的 vibe coding，称他们用 AI 工具做出原型、再交给全行约 12,000 名工程师打磨上线；4 个月后，同一批人被排除在编程工具之外。</p><p>高盛发言人 Nick Carcaterra 给出的解释是流程性的：先开放实验以寻找最佳用例，再按生产力与风险管理等多项因素评估，最终把工具交给最适合长期使用的人。没有公开的事故、成本数字或内部审计结论支撑这次收缩。</p><p>收缩有边界，不是全面禁用 AI：工程师继续保有编程工具，据报道横跨交易、量化研究与软件工程的 strats 岗位也不在限制之列；高盛 2025 年 6 月全行推出的 GS AI Assistant 与内部通用助手仍在运行。</p>
+<h2><span class="en">WHY IT MATTERS</span>实验结束的信号，比禁令本身更重要</h2><p>高盛的措辞刻意温和，没有说工具不好，也没有说员工滥用，只说实验期结束、按生产力与风险评估收窄人群。这正是大机构引入 AI 的标准第二阶段：先放开找用例，再按岗位与风险分层收权。</p><p>对其他金融机构而言，高盛的版本是一个可复制的模板：不是一刀切禁用，而是把最强的编程工具限定给最能驾驭它的人，同时保留通用助手给全员。下一信号是其他大行是否跟进同样的分层口径，还是继续放开。</p><h2><span class="en">WHY IT MATTERS</span>华尔街正在同一方向收紧，只是方式不同</h2><p>高盛不是孤例：摩根大通 CEO Jamie Dimon 10 月在财报电话会上警告 rogue agents，称不允许外部 AI 代理进入银行；美国银行随后给代理访问消费者存款设限；花旗则禁止第三方代理登录客户账户或交易。</p><p>四家机构的动作拼在一起，指向同一判断：AI 工具的价值已经不需要再证明，需要证明的是边界。谁先把岗位分层、代理权限与责任归属写清楚，谁就在下一轮 AI 部署里少交学费。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>高盛给 AI 工具定了岗位边界</h2><p>Tokenta Signal 判断：这轮收缩真正的信号不是高盛不看好 AI 编程工具，而是全员实验阶段的结束。大机构的 AI 部署正在从谁都能用，转向按岗位、按风险分层给权限。下一信号是其他大行是否复制高盛的分层模板，以及被收回权限的业务团队会不会转向合规的低代码替代方案。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实均来自彭博社报道的独立转述口径：内部指引原文未公开，限制范围以彭博看到的指引与高盛发言人表态为准；所谓 strats 豁免为报道口径，高盛未单独确认。本文只做摘要与链接，不转载原文全文。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>彭博社报道经 PYMNTS 与 SiliconReport 独立转述双源确认，原文链接已打开验证。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/" target="_blank" rel="noopener">Goldman Sachs Bars Bankers From Using Claude Code, GitHub ↗</a><br>pymnts.com · 2026-11-02 · PYMNTS 转述彭博报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>PYMNTS 转述彭博报道<br><a href="https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/</a></li><li>SiliconReport 报道<br><a href="https://www.siliconreport.com/goldman-sachs-cuts-off-most-staff-from-claude-code-and-github" target="_blank" rel="noopener">https://www.siliconreport.com/goldman-sachs-cuts-off-most-staff-from-claude-code-and-github</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../wired-400-apps-hidden-deepfake/">400 多个应用伪装过审：修图工具外壳，暗地里是 deepfake 生成器</a> <span class="meta">ISSUE 159</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-guided-learning-k12/">Google 给校园 AI 立新规：默认全关，学校点头才开</a> <span class="meta">ISSUE 158</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../drax-brookfield-radiant-1gw/">英国最大电站要改行：Drax 联手 Brookfield 建超 1GW 的 AI 数据中心</a> <span class="meta">ISSUE 157</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../menlo-enterprise-ai-177b/">企业 AI 支出一年翻 5 倍，买单的不再是人而是智能体</a> <span class="meta">ISSUE 156</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
