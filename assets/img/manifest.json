@@ -313,5 +313,19 @@
   "credit_name": "TechCrunch report",
   "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/",
   "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/"
+ },
+ "nvidia-cloud-partners-49pct-china-cap": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Silicon Report (Financial Times report)",
+  "hero_from": "https://www.siliconreport.com/nvidia-tells-cloud-clients-to-sell-51-to-non-chinese-firms-ft-says",
+  "evidence_from": ""
+ },
+ "pliant-80m-series-c-agentic-payments": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "PYMNTS report",
+  "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/",
+  "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/"
  }
 }
