@@ -41,6 +41,13 @@
   "hero": true,
   "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
  },
+ "canva-1271-restructure-ai-costs": {
+  "credit_name": "TechCrunch report",
+  "evidence": true,
+  "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/",
+  "hero": true,
+  "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/"
+ },
  "china-ndrc-ai-lifecycle-law": {
   "credit_name": "Bloomberg Law report",
   "evidence": true,
@@ -195,6 +202,13 @@
   "hero": true,
   "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
  },
+ "nvidia-cloud-partners-49pct-china-cap": {
+  "credit_name": "Silicon Report (Financial Times report)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.siliconreport.com/nvidia-tells-cloud-clients-to-sell-51-to-non-chinese-firms-ft-says"
+ },
  "openai-adnoc-g42-industrial-ai": {
   "credit_name": "",
   "evidence": false,
@@ -250,6 +264,13 @@
   "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
   "hero": true,
   "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
+ },
+ "pliant-80m-series-c-agentic-payments": {
+  "credit_name": "PYMNTS report",
+  "evidence": true,
+  "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/",
+  "hero": true,
+  "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/"
  },
  "semianalysis-gdpx-benchmark": {
   "credit_name": "SemiAnalysis official announcement",
@@ -307,25 +328,11 @@
   "hero": true,
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-04:newsml_PLXR5JDMF:0-brief-uber-q3-gross-bookings-usd-59-819-million/"
  },
- "canva-1271-restructure-ai-costs": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "TechCrunch report",
-  "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/",
-  "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/"
- },
- "nvidia-cloud-partners-49pct-china-cap": {
+ "sequoia-10b-rewind-expansion": {
   "hero": true,
   "evidence": false,
-  "credit_name": "Silicon Report (Financial Times report)",
-  "hero_from": "https://www.siliconreport.com/nvidia-tells-cloud-clients-to-sell-51-to-non-chinese-firms-ft-says",
+  "credit_name": "TechCrunch report (full memo)",
+  "hero_from": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
   "evidence_from": ""
- },
- "pliant-80m-series-c-agentic-payments": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "PYMNTS report",
-  "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/",
-  "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/"
  }
 }
