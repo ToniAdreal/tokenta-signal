@@ -285,5 +285,12 @@
   "credit_name": "Google official blog",
   "hero_from": "https://blog.google/intl/en-my/company-news/inside-google/google-investment-malaysia-digital-infrastructure-november-2026/",
   "evidence_from": ""
+ },
+ "kimi-k31-pro-weights-public": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Moonshot AI",
+  "hero_from": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+  "evidence_from": ""
  }
 }
