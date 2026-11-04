@@ -299,5 +299,12 @@
   "credit_name": "Le Private Banker (Bloomberg)",
   "hero_from": "https://leprivatebanker.com/2026/11/04/meta-seeks-up-to-e9-billion-in-debut-euro-bond-sale-a-day-after-raising-15-billion-in-dollars/",
   "evidence_from": ""
+ },
+ "together-ai-compiler-polymorphic-inference": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/",
+  "evidence_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/"
  }
 }
