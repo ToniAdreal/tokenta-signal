@@ -54,5 +54,208 @@
   "credit_name": "Reuters",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "wired-400-apps-hidden-deepfake": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AppleInsider report",
+  "hero_from": "https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools",
+  "evidence_from": ""
+ },
+ "fal-series-f-16b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+  "evidence_from": ""
+ },
+ "amd-q3-data-center-record": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "AMD 官方新闻稿",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "three-labs-cyber-safety": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GenZ NewZ",
+  "hero_from": "https://genznewz.com/cyber-safety-coordination-unites-openai-anthropic-deepmind",
+  "evidence_from": ""
+ },
+ "anthropic-drug-development": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Pivot News report",
+  "hero_from": "https://pivotnews.ai/healthcare/anthropic-details-drug-development-results-from-six-claude",
+  "evidence_from": ""
+ },
+ "gemini-4-argon": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Google DeepMind official blog",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+  "evidence_from": ""
+ },
+ "phonic-voice-ai": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Precise Impact report",
+  "hero_from": "https://www.preciseimpact.ai/briefing/ai-news-digest-2026-10-31",
+  "evidence_from": ""
+ },
+ "foundry-100m-robot-factories": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "RobotsBeat",
+  "hero_from": "https://robotsbeat.com/foundry-robotics-100m-series-a-autonomous-assembly-factory/",
+  "evidence_from": ""
+ },
+ "ai-ballot-grok-gpt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch report on the Convovo study",
+  "hero_from": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+  "evidence_from": ""
+ },
+ "openai-servicenow-workflows": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI partnership report",
+  "hero_from": "https://www.unite.ai/openai-and-servicenow-expand-partnership-with-chatgpt-workflow-plugin/",
+  "evidence_from": "https://www.unite.ai/openai-and-servicenow-expand-partnership-with-chatgpt-workflow-plugin/"
+ },
+ "zoominfo-snowflake-mcp": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Business Wire press release",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "jetbrains-first-loss": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Hacker News discussion thread",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "cadence-maestro-chip-design": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Report relaying Reuters",
+  "hero_from": "https://947thebeast.com/2026/10/26/cadence-unveils-nvidia-backed-ai-models-that-chipmakers-can-run-in-house/",
+  "evidence_from": ""
+ },
+ "ai-training-opt-out-token": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "PPC Land",
+  "hero_from": "https://ppc.land/google-microsoft-openai-and-anthropic-back-one-ai-training-opt-out/",
+  "evidence_from": ""
+ },
+ "bedrock-robotics-600m": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Analytics Insight funding roundup",
+  "hero_from": "https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week",
+  "evidence_from": "https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week"
+ },
+ "anthropic-gsa-40pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "U.S. General Services Administration official announcement",
+  "hero_from": "https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-anthropic-reach-onegov-agreement-on-discounted-consumptionbased-pricing-10272026",
+  "evidence_from": ""
+ },
+ "openai-funding-target-cut": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Wixx, citing Reuters",
+  "hero_from": "https://wixx.com/2026/10/30/openai-cuts-funding-target-by-10-billion-ft-reports/",
+  "evidence_from": ""
+ },
+ "oracle-openai-workspace": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Oracle official press release",
+  "hero_from": "https://www.oracle.com/anz/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/",
+  "evidence_from": ""
+ },
+ "deepseek-second-round": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Dealroom",
+  "hero_from": "https://dealroom.co/news/info-r9usms-behind-deepseeks-16-billion-funding-chinese-tech-titans-and-state-player/",
+  "evidence_from": ""
+ },
+ "cerebras-kimi-k3-59-wafers": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cerebras official blog",
+  "hero_from": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+  "evidence_from": ""
+ },
+ "anthropic-watermark-loophole": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Decoder report",
+  "hero_from": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/",
+  "evidence_from": ""
+ },
+ "deepseek-superagent-prototype": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GitHub project page",
+  "hero_from": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+  "evidence_from": ""
+ },
+ "xai-naacp-turbines-court": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/10/31/judge-allows-naacp-lawsuit-over-xai-data-center-pollution-to-move-forward/",
+  "evidence_from": "https://www.aiaffairs.com/government/judge-allows-naacp-xai-southaven-air-pollution-lawsuit/"
+ },
+ "claude-duet-proactive-agent": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MacRumors · Report on Anthropic's launch",
+  "hero_from": "https://www.macrumors.com/2026/10/21/anthropic-claude-duet/",
+  "evidence_from": "https://www.unite.ai/anthropic-opens-claude-duet-research-preview-to-us-pro-and-max-users/"
+ },
+ "figma-weave-workflows": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Figma official blog",
+  "hero_from": "https://www.figma.com/blog/the-tldr-on-figma-weave/",
+  "evidence_from": ""
+ },
+ "china-ai-export-controls-23": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "On The Wire · Item-by-item check of the announcement",
+  "hero_from": "https://onthewire.ai/article/china-proposes-export-controls-on-23-ai-technologies-from-large-models-to-agents",
+  "evidence_from": ""
+ },
+ "openai-offline-training": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch · Report on OpenAI's blog",
+  "hero_from": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/",
+  "evidence_from": ""
+ },
+ "doordash-agent-orders-hundreds": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+  "evidence_from": ""
+ },
+ "china-embodied-ai-13b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters report, republished",
+  "hero_from": "https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/",
+  "evidence_from": ""
  }
 }

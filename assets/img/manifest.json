@@ -173,5 +173,12 @@
   "credit_name": "Tutor Intelligence company announcement",
   "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
   "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
+ },
+ "npci-tech-solutions-ai-blockchain": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Reuters report",
+  "hero_from": "",
+  "evidence_from": "https://www.mediainfoline.com/brand/npci-announces-formation-of-npci-tech-solutions-limited-ntsl-as-a-wholly-owned-subsidiary"
  }
 }
