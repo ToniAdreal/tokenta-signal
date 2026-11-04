@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meituan&#x27;s 1.6 Trillion-Parameter Model Now Runs on Chinese Chips — Tokenta Signal</title><meta name="description" content="Meituan launched LongCat-2.5 on November 1 to 2, with 1.6 trillion total parameters and about 48 billion activated per token, long-context training and inference optimized for Chinese AI accelerators, company-reported benchmark scores, and weights not yet released.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Meituan launched LongCat-2.5 on November 1 to 2, with 1.6 trillion total parameters and about 48 billion activated per token, long-context training and inference optimized for Chinese AI accelerators, company-reported benchmark scores, and weights not yet released.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 15:02 UTC</span><span><span class="live">●</span> ISSUE 201 · OPENAI × CODEX × PIERRE COMPUTER · Unite.AI report</span><span><span class="live">●</span> ISSUE 200 · UBER × Q3 2026 × AUTONOMOUS VEHICLES · BusinessWire release</span><span><span class="live">●</span> ISSUE 199 · NICE × Q3 2026 × CX AI · BusinessWire release</span><span><span class="live">●</span> ISSUE 198 · DATADOG × Q3 2026 × AI OBSERVABILITY · GlobeNewswire release</span><span><span class="live">●</span> ISSUE 197 · Nooks × General Catalyst × AI SALES · Reuters report</span><span><span class="live">●</span> ISSUE 196 · NPCI × AI × DIGITAL PUBLIC INFRASTRUCTURE · Reuters report</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Meituan&#x27;s 1.6 Trillion-Parameter Model Now Runs on Chinese Chips</h1>
+<p class="deck">Meituan launched LongCat-2.5 on November 1 to 2, with 1.6 trillion total parameters and about 48 billion activated per token, long-context training and inference optimized for Chinese AI accelerators, company-reported benchmark scores, and weights not yet released.</p>
+<div class="meta">ISSUE 154 · 2026-11-03 · SOURCE / <b>FourWeekMBA report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">MEITUAN × LONGCAT</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">1.6T</div><div class="lab">TOTAL PARAMETERS</div><div class="desc">Total model parameters, with about 48 billion activated per token.</div></div><div class="metric"><div class="num">Under 80GB</div><div class="lab">PER CHIP MEMORY</div><div class="desc">Memory ceiling per Chinese accelerator, which the training system is optimized around.</div></div><div class="metric"><div class="num">1M tokens</div><div class="lab">CONTEXT WINDOW</div><div class="desc">Context window, with maximum output of 128,000 tokens.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE LAUNCH — On November 1, the LongCat team published the LongCat-2.5 technical announcement.</li><li><b>02</b>THE RELEASE — On November 2, the model went fully live on the chat service and API.</li><li><b>03</b>THE OPTIMIZATION — Long-context training and 4-bit inference optimized for Chinese accelerators.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Meituan&#x27;s LongCat team launched LongCat-2.5 between its November 1 technical announcement and the November 2 API launch. It is a natively multimodal model built for long-horizon agent tasks, with 1.6 trillion total parameters and about 48 billion activated per token.</p><p>The selling point is not the parameter count but the training base. Meituan says long-context training and 4-bit inference are optimized for Chinese AI accelerators, with memory per Chinese accelerator under 80GB, so the training system prioritizes memory efficiency.</p><p>The model is available through Meituan&#x27;s chat service and API, with a 1 million-token context window, up to 128,000 tokens of output, and a limited-time price of $0.30 per million input tokens. GitHub and Hugging Face releases are marked as coming soon and are not yet live.</p>
+<h2><span class="en">BIG TOTAL, SMALL ACTIVE</span>Big Total, Small Active: Read the Two Numbers Separately</h2><p>1.6 trillion is the total parameter count; 48 billion is what is actually activated per token, only 3% of the total. That is the point of a mixture-of-experts architecture: the model can be very large without each call costing proportionally more.</p><p>Meituan&#x27;s 4-bit quantization scheme compresses both expert weights and activations to 4 bits. The company says this configuration tested on par with full-precision models. The memory and compute saved are what make running a large model on Chinese chips workable.</p><h2><span class="en">SELF REPORTED SCORES</span>Self-Reported Scores Must Be Read as Self-Reported</h2><p>In Meituan&#x27;s own comparison table, LongCat-2.5 scored higher on 20 of 27 tests shared with GPT-5.6-Sol, and on 10 tests shared with Claude Opus 5. These numbers come from Meituan&#x27;s own testing, with some rival scores taken from public reports or leaderboards.</p><p>Independent verification does not exist yet. The weights have not been released, so third parties cannot reproduce the results. Reading self-reported scores as an industry ranking is the easiest mistake in this story. The scorecard&#x27;s value is directional, not ordinal.</p><h2><span class="en">THE DOMESTIC CHIP LINE</span>The Domestic-Chip Line Keeps Getting More Solid</h2><p>LongCat-2.0 already walked this path in June with Chinese-chip training, officially using more than 50,000 Chinese accelerators and no NVIDIA hardware, with weights later open-sourced under the MIT license. LongCat-2.5 is the second step on the same line.</p><p>The significance is not a single breakthrough but repeatability. The same optimization approach carried from one generation to the next shows that running large models on Chinese accelerators has moved from experiment to process. Once a process holds, scale is a matter of time.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM EXPERIMENT TO PROCESS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From one-off experiment to repeatable process</div><div class="desc">From LongCat-2.0 to 2.5, the same optimization approach carried across two generations.</div></div><div class="metric"><div class="lab">FROM SIZE TO EFFICIENCY</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From a size race to an efficiency race</div><div class="desc">Activated parameters are only 3% of the total, so the cost ledger matters more than the size ledger.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Running big models on Chinese chips has gone from experiment to process</h2><p>Tokenta Signal&#x27;s judgment: the real signal in LongCat-2.5 is not the parameter count but the repeatability of a second generation of Chinese-chip training. Once a process runs twice, scale is a matter of time.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The limits of this report: all benchmark scores are self-reported by Meituan and have not been independently verified. Meituan did not name the Chinese chip vendors or the cluster size; community speculation points to Huawei&#x27;s Ascend 910C, but the official wording covers only Chinese accelerators. GitHub and Hugging Face weight releases are marked as coming soon and are not yet live, and pricing is a limited-time rate.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/meituan-longcat-25-chinese-chips/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.techtimes.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>The original confirms Meituan launched LongCat-2.5 on November 1 to 2, with 1.6 trillion total parameters and about 48 billion activated per token, long-context training and 4-bit inference optimized for Chinese AI accelerators, and company-reported benchmark scores.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://fourweekmba.com/ai-meituans-1-6t-model-on-chinese-chips-rivals-openai-gpt-5-6/" target="_blank" rel="noopener">Meituan&#x27;s 1.6T Model on Chinese Chips Rivals OpenAI GPT-5.6 ↗</a><br>fourweekmba.com · 2026-11-03 · FourWeekMBA report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>FourWeekMBA: Meituan&#x27;s 1.6T Model on Chinese Chips Rivals OpenAI GPT-5.6<br><a href="https://fourweekmba.com/ai-meituans-1-6t-model-on-chinese-chips-rivals-openai-gpt-5-6/" target="_blank" rel="noopener">https://fourweekmba.com/ai-meituans-1-6t-model-on-chinese-chips-rivals-openai-gpt-5-6/</a></li><li>Tech Times: Meituan Releases LongCat-2.5 on Chinese Chips; Benchmark Claims Await Independent Tests<br><a href="https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm" target="_blank" rel="noopener">https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../midterm-sweep-ai-datacenter-stocks/">Democrat Sweep Hits AI Data-Center Stocks: Premarket Dips, Texas Moratorium Fear in Focus</a> <span class="meta">ISSUE 195</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

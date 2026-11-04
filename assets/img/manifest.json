@@ -232,10 +232,10 @@
  },
  "meituan-longcat-25-chinese-chips": {
   "hero": false,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "FourWeekMBA report",
   "hero_from": "",
-  "evidence_from": ""
+  "evidence_from": "https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm"
  },
  "traversal-120m-series-b": {
   "hero": true,
@@ -253,10 +253,10 @@
  },
  "crowdstrike-kill-switch-495m": {
   "hero": true,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "ITMunch report",
   "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
-  "evidence_from": ""
+  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch"
  },
  "openai-pierre-computer-codex": {
   "hero": true,
@@ -264,5 +264,33 @@
   "credit_name": "Unite.AI report",
   "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
   "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
+ },
+ "amd-q3-1338b-2027": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Inference",
+  "hero_from": "https://theinference.org/article/amd-guided-q4-to-17-billion-as-data-center-sales-nearly-doubled-and-4-7-billion-of-debt-funds-the-ramp",
+  "evidence_from": "https://theinference.org/article/amd-guided-q4-to-17-billion-as-data-center-sales-nearly-doubled-and-4-7-billion-of-debt-funds-the-ramp"
+ },
+ "oracle-tencent-7b-cancelled": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters report, citing the FT",
+  "hero_from": "https://northlandnewsradio.com/2026/11/03/oracle-abandons-7-billion-tencent-ai-deal-under-trump-pressure-ft-reports/",
+  "evidence_from": ""
+ },
+ "google-schools-ai-off-default": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "MediaNama report",
+  "hero_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/",
+  "evidence_from": ""
+ },
+ "anthropic-s1a-17b-quarter": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MadRobot report",
+  "hero_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/",
+  "evidence_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/"
  }
 }
