@@ -376,5 +376,12 @@
   "credit_name": "MarketCatalyst",
   "hero_from": "https://marketcatalyst.ai/posts/snap-swings-to-q3-profit-as-eps-beats-at-0-03-but-revenue-misses-at-1-72b",
   "evidence_from": ""
+ },
+ "meta-conductor-coding-agents": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+  "evidence_from": ""
  }
 }
