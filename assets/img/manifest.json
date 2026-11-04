@@ -61,5 +61,89 @@
   "credit_name": "KWSN republication of the same Reuters article",
   "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
   "evidence_from": ""
+ },
+ "anthropic-flashprove-provable-inference": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic official research post",
+  "hero_from": "https://www.anthropic.com/research/provable-inference",
+  "evidence_from": "https://www.unite.ai/anthropic-releases-flashprove-for-cryptographic-ai-inference-proofs/"
+ },
+ "openai-lifeval-everyday-tasks": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "ExplainX independent analysis",
+  "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026",
+  "evidence_from": "https://openai.com/index/lifeval"
+ },
+ "anthropic-message-threads-beta": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic official post",
+  "hero_from": "https://claude.com/resources/articles/message-threads",
+  "evidence_from": "https://claude.com/resources/articles/message-threads"
+ },
+ "arista-q3-ai-networking-record": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Fool independent analysis",
+  "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/",
+  "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026"
+ },
+ "openai-pando-git-backend": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "ExplainX independent report",
+  "hero_from": "https://explainx.ai/blog/openai-pando-git-backend-codex-monorepo-5x-faster-pushes-petabyte-per-day-2026",
+  "evidence_from": "https://openai.com/index/scaling-git-at-openai"
+ },
+ "openai-physical-engineering-astra": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI report",
+  "hero_from": "https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/",
+  "evidence_from": "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
+ },
+ "block-q3-earnings-cash-app": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Motley Fool analysis of the shareholder letter",
+  "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
+  "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
+ },
+ "china-ndrc-ai-lifecycle-law": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Bloomberg Law report",
+  "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses",
+  "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
+ },
+ "cisco-talos-volta-infostealer": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Cisco Talos official report",
+  "hero_from": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+  "evidence_from": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html"
+ },
+ "snowflake-coco-cowork-bots": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Snowflake official blog",
+  "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+  "evidence_from": ""
+ },
+ "semianalysis-gdpx-benchmark": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "SemiAnalysis official announcement",
+  "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
+  "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/"
+ },
+ "supermicro-q1-fy27-record-sales": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
+  "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523",
+  "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
  }
 }
