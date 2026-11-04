@@ -299,5 +299,12 @@
   "credit_name": "Lambda official blog",
   "hero_from": "https://lambda.ai/blog/lambda-to-invest-33-billion-in-alabama-with-new-data-center",
   "evidence_from": "https://www.unite.ai/lambda-plans-alabama-ai-data-center-campus-in-lowndes-county/"
+ },
+ "globalfoundries-q3-record-margin-tsmc-interposer": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Earnings-call coverage",
+  "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04",
+  "evidence_from": ""
  }
 }
