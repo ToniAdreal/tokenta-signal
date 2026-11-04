@@ -162,10 +162,10 @@
  },
  "drax-brookfield-radiant-1gw": {
   "hero": true,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "AI data center page, Drax website",
   "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/",
-  "evidence_from": ""
+  "evidence_from": "https://www.drax.com/what-we-do/ai-data-centres/"
  },
  "tutor-intelligence-75m-series-b": {
   "hero": true,
@@ -180,5 +180,47 @@
   "credit_name": "Reuters report",
   "hero_from": "",
   "evidence_from": "https://www.mediainfoline.com/brand/npci-announces-formation-of-npci-tech-solutions-limited-ntsl-as-a-wholly-owned-subsidiary"
+ },
+ "nooks-500m-cvf-revenue-agent-platform": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters report",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "google-guided-learning-k12": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Official Blog",
+  "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+  "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+ },
+ "google-mandiant-llmjacking": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Cloud Official Blog Report",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
+ },
+ "google-xcpe-videostrong-botnet": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Threat Intelligence Team Official Blog",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
+ },
+ "datadog-q3-2026-beat-weak-outlook": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily report",
+  "hero_from": "https://www.investors.com/news/technology/datadog-stock-ddog-datadog-earnings-news-q32026/",
+  "evidence_from": ""
+ },
+ "nice-q3-2026-ai-arr-392m": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Seeking Alpha report",
+  "hero_from": "https://seekingalpha.com/news/4664551-nice-raises-2026-eps-guidance-after-q3-earnings-and-revenue-top-estimates",
+  "evidence_from": ""
  }
 }
