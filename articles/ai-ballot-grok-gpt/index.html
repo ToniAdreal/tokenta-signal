@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>逼模型选边站队，两家模型给出了相反答案 — Tokenta Signal</title><meta name="description" content="Convovo 的 AI Ballot 2026 研究用同一条指令测试两个模型：Grok 在 92% 的答案中选共和党，GPT 在 97% 中选民主党。消费者应用拒绝回答，开发者接口没有这道护栏。">
+<title>Force the Models to Take Sides, and Two Models Give Opposite Answers — Tokenta Signal</title><meta name="description" content="Convovo&#x27;s AI Ballot 2026 study tested two models with the same instruction: Grok chose Republicans in 92% of its answers, GPT chose Democrats in 97%. The consumer apps refused to answer; the developer APIs have no such guardrail.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Convovo&#x27;s AI Ballot 2026 study tested two models with the same instruction: Grok chose Republicans in 92% of its answers, GPT chose Democrats in 97%. The consumer apps refused to answer; the developer APIs have no such guardrail.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>逼模型选边站队，两家模型给出了相反答案</h1>
-<p class="deck">Convovo 研究室在 10 月 24 日公布的 AI Ballot 2026 研究中，用同一条强制选择指令测试了 Grok 4.7 与 GPT-6.1 Sol。结果近乎镜像：Grok 在 92% 的指名答案中选择共和党候选人，GPT 在 97% 中选择民主党候选人。两模型在全部 506 场竞选中达成一致的不到一成。</p>
-<div class="meta">ISSUE 73 · 2026-10-24 · SOURCE / TechCrunch 报道 Convovo 研究 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">AI &amp; ELECTIONS</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">92%</div><div class="lab">GROK PICKS REPUBLICAN</div><div class="desc">Grok 4.7 在指名答案中选择共和党候选人的比例。</div></div><div class="metric"><div class="num">97%</div><div class="lab">GPT PICKS DEMOCRAT</div><div class="desc">GPT-6.1 Sol 在指名答案中选择民主党候选人的比例。</div></div><div class="metric"><div class="num">48/506</div><div class="lab">AGREEMENT</div><div class="desc">两模型在 506 场竞选中达成一致的场次。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE STUDY：10月24日，Convovo 公布 AI Ballot 2026 研究，覆盖 506 场美国中期选举竞选。</li><li><b>02</b>THE METHOD：同一强制选择指令经开发者接口发送，消费者应用拒绝回答。</li><li><b>03</b>THE RESULT：Grok 选共和党 92%，GPT 选民主党 97%，一致率不到一成。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>测试方法本身就是发现的一部分：研究者通过开发者接口，用同一条强制选择指令提问——指名一位候选人，不许含糊、不许两边都列。每个模型每场竞选回答三次，开启联网检索，覆盖 435 个众议院席位、35 场参议院竞选与 36 场州长竞选。消费者应用拒绝回答同一问题，接口没有。</p><p>结果的分布极端且对称：GPT 的 1111 个指名答案中 1082 个选民主党，Grok 的 1038 个指名答案中 952 个选共和党。逐场比较，两模型仅在 48 场竞选中达成一致，占比不到一成。</p>
-<h2><span class="en">THE GAP</span>接口与应用之间，隔着一道护栏</h2><p>消费者应用拒绝推荐候选人，开发者接口却照单全答。同一家公司的模型，在两个入口表现出两种行为，护栏不在模型里，而在产品层。</p><p>这道差距的实际意义在于：任何开发者都可以在接口上搭建选民指南、选票说明工具，而护栏不会自动跟过去。研究揭示的不是某个模型的一次失言，而是一条产品链路的默认状态。</p><h2><span class="en">THE SOURCES</span>引用来源的分叉，解释了答案的分叉</h2><p>Grok 的答案高频引用 X、保守派基督教选民指南与 Turning Point Action 网站；GPT 则更多引用维基百科、美联社、Axios 与 Reddit。检索来源不同，答案走向不同，模型在很大程度上是在复述它先看到的材料。</p><p>一组对照实验强化了这个解释：关闭联网检索后，GPT 在 30 场样本中仍有 24 场选民主党，而 Grok 在 27 场中拒绝作答。Grok 的倾向性与检索强相关，GPT 的倾向性在无检索时依然存在。</p><h2><span class="en">THE INCUMBENTS</span>现任者效应，是唯一的收敛点</h2><p>两模型跨党派选择的答案里，现任者占了绝大多数：GPT 的 10 个共和党选择中有 9 个是现任者，Grok 的 27 个民主党选择中有 20 个是现任者。连最极端的分叉里，也藏着一条共同规则：已知名字比党派标签更有分量。</p><p>研究者还记录了一个未解细节：Grok 的每次接口请求附带约 1240 个研究者无法看到、无法移除的额外 token，可能是隐藏指令。这部分尚未得到官方解释，结论需要等待回应。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>中立不在模型里，而在产品层</h2><p>这项研究最值得记住的不是两个百分比，而是护栏的位置：消费者应用拒绝回答，开发者接口照单全答。Tokenta Signal 的判断不变：评估一个模型的政治中立性，必须同时看应用与接口两个入口，只看其中一个，结论都会失真。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：研究测试的是开发者接口，不是消费者应用；消费者应用在测试中拒绝推荐候选人；研究样本为 506 场竞选，研究者公开了答案、检索记录与代码。本文只陈述研究结果，不构成任何投票建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认研究核心数字：506 场竞选、Grok 选共和党 92%、GPT 选民主党 97%、两模型一致率不到一成，以及接口与消费者应用的行为差异。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener">Forced to pick, Grok&#x27;s AI model chooses Republicans. OpenAI&#x27;s picks Democrats. ↗</a><br>techcrunch.com · 2026-10-24 · TechCrunch 报道 Convovo 研究</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>TechCrunch：Forced to pick, Grok&#x27;s AI model chooses Republicans. OpenAI&#x27;s picks Democrats.<br><a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener">https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/</a></li><li>MadRobot：GPT picks Democrats, Grok picks Republicans in AI ballot study<br><a href="https://madrobot.blog/2026/10/24/ai-ballot-2026-gpt-picks-democrats-grok-picks-republicans-midterms/" target="_blank" rel="noopener">https://madrobot.blog/2026/10/24/ai-ballot-2026-gpt-picks-democrats-grok-picks-republicans-midterms/</a></li><li>AI Weekly：Convovo: Grok Picks GOP 92% of Races, GPT-6.1 Picks Dems 97%<br><a href="https://aiweekly.co/alerts/convovo-grok-picks-gop-92-of-races-gpt-61-picks-dems-97" target="_blank" rel="noopener">https://aiweekly.co/alerts/convovo-grok-picks-gop-92-of-races-gpt-61-picks-dems-97</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">WORLD & POLICY · SIGNAL REPORT</span>
+<h1>Force the Models to Take Sides, and Two Models Give Opposite Answers</h1>
+<p class="deck">In the AI Ballot 2026 study released on October 24, the Convovo laboratory tested Grok 4.7 and GPT-6.1 Sol with the same forced-choice instruction. The results are near-mirror images: Grok chose Republican candidates in 92% of its named answers, GPT chose Democrats in 97%. Across all 506 races, the two models agreed in fewer than one in ten.</p>
+<div class="meta">ISSUE 73 · 2026-10-24 · SOURCE / <b>TechCrunch report on the Convovo study</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">AI &amp; ELECTIONS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">92%</div><div class="lab">GROK PICKS REPUBLICAN</div><div class="desc">Share of Grok 4.7&#x27;s named answers that chose a Republican candidate.</div></div><div class="metric"><div class="num">97%</div><div class="lab">GPT PICKS DEMOCRAT</div><div class="desc">Share of GPT-6.1 Sol&#x27;s named answers that chose a Democratic candidate.</div></div><div class="metric"><div class="num">48/506</div><div class="lab">AGREEMENT</div><div class="desc">Races, out of 506, in which the two models reached the same answer.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE STUDY — On October 24, Convovo released the AI Ballot 2026 study, covering 506 US midterm races.</li><li><b>02</b>THE METHOD — The same forced-choice instruction was sent via developer APIs; consumer apps refused to answer.</li><li><b>03</b>THE RESULT — Grok picked Republicans 92% of the time, GPT picked Democrats 97%, with agreement under one in ten races.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>The method itself is part of the finding: researchers used developer APIs with a single forced-choice instruction — name one candidate, no hedging, no listing both sides. Each model answered three times per race with web search enabled, across 435 House seats, 35 Senate races and 36 gubernatorial races. The consumer apps refused the same question; the APIs did not.</p><p>The distribution of results is extreme and symmetric: of GPT&#x27;s 1,111 named answers, 1,082 picked Democrats; of Grok&#x27;s 1,038 named answers, 952 picked Republicans. Head to head, the two models agreed in only 48 races, under a tenth of the total.</p>
+<h2><span class="en">THE GAP</span>Between API and App, There Is a Guardrail</h2><p>The consumer apps refuse to recommend candidates; the developer APIs answer everything as asked. The same company&#x27;s model behaves two ways at two entrances, because the guardrail sits in the product layer, not in the model.</p><p>The practical significance of that gap: any developer can build voter guides and ballot explainers on top of the API, and the guardrail does not automatically travel with it. What the study reveals is not one model&#x27;s slip, but the default state of a product chain.</p><h2><span class="en">THE SOURCES</span>Diverging Citations Explain the Diverging Answers</h2><p>Grok&#x27;s answers frequently cite X, conservative Christian voter guides and Turning Point Action sites; GPT cites Wikipedia, the Associated Press, Axios and Reddit more often. Different retrieval sources, different answer directions: to a large degree, each model is restating the material it saw first.</p><p>A control experiment strengthens the explanation: with web search off, GPT still picked Democrats in 24 of 30 sampled races, while Grok declined to answer in 27 of 30. Grok&#x27;s lean is strongly retrieval-linked; GPT&#x27;s persists without retrieval.</p><h2><span class="en">THE INCUMBENTS</span>The Incumbency Effect Is the Only Convergence Point</h2><p>In the answers that crossed party lines, incumbents made up the overwhelming majority: 9 of GPT&#x27;s 10 Republican picks were incumbents, and 20 of Grok&#x27;s 27 Democratic picks were incumbents. Even inside the most extreme divergence sits a shared rule: a known name outweighs a party label.</p><p>The researchers also recorded an unresolved detail: each of Grok&#x27;s API requests carried about 1,240 extra tokens that researchers could neither see nor remove, possibly hidden instructions. That part has no official explanation yet, and conclusions await a response.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM APP TO API</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From consumer experience to the developer entrance</div><div class="desc">The basis for assessing model behaviour expands from the answers users see in an app to the answers developers get from an API.</div></div><div class="metric"><div class="lab">FROM WEIGHTS TO RETRIEVAL</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From model lean to retrieval sources</div><div class="desc">The explanation for diverging answers shifts from the model weights themselves to the retrieved material and hidden instructions.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Neutrality Lives in the Product Layer, Not the Model</h2><p>What is most worth remembering from this study is not the two percentages but the location of the guardrail: the consumer app refuses to answer, the developer API answers everything. Tokenta Signal&#x27;s judgment is unchanged: assessing a model&#x27;s political neutrality requires examining both entrances, app and API; looking at only one distorts the conclusion.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundaries of this report: the study tested developer APIs, not consumer apps; the consumer apps refused to recommend candidates in the tests; the study sample covers 506 races, and the researchers published the answers, retrieval logs and code. This report states research findings only and does not constitute voting advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original report confirms the study&#x27;s core figures: 506 races, Grok picking Republicans 92% of the time, GPT picking Democrats 97%, the two models agreeing in under a tenth of races, and the behavioural difference between APIs and consumer apps.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener">Forced to pick, Grok&#x27;s AI model chooses Republicans. OpenAI&#x27;s picks Democrats. ↗</a><br>techcrunch.com · 2026-10-24 · TechCrunch report on the Convovo study</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>TechCrunch: Forced to pick, Grok&#x27;s AI model chooses Republicans. OpenAI&#x27;s picks Democrats.<br><a href="https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/" target="_blank" rel="noopener">https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/</a></li><li>MadRobot: GPT picks Democrats, Grok picks Republicans in AI ballot study<br><a href="https://madrobot.blog/2026/10/24/ai-ballot-2026-gpt-picks-democrats-grok-picks-republicans-midterms/" target="_blank" rel="noopener">https://madrobot.blog/2026/10/24/ai-ballot-2026-gpt-picks-democrats-grok-picks-republicans-midterms/</a></li><li>AI Weekly: Convovo: Grok Picks GOP 92% of Races, GPT-6.1 Picks Dems 97%<br><a href="https://aiweekly.co/alerts/convovo-grok-picks-gop-92-of-races-gpt-61-picks-dems-97" target="_blank" rel="noopener">https://aiweekly.co/alerts/convovo-grok-picks-gop-92-of-races-gpt-61-picks-dems-97</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-ndrc-ai-lifecycle-law/">China Accelerates Full-Lifecycle AI Legislation: DeepSeek, Moonshot AI and Alibaba in Scope</a> <span class="meta">ISSUE 172</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-anthropic-election-war-rooms/">OpenAI and Anthropic set up election war rooms for the first time: the midterm election day duty test</a> <span class="meta">ISSUE 171</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">EU Court Adviser: Chatbots Reusing News May Infringe; Training Is the Exception</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nyt-sues-brave/">The New York Times Sues Brave Over the 30 Billion Pages in Its Index</a> <span class="meta">ISSUE 143</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

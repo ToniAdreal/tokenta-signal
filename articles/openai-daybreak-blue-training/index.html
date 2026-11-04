@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>关掉训练开关，Daybreak会话照样进训练 — Tokenta Signal</title><meta name="description" content="OpenAI通知Trusted Access成员，自11月29日起Daybreak Blue网络安全会话数据将用于模型训练，此前这类会话完全排除在训练之外，引发反弹后公司承诺另设退出选项。">
+<title>Switch Off the Training Toggle, and Daybreak Sessions Still Go Into Training — Tokenta Signal</title><meta name="description" content="OpenAI notified Trusted Access members that, from November 29, Daybreak Blue cybersecurity session data will be used for model training, reversing the previous complete exclusion, and promised a separate opt-out after pushback from members.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="OpenAI notified Trusted Access members that, from November 29, Daybreak Blue cybersecurity session data will be used for model training, reversing the previous complete exclusion, and promised a separate opt-out after pushback from members.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>关掉训练开关，Daybreak会话照样进训练</h1>
-<p class="deck">OpenAI 通知 Trusted Access 成员，自 11 月 29 日起 Daybreak Blue 网络安全会话数据将用于模型训练，此前这类会话完全排除在训练之外，引发反弹后公司承诺另设退出选项。</p>
-<div class="meta">ISSUE 130 · 2026-11-01 · SOURCE / Abijita 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">OPENAI × DAYBREAK</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">11月29日</div><div class="lab">START DATE</div><div class="desc">Daybreak Blue 会话数据开始用于训练的日期。</div></div><div class="metric"><div class="num">2封</div><div class="lab">EMAILS SENT</div><div class="desc">OpenAI 发给成员的邮件，先是政策变更，后是退出承诺。</div></div><div class="metric"><div class="num">1条</div><div class="lab">THE EXCEPTION</div><div class="desc">个人账号 Daybreak 会话的新规则，通用开关不再单独决定。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE OLD RULE：此前 Daybreak Blue 会话完全排除在训练之外。</li><li><b>02</b>THE EMAIL：OpenAI 发邮件通知成员，11 月 29 日起改规则。</li><li><b>03</b>THE PUSHBACK：成员反弹后，第二封邮件承诺单独退出选项。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>OpenAI 通知 Trusted Access 项目成员，自 11 月 29 日起，Daybreak Blue 网络安全会话数据将用于模型训练。Daybreak Blue 是 Trusted Access for Cyber 项目的安全层级，面向通过审核的安全研究员，模型在安全工作上的拒绝更少，适合漏洞分析、恶意软件研判与事件响应。</p><p>变化的关键在默认值。此前 Daybreak Blue 会话完全排除在训练之外，哪怕用户打开了通用的模型改进开关，也不会进训练。现在规则反过来，个人账号的 Daybreak 会话可以用于改进模型，哪怕用户关掉了通用开关。</p><p>反弹来得很快。成员反对后，OpenAI 发出第二封邮件，承诺为 Daybreak 会话另设退出选项。但这份承诺目前只停留在邮件里，公开帮助页没有写清退出选项何时上线、默认开还是关、由谁来启用。</p>
-<h2><span class="en">THE OVERRIDE</span>关掉的开关，挡不住例外条款</h2><p>用户对训练开关的理解一直很简单，关掉就是不进训练。Daybreak Blue 的新规则打破了这个理解，通用开关继续管普通会话，但 Daybreak 会话单列一条例外。开关还在，边界换了地方。</p><p>这对安全研究员的影响格外直接。他们粘贴的东西，可能是未公开漏洞、攻击链、正在调查的客户系统结构。这些内容一旦进训练，泄露风险不是抽象的，是具体的职业风险。</p><h2><span class="en">PATCH NOT POLICY</span>第二封邮件，是补丁不是政策</h2><p>OpenAI 的第二封邮件承诺单独退出选项，算是对反弹的回应。但承诺与政策之间还差关键细节，退出选项何时上线，默认状态是什么，历史会话算不算在内，没有一项写清楚。</p><p>在细节落地之前，研究员的理性选择只有一个，按新规则已生效来行动。11 月 29 日之前，把敏感工作移出 Daybreak Blue，或者默认它会被用于训练。等退出选项上线再改习惯，等于把风险敞口留给过渡期。</p><h2><span class="en">TWO TIERS</span>企业账号与个人账号，待遇已经分叉</h2><p>这次变化只针对个人账号的 Daybreak 会话。Business、Enterprise、Edu 与 API 平台服务按默认不用于训练，普通会话继续由用户的通用设置决定。分叉的边界，就是账号类型。</p><p>对机构来说，这意味着采购与合规要分开谈。个人研究员的席位与企业席位，在训练政策上已经不是同一套规则，混用两种席位的研究团队，先要把数据流向理清楚。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>训练开关的例外，比开关本身重要</h2><p>Tokenta Signal 判断：OpenAI 这次改的不是一个开关，是开关的可信度。例外条款可以存在，但必须在生效前写清退出方式，否则用户只能按最坏情况行动。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：政策变化的消息来自 OpenAI 发给 Trusted Access 成员的邮件，由 The Decoder 报道，OpenAI 没有发布公开通知。承诺的单独退出选项尚未上线，时间、默认值、是否覆盖历史会话均未公布。安全审查标记的会话仍可用于安全目的，退出训练不等于退出全部使用。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认 OpenAI 通知 Trusted Access 成员，自 11 月 29 日起 Daybreak Blue 会话数据将用于模型训练，此前这类会话完全排除在训练之外，成员反弹后公司承诺另设退出选项。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.abijita.com/openai-daybreak-blue-training-data/" target="_blank" rel="noopener">OpenAI Daybreak Blue Sessions May Be Used for Training ↗</a><br>abijita.com · 2026-11-01 · Abijita 报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Abijita：OpenAI Daybreak Blue Sessions May Be Used for Training<br><a href="https://www.abijita.com/openai-daybreak-blue-training-data/" target="_blank" rel="noopener">https://www.abijita.com/openai-daybreak-blue-training-data/</a></li><li>Oossa：OpenAI plans to train on Daybreak Blue session data<br><a href="https://oossa.com/en/openai-plans-to-train-on-daybreak-blue-session-data" target="_blank" rel="noopener">https://oossa.com/en/openai-plans-to-train-on-daybreak-blue-session-data</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Switch Off the Training Toggle, and Daybreak Sessions Still Go Into Training</h1>
+<p class="deck">OpenAI notified Trusted Access members that, from November 29, Daybreak Blue cybersecurity session data will be used for model training, reversing the previous complete exclusion, and promised a separate opt-out after pushback from members.</p>
+<div class="meta">ISSUE 130 · 2026-11-01 · SOURCE / <b>Abijita report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × DAYBREAK</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">Nov 29</div><div class="lab">START DATE</div><div class="desc">The date Daybreak Blue session data starts being used for training.</div></div><div class="metric"><div class="num">2</div><div class="lab">EMAILS SENT</div><div class="desc">Emails OpenAI sent members: first the policy change, then the opt-out promise.</div></div><div class="metric"><div class="num">1</div><div class="lab">THE EXCEPTION</div><div class="desc">The new rule for Daybreak sessions on personal accounts, no longer decided by the general toggle alone.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE OLD RULE — Previously, Daybreak Blue sessions were excluded from training entirely.</li><li><b>02</b>THE EMAIL — OpenAI emails members: the rules change from November 29.</li><li><b>03</b>THE PUSHBACK — After member pushback, a second email promises a separate opt-out.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>OpenAI notified members of its Trusted Access programme that, from November 29, Daybreak Blue cybersecurity session data will be used for model training. Daybreak Blue is the security tier of Trusted Access for Cyber, aimed at vetted security researchers; the model refuses less in security work, suiting vulnerability analysis, malware assessment and incident response.</p><p>The key change is the default. Previously, Daybreak Blue sessions were excluded from training entirely; even if a user switched on the general model-improvement toggle, they did not enter training. The rule now runs the other way: Daybreak sessions on personal accounts may be used to improve models even if the user has switched the general toggle off.</p><p>The pushback came quickly. After members objected, OpenAI sent a second email promising a separate opt-out for Daybreak sessions. For now, though, that promise exists only in the email; the public help pages do not spell out when the opt-out launches, whether it defaults on or off, or who enables it.</p>
+<h2><span class="en">THE OVERRIDE</span>A Switched-Off Toggle Cannot Stop an Exception Clause</h2><p>Users&#x27; understanding of the training toggle has always been simple: off means out of training. Daybreak Blue&#x27;s new rule breaks that understanding. The general toggle keeps governing ordinary sessions, but Daybreak sessions get a separate exception. The switch is still there; its boundary has moved.</p><p>The impact on security researchers is especially direct. What they paste in may be undisclosed vulnerabilities, attack chains or the architecture of a client system under investigation. Once such content enters training, the leak risk is not abstract; it is a concrete professional risk.</p><h2><span class="en">PATCH NOT POLICY</span>The Second Email Is a Patch, Not a Policy</h2><p>OpenAI&#x27;s second email, promising a separate opt-out, is a response to the pushback. But between a promise and a policy lie the key details: when the opt-out launches, what its default state is, and whether historical sessions count. Not one of these is spelled out.</p><p>Until the details land, researchers have only one rational choice: act as if the new rule is already in force. Before November 29, move sensitive work out of Daybreak Blue, or assume it will be used for training. Waiting for the opt-out before changing habits leaves the exposure open through the transition.</p><h2><span class="en">TWO TIERS</span>Enterprise and Personal Accounts Have Already Diverged</h2><p>This change applies only to Daybreak sessions on personal accounts. Business, Enterprise, Edu and API platform services are not used for training by default, and ordinary sessions remain governed by the user&#x27;s general settings. The dividing line is account type.</p><p>For institutions, that means procurement and compliance must be negotiated separately. Individual researcher seats and enterprise seats no longer run the same training policy, and research teams mixing the two need to sort out their data flows first.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM TOGGLE TO EXCEPTION</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From toggle to exception</div><div class="desc">The general toggle remains, but Daybreak sessions get a separate exception.</div></div><div class="metric"><div class="lab">FROM PROMISE TO DETAIL</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From promise to detail</div><div class="desc">The opt-out&#x27;s value depends on its launch timing and default setting.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The Exception to the Training Toggle Matters More Than the Toggle</h2><p>Tokenta Signal&#x27;s judgment: what OpenAI changed this time is not a switch, but the switch&#x27;s credibility. Exception clauses may exist, but the opt-out method must be spelled out before they take effect; otherwise users can only act on the worst case.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundaries of this report: news of the policy change comes from an email OpenAI sent to Trusted Access members, reported by The Decoder; OpenAI has published no public notice. The promised separate opt-out is not yet live, and its timing, default setting and whether it covers historical sessions have not been disclosed. Sessions flagged in safety review may still be used for safety purposes; opting out of training does not mean opting out of all use. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original report confirms OpenAI notified Trusted Access members that, from November 29, Daybreak Blue session data will be used for model training, sessions previously excluded entirely, and that after member pushback the company promised a separate opt-out.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.abijita.com/openai-daybreak-blue-training-data/" target="_blank" rel="noopener">OpenAI Daybreak Blue Sessions May Be Used for Training ↗</a><br>abijita.com · 2026-11-01 · Abijita report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Abijita: OpenAI Daybreak Blue Sessions May Be Used for Training<br><a href="https://www.abijita.com/openai-daybreak-blue-training-data/" target="_blank" rel="noopener">https://www.abijita.com/openai-daybreak-blue-training-data/</a></li><li>Oossa: OpenAI plans to train on Daybreak Blue session data<br><a href="https://oossa.com/en/openai-plans-to-train-on-daybreak-blue-session-data" target="_blank" rel="noopener">https://oossa.com/en/openai-plans-to-train-on-daybreak-blue-session-data</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

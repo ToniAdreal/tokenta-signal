@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>装插件的11小时里，后门已经住进了开发机 — Tokenta Signal</title><meta name="description" content="Cursor 2026 年 10 月 29 日在自家市场分发约 11 小时的被改 Claude Code 扩展，2.1.312 与 2.1.313 内置 SSH 后门，卸载清不掉公钥与持久化，修复版为 2.1.314。">
+<title>In 11 Hours of Installing a Plugin, the Backdoor Moved Into Developer Machines — Tokenta Signal</title><meta name="description" content="On October 29, 2026, Cursor distributed tampered Claude Code extensions through its own marketplace for about 11 hours. Versions 2.1.312 and 2.1.313 carried a built-in SSH backdoor that uninstalling cannot remove; the fixed version is 2.1.314.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="On October 29, 2026, Cursor distributed tampered Claude Code extensions through its own marketplace for about 11 hours. Versions 2.1.312 and 2.1.313 carried a built-in SSH backdoor that uninstalling cannot remove; the fixed version is 2.1.314.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>装插件的11小时里，后门已经住进了开发机</h1>
-<p class="deck">Cursor 2026 年 10 月 29 日在自家扩展市场分发了约 11 小时的被改 Claude Code 扩展，2.1.312 与 2.1.313 两个版本内置 SSH 后门，卸载扩展清不掉已植入的公钥与持久化，修复版是 2.1.314。</p>
-<div class="meta">ISSUE 117 · 2026-10-31 · SOURCE / Rescana 安全分析 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">CURSOR × CLAUDE CODE</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">约11小时</div><div class="lab">EXPOSURE WINDOW</div><div class="desc">被改版本在 Cursor 市场停留的时长，覆盖 macOS 与 Windows。</div></div><div class="metric"><div class="num">5000</div><div class="lab">USERS AT MOST</div><div class="desc">Cursor 称至多收到恶意版本的用户数，修订版公告不再给出该数字。</div></div><div class="metric"><div class="num">2.1.314</div><div class="lab">FIXED VERSION</div><div class="desc">修复版本，升级前必须先按清单清理公钥与持久化。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE DISTRIBUTION：2026 年 10 月 29 日，被改的 2.1.312 与 2.1.313 进入 Cursor 市场。</li><li><b>02</b>THE IMPLANT：扩展加载即运行注入代码，追加攻击者 SSH 公钥。</li><li><b>03</b>THE TUNNEL：反向隧道指向 134.209.82.225，持久化写在扩展目录外。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026 年 10 月 29 日，Cursor 自家扩展市场里出现了被改过的 Claude Code 扩展，版本 2.1.312 与 2.1.313，覆盖 macOS 与 Windows，窗口大约 11 小时，从世界时 9 时 27 分到 20 时 35 分。Cursor 在 10 月 30 日修订了安全公告，补上了两个版本与四个文件哈希，并加上 Linux 相关指标。</p><p>改动藏在 extension.js 开头。扩展一加载，注入代码就运行，不需要用户点任何东西。它往 authorized_keys 里追加一个注释为 svc-telemetry 的攻击者 SSH 公钥，尝试打开本机 SSH 服务，再向 134.209.82.225 打开反向隧道。持久化也写在扩展目录之外，macOS 是伪装成系统监控的 LaunchAgent，Windows 是 SysMon 计划任务加开机脚本。</p><p>最麻烦的一点是卸载不管用。删掉扩展，公钥、隧道重试循环与开机项都还在。Cursor 称至多 5000 名用户收到恶意版本，修复版是 2.1.314。官方渠道没有中招，Anthropic 称自己的系统未被攻破，被改的包从未上过 Open VSX 或微软市场。</p>
-<h2><span class="en">THE MARKETPLACE AS ATTACK SURFACE</span>市场本身成了攻击面</h2><p>开发者信任扩展市场，就像信任应用商店。市场分发的包自带编辑器权限，能读文件、跑工具、触达密钥。Cursor 这次出问题的地方，恰恰是它自己运营的市场，而不是 Anthropic 的发布渠道。</p><p>这意味着防线要往前移。装扩展之前先看发布者与版本，自动更新也要当成一次部署来对待。市场方需要在上架环节验签与比对官方哈希，缺了这一步，用户侧再小心也只能事后清理。</p><h2><span class="en">REMEDIATION IS LONGER THAN UNINSTALL</span>清理清单比卸载长得多</h2><p>微软威胁情报的分析列出了完整清理路径。先保全证据，再杀掉隧道进程，删 LaunchAgent 或计划任务与开机脚本，清掉 authorized_keys 里的 svc-telemetry 公钥，最后升级到 2.1.314 或更新版。只做其中一步，等于没做。</p><p>还有一个细节值得单独提醒。信标只发了主机信息与最多 40 个密钥类环境变量的名字，没有发变量值。这不等于没有损失，变量名本身就能告诉攻击者这台机器上有什么值得再来一次。</p><h2><span class="en">WHY MOST HOSTS ESCAPED THE TUNNEL</span>权限边界在 SSH 服务上收窄了伤害</h2><p>多数机器上隧道没能真正连通，因为开启 SSH 服务需要管理员权限，而 Cursor 通常没有这个权限。微软与 Cursor 的说法一致，多数 macOS 与 Windows 主机上这一步被挡住了。</p><p>但这只是运气，不是设计。已经开着 SSH 的机器不在保护范围内，公钥与持久化在这些机器上照样生效。把 SSH 默认关闭、定期检查 authorized_keys，仍是开发者机器上最便宜的保险。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>扩展市场的信任，正在变成单点故障</h2><p>Tokenta Signal 判断：开发工具链的安全，现在取决于分发渠道的验签，而不是开发者的警惕。市场验签缺位一次，几千台开发机就同时中招。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：攻击者身份与入侵路径尚未公开，Cursor 未说明恶意版本如何进入自家市场。本文不讨论未证实的归因，只写已确认的版本、时间与清理步骤。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认 Cursor 市场在 2026 年 10 月 29 日约 11 小时内分发了被改的 Claude Code 2.1.312 与 2.1.313，注入代码追加 svc-telemetry 公钥并建反向隧道，修复版为 2.1.314。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor" target="_blank" rel="noopener">Trojanized Claude Code 2.1.312 and 2.1.313 in Cursor Marketplace Plants SSH Backdoor ↗</a><br>rescana.com · 2026-10-31 · Rescana 安全分析</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Cursor 安全公告：Security notice, malicious version of Anthropic.claude-code<br><a href="https://cursor.com/blog/claude-code-extension-security-notice" target="_blank" rel="noopener">https://cursor.com/blog/claude-code-extension-security-notice</a></li><li>Rescana：Trojanized Claude Code 2.1.312 and 2.1.313 in Cursor Marketplace Plants SSH Backdoor<br><a href="https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor" target="_blank" rel="noopener">https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>In 11 Hours of Installing a Plugin, the Backdoor Moved Into Developer Machines</h1>
+<p class="deck">On October 29, 2026, Cursor distributed tampered Claude Code extensions through its own marketplace for about 11 hours. Versions 2.1.312 and 2.1.313 carried a built-in SSH backdoor; uninstalling the extension does not remove the implanted public key or persistence, and the fixed version is 2.1.314.</p>
+<div class="meta">ISSUE 117 · 2026-10-31 · SOURCE / <b>Rescana security analysis</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">CURSOR × CLAUDE CODE</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">~11 hrs</div><div class="lab">EXPOSURE WINDOW</div><div class="desc">How long the tampered versions stayed in the Cursor marketplace, covering macOS and Windows.</div></div><div class="metric"><div class="num">5000</div><div class="lab">USERS AT MOST</div><div class="desc">The maximum number of users Cursor says received the malicious versions; the revised notice no longer gives this figure.</div></div><div class="metric"><div class="num">2.1.314</div><div class="lab">FIXED VERSION</div><div class="desc">The fixed version; the public key and persistence must be cleaned per the checklist before upgrading.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE DISTRIBUTION — October 29, 2026: tampered 2.1.312 and 2.1.313 enter the Cursor marketplace.</li><li><b>02</b>THE IMPLANT — The injected code runs on extension load and appends the attacker&#x27;s SSH public key.</li><li><b>03</b>THE TUNNEL — A reverse tunnel points to 134.209.82.225; persistence is written outside the extension directory.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On October 29, 2026, tampered versions of the Claude Code extension appeared in Cursor&#x27;s own extension marketplace: versions 2.1.312 and 2.1.313, covering macOS and Windows, in a window of roughly 11 hours, from 09:27 to 20:35 UTC. Cursor revised its security notice on October 30, adding the two versions and four file hashes, plus Linux-related indicators.</p><p>The changes were hidden at the top of extension.js. The moment the extension loaded, the injected code ran, with no click required from the user. It appended an attacker SSH public key, commented as svc-telemetry, to authorized_keys, tried to start the local SSH service, and opened a reverse tunnel to 134.209.82.225. Persistence also lived outside the extension directory: on macOS a LaunchAgent disguised as system monitoring, on Windows a SysMon scheduled task plus a startup script.</p><p>The most troublesome part is that uninstalling does not work. Remove the extension, and the public key, the tunnel retry loop and the startup entries all remain. Cursor says at most 5,000 users received the malicious versions; the fixed release is 2.1.314. Official channels were not affected, and Anthropic says its own systems were not breached; the tampered packages never appeared on Open VSX or Microsoft&#x27;s marketplace.</p>
+<h2><span class="en">THE MARKETPLACE AS ATTACK SURFACE</span>The Marketplace Itself Became the Attack Surface</h2><p>Developers trust extension marketplaces the way they trust app stores. Packages distributed by a marketplace carry editor permissions by default: they can read files, run tools and reach keys. Where Cursor failed was precisely in the marketplace it operates itself, not in Anthropic&#x27;s release channel.</p><p>That means the defensive line has to move earlier. Check the publisher and version before installing an extension, and treat automatic updates as deployments. Marketplaces need signature verification and comparison against official hashes at the listing stage; without that step, no amount of user caution helps, only after-the-fact cleanup.</p><h2><span class="en">REMEDIATION IS LONGER THAN UNINSTALL</span>The Cleanup List Is Much Longer Than an Uninstall</h2><p>Microsoft Threat Intelligence&#x27;s analysis lays out the full cleanup path: preserve evidence first, then kill the tunnel process, delete the LaunchAgent or scheduled task and startup scripts, remove the svc-telemetry public key from authorized_keys, and finally upgrade to 2.1.314 or later. Doing only one of these steps is the same as doing none.</p><p>One detail deserves its own warning. The beacon sent only host information and the names of up to 40 key-related environment variables, not their values. That does not mean there was no loss: the variable names alone tell an attacker what is on the machine that is worth coming back for.</p><h2><span class="en">WHY MOST HOSTS ESCAPED THE TUNNEL</span>The Permission Boundary at the SSH Service Limited the Damage</h2><p>On most machines the tunnel never actually connected, because starting the SSH service requires administrator rights, which Cursor normally does not have. Microsoft and Cursor agree this step was blocked on most macOS and Windows hosts.</p><p>But that was luck, not design. Machines that already had SSH running were outside that protection, and the public key and persistence worked on them as intended. Keeping SSH off by default and auditing authorized_keys regularly remains the cheapest insurance on a developer machine.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM CODE TO MARKETPLACE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From checking code to checking the marketplace</div><div class="desc">What was tampered with was not the open-source code, but the finished package distributed by the marketplace.</div></div><div class="metric"><div class="lab">FROM UNINSTALL TO CLEANUP</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From uninstalling to cleaning up by checklist</div><div class="desc">The backdoor lives outside the extension directory; uninstalling is only the first step.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Trust in Extension Marketplaces Is Becoming a Single Point of Failure</h2><p>Tokenta Signal&#x27;s judgment: the security of the developer toolchain now depends on signature verification in the distribution channel, not on developer vigilance. Miss the marketplace check once, and thousands of developer machines are hit at the same time.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundaries of this report: the attacker&#x27;s identity and intrusion path have not been made public, and Cursor has not explained how the malicious versions entered its own marketplace. This report does not discuss unverified attribution, only the confirmed versions, timing and cleanup steps. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original report confirms Cursor&#x27;s marketplace distributed tampered Claude Code 2.1.312 and 2.1.313 for about 11 hours on October 29, 2026; the injected code appended an svc-telemetry public key and built a reverse tunnel, and the fixed version is 2.1.314.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor" target="_blank" rel="noopener">Trojanized Claude Code 2.1.312 and 2.1.313 in Cursor Marketplace Plants SSH Backdoor ↗</a><br>rescana.com · 2026-10-31 · Rescana security analysis</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Cursor Security Notice: Security notice, malicious version of Anthropic.claude-code<br><a href="https://cursor.com/blog/claude-code-extension-security-notice" target="_blank" rel="noopener">https://cursor.com/blog/claude-code-extension-security-notice</a></li><li>Rescana: Trojanized Claude Code 2.1.312 and 2.1.313 in Cursor Marketplace Plants SSH Backdoor<br><a href="https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor" target="_blank" rel="noopener">https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

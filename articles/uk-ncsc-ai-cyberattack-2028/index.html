@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>英国网络安全中心：两年内要防 AI 驱动的关键基建攻击 — Tokenta Signal</title><meta name="description" content="英国国家网络安全中心 2026-11-03 年度报告警告：到 2028 年，针对英国关键基础设施的勒索软件攻击中出现 AI 驱动恶意软件的可能性很高，AI 放大的是长期被容忍的旧漏洞。">
+<title>UK Cyber Centre: Prepare for AI-Driven Attacks on Critical Infrastructure Within Two Years — Tokenta Signal</title><meta name="description" content="The UK National Cyber Security Centre&#x27;s annual report of November 3, 2026 warns that by 2028 there is a high likelihood of AI-driven malware appearing in ransomware attacks against UK critical infrastructure — and that what AI amplifies is long-tolerated legacy vulnerabilities.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="The UK National Cyber Security Centre&#x27;s annual report of November 3, 2026 warns that by 2028 there is a high likelihood of AI-driven malware appearing in ransomware attacks against UK critical infrastructure — and that what AI amplifies is long-tolerated legacy vulnerabilities.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>英国网络安全中心：两年内要防 AI 驱动的关键基建攻击</h1>
-<p class="deck">英国 NCSC 2026-11-03 年度报告警告，到 2028 年关键基础设施勒索攻击中出现 AI 恶意软件的可能性很高，路透社与 Infosecurity Magazine 双源印证，属预测而非已发生事件。</p>
-<div class="meta">ISSUE 154 · 2026-11-03 · SOURCE / 路透社报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">UK × NCSC × CYBERSECURITY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>UK Cyber Centre: Prepare for AI-Driven Attacks on Critical Infrastructure Within Two Years</h1>
+<p class="deck">The UK NCSC&#x27;s annual report of November 3, 2026 warns of a high likelihood of AI malware appearing in ransomware attacks on critical infrastructure by 2028, corroborated by Reuters and Infosecurity Magazine. It is a forecast, not an event that has occurred.</p>
+<div class="meta">ISSUE 154 · 2026-11-03 · SOURCE / <b>Reuters report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">UK × NCSC × CYBERSECURITY</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE REPORT：NCSC 于 2026-11-03 发布年度报告，Horne 在伦敦发布会上作出警告。</li><li><b>02</b>THE CONFIRMATION：路透社与 Infosecurity Magazine 同日独立报道印证报告要点与演讲内容。</li><li><b>03</b>THE WATCHPOINT：英国关键行业补丁与投资进展，以及《网络安全与韧性法案》等后续立法。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>英国国家网络安全中心（NCSC）于 2026-11-03 在伦敦发布年度《国家网络状况》报告，首席执行官 Richard Horne 在发布会上警告，未来数月英国面临网络事件数量前所未有的上升。</p><p>报告判断，到 2028 年，针对英国关键国家基础设施的勒索软件攻击中，出现 AI 驱动恶意软件的可能性很高，目标包括电站、机场与医院等。</p><p>Horne 的核心论点是：AI 没有发明全新的攻击方式，而是让长期被容忍的漏洞以过去无法想象的规模和速度被发现与利用；他批评许多机构多年来在技术上图便宜，留下未升级的陈旧系统。</p><p>报告同时称，中国最有可能有意图且最有能力对英国关键基础设施使用 AI 开展行动，是英国面临的最复杂、最持续的网络挑战；俄罗斯被指持续试图渗透英国军事网络，伊朗被指在全球开展恶意网络行动。</p>
-<h2><span class="en">WHY IT MATTERS</span>警告的矛头是旧债，不是新武器</h2><p>这份报告把 AI 写成放大器，而不是新武器，这个定性很重要。它意味着防御清单没有变：补旧系统、做监测、按已有标准执行，只是拖延的代价被 AI 放大了。</p><p>2028 这个时间点同样值得盯：它不是攻击发生的日期，而是报告认为 AI 勒索软件进入关键基础设施攻击的可能性门槛，真正的检验是未来两年英国关键行业的补丁与投资是否跟上。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>信号在旧漏洞的放大速度，不在新攻击</h2><p>Tokenta Signal 判断：NCSC 这次警告的实质是问责旧债，AI 只是让旧漏洞的利用速度超过修补速度。下一信号是英国关键行业是否在 2028 年前补齐升级与监测，而不是又一份警告。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇边界：2028 年的判断是英国国家网络安全中心的年度报告预测，不是已发生的事件；关于各国的归因表述均为该中心口径，各方此前均否认恶意网络行动指控。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>路透社原始报道与 Infosecurity Magazine 的独立报道双源确认，原文链接已打开验证。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/" target="_blank" rel="noopener">UK must expect AI-powered attack on critical infrastructure within two years, report says ↗</a><br>reuters.com · 2026-11-03 · 路透社报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>路透社报道<br><a href="https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/" target="_blank" rel="noopener">https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/</a></li><li>Infosecurity Magazine 独立报道<br><a href="https://www.infosecurity-magazine.com/news/ncsc-ai-ransomware-threat-uk-cni/" target="_blank" rel="noopener">https://www.infosecurity-magazine.com/news/ncsc-ai-ransomware-threat-uk-cni/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE REPORT — The NCSC released its annual report on November 3, 2026, and Horne issued the warning at the London launch.</li><li><b>02</b>THE CONFIRMATION — Reuters and Infosecurity Magazine corroborated the report&#x27;s key points and the speech in independent same-day reports.</li><li><b>03</b>THE WATCHPOINT — Patching and investment progress in UK critical sectors, and follow-on legislation such as the Cyber Security and Resilience Bill.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>The UK National Cyber Security Centre (NCSC) released its annual State of the Nation cyber report in London on November 3, 2026. Chief Executive Richard Horne warned at the launch that the UK faces an unprecedented rise in the number of cyber incidents in the coming months.</p><p>The report judges that by 2028 there is a high likelihood of AI-driven malware appearing in ransomware attacks against UK critical national infrastructure, with targets including power stations, airports and hospitals.</p><p>Horne&#x27;s core argument is that AI has not invented entirely new attack methods; it has instead enabled long-tolerated vulnerabilities to be found and exploited at a scale and speed previously unimaginable. He criticized many organizations for cutting corners on technology for years, leaving outdated systems unupgraded.</p><p>The report also states that China is the actor most likely to have both the intent and the capability to use AI against UK critical infrastructure, and is the most complex and persistent cyber challenge the UK faces; that Russia continues to attempt to penetrate UK military networks; and that Iran conducts malicious cyber activity globally.</p>
+<h2><span class="en">WHY IT MATTERS</span>The warning targets old debt, not new weapons</h2><p>The report frames AI as an amplifier rather than a new weapon, and that characterization matters. It means the defensive checklist has not changed: patch old systems, monitor, and follow existing standards — only the cost of delay has been amplified by AI.</p><p>The 2028 date is also worth watching: it is not a date by which an attack will occur, but the threshold at which the report judges AI ransomware likely to enter critical-infrastructure attacks. The real test is whether patching and investment in UK critical sectors keep pace over the next two years.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The signal is how fast old vulnerabilities are exploited, not new attacks</h2><p>Tokenta Signal&#x27;s judgment: the substance of the NCSC&#x27;s warning is accountability for old debt; AI simply lets old vulnerabilities be exploited faster than they are patched. The next signal is whether UK critical sectors complete upgrades and monitoring before 2028, not another warning.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">Boundary of this report: the 2028 judgment is a forecast in the UK National Cyber Security Centre&#x27;s annual report, not an event that has occurred. Attribution statements regarding individual countries are the Centre&#x27;s own characterizations; the parties concerned have previously denied allegations of malicious cyber activity. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Confirmed by two sources: Reuters&#x27; original report and Infosecurity Magazine&#x27;s independent report. Original links opened and verified.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/" target="_blank" rel="noopener">UK must expect AI-powered attack on critical infrastructure within two years, report says ↗</a><br>reuters.com · 2026-11-03 · Reuters report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Reuters report<br><a href="https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/" target="_blank" rel="noopener">https://www.reuters.com/legal/government/uk-must-expect-ai-powered-attack-critical-infrastructure-within-two-years-report-2026-11-03/</a></li><li>Infosecurity Magazine independent report<br><a href="https://www.infosecurity-magazine.com/news/ncsc-ai-ransomware-threat-uk-cni/" target="_blank" rel="noopener">https://www.infosecurity-magazine.com/news/ncsc-ai-ransomware-threat-uk-cni/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

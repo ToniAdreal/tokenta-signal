@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>400 多个应用伪装过审：修图工具外壳，暗地里是 deepfake 生成器 — Tokenta Signal</title><meta name="description" content="WIRED 2026-11-02 调查揭露 400 多个伪装应用与域名网络：以宠物修图、语言家教等日常工具通过应用商店审核，靠服务器端开关加载隐藏的 deepfake 生成界面；苹果下架 19 款、Google 下架多数、Meta 处置 1.16 万个广告账号。">
+<title>400 Apps Passed Review in Disguise: Photo-Editor Shells, Hidden Deepfake Generators — Tokenta Signal</title><meta name="description" content="WIRED&#x27;s investigation of November 2, 2026 exposed a network of more than 400 disguised apps and domains: passing app-store review as pet photo editors, language tutors and other everyday tools, then using a server-side switch to load a hidden deepfake generation interface. Apple removed 19 apps, Google removed most, and Meta acted against 11,600 advertising accounts.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="WIRED&#x27;s investigation of November 2, 2026 exposed a network of more than 400 disguised apps and domains: passing app-store review as pet photo editors, language tutors and other everyday tools, then using a server-side switch to load a hidden deepfake generation interface. Apple removed 19 apps, Google removed most, and Meta acted against 11,600 advertising accounts.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>400 多个应用伪装过审：修图工具外壳，暗地里是 deepfake 生成器</h1>
-<p class="deck">WIRED 2026-11-02 调查揭露 400 多个伪装应用与域名网络：以修图、家教等日常工具过审，靠服务器端开关加载隐藏的 deepfake 生成界面；苹果下架 19 款、Google 下架多数、Meta 处置 1.16 万个广告账号。</p>
-<div class="meta">ISSUE 159 · 2026-11-02 · SOURCE / AppleInsider 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">WIRED × APP STORE × AI SAFETY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>400 Apps Passed Review in Disguise: Photo-Editor Shells, Hidden Deepfake Generators</h1>
+<p class="deck">WIRED&#x27;s investigation of November 2, 2026 exposed a network of more than 400 disguised apps and domains: posing as photo editors, tutors and other everyday tools to pass review, then using a server-side switch to load a hidden deepfake generation interface. Apple removed 19 apps, Google removed most, and Meta acted against 11,600 advertising accounts.</p>
+<div class="meta">ISSUE 159 · 2026-11-02 · SOURCE / <b>AppleInsider report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">WIRED × APP STORE × AI SAFETY</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE RELEASE：WIRED 于 2026-11-02 发布调查，揭露 400 多个伪装应用与域名组成的网络。</li><li><b>02</b>THE CONFIRMATION：AppleInsider 与 SiliconReport 同日独立报道印证规模、开关机制与三家平台的处置口径。</li><li><b>03</b>THE WATCHPOINT：平台是否公布远程内容常态化检测手段，监管是否明确应用商店责任。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>WIRED 于 2026-11-02 发布调查：一个由 400 多个相互关联的应用与域名组成的网络，伪装成宠物照片编辑、语言家教、健身教练等日常工具，通过了苹果 App Store 与 Google Play 的上架审核。</p><p>伪装的关键是一道服务器端开关：应用安装后先向远程服务器回传用户语言、引流来源与唯一标识，再由服务器决定显示正常功能，还是加载隐藏的 deepfake 生成界面。直接打开应用的普通用户与审核人员看到的是正常功能，经特定广告引流进入的用户则会看到隐藏界面。</p><p>规模已经不小：研究机构 2026 年 9 月在 Google Play 上发现 27 款相关应用，合计下载量超过 35 万次，其中 DiffAI 一款就超过 10 万次安装；部分应用还曾被标注为全年龄适用。</p><p>追踪线索指向同一运营网络：非营利研究机构 AI Forensics 与网络安全公司 Infoblox 发现，各应用共享相同的 JavaScript 配置与交叉引用的加密密钥，代码与托管线索为中文语境，并关联到一家香港注册实体 KeLing Technology Limited；Infoblox 绘制了近 500 个关联域名，注册可追溯至 2025 年底，高峰期每周新增多达 30 个域名与应用组合。</p><p>平台处置分三路：Google 在 WIRED 问询前已下架多数被点名应用；苹果在接到 WIRED 通报后下架 19 款，包括宠物修图应用 Viefur，并称这些应用送审时符合规则，是开发者事后更换了远程服务器提供的内容；Meta 称早在 2025 年就已因无视停止侵权函而封禁 KeLing，并在此轮处置了 11,600 个广告账号、约 4,700 个商业主页，屏蔽 209 款应用投放广告。</p>
-<h2><span class="en">WHY IT MATTERS</span>审核审的是提交那一刻，风险活在服务器那一端</h2><p>这起事件暴露的是应用商店审核的结构性盲区：审核只能看到开发者提交时的版本，而应用上线后可以从远程服务器换内容、换界面，不用重新送审。苹果 10 月 16 日更新指南、明确禁止隐藏功能与非自愿亲密影像生成，是规则侧的补丁，但规则管不住服务器端的内容替换。</p><p>对平台而言，真正的考题从上架前移到了上架后：持续监测已上架应用的远程行为，比一次性审核更贵、更难，但这起网络能以每周 30 个组合的速度扩张，说明只靠上架审核的防线已经被绕过。</p><h2><span class="en">WHY IT MATTERS</span>广告是这条链的放大器</h2><p>隐藏界面不是随机出现的，广告引流是触发条件之一。研究机构追踪到数千条在 Meta 平台投放的广告，把用户导向商店里的这些应用；应用内还可通过 Apple Pay 与 Google Pay 购买生成额度。</p><p>这意味着同一条链穿过了三个环节：广告平台引流、应用商店背书、应用内支付结算。Meta 的封号与屏蔽动作说明广告侧的拦截已经启动，但 WIRED 报道收尾时仍有同类推广与镜像应用不断出现，清理速度还没有追上复制速度。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>应用商店的防线被一道服务器开关绕过了</h2><p>Tokenta Signal 判断：这起事件真正的信号不是某一款应用，而是审核模式本身的失效。上架审核查的是静态提交，风险藏在上线后的远程内容里，平台若不把持续监测做到与上架审核同等强度，同类网络只会换个马甲继续出现。下一信号是苹果与 Google 是否公布针对远程内容替换的常态化检测手段，以及各国监管是否把非自愿 deepfake 的应用商店责任写进规则。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实均来自 WIRED 调查的独立报道口径：400 余为 WIRED 的统计口径，苹果未予确认；网络归属以研究机构追踪到的代码、托管与注册信息为准，不等同于对全部应用控制方的最终认定；苹果 10 月 16 日指南更新为苹果官方动作，与本次下架分开表述。本文只做摘要与链接，不转载原文全文与相关图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>WIRED 调查经 AppleInsider 与 SiliconReport 独立报道双源确认，原文链接已打开验证；WIRED 原站本轮因抓取策略限制未能直接打开，故证据链接采用已打开核验的报道页。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools" target="_blank" rel="noopener">Hundreds of AI apps hid abusive deepfake tools from reviewers ↗</a><br>appleinsider.com · 2026-11-02 · AppleInsider 报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>AppleInsider 报道<br><a href="https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools" target="_blank" rel="noopener">https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools</a></li><li>SiliconReport 报道<br><a href="https://www.siliconreport.com/wired-finds-over-400-domains-and-apps-hid-explicit-ai-features" target="_blank" rel="noopener">https://www.siliconreport.com/wired-finds-over-400-domains-and-apps-hid-explicit-ai-features</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE RELEASE — WIRED published its investigation on November 2, 2026, exposing a network of more than 400 disguised apps and domains.</li><li><b>02</b>THE CONFIRMATION — AppleInsider and SiliconReport corroborated in independent same-day reports the scale, the switch mechanism and the three platforms&#x27; enforcement positions.</li><li><b>03</b>THE WATCHPOINT — Whether platforms publish standing detection methods for remote content, and whether regulators clarify app-store responsibility.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>WIRED published its investigation on November 2, 2026: a network of more than 400 interrelated apps and domains, disguised as everyday tools such as pet photo editors, language tutors and fitness coaches, passed review on Apple&#x27;s App Store and Google Play.</p><p>The key to the disguise was a server-side switch. After installation, an app first reported the user&#x27;s language, referral source and a unique identifier to a remote server, which then decided whether to show the normal functionality or load a hidden deepfake generation interface. Ordinary users opening the app directly, and reviewers, saw the normal features; users arriving via specific advertisements saw the hidden interface.</p><p>The scale is already material: in September 2026, researchers found 27 related apps on Google Play with combined downloads above 350,000, with DiffAI alone installed more than 100,000 times. Some apps had also been rated as appropriate for all ages.</p><p>Tracking leads point to a single operating network: the non-profit research group AI Forensics and the cybersecurity firm Infoblox found that the apps share identical JavaScript configurations and cross-referenced encryption keys, with code and hosting clues in a Chinese-language context, linked to a Hong Kong-registered entity, KeLing Technology Limited. Infoblox mapped nearly 500 associated domains, with registrations traceable to late 2025 and up to 30 new domain-and-app combinations added per week at the peak.</p><p>Platform enforcement ran on three tracks. Google had removed most of the named apps before WIRED&#x27;s inquiry. After WIRED&#x27;s notification, Apple removed 19 apps, including the pet photo app Viefur, saying the apps complied with the rules when submitted and that developers later changed the content served from remote servers. Meta said it had banned KeLing back in 2025 for ignoring cease-and-desist letters, and in this round acted against 11,600 advertising accounts and about 4,700 business pages, and blocked 209 apps from advertising.</p>
+<h2><span class="en">WHY IT MATTERS</span>Review checks the moment of submission; the risk lives on the server side</h2><p>This incident exposes a structural blind spot in app-store review: review can only see the version a developer submits, while after launch an app can swap content and interfaces from a remote server without resubmission. Apple&#x27;s October 16 guideline update, explicitly prohibiting hidden features and non-consensual intimate imagery generation, is a patch on the rules side — but rules cannot govern server-side content substitution.</p><p>For platforms, the real test has moved from before listing to after it: continuously monitoring the remote behavior of listed apps is costlier and harder than one-time review, yet a network expanding at up to 30 combinations a week shows the listing-review line of defense has already been bypassed.</p><h2><span class="en">WHY IT MATTERS</span>Advertising is the amplifier in this chain</h2><p>The hidden interface did not appear at random; ad referral was one of its triggers. Researchers tracked thousands of advertisements placed on Meta&#x27;s platforms directing users to these apps in the stores, and generation credits inside the apps could be bought via Apple Pay and Google Pay.</p><p>That means a single chain ran through three links: ad-platform referral, app-store endorsement, and in-app payment settlement. Meta&#x27;s account bans and ad blocks show enforcement on the advertising side has begun, but as WIRED&#x27;s report closed, similar promotions and mirror apps were still appearing — cleanup has not yet caught up with replication.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A server switch bypassed the app stores&#x27; line of defense</h2><p>Tokenta Signal&#x27;s judgment: the real signal in this incident is not any single app, but the failure of the review model itself. Listing review inspects a static submission; the risk hides in remote content after launch. Unless platforms bring continuous monitoring up to the same intensity as listing review, similar networks will simply reappear under a new disguise. The next signal is whether Apple and Google publish standing detection methods for remote content substitution, and whether regulators write app-store responsibility for non-consensual deepfakes into their rules.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report all follow the basis of WIRED&#x27;s investigation as independently reported: the count of more than 400 is WIRED&#x27;s tally, which Apple has not confirmed. Attribution of the network rests on code, hosting and registration information tracked by research organizations, and is not equivalent to a final determination of who controls every app. Apple&#x27;s October 16 guideline update is an official Apple action and is stated separately from these removals. This article is a summary with links only and does not reproduce the original text in full or related images. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>WIRED&#x27;s investigation confirmed by two sources through independent reports from AppleInsider and SiliconReport. Original links opened and verified. WIRED&#x27;s own site could not be opened directly this round due to fetch-policy limits, so the evidence link uses a report page that was opened and verified.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools" target="_blank" rel="noopener">Hundreds of AI apps hid abusive deepfake tools from reviewers ↗</a><br>appleinsider.com · 2026-11-02 · AppleInsider report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>AppleInsider report<br><a href="https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools" target="_blank" rel="noopener">https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools</a></li><li>SiliconReport report<br><a href="https://www.siliconreport.com/wired-finds-over-400-domains-and-apps-hid-explicit-ai-features" target="_blank" rel="noopener">https://www.siliconreport.com/wired-finds-over-400-domains-and-apps-hid-explicit-ai-features</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

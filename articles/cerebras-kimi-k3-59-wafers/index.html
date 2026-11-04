@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>3万亿参数的中国模型，塞进59张美国晶圆 — Tokenta Signal</title><meta name="description" content="Cerebras发了一道部署数学题：月之暗面开源的3万亿参数Kimi K3，4比特量化后每层约16GB，69层线性注意力加24层全注意力，算下来正好59张晶圆级芯片，一张不多。这套流水线号称每秒吐2000个token——但原文里藏着四个字：示例演算。">
+<title>A 3-Trillion-Parameter Chinese Model, Fitted onto 59 American Wafers — Tokenta Signal</title><meta name="description" content="Cerebras set a deployment maths problem: Moonshot AI&#x27;s open-source 3-trillion-parameter Kimi K3, at 4-bit quantisation, takes about 16GB per layer; with 69 linear-attention layers and 24 full-attention layers, the bill comes to exactly 59 wafer-scale chips — not one more. The pipeline claims 2,000 tokens per second — but four words hide in the original: illustrative example.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Cerebras set a deployment maths problem: Moonshot AI&#x27;s open-source 3-trillion-parameter Kimi K3, at 4-bit quantisation, takes about 16GB per layer; with 69 linear-attention layers and 24 full-attention layers, the bill comes to exactly 59 wafer-scale chips — not one more. The pipeline claims 2,000 tokens per second — but four words hide in the original: illustrative example.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">WORLD & POLICY / 世界与政策 · SIGNAL ANALYSIS</span>
-<h1>3万亿参数的中国模型，塞进59张美国晶圆</h1>
-<p class="deck">Cerebras用Kimi K3算了一笔账：3万亿参数、93层、59张晶圆、每秒1000到2000+ token。账算得漂亮，但这篇官方博客从头到尾没有说这套系统真的跑起来过——它给出的是一份部署配方，不是一份实测报告。</p>
-<div class="meta">ISSUE 60 · 2026-10-22 · SOURCE / Cerebras 官方博客 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">AI INFRASTRUCTURE &amp; SILICON</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">3T</div><div class="lab">KIMI K3 PARAMETERS</div><div class="desc">月之暗面开源的Kimi K3总参数，93层混合架构：69层线性注意力加24层全注意力。</div></div><div class="metric"><div class="num">59</div><div class="lab">WSE-3T WAFERS</div><div class="desc">全注意力层一层一晶圆占24张，线性层两层一晶圆占35张——3万亿参数付的“房租”。</div></div><div class="metric"><div class="num">2000+</div><div class="lab">TOKENS PER SECOND · CLAIMED</div><div class="desc">Cerebras宣称的多万亿参数模型推理速度；官方未给该布局实测功耗，而其自称的黄金指标“每兆瓦token数”恰恰缺席。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE POST：10月22日，Cerebras发布官方技术博客，Kimi K3成为部署演算的主角。</li><li><b>02</b>THE MATH：4比特量化、每层16GB、44GB片上内存——59张晶圆的账当场算清。</li><li><b>03</b>THE CLAIM：流水线并行加权重不出片，宣称多万亿参数模型每秒1000到2000+ token。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>10月22日，Cerebras发布技术博客《我们如何在Cerebras上部署万亿参数前沿模型》，用月之暗面开源的Kimi K3做例子。Kimi K3约3万亿参数，93层：69层线性注意力、24层全注意力。每张WSE-3T晶圆有44GB片上SRAM，权重按4比特量化后，每层约16GB。</p><p>账很好算：全注意力层要留出空间放KV缓存，一层独占一张晶圆，24层占24张；线性注意力层只保留固定大小的状态，两层合住一张，69层占35张。24加35，正好59张晶圆。权重全部住在片上、永不搬家，晶圆之间只传激活值，走RDMA以太网，每跳约2微秒。Cerebras称，多万亿参数模型在这套流水线上能跑出每秒1000到2000+ token。</p>
-<h2><span class="en">THE FINE PRINT</span>原文里藏着四个字：示例演算</h2><p>Cerebras在开篇就写明，Kimi K3是一个“illustrative example”——示例演算。整篇博客是一套部署配方的推导：假设256k平均请求长度、4比特权重、8比特KV缓存，然后一步步算内存、算晶圆数、算并发。它证明的是“装得下”，不是“跑过了”。</p><p>独立科技媒体dailyinference的评价更直接：Cerebras没有说明这套Kimi K3布局是否真的运行过，也没有给出与宣称速度对应的独立验证结果、完整基准条件和实测功耗。营销叙事和工程实测之间，隔着一整篇博客的假设。</p><h2><span class="en">THE ARCHITECTURE BET</span>能装下3万亿，靠的是模型先瘦身</h2><p>这套数学成立的前提，是Kimi K3的混合架构：93层里69层是线性注意力，只保留固定大小的状态，不需要随上下文膨胀的KV缓存。换成一个全注意力模型，每一层都要在晶圆上留出KV缓存空间，59张这个数字立刻守不住。</p><p>换句话说，Cerebras的晶圆叙事和月之暗面的架构选择互相成就：模型先把注意力做“轻”，硬件才敢把权重全部锁在片上。2026年的推理竞赛，一半在比芯片，一半在比谁的模型更会给硬件省地方。</p><h2><span class="en">THE SIGNAL</span>美国芯片的演示台上，站着中国模型</h2><p>还有一个容易被滑过去的细节：Cerebras用来展示旗舰硬件的，不是美国实验室的闭源模型，而是一个中国团队的开源权重模型。Kimi K3.1 Pro刚在10月24日落地，Kimi系列已经成了全球推理基础设施的默认演示对象之一。</p><p>剧本和过去完全反过来了。过去是中国厂商拿美国模型测自己的卡，现在是美国厂商拿中国模型秀自己的晶圆。开源权重的扩散速度，正在重写“谁给谁站台”的顺序。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>账算得越漂亮，越要问跑过没有</h2><p>Cerebras这篇博客的价值不在59这个数字，而在它把推理基础设施的竞争摊开成了一道人人可复算的数学题。但Tokenta Signal的判断不变：示例演算证明的是可能性，实测数据证明的才是能力。在功耗数字缺席之前，59张晶圆装下3万亿参数，是上半场，不是终场。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界同样清楚：59张是演算结果，不是交付清单；2000+ token/秒是厂商口径，不是第三方实测。Kimi K3的架构红利（线性注意力占93层中的69层）不可平移到全注意力模型。等Cerebras公布这套布局的实测吞吐与每兆瓦token数，这道数学题才算交卷。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>官方原文的关键限定都在字里行间：Kimi K3被明确称为“illustrative example”（示例演算）；1000–2000+ token/秒是面向多万亿参数模型的笼统口径，原文没有给出这套59晶圆布局的实测吞吐与功耗。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener">Cerebras官方博客：59张晶圆部署3万亿参数Kimi K3 ↗</a><br>cerebras.ai · 2026-10-22 · Cerebras 官方博客</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Cerebras 官方博客：How Cerebras Deploys Trillion-Parameter AI Models<br><a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener">https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</a></li><li>dailyinference：59 Wafers to Hold One Trillion-Parameter Model<br><a href="https://dailyinference.news/articles/2026-10-25-59-wafers-to-hold-one-trillion-parameter-model-cerebrass-math-says/" target="_blank" rel="noopener">https://dailyinference.news/articles/2026-10-25-59-wafers-to-hold-one-trillion-parameter-model-cerebrass-math-says/</a></li><li>ai0.news 每日AI简报（2026-10-25）：Cerebras Spans 59 Wafers for 3T Kimi<br><a href="https://ai0.news/posts/2026-10-25-daily-digest/" target="_blank" rel="noopener">https://ai0.news/posts/2026-10-25-daily-digest/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-ndrc-ai-lifecycle-law/">中国加快 AI 全生命周期立法：DeepSeek、Moonshot、阿里巴巴在列</a> <span class="meta">ISSUE 172</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nyt-sues-brave/">纽约时报告Brave，索赔索引里的300亿页</a> <span class="meta">ISSUE 143</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-compute-campuses/">数据中心不受欢迎，OpenAI打算换个名字</a> <span class="meta">ISSUE 137</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../apple-intelligence-china-qwen/">苹果智能落地中国，Siri借用了通义</a> <span class="meta">ISSUE 133</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>A 3-Trillion-Parameter Chinese Model, Fitted onto 59 American Wafers</h1>
+<p class="deck">Cerebras did the maths with Kimi K3: 3 trillion parameters, 93 layers, 59 wafers, 1,000 to 2,000+ tokens per second. The arithmetic is elegant, but the official blog never says this system actually ran — it offers a deployment recipe, not a measurement report.</p>
+<div class="meta">ISSUE 60 · 2026-10-22 · SOURCE / <b>Cerebras official blog</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">AI INFRASTRUCTURE &amp; SILICON</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">3T</div><div class="lab">KIMI K3 PARAMETERS</div><div class="desc">Moonshot AI&#x27;s open-source Kimi K3 total parameters, in a 93-layer hybrid architecture: 69 linear-attention layers plus 24 full-attention layers.</div></div><div class="metric"><div class="num">59</div><div class="lab">WSE-3T WAFERS</div><div class="desc">Full-attention layers take one wafer each (24), linear layers two per wafer (35) — the &#x27;rent&#x27; paid by 3 trillion parameters.</div></div><div class="metric"><div class="num">2000+</div><div class="lab">TOKENS PER SECOND · CLAIMED</div><div class="desc">Cerebras&#x27; claimed inference speed for multi-trillion-parameter models; the company gave no measured power for this layout, and its own golden metric — tokens per megawatt — is conspicuously absent.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE POST — On October 22, Cerebras published its official technical blog, with Kimi K3 as the star of the deployment calculation.</li><li><b>02</b>THE MATH — 4-bit quantisation, 16GB per layer, 44GB of on-chip memory — the 59-wafer bill is settled on the spot.</li><li><b>03</b>THE CLAIM — Pipeline parallelism with weights never leaving the chip claims 1,000 to 2,000+ tokens per second for multi-trillion-parameter models.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On October 22, Cerebras published a technical blog post, &#x27;How we deploy trillion-parameter frontier models on Cerebras&#x27;, using Moonshot AI&#x27;s open-source Kimi K3 as the example. Kimi K3 has roughly 3 trillion parameters across 93 layers: 69 linear-attention layers and 24 full-attention layers. Each WSE-3T wafer carries 44GB of on-chip SRAM; with weights quantised to 4 bits, each layer takes about 16GB.</p><p>The arithmetic is simple: full-attention layers must reserve space for the KV cache, so one layer occupies one wafer — 24 layers take 24 wafers. Linear-attention layers keep only a fixed-size state, so two can share a wafer — 69 layers take 35 wafers. Twenty-four plus thirty-five is exactly 59 wafers. The weights live permanently on-chip and never move; only activations travel between wafers, over RDMA Ethernet at about 2 microseconds per hop. Cerebras says multi-trillion-parameter models on this pipeline can produce 1,000 to 2,000+ tokens per second.</p>
+<h2><span class="en">THE FINE PRINT</span>Four words hidden in the original: illustrative example</h2><p>Cerebras states at the outset that Kimi K3 is an &#x27;illustrative example&#x27;. The entire post is a derivation of a deployment recipe: assume a 256k average request length, 4-bit weights, 8-bit KV cache, then work through memory, wafer count and concurrency step by step. It proves &#x27;it fits&#x27; — not &#x27;it ran&#x27;.</p><p>Independent tech outlet dailyinference was more direct: Cerebras did not say whether this Kimi K3 layout has actually run, and provided no independently verified results, complete benchmark conditions or measured power consumption matching the claimed speeds. Between the marketing narrative and engineering measurement lies a whole blog post of assumptions.</p><h2><span class="en">THE ARCHITECTURE BET</span>Fitting 3 trillion parameters relies on the model slimming down first</h2><p>The premise that makes this maths work is Kimi K3&#x27;s hybrid architecture: 69 of its 93 layers are linear attention, holding only a fixed-size state with no KV cache that swells with context. Swap in a full-attention model, where every layer must reserve KV-cache space on the wafer, and the number 59 collapses immediately.</p><p>In other words, Cerebras&#x27; wafer narrative and Moonshot AI&#x27;s architecture choices complete each other: the model makes attention &#x27;light&#x27; first, and only then dares the hardware to lock all weights on-chip. Half of the 2026 inference race is about chips; the other half is about whose model best saves the hardware room.</p><h2><span class="en">THE SIGNAL</span>A Chinese model on an American chip&#x27;s demonstration stage</h2><p>One detail is easily skipped: the model Cerebras used to showcase its flagship hardware is not a closed model from a US lab, but an open-weight model from a Chinese team. Kimi K3.1 Pro landed on October 24, and the Kimi family has already become one of the default demonstration subjects for inference infrastructure worldwide.</p><p>The script has reversed completely. It used to be Chinese vendors testing their cards on American models; now it is an American vendor showing off its wafers with a Chinese model. The speed at which open weights spread is rewriting the order of who endorses whom.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM BIGGER MODELS TO FITTING MATH</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From who has more parameters to who can fit them</div><div class="desc">3 trillion parameters are no longer rare; what is rare is computing the memory bill layer by layer, wafer by wafer — deployment capability is becoming the other half of model capability.</div></div><div class="metric"><div class="lab">FROM CLOSED DEMOS TO OPEN SHOWCASES</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From closed demos to open showcases</div><div class="desc">Flagship hardware launches now star open-weight models, because only with open models can anyone else recompute the bill.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The prettier the maths, the harder to ask: did it run?</h2><p>The value of Cerebras&#x27; post is not the number 59; it is that it lays the inference-infrastructure contest out as a maths problem anyone can recompute. But Tokenta Signal&#x27;s judgment stands: an illustrative calculation proves possibility; measured data proves capability. Until the power numbers arrive, fitting 3 trillion parameters onto 59 wafers is the first half, not the final whistle.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundary of this piece is equally clear: 59 is a computed result, not a delivery manifest; &#x27;2,000+ tokens per second&#x27; is a vendor figure, not third-party measurement. Kimi K3&#x27;s architecture dividend (69 of its 93 layers are linear attention) does not transfer to full-attention models. Until Cerebras publishes measured throughput and tokens per megawatt for this layout, the maths problem remains unsubmitted.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The key qualifications in the official original are all between the lines: Kimi K3 is explicitly called an &#x27;illustrative example&#x27;; the 1,000-2,000+ tokens per second is a generic figure for multi-trillion-parameter models, and the original gives no measured throughput or power consumption for this 59-wafer layout.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener">Cerebras official blog: deploying the 3-trillion-parameter Kimi K3 on 59 wafers ↗</a><br>cerebras.ai · 2026-10-22 · Cerebras official blog</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Cerebras official blog: How Cerebras Deploys Trillion-Parameter AI Models<br><a href="https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras" target="_blank" rel="noopener">https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras</a></li><li>dailyinference: 59 Wafers to Hold One Trillion-Parameter Model<br><a href="https://dailyinference.news/articles/2026-10-25-59-wafers-to-hold-one-trillion-parameter-model-cerebrass-math-says/" target="_blank" rel="noopener">https://dailyinference.news/articles/2026-10-25-59-wafers-to-hold-one-trillion-parameter-model-cerebrass-math-says/</a></li><li>ai0.news daily AI briefing (2026-10-25): Cerebras Spans 59 Wafers for 3T Kimi<br><a href="https://ai0.news/posts/2026-10-25-daily-digest/" target="_blank" rel="noopener">https://ai0.news/posts/2026-10-25-daily-digest/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

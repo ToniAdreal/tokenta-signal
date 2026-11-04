@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Lambda的$40亿，Anthropic买单 — Tokenta Signal</title><meta name="description" content="据报道，Lambda拟融资最高$40亿、投前估值$145亿，黑石+Coatue领投，2027年IPO。而backlog三个月从$150亿涨到$500亿的背后，是Anthropic一家公司的$350亿算力承诺——这轮融资赌的不是算力稀缺，是Anthropic还得起钱。">
+<title>Lambda&#x27;s $4 Billion Raise, Paid for by Anthropic — Tokenta Signal</title><meta name="description" content="Lambda is reportedly raising up to $4 billion at a $14.5 billion pre-money valuation, co-led by Blackstone and Coatue, ahead of a 2027 IPO. Behind a backlog that tripled from $15 billion to $50 billion in three months sits a single $35 billion compute commitment from Anthropic — this round is not a bet on compute scarcity, but on Anthropic&#x27;s ability to pay.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Lambda is reportedly raising up to $4 billion at a $14.5 billion pre-money valuation, co-led by Blackstone and Coatue, ahead of a 2027 IPO. Behind a backlog that tripled from $15 billion to $50 billion in three months sits a single $35 billion compute commitment from Anthropic — this round is not a bet on compute scarcity, but on Anthropic&#x27;s ability to pay.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">MARKETS & INDUSTRY / 市场与产业 · SIGNAL ANALYSIS</span>
-<h1>Lambda的$40亿，Anthropic买单</h1>
-<p class="deck">Lambda的$40亿融资新闻，实质是Anthropic用一纸$350亿算力承诺替它背书。$145亿估值赌的不是算力稀缺，而是Anthropic的付款能力——当一家公司的七成订单来自同一个客户，融资新闻就变成了信用新闻。</p>
-<div class="meta">ISSUE 51 · 2026-10-06 · SOURCE / TechCrunch · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">AI INFRASTRUCTURE &amp; CAPITAL</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">$4B</div><div class="lab">MAX RAISE</div><div class="desc">据报道最高$40亿，投前估值$145亿，黑石+Coatue领投，2027年IPO前最后一轮私募。</div></div><div class="metric"><div class="num">$35B</div><div class="lab">ANTHROPIC COMMITMENT</div><div class="desc">据报道2026年8月底签下，占Lambda backlog暴涨部分的绝大部分，七成订单系于一家。</div></div><div class="metric"><div class="num">$50B</div><div class="lab">BACKLOG IN 3 MONTHS</div><div class="desc">据报道从6月$150亿涨到9月$500亿，三个月翻3倍多，来自Lambda给LP的内部信。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE LEAK：10月6日WSJ爆料：Lambda拟融资最高$40亿，投前估值$145亿，黑石+Coatue领投。</li><li><b>02</b>THE BACKLOG：内部信曝光：backlog三个月从$150亿涨到$500亿，市场追问增量来源。</li><li><b>03</b>THE ONE CUSTOMER：&#x27;一个客户&#x27;揭晓：据报道Anthropic 8月底签下$350亿算力承诺，占大头。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026年10月6日，WSJ爆料：Lambda Labs正筹划最高$40亿美元融资，投前估值$145亿美元，由黑石（Blackstone）与Coatue Management联合领投。这将是公司2027年IPO前的最后一轮私募。Lambda官方未回应置评，以上均为报道口径。</p><p>真正让市场坐不住的是另一份文件：Lambda给LP的内部信显示，公司订单积压（backlog）从6月的$150亿猛涨到9月的$500亿，三个月翻了3倍多。WSJ拿到这份信之后，全行业都在问同一个问题：这$350亿的增量从哪来的？</p><p>答案是Anthropic。据报道，2026年8月底，Anthropic与Lambda签下$350亿算力承诺，backlog暴涨部分的绝大部分来自这一单。TechCrunch的原话是：&#x27;much of that increase appears to be driven by a $35 billion commitment from one company: Anthropic.&#x27;</p><p>别忘了背景：Lambda 2025年11月才刚拿过$15亿+（TWG Global领投，Nvidia、a16z系Andra Capital、Andrej Karpathy、ARK参投），而就在上周，公司又发了$10亿美元债。数据中心建设全靠债滚债——放贷方对neocloud已经越来越挑剔了。</p>
-<h2><span class="en">THE ONE CUSTOMER</span>一个客户：背书的重量</h2><p>把数字摆出来看：backlog $500亿里，$350亿来自Anthropic一家。也就是说，Lambda账面上70%的&#x27;未来收入&#x27;，系于同一个付款人。$145亿估值不是建立在&#x27;算力稀缺&#x27;上，而是建立在&#x27;Anthropic还得起钱&#x27;上。</p><p>TechCrunch把这层窗户纸捅破了：&#x27;That means Lambda&#x27;s valuation could be leaning heavily on Anthropic&#x27;s ability to keep paying.&#x27; 翻译成大白话——这轮$40亿融资，赌的不是GPU，是Anthropic的现金流。</p><p>这在neocloud赛道里不是孤例。CoreWeave已经上市，Nvidia 1月还投了它$20亿；Crusoe刚拿$13.8亿Series E估值$100亿，正在谈$30亿新轮；Nscale递交了IPO，合同积压$510亿。整条赛道都在讲同一个故事：订单即估值。而Lambda把这个故事推到了极致——一个客户，撑起七成订单。</p><h2><span class="en">DEBT ON DEBT</span>债滚债：neocloud的结构性矛盾</h2><p>Lambda的GPU规模不小：2026年5月撕页显示30,000+ GPUs，Kansas City新数据中心规划10,000张Blackwell Ultra。但每一张卡背后都是债——上周刚发的$10亿美元债就是明证。</p><p>这就是neocloud的结构性矛盾，bitcoinversus.tech总结得很准：&#x27;AI clouds increasingly need software-company growth rates while financing power, data centers, networking and GPU fleets more like industrial infrastructure.&#x27; 软件公司的增速预期，重工业的融资方式——增长故事讲得越猛，资产负债表绷得越紧。</p><p>放贷方已经开始挑剔了。当整个赛道的backlog都在膨胀，债权人看的不再是订单数字，而是订单质量：$350亿来自一家客户的承诺，和$350亿来自一百家客户，完全是两种风险。</p><h2><span class="en">THE PRE-IPO ROUND</span>IPO前最后一轮：为什么非融不可</h2><p>时间线很紧：2027年IPO，本轮是上市前最后一轮私募。Bloomberg 8月报道称Lambda预计2026年营收超过$15亿美元——按$145亿投前估值算，不到10倍PS，在AI infra里不算离谱，但前提是backlog能兑现。</p><p>钱要去哪很清楚：Kansas City的10,000张Blackwell Ultra数据中心、GPU舰队的持续扩张、以及借新还旧的债务滚动。IPO前需要一张漂亮的资产负债表，而漂亮的资产负债表需要先花钱。</p><p>所以这轮$40亿既是弹药也是信号：向市场证明&#x27;Anthropic都敢押$350亿，你还不敢跟？&#x27;。领投方黑石+Coatue的组合也很有讲究——一个管钱，一个懂科技成长股，都是为IPO铺路的标准配置。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>赌的不是算力，是Anthropic还得起钱</h2><p>把backlog拆开看，Lambda的故事就露骨了：$500亿订单里$350亿来自一家公司。这轮融资真正的标的不是GPU舰队，是Anthropic的现金流。neocloud的终局从来不是谁卡多，而是谁的客户先付不起钱——而Lambda把七成筹码押在了同一张牌桌上。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">如果Anthropic哪天延迟付款或缩减那$350亿承诺，Lambda的backlog神话当场现形——记住，债权人永远比股东更早知道答案。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>TechCrunch 10月6日报道：Lambda 计划以145亿美元投前估值募资40亿美元，订单积压从150亿涨到500亿，其中350亿来自Anthropic一家。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank" rel="noopener">AI computing startup Lambda to raise $4B ahead of planned IPO ↗</a><br>techcrunch.com · 2026-10-06 · TechCrunch</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>TechCrunch：AI computing startup Lambda to raise $4B ahead of planned IPO<br><a href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank" rel="noopener">https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/</a></li><li>Reuters：Nvidia-backed Lambda targets $4B raise ahead of planned IPO, WSJ reports（2026-10-06）</li><li>TechCrunch：AI computing startup Lambda to raise $4B ahead of planned IPO（2026-10-06）</li><li>TechFundingNews：Lambda eyes $12B valuation with $3B pre-IPO raise as AI cloud race heats up</li><li>www.reuters.com 原文链接<br><a href="https://www.reuters.com/technology/nvidia-backed-lambda-targets-4-billion-raise-ahead-planned-ipo-wsj-reports-2026-10-06/" target="_blank" rel="noopener">https://www.reuters.com/technology/nvidia-backed-lambda-targets-4-billion-raise-ahead-planned-ipo-wsj-reports-2026-10-06/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta 首笔欧元债开簿：六档、期限最长 38 年（flash 190 更新）</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta 150 亿美元债为 AI 基建融资：利差较上一轮走阔，欧元部分待定价</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista 三季度营收 36.6 亿美元增 58.5%：IPO 以来最快增速，AI 网络成主引擎</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block 三季度毛利 32.4 亿美元增 22%：Cash App 领涨，上调全年指引并首次预告 AI 工具收入</a> <span class="meta">ISSUE 188</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>Lambda&#x27;s $4 Billion Raise, Paid for by Anthropic</h1>
+<p class="deck">The real story behind Lambda&#x27;s $4 billion raise is Anthropic underwriting it with a single $35 billion compute commitment. The $14.5 billion valuation is not a bet on compute scarcity but on Anthropic&#x27;s ability to pay — when 70% of a company&#x27;s order book comes from one customer, a financing story becomes a credit story.</p>
+<div class="meta">ISSUE 51 · 2026-10-06 · SOURCE / <b>TechCrunch</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">AI INFRASTRUCTURE &amp; CAPITAL</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">$4B</div><div class="lab">MAX RAISE</div><div class="desc">As reported, up to $4 billion at a $14.5 billion pre-money valuation, co-led by Blackstone and Coatue — the last private round before a 2027 IPO.</div></div><div class="metric"><div class="num">$35B</div><div class="lab">ANTHROPIC COMMITMENT</div><div class="desc">As reported, signed in late August 2026, accounting for the bulk of Lambda&#x27;s backlog surge — 70% of the order book rests on one name.</div></div><div class="metric"><div class="num">$50B</div><div class="lab">BACKLOG IN 3 MONTHS</div><div class="desc">As reported, up from $15 billion in June to $50 billion in September — more than tripling in three months, per Lambda&#x27;s internal letter to LPs.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE LEAK — On October 6, the WSJ broke the story: Lambda plans to raise up to $4 billion at a $14.5 billion pre-money valuation, co-led by Blackstone and Coatue.</li><li><b>02</b>THE BACKLOG — The internal letter surfaced: backlog tripled from $15 billion to $50 billion in three months, and the market demanded to know where the increase came from.</li><li><b>03</b>THE ONE CUSTOMER — The &#x27;one customer&#x27; was revealed: Anthropic reportedly signed a $35 billion compute commitment in late August, accounting for the bulk of it.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On October 6, 2026, the Wall Street Journal reported that Lambda Labs is planning to raise up to $4 billion at a $14.5 billion pre-money valuation, co-led by Blackstone and Coatue Management. It would be the company&#x27;s last private round before a planned 2027 IPO. Lambda declined to comment; all figures above are as reported.</p><p>The document that truly unsettled the market was another one: an internal letter to LPs showed Lambda&#x27;s order backlog had surged from $15 billion in June to $50 billion in September — more than tripling in three months. After the WSJ obtained the letter, the whole industry asked the same question: where did the $35 billion increase come from?</p><p>The answer is Anthropic. According to reports, in late August 2026 Anthropic signed a $35 billion compute commitment with Lambda, accounting for the bulk of the backlog surge. TechCrunch put it this way: &#x27;much of that increase appears to be driven by a $35 billion commitment from one company: Anthropic.&#x27;</p><p>Do not forget the backdrop: Lambda raised over $1.5 billion as recently as November 2025 (led by TWG Global, with Nvidia, a16z-affiliated Andra Capital, Andrej Karpathy and ARK participating), and just last week it issued another $1 billion in debt. Data centre construction is funded by rolling debt — and lenders are getting increasingly picky about neoclouds.</p>
+<h2><span class="en">THE ONE CUSTOMER</span>One customer: the weight of an endorsement</h2><p>Lay the numbers out: of the $50 billion backlog, $35 billion comes from Anthropic alone. In other words, 70% of Lambda&#x27;s book of &#x27;future revenue&#x27; depends on a single payer. The $14.5 billion valuation is not built on compute scarcity; it is built on Anthropic&#x27;s ability to keep paying.</p><p>TechCrunch punctured the illusion: &#x27;That means Lambda&#x27;s valuation could be leaning heavily on Anthropic&#x27;s ability to keep paying.&#x27; In plain English — this $4 billion round is not a bet on GPUs. It is a bet on Anthropic&#x27;s cash flow.</p><p>Lambda is not an isolated case in the neocloud race. CoreWeave is already public, and Nvidia put another $2 billion into it in January; Crusoe just raised a $1.38 billion Series E at a $10 billion valuation and is in talks for a $3 billion round; Nscale has filed for an IPO with a $51 billion contract backlog. The whole sector tells the same story: order books equal valuation. Lambda has simply pushed that story to its extreme — one customer carrying 70% of the book.</p><h2><span class="en">DEBT ON DEBT</span>Debt on debt: the neocloud&#x27;s structural contradiction</h2><p>Lambda&#x27;s GPU fleet is not small: a May 2026 snapshot showed 30,000+ GPUs, and its new Kansas City data centre plans for 10,000 Blackwell Ultra cards. But behind every card is debt — the $1 billion bond issued last week is proof.</p><p>This is the neocloud&#x27;s structural contradiction, as bitcoinversus.tech summed it up: &#x27;AI clouds increasingly need software-company growth rates while financing power, data centers, networking and GPU fleets more like industrial infrastructure.&#x27; Software-company growth expectations, heavy-industry financing — the louder the growth story, the tighter the balance sheet is stretched.</p><p>Lenders have started to discriminate. With backlogs inflating across the sector, creditors no longer look at the size of the order book but at its quality: a $35 billion commitment from one customer and $35 billion spread across a hundred customers are entirely different risks.</p><h2><span class="en">THE PRE-IPO ROUND</span>The last round before the IPO: why it cannot wait</h2><p>The timeline is tight: an IPO in 2027, and this is the final private round before listing. Bloomberg reported in August that Lambda expects 2026 revenue to exceed $1.5 billion — against a $14.5 billion pre-money valuation that is under 10x sales, not outlandish for AI infrastructure, provided the backlog actually converts.</p><p>Where the money goes is clear: the Kansas City data centre with 10,000 Blackwell Ultra cards, continued expansion of the GPU fleet, and rolling over maturing debt. Before an IPO you need a beautiful balance sheet, and a beautiful balance sheet requires spending money first.</p><p>So this $4 billion is both ammunition and signal: proof to the market that &#x27;Anthropic dared to commit $35 billion — why wouldn&#x27;t you follow?&#x27; The Blackstone-plus-Coatue lead pairing is also deliberate — one manages money, the other understands tech growth stocks; a standard combination for paving the road to an IPO.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM SELLING COMPUTE TO SELLING ORDER BOOKS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From compute scarcity to order-book scarcity</div><div class="desc">The neocloud valuation logic has changed: the number of GPUs matters less than whether the order book carries names hard enough to lend against.</div></div><div class="metric"><div class="lab">FROM CAPEX RACES TO CREDIT RACES</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From burn-rate expansion to credit expansion</div><div class="desc">Data centres run on rolling debt and valuations run on big-customer endorsements — neoclouds are playing with credit leverage, not technology leverage.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The bet is not on compute. It is on Anthropic&#x27;s ability to pay.</h2><p>Break the backlog down and Lambda&#x27;s story lays itself bare: $35 billion of a $50 billion order book comes from one company. The real underlying asset of this round is not the GPU fleet; it is Anthropic&#x27;s cash flow. The endgame for neoclouds was never who has the most cards, but whose customer stops paying first — and Lambda has placed 70% of its chips on a single table.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">If Anthropic ever delays payment or trims that $35 billion commitment, Lambda&#x27;s backlog myth collapses on the spot — remember, creditors always learn the answer before shareholders do.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>TechCrunch reported on October 6: Lambda plans to raise $4 billion at a $14.5 billion pre-money valuation; its backlog jumped from $15 billion to $50 billion, of which $35 billion comes from Anthropic alone.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank" rel="noopener">AI computing startup Lambda to raise $4B ahead of planned IPO ↗</a><br>techcrunch.com · 2026-10-06 · TechCrunch</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>TechCrunch: AI computing startup Lambda to raise $4B ahead of planned IPO<br><a href="https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/" target="_blank" rel="noopener">https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/</a></li><li>Reuters: Nvidia-backed Lambda targets $4B raise ahead of planned IPO, WSJ reports (2026-10-06)</li><li>TechCrunch: AI computing startup Lambda to raise $4B ahead of planned IPO (2026-10-06)</li><li>TechFundingNews: Lambda eyes $12B valuation with $3B pre-IPO raise as AI cloud race heats up</li><li>www.reuters.com: Original article<br><a href="https://www.reuters.com/technology/nvidia-backed-lambda-targets-4-billion-raise-ahead-planned-ipo-wsj-reports-2026-10-06/" target="_blank" rel="noopener">https://www.reuters.com/technology/nvidia-backed-lambda-targets-4-billion-raise-ahead-planned-ipo-wsj-reports-2026-10-06/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

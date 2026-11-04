@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CrowdStrike 连签两单收购，补齐智能体安全拼图（155 号更新） — Tokenta Signal</title><meta name="description" content="CrowdStrike 2026-11-03 在 Fal.Con Europe 宣布已签署收购 Fiddler AI 与 Dreadnode 的最终协议，两笔交易预计 2027 财年第四季度完成交割，官方未披露价格；Fiddler 将成为 Falcon Observe、Dreadnode 将成为自动化 AI 安全测试，分别覆盖智能体部署前评估与上线后行为解释，与同日发布的 AI Kill Switch 组成从测试到叫停的完整链条。《华尔街日报》报道两笔交易合计约 4.95 亿美元，该数字未经公司确认。">
+<title>CrowdStrike Signs Two Acquisitions Back to Back, Completing the Agent Security Puzzle (Update to Issue 155) — Tokenta Signal</title><meta name="description" content="CrowdStrike announced at Fal.Con Europe on 2026-11-03 that it has signed definitive agreements to acquire Fiddler AI and Dreadnode, both expected to close in the fourth quarter of fiscal 2027, with prices not officially disclosed; Fiddler will become Falcon Observe and Dreadnode will become automated AI security testing, covering pre-deployment evaluation and post-launch behavioral explanation respectively, forming a complete chain from testing to shutdown with the AI Kill Switch released the same day. The Wall Street Journal reported a combined roughly $495 million for the two deals, a figure the company has not confirmed.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="CrowdStrike announced at Fal.Con Europe on 2026-11-03 that it has signed definitive agreements to acquire Fiddler AI and Dreadnode, both expected to close in the fourth quarter of fiscal 2027, with prices not officially disclosed; Fiddler will become Falcon Observe and Dreadnode will become automated AI security testing, covering pre-deployment evaluation and post-launch behavioral explanation respectively, forming a complete chain from testing to shutdown with the AI Kill Switch released the same day. The Wall Street Journal reported a combined roughly $495 million for the two deals, a figure the company has not confirmed.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">MARKETS & INDUSTRY / 市场与产业 · SIGNAL ANALYSIS</span>
-<h1>CrowdStrike 连签两单收购，补齐智能体安全拼图（155 号更新）</h1>
-<p class="deck">CrowdStrike 2026-11-03 在 Fal.Con Europe 签署收购 Fiddler AI 与 Dreadnode 的最终协议，两单预计 2027 财年第四季度交割，官方未披露价格；Fiddler 将成为 Falcon Observe、Dreadnode 将成为自动化 AI 安全测试，与同日 AI Kill Switch 组成从测试到叫停的链条。《华尔街日报》报道合计约 4.95 亿美元，未经公司确认。</p>
-<div class="meta">ISSUE 179 · 2026-11-03 · SOURCE / CrowdStrike 官方新闻稿 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">CROWDSTRIKE × AI SAFETY × ACQUISITIONS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>CrowdStrike Signs Two Acquisitions Back to Back, Completing the Agent Security Puzzle (Update to Issue 155)</h1>
+<p class="deck">CrowdStrike signed definitive agreements at Fal.Con Europe on 2026-11-03 to acquire Fiddler AI and Dreadnode, both expected to close in the fourth quarter of fiscal 2027, with prices not officially disclosed; Fiddler will become Falcon Observe and Dreadnode will become automated AI security testing, forming a chain from testing to shutdown with the same-day AI Kill Switch. The Wall Street Journal reported a combined roughly $495 million, which the company has not confirmed.</p>
+<div class="meta">ISSUE 179 · 2026-11-03 · SOURCE / <b>CrowdStrike official press release</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">CROWDSTRIKE × AI SAFETY × ACQUISITIONS</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE DEALS：CrowdStrike 2026-11-03 在 Fal.Con Europe 宣布签署收购 Fiddler AI 与 Dreadnode 的最终协议，两单预计 2027 财年第四季度交割。</li><li><b>02</b>THE CONFIRMATION：两份 CrowdStrike 官方新闻稿与 dpa-AFX 通讯社报道三边核对协议签署、交割预期、产品命名与上市计划一致；价格仅见媒体报道，官方未披露。</li><li><b>03</b>THE WATCHPOINT：两单能否按期交割并全面上市，Fiddler 独立销售是否保留，以及 Dreadnode 测试数据是否反哺 SafeMind。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>CrowdStrike 2026-11-03 在巴塞罗那 Fal.Con Europe 大会上宣布，已签署收购 Fiddler AI 的最终协议。Fiddler 做智能体可观测性与可解释性：部署前评估准确率、任务完成度与策略合规，上线后追踪决策、推理路径与工具调用，检测行为漂移、幻觉与非预期动作；交易完成后将作为 Falcon Observe 纳入 Falcon 平台，计划 2027 财年第四季度全面上市。</p><p>同日第二单：收购自动化 AI 安全测试公司 Dreadnode 的最终协议。Dreadnode 在模型、智能体推理循环、应用与 MCP 服务器上运行超 100 种已知 AI 攻击策略，包括越狱、提示注入与多轮智能体攻击，产出按严重度排序并映射 OWASP、MITRE ATLAS 与 NIST AI RMF 的报告，供上线前 go/no-go 决策；团队将加入 CrowdStrike 的 Cyber Superintelligence Lab，测试结果将作为策略建议输入 Falcon Guardian。</p><p>两笔交易预计均在 2027 财年第四季度完成交割，需满足惯常交割条件；官方口径均为主要现金加部分归属期股票，未披露价格。《华尔街日报》报道两笔合计约 4.95 亿美元，其中 Fiddler 约 4 亿美元、Dreadnode 约 9500 万美元，该数字未经 CrowdStrike 确认，引用时须与官方口径区分。</p><p>与 155 号的关系：155 号已报道同日发布的 Falcon Guardian AI Kill Switch 与 Fiddler 协议；本条补齐第二单 Dreadnode 与两单交易的完整结构。Kill Switch 负责上线后叫停，Fiddler 负责事后解释，Dreadnode 负责事前找茬，三者构成智能体从测试到叫停的链条。</p>
-<h2><span class="en">WHY IT MATTERS</span>收购逻辑是把智能体生命周期包圆</h2><p>安全厂商的竞争正在从单点功能转向生命周期覆盖。CrowdStrike 没有自研可观测性与红队测试，而是直接买下两个现成团队，说明它判断企业采购智能体安全时要的是一套能从测试管到叫停的组合，而不是又一个单品。</p><p>代价是整合风险。两单同季交割、同季全面上市，Falcon Observe 与自动化 AI 安全测试能否按期兑现，Fiddler 独立销售是否保留，官方均未说明。新闻稿里的上市时间是计划，不是交付。</p><h2><span class="en">WHY IT MATTERS</span>价格未披露，信号在节奏</h2><p>官方不披露价格，媒体口径合计约 4.95 亿美元。相对 CrowdStrike 自身市值，这个数字不大，真正的信号不在金额，在节奏：同一场大会连发叫停功能与两单收购，说明智能体安全已经从产品线竞争升级为平台卡位。</p><p>下一条可验证的进展不在新闻稿，而在 2027 财年第四季度的交割与上市兑现，以及 Dreadnode 测试数据是否真的反哺 SafeMind 模型。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>读法不在金额，在位置</h2><p>Tokenta Signal 判断：这组收购的读法不在金额，在位置。Kill Switch 解决出事时停得下，Fiddler 解决出事后说得清，Dreadnode 解决上线前测得出，三者合起来才是企业敢把智能体放进核心流程的前提。限定同样明确：两单都还没交割，全面上市时间只是计划，4.95 亿美元只是媒体口径。下一条可验证的进展不在新闻稿，而在 2027 财年第四季度的交割与上市兑现。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 CrowdStrike 11 月 3 日两份官方新闻稿与 dpa-AFX 通讯社报道为准，均已直接打开核验，协议签署、交割预期、产品命名与上市计划三边一致。两笔交易均只签署了最终协议、尚未交割，价格官方未披露，《华尔街日报》报道的合计约 4.95 亿美元（Fiddler 约 4 亿美元、Dreadnode 约 9500 万美元）为媒体口径、未经公司确认。Dreadnode 攻击策略数量官方新闻稿称超 100 种、官方博客称超 50 种，口径不一致，本文采用新闻稿数字并在此注明。评估成本削减 98% 为厂商自报。本文只做摘要与链接，不转载新闻稿全文与图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>CrowdStrike 两份官方新闻稿与 dpa-AFX 通讯社报道均已直接打开核验，协议签署、交割预期、产品命名与上市计划三边一致；价格口径差异已在边界中注明。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/" target="_blank" rel="noopener">CrowdStrike to Acquire Dreadnode for Automated AI Security Testing ↗</a><br>crowdstrike.com · 2026-11-03 · CrowdStrike 官方新闻稿</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>CrowdStrike 官方新闻稿（Dreadnode）<br><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/" target="_blank" rel="noopener">https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/</a></li><li>CrowdStrike 官方新闻稿（Fiddler）<br><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/" target="_blank" rel="noopener">https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/</a></li><li>dpa-AFX 通讯社报道<br><a href="https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/" target="_blank" rel="noopener">https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta 首笔欧元债开簿：六档、期限最长 38 年（flash 190 更新）</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta 150 亿美元债为 AI 基建融资：利差较上一轮走阔，欧元部分待定价</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista 三季度营收 36.6 亿美元增 58.5%：IPO 以来最快增速，AI 网络成主引擎</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block 三季度毛利 32.4 亿美元增 22%：Cash App 领涨，上调全年指引并首次预告 AI 工具收入</a> <span class="meta">ISSUE 188</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE DEALS — CrowdStrike announces at Fal.Con Europe on 2026-11-03 that it has signed definitive agreements to acquire Fiddler AI and Dreadnode, both expected to close in the fourth quarter of fiscal 2027.</li><li><b>02</b>THE CONFIRMATION — Two CrowdStrike official press releases and dpa-AFX wire reporting agree on agreement signing, closing expectations, product naming and launch plans; the price appears only in media reporting and was not officially disclosed.</li><li><b>03</b>THE WATCHPOINT — Whether both deals close and reach general availability on schedule, whether Fiddler&#x27;s standalone sales are retained, and whether Dreadnode&#x27;s test data feeds back into SafeMind.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>CrowdStrike announced at Fal.Con Europe in Barcelona on 2026-11-03 that it has signed a definitive agreement to acquire Fiddler AI. Fiddler works on agent observability and explainability: evaluating accuracy, task completion and policy compliance before deployment, and after launch tracking decisions, reasoning paths and tool calls to detect behavioral drift, hallucinations and unintended actions; once the deal completes, it will join the Falcon platform as Falcon Observe, with general availability planned for the fourth quarter of fiscal 2027.</p><p>The second deal the same day: a definitive agreement to acquire Dreadnode, an automated AI security testing company. Dreadnode runs more than 100 known AI attack strategies against models, agent reasoning loops, applications and MCP servers, including jailbreaks, prompt injection and multi-turn agent attacks, producing reports ranked by severity and mapped to OWASP, MITRE ATLAS and the NIST AI RMF to support pre-launch go/no-go decisions; the team will join CrowdStrike&#x27;s Cyber Superintelligence Lab, and its test results will feed policy recommendations into Falcon Guardian.</p><p>Both deals are expected to close in the fourth quarter of fiscal 2027, subject to customary closing conditions; the official terms in both cases are mainly cash plus some stock subject to vesting, with prices undisclosed. The Wall Street Journal reported a combined roughly $495 million, about $400 million for Fiddler and about $95 million for Dreadnode; the figure has not been confirmed by CrowdStrike and must be kept distinct from the official account when cited.</p><p>Relation to Issue 155: Issue 155 covered the Falcon Guardian AI Kill Switch and the Fiddler agreement released the same day; this item completes the second deal, Dreadnode, and the full structure of both transactions. The Kill Switch handles stopping agents after launch, Fiddler handles explaining afterwards, and Dreadnode handles probing beforehand, together forming the chain from testing to shutdown.</p>
+<h2><span class="en">WHY IT MATTERS</span>The Acquisition Logic Is to Own the Whole Agent Lifecycle</h2><p>Competition among security vendors is shifting from single features to lifecycle coverage. CrowdStrike did not build observability and red-team testing in-house, but bought two ready-made teams, a sign it judges that enterprises buying agent security want a set that runs from testing to shutdown, not another single product.</p><p>The cost is integration risk. Both deals close in the same quarter and reach general availability in the same quarter, and the company has not said whether the launch dates for Falcon Observe and automated AI security testing will be met, or whether Fiddler&#x27;s standalone sales will be retained. Launch dates in a press release are plans, not delivery.</p><h2><span class="en">WHY IT MATTERS</span>The Price Is Undisclosed; the Signal Is the Pace</h2><p>The company is not disclosing prices, and the media figure is a combined roughly $495 million. Against CrowdStrike&#x27;s own market value the number is not large; the real signal is not the amount but the pace: a stop feature and two acquisitions launched at the same conference show agent security has escalated from product-line competition to platform positioning.</p><p>The next verifiable progress will not be in press releases, but in closing and general-availability delivery in the fourth quarter of fiscal 2027, and in whether Dreadnode&#x27;s test data really feeds back into the SafeMind model.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The Reading Is Not the Amount, but the Position</h2><p>Tokenta Signal&#x27;s judgment: the way to read this set of acquisitions is not the amount, but the position. The Kill Switch ensures things can be stopped when they go wrong, Fiddler ensures they can be explained afterwards, and Dreadnode ensures they can be tested before launch; only the three together are the precondition for enterprises to dare putting agents into core processes. The limits are equally clear: neither deal has closed, general availability dates are only plans, and the $495 million is a media figure. The next verifiable progress will not be in press releases, but in closing and launch delivery in the fourth quarter of fiscal 2027.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report are based on CrowdStrike&#x27;s two official press releases of November 3 and dpa-AFX wire reporting, all opened and verified directly, with agreement signing, closing expectations, product naming and launch plans consistent across all three. Both deals are definitive agreements that have been signed but not yet closed, and the prices were not officially disclosed; the combined roughly $495 million reported by The Wall Street Journal (about $400 million for Fiddler, about $95 million for Dreadnode) is a media figure the company has not confirmed. On Dreadnode&#x27;s attack strategy count, the official press release says more than 100 while the official blog says more than 50; the figures are inconsistent, and this report uses the press release number and notes the discrepancy here. The 98% evaluation cost reduction is vendor-reported. This report provides summaries and links only and does not reproduce the press releases or images in full. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>CrowdStrike&#x27;s two official press releases and dpa-AFX wire reporting were all opened and verified directly, with agreement signing, closing expectations, product naming and launch plans consistent across all three; the price discrepancy is noted in the boundary.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/" target="_blank" rel="noopener">CrowdStrike to Acquire Dreadnode for Automated AI Security Testing ↗</a><br>crowdstrike.com · 2026-11-03 · CrowdStrike official press release</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>CrowdStrike official press release (Dreadnode)<br><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/" target="_blank" rel="noopener">https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/</a></li><li>CrowdStrike official press release (Fiddler)<br><a href="https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/" target="_blank" rel="noopener">https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-fiddler-to-deliver-agent-observability/</a></li><li>dpa-AFX wire report<br><a href="https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/" target="_blank" rel="noopener">https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

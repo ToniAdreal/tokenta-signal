@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>偷来的大模型额度正在被转卖：谷歌披露 LLMjacking，单日账单超 10 万美元 — Tokenta Signal</title><meta name="description" content="Google 威胁情报组与 Mandiant 11 月 2 日报告披露 2026 年多起 LLMjacking 入侵：攻击者劫持企业大模型访问权限，个案单日欺诈账单超 10 万美元、个别机构累计达 100 万美元才切断；主入口为泄露的云身份令牌，UNC6993 与 LiteLLM 漏洞 CVE-2026-40217 在列，被盗额度经 Jet Night 等 LLM Mixers 以约 60 美元月费转卖。">
+<title>Stolen large-model quota is being resold: Google discloses LLMjacking, with single-day bills above $100,000 — Tokenta Signal</title><meta name="description" content="A November 2 report from Google Threat Intelligence Group and Mandiant disclosed multiple LLMjacking intrusions in 2026: attackers hijacked companies&#x27; large-model access, with fraudulent bills above $100,000 in a single day in individual cases and some organisations reaching $1 million before cutting access; the main entry point was leaked cloud identity tokens, with UNC6993 and the LiteLLM vulnerability CVE-2026-40217 among the cases, and stolen quota resold through LLM Mixers such as Jet Night at about $60 a month.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="A November 2 report from Google Threat Intelligence Group and Mandiant disclosed multiple LLMjacking intrusions in 2026: attackers hijacked companies&#x27; large-model access, with fraudulent bills above $100,000 in a single day in individual cases and some organisations reaching $1 million before cutting access; the main entry point was leaked cloud identity tokens, with UNC6993 and the LiteLLM vulnerability CVE-2026-40217 among the cases, and stolen quota resold through LLM Mixers such as Jet Night at about $60 a month.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>偷来的大模型额度正在被转卖：谷歌披露 LLMjacking，单日账单超 10 万美元</h1>
-<p class="deck">Google 威胁情报组与 Mandiant 11 月 2 日报告披露 2026 年多起 LLMjacking 入侵：攻击者劫持企业大模型访问权限，个案单日欺诈账单超 10 万美元、累计达 100 万美元；主入口为泄露的云身份令牌，UNC6993 与 LiteLLM 漏洞 CVE-2026-40217 在列，被盗额度经 Jet Night 等 LLM Mixers 转卖。</p>
-<div class="meta">ISSUE 177 · 2026-11-02 · SOURCE / Google Cloud 官方博客报告 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">GOOGLE × MANDIANT × LLMJACKING</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Stolen large-model quota is being resold: Google discloses LLMjacking, with single-day bills above $100,000</h1>
+<p class="deck">A November 2 report from Google Threat Intelligence Group and Mandiant disclosed multiple LLMjacking intrusions in 2026: attackers hijacked companies&#x27; large-model access, with fraudulent bills above $100,000 in a single day in individual cases and $1 million cumulatively; the main entry point was leaked cloud identity tokens, with UNC6993 and the LiteLLM vulnerability CVE-2026-40217 among the cases, and stolen quota resold through LLM Mixers such as Jet Night.</p>
+<div class="meta">ISSUE 177 · 2026-11-02 · SOURCE / <b>Google Cloud Official Blog Report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">GOOGLE × MANDIANT × LLMJACKING</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE REPORT：Google 威胁情报组与 Mandiant 11 月 2 日发布 LLMjacking 报告，披露 2026 年多起企业大模型访问劫持个案。</li><li><b>02</b>THE CONFIRMATION：The Hacker News 11 月 3 日报道核对核心数字、团伙代号、漏洞编号与 Jet Night 转卖细节与官方报告一致。</li><li><b>03</b>THE WATCHPOINT：企业是否把大模型用量突增纳入实时安全告警，以及云厂商与模型厂商是否对异常开通与超量调用推出默认防护。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Google 威胁情报组与 Mandiant 11 月 2 日发布报告《The Rise of LLMJacking》，披露 2026 年处置的多起入侵：攻击者劫持企业的大模型访问权限，把算力账单留给受害方。个案中单日欺诈账单超过 10 万美元，个别机构在切断访问前累计账单达到 100 万美元。受影响机构分布在北美、南美与亚太，覆盖金融、零售、技术与交通行业。</p><p>主入口不是聊天机器人前端，而是后端模型资源。最常见的初始访问是泄露或被盗的云身份令牌：IAM 凭证、服务账号密钥、GitHub 个人访问令牌与有效会话令牌。代号 UNC6993 的团伙通过配置错误的服务账号密钥进入云实例，拿到大模型 API 访问权，还搭建仿冒门户诱使用户粘贴含有效访问令牌的 JSON 负载，绕过密码与多因素认证。另一起入侵利用 LiteLLM 网关漏洞 CVE-2026-40217，把普通虚拟密钥提权为 PROXY_ADMIN 主管理员凭证。</p><p>得手之后是规模化变现。攻击者批量生成新 API 密钥、开通新服务，用创建又删除短期服务账号的 burn and rotate 手段绕过速率限制，同时盯着云厂商账单界面监控收益。分工已经出现：一方负责入侵，另一方运营 LLM Mixers，把盗来的额度聚合、计量、转卖给地下订阅者。</p><p>转卖端的代表是 Jet Night：约 60 美元一个月的无限套餐，号称可用前沿模型，这个价位按正常市价应在每月 100 至 250 美元。GTIG 记录到一名攻击者用被盗第三方密钥在不到 8 小时内发起超过 50 万次大模型 API 调用，支撑 Jet Night 的服务，把近 100 万美元的 token 成本转嫁给受害机构。</p><p>与挖矿劫持的缓慢吸血不同，LLMjacking 的账单 spike 在几小时内就能冲顶。Mandiant 的防御建议把未经授权的大模型服务开通当作关键安全事件处理：多起入侵中，受害方在被入侵时根本没开通相关大模型服务，是攻击者拿到密钥后自己开通的。</p>
-<h2><span class="en">WHY IT MATTERS</span>账单是最诚实的入侵检测器</h2><p>传统入侵检测盯的是恶意代码与异常登录，LLMjacking 盯的是钱。攻击者用的凭证、工具、网关全是合法形态，唯一不合法的是账单归属。单日 10 万美元的 spike 本身就是告警信号，但前提是企业把大模型账单当作安全遥测，而不是月底才看的财务报表。</p><p>这对所有上云用大模型的企业都是直接提醒：API 密钥与服务账号密钥的泄露面，现在直接等于算力预算的失窃面。密钥轮换、最小权限、异常用量告警这三件旧事，在大模型按 token 计费的时代有了新的价格标签。</p><h2><span class="en">WHY IT MATTERS</span>地下转卖市场正在成型</h2><p>Jet Night 这类服务的出现，意味着被盗额度有了稳定销路。攻击者不再需要自己消费算力，入侵一次就能持续卖给订阅者，收益模式从一次性盗窃变成订阅收入。这正是 GTIG 判断 LLMjacking 会优先于传统资源盗窃的原因：变现更快，利润率更高。</p><p>更麻烦的是灰色地带。同一时期 Symantec 与 Carbon Black 披露的另一类中继服务，把正版 Codex 与 Claude Code 客户端改成走第三方服务器，卖给无法直接使用西方 AI 编程助手的市场。付费用户未必知道自己在用赃物额度，合规风险从攻击者扩散到了终端用户。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>大模型账单正在变成新的攻击面</h2><p>Tokenta Signal 判断：这条新闻的正确读法是把 API 密钥当成现金看。挖矿劫持偷的是闲置算力，LLMjacking 偷的是按 token 计价的真金白银，几小时就能烧掉一家公司一年的 AI 预算。防御清单不长：密钥最小权限、用量突增告警、把未经授权的服务开通视为最高级别事件。账单 spike 出现时再查日志，已经晚了 100 万美元。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Google Cloud 官方博客的 Mandiant 与 Google 威胁情报组报告与 The Hacker News 11 月 3 日报道为准，两篇均已直接打开核验，核心数字与攻击团伙代号一致。单日超 10 万美元与累计 100 万美元为 Mandiant 在 2026 年处置的个案观察值，不是全行业统计。Jet Night 依赖被盗密钥运营为 GTIG 的评估判断（believes），不是已证实的定罪结论。受害机构名称未公开。本文只做摘要与链接，不转载报告全文与图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>Google Cloud 官方博客报告全文与 The Hacker News 报道页均已直接打开核验，单日超 10 万美元、累计 100 万美元、UNC6993、CVE-2026-40217、Jet Night 约 60 美元套餐与 50 万次调用等核心事实两边一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models" target="_blank" rel="noopener">The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources ↗</a><br>cloud.google.com · 2026-11-02 · Google Cloud 官方博客报告</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Google Cloud 官方博客报告<br><a href="https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models" target="_blank" rel="noopener">https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models</a></li><li>The Hacker News 报道<br><a href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html" target="_blank" rel="noopener">https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE REPORT — Google Threat Intelligence Group and Mandiant published their LLMjacking report on November 2, disclosing multiple 2026 cases of hijacked corporate large-model access.</li><li><b>02</b>THE CONFIRMATION — The Hacker News&#x27; November 3 report checked the core figures, group designations, vulnerability number and Jet Night resale details against the official report and found them consistent.</li><li><b>03</b>THE WATCHPOINT — Whether companies fold large-model usage spikes into real-time security alerting, and whether cloud and model providers ship default protections against anomalous enablement and excessive calls.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Google Threat Intelligence Group and Mandiant published the report &#x27;The Rise of LLMJacking&#x27; on November 2, disclosing multiple intrusions handled in 2026 in which attackers hijacked companies&#x27; access to large models and left the compute bill with the victim. In individual cases, fraudulent bills exceeded $100,000 in a single day, and some organisations ran up $1 million in cumulative bills before cutting off access. Affected organisations were spread across North America, South America and Asia-Pacific, spanning finance, retail, technology and transport.</p><p>The main entry point was not the chatbot front end but back-end model resources. The most common initial access was leaked or stolen cloud identity tokens: IAM credentials, service account keys, GitHub personal access tokens and valid session tokens. A group designated UNC6993 entered cloud instances via misconfigured service account keys, obtained large-model API access, and built a fake portal that lured users into pasting JSON payloads containing valid access tokens, bypassing passwords and multifactor authentication. Another intrusion exploited the LiteLLM gateway vulnerability CVE-2026-40217 to elevate an ordinary virtual key into a PROXY_ADMIN master administrator credential.</p><p>After access came monetisation at scale. The attackers generated new API keys in bulk and enabled new services, using a &#x27;burn and rotate&#x27; method of creating and deleting short-lived service accounts to evade rate limits, while watching the cloud provider&#x27;s billing console to monitor proceeds. A division of labour has emerged: one side carries out the intrusion, the other operates LLM Mixers that aggregate, meter and resell the stolen quota to underground subscribers.</p><p>The emblematic reseller is Jet Night: an unlimited plan at about $60 a month claiming access to frontier models, a tier that at normal market prices should cost $100 to $250 a month. GTIG recorded one attacker using stolen third-party keys to make more than 500,000 large-model API calls in under eight hours in support of Jet Night&#x27;s service, shifting nearly $1 million in token costs onto victim organisations.</p><p>Unlike cryptojacking, which siphons slowly, an LLMjacking bill can spike to its peak within hours. Mandiant&#x27;s defensive advice is to treat unauthorised enablement of large-model services as a critical security event: in several intrusions, the victim had never enabled the relevant model services at all — the attackers switched them on themselves after obtaining the keys.</p>
+<h2><span class="en">WHY IT MATTERS</span>The bill is the most honest intrusion detector</h2><p>Traditional intrusion detection watches for malicious code and anomalous logins; LLMjacking is about money. The credentials, tools and gateways the attackers use are all legitimate in form — the only illegitimate part is who the bill belongs to. A $100,000 single-day spike is itself an alarm signal, but only if the company treats its large-model bill as security telemetry rather than a financial statement read at month&#x27;s end.</p><p>This is a direct reminder for every company using large models in the cloud: the exposure of API keys and service account keys is now directly equal to the exposure of the compute budget to theft. Key rotation, least privilege and anomalous-usage alerting — three old chores — carry a new price tag in an era when models are billed by the token.</p><h2><span class="en">WHY IT MATTERS</span>An underground resale market is taking shape</h2><p>The appearance of services such as Jet Night means stolen quota now has a stable outlet. Attackers no longer need to consume the compute themselves; one intrusion can be sold continuously to subscribers, turning the business model from one-off theft into subscription revenue. That is precisely why GTIG judges LLMjacking will take precedence over traditional resource theft: faster monetisation, higher margins.</p><p>The grey zone is trickier. In the same period, Symantec and Carbon Black disclosed another class of relay service that reroutes genuine Codex and Claude Code clients through third-party servers and sells them to markets that cannot use Western AI coding assistants directly. Paying users may not know they are using stolen quota, and the compliance risk spreads from the attackers to end users.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The large-model bill is becoming a new attack surface</h2><p>Tokenta Signal&#x27;s judgment: the right way to read this story is to treat API keys as cash. Cryptojacking steals idle compute; LLMjacking steals money priced by the token, and can burn a company&#x27;s annual AI budget in hours. The defence checklist is short: least-privilege keys, alerts on usage spikes, and treating unauthorised service enablement as a highest-severity event. Checking the logs only after the bill spikes is already $1 million too late.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report are based on the Mandiant and Google Threat Intelligence Group report on the Google Cloud official blog and The Hacker News&#x27; November 3 report; both were opened and verified directly, and the core figures and threat-actor designations agree. The single-day figure of more than $100,000 and the cumulative $1 million are case observations from incidents Mandiant handled in 2026, not industry-wide statistics. The assessment that Jet Night operates on stolen keys is GTIG&#x27;s judgment (it &#x27;believes&#x27; so), not a proven conviction. The names of victim organisations have not been disclosed. This report provides a summary and links only and does not reproduce the full report or its images. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The full report on the Google Cloud official blog and The Hacker News report page were both opened and verified directly; core facts including the single-day figure above $100,000, the cumulative $1 million, UNC6993, CVE-2026-40217, Jet Night&#x27;s roughly $60 plan and the 500,000 calls agree on both sides.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models" target="_blank" rel="noopener">The Rise of LLMJacking: How Threat Actors Monetize Compromised Cloud and Model Resources ↗</a><br>cloud.google.com · 2026-11-02 · Google Cloud Official Blog Report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Google Cloud Official Blog Report<br><a href="https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models" target="_blank" rel="noopener">https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models</a></li><li>The Hacker News Report<br><a href="https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html" target="_blank" rel="noopener">https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

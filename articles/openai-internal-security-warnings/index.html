@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>路透：OpenAI 员工多年来警告内部安全漏洞，8 月四分之一生产工程师被调去补安全 — Tokenta Signal</title><meta name="description" content="Reuters 2026-11-03 报道称，OpenAI 员工早在 ChatGPT 发布之前就已向高层与董事会警告内部安全问题，据五名知情人士说法，管理层更看重与谷歌、Anthropic 竞争的速度。报道点名的两处缺口是单仓的宽泛访问与研究沙箱缺乏定期安全审查。2026 年 8 月，负责产品开发的高管 Thibault Sottiaux 把约四分之一的生产工程师调去改善安全基础设施。OpenAI 回应称公司是最受针对的机构之一，最敏感工作在独立仓库并受严格访问控制，单仓不含模型权重，现已对内部工具做定期审查，并在 Reuters 征求意见后宣布筹划下一轮内部安全冲刺。">
+<title>Reuters: OpenAI Staff Warned of Internal Security Lapses for Years; a Quarter of Production Engineers Shifted to Security in August — Tokenta Signal</title><meta name="description" content="Reuters reported on November 3, 2026 that OpenAI employees had warned senior leadership and the board about internal security problems before ChatGPT&#x27;s release, and that, according to five people familiar with the matter, management placed greater weight on competitive speed against Google and Anthropic. The two gaps named in the report are broad access to the monorepo and the lack of regular security reviews of research sandboxes. In August 2026, product development executive Thibault Sottiaux moved roughly a quarter of production engineers to improving security infrastructure. OpenAI responded that it is among the most targeted organizations in the world, that its most sensitive work sits in separate repositories under strict access controls, that the monorepo contains no model weights, that internal tools are now reviewed regularly, and that after Reuters sought comment it announced plans for its next internal security sprint.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Reuters reported on November 3, 2026 that OpenAI employees had warned senior leadership and the board about internal security problems before ChatGPT&#x27;s release, and that, according to five people familiar with the matter, management placed greater weight on competitive speed against Google and Anthropic. The two gaps named in the report are broad access to the monorepo and the lack of regular security reviews of research sandboxes. In August 2026, product development executive Thibault Sottiaux moved roughly a quarter of production engineers to improving security infrastructure. OpenAI responded that it is among the most targeted organizations in the world, that its most sensitive work sits in separate repositories under strict access controls, that the monorepo contains no model weights, that internal tools are now reviewed regularly, and that after Reuters sought comment it announced plans for its next internal security sprint.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>路透：OpenAI 员工多年来警告内部安全漏洞，8 月四分之一生产工程师被调去补安全</h1>
-<p class="deck">Reuters 2026-11-03 报道称，OpenAI 员工早在 ChatGPT 发布前就已向高层与董事会警告内部安全问题，据五名知情人士说法，管理层更重竞争速度；单仓宽泛访问与沙箱缺乏定期审查是两处具体缺口；2026 年 8 月，Thibault Sottiaux 把约四分之一生产工程师调去改善安全基础设施；OpenAI 回应称最敏感工作在独立仓库，单仓不含模型权重，现已做定期审查，并在 Reuters 征求意见后宣布筹划下一轮内部安全冲刺。</p>
-<div class="meta">ISSUE 183 · 2026-11-03 · SOURCE / Reuters 调查报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">OPENAI × INTERNAL SECURITY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>Reuters: OpenAI Staff Warned of Internal Security Lapses for Years; a Quarter of Production Engineers Shifted to Security in August</h1>
+<p class="deck">Reuters reported on November 3, 2026 that OpenAI employees had warned senior leadership and the board about internal security problems before ChatGPT&#x27;s release, and that, according to five people familiar with the matter, management favored competitive speed. The two named gaps were broad monorepo access and the lack of regular security reviews of research sandboxes. In August 2026, Thibault Sottiaux moved roughly a quarter of production engineers to security infrastructure. OpenAI responded that its most sensitive work sits in separate repositories, the monorepo holds no model weights, regular reviews are now conducted, and — after Reuters sought comment — the company announced it is planning its next internal security sprint.</p>
+<div class="meta">ISSUE 183 · 2026-11-03 · SOURCE / <b>Reuters investigation</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × INTERNAL SECURITY</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE REPORT：Reuters 2026-11-03 发表调查报道，五名知情人士称 OpenAI 员工多年来警告内部安全漏洞。</li><li><b>02</b>THE CONFIRMATION：Reuters 全文与 KWSN 同日转载全文双双打开核对，核心事实、引述与发表时间一致，OpenAI 具名回应已纳入正文。</li><li><b>03</b>THE WATCHPOINT：OpenAI 下一轮内部安全冲刺的具体措施，独立仓库访问控制的实际收紧程度，以及沙箱定期审查是否形成制度。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Reuters 2026-11-03 报道称，早在 ChatGPT 于 2022 年底发布之前，OpenAI 内部员工就已向高层与董事会提出安全担忧。据五名知情人士说法，部分员工事后认为，管理层更看重与谷歌、Anthropic 竞争的速度，而非安全投入。</p><p>知情人士称，OpenAI 的管控一度宽松到外部人员，包括外国政府，有可能相对容易地获取实验室的技术信息。一个具体机制是单仓：能访问代码的人就能看到许多项目背后的技术细节，包括与其本职无关的敏感项目。单仓体量大、结构复杂，过去可能挡住过一些攻击者，但知情人士称，如今 AI 智能体可以快速翻查这类材料。</p><p>另一处缺口是内部工具审查。据三名知情人士说法，OpenAI 过去没有对研究人员测试新模型的沙箱等内部工具做定期安全审查，员工常为工作修改这些工具，改动未必经过安全测试，存在被外部攻击的可能。</p><p>转向发生在 2026 年 8 月。据知情人士说法，负责产品开发的高管 Thibault Sottiaux 近期接手内部系统安全工作，当月把约四分之一的生产工程师调去改善安全基础设施。OpenAI 回应称，在首席信息安全官 Dane Stuckey 于 2024 年 10 月上任后，公司已有较强的安全体系，现在会对内部工具做定期安全审查。</p><p>触发这次报道的直接背景是 10 月的窃听器事件。司法部 10 月 13 日称，联邦特工逮捕了时任 OpenAI 工程师 Abdulrahman Alfozan，指控其在高管会议室安装隐藏录音设备。Reuters 称，在其就本篇报道向 OpenAI 征求意见后，OpenAI 于 11 月 2 日在博客中表示，正在筹划下一轮内部安全冲刺。</p>
-<h2><span class="en">WHY IT MATTERS</span>速度与安全的旧账，在 IPO 前夜被翻出来</h2><p>这篇报道的新闻点不在某一次入侵，而在时间线。警告不是窃听器事件之后才出现，而是从 ChatGPT 发布之前就存在，并且一路指向董事会层面。也就是说，OpenAI 面对的不是一次突发事故，而是一套长期存在的组织取舍。</p><p>这个取舍在今天格外敏感。OpenAI 与 Anthropic 都在筹划大规模公开上市，技术资产的保密程度直接关系到估值叙事。Reuters 把速度与安全的张力写进 IPO 语境，意思很明确：投资者接下来会问，安全投入到底是成本项，还是估值的前提。</p><h2><span class="en">WHY IT MATTERS</span>单仓与沙箱，才是真正的安全边界</h2><p>单仓问题值得单独拎出来。过去的防御逻辑是材料太多、太乱，攻击者翻不动。现在智能体可以成批阅读、检索与归纳，体量本身不再是屏障。OpenAI 的回应划了一条线：最敏感的工作在独立仓库，单仓不含模型权重。这条线是否成立，取决于独立仓库的边界划分与访问审计，而不是单仓本身有多大。</p><p>沙箱问题同理。研究人员为赶进度修改测试工具，是实验室常态，但改动不经过安全测试，就等于把实验环境变成了入口。OpenAI 称现在已做定期审查，这个说法需要后续可验证的动作支撑，例如审查频率、覆盖范围与修复记录，而不是一次博客表态。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>信号在组织取舍，不在一次入侵</h2><p>Tokenta Signal 判断：这篇报道的价值在于把 OpenAI 的安全问题从单次事件拉回到组织层面。窃听器事件只是引子，真正的信号是警告存在了几年、单仓与沙箱两处结构缺口被点名，以及 8 月那次四分之一生产工程师的人力转向。后续的验证点也很具体：独立仓库的边界是否真实收紧，沙箱审查是否形成制度，下一轮安全冲刺拿出什么可核查的结果。没有这些，博客表态只能算回应，不能算结案。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Reuters 2026-11-03 调查报道为准，全文已直接打开核验，KWSN 同日转载的同一篇 Reuters 稿件已打开比对，核心事实与引述一致。需要说明的是，KWSN 为 Reuters 通稿转载，不是独立采写的第二篇报道，本文的独立性来自 Reuters 文内多方信源与 OpenAI 的具名回应：五名知情人士的说法、OpenAI 发言人 Elana Widmann 的回应、前研究员 Will DePue 的公开帖文，以及司法部 10 月 13 日的公开逮捕信息。内部警告、单仓与沙箱审查缺失等说法均为知情人士向 Reuters 的表述，未经司法或独立审计裁定，不能读成已证实的数据外泄。OpenAI 称最敏感工作在独立仓库并受严格访问控制，单仓不含模型权重，本文把双方说法并列。本文只做摘要与链接，不转载报道全文与图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>Reuters 2026-11-03 调查报道全文已直接打开核验，KWSN 同日转载的同一篇 Reuters 稿件已打开比对，核心事实、引述与发表时间一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/" target="_blank" rel="noopener">OpenAI employees warned about operational security lapses for years, sources say ↗</a><br>reuters.com · 2026-11-03 · Reuters 调查报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Reuters 调查报道<br><a href="https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/" target="_blank" rel="noopener">https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/</a></li><li>KWSN 转载同一篇 Reuters 稿件<br><a href="https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/" target="_blank" rel="noopener">https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE REPORT — Reuters published its investigation on November 3, 2026; five people familiar with the matter said OpenAI employees had warned about internal security lapses for years.</li><li><b>02</b>THE CONFIRMATION — The full Reuters text and KWSN&#x27;s same-day republication were both opened and checked; core facts, quotes and publication time match, and OpenAI&#x27;s on-record response is included in the article.</li><li><b>03</b>THE WATCHPOINT — The concrete measures in OpenAI&#x27;s next internal security sprint, how far access controls on separate repositories actually tighten, and whether regular sandbox reviews become institutionalized.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Reuters reported on November 3, 2026 that OpenAI employees had raised security concerns to senior leadership and the board well before ChatGPT&#x27;s release in late 2022. According to five people familiar with the matter, some employees later concluded that management prized speed in competing with Google and Anthropic over security investment.</p><p>Sources said OpenAI&#x27;s controls were at one point loose enough that outsiders, including foreign governments, could have gained relatively easy access to the lab&#x27;s technical information. One specific mechanism was the monorepo: anyone with code access could see the technical details behind many projects, including sensitive projects unrelated to their own work. The monorepo&#x27;s size and complexity may once have deterred some attackers, but sources said AI agents can now sift through such material quickly.</p><p>Another gap was the review of internal tools. According to three people familiar with the matter, OpenAI in the past did not conduct regular security reviews of internal tools such as the sandboxes researchers use to test new models. Employees routinely modified these tools for their work, and the changes did not necessarily undergo security testing, creating a potential route for external attack.</p><p>The shift came in August 2026. According to sources, Thibault Sottiaux, the executive responsible for product development, recently took over internal systems security and that month moved roughly a quarter of production engineers to improving security infrastructure. OpenAI responded that after Chief Information Security Officer Dane Stuckey took the role in October 2024, the company built a strong security system and now reviews internal tools regularly.</p><p>The immediate backdrop to the report is October&#x27;s bugging-device incident. The Department of Justice said on October 13 that federal agents arrested Abdulrahman Alfozan, then an OpenAI engineer, on charges of planting a hidden recording device in an executive meeting room. Reuters reported that after it sought comment from OpenAI for this story, the company said in a November 2 blog post that it is planning its next internal security sprint.</p>
+<h2><span class="en">WHY IT MATTERS</span>An old speed-versus-security ledger, reopened on the eve of an IPO</h2><p>The news value of this report is not any single intrusion but the timeline. The warnings did not surface after the bugging incident; they existed before ChatGPT&#x27;s release and ran all the way to board level. OpenAI, in other words, faces not a one-off accident but a long-standing organizational trade-off.</p><p>That trade-off is especially sensitive today. OpenAI and Anthropic are both preparing large public listings, and how well technical assets are kept confidential feeds directly into the valuation narrative. By placing the speed-versus-security tension in an IPO context, Reuters is making a clear point: investors will now ask whether security spending is a cost line or a precondition of the valuation.</p><h2><span class="en">WHY IT MATTERS</span>The monorepo and the sandbox are the real security boundary</h2><p>The monorepo issue deserves to be singled out. The old defensive logic was that material was so voluminous and messy that attackers could not work through it. Agents can now read, search and summarize in bulk, so volume itself is no longer a barrier. OpenAI&#x27;s response draws a line: the most sensitive work sits in separate repositories, and the monorepo contains no model weights. Whether that line holds depends on how the separate repositories&#x27; boundaries are drawn and how access is audited, not on how large the monorepo is.</p><p>The sandbox issue is parallel. Researchers modifying test tools to move faster is normal lab practice, but changes that skip security testing turn the experimental environment into an entry point. OpenAI says regular reviews are now in place; that claim needs verifiable follow-through — review frequency, coverage and remediation records — rather than a single blog statement.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The signal is an organizational trade-off, not a single intrusion</h2><p>Tokenta Signal&#x27;s judgment: the value of this report is that it pulls OpenAI&#x27;s security problem back from a single incident to the organizational level. The bugging device is only the trigger. The real signals are warnings that existed for years, two named structural gaps in the monorepo and the sandbox, and August&#x27;s redeployment of a quarter of production engineers. The verification points ahead are equally concrete: whether access controls on the separate repositories genuinely tighten, whether sandbox reviews become institutionalized, and what checkable results the next security sprint produces. Without those, a blog statement counts as a response, not a resolution.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on Reuters&#x27; November 3, 2026 investigation, opened and verified in full. The same Reuters article as republished by KWSN the same day was also opened and compared; core facts and quotes match. Note that the KWSN piece is a syndication of the Reuters wire, not a second independently reported story. The independence of this report comes from Reuters&#x27; own sourcing and OpenAI&#x27;s on-record response: accounts from five people familiar with the matter, a response from OpenAI spokesperson Elana Widmann, a public post by former researcher Will DePue, and the Department of Justice&#x27;s public October 13 arrest information. Claims about internal warnings and the absence of reviews of the monorepo and sandboxes are statements made to Reuters by people familiar with the matter; they have not been adjudicated judicially or by an independent audit, and should not be read as a proven data breach. OpenAI says its most sensitive work sits in separate repositories under strict access controls and that the monorepo contains no model weights; this article presents both sides. This article is a summary with links only and does not reproduce the report&#x27;s full text or images. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Reuters&#x27; November 3, 2026 investigation was opened and verified in full. The same Reuters article republished by KWSN the same day was opened and compared; core facts, quotes and publication time match.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/" target="_blank" rel="noopener">OpenAI employees warned about operational security lapses for years, sources say ↗</a><br>reuters.com · 2026-11-03 · Reuters investigation</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Reuters investigation<br><a href="https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/" target="_blank" rel="noopener">https://www.reuters.com/business/openai-employees-warned-about-operational-security-lapses-years-sources-say-2026-11-03/</a></li><li>KWSN republication of the same Reuters article<br><a href="https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/" target="_blank" rel="noopener">https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

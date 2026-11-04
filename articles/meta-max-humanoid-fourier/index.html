@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Meta的人形机器人，三个月就攒出来了 — Tokenta Signal</title><meta name="description" content="据The Information经路透社转引，Meta与上海傅利叶约三个月造出人形机器人原型Max，约1.5米、48公斤，已开始做第二代，Meta称只作内部研究，不卖。">
+<title>Meta&#x27;s Humanoid Robot Was Assembled in Three Months — Tokenta Signal</title><meta name="description" content="According to The Information, relayed by Reuters, Meta and Shanghai-based Fourier built a humanoid robot prototype codenamed Max in about three months. At roughly 1.5 meters tall and 48 kilograms, a second generation is already under way, and Meta says it is for internal research only, not for sale.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="According to The Information, relayed by Reuters, Meta and Shanghai-based Fourier built a humanoid robot prototype codenamed Max in about three months. At roughly 1.5 meters tall and 48 kilograms, a second generation is already under way, and Meta says it is for internal research only, not for sale.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
-<h1>Meta的人形机器人，三个月就攒出来了</h1>
-<p class="deck">据 The Information 经路透社转引，Meta 与上海傅利叶约三个月造出人形机器人原型 Max，约 1.5 米、48 公斤，已开始做第二代，Meta 称只作内部研究，不卖。</p>
-<div class="meta">ISSUE 138 · 2026-10-31 · SOURCE / ShiftDelete 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">META × HUMANOID</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">约 3 个月</div><div class="lab">BUILD TIME</div><div class="desc">Meta 与傅利叶造出首台原型所用的时间。</div></div><div class="metric"><div class="num">1.5 米 · 48 公斤</div><div class="lab">MAX SIZE</div><div class="desc">报道中 Max 的身高与体重。</div></div><div class="metric"><div class="num">2026年9月</div><div class="lab">MAX 2 START</div><div class="desc">第二代 Max 2 开始研制的月份。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE BUILD：Meta 机器人负责人在傅利叶上海工厂参与研制。</li><li><b>02</b>THE SHOWING：8 月下旬 Max 在内部活动上向员工展示。</li><li><b>03</b>THE NEXT：9 月起第二代 Max 2 开始研制。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>据 The Information 10 月 31 日报道、经路透社转引，Meta 与中国机器人公司傅利叶约三个月造出一台人形机器人原型，内部代号 Max，约 1.5 米高、48 公斤，搭载英伟达 Jetson Thor 芯片，8 月下旬已在内部活动上向部分员工展示。</p><p>分工上，傅利叶提供硬件经验，Meta 机器人产品负责人 Li-Chen Miller 在傅利叶上海工厂待了近两个月参与研制。第二代 Max 2 自 9 月起研制，据报改进手部、增加楼梯导航传感器与内置投影仪。Meta 的说法是，合作属于内部研究，没有出售计划。</p><p>背景是 Meta 正在给个人智能体 Muse 找一个身体。公司技术官 Andrew Bosworth 在内部把人形机器人描述为 Muse 获得真实身体。Meta 2026 年 5 月还收购了人形机器人模型公司 Assured Robot Intelligence，方向一致。</p>
-<h2><span class="en">BORROWED SPEED</span>三个月，是借来的速度</h2><p>三个月造出原型，速度来自借用成熟硬件。傅利叶从康复外骨骼起家，早就做全尺寸人形机器人，Meta 不需要从零搭本体。合作的本质，是用别人的硬件成熟度换自己的时间。</p><p>这也说明 Meta 的机器人战略变了。不再坚持全自研，先有一个能跑的身体，再往里面装自己的智能体与模型。</p><h2><span class="en">NOT FOR SALE</span>不卖，是现阶段最诚实的表态</h2><p>Meta 反复强调没有出售计划，这句话值得认真听。人形机器人离家庭可靠使用还差着制造、成本、安全与可靠性四道关，原型能走、能抓小物件，不等于能进客厅。</p><p>不卖的原型，价值在内部验证。验证 Muse 的身体交互、验证手部与导航的工程取舍，验证结果再决定下一代往哪里走。</p><h2><span class="en">SINGLE SOURCE</span>单一信源，要按单一信源读</h2><p>这篇报道只有一个信源，路透社也明言未能立即核实。身高、体重、芯片、时间线，全部是报道细节，不是产品参数。读的时候要把报道与事实分开，前者是消息，后者要等官方确认。</p><p>对读者来说，最稳妥的读法是，Meta 在认真做人形机器人，进度比外界以为的快，但产品形态与时间表仍是未知数。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>先有身体，再谈产品</h2><p>Tokenta Signal 判断：Meta 的人形机器人新闻，重点不在 Max 本身，在策略转向。借成熟硬件换时间，给智能体先找一个身体，再慢慢解决进客厅的四道关。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：全部细节来自 The Information 一家报道，引用匿名知情人士，路透社转引时称未能立即核实。Meta 与傅利叶均未公布规格、图片或演示，性能与上市时间均未证实。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认据 The Information 10 月 31 日报道，Meta 与傅利叶约三个月造出人形机器人原型 Max，约 1.5 米、48 公斤，第二代已在研制，Meta 称只作内部研究、不出售。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://shiftdelete.net/en/meta-humanoid-robot" target="_blank" rel="noopener">Meta Humanoid Robot Prototype Built With China&#x27;s Fourier: Report ↗</a><br>shiftdelete.net · 2026-10-31 · ShiftDelete 报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>ShiftDelete：Meta Humanoid Robot Prototype Built With China&#x27;s Fourier: Report<br><a href="https://shiftdelete.net/en/meta-humanoid-robot" target="_blank" rel="noopener">https://shiftdelete.net/en/meta-humanoid-robot</a></li><li>Digital Today：Meta develops humanoid robot prototype with Chinese firm Fourier<br><a href="https://www.digitaltoday.co.kr/en/view/122209/meta-develops-humanoid-robot-prototype-with-chinese-firm-fourier-launches-second-generation-project" target="_blank" rel="noopener">https://www.digitaltoday.co.kr/en/view/122209/meta-develops-humanoid-robot-prototype-with-chinese-firm-fourier-launches-second-generation-project</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">欧盟法院顾问：聊天机器人复用新闻可能侵权，训练除外</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">特斯拉无人驾驶出租车开进沃斯堡，第七城</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI · SIGNAL REPORT</span>
+<h1>Meta&#x27;s Humanoid Robot Was Assembled in Three Months</h1>
+<p class="deck">According to The Information, relayed by Reuters, Meta and Shanghai-based Fourier built a humanoid robot prototype codenamed Max in about three months. At roughly 1.5 meters tall and 48 kilograms, a second generation is already under way, and Meta says it is for internal research only, not for sale.</p>
+<div class="meta">ISSUE 138 · 2026-10-31 · SOURCE / <b>ShiftDelete report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">META × HUMANOID</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">~3 months</div><div class="lab">BUILD TIME</div><div class="desc">The time Meta and Fourier took to build the first prototype.</div></div><div class="metric"><div class="num">1.5 m · 48 kg</div><div class="lab">MAX SIZE</div><div class="desc">Max&#x27;s reported height and weight.</div></div><div class="metric"><div class="num">Sep 2026</div><div class="lab">MAX 2 START</div><div class="desc">The month development of the second-generation Max 2 began.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE BUILD — Meta&#x27;s robotics lead took part in development at Fourier&#x27;s Shanghai plant.</li><li><b>02</b>THE SHOWING — Max was shown to employees at an internal event in late August.</li><li><b>03</b>THE NEXT — Development of the second-generation Max 2 began in September.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>According to The Information&#x27;s October 31 report, relayed by Reuters, Meta and Chinese robotics company Fourier built a humanoid robot prototype in about three months. Internally codenamed Max, it stands about 1.5 meters tall, weighs 48 kilograms, runs on Nvidia&#x27;s Jetson Thor chip, and was shown to some employees at an internal event in late August.</p><p>On division of labor, Fourier provides hardware experience; Meta&#x27;s head of robotics products, Li-Chen Miller, spent nearly two months at Fourier&#x27;s Shanghai plant taking part in the development. A second-generation Max 2 has been in development since September, reportedly with improved hands, added stair-navigation sensors and a built-in projector. Meta&#x27;s line is that the collaboration is internal research, with no plan to sell it.</p><p>The backdrop is Meta looking for a body for its personal agent, Muse. CTO Andrew Bosworth has described humanoid robots internally as Muse acquiring a real body. Meta also acquired humanoid robot model company Assured Robot Intelligence in May 2026, pointing in the same direction.</p>
+<h2><span class="en">BORROWED SPEED</span>Three Months Is Borrowed Speed</h2><p>Building a prototype in three months is fast because it borrows mature hardware. Fourier started with rehabilitation exoskeletons and has long made full-size humanoid robots, so Meta did not need to build the body from zero. The essence of the partnership is trading someone else&#x27;s hardware maturity for its own time.</p><p>It also shows Meta&#x27;s robotics strategy has changed. No longer insisting on building everything itself, it first secures a body that runs, then installs its own agents and models inside.</p><h2><span class="en">NOT FOR SALE</span>&#x27;Not for Sale&#x27; Is the Most Honest Line at This Stage</h2><p>Meta repeatedly stresses there is no plan to sell it, and that is worth hearing carefully. Humanoid robots remain four gates away from reliable home use: manufacturing, cost, safety and reliability. A prototype that can walk and grasp small objects is not the same as one that can enter a living room.</p><p>An unsold prototype&#x27;s value is internal validation: validating Muse&#x27;s physical interaction, validating the engineering trade-offs in hands and navigation, and letting the results decide where the next generation goes.</p><h2><span class="en">SINGLE SOURCE</span>A Single Source Should Be Read as a Single Source</h2><p>This report has a single source, and Reuters itself stated it could not immediately verify it. Height, weight, chip and timeline are all reported details, not product specifications. Reading it requires separating reporting from fact: the former is news, the latter awaits official confirmation.</p><p>For readers, the safest reading is that Meta is seriously building humanoid robots, faster than outsiders assumed, while the product form and timetable remain unknowns.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM SOLO TO PARTNER</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From fully in-house to partner-built machines</div><div class="desc">Fourier&#x27;s hardware experience buys Meta time.</div></div><div class="metric"><div class="lab">FROM PRODUCT TO PROTOTYPE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From selling products to internal validation</div><div class="desc">The prototype first validates interaction and engineering trade-offs.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A Body First, a Product Later</h2><p>Tokenta Signal&#x27;s judgment: the point of Meta&#x27;s humanoid news is not Max itself, but the strategic turn. Borrowing mature hardware to buy time gives the agent a body first, while the four gates to the living room get solved slowly.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The limits of this report: all details come from a single report by The Information, citing anonymous people familiar with the matter, which Reuters said it could not immediately verify when relaying it. Neither Meta nor Fourier has published specifications, images or demonstrations, and neither performance nor launch timing has been confirmed.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original confirms, per The Information&#x27;s October 31 report, that Meta and Fourier built the humanoid robot prototype Max in about three months, at roughly 1.5 meters and 48 kilograms, that a second generation is in development, and that Meta says it is for internal research only, not for sale.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://shiftdelete.net/en/meta-humanoid-robot" target="_blank" rel="noopener">Meta Humanoid Robot Prototype Built With China&#x27;s Fourier: Report ↗</a><br>shiftdelete.net · 2026-10-31 · ShiftDelete report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>ShiftDelete: Meta Humanoid Robot Prototype Built With China&#x27;s Fourier: Report<br><a href="https://shiftdelete.net/en/meta-humanoid-robot" target="_blank" rel="noopener">https://shiftdelete.net/en/meta-humanoid-robot</a></li><li>Digital Today: Meta develops humanoid robot prototype with Chinese firm Fourier<br><a href="https://www.digitaltoday.co.kr/en/view/122209/meta-develops-humanoid-robot-prototype-with-chinese-firm-fourier-launches-second-generation-project" target="_blank" rel="noopener">https://www.digitaltoday.co.kr/en/view/122209/meta-develops-humanoid-robot-prototype-with-chinese-firm-fourier-launches-second-generation-project</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">South Korea opens its first humanoid robot data factory: 12 robots do the work first, and bank the data</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">Tesla Robotaxi Rolls Into Fort Worth, Its Seventh City</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">$13 Billion in Half a Year: China&#x27;s Robots Fix Their Brains Before Their Moves</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../bedrock-robotics-600m/">US$600 Million Bet on Excavators: Self-Driving Starts on the Construction Site</a> <span class="meta">ISSUE 124</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

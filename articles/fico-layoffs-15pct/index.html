@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>FICO裁员15%：AI只是遮羞布 — Tokenta Signal</title><meta name="description" content="10月6日，FICO宣布裁员约15%（官方未确认人数，媒体按3811名员工推算约570人），理由是“AI驱动的重组”，计提2700万美元遣散费。但股价年内已暴跌58%，真正的出血点是上个月：FHFA局长Bill Pulte指令房地美、房利美可用VantageScore，打破FICO在房贷评分领域的垄断，当天创下1989年以来最惨单日跌幅。">
+<title>FICO Cuts 15%: AI Is Just the Fig Leaf — Tokenta Signal</title><meta name="description" content="On October 6, FICO announced layoffs of about 15% (the company did not confirm the number; media estimates put it at roughly 570 based on 3,811 employees), citing an &#x27;AI-driven restructuring&#x27; and booking a $27 million severance charge. But the stock is already down 58% this year, and the real bleeding point came last month: FHFA director Bill Pulte directed Fannie Mae and Freddie Mac to accept VantageScore, breaking FICO&#x27;s monopoly in mortgage scoring and triggering its worst single-day fall since 1989.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="On October 6, FICO announced layoffs of about 15% (the company did not confirm the number; media estimates put it at roughly 570 based on 3,811 employees), citing an &#x27;AI-driven restructuring&#x27; and booking a $27 million severance charge. But the stock is already down 58% this year, and the real bleeding point came last month: FHFA director Bill Pulte directed Fannie Mae and Freddie Mac to accept VantageScore, breaking FICO&#x27;s monopoly in mortgage scoring and triggering its worst single-day fall since 1989.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>FICO裁员15%：AI只是遮羞布</h1>
-<p class="deck">FICO裁员15%的真相不在“AI转型”里，在华盛顿的公文里。垄断被打破才是股价腰斩的原因，AI只是财报电话会上的体面说法。</p>
-<div class="meta">ISSUE 56 · 2026-10-06 · SOURCE / Zubiqo · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">FINTECH &amp; AI DISRUPTION</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">15%</div><div class="lab">WORKFORCE CUT</div><div class="desc">裁员约15%，官方未确认人数；媒体按3811名员工推算约570人，本周已开始通知。</div></div><div class="metric"><div class="num">-58%</div><div class="lab">STOCK YTD</div><div class="desc">股价年内暴跌约58%；FHFA指令当天创1989年以来最惨单日跌幅。</div></div><div class="metric"><div class="num">$27M</div><div class="lab">SEVERANCE CHARGE</div><div class="desc">2026财年Q4计提约2700万美元遣散费；相对去年6.52亿净利润，只是沧海一粟。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ORDER：FHFA局长Bill Pulte指令：房地美、房利美可用VantageScore，统一价格表。</li><li><b>02</b>THE CRASH：垄断松动，股价当天创1989年以来最惨单日跌幅，年内跌约58%。</li><li><b>03</b>THE CUT：10月6日宣布裁员15%，计提2700万美元遣散费。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>10月6日（周二），FICO宣布裁员约15%。官方拒绝确认具体人数，按2025年9月末3811名员工推算，约影响570人，本周已开始通知。官方理由是“简化运营结构”加“AI驱动的产品开发”，原话：“This simplified structure will allow us to operate and bring innovations to market faster and create more value for our customers.”</p><p>财务代价：预计2026财年Q4计提约2700万美元税前费用（主要是遣散费），重组计划2027财年Q3前基本完成。但市场不买账：宣布次日盘前微跌0.1%至694.80美元，年内已暴跌约58%。Barron&#x27;s的标题很直白：“FICO Cuts 15% of Its Staff. Why Investors Aren&#x27;t Buying It.”——公司去年净利润6.52亿美元，2700万遣散费只是沧海一粟。</p>
-<h2><span class="en">THE FIG LEAF</span>AI遮羞布：财报电话会的话术</h2><p>路透社把FICO定性为“又一家因企业自动化任务、把支出转向AI而裁员的美国公司”——2026年AI裁员潮的标准成员。但这套话术有个破绽：真要是AI提效，股价该涨；结果宣布次日盘前还跌了0.1%。投资者用脚投票：不信。</p><p>“AI驱动的重组”正在成为2026年财报季最万能的句式：它既能解释裁员，又能暗示未来，还不用为过去负责。但FICO的问题不在未来，在过去——在它躺着赚钱的那个过去。</p><h2><span class="en">THE REAL BULLET</span>真正的一枪：来自华盛顿</h2><p>股价崩盘的主因上个月就写好了：美国联邦住房金融局（FHFA）局长Bill Pulte指令房地美、房利美，允许所有放贷机构使用竞争对手VantageScore（由Equifax、Experian、TransUnion三家联合开发），并采用统一价格表。这一纸公文直接动摇FICO在房贷信用评分领域的垄断地位，消息当天创下公司1989年以来最惨单日跌幅。</p><p>垄断生意的逻辑是：定价权就是利润。统一价格表等于把FICO最锋利的刀没收了。裁员15%省下的钱，和垄断地位松动丢掉的钱，不是一个数量级。</p><h2><span class="en">THE MATH</span>570人，2700万，救不了基本面</h2><p>算笔账：去年净利润6.52亿美元，2700万美元遣散费占4%都不到；约570人（媒体推算、官方未确认）相对3811人的盘子，省下的主要是工资。重组2027财年Q3前完成——但VantageScore的竞争不会等到2027年。</p><p>这就是投资者不买账的原因：裁员解决的是成本问题，FICO得的是收入问题。当垄断被打破，正确的动作是重建护城河，不是精简结构。拿“AI转型”当遮羞布，只能遮住财报电话会，遮不住股价。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>遮羞布遮不住失血</h2><p>2026年最流行的裁员话术是“AI驱动”，最诚实的裁员原因是“生意不行了”。FICO两者都占了：用前者发公告，用后者跌股价。当一家公司开始用未来时态解释现在时态的问题，说明现在时态已经没法解释了。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">2700万美元遣散费相对6.52亿净利润是九牛一毛，570个岗位相对垄断地位的松动也是。FICO真正要回答的问题不是“AI能省多少钱”，是“没有垄断之后，你值多少钱”——这个问题，裁员回答不了。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>裁员15%约570人、计提2700万美元遣散费、股价年内-58%：真正的出血点是FHFA放行VantageScore打破房贷评分垄断。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d" target="_blank" rel="noopener">FICO Slashes 15% of Workforce in &#x27;AI Restructuring&#x27; ↗</a><br>zubiqo.com · 2026-10-06 · Zubiqo</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Zubiqo：FICO Slashes 15% of Workforce in AI Restructuring<br><a href="https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d" target="_blank" rel="noopener">https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d</a></li><li>路透社：FICO cuts workforce by 15% in AI-driven restructuring（2026-10-06）</li><li>Barron&#x27;s：FICO Cuts 15% of Its Staff. Why Investors Aren&#x27;t Buying It.</li><li>zubiqo：FICO slashes 15% of workforce in AI restructuring as stock plunges 58%</li><li>www.reuters.com 原文链接<br><a href="https://www.reuters.com/business/world-at-work/fico-cuts-workforce-by-15-ai-driven-restructuring-2026-10-06/" target="_blank" rel="noopener">https://www.reuters.com/business/world-at-work/fico-cuts-workforce-by-15-ai-driven-restructuring-2026-10-06/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>FICO Cuts 15%: AI Is Just the Fig Leaf</h1>
+<p class="deck">The truth behind FICO&#x27;s 15% layoffs is not in &#x27;AI transformation&#x27;. It is in a document from Washington. The broken monopoly is why the stock halved; AI is just the respectable wording for the earnings call.</p>
+<div class="meta">ISSUE 56 · 2026-10-06 · SOURCE / <b>Zubiqo</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">FINTECH &amp; AI DISRUPTION</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">15%</div><div class="lab">WORKFORCE CUT</div><div class="desc">A cut of about 15%; the company has not confirmed the number. Media estimates put it at roughly 570 people based on 3,811 employees, with notifications starting this week.</div></div><div class="metric"><div class="num">-58%</div><div class="lab">STOCK YTD</div><div class="desc">The stock is down roughly 58% this year; the day of the FHFA directive it suffered its worst single-day fall since 1989.</div></div><div class="metric"><div class="num">$27M</div><div class="lab">SEVERANCE CHARGE</div><div class="desc">About $27 million in severance to be booked in Q4 FY2026; against last year&#x27;s $652 million net income, a drop in the ocean.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ORDER — FHFA director Bill Pulte&#x27;s directive: Fannie Mae and Freddie Mac may use VantageScore, under a unified price schedule.</li><li><b>02</b>THE CRASH — The monopoly loosened; the stock suffered its worst single-day fall since 1989 on the day, and is down about 58% this year.</li><li><b>03</b>THE CUT — On October 6, a 15% workforce cut was announced, with a $27 million severance charge.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On Tuesday, October 6, FICO announced layoffs of about 15%. The company declined to confirm the exact number; based on 3,811 employees at the end of September 2025, roughly 570 people are affected, and notifications began this week. The official rationale was a &#x27;simplified operating structure&#x27; plus &#x27;AI-driven product development&#x27;, in its words: &#x27;This simplified structure will allow us to operate and bring innovations to market faster and create more value for our customers.&#x27;</p><p>The financial cost: an expected pre-tax charge of about $27 million in Q4 FY2026, mostly severance, with the restructuring substantially complete by Q3 FY2027. But the market is not buying it: the stock slipped 0.1% pre-market the next day to $694.80 and is down roughly 58% this year. Barron&#x27;s headline was blunt: &#x27;FICO Cuts 15% of Its Staff. Why Investors Aren&#x27;t Buying It.&#x27; The company earned $652 million in net income last year; a $27 million severance charge is a drop in the ocean.</p>
+<h2><span class="en">THE FIG LEAF</span>The AI fig leaf: earnings-call rhetoric</h2><p>Reuters characterised FICO as &#x27;another US company cutting jobs as it shifts spending toward AI for corporate automation tasks&#x27; — a standard member of the 2026 AI layoff wave. But the rhetoric has a flaw: if this were truly AI efficiency, the stock should rise. Instead it fell another 0.1% pre-market the day after the announcement. Investors voted with their feet: they do not believe it.</p><p>&#x27;AI-driven restructuring&#x27; is becoming the most versatile sentence of the 2026 earnings season: it explains layoffs, hints at the future, and takes no responsibility for the past. But FICO&#x27;s problem is not in the future. It is in the past — the past in which it made money lying down.</p><h2><span class="en">THE REAL BULLET</span>The real bullet: it came from Washington</h2><p>The main cause of the share-price collapse was written last month: Bill Pulte, director of the Federal Housing Finance Agency (FHFA), directed Fannie Mae and Freddie Mac to allow all lenders to use rival VantageScore (developed jointly by Equifax, Experian and TransUnion) under a unified pricing schedule. That single document directly shook FICO&#x27;s monopoly in mortgage credit scoring, and the stock suffered its worst single-day fall since 1989 on the news.</p><p>The logic of a monopoly business is simple: pricing power is profit. A unified price schedule confiscates FICO&#x27;s sharpest blade. The money saved by cutting 15% of staff and the money lost to a loosening monopoly are not in the same order of magnitude.</p><h2><span class="en">THE MATH</span>570 people, $27 million — no fix for the fundamentals</h2><p>Do the maths: last year&#x27;s net income was $652 million, so a $27 million severance charge is under 4% of it; roughly 570 people (media estimate, not officially confirmed) against a base of 3,811 saves mostly salaries. The restructuring completes by Q3 FY2027 — but VantageScore&#x27;s competition will not wait until 2027.</p><p>That is why investors are not buying it: layoffs solve a cost problem, and FICO has a revenue problem. When a monopoly breaks, the correct move is to rebuild the moat, not to simplify the structure. Using &#x27;AI transformation&#x27; as a fig leaf covers the earnings call. It does not cover the share price.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM PRICING POWER TO PRICE CAP</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From pricing power to a unified price schedule</div><div class="desc">An FHFA document confiscated FICO&#x27;s sharpest blade: monopoly profit comes from pricing power, and a unified price schedule cuts the ground from under it.</div></div><div class="metric"><div class="lab">FROM EFFICIENCY TO THEATER</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From efficiency to layoff theatre</div><div class="desc">&#x27;AI-driven restructuring&#x27; is becoming the universal sentence of 2026: it explains layoffs and hints at the future, but cannot answer &#x27;what are you worth without the monopoly&#x27;.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A fig leaf cannot cover the bleeding</h2><p>The most fashionable layoff rhetoric of 2026 is &#x27;AI-driven&#x27;; the most honest reason is &#x27;business is bad&#x27;. FICO has both: the former in its announcement, the latter in its share price. When a company starts explaining present-tense problems in the future tense, it means the present tense can no longer be explained.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">A $27 million severance charge is a rounding error against $652 million in net income, and 570 jobs are a rounding error against the loosening of a monopoly. The question FICO really has to answer is not &#x27;how much can AI save&#x27;, but &#x27;what are you worth without the monopoly&#x27; — and layoffs cannot answer that question.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>A 15% cut of roughly 570 jobs, a $27 million severance charge and a stock down 58% this year: the real bleeding point is the FHFA opening the door to VantageScore and breaking the mortgage-scoring monopoly.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d" target="_blank" rel="noopener">FICO Slashes 15% of Workforce in &#x27;AI Restructuring&#x27; ↗</a><br>zubiqo.com · 2026-10-06 · Zubiqo</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Zubiqo: FICO Slashes 15% of Workforce in AI Restructuring<br><a href="https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d" target="_blank" rel="noopener">https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d</a></li><li>Reuters: FICO cuts workforce by 15% in AI-driven restructuring (2026-10-06)</li><li>Barron&#x27;s: FICO Cuts 15% of Its Staff. Why Investors Aren&#x27;t Buying It.</li><li>Zubiqo: FICO slashes 15% of workforce in AI restructuring as stock plunges 58%</li><li>www.reuters.com: Original article<br><a href="https://www.reuters.com/business/world-at-work/fico-cuts-workforce-by-15-ai-driven-restructuring-2026-10-06/" target="_blank" rel="noopener">https://www.reuters.com/business/world-at-work/fico-cuts-workforce-by-15-ai-driven-restructuring-2026-10-06/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

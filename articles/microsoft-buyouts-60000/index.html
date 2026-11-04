@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>6万人的自愿离职单，微软用来给AI基建让路 — Tokenta Signal</title><meta name="description" content="微软 2026 年 10 月 26 日向约 6 万名员工发出自愿离职邀约，约占全球员工 27%，背景是 1750 亿美元 AI 基建开支，员工 12 月初前决定，12 月 31 日离职。">
+<title>A Voluntary Exit Offer to 60,000: Microsoft Makes Room for AI Infrastructure — Tokenta Signal</title><meta name="description" content="On October 26, 2026, Microsoft extended voluntary departure offers to about 60,000 employees, roughly 27% of its global workforce, against the backdrop of US$175 billion in AI infrastructure spending. Employees decide by early December and depart on December 31.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="On October 26, 2026, Microsoft extended voluntary departure offers to about 60,000 employees, roughly 27% of its global workforce, against the backdrop of US$175 billion in AI infrastructure spending. Employees decide by early December and depart on December 31.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">MARKETS & INDUSTRY / 市场与产业 · SIGNAL ANALYSIS</span>
-<h1>6万人的自愿离职单，微软用来给AI基建让路</h1>
-<p class="deck">微软 2026 年 10 月 26 日向约 6 万名员工发出自愿离职邀约，约占全球 22.3 万员工的 27%，覆盖四国参与团队级别 70 及以下员工，背景是 2026 年 1750 亿美元 AI 基建开支，决定截止 12 月初。</p>
-<div class="meta">ISSUE 123 · 2026-10-27 · SOURCE / 路透社转引报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">MICROSOFT × BUYOUTS</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">约6万</div><div class="lab">OFFER POOL</div><div class="desc">收到自愿离职邀约的员工数，约占全球全职员工 27%。</div></div><div class="metric"><div class="num">22.3万</div><div class="lab">GLOBAL HEADCOUNT</div><div class="desc">微软全球全职员工数，截至 2026 年 6 月 30 日。</div></div><div class="metric"><div class="num">$1750亿</div><div class="lab">2026 CAPEX PLAN</div><div class="desc">微软预计 2026 日历年 AI 基建资本开支。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE OFFER：2026 年 10 月 26 日，微软发出自愿离职邀约。</li><li><b>02</b>THE SCOPE：四国参与团队级别 70 及以下员工符合条件。</li><li><b>03</b>THE EXCLUSIONS：数据中心、销售与营销等部门被排除在外。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>微软在 2026 年 10 月 26 日向约 6 万名员工发出自愿离职邀约，约占全球 22.3 万名全职员工的 27%。首席人事官 Amy Coleman 在内部备忘中宣布，参与部门可以借此更灵活地调整人力。</p><p>范围有明确边界。对象为美国、加拿大、英国与印度参与团队中级别 70 及以下员工，含副总裁级。AI 体验、Copilot、财务、人力、Xbox 与 Windows 及设备在内，数据中心、销售、营销、商业业务与安全被排除。</p><p>时间线同样明确。员工在 12 月初前做决定，离职日定在 12 月 31 日。接受者获得与微软常规裁员相近的经济支持与职业过渡资源，没有年龄、工龄或绩效门槛。</p>
-<h2><span class="en">VOLUNTARY IS A COST TOOL</span>自愿两个字，藏着成本算盘</h2><p>自愿离职与裁员的区别不在人数，在主动权。公司不指定名单，员工自己选，法律与舆论成本都低一档。微软没有公布预计接受人数，节省金额也就无从算起。</p><p>但自愿不等于没有方向。参与部门与排除部门的划分，本身就是人力调整的地图。数据中心被排除，因为基建仍在扩。AI 体验与 Copilot 在内，因为这些团队正在重组。</p><h2><span class="en">THE 175B BACKDROP</span>1750 亿美元基建账单是背景</h2><p>微软预计 2026 日历年资本开支 1750 亿美元，主要投向 AI 数据中心与算力设备。9 月季度资本开支已超 500 亿美元，自由现金流承压。人力成本是少数能快速调节的科目之一。</p><p>这轮邀约是微软 2026 年第三次人力动作，5 月一轮小规模自愿离职，7 月裁员 4800 人。单看任何一次都不完整，三次连起来才是微软为 AI 基建腾挪成本的全貌。</p><h2><span class="en">ACCEPTANCE RATE MATTERS MORE</span>接受率比邀约数更重要</h2><p>6 万只是邀约池，不是离职数。媒体引述的公司预期是只有一小部分员工会接受，具体比例要到 12 月才见分晓。</p><p>对员工来说，决定因素不只是补偿。12 月 31 日离职意味着新年要重新找工作，补偿厚度与就业市场景气度会共同决定接受率。对微软来说，接受率过低等于白忙，接受率过高则可能伤到关键团队。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>邀约数不是离职数，接受率才是答案</h2><p>Tokenta Signal 判断：别被 6 万这个数字带偏。微软没有公布目标接受人数，12 月的接受率才能说明这轮调整到底有多大。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：这是自愿离职邀约，不是裁员人数。微软没有公布目标接受人数、预计节省金额与离职成本，最终离职数要看 12 月初的决定。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认微软 2026 年 10 月 26 日向约 6 万名员工发出自愿离职邀约，约占全球员工 27%，对象为四国参与团队级别 70 及以下员工，决定截止 12 月初，离职日为 12 月 31 日。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/" target="_blank" rel="noopener">Microsoft offers buyouts to around 60,000 employees to contain costs ↗</a><br>virginiabusiness.com · 2026-10-27 · 路透社转引报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Virginia Business（路透社）：Microsoft offers buyouts to around 60,000 employees to contain costs<br><a href="https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/" target="_blank" rel="noopener">https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/</a></li><li>TipRanks：Microsoft Offers Buyouts to 60,000 Workers as AI Spending Soars<br><a href="https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars" target="_blank" rel="noopener">https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta 首笔欧元债开簿：六档、期限最长 38 年（flash 190 更新）</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta 150 亿美元债为 AI 基建融资：利差较上一轮走阔，欧元部分待定价</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista 三季度营收 36.6 亿美元增 58.5%：IPO 以来最快增速，AI 网络成主引擎</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block 三季度毛利 32.4 亿美元增 22%：Cash App 领涨，上调全年指引并首次预告 AI 工具收入</a> <span class="meta">ISSUE 188</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>A Voluntary Exit Offer to 60,000: Microsoft Makes Room for AI Infrastructure</h1>
+<p class="deck">On October 26, 2026, Microsoft extended voluntary departure offers to about 60,000 employees, roughly 27% of its 223,000 global workforce, covering level 70 and below in participating teams in four countries, against the backdrop of US$175 billion in 2026 AI infrastructure spending, with decisions due in early December.</p>
+<div class="meta">ISSUE 123 · 2026-10-27 · SOURCE / <b>Reuters report, carried by Virginia Business</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">MICROSOFT × BUYOUTS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">~60,000</div><div class="lab">OFFER POOL</div><div class="desc">Employees who received voluntary departure offers, about 27% of the global full-time workforce.</div></div><div class="metric"><div class="num">223,000</div><div class="lab">GLOBAL HEADCOUNT</div><div class="desc">Microsoft&#x27;s global full-time headcount as of June 30, 2026.</div></div><div class="metric"><div class="num">$175B</div><div class="lab">2026 CAPEX PLAN</div><div class="desc">Microsoft&#x27;s planned AI infrastructure capital expenditure for calendar 2026.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE OFFER — October 26, 2026: Microsoft issues the voluntary departure offers.</li><li><b>02</b>THE SCOPE — Employees at level 70 and below in participating teams in four countries are eligible.</li><li><b>03</b>THE EXCLUSIONS — Data centres, sales, marketing and other departments are excluded.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On October 26, 2026, Microsoft extended voluntary departure offers to about 60,000 employees, roughly 27% of its 223,000 full-time workforce globally. Chief People Officer Amy Coleman announced the move in an internal memo, saying participating divisions could adjust staffing more flexibly through the programme.</p><p>The scope has clear boundaries. Eligible employees are those at level 70 and below, up to vice-president level, in participating teams in the US, Canada, the UK and India. AI experiences, Copilot, finance, HR, Xbox, and Windows and devices are included; data centres, sales, marketing, commercial business and security are excluded.</p><p>The timeline is equally specific. Employees decide by early December, with a departure date of December 31. Those who accept receive financial support and career-transition resources similar to Microsoft&#x27;s regular layoffs, with no thresholds for age, tenure or performance.</p>
+<h2><span class="en">VOLUNTARY IS A COST TOOL</span>The Word Voluntary Hides a Cost Calculation</h2><p>The difference between voluntary departure and layoffs is not the headcount, it is who holds the initiative. The company names no list; employees choose for themselves, which lowers both legal and public-opinion costs. Microsoft has not disclosed an expected acceptance number, so the savings cannot be calculated.</p><p>Voluntary does not mean directionless, though. The division between participating and excluded departments is itself the map of the staffing adjustment. Data centres are excluded because infrastructure is still expanding. AI experiences and Copilot are included because those teams are being restructured.</p><h2><span class="en">THE 175B BACKDROP</span>The US$175 Billion Infrastructure Bill Is the Backdrop</h2><p>Microsoft expects capital expenditure of US$175 billion in calendar 2026, directed mainly at AI data centres and computing equipment. Capex in the September quarter already exceeded US$50 billion, putting free cash flow under pressure. Labour cost is one of the few line items that can be adjusted quickly.</p><p>This offer is Microsoft&#x27;s third workforce move of 2026, after a small voluntary programme in May and 4,800 layoffs in July. Viewed alone, none of them is the full picture; together they show how Microsoft is freeing up cost for AI infrastructure.</p><h2><span class="en">ACCEPTANCE RATE MATTERS MORE</span>The Acceptance Rate Matters More Than the Offer Pool</h2><p>60,000 is the size of the offer pool, not the departure count. The company expectation quoted in media is that only a small share of employees will accept; the actual proportion will not be clear until December.</p><p>For employees, the decision is not only about compensation. Leaving on December 31 means job-hunting in the new year, and the generosity of the package together with labour-market conditions will jointly determine acceptance. For Microsoft, too low an acceptance rate makes the exercise pointless; too high a rate risks harming key teams.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM LIST TO CHOICE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From designated to self-selected</div><div class="desc">The company draws the boundary; employees decide for themselves whether to stay or go.</div></div><div class="metric"><div class="lab">FROM OFFERS TO ACCEPTANCE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From offer pool to acceptance rate</div><div class="desc">The final scale depends on actual acceptance in December.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The Offer Pool Is Not the Departure Count; the Acceptance Rate Is the Answer</h2><p>Tokenta Signal&#x27;s judgment: do not be misled by the 60,000 figure. Microsoft has not disclosed a target acceptance number, and December&#x27;s acceptance rate is what will show how large this adjustment really is.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundaries of this report: this is a voluntary departure offer, not a layoff headcount. Microsoft has not disclosed a target acceptance number, expected savings or separation costs; the final departure count depends on decisions made in early December. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original report confirms that on October 26, 2026, Microsoft extended voluntary departure offers to about 60,000 employees, roughly 27% of its global workforce, covering level 70 and below in participating teams across four countries, with decisions due in early December and a departure date of December 31.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/" target="_blank" rel="noopener">Microsoft offers buyouts to around 60,000 employees to contain costs ↗</a><br>virginiabusiness.com · 2026-10-27 · Reuters report, carried by Virginia Business</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Virginia Business (Reuters): Microsoft offers buyouts to around 60,000 employees to contain costs<br><a href="https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/" target="_blank" rel="noopener">https://virginiabusiness.com/microsoft-offers-buyouts-60000-employees-ai-investments/</a></li><li>TipRanks: Microsoft Offers Buyouts to 60,000 Workers as AI Spending Soars<br><a href="https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars" target="_blank" rel="noopener">https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

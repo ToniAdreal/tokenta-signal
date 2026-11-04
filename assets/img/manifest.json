@@ -1,0 +1,44 @@
+{
+ "openai-adnoc-g42-industrial-ai": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "amd-q3-data-center-record": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "AMD 官方新闻稿",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "tesla-robotaxi-fort-worth": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Not a Tesla App 报道",
+  "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+  "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
+ },
+ "nvidia-city-ai-physical-agentic": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "NVIDIA 官方博客",
+  "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+  "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
+ },
+ "anthropic-s1a-895b-compute": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "gHacks 报道",
+  "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/",
+  "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/"
+ },
+ "eu-gemini-press-copyright": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Morningstar 转发道琼斯报道",
+  "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law",
+  "evidence_from": ""
+ }
+}

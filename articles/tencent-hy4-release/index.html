@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容 — Tokenta Signal</title><meta name="description" content="路透 2026-11-04 报道：腾讯于周三发布新一代 Hunyuan 大模型 Hy4，公司称训练中只保留防御性网络安全内容，剔除了漏洞利用开发、逆向工程与渗透测试等进攻性内容，以降低模型助长网络攻击的风险。TechNode 同日独立报道确认：Hy4 为 7700 亿参数混合专家模型，首次加入视觉理解与电脑操作能力，已上线腾讯自有产品与第三方平台；模型权重与系统卡仍待随后发布，尚未成为可下载的成品。本文只做摘要与链接，不转载报道全文。本文不构成任何投资建议。">
+<title>Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training — Tokenta Signal</title><meta name="description" content="Reuters reported on November 4, 2026 that Tencent released Hy4, its new-generation Hunyuan large model, on Wednesday, and that the company said training retained only defensive cybersecurity content, removing offensive content such as exploit development, reverse engineering and penetration testing to reduce the risk of the model abetting cyberattacks. TechNode&#x27;s independent same-day report confirmed that Hy4 is a 770-billion-parameter mixture-of-experts model adding vision understanding and computer use for the first time, and is live in Tencent&#x27;s own products and on third-party platforms. The model weights and system card are still to be released later, so it is not yet a downloadable product. This article is a summary with links only and does not reproduce the reports&#x27; full text. This does not constitute investment advice.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Reuters reported on November 4, 2026 that Tencent released Hy4, its new-generation Hunyuan large model, on Wednesday, and that the company said training retained only defensive cybersecurity content, removing offensive content such as exploit development, reverse engineering and penetration testing to reduce the risk of the model abetting cyberattacks. TechNode&#x27;s independent same-day report confirmed that Hy4 is a 770-billion-parameter mixture-of-experts model adding vision understanding and computer use for the first time, and is live in Tencent&#x27;s own products and on third-party platforms. The model weights and system card are still to be released later, so it is not yet a downloadable product. This article is a summary with links only and does not reproduce the reports&#x27; full text. This does not constitute investment advice.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</h1>
-<p class="deck">腾讯 2026-11-04 发布 Hy4：7700 亿参数混合专家模型，首次具备视觉理解与电脑操作能力，训练中剔除进攻性网络安全内容、只留防御性内容；权重与系统卡仍待发布，API 价格与预览版持平，腾讯云 TokenHub 五折至 12 月 31 日。</p>
-<div class="meta">ISSUE 194 · 2026-11-04 · SOURCE / Reuters 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</h1>
+<p class="deck">Tencent released Hy4 on November 4, 2026: a 770-billion-parameter mixture-of-experts model with vision understanding and computer use for the first time, trained with offensive cybersecurity content removed and only defensive content retained. The weights and system card are still to be released. API pricing matches the preview version, with Tencent Cloud&#x27;s TokenHub at half price through December 31.</p>
+<div class="meta">ISSUE 194 · 2026-11-04 · SOURCE / <b>Reuters report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：路透 2026-11-04 报道：腾讯发布 Hy4，训练中剔除漏洞利用开发、逆向工程与渗透测试，只留防御性网络安全内容。</li><li><b>02</b>THE CONFIRMATION：TechNode 同日独立报道确认上线：7700 亿参数混合专家模型，首次具备视觉理解与电脑操作能力，已接入腾讯产品与 OpenRouter。</li><li><b>03</b>THE WATCHPOINT：腾讯随后发布的模型权重与系统卡，以及 Hy4 Flash 的规格与定价，决定外部能否独立复核安全删减与真实能力。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>路透 2026-11-04 报道：腾讯于周三发布 Hy4，公司称该模型训练中只纳入防御性网络安全内容，以降低模型助长网络攻击的风险。腾讯在声明中称，认识到先进网络与生物能力带来的潜在安全风险，致力于以更负责任的方式进行模型训练、开源与发布。</p><p>路透同稿的关键限定：腾讯在训练中过滤掉了漏洞利用开发、逆向工程与渗透测试等内容，以限制 Hy4 的进攻性能力。路透同时指出，Moonshot AI 上月已对最新模型做了类似的网络进攻能力限制，中国厂商与美国公司一样，都在防范失控风险。</p><p>TechNode 2026-11-04 独立报道（09:15 UTC）：Hy4 于 11 月 4 日上线，新增视觉理解与电脑操作能力，可解读图表与文档、跨多图推理，并操作命令行工具与图形界面，针对 Blender 与 CAD 等软件做了定向训练。7700 亿参数模型已接入腾讯自有产品与 OpenRouter 等第三方平台，腾讯计划随后发布权重与系统卡，另有低成本的 Hy4 Flash 在计划中。</p><p>TechNode 同稿的落地口径：Hy4 已集成进 WorkBuddy 与 CodeBuddy，11 月 4 日至 11 月 15 日提供限量免费额度；标准 API 价格与 Hy4 预览版持平，即每百万输入 token 0.834 美元、每百万输出 token 2.501 美元，腾讯云 TokenHub 五折至 12 月 31 日。开发重点为办公任务、金融分析与游戏开发，产品团队参与训练与真实工作流评测。</p>
-<h2><span class="en">WHY IT MATTERS</span>删掉进攻性数据，是开源发布的新常态</h2><p>Hy4 的发布方式比参数规模更值得记录。一个月内，Moonshot 先做了网络进攻能力限制，腾讯再跟进同一做法：开源之前，先把漏洞利用、逆向与渗透测试从训练数据里拿掉，只留漏洞修复与概念验证生成这类防御性内容。</p><p>这条线一旦成为头部厂商的默认动作，往后的开源发布就多了一道可核验的门槛：不是模型能不能做进攻性任务，而是厂商在发布前主动删了什么、留了什么，以及有没有把删减结果写进系统卡。Hy4 的系统卡尚未发布，这道核验目前还缺最后一块。</p><h2><span class="en">WHY IT MATTERS</span>视觉加电脑操作，补的是 Hunyuan 的短板</h2><p>Hy4 是 Hunyuan 线第一次同时具备视觉理解与电脑操作能力：看图、读表、跨图推理，再直接操作命令行与图形界面、跑多程序任务。办公、金融分析与游戏开发被列为开发重点，产品团队直接参与训练与评测，说明这一定位不是纯基准冲榜，而是冲着真实工作流去的。</p><p>但发布当天的状态要写清楚：上线的是服务，不是可下载的权重。第三方平台与腾讯自有产品能调用 Hy4，权重与系统卡仍在随后发布之列。在权重真正公开之前，外部无法独立复核模型，也无法验证腾讯的安全删减是否如其所言生效。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>信号在发布方式，不在参数数字</h2><p>Tokenta Signal 判断：Hy4 的信号不在 7700 亿参数，而在腾讯选择了和 Moonshot 同一条路：开源之前先做安全删减。参数与能力上线只是起点，权重与系统卡发布之后，外部能否复核删减效果，才是这条发布路线能不能立住的刻度。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本条边界：路透称 Hy4 为开源模型，但 TechNode 同日明确写明腾讯计划随后发布权重与系统卡，因此本条不把 Hy4 写成 11 月 4 日当天已可下载的权重成品；权重发布日期、许可证细节与系统卡中的完整安全结果均以腾讯后续披露为准。价格口径为 TechNode 报道的 API 价格与 TokenHub 折扣，不含未公布的 Hy4 Flash 定价。本文只做摘要与链接，不转载报道全文。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>路透 2026-11-04 报道全文已直接打开核验，核心事实（周三发布 Hy4、只留防御性网络安全内容、过滤漏洞利用开发与逆向工程及渗透测试、Moonshot 上月同类限制）与 TechNode 同日独立报道（7700 亿参数、视觉与电脑操作、上线产品与价格口径）一致，两处均已打开。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/" target="_blank" rel="noopener">Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears ↗</a><br>reuters.com · 2026-11-04 · Reuters 报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Reuters 报道<br><a href="https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/" target="_blank" rel="noopener">https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/</a></li><li>TechNode 独立报道<br><a href="https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/" target="_blank" rel="noopener">https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-internal-security-warnings/">路透：OpenAI 员工多年来警告内部安全漏洞，8 月四分之一生产工程师被调去补安全</a> <span class="meta">ISSUE 183</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ANNOUNCEMENT — Reuters reported on November 4, 2026 that Tencent released Hy4, removing exploit development, reverse engineering and penetration testing from training and keeping only defensive cybersecurity content.</li><li><b>02</b>THE CONFIRMATION — TechNode&#x27;s independent same-day report confirmed the launch: a 770-billion-parameter mixture-of-experts model with vision understanding and computer use for the first time, live in Tencent products and on OpenRouter.</li><li><b>03</b>THE WATCHPOINT — The model weights and system card Tencent releases later, plus Hy4 Flash&#x27;s specifications and pricing, will determine whether outsiders can independently verify the safety removals and real capability.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Reuters reported on November 4, 2026 that Tencent released Hy4 on Wednesday, and that the company said the model was trained with only defensive cybersecurity content included, to reduce the risk of the model abetting cyberattacks. In its statement, Tencent said it recognizes the potential security risks posed by advanced cyber and biological capabilities and is committed to training, open-sourcing and releasing models in a more responsible manner.</p><p>The key qualification in the same Reuters article: Tencent filtered exploit development, reverse engineering and penetration testing out of the training data to limit Hy4&#x27;s offensive capability. Reuters also noted that Moonshot AI applied similar limits on cyber-offense capability to its latest model last month, and that Chinese vendors, like US companies, are guarding against loss-of-control risks.</p><p>TechNode&#x27;s independent report of November 4, 2026 (09:15 UTC): Hy4 launched on November 4 with new vision understanding and computer-use capability — it can interpret charts and documents, reason across multiple images, and operate command-line tools and graphical interfaces, with targeted training for software such as Blender and CAD. The 770-billion-parameter model is live in Tencent&#x27;s own products and on third-party platforms such as OpenRouter. Tencent plans to release the weights and system card later, and a low-cost Hy4 Flash is also planned.</p><p>Deployment details from the same TechNode article: Hy4 is integrated into WorkBuddy and CodeBuddy, with a limited free quota from November 4 to November 15. Standard API pricing matches the Hy4 preview — $0.834 per million input tokens and $2.501 per million output tokens — with Tencent Cloud&#x27;s TokenHub at half price through December 31. Development focused on office tasks, financial analysis and game development, with product teams taking part in training and real-workflow evaluation.</p>
+<h2><span class="en">WHY IT MATTERS</span>Deleting offensive data is the new normal for open-source releases</h2><p>Hy4&#x27;s release method deserves more attention than its parameter count. Within a month, Moonshot first applied cyber-offense limits, and Tencent has now followed with the same approach: before open-sourcing, remove exploit development, reverse engineering and penetration testing from the training data, keeping only defensive content such as vulnerability repair and proof-of-concept generation.</p><p>Once this becomes the default among leading vendors, every open-source release gains a verifiable new threshold: not whether the model can perform offensive tasks, but what the vendor proactively removed and kept before release, and whether the removals are documented in the system card. Hy4&#x27;s system card has not been published, so that verification is still missing its final piece.</p><h2><span class="en">WHY IT MATTERS</span>Vision plus computer use fills Hunyuan&#x27;s gap</h2><p>Hy4 is the first model in the Hunyuan line to combine vision understanding with computer use: reading images and tables, reasoning across images, then directly operating command lines and graphical interfaces to run multi-application tasks. Office work, financial analysis and game development are listed as development priorities, and product teams took part directly in training and evaluation — a positioning aimed not purely at benchmark rankings but at real workflows.</p><p>But the state of play on release day must be stated plainly: what launched is a service, not downloadable weights. Third-party platforms and Tencent&#x27;s own products can call Hy4, while the weights and system card remain to be released later. Until the weights are genuinely public, outsiders cannot independently reproduce the model or verify that Tencent&#x27;s safety removals work as described.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The signal is the release method, not the parameter count</h2><p>Tokenta Signal&#x27;s judgment: the signal in Hy4 is not its 770 billion parameters, but Tencent choosing the same path as Moonshot AI — safety removals before open-sourcing. Parameters and capabilities going live are only the starting point. Once the weights and system card are published, whether outsiders can verify the effect of the removals is the measure of whether this release route holds up.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">Boundary of this item: Reuters calls Hy4 an open-source model, but TechNode stated explicitly the same day that Tencent plans to release the weights and system card later, so this item does not describe Hy4 as a downloadable weights product as of November 4. The weights release date, license details and the full safety results in the system card will follow Tencent&#x27;s subsequent disclosures. Pricing follows TechNode&#x27;s reporting of API prices and the TokenHub discount, and excludes the unannounced pricing of Hy4 Flash. This article is a summary with links only and does not reproduce the reports&#x27; full text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Reuters&#x27; November 4, 2026 report was opened and verified in full. Core facts (Hy4 released Wednesday, only defensive cybersecurity content retained, exploit development, reverse engineering and penetration testing filtered out, Moonshot AI&#x27;s similar restriction last month) agree with TechNode&#x27;s independent same-day report (770 billion parameters, vision and computer use, product launches and pricing basis). Both were opened.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/" target="_blank" rel="noopener">Tencent rolls out AI model trained with limited cybersecurity data amid hacking fears ↗</a><br>reuters.com · 2026-11-04 · Reuters report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Reuters report<br><a href="https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/" target="_blank" rel="noopener">https://www.reuters.com/legal/litigation/tencent-rolls-out-ai-model-trained-with-limited-cybersecurity-data-amid-hacking-2026-11-04/</a></li><li>TechNode independent report<br><a href="https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/" target="_blank" rel="noopener">https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</a> <span class="meta">ISSUE 184</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../indiaai-eka1-dhir/">India puts three home-grown models on the shelf at once: EKA-1 and Dhīr lead with offline deployment as sovereign models go on sale</a> <span class="meta">ISSUE 182</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>数据中心不受欢迎，OpenAI打算换个名字 — Tokenta Signal</title><meta name="description" content="据Axios经TechCrunch转述，OpenAI计划在11月3日中期选举后启动华盛顿政策攻势，把数据中心改称AI算力园区，并推动最强模型强制安全限速与社区协议。">
+<title>Data Centers Have Fallen Out of Favor. OpenAI Wants to Rename Them — Tokenta Signal</title><meta name="description" content="According to Axios, relayed by TechCrunch, OpenAI plans to launch a Washington policy offensive after the November 3 midterm elections, rebranding data centers as AI compute campuses and pushing mandatory safety speed limits for the most powerful models and community compacts.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="According to Axios, relayed by TechCrunch, OpenAI plans to launch a Washington policy offensive after the November 3 midterm elections, rebranding data centers as AI compute campuses and pushing mandatory safety speed limits for the most powerful models and community compacts.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">WORLD & POLICY / 世界与政策 · SIGNAL ANALYSIS</span>
-<h1>数据中心不受欢迎，OpenAI打算换个名字</h1>
-<p class="deck">据 Axios 经 TechCrunch 转述，OpenAI 计划在 11 月 3 日中期选举后启动华盛顿政策攻势，把数据中心改称 AI 算力园区，并推动最强模型强制安全限速与社区协议。</p>
-<div class="meta">ISSUE 137 · 2026-11-01 · SOURCE / TechCrunch 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">OPENAI × POLICY</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">8 吉瓦</div><div class="lab">PIKE COUNTY CAPACITY</div><div class="desc">派克县样板项目的场地容量上限。</div></div><div class="metric"><div class="num">20 年</div><div class="lab">LEASE TERM</div><div class="desc">派克县项目向 SB Energy 的租用年限。</div></div><div class="metric"><div class="num">11月9日</div><div class="lab">LAME DUCK OPENS</div><div class="desc">政策攻势瞄准的国会会期开幕日期。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE STOCKPILE：提案自 8 月起储备，等待选举结果。</li><li><b>02</b>THE REPORT：11 月 1 日 Axios 披露攻势与改名计划。</li><li><b>03</b>THE ELECTION：11 月 3 日中期选举，决定国会格局。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>据 Axios 11 月 1 日报道、经 TechCrunch 转述，OpenAI 计划在 11 月 3 日中期选举后启动一场华盛顿政策与公关攻势。最抓眼球的一项，是把数据中心改称 AI 算力园区，论证这些建筑不只是装服务器的仓库，它们是能改变所在社区的经济设施。</p><p>攻势的核心政策主张，是给最强 AI 系统设强制安全限速，让人始终掌控技术。配套主张包括社区协议与州立法，让项目所在地居民对建设方式与受益分配有正式发言权。首席全球事务官 Chris Lehane 称，中期选举只是 2028 年大选的预告片，AI 将成为 2028 年的核心议题。</p><p>OpenAI 拿俄亥俄州派克县项目作样板。该项目位于阿巴拉契亚地区，宣称带来数千个岗位，场地可达 8 吉瓦容量，OpenAI 向软银旗下 SB Energy 租用 20 年，英伟达为部分租约提供担保。提案自 8 月起一直在储备，攻势瞄准 11 月 9 日开幕的跛脚鸭国会会期。</p>
-<h2><span class="en">RENAMING</span>改名，是舆论战的一部分</h2><p>数据中心在美国社区越来越不受欢迎，耗电、耗水、噪音与地价是具体抱怨。改名算力园区，不能减少一度电，但能改变辩论框架。仓库是成本，园区是资产，词变了，立场就变了。</p><p>OpenAI 自己也承认这是有意为之的改名。Axios 称之为故意挑衅式的 rebrand，目的就是让公众先讨论园区能带来什么，再讨论它消耗什么。</p><h2><span class="en">COMMUNITY COMPACTS</span>社区协议，是改名的抵押品</h2><p>光改名不够，OpenAI 配了两样东西。社区协议与州立法，给居民正式发言权，让受益分配写进规则。这等于把改名从口号变成可谈判的条件。</p><p>能不能兑现，要看派克县样板之外的项目。样板永远好看，关键是第二个、第三个项目是否沿用同一套协议。</p><h2><span class="en">LAME DUCK WINDOW</span>时间窗口，选在跛脚鸭会期</h2><p>攻势瞄准 11 月 9 日到明年 1 月 3 日的跛脚鸭会期。旧国会将去、新国会未到，是政策提案最容易被听见、也最难被否决的窗口。OpenAI 把储备了三个月的提案一次性推出来，就是要抢这个窗口。</p><p>风险同样清楚。选举结果若与预期不同，提案的优先级可能一夜改变。政策攻势的成败，最终不由发布会决定，由国会席位决定。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>名字是框架，协议是抵押</h2><p>Tokenta Signal 判断：OpenAI 这次打的不是产品战，是定义战。谁先定义数据中心是什么，谁就先拿到社区谈判的主动权。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：这是 Axios 报道中的计划，经 TechCrunch 转述，未见 OpenAI 正式公告。算力园区没有官方定义，改名本身不改变项目的耗电、耗水与噪音。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认据 Axios 经 TechCrunch 11 月 1 日转述，OpenAI 计划在中期选举后启动政策攻势，把数据中心改称 AI 算力园区，并推动最强模型强制安全限速与社区协议。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" target="_blank" rel="noopener">OpenAI might rebrand its data centers as ‘AI compute campuses’ ↗</a><br>techcrunch.com · 2026-11-01 · TechCrunch 报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>TechCrunch：OpenAI might rebrand its data centers as ‘AI compute campuses’<br><a href="https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" target="_blank" rel="noopener">https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/</a></li><li>AI Weekly：OpenAI Pitches Mandatory AI &#x27;Speed Limits&#x27; in Post-Midterm Push<br><a href="https://aiweekly.co/alerts/openai-pitches-mandatory-ai-speed-limits-in-post-midterm-push" target="_blank" rel="noopener">https://aiweekly.co/alerts/openai-pitches-mandatory-ai-speed-limits-in-post-midterm-push</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-ndrc-ai-lifecycle-law/">中国加快 AI 全生命周期立法：DeepSeek、Moonshot、阿里巴巴在列</a> <span class="meta">ISSUE 172</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nyt-sues-brave/">纽约时报告Brave，索赔索引里的300亿页</a> <span class="meta">ISSUE 143</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../apple-intelligence-china-qwen/">苹果智能落地中国，Siri借用了通义</a> <span class="meta">ISSUE 133</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../xai-naacp-turbines-court/">法官没放行，xAI的涡轮机案子继续打</a> <span class="meta">ISSUE 129</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">WORLD & POLICY · SIGNAL REPORT</span>
+<h1>Data Centers Have Fallen Out of Favor. OpenAI Wants to Rename Them</h1>
+<p class="deck">According to Axios, relayed by TechCrunch, OpenAI plans to launch a Washington policy offensive after the November 3 midterm elections, rebranding data centers as AI compute campuses and pushing mandatory safety speed limits for the most powerful models and community compacts.</p>
+<div class="meta">ISSUE 137 · 2026-11-01 · SOURCE / <b>TechCrunch report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × POLICY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">8 GW</div><div class="lab">PIKE COUNTY CAPACITY</div><div class="desc">The site capacity ceiling of the Pike County showcase project.</div></div><div class="metric"><div class="num">20 years</div><div class="lab">LEASE TERM</div><div class="desc">The lease term of the Pike County project from SB Energy.</div></div><div class="metric"><div class="num">Nov 9</div><div class="lab">LAME DUCK OPENS</div><div class="desc">The opening date of the congressional session the policy offensive targets.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE STOCKPILE — The proposals have been stockpiled since August, awaiting the election result.</li><li><b>02</b>THE REPORT — Axios disclosed the offensive and the rename plan on November 1.</li><li><b>03</b>THE ELECTION — The November 3 midterms decide the shape of Congress.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>According to Axios&#x27;s November 1 reporting, relayed by TechCrunch, OpenAI plans to launch a Washington policy and public-relations offensive after the November 3 midterm elections. The most eye-catching item is renaming data centers as AI compute campuses, arguing that these buildings are not warehouses for servers but economic facilities that can transform the communities hosting them.</p><p>The core policy proposal is mandatory safety speed limits on the most powerful AI systems, keeping humans in control of the technology. Supporting proposals include community compacts and state legislation giving residents where projects are built a formal say in how they are built and how benefits are shared. Chief Global Affairs Officer Chris Lehane called the midterms merely a trailer for the 2028 election, and said AI will be a core issue in 2028.</p><p>OpenAI is using its Pike County, Ohio project as the showcase. The Appalachian project claims thousands of jobs and a site capacity of up to 8 GW; OpenAI leases it from SoftBank&#x27;s SB Energy for 20 years, and Nvidia guarantees part of the lease. The proposals have been stockpiled since August, and the offensive targets the lame-duck congressional session opening November 9.</p>
+<h2><span class="en">RENAMING</span>Renaming Is Part of the Narrative War</h2><p>Data centers are increasingly unwelcome in American communities; electricity use, water use, noise and land prices are concrete grievances. Renaming them compute campuses cannot reduce a single kilowatt-hour, but it can change the frame of debate. A warehouse is a cost; a campus is an asset. Change the word and the positions shift.</p><p>OpenAI itself acknowledges the rename is deliberate. Axios calls it a deliberately provocative rebrand, designed to make the public discuss what a campus brings before what it consumes.</p><h2><span class="en">COMMUNITY COMPACTS</span>Community Compacts Are the Collateral for the Rename</h2><p>A rename alone is not enough, so OpenAI paired it with two things: community compacts and state legislation, giving residents a formal voice and writing benefit-sharing into rules. That turns the rename from a slogan into negotiable terms.</p><p>Whether it can be delivered depends on projects beyond the Pike County showcase. Showcases always look good; the question is whether the second and third projects follow the same compact.</p><h2><span class="en">LAME DUCK WINDOW</span>The Window Is the Lame-Duck Session</h2><p>The offensive targets the lame-duck session from November 9 to January 3. With the old Congress departing and the new one not yet seated, it is the window when policy proposals are most easily heard and hardest to vote down. OpenAI is pushing three months of stockpiled proposals out at once to seize that window.</p><p>The risk is equally clear. If election results differ from expectations, the proposals&#x27; priority can change overnight. A policy offensive&#x27;s success is ultimately decided not by the launch event, but by congressional seats.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM WAREHOUSE TO CAMPUS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From warehouses to campuses</div><div class="desc">Change the word, and the positions in the debate change.</div></div><div class="metric"><div class="lab">FROM BUILDING TO PACKAGE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From single construction projects to a policy package</div><div class="desc">The rename is pushed together with community compacts and state legislation.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The Name Is the Frame; the Compact Is the Collateral</h2><p>Tokenta Signal&#x27;s judgment: OpenAI is fighting not a product war but a definition war. Whoever defines what a data center is first takes the initiative in community negotiations.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The limits of this report: this is a plan reported by Axios and relayed by TechCrunch; no formal OpenAI announcement has been seen. &#x27;AI compute campus&#x27; has no official definition, and a rename by itself does not change a project&#x27;s electricity use, water use or noise.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original confirms, per Axios relayed by TechCrunch on November 1, that OpenAI plans a post-midterm policy offensive, rebranding data centers as AI compute campuses and pushing mandatory safety speed limits for the most powerful models and community compacts.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" target="_blank" rel="noopener">OpenAI might rebrand its data centers as ‘AI compute campuses’ ↗</a><br>techcrunch.com · 2026-11-01 · TechCrunch report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>TechCrunch: OpenAI might rebrand its data centers as ‘AI compute campuses’<br><a href="https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/" target="_blank" rel="noopener">https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/</a></li><li>AI Weekly: OpenAI Pitches Mandatory AI &#x27;Speed Limits&#x27; in Post-Midterm Push<br><a href="https://aiweekly.co/alerts/openai-pitches-mandatory-ai-speed-limits-in-post-midterm-push" target="_blank" rel="noopener">https://aiweekly.co/alerts/openai-pitches-mandatory-ai-speed-limits-in-post-midterm-push</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-ndrc-ai-lifecycle-law/">China Accelerates Full-Lifecycle AI Legislation: DeepSeek, Moonshot AI and Alibaba in Scope</a> <span class="meta">ISSUE 172</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-anthropic-election-war-rooms/">OpenAI and Anthropic set up election war rooms for the first time: the midterm election day duty test</a> <span class="meta">ISSUE 171</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">EU Court Adviser: Chatbots Reusing News May Infringe; Training Is the Exception</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nyt-sues-brave/">The New York Times Sues Brave Over the 30 Billion Pages in Its Index</a> <span class="meta">ISSUE 143</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

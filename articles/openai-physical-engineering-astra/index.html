@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底 — Tokenta Signal</title><meta name="description" content="OpenAI 2026-11-03 官方博客称，GPT-6 Astra 在无人工直接编辑设计输出的前提下，设计了一台可与 Codex 对话的测试设备：两名团队成员不到一周完成设计，合同制造商不到一个月做出小批量原型。博客同时承认，量产仍需多轮评审，Astra 未能始终考虑到生产限制、公差与装配细节。同期披露的合作包括与 Chip Ganassi Racing 的实体工程扩展（把零件三维扫描转为可编辑 CAD 模型与制造图纸），以及与 Mazda 的新车空气动力学与碰撞安全研究合作；BenchCAD 2.0 中较新内部模型平均 0.875，GPT-6 Astra 最高推理设置下为 0.594。">
+<title>OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production — Tokenta Signal</title><meta name="description" content="OpenAI&#x27;s official blog of November 3, 2026 says GPT-6 Astra designed a test device that can talk to Codex without humans directly editing the design output: two team members completed the design in under a week, and a contract manufacturer built a small-batch prototype in under a month. The blog also concedes that production still requires multiple review rounds, and that Astra did not consistently account for production constraints, tolerances and assembly details. Partnerships disclosed at the same time include an expanded physical-engineering collaboration with Chip Ganassi Racing (converting 3D scans of parts into editable CAD models and manufacturing drawings) and a new Mazda research collaboration on vehicle aerodynamics and crash safety. On BenchCAD 2.0, a newer internal model averaged 0.875 against GPT-6 Astra&#x27;s 0.594 at its highest reasoning setting.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="OpenAI&#x27;s official blog of November 3, 2026 says GPT-6 Astra designed a test device that can talk to Codex without humans directly editing the design output: two team members completed the design in under a week, and a contract manufacturer built a small-batch prototype in under a month. The blog also concedes that production still requires multiple review rounds, and that Astra did not consistently account for production constraints, tolerances and assembly details. Partnerships disclosed at the same time include an expanded physical-engineering collaboration with Chip Ganassi Racing (converting 3D scans of parts into editable CAD models and manufacturing drawings) and a new Mazda research collaboration on vehicle aerodynamics and crash safety. On BenchCAD 2.0, a newer internal model averaged 0.875 against GPT-6 Astra&#x27;s 0.594 at its highest reasoning setting.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
-<h1>OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</h1>
-<p class="deck">OpenAI 2026-11-03 官方博客称，GPT-6 Astra 在无人工直接编辑设计输出的前提下，设计了一台可与 Codex 对话的测试设备：两名成员不到一周完成设计，合同制造商不到一个月做出小批量原型，但量产仍需多轮评审，Astra 未能始终考虑到生产限制、公差与装配细节；同期披露与 Chip Ganassi Racing 的实体工程合作扩展，以及与 Mazda 的新车空气动力学与碰撞安全研究合作；BenchCAD 2.0 中较新内部模型平均 0.875，GPT-6 Astra 最高推理设置下为 0.594。</p>
-<div class="meta">ISSUE 184 · 2026-11-03 · SOURCE / OpenAI 官方博客 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">OPENAI × ASTRA × PHYSICAL ENGINEERING</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>OpenAI Sends Astra Into Physical Engineering: a Device in a Week, With Humans Still Backstopping Production</h1>
+<p class="deck">OpenAI&#x27;s official blog of November 3, 2026 says GPT-6 Astra designed a test device that can talk to Codex without humans directly editing the design output: two team members completed the design in under a week and a contract manufacturer built a small-batch prototype in under a month, but production still requires multiple review rounds and Astra did not consistently account for production constraints, tolerances and assembly details. Disclosed at the same time were an expanded physical-engineering collaboration with Chip Ganassi Racing and a new Mazda research collaboration on vehicle aerodynamics and crash safety. On BenchCAD 2.0, a newer internal model averaged 0.875 against GPT-6 Astra&#x27;s 0.594 at its highest reasoning setting.</p>
+<div class="meta">ISSUE 184 · 2026-11-03 · SOURCE / <b>OpenAI official blog</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × ASTRA × PHYSICAL ENGINEERING</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：OpenAI 2026-11-03 发布官方博客，披露 Astra 设计测试设备、BenchCAD 2.0 评分，以及 Chip Ganassi Racing 与 Mazda 两项合作。</li><li><b>02</b>THE CONFIRMATION：官方博客全文与 Unite.AI 同日报道双双打开核对，核心事实、合作方与数字一致，数字口径为 OpenAI 自报。</li><li><b>03</b>THE WATCHPOINT：Mazda 风阻方案能否落到真实车型，扫描转图纸能否减少人工返工，下一代模型在制造约束下的评审轮次是否缩短。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>OpenAI 2026-11-03 在官方博客《Accelerating engineering for the physical world》中称，正在把模型能力推向实体产品工程：机械、电气与端到端系统设计，从图纸、仿真设置到跨专业协调，目标是让工程师有更多时间探索想法、改进设计。</p><p>核心实验是一台用 GPT-6 Astra 设计的测试设备：不经团队成员直接编辑设计输出，由 Astra 定义功能需求，设计外观、机壳与内部支撑结构，选电气元件并设计印制电路板（含元件布局与布线），设计用户界面，并生成连接 Codex 所需的固件与软件集成。两名团队成员以副业方式在不到一周内完成设计，合同制造商在不到一个月内做出小批量原型。</p><p>OpenAI 同时承认量产关还没过：为达到可制造状态仍需多轮评审与迭代，Astra 未能始终考虑到制造商的生产限制、公差与装配细节，这些缺口被用来界定未来模型需要改进的方向。</p><p>内部采用与评测方面，OpenAI 称自 2 月以来，其硬件与基础设施团队的模型用量按 token 计增长了 23 倍；BenchCAD 2.0 测试中，较新的内部模型平均得分为 0.875，而 GPT-6 Astra 在最高推理设置下为 0.594，该测试要求模型重建三维零件与装配、识别电路板连接。</p><p>两项行业合作同步披露：与 Chip Ganassi Racing 的合作扩展到实体工程与原型制作，测试把现有零件的三维扫描转为可编辑 CAD 模型与二维制造图纸，尤其适用于原始设计文件缺失的情形，由车队工程师评审准确性与可制造性；与 Mazda 的新研究合作则由 OpenAI 研究与前沿部署工程团队，对接 Mazda 空气动力学与碰撞安全工程师，用气流与结构行为仿真探索新车设计，Astra 生成替代车头造型、运行气流仿真并优化有潜力的方案以降低风阻。</p>
-<h2><span class="en">WHY IT MATTERS</span>设计能一口气做完，量产仍要人工兜底</h2><p>这篇博客的诚实之处在于把两件事分开写：一周出设计、小批量原型很快能做出来，这是生成能力的证明；但生产限制、公差与装配细节仍需多轮人工评审，这是量产能力的边界。两者之间隔着的，正是工程从演示走向产品的距离。</p><p>对读者的判断意义在于，不要把原型速度读成制造能力。真正可验证的下一步不是下一台更漂亮的原型，而是 Astra 在同一类制造约束下，能否一次通过评审，或者评审轮次是否在缩短。</p><h2><span class="en">WHY IT MATTERS</span>BenchCAD 分数好看，但只测了设计这一段</h2><p>0.875 对 0.594 的差距看起来很大，但测试范围要讲清楚：BenchCAD 2.0 测的是重建三维零件、装配与电路板连接，属于设计段的能力，不包括成本、供应链、可靠性与量产工艺。把这个分数外推成整条工程链的提速，是博客没有说、也不应替它说的话。</p><p>同样，硬件团队 token 用量增长 23 倍，量的是模型消耗，不是工程产出或省下的工时。OpenAI 邀请工程公司与软件厂商合作，说明它自己也把这件事定位在探索合作，而不是已交付的解决方案。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>信号在量产边界，不在原型速度</h2><p>Tokenta Signal 判断：这篇博客值得收录，不是因为一周做出一台设备，而是因为 OpenAI 自己把量产缺口写进了同一篇文章。原型速度证明的是生成能力，评审轮次与公差、装配细节才是实体工程的硬门槛。后续的验证点也很具体：Mazda 的风阻优化能否落到真实车型，Chip Ganassi Racing 的扫描转图纸能否减少人工返工，以及下一代模型在同样制造约束下的评审轮次是否缩短。没有这些，今天的发布只能算能力展示，不能算工程交付。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 OpenAI 2026-11-03 官方博客为准，全文已直接打开核验，Unite.AI 同日报道已打开比对，核心事实与数字一致。需要说明的是，所有数字均为 OpenAI 自报：硬件团队 token 用量 23 倍、BenchCAD 2.0 的 0.875 与 0.594 分，均未见独立基准复现；BenchCAD 只测设计任务，不等于量产就绪；Mazda 与 Chip Ganassi Racing 均为研究合作，不是已量产的产品；测试设备是小批量原型，不是上市商品。本文只做摘要与链接，不转载博客全文与图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>OpenAI 2026-11-03 官方博客全文已直接打开核验，Unite.AI 同日报道已打开比对，核心事实、合作方与数字一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://openai.com/index/accelerating-engineering-for-the-physical-world/" target="_blank" rel="noopener">Accelerating engineering for the physical world ↗</a><br>openai.com · 2026-11-03 · OpenAI 官方博客</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>OpenAI 官方博客<br><a href="https://openai.com/index/accelerating-engineering-for-the-physical-world/" target="_blank" rel="noopener">https://openai.com/index/accelerating-engineering-for-the-physical-world/</a></li><li>Unite.AI 报道<br><a href="https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/" target="_blank" rel="noopener">https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">腾讯 Hy4 正式发布：首加视觉与电脑操作，训练中剔除进攻性网络安全内容</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">特斯拉韩国 FSD 遭投诉：仅约两成车辆可合法使用，收费却已收三年</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-internal-security-warnings/">路透：OpenAI 员工多年来警告内部安全漏洞，8 月四分之一生产工程师被调去补安全</a> <span class="meta">ISSUE 183</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ANNOUNCEMENT — OpenAI published its official blog on November 3, 2026, disclosing Astra&#x27;s design of the test device, BenchCAD 2.0 scores, and the Chip Ganassi Racing and Mazda collaborations.</li><li><b>02</b>THE CONFIRMATION — The full official blog and Unite.AI&#x27;s same-day report were both opened and checked; core facts, partners and figures are consistent, with figures as self-reported by OpenAI.</li><li><b>03</b>THE WATCHPOINT — Whether Mazda&#x27;s drag-reduction options reach real vehicles, whether scan-to-drawing conversion reduces manual rework, and whether the next model generation needs fewer review rounds under manufacturing constraints.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>OpenAI said in its official blog &quot;Accelerating engineering for the physical world&quot; on November 3, 2026 that it is pushing model capability into physical-product engineering — mechanical, electrical and end-to-end system design, from drawings and simulation setup to cross-discipline coordination — with the goal of giving engineers more time to explore ideas and improve designs.</p><p>The core experiment was a test device designed by GPT-6 Astra. Without team members directly editing the design output, Astra defined the functional requirements, designed the enclosure and internal support structures, selected electrical components and designed the printed circuit board including component placement and routing, designed the user interface, and generated the firmware and software integration needed to connect to Codex. Two team members completed the design as a side project in under a week, and a contract manufacturer produced a small-batch prototype in under a month.</p><p>OpenAI also acknowledged that the manufacturing gate has not been passed: reaching a manufacturable state still required multiple rounds of review and iteration, and Astra did not consistently account for the manufacturer&#x27;s production constraints, tolerances and assembly details. Those gaps are being used to define what future models must improve.</p><p>On internal adoption and evaluation, OpenAI said model usage by its hardware and infrastructure teams has grown 23-fold by token count since February. On BenchCAD 2.0, a newer internal model averaged 0.875, while GPT-6 Astra scored 0.594 at its highest reasoning setting; the test asks models to reconstruct 3D parts and assemblies and identify circuit-board connections.</p><p>Two industry partnerships were disclosed at the same time. The Chip Ganassi Racing collaboration expands into physical engineering and prototyping, testing the conversion of 3D scans of existing parts into editable CAD models and 2D manufacturing drawings — particularly useful where original design files are missing — with team engineers reviewing accuracy and manufacturability. A new research collaboration with Mazda pairs OpenAI&#x27;s research and frontier deployment engineering teams with Mazda&#x27;s aerodynamics and crash-safety engineers, using airflow and structural-behavior simulation to explore new vehicle designs; Astra generates alternative front-end styling, runs airflow simulations and optimizes promising options to cut drag.</p>
+<h2><span class="en">WHY IT MATTERS</span>Design can be done in one pass; production still needs humans as backstop</h2><p>The honesty of this blog post lies in writing two things separately: a design in a week and a quick small-batch prototype prove generative capability, while production constraints, tolerances and assembly details still needing multiple rounds of human review mark the boundary of manufacturing capability. The distance between the two is exactly the distance from demo to product in engineering.</p><p>For readers, the implication is not to read prototype speed as manufacturing capability. The genuinely verifiable next step is not a prettier prototype, but whether Astra can pass review in one pass under the same class of manufacturing constraints — or whether the number of review rounds is shrinking.</p><h2><span class="en">WHY IT MATTERS</span>BenchCAD scores look strong but test only the design segment</h2><p>The 0.875 versus 0.594 gap looks large, but the test&#x27;s scope needs to be clear: BenchCAD 2.0 measures reconstruction of 3D parts, assemblies and circuit-board connections — design-stage capability. It does not include cost, supply chain, reliability or production process. Extrapolating that score into a speed-up across the whole engineering chain is something the blog does not claim and should not be made to claim.</p><p>Likewise, the hardware team&#x27;s 23-fold growth in token usage measures model consumption, not engineering output or hours saved. OpenAI&#x27;s invitation to engineering firms and software vendors to collaborate signals that it positions this work as exploratory partnership, not a delivered solution.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The signal is at the production boundary, not in prototype speed</h2><p>Tokenta Signal&#x27;s judgment: this blog post earns its place not because a device was built in a week, but because OpenAI wrote the production gaps into the same article. Prototype speed proves generative capability; review rounds, tolerances and assembly details are the hard gates of physical engineering. The verification points ahead are concrete: whether Mazda&#x27;s drag-reduction options reach real vehicles, whether Chip Ganassi Racing&#x27;s scan-to-drawing workflow reduces manual rework, and whether the next model generation needs fewer review rounds under the same manufacturing constraints. Without those, today&#x27;s release counts as a capability demonstration, not an engineering delivery.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on OpenAI&#x27;s official blog of November 3, 2026, opened and verified in full; Unite.AI&#x27;s same-day report was opened and compared, and core facts and figures match. Note that all figures are self-reported by OpenAI: the 23-fold growth in the hardware team&#x27;s token usage and the BenchCAD 2.0 scores of 0.875 and 0.594 have not been independently reproduced as benchmarks. BenchCAD tests design tasks only and is not equivalent to production readiness. The Mazda and Chip Ganassi Racing collaborations are research partnerships, not products in production, and the test device is a small-batch prototype, not a commercial product. This article is a summary with links only and does not reproduce the blog&#x27;s full text or images. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>OpenAI&#x27;s official blog of November 3, 2026 was opened and verified in full; Unite.AI&#x27;s same-day report was opened and compared, with core facts, partners and figures consistent.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://openai.com/index/accelerating-engineering-for-the-physical-world/" target="_blank" rel="noopener">Accelerating engineering for the physical world ↗</a><br>openai.com · 2026-11-03 · OpenAI official blog</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>OpenAI official blog<br><a href="https://openai.com/index/accelerating-engineering-for-the-physical-world/" target="_blank" rel="noopener">https://openai.com/index/accelerating-engineering-for-the-physical-world/</a></li><li>Unite.AI report<br><a href="https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/" target="_blank" rel="noopener">https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-release/">Tencent&#x27;s Hy4 Officially Launches: Vision and Computer Use Added, Offensive Cybersecurity Content Removed From Training</a> <span class="meta">ISSUE 194</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-korea-fsd-complaint/">Complaint Over Tesla&#x27;s FSD in South Korea: Only About a Fifth of Cars Can Legally Use It, Yet Fees Were Charged for Three Years</a> <span class="meta">ISSUE 192</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../irregular-ceo-human-error-escapes/">Irregular CEO Publicly Takes the Blame for the First Time: Model Escapes Were Human Misconfiguration, Fixed the Same Day</a> <span class="meta">ISSUE 191</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../indiaai-eka1-dhir/">India puts three home-grown models on the shelf at once: EKA-1 and Dhīr lead with offline deployment as sovereign models go on sale</a> <span class="meta">ISSUE 182</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

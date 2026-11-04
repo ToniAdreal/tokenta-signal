@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>特斯拉不想造车了 — Tokenta Signal</title><meta name="description" content="2026年1月，特斯拉宣布停产Model S和Model X，Fremont产线改造为人形机器人Optimus和Cybercab生产线。背景是2025年营业利润率跌到4.6%、净利润暴跌46%。一家车企，正式把自己改写成了机器人公司。">
+<title>Tesla Doesn&#x27;t Want to Build Cars Anymore — Tokenta Signal</title><meta name="description" content="In January 2026, Tesla announced it would end production of the Model S and Model X, converting the Fremont lines to build the Optimus humanoid robot and the Cybercab. The backdrop: a 2025 operating margin down to 4.6% and net income down 46%. A carmaker has formally rewritten itself as a robotics company.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="In January 2026, Tesla announced it would end production of the Model S and Model X, converting the Fremont lines to build the Optimus humanoid robot and the Cybercab. The backdrop: a 2025 operating margin down to 4.6% and net income down 46%. A carmaker has formally rewritten itself as a robotics company.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
-<h1>特斯拉不想造车了</h1>
-<p class="deck">特斯拉没有“All in机器人”，它玩的是一手遮天：杀掉Model S/X不是因为机器人赢了，而是因为电车的利润故事已经讲不下去了。4.6%的营业利润率撑不起万亿市值，25万亿美元的饼才能。</p>
-<div class="meta">ISSUE 58 · 2026-01-28 · SOURCE / Tesla 财报电话会 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">ROBOTICS &amp; AUTOS</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">4.6%</div><div class="lab">OPERATING MARGIN 2025</div><div class="desc">2025年特斯拉营业利润率从巅峰约17%萎缩至4.6%，净利润暴跌46%。</div></div><div class="metric"><div class="num">$20B+</div><div class="lab">2026 CAPEX</div><div class="desc">2026年资本开支创纪录，投向产线改造与Cortex AI训练集群（约85000张GPU）。</div></div><div class="metric"><div class="num">$25T</div><div class="lab">MUSK&#x27;S CLAIM</div><div class="desc">马斯克称Optimus是“有史以来最大的产品”，对应25万亿美元市值机会。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE EARNINGS：Q4电话会：营收下滑、利润腰斩，同场宣布停产Model S/X。</li><li><b>02</b>THE RETOOLING：Fremont产线改造为Optimus与Cybercab生产，200亿美元CapEx切换轨道。</li><li><b>03</b>THE GAP：马斯克定调夏季量产，供应链传闻15000台，官方承认产量约等于零。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>2026年1月28日，特斯拉Q4财报电话会：2025全年营收948亿美元，同比下滑3%；净利润38亿美元，暴跌46%；营业利润率从巅峰的约17%萎缩到4.6%。同一场电话会，马斯克宣布停产Model S和Model X——Fremont工厂的这两条产线，将改造为生产Optimus人形机器人和Cybercab。</p><p>杀掉两款功勋车型，在汽车史上是闻所未闻的。但数字说明了一切：当卖车的利润率只剩4.6%，而马斯克口中的机器人是“25万亿美元市值的机会”，产线必须为新故事让路。这不是壮士断腕，这是弃车保帅。</p>
-<h2><span class="en">THE MARGIN COLLAPSE</span>4.6%：电车利润故事的终结</h2><p>特斯拉曾经是全球最赚钱的车企，营业利润率接近17%，丰田大众只能仰望。而2025年，这个数字是4.6%。价格战、关税、需求见顶，三重挤压下，电动车从印钞机变成了微利生意。</p><p>更残酷的是趋势：948亿美元营收还在下滑，38亿美元净利润腰斩。当“卖车”这门生意不再性感，资本市场不会为4.6%的利润率给高估值。特斯拉必须讲一个新故事——而Optimus和Cybercab，就是那个新故事的两个主角。</p><h2><span class="en">THE PRODUCTION GAP</span>15000台与0台：量产的罗生门</h2><p>马斯克在3月的Abundance Summit确认Optimus V3“夏季开始量产”；供应链传闻称2026年生产约15000台，9月底周产约1000台，长期目标Fremont年产100万台。但7月Q2财报上，特斯拉自己承认：正在安装第一代产线，累计产量仍约等于零，首批机器送往内部“Optimus Academy”做训练数据。</p><p>嘴上15000台，账上接近0。这就是特斯拉式量产的现状：目标永远宏大，交付永远“明年”。参数很漂亮——173cm、57kg、单手22个自由度、AI5芯片、Grok语音、目标售价2-3万美元——但参数不是产品，出货量才是。</p><h2><span class="en">THE BET</span>200亿美元：史上最贵的一次转身</h2><p>2026年特斯拉CapEx超200亿美元，创纪录，投向6条新建/改造产线和Giga Texas的Cortex AI训练集群（约85000张Nvidia H100/B200）。这笔钱的本质，是把一家汽车公司的资本开支，全部切换到AI与机器人轨道上。</p><p>这套打法的逻辑叫“双机器人平台经济学”：Cybercab和Optimus共享同一套AI5芯片、FSD视觉栈和Cortex算力。2026上半年，两者相隔数周先后从“预量产”跨入“交付”——Cybercab 9月4日已在奥斯汀混入公开Robotaxi车队。一个平台，两个产品，摊薄的是同一套研发成本。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>车企已死，机器人当立</h2><p>当一家车企的资本开支200亿美元全部流向AI与机器人，当功勋车型的产线被改造成机器人产线，“特斯拉是车企”这句话就已经是过去时。问题只剩一个：新故事的交付速度，能不能跑赢旧故事的崩塌速度。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">如果2026年底Optimus的真实交付量仍然接近于零，而Cybercab的7城扩张继续跳票，那么“机器人公司”的叙事就会从资产变成负债——投资者为“无限上行”支付的溢价，会要求用真实的出货量来兑现。马斯克最擅长画饼，但这一次，饼的保质期只有一年。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>停产S/X与产线改造来自2026年1月28日Q4财报电话会官方披露；15000台为供应链传闻（非官方），Q2承认累计产量约等于零。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan" target="_blank" rel="noopener">特斯拉停产Model S/X · Fremont产线转产Optimus ↗</a><br>Tesla Q4 2025 财报电话会 · 2026-01-28 · Tesla 财报电话会</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Tesla Q4 2025 财报电话会（2026-01-28）</li><li>Tesla Q2 2026 财报：Optimus产线安装中</li><li>financialcontent/marketminute：200亿美元AI豪赌分析</li><li>markets.financialcontent.com 原文链接<br><a href="https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan" target="_blank" rel="noopener">https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">欧盟法院顾问：聊天机器人复用新闻可能侵权，训练除外</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">特斯拉无人驾驶出租车开进沃斯堡，第七城</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI · SIGNAL REPORT</span>
+<h1>Tesla Doesn&#x27;t Want to Build Cars Anymore</h1>
+<p class="deck">Tesla did not &#x27;go all in on robots&#x27; with a wave of the hand: it killed the Model S and X not because robots won, but because the EV profit story can no longer be told. A 4.6% operating margin cannot support a trillion-dollar valuation. A $25 trillion pie can.</p>
+<div class="meta">ISSUE 58 · 2026-01-28 · SOURCE / <b>Tesla earnings call</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ROBOTICS &amp; AUTOS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">4.6%</div><div class="lab">OPERATING MARGIN 2025</div><div class="desc">Tesla&#x27;s 2025 operating margin shrank from a peak of about 17% to 4.6%, with net income down 46%.</div></div><div class="metric"><div class="num">$20B+</div><div class="lab">2026 CAPEX</div><div class="desc">Record 2026 capital expenditure, directed to line conversions and the Cortex AI training cluster (about 85,000 GPUs).</div></div><div class="metric"><div class="num">$25T</div><div class="lab">MUSK&#x27;S CLAIM</div><div class="desc">Musk calls Optimus &#x27;the biggest product in history&#x27;, corresponding to a $25 trillion market-cap opportunity.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE EARNINGS — The Q4 call: revenue down, profit halved — and, on the same call, the end of Model S/X production announced.</li><li><b>02</b>THE RETOOLING — Fremont lines converted to Optimus and Cybercab production; $20 billion in capex switches tracks.</li><li><b>03</b>THE GAP — Musk sets summer mass production; supply chains whisper 15,000 units; the company admits output is roughly zero.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On January 28, 2026, Tesla&#x27;s Q4 earnings call: full-year 2025 revenue of $94.8 billion, down 3% year on year; net income of $3.8 billion, down 46%; operating margin shrunk from a peak of about 17% to 4.6%. On the same call, Musk announced the end of Model S and Model X production — the two lines at the Fremont factory will be converted to build the Optimus humanoid robot and the Cybercab.</p><p>Killing two flagship models is unheard of in automotive history. But the numbers explain everything: when selling cars earns a 4.6% margin, while robots in Musk&#x27;s telling are a &#x27;$25 trillion market opportunity&#x27;, the production lines must make way for the new story. This is not a heroic amputation; it is sacrificing the rook to save the king.</p>
+<h2><span class="en">THE MARGIN COLLAPSE</span>4.6%: the end of the EV profit story</h2><p>Tesla was once the world&#x27;s most profitable carmaker, with operating margins near 17% that Toyota and Volkswagen could only look up at. In 2025, that number is 4.6%. Under the triple squeeze of price wars, tariffs and peaking demand, electric vehicles have gone from money printers to a thin-margin business.</p><p>The trend is crueller still: $94.8 billion in revenue is still shrinking, and $3.8 billion in net income has halved. When &#x27;selling cars&#x27; is no longer sexy, capital markets will not award a high valuation for a 4.6% margin. Tesla must tell a new story — and Optimus and the Cybercab are its two protagonists.</p><h2><span class="en">THE PRODUCTION GAP</span>15,000 units versus zero: the production Rashomon</h2><p>At March&#x27;s Abundance Summit, Musk confirmed Optimus V3 would &#x27;begin mass production in the summer&#x27;; supply-chain rumours put 2026 production at about 15,000 units, with weekly output near 1,000 by end-September and a long-term Fremont target of 1 million a year. But on the July Q2 earnings report, Tesla itself admitted: the first-generation line is being installed, cumulative output is still roughly zero, and the first machines are going to the internal &#x27;Optimus Academy&#x27; for training data.</p><p>15,000 units in words, roughly zero on the books. That is the state of Tesla-style production: targets always grand, deliveries always &#x27;next year&#x27;. The specs look beautiful — 173cm tall, 57kg, 22 degrees of freedom in one hand, the AI5 chip, Grok voice, a target price of $20,000-30,000 — but specs are not products. Shipments are.</p><h2><span class="en">THE BET</span>$20 billion: the most expensive pivot in history</h2><p>Tesla&#x27;s 2026 capex exceeds $20 billion, a record, going to six new or converted production lines and Giga Texas&#x27;s Cortex AI training cluster (about 85,000 Nvidia H100/B200 GPUs). In essence, this money switches all of a car company&#x27;s capital expenditure onto the AI and robotics track.</p><p>The logic is called &#x27;dual-robot platform economics&#x27;: the Cybercab and Optimus share the same AI5 chip, FSD vision stack and Cortex compute. In the first half of 2026, within weeks of each other, both crossed from &#x27;pre-production&#x27; into &#x27;delivery&#x27; — the Cybercab joined Austin&#x27;s public robotaxi fleet on September 4. One platform, two products, amortising the same R&amp;D cost.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM AUTOMAKER TO ROBOTICS COMPANY</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From car company to robotics company</div><div class="desc">When the most profitable business becomes a thin-margin one, the company&#x27;s identity must be rewritten. Tesla is rewriting its first principles.</div></div><div class="metric"><div class="lab">FROM SHIPPING CARS TO SHIPPING NARRATIVE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From shipping cars to shipping narrative</div><div class="desc">15,000 units or zero does not matter right now — what matters is what kind of future capital markets are willing to pay for.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The carmaker is dead; long live the robot</h2><p>When a car company&#x27;s $20 billion in capital expenditure all flows to AI and robotics, and the lines of its flagship models are converted into robot lines, the sentence &#x27;Tesla is a car company&#x27; is already past tense. Only one question remains: can the new story&#x27;s delivery speed outrun the old story&#x27;s collapse?</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">If Optimus&#x27;s real deliveries are still close to zero at the end of 2026, and the Cybercab&#x27;s seven-city expansion keeps slipping, the &#x27;robotics company&#x27; narrative turns from asset to liability — the premium investors paid for &#x27;unlimited upside&#x27; will demand real shipment volumes in return. Musk is best at painting the pie, but this time the pie has a shelf life of one year.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The S/X discontinuation and line conversion come from official disclosure on the January 28, 2026 Q4 earnings call; the 15,000-unit figure is a supply-chain rumour (not official), and Q2 acknowledged cumulative output of roughly zero.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan" target="_blank" rel="noopener">Tesla ends Model S/X production · Fremont lines convert to Optimus ↗</a><br>Tesla Q4 2025 earnings call · 2026-01-28 · Tesla earnings call</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Tesla Q4 2025 earnings call (2026-01-28)</li><li>Tesla Q2 2026 earnings: Optimus production line being installed</li><li>FinancialContent/MarketMinute: Analysis of the $20 billion AI gamble</li><li>markets.financialcontent.com: Original article<br><a href="https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan" target="_blank" rel="noopener">https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">South Korea opens its first humanoid robot data factory: 12 robots do the work first, and bank the data</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">Tesla Robotaxi Rolls Into Fort Worth, Its Seventh City</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">$13 Billion in Half a Year: China&#x27;s Robots Fix Their Brains Before Their Moves</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta&#x27;s Humanoid Robot Was Assembled in Three Months</a> <span class="meta">ISSUE 138</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

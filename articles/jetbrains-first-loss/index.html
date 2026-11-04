@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>营收创新高，史上首次亏损 — Tokenta Signal</title><meta name="description" content="JetBrains 2025财年营收160.08亿克朗创纪录、同比增长6.3%，却交出有记录以来第一次年度净亏损：3.15亿克朗。汇兑损失15.16亿克朗是最大单项，但经营利润本身也暴跌63.2%，员工成本上涨34.2%，投资现金流从-0.83亿骤降到-4.69亿美元。HN上583分537条评论都在问同一个问题：钱去哪了？">
+<title>Record Revenue. First Loss in Its History. — Tokenta Signal</title><meta name="description" content="JetBrains&#x27; fiscal 2025 revenue hit a record 16.008 billion koruna, up 6.3%, yet it posted its first annual net loss on record: 315 million koruna. A 1.516 billion koruna FX loss was the largest single item, but operating profit also plunged 63.2%, staff costs rose 34.2%, and investing cash flow fell from -$83 million to -$469 million. Across 583 points and 537 comments, Hacker News asked one question: where did the money go?">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="JetBrains&#x27; fiscal 2025 revenue hit a record 16.008 billion koruna, up 6.3%, yet it posted its first annual net loss on record: 315 million koruna. A 1.516 billion koruna FX loss was the largest single item, but operating profit also plunged 63.2%, staff costs rose 34.2%, and investing cash flow fell from -$83 million to -$469 million. Across 583 points and 537 comments, Hacker News asked one question: where did the money go?">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">MARKETS & INDUSTRY / 市场与产业 · SIGNAL ANALYSIS</span>
-<h1>营收创新高，史上首次亏损</h1>
-<p class="deck">JetBrains第一次亏损，亏的不是产品，是心态。营收纪录与净亏损并存，钱流向了未披露的恐慌性投入——一家以盈利著称的公司，正在为“怕掉队”买单。</p>
-<div class="meta">ISSUE 55 · 2026 · SOURCE / Hacker News 讨论串 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">DEVELOPER TOOLS</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">315M</div><div class="lab">NET LOSS (CZK)</div><div class="desc">净亏损3.15亿捷克克朗，有记录以来第一次年度净亏损；营收160.08亿克朗反创新高。</div></div><div class="metric"><div class="num">-63.2%</div><div class="lab">OPERATING PROFIT</div><div class="desc">经营利润暴跌63.2%——汇兑损失15.16亿克朗之外，经营端本身也在恶化。</div></div><div class="metric"><div class="num">-$4.69B</div><div class="lab">INVESTING CASH FLOW</div><div class="desc">投资现金流从-0.83亿美元骤降到-4.69亿；员工成本上涨34.2%——钱去哪了，公司没说。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE LEGEND：2000年创立，零外部融资、常年盈利，1140万月活用户。</li><li><b>02</b>THE RECORD：2025财年营收160.08亿克朗、同比+6.3%，创下纪录。</li><li><b>03</b>THE LOSS：同期净亏损3.15亿克朗，史上第一次；经营利润暴跌63.2%。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>数字来自捷克公司注册处的公开财报（经helgilibrary.com整理、HN网友深挖）：2025财年，JetBrains净亏损3.15亿捷克克朗——有记录以来第一次年度净亏损；同期营收160.08亿克朗，同比增长6.3%，创下纪录。营收曲线没变，利润没了。</p><p>亏损拆解：克朗走强带来15.16亿克朗汇兑损失，是最大单项；但“只是会计账面”的说法不完全成立——经营利润本身暴跌63.2%，经营端恶化约12.91亿克朗。税前恶化中约61%来自财务项、39%来自经营端。（注：这组拆分来自网友对捷克语财报的翻译解读，非官方口径。）</p>
-<h2><span class="en">WHERE THE MONEY WENT</span>钱去哪了：两张表</h2><p>一张是人力：员工成本（staff expenses）上涨34.2%，公司在疯狂招人。另一张是投资：投资现金流从-0.83亿美元骤降到-4.69亿美元。HN最高赞的推测直白得刺耳：“营收曲线没变，成本也没爆炸——他们一定是把钱砸进了一个大东西里”，读起来“像在把能烧的钱漫无目的地烧进某个‘陪跑型’LLM无底洞”。</p><p>必须打个标记：这只是网友从现金流数字反推的推测，JetBrains从未披露资金具体投向，也没有任何官方回应。但一家零外部融资、常年盈利的公司，第一次亏损就亏在“投资”和“招人”上，这个方向大概率错不了。</p><h2><span class="en">THE ANXIETY SPEND</span>被自己的AI焦虑打败</h2><p>反共识的点在这里：JetBrains不是被AI打败的，是被自己的AI焦虑打败的。IDE的基本盘还在——1140万月活用户（2023年数据），营收还在涨。它怕的是另一件事：有HN用户说，其所在的财富200强公司，现在每名开发者每月花500美元买token（一年6000美元），更夸张的雇主每人每年花5万美元买token。这笔钱正在流向别处。</p><p>于是它开始守：把RustRover等改为非商业免费、统一IntelliJ下载包，被解读为防御VS Code的守势。但守基本盘要花钱，追AI更要花钱。当一家以“抠门式盈利”著称的公司开始恐慌性投入，亏损就成了焦虑的发票。</p><h2><span class="en">THE HN VERDICT</span>583分537条评论：程序员在吵什么</h2><p>这条新闻在Hacker News 23小时内冲到583分、537条评论——程序员社区很少为一家公司的财报吵成这样。主流分成两派：一派认为“营收还在涨，只是把赚的钱all in了某个LLM无底洞”，属于战略性烧钱；另一派质疑它在AI编程时代押错了方向，VS Code加本地小模型正在蚕食IDE基本盘。</p><p>两派其实说的是同一件事：JetBrains的护城河（重型IDE）正在被AI编程范式绕过去。它可以烧钱追，但追一个自己不擅长的游戏，烧的是老本。3.15亿克朗的亏损相对160亿营收不算伤筋动骨，真正的问题是：这笔钱烧完，焦虑会消失吗？</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>焦虑是最贵的成本项</h2><p>财报上最贵的一行从来不是工资，是恐惧。JetBrains用3.15亿克朗证明：在AI时代，杀死一家好公司的不一定是对手，可能是它自己对“掉队”的想象。当“零融资、常年盈利”的传奇开始为焦虑买单，传奇就变成了警示。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">营收创新高还能首次亏损，说明JetBrains的基本盘没塌；但投资现金流从-0.83亿跌到-4.69亿美元，说明它的方向感塌了。钱可以再赚，怕掉队的病，烧钱治不好。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>HN 583分、537条评论热议：网友深挖捷克财报，汇兑损失15.16亿克朗、员工成本上涨34.2%、投资现金流骤降至-4.69亿美元；资金具体投向公司未披露。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://news.ycombinator.com/item?id=49977072" target="_blank" rel="noopener">JetBrains reported a net financial loss — first time in its history ↗</a><br>news.ycombinator.com · Hacker News 讨论串</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Hacker News：JetBrains reported a net financial loss, first time in its history（583分/537评论）</li><li>laxima.tech：JetBrains 首次净亏损事件摘要</li><li>helgilibrary.com 整理的捷克公司注册处公开财报（经HN网友翻译解读）</li><li>news.ycombinator.com 原文链接<br><a href="https://news.ycombinator.com/item?id=49977072" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=49977072</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta 首笔欧元债开簿：六档、期限最长 38 年（flash 190 更新）</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta 150 亿美元债为 AI 基建融资：利差较上一轮走阔，欧元部分待定价</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista 三季度营收 36.6 亿美元增 58.5%：IPO 以来最快增速，AI 网络成主引擎</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block 三季度毛利 32.4 亿美元增 22%：Cash App 领涨，上调全年指引并首次预告 AI 工具收入</a> <span class="meta">ISSUE 188</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>Record Revenue. First Loss in Its History.</h1>
+<p class="deck">JetBrains&#x27; first loss was not lost on product; it was lost on mindset. Record revenue coexists with a net loss, and the money flowed into undisclosed panic investment — a company famous for profitability is now paying for its fear of falling behind.</p>
+<div class="meta">ISSUE 55 · 2026 · SOURCE / <b>Hacker News discussion thread</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">DEVELOPER TOOLS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">315M</div><div class="lab">NET LOSS (CZK)</div><div class="desc">A net loss of 315 million Czech koruna, the first annual net loss on record; revenue of 16.008 billion koruna hit a record high instead.</div></div><div class="metric"><div class="num">-63.2%</div><div class="lab">OPERATING PROFIT</div><div class="desc">Operating profit plunged 63.2% — beyond the 1.516 billion koruna FX loss, the operating side itself deteriorated.</div></div><div class="metric"><div class="num">-$4.69B</div><div class="lab">INVESTING CASH FLOW</div><div class="desc">Investing cash flow plunged from -$83 million to -$469 million; staff costs rose 34.2% — where the money went, the company has not said.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE LEGEND — Founded in 2000, zero external funding, profitable for years, 11.4 million monthly active users.</li><li><b>02</b>THE RECORD — Fiscal 2025 revenue of 16.008 billion koruna, up 6.3% year on year — a record.</li><li><b>03</b>THE LOSS — A net loss of 315 million koruna in the same period, the first ever; operating profit plunged 63.2%.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>The figures come from public filings at the Czech company registry (compiled by helgilibrary.com and dug out by Hacker News users): in fiscal 2025, JetBrains posted a net loss of 315 million Czech koruna — its first annual net loss on record. Revenue over the same period was 16.008 billion koruna, up 6.3% year on year, a record high. The revenue curve did not change; the profit disappeared.</p><p>Breaking the loss down: a stronger koruna produced a 1.516 billion koruna foreign-exchange loss, the largest single item. But the &#x27;just accounting&#x27; defence does not fully hold — operating profit itself fell 63.2%, with the operating side deteriorating by roughly 1.291 billion koruna. Of the pre-tax deterioration, about 61% came from financial items and 39% from operations. (Note: this split comes from community translations of the Czech-language filings, not an official company breakdown.)</p>
+<h2><span class="en">WHERE THE MONEY WENT</span>Where the money went: two statements</h2><p>One statement is people: staff expenses rose 34.2% as the company hired aggressively. The other is investment: investing cash flow plunged from -$83 million to -$469 million. The top-voted speculation on HN was blunt to the point of discomfort: &#x27;The revenue curve didn&#x27;t change, costs didn&#x27;t explode — they must have poured the money into something big&#x27;, reading &#x27;like aimlessly burning whatever cash they could burn into some also-ran LLM money pit&#x27;.</p><p>A caveat is required: this is community speculation reverse-engineered from cash-flow figures. JetBrains has never disclosed where the money went and has made no official response. But when a company with zero external funding and a long record of profitability posts its first loss, and the loss sits in &#x27;investment&#x27; and &#x27;hiring&#x27;, the direction is very likely right.</p><h2><span class="en">THE ANXIETY SPEND</span>Beaten by its own AI anxiety</h2><p>The contrarian point is this: JetBrains was not beaten by AI. It was beaten by its own AI anxiety. The IDE base is intact — 11.4 million monthly active users (2023 data) and revenue still growing. What it fears is something else: one HN user noted that at their Fortune 200 company, each developer now spends $500 a month on tokens ($6,000 a year), and more extreme employers spend $50,000 per person per year. That money is flowing elsewhere.</p><p>So it started defending: making RustRover and others free for non-commercial use, unifying the IntelliJ download package — read as a defensive posture against VS Code. But defending the base costs money, and chasing AI costs more. When a company famous for &#x27;frugal profitability&#x27; starts panic-spending, the loss becomes the invoice for its anxiety.</p><h2><span class="en">THE HN VERDICT</span>583 points, 537 comments: what programmers are arguing about</h2><p>The story hit 583 points and 537 comments on Hacker News within 23 hours — the programming community rarely fights this hard over a company&#x27;s financials. Two camps dominate: one says revenue is still growing and the company simply went all-in on some LLM money pit, a strategic burn; the other doubts it bet on the wrong direction for the AI-coding era, with VS Code plus local small models eating into the IDE base.</p><p>Both camps are really saying the same thing: JetBrains&#x27; moat — the heavyweight IDE — is being routed around by the AI coding paradigm. It can burn money to catch up, but chasing a game it is not good at burns the old capital. A 315 million koruna loss against 16 billion in revenue is not crippling. The real question is: once this money is burned, will the anxiety be gone?</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM FRUGAL PROFIT TO PANIC SPEND</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From frugal profit to panic spend</div><div class="desc">A company famous for &#x27;zero funding, always profitable&#x27; posted its first loss on hiring and investment — the invoice for fearing it would fall behind.</div></div><div class="metric"><div class="lab">FROM IDE KING TO SIEGE DEFENSE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From IDE king to siege defence</div><div class="desc">RustRover going free and the unified download package: every JetBrains move is defensive, while VS Code plus local small models route around its moat.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Anxiety is the most expensive line item</h2><p>The most expensive line on a financial statement is never salaries. It is fear. JetBrains proved it with 315 million koruna: in the AI era, what kills a good company is not necessarily a competitor, but its own imagination of falling behind. When the legend of &#x27;zero funding, always profitable&#x27; starts paying for anxiety, the legend becomes a warning.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">Record revenue alongside a first-ever loss shows JetBrains&#x27; fundamentals have not collapsed; but investing cash flow plunging from -$83 million to -$469 million shows its sense of direction has. Money can be earned again. The fear of falling behind cannot be cured by burning cash.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Debated on Hacker News with 583 points and 537 comments: users dug into the Czech filings — a 1.516 billion koruna FX loss, staff costs up 34.2%, investing cash flow down to -$469 million; the company has not disclosed where the funds went.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://news.ycombinator.com/item?id=49977072" target="_blank" rel="noopener">JetBrains reported a net financial loss — first time in its history ↗</a><br>news.ycombinator.com · Hacker News discussion thread</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Hacker News: JetBrains reported a net financial loss, first time in its history (583 points / 537 comments)</li><li>laxima.tech: Summary of JetBrains&#x27; first net loss</li><li>Public filings at the Czech company registry compiled by helgilibrary.com (translated and interpreted by HN users)</li><li>news.ycombinator.com: Original article<br><a href="https://news.ycombinator.com/item?id=49977072" target="_blank" rel="noopener">https://news.ycombinator.com/item?id=49977072</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

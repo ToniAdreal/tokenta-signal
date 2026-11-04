@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>机器人按小时出租：Tutor 拿下 7500 万美元 B 轮，a16z 领投 — Tokenta Signal</title><meta name="description" content="Tutor Intelligence 11 月 2 日宣布完成 7500 万美元 B 轮融资，a16z 领投，USV 与 Neo 跟投，累计融资 1.17 亿美元；双臂半人形 Sonny 与轮式机械臂 Cassie 按小时或按件出租、无预付无长期合同，目标 2027 年底签约超 1000 台；机器人尚未完全自主，远程操作员仍参与 directing。">
+<title>Robots by the Hour: Tutor Raises a $75 Million Series B Led by a16z — Tokenta Signal</title><meta name="description" content="Tutor Intelligence announced on November 2 a $75 million Series B led by a16z, with USV and Neo participating, taking total funding to $117 million. The dual-arm semi-humanoid Sonny and the wheeled manipulator Cassie are rented by the hour or by the piece, with no upfront payment and no long-term contract, targeting more than 1,000 robots signed by the end of 2027. The robots are not yet fully autonomous; remote operators still take part in directing them.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Tutor Intelligence announced on November 2 a $75 million Series B led by a16z, with USV and Neo participating, taking total funding to $117 million. The dual-arm semi-humanoid Sonny and the wheeled manipulator Cassie are rented by the hour or by the piece, with no upfront payment and no long-term contract, targeting more than 1,000 robots signed by the end of 2027. The robots are not yet fully autonomous; remote operators still take part in directing them.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">MARKETS & INDUSTRY / 市场与产业 · SIGNAL ANALYSIS</span>
-<h1>机器人按小时出租：Tutor 拿下 7500 万美元 B 轮，a16z 领投</h1>
-<p class="deck">Tutor Intelligence 11 月 2 日宣布完成 7500 万美元 B 轮融资，a16z 领投，USV 与 Neo 跟投，累计融资 1.17 亿美元；双臂半人形 Sonny 与轮式机械臂 Cassie 按小时或按件出租、无预付无长期合同，目标 2027 年底签约超 1000 台，机器人尚未完全自主、远程操作员仍参与 directing。</p>
-<div class="meta">ISSUE 178 · 2026-11-02 · SOURCE / Tutor Intelligence 公司公告 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">TUTOR × ROBOTICS × SERIES B</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>Robots by the Hour: Tutor Raises a $75 Million Series B Led by a16z</h1>
+<p class="deck">Tutor Intelligence announced on November 2 a $75 million Series B led by a16z, with USV and Neo participating, taking total funding to $117 million. The dual-arm semi-humanoid Sonny and the wheeled manipulator Cassie are rented by the hour or by the piece, with no upfront payment and no long-term contract, targeting more than 1,000 robots signed by the end of 2027. The robots are not yet fully autonomous; remote operators still take part in directing them.</p>
+<div class="meta">ISSUE 178 · 2026-11-02 · SOURCE / <b>Tutor Intelligence company announcement</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">TUTOR × ROBOTICS × SERIES B</span><span class="tag">REPORTED + ANALYSIS</span></div>
 
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ROUND：Tutor Intelligence 11 月 2 日宣布 7500 万美元 B 轮融资，a16z 领投，USV 与 Neo 跟投，累计融资 1.17 亿美元。</li><li><b>02</b>THE CONFIRMATION：Inc. 11 月 3 日报道核对轮次、金额、投资方、两款机器人分工与 2027 年底签约目标与公司公告一致，并补充官网价目与远程操作员限定。</li><li><b>03</b>THE WATCHPOINT：Tutor 是否在 2027 年底前达成签约超 1000 台机器人，以及远程操作员与机器人的人机比是否随模型迭代下降。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Tutor Intelligence 11 月 2 日宣布完成 7500 万美元 B 轮融资，由 Andreessen Horowitz 领投，Union Square Ventures 与 Neo 跟投，公司累计融资达到 1.17 亿美元。USV 领投了 2025 年 12 月的 3400 万美元 A 轮，Neo 领投了种子轮。</p><p>这家 2021 年从 MIT CSAIL 分拆、总部位于马萨诸塞州沃特敦的公司，卖的不是机器人，而是机器人干的活。客户不预付、不签长期合同，按小时或按件付费，Tutor 负责部署、维护与软件升级。两款机器人分工明确：双臂半人形 Sonny 做单件拣选，轮式移动机械臂 Cassie 做整箱拣选与码垛。</p><p>规模数字来自公司公告：机器人进驻的设施数量比一年前接近 4 倍，过去 12 个月收到机器人的客户中近三分之一是追加部署的老客户。公司称目标是在 2027 年底前签约超过 1000 台机器人，全部在美国制造与部署，服务对象从家族企业到财富 50 强，搬运的货物覆盖麦片、零食、糖果、化妆品、家居用品与玩具。</p><p>价目来自 Inc. 引述的公司官网：码垛与卸垛场景每小时 14 至 18 美元，另有每月 80 小时最低用量与 1 万美元一次性实施费。Inc. 同时点出关键限定：这些机器人尚未完全自主，远程操作员仍在参与 directing，Tutor 自己把这些操作员称为 tutors。</p><p>融资背景是机器人投资的历史高峰。Inc. 引述 Crunchbase 数据称，2026 年第三季度全球机器人初创融资 99 亿美元，是一年前 43 亿美元的两倍多。同一周，Ultra Robotics 刚为 OP-1 人形机器人拿到 6200 万美元，资本正在向能进真实仓库干活的柔性机器集中。</p>
-<h2><span class="en">WHY IT MATTERS</span>机器人商业化的瓶颈不在本体，在账单</h2><p>Tutor 的模式把机器人从资本支出变成了人力成本的替代品。工厂主不需要论证一台几十万美元设备的投资回报，只需要比较每小时 14 至 18 美元与临时工工资单。这个定价策略绕开了机器人行业最难的一关：让客户先相信，再买单。</p><p>但按小时收费也有代价。远程操作员的存在说明自主能力还没闭环，人力成本只是从客户现场转移到了 Tutor 的运营中心。1000 台签约目标能否兑现，取决于两个比率：远程操作员与机器人的人机比能不能持续下降，以及复购率能不能维持在三分之一附近。</p><h2><span class="en">WHY IT MATTERS</span>数据工厂叙事正在两条线同时展开</h2><p>同一天里，韩国政府开了国家级人形数据工厂，Tutor 在美国拿了 7500 万美元建商业数据工厂。两边的共识相同：物理世界的训练数据不存在现成的，只能靠真机在真环境里一单一单攒出来。区别在出资方：韩国是政府预算，美国是风险资本。</p><p>Tutor 的飞轮逻辑是每一次部署都产生训练数据，数据训出更好的模型，模型解锁更多部署。这个故事成立的前提是部署密度，设施数一年翻近 4 倍是支撑它的唯一公开证据。下一条可验证的进展不在融资新闻，而在 2027 年底的签约数。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>机器人按小时出租，比卖机器人更接近落地</h2><p>Tokenta Signal 判断：这条新闻的正确读法是看商业模式，不看融资金额。Tutor 把机器人变成可按小时采购的劳动力，客户决策从买设备降级为雇临时工，这是仓库自动化真正规模化的前提。限定同样要记牢：远程操作员还在岗，自主闭环尚未完成，1000 台只是目标。融资证明资本相信这个方向，交付数字才能证明这个模式跑通。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇事实以 Tutor Intelligence 11 月 2 日公司公告与 Inc. 11 月 3 日报道为准，两篇均已直接打开核验，轮次、金额、领投方与跟投方一致。估值与营收未披露，2027 年底签约超 1000 台机器人为公司目标，不是既成事实。每小时 14 至 18 美元为 Inc. 引述公司官网的码垛场景价目，不是全部服务的统一定价。本文只做摘要与链接，不转载公告全文与图片。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>Tutor Intelligence 公司公告转载页与 Inc. 报道页均已直接打开核验，7500 万美元 B 轮、a16z 领投、USV 与 Neo 跟投、累计 1.17 亿美元、Sonny 与 Cassie 分工、2027 年底超 1000 台目标等核心事实两边一致。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/" target="_blank" rel="noopener">Tutor Intelligence Raises $75 Million Series B Led by Andreessen Horowitz ↗</a><br>vcaonline.com · 2026-11-02 · Tutor Intelligence 公司公告</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Tutor Intelligence 公司公告<br><a href="https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/" target="_blank" rel="noopener">https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/</a></li><li>Inc. 报道<br><a href="https://www.inc.com/aaron-mok/this-startup-offers-robot-workers-beginning-at-only-14-an-hour-theres-just-1-catch/91429804" target="_blank" rel="noopener">https://www.inc.com/aaron-mok/this-startup-offers-robot-workers-beginning-at-only-14-an-hour-theres-just-1-catch/91429804</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta 首笔欧元债开簿：六档、期限最长 38 年（flash 190 更新）</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta 150 亿美元债为 AI 基建融资：利差较上一轮走阔，欧元部分待定价</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista 三季度营收 36.6 亿美元增 58.5%：IPO 以来最快增速，AI 网络成主引擎</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block 三季度毛利 32.4 亿美元增 22%：Cash App 领涨，上调全年指引并首次预告 AI 工具收入</a> <span class="meta">ISSUE 188</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ROUND — Tutor Intelligence announced the $75 million Series B on November 2, led by a16z with USV and Neo participating, taking total funding to $117 million.</li><li><b>02</b>THE CONFIRMATION — Inc.&#x27;s November 3 report checked the round, amount, investors, the two robots&#x27; division of labor and the end-2027 signing target against the company announcement, and added the website pricing and the remote-operator caveat.</li><li><b>03</b>THE WATCHPOINT — Whether Tutor signs more than 1,000 robots by the end of 2027, and whether the remote operator-to-robot ratio falls as models iterate.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Tutor Intelligence announced on November 2 that it has closed a $75 million Series B led by Andreessen Horowitz, with Union Square Ventures and Neo participating, taking total funding to $117 million. USV led the $34 million Series A in December 2025; Neo led the seed round.</p><p>The company, spun out of MIT CSAIL in 2021 and headquartered in Watertown, Massachusetts, sells not robots but the work robots do. Customers pay no upfront cost and sign no long-term contract, paying by the hour or by the piece, while Tutor handles deployment, maintenance and software upgrades. Its two robots have clear roles: Sonny, a dual-arm semi-humanoid, does single-item picking; Cassie, a wheeled mobile manipulator, does case picking and palletizing.</p><p>Scale figures come from the company announcement: the number of facilities with its robots is nearly four times the level of a year ago, and nearly a third of customers who received robots in the past 12 months are repeat deployments. The company says its target is to sign more than 1,000 robots by the end of 2027, all manufactured and deployed in the United States, serving customers from family businesses to Fortune 50 companies and moving goods from cereal, snacks and candy to cosmetics, home goods and toys.</p><p>Pricing comes from the company website as cited by Inc.: $14 to $18 per hour for palletizing and depalletizing scenarios, plus an 80-hour monthly minimum and a $10,000 one-time implementation fee. Inc. also flagged the key caveat: the robots are not yet fully autonomous, and remote operators are still involved in directing them — operators Tutor itself calls &quot;tutors.&quot;</p><p>The funding backdrop is a historic peak in robotics investment. Citing Crunchbase data, Inc. reported that global robotics startup funding reached $9.9 billion in the third quarter of 2026, more than double the $4.3 billion of a year earlier. The same week, Ultra Robotics raised $62 million for its OP-1 humanoid, as capital concentrates on flexible machines that can do real warehouse work.</p>
+<h2><span class="en">WHY IT MATTERS</span>Robotics&#x27; commercialization bottleneck is not the machine, but the bill</h2><p>Tutor&#x27;s model turns robots from a capital expense into a substitute for labor cost. A plant owner does not need to justify the return on a machine costing hundreds of thousands of dollars, only to compare $14–18 an hour against a temp-labor payroll. That pricing strategy bypasses the hardest gate in robotics: getting the customer to believe first and pay second.</p><p>Hourly pricing has a cost, though. The presence of remote operators shows autonomy is not yet a closed loop; labor cost has merely moved from the customer&#x27;s site to Tutor&#x27;s operations center. Whether the 1,000-robot signing target is met depends on two ratios: whether the operator-to-robot ratio keeps falling, and whether the repeat rate holds near one third.</p><h2><span class="en">WHY IT MATTERS</span>The data-factory narrative is unfolding on two tracks at once</h2><p>On the same day, the South Korean government opened a national humanoid data factory while Tutor raised $75 million in the United States to build a commercial one. The consensus on both sides is the same: training data for the physical world does not exist off the shelf and can only be accumulated by real machines doing real jobs in real environments. The difference is who pays — a government budget in Korea, venture capital in the United States.</p><p>Tutor&#x27;s flywheel logic is that every deployment generates training data, the data trains better models, and better models unlock more deployments. The premise of that story is deployment density, and facilities growing nearly fourfold in a year is the only public evidence supporting it. The next verifiable progress will not be in funding news, but in the signing count at the end of 2027.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Robots rented by the hour are closer to deployment than robots sold</h2><p>Tokenta Signal&#x27;s judgment: the right way to read this news is the business model, not the funding amount. Tutor turns robots into labor that can be procured by the hour, reducing the customer decision from buying equipment to hiring temporary workers — the precondition for warehouse automation to truly scale. The caveats must be kept in view: remote operators are still on the job, the autonomy loop is not yet closed, and 1,000 robots is only a target. Funding proves capital believes in the direction; delivery numbers will prove the model works.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on Tutor Intelligence&#x27;s company announcement of November 2 and Inc.&#x27;s report of November 3, both opened and verified directly, with the round, amount, lead investor and followers consistent across both. Valuation and revenue were not disclosed. Signing more than 1,000 robots by the end of 2027 is a company target, not an accomplished fact. The $14–18 per hour figure is the palletizing-scenario price from the company website as cited by Inc., not uniform pricing across all services. This article is a summary with links only and does not reproduce the announcement&#x27;s full text or images. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Tutor Intelligence&#x27;s company announcement page and Inc.&#x27;s report page were both opened and verified directly. The $75 million Series B, a16z as lead, USV and Neo participating, $117 million total funding, the Sonny–Cassie division of labor, and the target of more than 1,000 robots signed by the end of 2027 are consistent across both.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/" target="_blank" rel="noopener">Tutor Intelligence Raises $75 Million Series B Led by Andreessen Horowitz ↗</a><br>vcaonline.com · 2026-11-02 · Tutor Intelligence company announcement</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Tutor Intelligence company announcement<br><a href="https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/" target="_blank" rel="noopener">https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/</a></li><li>Inc. report<br><a href="https://www.inc.com/aaron-mok/this-startup-offers-robot-workers-beginning-at-only-14-an-hour-theres-just-1-catch/91429804" target="_blank" rel="noopener">https://www.inc.com/aaron-mok/this-startup-offers-robot-workers-beginning-at-only-14-an-hour-theres-just-1-catch/91429804</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-bond-sale-ai-infra/">Meta&#x27;s $15 billion bond sale funds its AI build-out: spreads widen from the last round, euro leg awaits pricing</a> <span class="meta">ISSUE 190</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arista-q3-ai-networking-record/">Arista Q3 Revenue Up 58.5% to $3.66 Billion: Fastest Growth Since IPO as AI Networking Becomes the Main Engine</a> <span class="meta">ISSUE 189</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../block-q3-earnings-cash-app/">Block Q3 Gross Profit Up 22% to $3.24 Billion: Cash App Leads, Full-Year Guidance Raised, First AI Tool Revenue Previewed</a> <span class="meta">ISSUE 188</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

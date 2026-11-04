@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>6亿美元押注挖土机，自动驾驶先从工地开工 — Tokenta Signal</title><meta name="description" content="Bedrock Robotics 完成 6 亿美元 C 轮融资，投后估值 41 亿美元，由 CapitalG 与 Emergence Capital 领投，用于加速自主挖掘机与自动驾驶工程设备商业部署。">
+<title>US$600 Million Bet on Excavators: Self-Driving Starts on the Construction Site — Tokenta Signal</title><meta name="description" content="Bedrock Robotics closed a US$600 million Series C at a post-money valuation of US$4.1 billion, led by CapitalG and Emergence Capital, to accelerate commercial deployment of autonomous excavators and self-driving construction equipment.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Bedrock Robotics closed a US$600 million Series C at a post-money valuation of US$4.1 billion, led by CapitalG and Emergence Capital, to accelerate commercial deployment of autonomous excavators and self-driving construction equipment.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
-<h1>6亿美元押注挖土机，自动驾驶先从工地开工</h1>
-<p class="deck">Bedrock Robotics 完成 6 亿美元 C 轮融资，投后估值 41 亿美元，由 CapitalG 与 Emergence Capital 领投，用于加速自主挖掘机与自动驾驶工程设备的商业部署。</p>
-<div class="meta">ISSUE 124 · 2026-10-30 · SOURCE / Analytics Insight 融资汇总 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">BEDROCK × AUTONOMY</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">$6亿</div><div class="lab">SERIES C</div><div class="desc">Bedrock Robotics C 轮融资金额。</div></div><div class="metric"><div class="num">$41亿</div><div class="lab">VALUATION</div><div class="desc">本轮投后估值，C 轮约占累计融资约 10 亿美元的六成。</div></div><div class="metric"><div class="num">约$48亿</div><div class="lab">WEEK TOTAL</div><div class="desc">本周十笔最大融资合计金额，制造与物理 AI 占头名。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ROUND：2026 年 10 月 30 日，周融资汇总公布 Bedrock C 轮。</li><li><b>02</b>THE LEADS：CapitalG 与 Emergence Capital 领投，估值 41 亿美元。</li><li><b>03</b>THE DEPLOYMENT：资金投向自主挖掘机与工程设备商业部署。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Bedrock Robotics 在 2026 年 10 月 30 日公布的周融资汇总里排在前列。公司完成 6 亿美元 C 轮融资，投后估值 41 亿美元，由 CapitalG 与 Emergence Capital 领投。</p><p>Bedrock 做的是建筑与工程机械的自动驾驶系统，目标是工地上重复且危险的机器作业。资金用途明确，加速自主挖掘机与自动驾驶工程设备的商业部署。</p><p>这轮的体量值得单独看。C 轮 6 亿美元约占公司累计融资约 10 亿美元的六成，一轮融到的钱超过之前全部融资的一半还多。资本正在向能落地的物理世界应用集中。</p>
-<h2><span class="en">CONSTRUCTION FIRST</span>自动驾驶先从工地开工</h2><p>乘用车自动驾驶卡在法规与长尾场景，工地反而是更早的落地场。场地封闭、路线重复、人力缺口真实，安全员可以在场内兜底。Bedrock 选的赛道，回避了最难的开放道路问题。</p><p>挖掘机与工程机械的自动化，经济账也更直接。工地停工成本高，熟练操作手难招，机器多跑一小时就是真金白银。客户买的不是技术概念，是出勤率。</p><h2><span class="en">WHAT 4.1B BUYS</span>41 亿美元估值买的是部署速度</h2><p>41 亿美元投后估值，对一家尚未大规模量产的公司来说不低。投资人赌的是部署速度，资金要换成更多工地、更多机型覆盖与更快的商业化节奏。</p><p>风险同样清晰。工程机械的验证周期长，客户是建筑公司与设备厂商，采购决策慢。估值成立的前提，是这轮钱能换来可复制的部署案例，而不是更多的演示视频。</p><h2><span class="en">THE WEEK&#x27;S SIGNAL</span>本周融资榜说明资金流向</h2><p>同一周的融资榜上，制造与物理 AI 占了头名。Re:Build 21 亿美元、Kalshi 10 亿美元、Bedrock 6 亿美元，十笔合计约 48 亿美元。资金没有离开 AI，只是从纯软件转向能摸到的世界。</p><p>对创业者来说，信号很直接。能解决具体工种缺口、能在封闭场景先跑起来的物理 AI，比通用人形机器人叙事更容易拿到大额支票。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>物理 AI 的钱，流向先能干活的地方</h2><p>Tokenta Signal 判断：工地比开放道路更早迎来自动驾驶。Bedrock 这轮的意义不在估值数字，在它证明了封闭场景的商业化路径。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：估值与融资总额来自 Crunchbase 汇总与媒体转引，公司未披露单台设备价格、订单量与收入。自动驾驶工程机械的商用规模仍需后续交付验证。本文不构成任何投资建议。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认 Bedrock Robotics 完成 6 亿美元 C 轮融资，投后估值 41 亿美元，由 CapitalG 与 Emergence Capital 领投，用于加速自主挖掘机与自动驾驶工程设备商业部署。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week" target="_blank" rel="noopener">Startup Funding Round-Up: AI, Robotics Startups Raise Millions this Week ↗</a><br>analyticsinsight.net · 2026-10-30 · Analytics Insight 融资汇总</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Analytics Insight：Startup Funding Round-Up: AI, Robotics Startups Raise Millions this Week<br><a href="https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week" target="_blank" rel="noopener">https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week</a></li><li>Tech Insider：Funding Rounds This Week (Oct 31): Re:Build, Kalshi<br><a href="https://tech-insider.org/biggest-funding-rounds-rebuild-kalshi-bedrock-physical-ai-2026/" target="_blank" rel="noopener">https://tech-insider.org/biggest-funding-rounds-rebuild-kalshi-bedrock-physical-ai-2026/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">欧盟法院顾问：聊天机器人复用新闻可能侵权，训练除外</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">特斯拉无人驾驶出租车开进沃斯堡，第七城</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">上半年130亿美元，中国机器人先补脑子再拼动作</a> <span class="meta">ISSUE 147</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI · SIGNAL REPORT</span>
+<h1>US$600 Million Bet on Excavators: Self-Driving Starts on the Construction Site</h1>
+<p class="deck">Bedrock Robotics closed a US$600 million Series C at a post-money valuation of US$4.1 billion, led by CapitalG and Emergence Capital, to accelerate commercial deployment of autonomous excavators and self-driving construction equipment.</p>
+<div class="meta">ISSUE 124 · 2026-10-30 · SOURCE / <b>Analytics Insight funding roundup</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">BEDROCK × AUTONOMY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">$600M</div><div class="lab">SERIES C</div><div class="desc">The amount Bedrock Robotics raised in its Series C.</div></div><div class="metric"><div class="num">$4.1B</div><div class="lab">VALUATION</div><div class="desc">The post-money valuation; the Series C is about 60% of cumulative funding of roughly US$1 billion.</div></div><div class="metric"><div class="num">~$4.8B</div><div class="lab">WEEK TOTAL</div><div class="desc">The combined size of the week&#x27;s ten largest rounds, with manufacturing and physical AI at the top.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ROUND — October 30, 2026: the weekly funding roundup publishes Bedrock&#x27;s Series C.</li><li><b>02</b>THE LEADS — CapitalG and Emergence Capital lead, at a US$4.1 billion valuation.</li><li><b>03</b>THE DEPLOYMENT — Funds go toward commercial deployment of autonomous excavators and construction equipment.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Bedrock Robotics ranked near the top of the weekly funding roundup published on October 30, 2026. The company closed a US$600 million Series C at a post-money valuation of US$4.1 billion, led by CapitalG and Emergence Capital.</p><p>Bedrock builds autonomous driving systems for construction and engineering machinery, targeting the repetitive and dangerous machine work on job sites. The use of funds is explicit: accelerating commercial deployment of autonomous excavators and self-driving construction equipment.</p><p>The size of this round deserves separate attention. The US$600 million Series C accounts for roughly 60% of the company&#x27;s cumulative funding of about US$1 billion, meaning a single round raised more than half of all previous funding combined. Capital is concentrating on physical-world applications that can actually be deployed.</p>
+<h2><span class="en">CONSTRUCTION FIRST</span>Self-Driving Starts Work on the Construction Site First</h2><p>Passenger-car autonomy is stuck on regulation and long-tail scenarios; construction sites are an earlier landing ground. The sites are enclosed, routes repeat, labour shortages are real, and safety staff can provide backup on site. Bedrock&#x27;s chosen track avoids the hardest problem of open roads.</p><p>The economics of automating excavators and construction machinery are also more direct. Site downtime is expensive, skilled operators are hard to hire, and every extra hour a machine runs is real money. What customers buy is not a technology concept, but uptime.</p><h2><span class="en">WHAT 4.1B BUYS</span>A US$4.1 Billion Valuation Buys Deployment Speed</h2><p>A US$4.1 billion post-money valuation is not low for a company that has not yet reached mass production. Investors are betting on deployment speed: the money must convert into more sites, coverage of more machine types and a faster commercialisation cadence.</p><p>The risk is equally clear. Validation cycles for construction machinery are long, customers are construction firms and equipment makers, and procurement decisions move slowly. The valuation&#x27;s premise is that this money buys replicable deployment cases, not more demo videos.</p><h2><span class="en">THE WEEK&#x27;S SIGNAL</span>The Week&#x27;s Funding List Shows Where the Money Is Going</h2><p>Manufacturing and physical AI topped the same week&#x27;s funding list: Re:Build at US$2.1 billion, Kalshi at US$1 billion, Bedrock at US$600 million, with the top ten deals totalling roughly US$4.8 billion. Money has not left AI; it has moved from pure software toward the tangible world.</p><p>For founders, the signal is direct. Physical AI that fills a specific labour gap and can start running in enclosed settings first finds it easier to land large cheques than a general-purpose humanoid narrative.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM ROAD TO SITE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From sedans to excavators</div><div class="desc">Self-driving commercialisation breaks through first in enclosed settings such as construction sites.</div></div><div class="metric"><div class="lab">FROM DEMO TO UPTIME</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From demos to uptime</div><div class="desc">What customers buy is an extra hour of machine running time, not a technology concept.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Physical AI Money Flows to Where Work Gets Done First</h2><p>Tokenta Signal&#x27;s judgment: construction sites will see self-driving before open roads do. The significance of Bedrock&#x27;s round is not the valuation figure, but that it proves the commercialisation path for enclosed settings.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The boundaries of this report: valuation and funding totals come from Crunchbase compilations and media reports; the company has not disclosed per-machine prices, order volumes or revenue. The commercial scale of autonomous construction machinery still awaits verification through subsequent deliveries. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original report confirms Bedrock Robotics closed a US$600 million Series C at a post-money valuation of US$4.1 billion, led by CapitalG and Emergence Capital, to accelerate commercial deployment of autonomous excavators and self-driving construction equipment.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week" target="_blank" rel="noopener">Startup Funding Round-Up: AI, Robotics Startups Raise Millions this Week ↗</a><br>analyticsinsight.net · 2026-10-30 · Analytics Insight funding roundup</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Analytics Insight: Startup Funding Round-Up: AI, Robotics Startups Raise Millions this Week<br><a href="https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week" target="_blank" rel="noopener">https://www.analyticsinsight.net/news/startup-funding-round-up-ai-robotics-startups-raise-millions-this-week</a></li><li>Tech Insider: Funding Rounds This Week (Oct 31): Re:Build, Kalshi<br><a href="https://tech-insider.org/biggest-funding-rounds-rebuild-kalshi-bedrock-physical-ai-2026/" target="_blank" rel="noopener">https://tech-insider.org/biggest-funding-rounds-rebuild-kalshi-bedrock-physical-ai-2026/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">South Korea opens its first humanoid robot data factory: 12 robots do the work first, and bank the data</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">Tesla Robotaxi Rolls Into Fort Worth, Its Seventh City</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../china-embodied-ai-13b/">$13 Billion in Half a Year: China&#x27;s Robots Fix Their Brains Before Their Moves</a> <span class="meta">ISSUE 147</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta&#x27;s Humanoid Robot Was Assembled in Three Months</a> <span class="meta">ISSUE 138</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

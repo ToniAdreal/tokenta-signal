@@ -1,127 +1,143 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>上半年130亿美元，中国机器人先补脑子再拼动作 — Tokenta Signal</title><meta name="description" content="路透社11月2日报道，中国具身智能公司2026年上半年融资935亿元人民币，约130亿美元，共322笔交易，是去年同期的五倍，资金正流向机器人智能开发者而非仅整机制造商。">
+<title>$13 Billion in Half a Year: China&#x27;s Robots Fix Their Brains Before Their Moves — Tokenta Signal</title><meta name="description" content="Reuters reported on November 2 that Chinese embodied AI companies raised RMB 93.5 billion, about $13 billion, in the first half of 2026 across 322 deals, five times a year earlier, with funding flowing to robot intelligence developers rather than only complete-machine makers.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Reuters reported on November 2 that Chinese embodied AI companies raised RMB 93.5 billion, about $13 billion, in the first half of 2026 across 322 deals, five times a year earlier, with funding flowing to robot intelligence developers rather than only complete-machine makers.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#FF7300;--grn:#2FBF71;--red:#E5484D}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
 a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold2)}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
 .mono{font-family:"IBM Plex Mono",monospace}
-.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
-header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
-.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
-.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
-.logo b{color:var(--gold);font-weight:600}
-nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
-nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
-.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
-.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
-section{padding:96px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
-.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
-.hero{padding:110px 0 96px}
-.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
-.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
-.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
-.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
-.btn.ghost{color:var(--paper);background:transparent}
-.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
-.trust span{margin-right:28px}
-.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
-.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
-.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
-.lead-card p{color:var(--mut-d);font-size:17px}
-.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
 .wire-list{border-top:1px solid var(--line)}
-.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
-.wire-row:hover{background:#0A0A0A}
-.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
-.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
-.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
-.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
-.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
-.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
-.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
-.brief{background:var(--paper);color:var(--ink);padding:44px}
-.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
-.brief ol{list-style:none;margin-top:22px}
-.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
-.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
-.brief a:hover{color:var(--gold)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why .cell{border-top:2px solid var(--gold);padding-top:18px}
-.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
-.why p{color:var(--mut-d);font-size:14px}
-.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
-.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
-.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
-.how p{color:var(--mut-d);font-size:14px}
-footer{padding:72px 0 48px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0500}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:#FF8A2A;color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
 .f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
-footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
-.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
-.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
-.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
-.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
-.sponsor p{color:var(--mut-d);font-size:13px}
-article.read{max-width:760px;margin:0 auto;padding:72px 24px}
-article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
-article.read .deck{font-size:19px;color:var(--mut-d)}
-article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
-article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
-article.read p{margin:12px 0;color:#E9E7E1}
-.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
-.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
 .takeaways li:last-child{border-bottom:none}
-.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
-.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
-.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
-.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
-.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
-.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.refs a{color:var(--cyan);word-break:break-all}
-.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
-.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
-.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
-@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
 </style></head><body><header class="top"><div class="wrap topbar">
-<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
 <nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
-<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
-</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 11:33 UTC</span><span><span class="live">● LIVE</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters 报道（TradingView 转载）</span><span><span class="live">● LIVE</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters 独家报道</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span></div></div><article class="read">
-<span class="eyebrow">ROBOTICS & AI / 机器人与 AI · SIGNAL ANALYSIS</span>
-<h1>上半年130亿美元，中国机器人先补脑子再拼动作</h1>
-<p class="deck">路透社11月2日报道，中国具身智能公司2026年上半年融资935亿元人民币，约130亿美元，共322笔交易，是去年同期的五倍，资金正流向机器人智能开发者而非仅整机制造商。</p>
-<div class="meta">ISSUE 147 · 2026-11-01 · SOURCE / 路透社转载报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
-<div style="margin-top:14px"><span class="tag">CHINA × EMBODIED AI</span><span class="tag">REPORTED + ANALYSIS</span></div>
-<div class="metrics"><div class="metric"><div class="num">935亿元人民币</div><div class="lab">H1 2026 FUNDING</div><div class="desc">中国具身智能公司2026年上半年融资金额。</div></div><div class="metric"><div class="num">322笔</div><div class="lab">DEALS</div><div class="desc">上半年交易笔数，是去年同期的五倍。</div></div><div class="metric"><div class="num">约130亿美元</div><div class="lab">IN DOLLARS</div><div class="desc">约合美元的融资金额。</div></div></div>
-<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE MOVES：中国厂商已做出会跑会跳舞的人形机器人。</li><li><b>02</b>THE SHIFT：路透社11月2日报道行业重心转向机器人智能。</li><li><b>03</b>THE MONEY：上半年935亿元融资，共322笔，是去年同期五倍。</li></ul></div>
-<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>路透社在11月2日发自北京的报道指出，中国机器人公司正在把重心从动作转向大脑。过去几年，这些公司造出了会跑、会跳舞、会后空翻的人形机器人，现在要解决的是让机器人在陌生任务上通用起来的软件。</p><p>资金已经先动了。ITjuzi的数据显示，中国具身智能公司在2026年上半年融资935亿元人民币，约130亿美元，共322笔交易，是去年同期的五倍。资金越来越多流向机器人智能的专业开发者，而不只是整机制造商。</p><p>路透社采访了五家中国机器人公司的创始人与高管。共识是，硬件演示已经证明了能动，真正的门槛在理解环境、学习陌生任务、不靠逐项编程就能适应新工作。</p>
-<h2><span class="en">MOVES DONE, BRAINS NEXT</span>会动之后，才轮到会干活</h2><p>跑跳翻跟头是演示，干活是产品。演示只需要把动作编排好，干活需要在没见过的环境里做判断。一个是编排问题，一个是泛化问题，难度不在一个量级。</p><p>中国厂商先把动作做出来，再补大脑，这个顺序有现实原因。硬件供应链与制造能力是现成的，智能层需要时间与数据。资金现在涌向智能层，说明行业自己也知道短板在哪里。</p><h2><span class="en">MONEY FOLLOWS SOFTWARE</span>五倍增长，钱在投软件不是整机</h2><p>935亿元这个数字里最值得看的不是总量，是结构。资金越来越多流向机器人智能的专业开发者，说明投资人已经不满足于再投一家会走路的机器人公司。</p><p>整机公司与智能公司正在分工。前者继续压低硬件成本，后者专注让同一台机器适应更多任务。分工越细，生态越像今天的手机行业，硬件与软件各有自己的头部。</p><h2><span class="en">THE GENERALIZATION TEST</span>通用任务，是具身智能真正的考试</h2><p>具身智能的承诺一直是，一台机器能学会没被逐项编程的任务。这个承诺兑现之前，所有融资数字都只是入场券。</p><p>路透社的报道没有给出兑现时间表。五家受访公司的判断也只是方向共识。具身智能的下一轮新闻，不应该再是融资额，而应该是某台机器在真实场景里连续干了一个月没出岔子。</p>
-<h2><span class="en">SIGNAL JUDGMENT</span>机器人先补脑子，再拼动作</h2><p>Tokenta Signal 判断：具身智能的竞赛正在换赛道。动作演示的红利吃完了，下一阶段比的是谁的机器能在陌生任务上自己学会干活。</p>
-<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">本篇的边界：935亿元与322笔为ITjuzi提供给路透社的数据口径，行业边界由该机构定义，不同统计口径会得出不同数字。路透社的判断基于对五家中国机器人公司创始人与高管的采访，不是全行业普查。</div>
-<h2><span class="en">EVIDENCE</span>证据</h2><p>原文确认路透社11月2日报道，中国具身智能公司2026年上半年融资935亿元人民币，约130亿美元，共322笔交易，是去年同期的五倍，资金流向机器人智能开发者。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/" target="_blank" rel="noopener">China&#x27;s robot makers have mastered the moves. Now comes the race for brains ↗</a><br>wncy.com · 2026-11-01 · 路透社转载报道</p>
-<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>Reuters via WNCY：China&#x27;s robot makers have mastered the moves. Now comes the race for brains<br><a href="https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/" target="_blank" rel="noopener">https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/</a></li><li>Tech Current：Tech Current Daily Brief, November 02, 2026<br><a href="https://teccurrent.com/articles/daily-brief-2026-11-02/" target="_blank" rel="noopener">https://teccurrent.com/articles/daily-brief-2026-11-02/</a></li></ul>
-<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">韩国开了首家人形机器人数据工厂：12 台机器人先替人干活、攒数据</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../eu-gemini-press-copyright/">欧盟法院顾问：聊天机器人复用新闻可能侵权，训练除外</a> <span class="meta">ISSUE 153</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">特斯拉无人驾驶出租车开进沃斯堡，第七城</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta的人形机器人，三个月就攒出来了</a> <span class="meta">ISSUE 138</span></li></ul>
-<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 11:53 UTC</span><span><span class="live">●</span> ISSUE 194 · TENCENT × HY4 × OPEN-SOURCE AI × CYBER SAFETY · Reuters report</span><span><span class="live">●</span> ISSUE 193 · META × EURO BOND × AI INFRASTRUCTURE FUNDING · Reuters report (republished by TradingView)</span><span><span class="live">●</span> ISSUE 192 · TESLA × FSD × SOUTH KOREA × CONSUMER COMPLAINT · Reuters exclusive report</span><span><span class="live">●</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS report</span><span><span class="live">●</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters Report</span><span><span class="live">●</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista official press release</span></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI · SIGNAL REPORT</span>
+<h1>$13 Billion in Half a Year: China&#x27;s Robots Fix Their Brains Before Their Moves</h1>
+<p class="deck">Reuters reported on November 2 that Chinese embodied AI companies raised RMB 93.5 billion, about $13 billion, in the first half of 2026 across 322 deals, five times a year earlier, with funding flowing to robot intelligence developers rather than only complete-machine makers.</p>
+<div class="meta">ISSUE 147 · 2026-11-01 · SOURCE / <b>Reuters report, republished</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">CHINA × EMBODIED AI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">RMB 93.5B</div><div class="lab">H1 2026 FUNDING</div><div class="desc">The amount raised by Chinese embodied AI companies in the first half of 2026.</div></div><div class="metric"><div class="num">322</div><div class="lab">DEALS</div><div class="desc">The number of deals in the first half, five times the same period a year earlier.</div></div><div class="metric"><div class="num">~$13B</div><div class="lab">IN DOLLARS</div><div class="desc">The funding amount in approximate dollar terms.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE MOVES — Chinese makers have already built humanoid robots that run and dance.</li><li><b>02</b>THE SHIFT — Reuters reported on November 2 that the industry focus is shifting to robot intelligence.</li><li><b>03</b>THE MONEY — First-half funding of RMB 93.5 billion across 322 deals, five times a year earlier.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Reuters reported from Beijing on November 2 that China&#x27;s robotics companies are shifting their focus from movement to brains. In recent years these companies built humanoid robots that can run, dance and do backflips; now they must solve the software that lets robots generalize to unfamiliar tasks.</p><p>The money has already moved first. Data from ITjuzi show Chinese embodied AI companies raised RMB 93.5 billion, about $13 billion, in the first half of 2026, across 322 deals, five times the same period a year earlier. Funding is flowing increasingly to specialist developers of robot intelligence, not only to complete-machine makers.</p><p>Reuters interviewed founders and executives at five Chinese robotics companies. The consensus is that hardware demonstrations have proven the machines can move; the real threshold is understanding environments, learning unfamiliar tasks and adapting to new work without being programmed item by item.</p>
+<h2><span class="en">MOVES DONE, BRAINS NEXT</span>After Movement Comes Work</h2><p>Running, jumping and somersaults are demonstrations; work is a product. A demonstration only needs the movements choreographed; work requires judgment in environments never seen before. One is a choreography problem, the other a generalization problem, and the difficulty is not of the same order.</p><p>Chinese makers built the movement first and are adding the brains after, for practical reasons. The hardware supply chain and manufacturing capacity already exist, while the intelligence layer needs time and data. Money now flooding into the intelligence layer shows the industry itself knows where its short board is.</p><h2><span class="en">MONEY FOLLOWS SOFTWARE</span>Fivefold Growth, and the Money Is Buying Software, Not Machines</h2><p>The most instructive part of the RMB 93.5 billion figure is not the total but the structure. Funding is flowing increasingly to specialist developers of robot intelligence, which shows investors are no longer satisfied with backing yet another company whose robots can walk.</p><p>Complete-machine companies and intelligence companies are dividing the labor. The former keep driving hardware costs down; the latter focus on making the same machine adapt to more tasks. The finer the division of labor, the more the ecosystem resembles today&#x27;s phone industry, with its own leaders in hardware and software alike.</p><h2><span class="en">THE GENERALIZATION TEST</span>General Tasks Are Embodied AI&#x27;s Real Examination</h2><p>The promise of embodied AI has always been that one machine can learn tasks it was never programmed for item by item. Until that promise is delivered, every funding figure is only an entry ticket.</p><p>Reuters&#x27; report gives no timetable for delivery, and the judgment of the five interviewed companies is only a directional consensus. The next round of embodied AI news should not be another funding total, but a machine that worked in a real setting for a month straight without incident.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM DEMOS TO JOBS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From movement demonstrations to task generalization</div><div class="desc">Choreographed performances give way to work never seen before.</div></div><div class="metric"><div class="lab">FROM HARDWARE TO BRAINS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From backing complete machines to backing the intelligence layer</div><div class="desc">After the hardware dividend, software became the scarce good.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Robots Fix Their Brains Before Their Moves</h2><p>Tokenta Signal&#x27;s judgment: the embodied AI race is changing tracks. The dividend from movement demonstrations is spent; the next stage is about whose machines can learn to work on unfamiliar tasks by themselves.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The limits of this report: the RMB 93.5 billion and 322 deals are figures from ITjuzi provided to Reuters, with the industry boundary defined by that firm; different statistical scopes produce different numbers. Reuters&#x27; assessment is based on interviews with founders and executives at five Chinese robotics companies, not an industry-wide census.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>The original confirms Reuters&#x27; November 2 report that Chinese embodied AI companies raised RMB 93.5 billion, about $13 billion, in the first half of 2026 across 322 deals, five times a year earlier, with funding flowing to robot intelligence developers.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/" target="_blank" rel="noopener">China&#x27;s robot makers have mastered the moves. Now comes the race for brains ↗</a><br>wncy.com · 2026-11-01 · Reuters report, republished</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Reuters via WNCY: China&#x27;s robot makers have mastered the moves. Now comes the race for brains<br><a href="https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/" target="_blank" rel="noopener">https://wncy.com/2026/11/01/chinas-robot-makers-have-mastered-the-moves-now-comes-the-race-for-brains/</a></li><li>Tech Current: Tech Current Daily Brief, November 02, 2026<br><a href="https://teccurrent.com/articles/daily-brief-2026-11-02/" target="_blank" rel="noopener">https://teccurrent.com/articles/daily-brief-2026-11-02/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../korea-humanoid-data-factory/">South Korea opens its first humanoid robot data factory: 12 robots do the work first, and bank the data</a> <span class="meta">ISSUE 176</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-robotaxi-fort-worth/">Tesla Robotaxi Rolls Into Fort Worth, Its Seventh City</a> <span class="meta">ISSUE 151</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-max-humanoid-fourier/">Meta&#x27;s Humanoid Robot Was Assembled in Three Months</a> <span class="meta">ISSUE 138</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../bedrock-robotics-600m/">US$600 Million Bet on Excavators: Self-Driving Starts on the Construction Site</a> <span class="meta">ISSUE 124</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact contact@tokenta.com</p>
 </article><footer><div class="wrap"><div class="f-grid">
-<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
-<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
-<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
-<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>contact@tokenta.com</li><li>Tips: contact@tokenta.com</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
