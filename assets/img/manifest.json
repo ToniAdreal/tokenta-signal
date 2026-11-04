@@ -355,5 +355,19 @@
   "credit_name": "Apple China newsroom announcement",
   "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/",
   "evidence_from": ""
+ },
+ "agility-spac-close-nasdaq-aglt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Agility Robotics official press release",
+  "hero_from": "https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-complete-business-combination",
+  "evidence_from": ""
+ },
+ "applovin-q3-2026-record-profit": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Motley Fool earnings reaction",
+  "hero_from": "https://www.fool.com/investing/2026/11/04/applovin-turns-81-of-new-sales-into-profit-rapid-earnings-reaction/",
+  "evidence_from": ""
  }
 }
