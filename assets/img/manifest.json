@@ -77,11 +77,11 @@
   "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/"
  },
  "crowdstrike-kill-switch-495m": {
-  "credit_name": "ITMunch report",
-  "evidence": true,
-  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch",
   "hero": true,
-  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/"
+  "evidence": true,
+  "credit_name": "ITMunch report",
+  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
+  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch"
  },
  "datadog-q3-2026-beat-weak-outlook": {
   "credit_name": "Investor's Business Daily report",
@@ -161,11 +161,11 @@
   "hero_from": ""
  },
  "menlo-enterprise-ai-177b": {
-  "credit_name": "Menlo Ventures Report Page",
-  "evidence": false,
-  "evidence_from": "",
   "hero": true,
-  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
+  "evidence": false,
+  "credit_name": "Menlo Ventures Report Page",
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+  "evidence_from": ""
  },
  "meta-euro-bond-record-53b-orders": {
   "credit_name": "Le Private Banker (Bloomberg)",
@@ -333,6 +333,20 @@
   "evidence": false,
   "credit_name": "TechCrunch report (full memo)",
   "hero_from": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/",
+  "evidence_from": ""
+ },
+ "qualcomm-q4-handset-miss": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters report",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "arm-q2-fye27-record-144b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Arm official newsroom",
+  "hero_from": "https://newsroom.arm.com/news/arm-q2-fye27-results",
   "evidence_from": ""
  }
 }
