@@ -160,11 +160,18 @@
   "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/",
   "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/"
  },
- "midterm-sweep-ai-datacenter-stocks": {
+ "drax-brookfield-radiant-1gw": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AI data center page, Drax website",
+  "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/",
+  "evidence_from": ""
+ },
+ "tutor-intelligence-75m-series-b": {
   "hero": true,
   "evidence": true,
-  "credit_name": "CNBC overnight report relayed by Unite.AI",
-  "hero_from": "https://www.unite.ai/data-center-policy-fears-hit-ai-stocks-after-hinojosas-texas-win/",
-  "evidence_from": "https://www.unite.ai/data-center-policy-fears-hit-ai-stocks-after-hinojosas-texas-win/"
+  "credit_name": "Tutor Intelligence company announcement",
+  "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
+  "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
  }
 }

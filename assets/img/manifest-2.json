@@ -1,0 +1,65 @@
+{
+ "openai-adnoc-g42-industrial-ai": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "openai-lifeval-everyday-tasks": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "ExplainX independent analysis",
+  "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026",
+  "evidence_from": "https://openai.com/index/lifeval"
+ },
+ "anthropic-s1a-895b-compute": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "gHacks 报道",
+  "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/",
+  "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/"
+ },
+ "arista-q3-ai-networking-record": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Fool independent analysis",
+  "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/",
+  "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026"
+ },
+ "block-q3-earnings-cash-app": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Motley Fool analysis of the shareholder letter",
+  "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
+  "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
+ },
+ "crowdstrike-ai-kill-switch": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Independent report",
+  "hero_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls",
+  "evidence_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls"
+ },
+ "tesla-robotaxi-fort-worth": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Not a Tesla App 报道",
+  "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+  "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
+ },
+ "openai-internal-security-warnings": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "KWSN republication of the same Reuters article",
+  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
+  "evidence_from": ""
+ },
+ "goldman-sachs-claude-code-engineers-only": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "PYMNTS relay of Bloomberg reporting",
+  "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/",
+  "evidence_from": ""
+ }
+}

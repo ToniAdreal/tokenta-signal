@@ -1,0 +1,65 @@
+{
+ "openai-grid-protectors-georgia": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "New York Post independent report",
+  "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/",
+  "evidence_from": "https://openai.com/index/grid-protectors-program/"
+ },
+ "china-ndrc-ai-lifecycle-law": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Bloomberg Law report",
+  "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses",
+  "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
+ },
+ "semianalysis-gdpx-benchmark": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "SemiAnalysis official announcement",
+  "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
+  "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/"
+ },
+ "supermicro-q1-fy27-record-sales": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
+  "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523",
+  "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
+ },
+ "crowdstrike-fiddler-dreadnode": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "dpa-AFX wire report",
+  "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/",
+  "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/"
+ },
+ "tutor-intelligence-75m-series-b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Tutor Intelligence company announcement",
+  "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
+  "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
+ },
+ "google-guided-learning-k12": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Official Blog",
+  "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+  "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+ },
+ "snowflake-coco-cowork-bots": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Snowflake official blog",
+  "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+  "evidence_from": ""
+ },
+ "drax-brookfield-radiant-1gw": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AI data center page, Drax website",
+  "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/",
+  "evidence_from": ""
+ }
+}
