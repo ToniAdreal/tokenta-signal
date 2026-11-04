@@ -40,5 +40,26 @@
   "credit_name": "Morningstar 转发道琼斯报道",
   "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law",
   "evidence_from": ""
+ },
+ "openai-dan-driscoll-national-security": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI independent report",
+  "hero_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/",
+  "evidence_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/"
+ },
+ "openai-grid-protectors-georgia": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "New York Post independent report",
+  "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/",
+  "evidence_from": "https://openai.com/index/grid-protectors-program/"
+ },
+ "openai-internal-security-warnings": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "KWSN republication of the same Reuters article",
+  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
+  "evidence_from": ""
  }
 }
