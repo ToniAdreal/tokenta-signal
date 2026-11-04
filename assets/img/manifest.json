@@ -265,34 +265,6 @@
   "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
   "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
  },
- "amd-q3-1338b-2027": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "The Inference",
-  "hero_from": "https://theinference.org/article/amd-guided-q4-to-17-billion-as-data-center-sales-nearly-doubled-and-4-7-billion-of-debt-funds-the-ramp",
-  "evidence_from": "https://theinference.org/article/amd-guided-q4-to-17-billion-as-data-center-sales-nearly-doubled-and-4-7-billion-of-debt-funds-the-ramp"
- },
- "oracle-tencent-7b-cancelled": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Reuters report, citing the FT",
-  "hero_from": "https://northlandnewsradio.com/2026/11/03/oracle-abandons-7-billion-tencent-ai-deal-under-trump-pressure-ft-reports/",
-  "evidence_from": ""
- },
- "google-schools-ai-off-default": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "MediaNama report",
-  "hero_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/",
-  "evidence_from": ""
- },
- "anthropic-s1a-17b-quarter": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "MadRobot report",
-  "hero_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/",
-  "evidence_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/"
- },
  "meta-euro-bond-record-53b-orders": {
   "hero": true,
   "evidence": false,
@@ -306,5 +278,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/",
   "evidence_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/"
+ },
+ "google-malaysia-15b-data-centers": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Google official blog",
+  "hero_from": "https://blog.google/intl/en-my/company-news/inside-google/google-investment-malaysia-digital-infrastructure-november-2026/",
+  "evidence_from": ""
  }
 }
