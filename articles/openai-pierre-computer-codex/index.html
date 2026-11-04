@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAI Buys Pierre Computer and Folds Git Storage Into Codex, Taking Aim at GitHub — Tokenta Signal</title><meta name="description" content="Axios reported on November 4 that OpenAI will acquire Pierre Computer, whose Code Storage technology already runs inside Codex; OpenAI plans to fold Code Storage into Codex, terms were not disclosed, and Pierre&#x27;s open-source projects will stay open source.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Axios reported on November 4 that OpenAI will acquire Pierre Computer, whose Code Storage technology already runs inside Codex; OpenAI plans to fold Code Storage into Codex, terms were not disclosed, and Pierre&#x27;s open-source projects will stay open source.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:52px 128px 1fr auto;gap:14px;padding:11px 4px;border-bottom:1px solid var(--line);align-items:center}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{font-family:"IBM Plex Serif",Georgia,serif;font-size:16px;font-weight:600;line-height:1.4}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);text-align:right}
+.wire-row .thumb{width:52px;height:38px;object-fit:cover;border:1px solid var(--line);display:block}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:44px 1fr auto}.wire-row .c{display:none}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap"><span class="clock">2026.11.04 14:33 UTC</span><span><span class="live">●</span> ISSUE 201 · OPENAI × CODEX × PIERRE COMPUTER · Unite.AI report</span><span><span class="live">●</span> ISSUE 200 · UBER × Q3 2026 × AUTONOMOUS VEHICLES · BusinessWire release</span><span><span class="live">●</span> ISSUE 199 · NICE × Q3 2026 × CX AI · BusinessWire release</span><span><span class="live">●</span> ISSUE 198 · DATADOG × Q3 2026 × AI OBSERVABILITY · GlobeNewswire release</span><span><span class="live">●</span> ISSUE 197 · Nooks × General Catalyst × AI SALES · Reuters report</span><span><span class="live">●</span> ISSUE 196 · NPCI × AI × DIGITAL PUBLIC INFRASTRUCTURE · Reuters report</span></div></div><article class="read">
+<span class="eyebrow">MARKETS & INDUSTRY · SIGNAL REPORT</span>
+<h1>OpenAI Buys Pierre Computer and Folds Git Storage Into Codex, Taking Aim at GitHub</h1>
+<p class="deck">Axios reported on November 4 that OpenAI will acquire Pierre Computer, whose Code Storage technology already runs inside Codex; OpenAI plans to fold Code Storage into Codex, terms were not disclosed, and Pierre&#x27;s open-source projects will stay open source.</p>
+<div class="meta">ISSUE 201 · 2026-11-04 · SOURCE / <b>Unite.AI report</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × CODEX × PIERRE COMPUTER</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/openai-pierre-computer-codex/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Unite.AI report — <a href="https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE REPORT — On November 4, 2026, Axios reported OpenAI will acquire Pierre Computer and fold its Code Storage product into Codex; terms were not disclosed.</li><li><b>02</b>THE CONFIRMATION — Seeking Alpha, Unite.AI and The Neuron carried the Axios report the same day; neither company had posted about the deal on its own site by Wednesday afternoon UTC.</li><li><b>03</b>THE WATCHPOINT — Whether OpenAI confirms the deal itself, what it says about Code Storage&#x27;s role inside Codex, and whether agent-written code starts living in Codex by default.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>OpenAI will acquire Pierre Computer, a developer-tools startup whose technology is already embedded in Codex, Axios reported on November 4, 2026. OpenAI plans to integrate Pierre&#x27;s Code Storage product into Codex, adding storage infrastructure to the system used for generating and changing software. Financial terms were not disclosed, and Pierre&#x27;s open-source projects, Diffs, Trees and DiffsHub, will remain open source after the acquisition.</p><p>Code Storage is Git hosting built for machines rather than people. Pierre describes it as a distributed storage system built on Git, with API ergonomics designed for machines: applications create repositories and push code programmatically, without the rate limits and sign-in steps of a service built for human developers. Pierre names Lovable, Poke, Anything, Bolt, Amp and Parahelp among its users, and says the system supports repositories as large as 32TB, 30 or more concurrent writes, and Git LFS.</p><p>The deal lands two days after OpenAI detailed Pando, its own backend for Git repositories, in a November 2 engineering post. Pando powers all development in OpenAI&#x27;s monorepo; OpenAI says switching to it cut median push latency by nearly 80% and that it delivers nearly a petabyte of Git data per day. Pierre is OpenAI&#x27;s third Codex-centered acquisition this year, after Astral in March, and Axios frames the move as a challenge to Microsoft-owned GitHub as AI agents take on more coding work.</p>
+<h2><span class="en">WHY IT MATTERS</span>The bottleneck moved below the chatbot</h2><p>Agent coding changes what source control must survive. A human developer pushes a few times a day; a fleet of agents creates branches, pushes, merges and clones continuously, and the repository layer becomes the choke point. OpenAI&#x27;s own account of its monorepo problems, slow fetches and pushes, failed merges, reliability at times below 90%, reads as a description of that choke point from the inside.</p><p>Pierre&#x27;s product is aimed at exactly that layer: Git protocol compatibility with machine-oriented APIs, quorum-based consistency across replicas, and synchronization with GitHub, GitLab and Bitbucket. Owning it gives OpenAI a storage product with existing machine workloads, rather than only an internal system tuned to its own monorepo.</p><h2><span class="en">WHY IT MATTERS</span>A GitHub challenge, stated carefully</h2><p>The GitHub framing comes from Axios, not from an OpenAI announcement, and the distinction matters. What is confirmed is narrower: OpenAI is buying a Git storage layer used by AI-first builders and folding it into Codex, while GitHub remains the central repository and coordination point for most software development.</p><p>The testable question is whether Codex plus Code Storage becomes a place where agent-written code lives by default, with GitHub sync as an export rather than the home. Until OpenAI says so itself, the GitHub-challenge claim stays a reported interpretation, and the deal&#x27;s substance is the infrastructure: storage and serving of concurrent agent work becoming part of the coding product itself.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The coding war moved down to the storage layer</h2><p>Tokenta Signal&#x27;s judgment: the telling part of the Pierre deal is not the GitHub headline but the layer it buys. Agent coding fails first at storage and concurrency, not at code quality, and OpenAI just bought a machine-oriented Git layer with live customers. The watchpoint is whether Codex becomes the default home for agent-written code, with GitHub as an export.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on Axios&#x27; November 4, 2026 report that OpenAI will acquire Pierre Computer, as carried by Seeking Alpha, Unite.AI and The Neuron the same day. Financial terms were not disclosed, and neither company had posted about the deal on its own website as of Wednesday afternoon UTC, so this article reports a reported acquisition, not a company-confirmed closing. Pierre&#x27;s product specifications and user names come from the company&#x27;s own site and product pages. OpenAI&#x27;s Pando figures come from its November 2, 2026 engineering post. This article is a summary with links only and does not reproduce the Axios report&#x27;s full text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/openai-pierre-computer-codex/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.unite.ai · CLICK TO OPEN THE ORIGINAL ↗</div><p>Unite.AI&#x27;s November 4, 2026 report, opened and verified directly, confirms Axios reported that day that OpenAI will acquire Pierre Computer, plans to integrate its Code Storage product into Codex, and will keep Pierre&#x27;s open-source projects open source; Seeking Alpha&#x27;s same-day report confirms the Axios report and the Codex integration.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/" target="_blank" rel="noopener">OpenAI to Acquire Pierre Computer and Bring Code Storage to Codex ↗</a><br>unite.ai · 2026-11-04 · Unite.AI report</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Unite.AI: OpenAI to Acquire Pierre Computer and Bring Code Storage to Codex<br><a href="https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/" target="_blank" rel="noopener">https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/</a></li><li>Seeking Alpha: OpenAI to buy developer tools startup as it takes aim at GitHub: report<br><a href="https://seekingalpha.com/news/4664594-openai-to-buy-developer-tools-startup-as-it-takes-aim-at-github-report" target="_blank" rel="noopener">https://seekingalpha.com/news/4664594-openai-to-buy-developer-tools-startup-as-it-takes-aim-at-github-report</a></li><li>The Neuron: OpenAI&#x27;s Pierre Deal Brings the AI Coding Fight to GitHub<br><a href="https://www.theneuron.ai/news/openai-pierre-deal-github-ai-coding/" target="_blank" rel="noopener">https://www.theneuron.ai/news/openai-pierre-deal-github-ai-coding/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nice-q3-2026-ai-arr-392m/">NiCE AI Revenue Jumps 46% to $392 Million as Q3 Beats Estimates and Workforce Is Cut 5%</a> <span class="meta">ISSUE 199</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../datadog-q3-2026-beat-weak-outlook/">Datadog Beats on Q3 Revenue and Profit, Then Guides Flat: Shares Fall Sharply in Early Trading</a> <span class="meta">ISSUE 198</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nooks-500m-cvf-revenue-agent-platform/">Nooks Lands a $500M Revenue-Share Commitment and Launches Its Revenue Agent Platform</a> <span class="meta">ISSUE 197</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../meta-first-euro-bond-sale/">Meta Opens Books on First Euro Bond Sale: Six Tranches, Longest Tenor 38 Years (Update to Flash 190)</a> <span class="meta">ISSUE 193</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>

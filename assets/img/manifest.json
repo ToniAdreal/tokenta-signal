@@ -243,5 +243,26 @@
   "credit_name": "Unite.AI report",
   "hero_from": "https://www.unite.ai/traversal-raises-120m-series-b-at-1b-valuation-to-expand-ai-sre/",
   "evidence_from": ""
+ },
+ "menlo-enterprise-ai-177b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Menlo Ventures Report Page",
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+  "evidence_from": ""
+ },
+ "crowdstrike-kill-switch-495m": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "ITMunch report",
+  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
+  "evidence_from": ""
+ },
+ "openai-pierre-computer-codex": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI report",
+  "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
+  "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
  }
 }
