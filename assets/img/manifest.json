@@ -292,5 +292,12 @@
   "credit_name": "MadRobot report",
   "hero_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/",
   "evidence_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/"
+ },
+ "meta-euro-bond-record-53b-orders": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Le Private Banker (Bloomberg)",
+  "hero_from": "https://leprivatebanker.com/2026/11/04/meta-seeks-up-to-e9-billion-in-debut-euro-bond-sale-a-day-after-raising-15-billion-in-dollars/",
+  "evidence_from": ""
  }
 }
