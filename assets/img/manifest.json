@@ -383,5 +383,12 @@
   "credit_name": "TechCrunch report",
   "hero_from": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
   "evidence_from": ""
+ },
+ "meta-euro-bond-final-terms-9b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AIStockWire report (final term sheet)",
+  "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026",
+  "evidence_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026"
  }
 }
