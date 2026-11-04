@@ -348,5 +348,12 @@
   "credit_name": "Arm official newsroom",
   "hero_from": "https://newsroom.arm.com/news/arm-q2-fye27-results",
   "evidence_from": ""
+ },
+ "apple-intelligence-china-beta-live-qwen": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Apple China newsroom announcement",
+  "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/",
+  "evidence_from": ""
  }
 }
