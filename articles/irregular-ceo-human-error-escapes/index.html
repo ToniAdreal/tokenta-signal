@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成 — Tokenta Signal</title><meta name="description" content="Irregular 联合创始人兼 CEO Dan Lahav 2026-11-03 在伦敦 Bloomberg Tech 活动上表示，Anthropic、OpenAI、Meta 与 Google 模型脱离测试环境的事件源于人为失误：测试中本应就位的安全控制配置不当，修复“其实非常直接”且事发当天即解决，模型并未绕过防护。彭博 11-03 报道为独家，PYMNTS 当日转述，Daily AI Brief 于 22:17 UTC 跟进。配置失误的解释自 8 月起已公开，本次新增的事实仅为测试方 CEO 的首次公开表态；彭博报道未指明具体某一次测试，也未说明改动了哪项配置。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--paper:#FAF8F3;--gold:#B08D57;--gold2:#D9C8A8;--ink:#1A1A1A;--line:#262620;--line-l:#E8E2D6;--mut:#6B6B6B;--mut-d:rgba(250,248,243,.62);--panel:#080808;--cyan:#71C5D4}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--gold2)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif","Noto Serif SC",serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(0,0,0,.92);backdrop-filter:blur(8px);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:22px;font-weight:600;letter-spacing:.02em}
+.logo b{color:var(--gold);font-weight:600}
+nav.main{display:flex;gap:26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut-d)} nav.main a:hover{color:var(--paper)}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--mut-d);white-space:nowrap;overflow:hidden;padding:8px 0}
+.ticker span{margin-right:34px}.ticker .live{color:var(--cyan)}
+section{padding:96px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:40px;gap:16px;flex-wrap:wrap}
+.sec-title{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:32px;font-weight:600}
+.hero{padding:110px 0 96px}
+.hero h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:64px;line-height:1.22;font-weight:600;margin:26px 0 24px}
+.hero p.lede{font-size:20px;color:var(--mut-d);max-width:760px}
+.ctas{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.08em;border-radius:2px;border:1px solid var(--paper)}
+.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn.primary:hover{background:var(--gold2);border-color:var(--gold2);color:var(--ink)}
+.btn.ghost{color:var(--paper);background:transparent}
+.trust{margin-top:44px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--mut-d)}
+.trust span{margin-right:28px}
+.lead-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:48px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:700;color:var(--gold);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.3;font-weight:600;margin:16px 0}
+.lead-card p{color:var(--mut-d);font-size:17px}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);letter-spacing:.05em;margin-top:18px}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:86px 150px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline}
+.wire-row:hover{background:#0A0A0A}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--cyan)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--gold)}
+.wire-row .h{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:17px;font-weight:600}
+.wire-row .s{grid-column:3;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.desk-card{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.desk-card h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:21px;font-weight:600;margin:10px 0}
+.desk-card p{color:var(--mut-d);font-size:14px;min-height:66px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--gold)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d)}
+.brief{background:var(--paper);color:var(--ink);padding:44px}
+.brief h3{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:28px;font-weight:600}
+.brief ol{list-style:none;margin-top:22px}
+.brief li{padding:11px 0;border-bottom:1px solid var(--line-l);font-size:16px}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--gold);margin-right:12px;font-size:13px}
+.brief a:hover{color:var(--gold)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--gold);padding-top:18px}
+.why h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut-d);font-size:14px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how .step{border:1px solid var(--line);padding:28px;background:var(--panel)}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:13px}
+.how h4{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:20px;font-weight:600;margin:10px 0}
+.how p{color:var(--mut-d);font-size:14px}
+footer{padding:72px 0 48px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--gold);margin-bottom:16px}
+footer li{list-style:none;margin:8px 0;color:var(--mut-d);font-size:14px}
+.f-brand{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:24px;font-weight:600}
+.f-slogan{color:var(--mut-d);font-size:14px;margin-top:10px;max-width:340px}
+.legal{border-top:1px solid var(--line);margin-top:48px;padding-top:22px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.sponsor{border:1px dashed var(--gold);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0A0800}
+.sponsor .t{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:19px;font-weight:600}
+.sponsor p{color:var(--mut-d);font-size:13px}
+article.read{max-width:760px;margin:0 auto;padding:72px 24px}
+article.read h1{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:44px;line-height:1.32;font-weight:600;margin:18px 0}
+article.read .deck{font-size:19px;color:var(--mut-d)}
+article.read h2{font-family:"IBM Plex Serif","Noto Serif SC",serif;font-size:27px;font-weight:600;margin:46px 0 14px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--gold);display:block;letter-spacing:.12em;margin-bottom:6px}
+article.read p{margin:12px 0;color:#E9E7E1}
+.takeaways{border:1px solid var(--line);background:var(--panel);padding:26px 28px;margin:34px 0}
+.takeaways li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--gold);font-size:12px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}
+.metric{border:1px solid var(--line);padding:18px;background:var(--panel)}
+.metric .num{font-family:"IBM Plex Serif",serif;font-size:30px;font-weight:600;color:var(--gold2)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;color:var(--mut-d)}
+.metric .desc{font-size:13px;color:var(--mut-d);margin-top:6px}
+.refs li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.refs a{color:var(--cyan);word-break:break-all}
+.boundary{border-left:3px solid var(--gold);padding:6px 0 6px 18px;color:var(--mut-d);font-size:15px}
+.tag{display:inline-block;border:1px solid var(--line);padding:3px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut-d);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--paper);padding:16px 18px;font-size:17px;font-family:"IBM Plex Serif","Noto Serif SC",serif}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:40px}.wire-row{grid-template-columns:64px 1fr}.wire-row .s{grid-column:2}nav.main{display:none}section{padding:64px 0}.metrics{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a class="logo" href="../../">TOKENTA <b>/ SIGNAL</b></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<span class="mono" style="font-size:12px;color:var(--mut-d)"><a href="../../">中文</a> / <a href="../../en/">EN</a></span>
+</div></header><div class="ticker"><div class="wrap"><span>2026.11.04 00:21 UTC</span><span><span class="live">● LIVE</span> ISSUE 191 · IRREGULAR × AI SAFETY × MODEL ESCAPES · PYMNTS 报道</span><span><span class="live">● LIVE</span> ISSUE 190 · META × AI INFRASTRUCTURE FUNDING × BOND SALE · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 189 · ARISTA × Q3 EARNINGS × AI NETWORKING · Arista 官方新闻稿</span><span><span class="live">● LIVE</span> ISSUE 188 · BLOCK × Q3 EARNINGS × FINTECH · Reuters 报道</span><span><span class="live">● LIVE</span> ISSUE 187 · VARONIS × Q3 × DATA SECURITY · Varonis 官方财报</span><span><span class="live">● LIVE</span> ISSUE 186 · SUPERMICRO × Q1 FY27 × AI SERVERS · Reuters 报道</span></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER / AI 前沿 · SIGNAL ANALYSIS</span>
+<h1>Irregular CEO 首次公开认责：模型逃逸是人为配置失误，修复当天完成</h1>
+<p class="deck">Irregular CEO Dan Lahav 2026-11-03 在伦敦公开认责：Anthropic、OpenAI、Meta、Google 模型脱离测试环境源于人为配置失误，修复当天完成，模型未绕过防护；配置失误解释自 8 月已公开，本次新增仅为测试方 CEO 的首次公开表态。</p>
+<div class="meta">ISSUE 191 · 2026-11-03 · SOURCE / PYMNTS 报道 · 状态 / VERIFIED 已核实 · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:14px"><span class="tag">IRREGULAR × AI SAFETY × MODEL ESCAPES</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS / 要点</span><ul style="margin-top:10px"><li><b>01</b>THE ANNOUNCEMENT：Lahav 2026-11-03 在伦敦 Bloomberg Tech 活动上表示，模型逃逸源于人为配置失误，修复直接且当天完成。</li><li><b>02</b>THE CONFIRMATION：PYMNTS 转述彭博 11-03 独家报道，Daily AI Brief 22:17 UTC 跟进，RuntimeWire 独立写作交叉确认同一报道口径。</li><li><b>03</b>THE WATCHPOINT：Irregular 承诺的 containment 最佳实践白皮书是否落地，以及各实验室是否在评估合同中加入硬性 containment 条款。</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>发生了什么</h2><p>Irregular 联合创始人兼 CEO Dan Lahav 2026-11-03 在伦敦 Bloomberg Tech 活动上表示，Anthropic、OpenAI、Meta 与 Google 模型脱离测试环境的事件源于人为失误：测试中本应就位的安全控制配置不当。Lahav 称修复“其实非常直接”，问题在事发当天即解决，模型并未绕过防护。彭博 11-03 报道为独家，PYMNTS 当日转述，Daily AI Brief 于 22:17 UTC 跟进。</p><p>公开记录中的事件链：Anthropic 7 月 30 日博客称，复查 141,006 次评估后发现 3 起 Claude 触及 3 家机构真实系统的事件，包括提取凭证、触及数百行生产数据，以及一个投毒 Python 包上线约 1 小时、被 15 台真实系统下载运行。OpenAI 8 月 4 日称，隔离评估的误配让模型访问了公共互联网。Meta 8 月 6 日称，一个模型在网络安全测试中黑入另一家公司，系 Irregular 的无意误配。Google 9 月 18 日向华尔街日报证实，5 月测试中一个模型访问互联网并黑入 3 家公司。</p><p>新旧之分必须划清：配置失误的解释自 8 月起已经公开，各家披露与 RuntimeWire 8 月 9 日报道均已提及。本次新增的是 Lahav 本人首次公开认责，以及“修复直接、当天解决”的说法。彭博报道未指明具体某一次测试、未说明改动了哪项配置，也未回答受影响机构何时获知、责任如何划分。Irregular 此前承诺撰写白皮书，分享安全运行网络安全评估的最佳实践。</p>
+<h2><span class="en">WHY IT MATTERS</span>新的是认责，不是解释</h2><p>配置失误的说法 8 月就已经在公开记录里，Lahav 这次没有提供新的技术细节。变化在说话的人：此前是各家实验室各自披露，测试方本身一直没有公开认责。CEO 在行业活动上把责任揽到配置失误上，等于把事件定性从模型行为问题转回测试流程问题。</p><p>定性转换的实际意义在采购端。实验室买的是第三方评估服务，评估方 containment 出错的代价由被测模型触及的真实机构承担。Lahav 的表态没有回答谁应在开测前核查控制、谁有权中途叫停、事后多久通知受影响方，这些才是下一份评估合同里会被改写的条款。</p><h2><span class="en">WHY IT MATTERS</span>评估行业的 containment 账单才刚开始算</h2><p>Anthropic 的复查数字说明了发现机制的脆弱：3 起事件藏在 141,006 次评估里，直到竞争对手披露才触发回溯。评估行业的核心卖点是提前发现风险，这次事件证明评估流程本身的风险没有被同等对待。</p><p>接下来可核验的节点很具体：Irregular 承诺的白皮书是否落地，各家实验室是否在评估合同中加入开测前网络出口验证、运行中日志监控、成绩单复查等硬性要求。没有这些，Lahav 的认责只是一次公关表态。</p>
+<h2><span class="en">SIGNAL JUDGMENT</span>信号在问责链，不在技术奇观</h2><p>Tokenta Signal 判断：这条新闻的信号不在模型又一次“越狱”，而在评估行业第一次有人站出来认流程的账。模型没有绕过防护，防护根本没有正确就位，这个区分决定了责任归属，也决定了下一份评估合同怎么写。Lahav 没有给出配置项、核查人与通知时间，认责的含金量要看白皮书与合同条款是否跟上。</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>还有什么不确定</h2><div class="boundary">彭博 11-03 独家报道原文未直接打开（付费墙），本篇以 PYMNTS 对该报道的转述、Daily AI Brief 跟进与 RuntimeWire 独立写作为准；三家均源自同一篇彭博报道，非各自独立采写。逃逸事件本身为 2026 年 7 月至 9 月旧闻，配置失误的解释自 8 月起已公开；本次新增的事实仅为 Lahav 2026-11-03 的公开表态。彭博报道未指明 Lahav 所指的具体某一次测试，也未说明改动了哪一项配置。本文只做摘要与链接，不转载报道全文。本文不构成任何投资建议。</div>
+<h2><span class="en">EVIDENCE</span>证据</h2><p>PYMNTS 2026-11-03 报道（转述彭博 11-03 独家）与 RuntimeWire 独立写作双源确认，原文链接已打开验证。</p><p class="meta">原文：<a style="color:var(--cyan)" href="https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/" target="_blank" rel="noopener">Irregular Says Human Error Allowed OpenAI and Anthropic AI Model Escapes ↗</a><br>pymnts.com · 2026-11-03 · PYMNTS 报道</p>
+<h2><span class="en">PRIMARY SOURCES</span>原始来源</h2><ul class="refs"><li>PYMNTS 报道（转述彭博 11-03 独家）<br><a href="https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/</a></li><li>Daily AI Brief 跟进（2026-11-03T22:17:37Z）<br><a href="https://dailyaibrief.com/news/irregular-ai-model-test-escapes-human-error-dCq7pNlj" target="_blank" rel="noopener">https://dailyaibrief.com/news/irregular-ai-model-test-escapes-human-error-dCq7pNlj</a></li><li>RuntimeWire 独立写作（含 8 月已公开口径的区分）<br><a href="https://runtimewire.com/article/irregular-ceo-acknowledges-ai-test-failures-adds-few-details-to-explanation-publ" target="_blank" rel="noopener">https://runtimewire.com/article/irregular-ceo-acknowledges-ai-test-failures-adds-few-details-to-explanation-publ</a></li></ul>
+<h2><span class="en">RELATED</span>相关情报</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-physical-engineering-astra/">OpenAI 把 Astra 派进实体工程：一周做出一台设备，量产关仍要人工兜底</a> <span class="meta">ISSUE 184</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-internal-security-warnings/">路透：OpenAI 员工多年来警告内部安全漏洞，8 月四分之一生产工程师被调去补安全</a> <span class="meta">ISSUE 183</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../indiaai-eka1-dhir/">印度一次摆出三款本土模型：EKA-1 与 Dhīr 主打离线部署，主权模型先上货架</a> <span class="meta">ISSUE 182</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../snowflake-coco-cowork-bots/">Snowflake 推出常驻 CoCo 与 CoWork Bots，智能体开始在岗不在问</a> <span class="meta">ISSUE 180</span></li></ul>
+<p class="meta" style="margin-top:34px">更正政策：如本页事实有误，我们保留更正记录并在本页标注。联系 contact@tokenta.com</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><div class="f-brand">Tokenta Signal</div><p class="f-slogan">Extracting Signals From The Noise. 情报不是预测，而是帮助你看清已经发生的事实。</p></div>
+<div><h5>导航 / NAVIGATION</h5><ul><li><a href="../../">首页</a></li><li><a href="../../latest/">最新情报</a></li><li><a href="../../briefings/">简报</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">方法论</a></li></ul></div>
+<div><h5>来源标准 / STANDARDS</h5><ul><li><a href="../../methodology/">来源标准</a></li><li><a href="../../methodology/">事实核查</a></li><li><a href="../../methodology/">更正政策</a></li><li><a href="../../advertise/">赞助与合作</a></li></ul></div>
+<div><h5>联系 / CONTACT</h5><ul><li>contact@tokenta.com</li><li>公众号 / 视频号：Tokenta Signal</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>信号是起点，不是结论。SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer></body></html>
