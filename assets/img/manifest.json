@@ -222,5 +222,12 @@
   "credit_name": "Seeking Alpha report",
   "hero_from": "https://seekingalpha.com/news/4664551-nice-raises-2026-eps-guidance-after-q3-earnings-and-revenue-top-estimates",
   "evidence_from": ""
+ },
+ "uber-q3-2026-av-700-vehicles": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters brief via TradingView",
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-04:newsml_PLXR5JDMF:0-brief-uber-q3-gross-bookings-usd-59-819-million/",
+  "evidence_from": ""
  }
 }
