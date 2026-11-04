@@ -70,11 +70,11 @@
   "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/"
  },
  "crowdstrike-kill-switch-495m": {
-  "hero": true,
-  "evidence": true,
   "credit_name": "ITMunch report",
-  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
-  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch"
+  "evidence": true,
+  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch",
+  "hero": true,
+  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/"
  },
  "datadog-q3-2026-beat-weak-outlook": {
   "credit_name": "Investor's Business Daily report",
@@ -96,6 +96,13 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law"
+ },
+ "globalfoundries-q3-record-margin-tsmc-interposer": {
+  "credit_name": "Earnings-call coverage",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04"
  },
  "google-guided-learning-k12": {
   "credit_name": "Google Official Blog",
@@ -132,6 +139,13 @@
   "hero": true,
   "hero_from": "https://www.kimi.ai/blog/kimi-k3-1-pro"
  },
+ "lambda-alabama-33b-red-clay-campus": {
+  "credit_name": "Lambda official blog",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/lambda-plans-alabama-ai-data-center-campus-in-lowndes-county/",
+  "hero": true,
+  "hero_from": "https://lambda.ai/blog/lambda-to-invest-33-billion-in-alabama-with-new-data-center"
+ },
  "meituan-longcat-25-chinese-chips": {
   "credit_name": "FourWeekMBA report",
   "evidence": true,
@@ -140,11 +154,11 @@
   "hero_from": ""
  },
  "menlo-enterprise-ai-177b": {
-  "hero": true,
-  "evidence": false,
   "credit_name": "Menlo Ventures Report Page",
-  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
-  "evidence_from": ""
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
  },
  "meta-euro-bond-record-53b-orders": {
   "credit_name": "Le Private Banker (Bloomberg)",
@@ -293,18 +307,11 @@
   "hero": true,
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-04:newsml_PLXR5JDMF:0-brief-uber-q3-gross-bookings-usd-59-819-million/"
  },
- "lambda-alabama-33b-red-clay-campus": {
+ "canva-1271-restructure-ai-costs": {
   "hero": true,
   "evidence": true,
-  "credit_name": "Lambda official blog",
-  "hero_from": "https://lambda.ai/blog/lambda-to-invest-33-billion-in-alabama-with-new-data-center",
-  "evidence_from": "https://www.unite.ai/lambda-plans-alabama-ai-data-center-campus-in-lowndes-county/"
- },
- "globalfoundries-q3-record-margin-tsmc-interposer": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Earnings-call coverage",
-  "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04",
-  "evidence_from": ""
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/",
+  "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/"
  }
 }
