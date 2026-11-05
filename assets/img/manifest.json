@@ -411,5 +411,12 @@
   "credit_name": "Futurum Group",
   "hero_from": "https://futurumgroup.com/insights/adobe-brings-cx-enterprise-coworker-into-third-party-ai-platforms/",
   "evidence_from": ""
+ },
+ "cat-wu-anthropic-openai-core-products": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "RuntimeWire coverage",
+  "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management",
+  "evidence_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
  }
 }
