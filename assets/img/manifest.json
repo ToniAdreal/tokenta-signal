@@ -20,8 +20,15 @@
   "hero": true,
   "hero_from": "https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-complete-business-combination"
  },
+ "akamai-q3-cloud-infrastructure-34": {
+  "credit_name": "Akamai release via Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888"
+ },
  "amd-q3-data-center-record": {
-  "credit_name": "AMD 官方新闻稿",
+  "credit_name": "AMD \u5b98\u65b9\u65b0\u95fb\u7a3f",
   "evidence": false,
   "evidence_from": "",
   "hero": false,
@@ -41,6 +48,13 @@
   "hero": true,
   "hero_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace"
  },
+ "anthropic-claude-personal-finance": {
+  "credit_name": "Anthropic official blog",
+  "evidence": true,
+  "evidence_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+  "hero": true,
+  "hero_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+ },
  "anthropic-flashprove-provable-inference": {
   "credit_name": "Anthropic official research post",
   "evidence": true,
@@ -56,11 +70,18 @@
   "hero_from": "https://claude.com/resources/articles/message-threads"
  },
  "anthropic-s1a-895b-compute": {
-  "credit_name": "gHacks 报道",
+  "credit_name": "gHacks \u62a5\u9053",
   "evidence": true,
   "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/",
   "hero": true,
   "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/"
+ },
+ "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
+  "credit_name": "Business Wire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
  },
  "apple-intelligence-china-beta-live-qwen": {
   "credit_name": "Apple China newsroom announcement",
@@ -89,6 +110,13 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://newsroom.arm.com/news/arm-q2-fye27-results"
+ },
+ "arteris-q3-2026-revenue-2577m-beats-estimates": {
+  "credit_name": "TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/tradingview:86442eb62172c:0-arteris-3q-2026-revenue-25-77m-eps-0-23-10-q-summary/"
  },
  "block-q3-earnings-cash-app": {
   "credit_name": "Motley Fool analysis of the shareholder letter",
@@ -182,7 +210,7 @@
   "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/"
  },
  "eu-gemini-press-copyright": {
-  "credit_name": "Morningstar 转发道琼斯报道",
+  "credit_name": "Morningstar \u8f6c\u53d1\u9053\u743c\u65af\u62a5\u9053",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -229,6 +257,20 @@
   "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
   "hero": true,
   "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
+ },
+ "innodata-q3-record-revenue-956": {
+  "credit_name": "ACCESS Newswire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173"
+ },
+ "iren-q1-fy27-ai-cloud-200m-target-slip": {
+  "credit_name": "AIStockWire",
+  "evidence": true,
+  "evidence_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026",
+  "hero": true,
+  "hero_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026"
  },
  "kimi-k31-pro-weights-public": {
   "credit_name": "Moonshot AI",
@@ -286,6 +328,20 @@
   "hero": true,
   "hero_from": "https://leprivatebanker.com/2026/11/04/meta-seeks-up-to-e9-billion-in-debut-euro-bond-sale-a-day-after-raising-15-billion-in-dollars/"
  },
+ "meta-muse-voice-us-rollout": {
+  "credit_name": "Meta official blog",
+  "evidence": true,
+  "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+  "hero": true,
+  "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
+ },
+ "microchip-q2-fy27-sales-1622b-above-guide": {
+  "credit_name": "Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608"
+ },
  "nice-q3-2026-ai-arr-392m": {
   "credit_name": "Seeking Alpha report",
   "evidence": false,
@@ -308,7 +364,7 @@
   "hero_from": ""
  },
  "nvidia-city-ai-physical-agentic": {
-  "credit_name": "NVIDIA 官方博客",
+  "credit_name": "NVIDIA \u5b98\u65b9\u535a\u5ba2",
   "evidence": true,
   "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
   "hero": true,
@@ -433,6 +489,13 @@
   "hero": true,
   "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/"
  },
+ "soundhound-q3-record-revenue-624": {
+  "credit_name": "GlobeNewswire via Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/soundhound-ai-reports-record-q3-revenue-and-guides-to-sustained-6775997"
+ },
  "supermicro-q1-fy27-record-sales": {
   "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
   "evidence": true,
@@ -440,8 +503,22 @@
   "hero": true,
   "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
  },
+ "synaptics-q1-fy27-revenue-294m-onsemi": {
+  "credit_name": "Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146"
+ },
+ "teradata-q3-2026-revenue-399m-cloud-arr": {
+  "credit_name": "PR Newswire",
+  "evidence": true,
+  "evidence_from": "https://third-news.com/article/88cc2a8e-d961-11f1-872b-9ca3ba08e13f",
+  "hero": false,
+  "hero_from": ""
+ },
  "tesla-robotaxi-fort-worth": {
-  "credit_name": "Not a Tesla App 报道",
+  "credit_name": "Not a Tesla App \u62a5\u9053",
   "evidence": true,
   "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
   "hero": true,
@@ -481,82 +558,5 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/"
- },
- "anthropic-claude-personal-finance": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Anthropic official blog",
-  "hero_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
-  "evidence_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
- },
- "meta-muse-voice-us-rollout": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Meta official blog",
-  "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
-  "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
- },
- "soundhound-q3-record-revenue-624": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "GlobeNewswire via Quantisnow",
-  "hero_from": "https://www.quantisnow.com/insight/soundhound-ai-reports-record-q3-revenue-and-guides-to-sustained-6775997",
-  "evidence_from": ""
- },
- "akamai-q3-cloud-infrastructure-34": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Akamai release via Quantisnow",
-  "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888",
-  "evidence_from": ""
- },
- "innodata-q3-record-revenue-956": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "ACCESS Newswire",
-  "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173",
-  "evidence_from": ""
- },
- "teradata-q3-2026-revenue-399m-cloud-arr": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "PR Newswire",
-  "hero_from": "",
-  "evidence_from": ""
- },
- "iren-q1-fy27-ai-cloud-200m-target-slip": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "AIStockWire",
-  "hero_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026",
-  "evidence_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026"
- },
- "synaptics-q1-fy27-revenue-294m-onsemi": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Quantisnow",
-  "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146",
-  "evidence_from": ""
- },
- "microchip-q2-fy27-sales-1622b-above-guide": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Quantisnow",
-  "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608",
-  "evidence_from": ""
- },
- "arteris-q3-2026-revenue-2577m-beats-estimates": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TradingView",
-  "hero_from": "https://www.tradingview.com/news/tradingview:86442eb62172c:0-arteris-3q-2026-revenue-25-77m-eps-0-23-10-q-summary/",
-  "evidence_from": ""
- },
- "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "Business Wire",
-  "hero_from": "",
-  "evidence_from": ""
  }
 }
