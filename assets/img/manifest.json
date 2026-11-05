@@ -516,5 +516,26 @@
   "credit_name": "ACCESS Newswire",
   "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173",
   "evidence_from": ""
+ },
+ "teradata-q3-2026-revenue-399m-cloud-arr": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "PR Newswire",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "iren-q1-fy27-ai-cloud-200m-target-slip": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AIStockWire",
+  "hero_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026",
+  "evidence_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026"
+ },
+ "synaptics-q1-fy27-revenue-294m-onsemi": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Quantisnow",
+  "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146",
+  "evidence_from": ""
  }
 }
