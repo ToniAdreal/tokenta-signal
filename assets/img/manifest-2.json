@@ -1,394 +1,394 @@
 {
- "openai-adnoc-g42-industrial-ai": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "",
-  "hero_from": "",
-  "evidence_from": ""
- },
- "openai-lifeval-everyday-tasks": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "ExplainX independent analysis",
-  "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026",
-  "evidence_from": "https://openai.com/index/lifeval"
- },
- "anthropic-s1a-895b-compute": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "gHacks 报道",
-  "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/",
-  "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/"
- },
- "arista-q3-ai-networking-record": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Fool independent analysis",
-  "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/",
-  "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026"
- },
- "block-q3-earnings-cash-app": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Motley Fool analysis of the shareholder letter",
-  "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
-  "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
- },
- "crowdstrike-ai-kill-switch": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Independent report",
-  "hero_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls",
-  "evidence_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls"
- },
- "tesla-robotaxi-fort-worth": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Not a Tesla App 报道",
-  "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
-  "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
- },
- "openai-internal-security-warnings": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "KWSN republication of the same Reuters article",
-  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
-  "evidence_from": ""
- },
- "goldman-sachs-claude-code-engineers-only": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "PYMNTS relay of Bloomberg reporting",
-  "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/",
-  "evidence_from": ""
- },
- "irregular-ceo-human-error-escapes": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "PYMNTS report",
-  "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/",
-  "evidence_from": ""
- },
- "kaspersky-cyberstrikeai-education": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Help Net Security Independent Report",
-  "hero_from": "https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/",
-  "evidence_from": ""
- },
- "korea-humanoid-data-factory": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Seoul Economic Daily Report",
-  "hero_from": "https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots",
-  "evidence_from": ""
- },
- "varonis-q3-saas-arr-beat": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "Varonis official earnings release",
-  "hero_from": "",
-  "evidence_from": ""
- },
- "nvidia-city-ai-physical-agentic": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "NVIDIA 官方博客",
-  "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
-  "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
- },
- "indiaai-eka1-dhir": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "ANI Release Report",
-  "hero_from": "https://www.dailyprabhat.com/meity-unveils-indigenous-ai-models-eka-1-dhir-2b-and-5b-under-indiaai-mission/",
-  "evidence_from": ""
- },
- "nvidia-attribution-open-source": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "NVIDIA Official Technical Blog",
-  "hero_from": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
-  "evidence_from": ""
- },
- "tencent-hy4-release": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TechNode independent report",
-  "hero_from": "https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/",
-  "evidence_from": ""
- },
- "uk-ai-package-600m": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "UK government announcement",
-  "hero_from": "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab",
-  "evidence_from": ""
- },
- "openai-cathedral-security-sprint-bounty": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Unite.AI Independent Report",
-  "hero_from": "https://www.unite.ai/openai-plans-new-security-sprint-and-raises-bug-bounty-rewards/",
-  "evidence_from": ""
- },
- "cloudflare-glm53-leak": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "AskGPU report",
-  "hero_from": "https://askgpu.com/updates/cloudflare-workers-ai-glm-5-3-leaked-other-users-prompts/",
-  "evidence_from": ""
- },
- "openai-buys-google-tpu": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "BusinessWorld relaying a Reuters report",
-  "hero_from": "https://bworldonline.com/technology/2026/10/28/789847/openai-plans-to-buy-googles-ai-chips-the-information-reports/",
-  "evidence_from": ""
- },
- "opentrons-40m-series-e": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "Business Wire official release",
-  "hero_from": "",
-  "evidence_from": ""
- },
- "lambda-4b-raise": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TechCrunch",
-  "hero_from": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
-  "evidence_from": ""
- },
- "cursor-claude-code-backdoor": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Rescana security analysis",
-  "hero_from": "https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor",
-  "evidence_from": ""
- },
- "oracle-google-tpu-oci": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Silicon Report report",
-  "hero_from": "https://www.siliconreport.com/oracle-to-offer-google-tpus-on-its-cloud-infrastructure",
-  "evidence_from": "https://www.siliconreport.com/oracle-to-offer-google-tpus-on-its-cloud-infrastructure"
- },
- "apple-creator-studio-mcp": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Apple official newsroom release",
-  "hero_from": "https://www.apple.com/hk/en/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
-  "evidence_from": ""
- },
- "openai-discounts-anthropic-customers": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "SiliconReport, relaying The Information's reporting",
-  "hero_from": "https://www.siliconreport.com/openai-reportedly-pulls-major-customers-from-anthropic-with-discounts",
-  "evidence_from": ""
- },
- "eth-refuted-two-labs": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Tech Times report",
-  "hero_from": "https://www.techtimes.com/articles/329569/20261027/two-ai-systems-disproved-same-complexity-conjecture-independently-same-day-800-papers-risk.htm",
-  "evidence_from": "https://www.unite.ai/openai-says-its-models-produced-three-proofs-in-math-cs-and-physics/"
- },
- "alphabet-cloud-30b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Motley Fool earnings analysis",
-  "hero_from": "https://www.fool.com/investing/2026/10/29/alphabet-s-cloud-business-just-doubled-the-stock-fell-12-is-it-a-buy/",
-  "evidence_from": ""
- },
- "openai-model-spec-five-values": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "AppVolt",
-  "hero_from": "https://appvolt.ai/news/openai-new-rulebook-ai-not-what-you-want-to-hear",
-  "evidence_from": ""
- },
- "agile-one-sn-audi": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TNGlobal relaying the press release",
-  "hero_from": "https://technode.global/prnasia/agile-robots-launches-agile-one-sn-humanoid-at-nvidia-gtc-berlin-and-pilots-humanoids-with-audi-2/",
-  "evidence_from": ""
- },
- "cathedral-anthropic-12-hours": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Daily AI Brief, relaying Washington Post reporting",
-  "hero_from": "https://dailyaibrief.com/news/cathedral-researchers-access-anthropic-internal-systems-9tuR4rVu",
-  "evidence_from": ""
- },
- "general-compute-100m-series-a": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TechCrunch report",
-  "hero_from": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
-  "evidence_from": ""
- },
- "estee-lauder-copilot-14000": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "BigGo syndicated report",
-  "hero_from": "https://finance.biggo.com/news/1d1a2a0d-ab96-4a77-bff2-7ed4c5e07203",
-  "evidence_from": ""
- },
- "microsoft-buyouts-60000": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TipRanks",
-  "hero_from": "https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars",
-  "evidence_from": ""
- },
- "liquid-lfm3-small-models": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Unite.AI launch report",
-  "hero_from": "https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/",
-  "evidence_from": "https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/"
- },
- "iflytek-spark-x26": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Intelligent Living",
-  "hero_from": "https://www.intelligentliving.co/iflytek-spark-x2-6-china-homegrown-ai/",
-  "evidence_from": ""
- },
- "gpt-61-terra-half-price": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Skimwire",
-  "hero_from": "https://www.skimwire.com/openai-gpt-6-1-terra-computer-use-model/",
-  "evidence_from": ""
- },
- "genie-4-world-model": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "The AI Insider report",
-  "hero_from": "https://theaiinsider.tech/2026/10/28/google-deepmind-releases-genie-4-world-model-with-real-time-editing-and-audio/",
-  "evidence_from": ""
- },
- "salesforce-rune-375m": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TechCrunch report",
-  "hero_from": "https://techcrunch.com/2026/10/30/salesforces-ma-spree-continues-with-a-reported-375m-deal-for-defense-tech-startup-rune/",
-  "evidence_from": ""
- },
- "harvey-aida-fifth-deal": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Harvey official announcement",
-  "hero_from": "https://www.harvey.ai/blog/aida-joins-harvey",
-  "evidence_from": ""
- },
- "anthropic-broadcom-63b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Thomson Reuters story, republished",
-  "hero_from": "https://935thelloyd.com/2026/10/26/wall-street-banks-blackstone-line-up-63-billion-to-finance-broadcom-chips-for-anthropic/",
-  "evidence_from": ""
- },
- "doordash-instacart-17b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TipRanks",
-  "hero_from": "https://www.tipranks.com/news/company-announcements/doordash-to-acquire-instacart-in-major-cash-stock-deal",
-  "evidence_from": ""
- },
- "claude-messages-rust-port": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "CellCog report",
-  "hero_from": "https://cellcog.ai/blog/anthropic-messages-api-rust-rewrite/",
-  "evidence_from": ""
- },
- "deepgram-daily-pipecat": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Deepgram official announcement",
-  "hero_from": "https://deepgram.com/blog/daily-pipecat-deepgram",
-  "evidence_from": ""
- },
- "apple-siri-272-memory": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Tech Featured, relaying Apple's release notes",
-  "hero_from": "https://techfeatured.com/20550/ios-27-2-live-siri-ai-memory-synthid-watermark",
-  "evidence_from": ""
- },
- "mistral-large4-weights": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "CSO Online report",
-  "hero_from": "https://www.csoonline.com/article/4242648/mistral-releases-large-4-weights-despite-warning-of-cyberattack-uplift.html",
-  "evidence_from": ""
- },
- "apple-intelligence-china-qwen": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Apple China Newsroom announcement",
-  "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/",
-  "evidence_from": ""
- },
- "openai-compute-campuses": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "TechCrunch report",
-  "hero_from": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
-  "evidence_from": ""
- },
- "nvidia-nscale-guarantee": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Skimwire report",
-  "hero_from": "https://www.skimwire.com/nvidia-nscale-debt-guarantee-anthropic-west-virginia/",
-  "evidence_from": ""
- },
- "openai-models-google-cloud": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Google Cloud official announcement (via The Tech Outlook)",
-  "hero_from": "https://www.thetechoutlook.com/new-release/software-apps/openai-models-now-available-for-google-cloud-customers/",
-  "evidence_from": ""
- },
- "mit-weight-space-programming": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "The Register",
-  "hero_from": "https://www.theregister.com/ai-and-ml/2026/11/03/forget-retraining-ai-can-now-tweak-another-ais-weights/5307105",
-  "evidence_from": ""
- },
- "marvell-lumentum-115b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "The Motley Fool report",
-  "hero_from": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-today-nov-2-marvell-announces-usd115-billion-all-stock-acquisition-of-lumentum/",
-  "evidence_from": ""
- },
- "salesforce-cresta-27b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Silicon Report",
-  "hero_from": "https://www.siliconreport.com/salesforce-agrees-to-acquire-voice-ai-platform-cresta",
-  "evidence_from": ""
- },
- "openai-chatgpt-codex-shared-allowance": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Silicon Report report",
-  "hero_from": "https://www.siliconreport.com/openai-rolls-work-into-regular-chat-combines-usage-with-codex",
-  "evidence_from": ""
- },
- "cisco-nvidia-usfp-400g": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Cisco official newsroom",
-  "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/nvidia-and-cisco-new-pluggable-optics-to-scale-ai-factories.html",
-  "evidence_from": ""
- }
+  "openai-adnoc-g42-industrial-ai": {
+    "hero": false,
+    "evidence": false,
+    "credit_name": "",
+    "hero_from": "",
+    "evidence_from": ""
+  },
+  "openai-lifeval-everyday-tasks": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "ExplainX independent analysis",
+    "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026",
+    "evidence_from": "https://openai.com/index/lifeval"
+  },
+  "anthropic-s1a-895b-compute": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "gHacks \u62a5\u9053",
+    "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/",
+    "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/"
+  },
+  "arista-q3-ai-networking-record": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Fool independent analysis",
+    "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/",
+    "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026"
+  },
+  "block-q3-earnings-cash-app": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Motley Fool analysis of the shareholder letter",
+    "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
+    "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
+  },
+  "crowdstrike-ai-kill-switch": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Independent report",
+    "hero_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls",
+    "evidence_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls"
+  },
+  "tesla-robotaxi-fort-worth": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Not a Tesla App \u62a5\u9053",
+    "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+    "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
+  },
+  "openai-internal-security-warnings": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "KWSN republication of the same Reuters article",
+    "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
+    "evidence_from": ""
+  },
+  "goldman-sachs-claude-code-engineers-only": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "PYMNTS relay of Bloomberg reporting",
+    "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/",
+    "evidence_from": ""
+  },
+  "irregular-ceo-human-error-escapes": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "PYMNTS report",
+    "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/irregular-says-human-error-allowed-openai-and-anthropic-ai-model-escapes/",
+    "evidence_from": ""
+  },
+  "kaspersky-cyberstrikeai-education": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Help Net Security Independent Report",
+    "hero_from": "https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/",
+    "evidence_from": ""
+  },
+  "korea-humanoid-data-factory": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Seoul Economic Daily Report",
+    "hero_from": "https://en.sedaily.com/technology/2026/11/03/korea-opens-first-data-factory-to-train-humanoid-robots",
+    "evidence_from": ""
+  },
+  "varonis-q3-saas-arr-beat": {
+    "hero": false,
+    "evidence": false,
+    "credit_name": "Varonis official earnings release",
+    "hero_from": "",
+    "evidence_from": ""
+  },
+  "nvidia-city-ai-physical-agentic": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "NVIDIA \u5b98\u65b9\u535a\u5ba2",
+    "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+    "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
+  },
+  "indiaai-eka1-dhir": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "ANI Release Report",
+    "hero_from": "https://www.dailyprabhat.com/meity-unveils-indigenous-ai-models-eka-1-dhir-2b-and-5b-under-indiaai-mission/",
+    "evidence_from": ""
+  },
+  "nvidia-attribution-open-source": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "NVIDIA Official Technical Blog",
+    "hero_from": "https://developer.nvidia.com/blog/diagnose-distributed-ai-workload-failures-with-nvidia-attribution/",
+    "evidence_from": ""
+  },
+  "tencent-hy4-release": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechNode independent report",
+    "hero_from": "https://technode.com/2026/11/04/tencent-launches-hy4-with-vision-and-computer-use-capabilities/",
+    "evidence_from": ""
+  },
+  "uk-ai-package-600m": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "UK government announcement",
+    "hero_from": "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab",
+    "evidence_from": ""
+  },
+  "openai-cathedral-security-sprint-bounty": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Unite.AI Independent Report",
+    "hero_from": "https://www.unite.ai/openai-plans-new-security-sprint-and-raises-bug-bounty-rewards/",
+    "evidence_from": ""
+  },
+  "cloudflare-glm53-leak": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "AskGPU report",
+    "hero_from": "https://askgpu.com/updates/cloudflare-workers-ai-glm-5-3-leaked-other-users-prompts/",
+    "evidence_from": ""
+  },
+  "openai-buys-google-tpu": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "BusinessWorld relaying a Reuters report",
+    "hero_from": "https://bworldonline.com/technology/2026/10/28/789847/openai-plans-to-buy-googles-ai-chips-the-information-reports/",
+    "evidence_from": ""
+  },
+  "opentrons-40m-series-e": {
+    "hero": false,
+    "evidence": false,
+    "credit_name": "Business Wire official release",
+    "hero_from": "",
+    "evidence_from": ""
+  },
+  "lambda-4b-raise": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch",
+    "hero_from": "https://techcrunch.com/2026/10/06/ai-computing-startup-lambda-to-raise-4b-ahead-of-planned-ipo/",
+    "evidence_from": ""
+  },
+  "cursor-claude-code-backdoor": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Rescana security analysis",
+    "hero_from": "https://www.rescana.com/post/claude-code-extension-2-1-313-cursor-marketplace-trojanized-ssh-backdoor",
+    "evidence_from": ""
+  },
+  "oracle-google-tpu-oci": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Silicon Report report",
+    "hero_from": "https://www.siliconreport.com/oracle-to-offer-google-tpus-on-its-cloud-infrastructure",
+    "evidence_from": "https://www.siliconreport.com/oracle-to-offer-google-tpus-on-its-cloud-infrastructure"
+  },
+  "apple-creator-studio-mcp": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Apple official newsroom release",
+    "hero_from": "https://www.apple.com/hk/en/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+    "evidence_from": ""
+  },
+  "openai-discounts-anthropic-customers": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "SiliconReport, relaying The Information's reporting",
+    "hero_from": "https://www.siliconreport.com/openai-reportedly-pulls-major-customers-from-anthropic-with-discounts",
+    "evidence_from": ""
+  },
+  "eth-refuted-two-labs": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Tech Times report",
+    "hero_from": "https://www.techtimes.com/articles/329569/20261027/two-ai-systems-disproved-same-complexity-conjecture-independently-same-day-800-papers-risk.htm",
+    "evidence_from": "https://www.unite.ai/openai-says-its-models-produced-three-proofs-in-math-cs-and-physics/"
+  },
+  "alphabet-cloud-30b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Motley Fool earnings analysis",
+    "hero_from": "https://www.fool.com/investing/2026/10/29/alphabet-s-cloud-business-just-doubled-the-stock-fell-12-is-it-a-buy/",
+    "evidence_from": ""
+  },
+  "openai-model-spec-five-values": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "AppVolt",
+    "hero_from": "https://appvolt.ai/news/openai-new-rulebook-ai-not-what-you-want-to-hear",
+    "evidence_from": ""
+  },
+  "agile-one-sn-audi": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TNGlobal relaying the press release",
+    "hero_from": "https://technode.global/prnasia/agile-robots-launches-agile-one-sn-humanoid-at-nvidia-gtc-berlin-and-pilots-humanoids-with-audi-2/",
+    "evidence_from": ""
+  },
+  "cathedral-anthropic-12-hours": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Daily AI Brief, relaying Washington Post reporting",
+    "hero_from": "https://dailyaibrief.com/news/cathedral-researchers-access-anthropic-internal-systems-9tuR4rVu",
+    "evidence_from": ""
+  },
+  "general-compute-100m-series-a": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/10/27/general-compute-raises-100-million-series-a-countering-the-neocloud-disaster-narrative/",
+    "evidence_from": ""
+  },
+  "estee-lauder-copilot-14000": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "BigGo syndicated report",
+    "hero_from": "https://finance.biggo.com/news/1d1a2a0d-ab96-4a77-bff2-7ed4c5e07203",
+    "evidence_from": ""
+  },
+  "microsoft-buyouts-60000": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TipRanks",
+    "hero_from": "https://www.tipranks.com/news/microsoft-offers-buyouts-to-60000-workers-as-ai-spending-soars",
+    "evidence_from": ""
+  },
+  "liquid-lfm3-small-models": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Unite.AI launch report",
+    "hero_from": "https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/",
+    "evidence_from": "https://www.unite.ai/liquid-ai-launches-lfm3-family-of-six-open-weight-2b-class-models/"
+  },
+  "iflytek-spark-x26": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Intelligent Living",
+    "hero_from": "https://www.intelligentliving.co/iflytek-spark-x2-6-china-homegrown-ai/",
+    "evidence_from": ""
+  },
+  "gpt-61-terra-half-price": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Skimwire",
+    "hero_from": "https://www.skimwire.com/openai-gpt-6-1-terra-computer-use-model/",
+    "evidence_from": ""
+  },
+  "genie-4-world-model": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "The AI Insider report",
+    "hero_from": "https://theaiinsider.tech/2026/10/28/google-deepmind-releases-genie-4-world-model-with-real-time-editing-and-audio/",
+    "evidence_from": ""
+  },
+  "salesforce-rune-375m": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/10/30/salesforces-ma-spree-continues-with-a-reported-375m-deal-for-defense-tech-startup-rune/",
+    "evidence_from": ""
+  },
+  "harvey-aida-fifth-deal": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Harvey official announcement",
+    "hero_from": "https://www.harvey.ai/blog/aida-joins-harvey",
+    "evidence_from": ""
+  },
+  "anthropic-broadcom-63b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Thomson Reuters story, republished",
+    "hero_from": "https://935thelloyd.com/2026/10/26/wall-street-banks-blackstone-line-up-63-billion-to-finance-broadcom-chips-for-anthropic/",
+    "evidence_from": ""
+  },
+  "doordash-instacart-17b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TipRanks",
+    "hero_from": "https://www.tipranks.com/news/company-announcements/doordash-to-acquire-instacart-in-major-cash-stock-deal",
+    "evidence_from": ""
+  },
+  "claude-messages-rust-port": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "CellCog report",
+    "hero_from": "https://cellcog.ai/blog/anthropic-messages-api-rust-rewrite/",
+    "evidence_from": ""
+  },
+  "deepgram-daily-pipecat": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Deepgram official announcement",
+    "hero_from": "https://deepgram.com/blog/daily-pipecat-deepgram",
+    "evidence_from": ""
+  },
+  "apple-siri-272-memory": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Tech Featured, relaying Apple's release notes",
+    "hero_from": "https://techfeatured.com/20550/ios-27-2-live-siri-ai-memory-synthid-watermark",
+    "evidence_from": ""
+  },
+  "mistral-large4-weights": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "CSO Online report",
+    "hero_from": "https://www.csoonline.com/article/4242648/mistral-releases-large-4-weights-despite-warning-of-cyberattack-uplift.html",
+    "evidence_from": ""
+  },
+  "apple-intelligence-china-qwen": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Apple China Newsroom announcement",
+    "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/",
+    "evidence_from": ""
+  },
+  "openai-compute-campuses": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/11/01/openai-might-rebrand-its-data-centers-as-ai-compute-campuses/",
+    "evidence_from": ""
+  },
+  "nvidia-nscale-guarantee": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Skimwire report",
+    "hero_from": "https://www.skimwire.com/nvidia-nscale-debt-guarantee-anthropic-west-virginia/",
+    "evidence_from": ""
+  },
+  "openai-models-google-cloud": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Google Cloud official announcement (via The Tech Outlook)",
+    "hero_from": "https://www.thetechoutlook.com/new-release/software-apps/openai-models-now-available-for-google-cloud-customers/",
+    "evidence_from": ""
+  },
+  "mit-weight-space-programming": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "The Register",
+    "hero_from": "https://www.theregister.com/ai-and-ml/2026/11/03/forget-retraining-ai-can-now-tweak-another-ais-weights/5307105",
+    "evidence_from": ""
+  },
+  "marvell-lumentum-115b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "The Motley Fool report",
+    "hero_from": "https://www.fool.com/coverage/stock-market-today/2026/11/02/stock-market-today-nov-2-marvell-announces-usd115-billion-all-stock-acquisition-of-lumentum/",
+    "evidence_from": ""
+  },
+  "salesforce-cresta-27b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Silicon Report",
+    "hero_from": "https://www.siliconreport.com/salesforce-agrees-to-acquire-voice-ai-platform-cresta",
+    "evidence_from": ""
+  },
+  "openai-chatgpt-codex-shared-allowance": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Silicon Report report",
+    "hero_from": "https://www.siliconreport.com/openai-rolls-work-into-regular-chat-combines-usage-with-codex",
+    "evidence_from": ""
+  },
+  "cisco-nvidia-usfp-400g": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Cisco official newsroom",
+    "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/nvidia-and-cisco-new-pluggable-optics-to-scale-ai-factories.html",
+    "evidence_from": ""
+  }
 }

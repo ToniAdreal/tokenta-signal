@@ -1,1 +1,366 @@
-{"openai-grid-protectors-georgia": {"hero": true, "evidence": true, "credit_name": "New York Post independent report", "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/", "evidence_from": "https://openai.com/index/grid-protectors-program/"}, "china-ndrc-ai-lifecycle-law": {"hero": true, "evidence": true, "credit_name": "Bloomberg Law report", "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses", "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"}, "semianalysis-gdpx-benchmark": {"hero": true, "evidence": true, "credit_name": "SemiAnalysis official announcement", "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities", "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/"}, "supermicro-q1-fy27-record-sales": {"hero": true, "evidence": true, "credit_name": "Supermicro official earnings release (full text via Quantisnow)", "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523", "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"}, "crowdstrike-fiddler-dreadnode": {"hero": true, "evidence": true, "credit_name": "dpa-AFX wire report", "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/", "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/"}, "tutor-intelligence-75m-series-b": {"hero": true, "evidence": true, "credit_name": "Tutor Intelligence company announcement", "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/", "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"}, "google-guided-learning-k12": {"hero": true, "evidence": true, "credit_name": "Google Official Blog", "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/", "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"}, "snowflake-coco-cowork-bots": {"hero": true, "evidence": false, "credit_name": "Snowflake official blog", "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/", "evidence_from": ""}, "drax-brookfield-radiant-1gw": {"hero": true, "evidence": false, "credit_name": "AI data center page, Drax website", "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/", "evidence_from": ""}, "google-mandiant-llmjacking": {"hero": true, "evidence": false, "credit_name": "Google Cloud Official Blog Report", "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models", "evidence_from": ""}, "google-xcpe-videostrong-botnet": {"hero": true, "evidence": false, "credit_name": "Google Threat Intelligence Team Official Blog", "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet", "evidence_from": ""}, "menlo-enterprise-ai-177b": {"hero": true, "evidence": false, "credit_name": "Menlo Ventures Report Page", "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/", "evidence_from": ""}, "uk-ncsc-ai-cyberattack-2028": {"hero": false, "evidence": true, "credit_name": "Reuters report", "hero_from": "", "evidence_from": ""}, "meta-first-euro-bond-sale": {"hero": true, "evidence": false, "credit_name": "Reuters report (republished by TradingView)", "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L5N46L0VM:0-meta-kicks-off-first-euro-bond-sale/", "evidence_from": ""}, "openai-anthropic-election-war-rooms": {"hero": true, "evidence": false, "credit_name": "AzerNEWS Independent Report", "hero_from": "https://www.azernews.az/region/266683.html", "evidence_from": ""}, "meta-bond-sale-ai-infra": {"hero": true, "evidence": false, "credit_name": "SEC Final Term Sheet Compilation (AIStockWire)", "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026", "evidence_from": ""}, "tesla-korea-fsd-complaint": {"hero": true, "evidence": false, "credit_name": "TradersUnion follow-up (rewrite of the same Reuters exclusive)", "hero_from": "https://tradersunion.com/news/companies/show/4084591-tesla-faces-korea-fsd-complaint/", "evidence_from": ""}, "toyota-waymo-bz4x": {"hero": true, "evidence": false, "credit_name": "TechCrunch report", "hero_from": "https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk/", "evidence_from": ""}, "openai-chatgpt-search-fifth-google": {"hero": true, "evidence": true, "credit_name": "Big Technology Interview Report", "hero_from": "https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20", "evidence_from": "https://aistockwire.com/blog/openai-chatgpt-search-one-fifth-google-googl-what-counts-november-2026"}, "metr-redwood-monitor-gaps": {"hero": true, "evidence": false, "credit_name": "TokenPost relaying the METR / Redwood evaluation", "hero_from": "https://www.tokenpost.com/news/technology/38695", "evidence_from": ""}, "five-qwens-gvs5h": {"hero": true, "evidence": false, "credit_name": "Hacker News / GVS5H project discussion", "hero_from": "https://paktechstan.com/five-small-open-models-just-outscored-claude-s-best-coder-with-no-extra-training", "evidence_from": ""}, "deepmind-resignations-pentagon": {"hero": true, "evidence": false, "credit_name": "BBC investigation (via Daily AI Brief)", "hero_from": "https://dailyaibrief.com/news/google-deepmind-staff-quit-military-ai-contracts-IMPqsB5n", "evidence_from": ""}, "elvis-anthropic-41m-suit": {"hero": true, "evidence": false, "credit_name": "FOX Cincinnati", "hero_from": "https://www.foxcincinnati.com/2026/10/27/elvis-presley-song-rights-holders-file-41-million-copyright-lawsuit-against-anthropic/", "evidence_from": ""}, "cohere-7b-series-e": {"hero": true, "evidence": false, "credit_name": "Unite.AI", "hero_from": "https://www.unite.ai/cohere-closes-initial-series-e-targeting-up-to-cad-7b-at-cad-35-7b-valuation/", "evidence_from": ""}, "meta-95b-ai-funding": {"hero": true, "evidence": false, "credit_name": "Quiver Quantitative", "hero_from": "https://www.quiverquant.com/news/Meta+($META)+Launches+$35+Billion+Equity+Offerings,+Plans+$60+Billion+More+for+AI+Investments", "evidence_from": ""}, "anthropic-ultra-no-5h-limit": {"hero": true, "evidence": false, "credit_name": "CryptoBriefing report", "hero_from": "https://cryptobriefing.com/anthropic-removes-five-hour-limit-ultra/", "evidence_from": ""}, "korea-3-5b-frontier-model": {"hero": true, "evidence": false, "credit_name": "Korea JoongAng Daily", "hero_from": "https://www.koreajoongangdaily.com/business/korea-splits-ai-push-into-two-tracks-amid-confusion-over-sovereign-model-project/12904222", "evidence_from": ""}, "upwind-400m-series-c": {"hero": true, "evidence": false, "credit_name": "TechCrunch report", "hero_from": "https://techcrunch.com/2026/10/28/upwind-raises-400m-after-walking-away-from-datadog-acquisition-offer/", "evidence_from": ""}, "dulo-130m-seed": {"hero": true, "evidence": false, "credit_name": "Dealroom report", "hero_from": "https://dealroom.co/news/168108-waymo-pioneer-thruns-hardware-design-startup-dulo-raises-130m-seed/", "evidence_from": ""}, "microsoft-openai-10b-quarter": {"hero": true, "evidence": false, "credit_name": "Skimwire earnings summary", "hero_from": "https://www.skimwire.com/microsoft-q1-fy27-earnings-azure-openai-revenue/", "evidence_from": ""}, "minerva-humanoid-roger": {"hero": false, "evidence": false, "credit_name": "Company official press release", "hero_from": "", "evidence_from": ""}, "grok-bot-shopping": {"hero": true, "evidence": false, "credit_name": "AIToolsRecap report", "hero_from": "https://aitoolsrecap.com/Blog/ai-news-october-30-2026", "evidence_from": ""}, "anthropic-ipo-filing": {"hero": true, "evidence": false, "credit_name": "Dealroom", "hero_from": "https://dealroom.co/news/164610-anthropics-draft-s-1-reveals-16-3b-revenue-80-7b-loss-and-up-to-750b-com/", "evidence_from": ""}, "reflection-beam-501b": {"hero": true, "evidence": false, "credit_name": "The Decoder report", "hero_from": "https://the-decoder.com/reflections-beam-becomes-the-most-capable-open-weight-model-built-outside-china/", "evidence_from": ""}, "apple-touchscreen-macbook-pro": {"hero": true, "evidence": false, "credit_name": "TechCrunch launch report", "hero_from": "https://techcrunch.com/2026/10/28/apple-launches-its-new-touchscreen-macbook-pro/", "evidence_from": ""}, "aimoga-mobo-preorder": {"hero": true, "evidence": false, "credit_name": "GlobeNewswire official press release", "hero_from": "https://www.globenewswire.com/news-release/2026/10/27/3389757/0/en/mobo-makes-global-debut-and-opens-pre-orders-as-aimoga-unveils-its-new-path-to-industrialization.html", "evidence_from": ""}, "uber-chatgpt-work-30000": {"hero": true, "evidence": true, "credit_name": "TechCrunch report", "hero_from": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/", "evidence_from": "https://www.unite.ai/uber-rolls-out-chatgpt-work-to-more-than-30-000-employees/"}, "kling-ai-ipo": {"hero": true, "evidence": false, "credit_name": "Bloomberg", "hero_from": "https://cryptobriefing.com/kuaishou-kling-ai-hong-kong-ipo/", "evidence_from": ""}, "gemini-4-carbon": {"hero": true, "evidence": true, "credit_name": "Google official blog", "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/", "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"}, "fico-layoffs-15pct": {"hero": true, "evidence": false, "credit_name": "Zubiqo", "hero_from": "https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d", "evidence_from": ""}, "tesla-pivot-robotics": {"hero": true, "evidence": false, "credit_name": "Tesla earnings call", "hero_from": "https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan", "evidence_from": ""}, "interact-mcp-700": {"hero": true, "evidence": false, "credit_name": "GlobeNewswire, carrying Interact's official announcement", "hero_from": "https://www.globenewswire.com/news-release/2026/10/26/3388061/0/en/interact-brings-700-intranet-capabilities-to-enterprise-ai-assistants-with-interact-mcp.html", "evidence_from": ""}, "nvidia-meta-3b": {"hero": true, "evidence": false, "credit_name": "WattsUpNext", "hero_from": "https://wattsupnext.com/news/5-things-you-need-to-know-about-ai-today-october-27", "evidence_from": ""}, "furiosaai-620m-series-d": {"hero": true, "evidence": false, "credit_name": "FuriosaAI official announcement", "hero_from": "https://furiosa.ai/blog/furiosaai-620-million-series-d", "evidence_from": ""}, "mistral-large-4": {"hero": true, "evidence": false, "credit_name": "Artificial Analysis", "hero_from": "https://artificialanalysis.ai/articles/mistral-large-4-france-ai", "evidence_from": ""}, "google-suncatcher-tpu-orbit": {"hero": true, "evidence": false, "credit_name": "OfficeChai report", "hero_from": "https://officechai.com/ai/google-successfully-runs-inference-from-a-tpu-in-space-under-project-suncatcher/", "evidence_from": ""}, "spacex-40b-gpu-lease": {"hero": true, "evidence": true, "credit_name": "Silicon Report, relaying company announcements and regulatory filings", "hero_from": "https://www.siliconreport.com/apollo-will-lease-roughly-40b-in-ai-chips-and-servers-to-spacex", "evidence_from": "https://www.unite.ai/apollo-led-40-billion-gpu-lease-deal-draws-binding-spacex-pledge/"}, "openai-daybreak-blue-training": {"hero": true, "evidence": false, "credit_name": "Abijita report", "hero_from": "https://www.abijita.com/openai-daybreak-blue-training-data/", "evidence_from": ""}, "meta-max-humanoid-fourier": {"hero": true, "evidence": true, "credit_name": "ShiftDelete report", "hero_from": "https://shiftdelete.net/en/meta-humanoid-robot", "evidence_from": "https://shiftdelete.net/en/meta-humanoid-robot"}, "google-finland-forest-probe": {"hero": true, "evidence": false, "credit_name": "The Europe Today report", "hero_from": "https://theeuropetoday.com/2026/10/30/finland-launches-criminal-investigation-into-suspected-environmental-damage-at-google-data-centre-site/", "evidence_from": ""}, "nyt-sues-brave": {"hero": true, "evidence": false, "credit_name": "TechCrunch report", "hero_from": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/", "evidence_from": ""}, "apple-q4-memory-margins": {"hero": true, "evidence": false, "credit_name": "MacRumors report", "hero_from": "https://www.macrumors.com/2026/11/02/apple-q4-2026-earnings-takeaways/", "evidence_from": ""}, "applied-compute-350m": {"hero": true, "evidence": false, "credit_name": "Applied Compute official blog", "hero_from": "https://www.appliedcompute.com/company/100m-run-rate-fundraise", "evidence_from": ""}}
+{
+  "openai-grid-protectors-georgia": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "New York Post independent report",
+    "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/",
+    "evidence_from": "https://openai.com/index/grid-protectors-program/"
+  },
+  "china-ndrc-ai-lifecycle-law": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Bloomberg Law report",
+    "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses",
+    "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
+  },
+  "semianalysis-gdpx-benchmark": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "SemiAnalysis official announcement",
+    "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
+    "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/"
+  },
+  "supermicro-q1-fy27-record-sales": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
+    "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523",
+    "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
+  },
+  "crowdstrike-fiddler-dreadnode": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "dpa-AFX wire report",
+    "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/",
+    "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/"
+  },
+  "tutor-intelligence-75m-series-b": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Tutor Intelligence company announcement",
+    "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
+    "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
+  },
+  "google-guided-learning-k12": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Google Official Blog",
+    "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+    "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+  },
+  "snowflake-coco-cowork-bots": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Snowflake official blog",
+    "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+    "evidence_from": ""
+  },
+  "drax-brookfield-radiant-1gw": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "AI data center page, Drax website",
+    "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/",
+    "evidence_from": ""
+  },
+  "google-mandiant-llmjacking": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Google Cloud Official Blog Report",
+    "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+    "evidence_from": ""
+  },
+  "google-xcpe-videostrong-botnet": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Google Threat Intelligence Team Official Blog",
+    "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+    "evidence_from": ""
+  },
+  "uk-ncsc-ai-cyberattack-2028": {
+    "hero": false,
+    "evidence": true,
+    "credit_name": "Reuters report",
+    "hero_from": "",
+    "evidence_from": ""
+  },
+  "meta-first-euro-bond-sale": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Reuters report (republished by TradingView)",
+    "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L5N46L0VM:0-meta-kicks-off-first-euro-bond-sale/",
+    "evidence_from": ""
+  },
+  "openai-anthropic-election-war-rooms": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "AzerNEWS Independent Report",
+    "hero_from": "https://www.azernews.az/region/266683.html",
+    "evidence_from": ""
+  },
+  "meta-bond-sale-ai-infra": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "SEC Final Term Sheet Compilation (AIStockWire)",
+    "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026",
+    "evidence_from": ""
+  },
+  "tesla-korea-fsd-complaint": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TradersUnion follow-up (rewrite of the same Reuters exclusive)",
+    "hero_from": "https://tradersunion.com/news/companies/show/4084591-tesla-faces-korea-fsd-complaint/",
+    "evidence_from": ""
+  },
+  "toyota-waymo-bz4x": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/10/30/waymos-next-robotaxi-will-be-a-toyota-bz4x-destined-for-japan-and-the-uk/",
+    "evidence_from": ""
+  },
+  "openai-chatgpt-search-fifth-google": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Big Technology Interview Report",
+    "hero_from": "https://www.bigtechnology.com/p/openai-chatgpt-search-is-about-20",
+    "evidence_from": "https://aistockwire.com/blog/openai-chatgpt-search-one-fifth-google-googl-what-counts-november-2026"
+  },
+  "metr-redwood-monitor-gaps": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TokenPost relaying the METR / Redwood evaluation",
+    "hero_from": "https://www.tokenpost.com/news/technology/38695",
+    "evidence_from": ""
+  },
+  "five-qwens-gvs5h": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Hacker News / GVS5H project discussion",
+    "hero_from": "https://paktechstan.com/five-small-open-models-just-outscored-claude-s-best-coder-with-no-extra-training",
+    "evidence_from": ""
+  },
+  "deepmind-resignations-pentagon": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "BBC investigation (via Daily AI Brief)",
+    "hero_from": "https://dailyaibrief.com/news/google-deepmind-staff-quit-military-ai-contracts-IMPqsB5n",
+    "evidence_from": ""
+  },
+  "elvis-anthropic-41m-suit": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "FOX Cincinnati",
+    "hero_from": "https://www.foxcincinnati.com/2026/10/27/elvis-presley-song-rights-holders-file-41-million-copyright-lawsuit-against-anthropic/",
+    "evidence_from": ""
+  },
+  "cohere-7b-series-e": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Unite.AI",
+    "hero_from": "https://www.unite.ai/cohere-closes-initial-series-e-targeting-up-to-cad-7b-at-cad-35-7b-valuation/",
+    "evidence_from": ""
+  },
+  "meta-95b-ai-funding": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Quiver Quantitative",
+    "hero_from": "https://www.quiverquant.com/news/Meta+($META)+Launches+$35+Billion+Equity+Offerings,+Plans+$60+Billion+More+for+AI+Investments",
+    "evidence_from": ""
+  },
+  "anthropic-ultra-no-5h-limit": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "CryptoBriefing report",
+    "hero_from": "https://cryptobriefing.com/anthropic-removes-five-hour-limit-ultra/",
+    "evidence_from": ""
+  },
+  "korea-3-5b-frontier-model": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Korea JoongAng Daily",
+    "hero_from": "https://www.koreajoongangdaily.com/business/korea-splits-ai-push-into-two-tracks-amid-confusion-over-sovereign-model-project/12904222",
+    "evidence_from": ""
+  },
+  "upwind-400m-series-c": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/10/28/upwind-raises-400m-after-walking-away-from-datadog-acquisition-offer/",
+    "evidence_from": ""
+  },
+  "dulo-130m-seed": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Dealroom report",
+    "hero_from": "https://dealroom.co/news/168108-waymo-pioneer-thruns-hardware-design-startup-dulo-raises-130m-seed/",
+    "evidence_from": ""
+  },
+  "microsoft-openai-10b-quarter": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Skimwire earnings summary",
+    "hero_from": "https://www.skimwire.com/microsoft-q1-fy27-earnings-azure-openai-revenue/",
+    "evidence_from": ""
+  },
+  "minerva-humanoid-roger": {
+    "hero": false,
+    "evidence": false,
+    "credit_name": "Company official press release",
+    "hero_from": "",
+    "evidence_from": ""
+  },
+  "grok-bot-shopping": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "AIToolsRecap report",
+    "hero_from": "https://aitoolsrecap.com/Blog/ai-news-october-30-2026",
+    "evidence_from": ""
+  },
+  "anthropic-ipo-filing": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Dealroom",
+    "hero_from": "https://dealroom.co/news/164610-anthropics-draft-s-1-reveals-16-3b-revenue-80-7b-loss-and-up-to-750b-com/",
+    "evidence_from": ""
+  },
+  "reflection-beam-501b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "The Decoder report",
+    "hero_from": "https://the-decoder.com/reflections-beam-becomes-the-most-capable-open-weight-model-built-outside-china/",
+    "evidence_from": ""
+  },
+  "apple-touchscreen-macbook-pro": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch launch report",
+    "hero_from": "https://techcrunch.com/2026/10/28/apple-launches-its-new-touchscreen-macbook-pro/",
+    "evidence_from": ""
+  },
+  "aimoga-mobo-preorder": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "GlobeNewswire official press release",
+    "hero_from": "https://www.globenewswire.com/news-release/2026/10/27/3389757/0/en/mobo-makes-global-debut-and-opens-pre-orders-as-aimoga-unveils-its-new-path-to-industrialization.html",
+    "evidence_from": ""
+  },
+  "uber-chatgpt-work-30000": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/10/22/uber-puts-all-30000-employees-on-chatgpt-work/",
+    "evidence_from": "https://www.unite.ai/uber-rolls-out-chatgpt-work-to-more-than-30-000-employees/"
+  },
+  "kling-ai-ipo": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Bloomberg",
+    "hero_from": "https://cryptobriefing.com/kuaishou-kling-ai-hong-kong-ipo/",
+    "evidence_from": ""
+  },
+  "gemini-4-carbon": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Google official blog",
+    "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  },
+  "fico-layoffs-15pct": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Zubiqo",
+    "hero_from": "https://zubiqo.com/news/fico-slashes-15-of-workforce-in-ai-restructuring-as-stock-plunges-58-on-regulatory-threats-06w03d",
+    "evidence_from": ""
+  },
+  "tesla-pivot-robotics": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Tesla earnings call",
+    "hero_from": "https://markets.financialcontent.com/prnews.pressrelease/article/marketminute-2026-2-2-teslas-20-billion-ai-gamble-inside-the-pivot-from-automaker-to-robotics-titan",
+    "evidence_from": ""
+  },
+  "interact-mcp-700": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "GlobeNewswire, carrying Interact's official announcement",
+    "hero_from": "https://www.globenewswire.com/news-release/2026/10/26/3388061/0/en/interact-brings-700-intranet-capabilities-to-enterprise-ai-assistants-with-interact-mcp.html",
+    "evidence_from": ""
+  },
+  "nvidia-meta-3b": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "WattsUpNext",
+    "hero_from": "https://wattsupnext.com/news/5-things-you-need-to-know-about-ai-today-october-27",
+    "evidence_from": ""
+  },
+  "furiosaai-620m-series-d": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "FuriosaAI official announcement",
+    "hero_from": "https://furiosa.ai/blog/furiosaai-620-million-series-d",
+    "evidence_from": ""
+  },
+  "mistral-large-4": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Artificial Analysis",
+    "hero_from": "https://artificialanalysis.ai/articles/mistral-large-4-france-ai",
+    "evidence_from": ""
+  },
+  "google-suncatcher-tpu-orbit": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "OfficeChai report",
+    "hero_from": "https://officechai.com/ai/google-successfully-runs-inference-from-a-tpu-in-space-under-project-suncatcher/",
+    "evidence_from": ""
+  },
+  "spacex-40b-gpu-lease": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "Silicon Report, relaying company announcements and regulatory filings",
+    "hero_from": "https://www.siliconreport.com/apollo-will-lease-roughly-40b-in-ai-chips-and-servers-to-spacex",
+    "evidence_from": "https://www.unite.ai/apollo-led-40-billion-gpu-lease-deal-draws-binding-spacex-pledge/"
+  },
+  "openai-daybreak-blue-training": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Abijita report",
+    "hero_from": "https://www.abijita.com/openai-daybreak-blue-training-data/",
+    "evidence_from": ""
+  },
+  "meta-max-humanoid-fourier": {
+    "hero": true,
+    "evidence": true,
+    "credit_name": "ShiftDelete report",
+    "hero_from": "https://shiftdelete.net/en/meta-humanoid-robot",
+    "evidence_from": "https://shiftdelete.net/en/meta-humanoid-robot"
+  },
+  "google-finland-forest-probe": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "The Europe Today report",
+    "hero_from": "https://theeuropetoday.com/2026/10/30/finland-launches-criminal-investigation-into-suspected-environmental-damage-at-google-data-centre-site/",
+    "evidence_from": ""
+  },
+  "nyt-sues-brave": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "TechCrunch report",
+    "hero_from": "https://techcrunch.com/2026/11/02/new-york-times-and-other-outlets-sue-web-browser-brave-over-alleged-content-scraping/",
+    "evidence_from": ""
+  },
+  "apple-q4-memory-margins": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "MacRumors report",
+    "hero_from": "https://www.macrumors.com/2026/11/02/apple-q4-2026-earnings-takeaways/",
+    "evidence_from": ""
+  },
+  "applied-compute-350m": {
+    "hero": true,
+    "evidence": false,
+    "credit_name": "Applied Compute official blog",
+    "hero_from": "https://www.appliedcompute.com/company/100m-run-rate-fundraise",
+    "evidence_from": ""
+  }
+}

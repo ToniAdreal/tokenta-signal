@@ -76,13 +76,6 @@
   "hero": true,
   "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/"
  },
- "crowdstrike-kill-switch-495m": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "ITMunch report",
-  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
-  "evidence_from": "https://theinference.org/article/crowdstrike-pays-a-reported-495-million-for-fiddler-ai-and-dreadnode-and-unveils-an-ai-kill-switch"
- },
  "datadog-q3-2026-beat-weak-outlook": {
   "credit_name": "Investor's Business Daily report",
   "evidence": false,
@@ -159,13 +152,6 @@
   "evidence_from": "https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm",
   "hero": false,
   "hero_from": ""
- },
- "menlo-enterprise-ai-177b": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "Menlo Ventures Report Page",
-  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
-  "evidence_from": ""
  },
  "meta-euro-bond-record-53b-orders": {
   "credit_name": "Le Private Banker (Bloomberg)",
@@ -418,5 +404,12 @@
   "credit_name": "RuntimeWire coverage",
   "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management",
   "evidence_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
+ },
+ "openai-linux-kernel-948-root-exploits": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Interesting Engineering coverage",
+  "hero_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits",
+  "evidence_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits"
  }
 }
