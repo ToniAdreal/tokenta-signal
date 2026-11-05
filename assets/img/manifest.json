@@ -397,5 +397,19 @@
   "credit_name": "StockStory",
   "hero_from": "https://stockstory.org/us/stocks/nyse/cohr/news/earnings/coherent-nysecohr-beats-q3-cy2026-sales-expectations-provides-optimistic-revenue-guidance-for-next-quarter",
   "evidence_from": ""
+ },
+ "anthropic-claude-marketplace-partner-agents": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic announcement",
+  "hero_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+  "evidence_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace"
+ },
+ "adobe-cx-coworker-third-party-ai": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Futurum Group",
+  "hero_from": "https://futurumgroup.com/insights/adobe-brings-cx-enterprise-coworker-into-third-party-ai-platforms/",
+  "evidence_from": ""
  }
 }
