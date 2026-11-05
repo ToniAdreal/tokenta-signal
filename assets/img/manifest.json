@@ -453,5 +453,12 @@
   "credit_name": "Menlo Ventures Report Page",
   "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
   "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
+ },
+ "agility-nasdaq-debut-aglt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WebProNews",
+  "hero_from": "https://www.webpronews.com/agility-robotics-nasdaq-aglt-humanoid-debut/",
+  "evidence_from": ""
  }
 }
