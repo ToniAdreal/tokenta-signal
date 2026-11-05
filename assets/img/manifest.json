@@ -411,5 +411,12 @@
   "credit_name": "Interesting Engineering coverage",
   "hero_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits",
   "evidence_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits"
+ },
+ "foxconn-october-revenue-4573": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters via TradingView",
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M068:0-foxconn-october-revenue-45-73-y-y/",
+  "evidence_from": ""
  }
 }
