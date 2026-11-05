@@ -390,5 +390,12 @@
   "credit_name": "AIStockWire report (final term sheet)",
   "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026",
   "evidence_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026"
+ },
+ "coherent-q1-fy27-record-revenue": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "StockStory",
+  "hero_from": "https://stockstory.org/us/stocks/nyse/cohr/news/earnings/coherent-nysecohr-beats-q3-cy2026-sales-expectations-provides-optimistic-revenue-guidance-for-next-quarter",
+  "evidence_from": ""
  }
 }
