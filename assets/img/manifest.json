@@ -537,5 +537,12 @@
   "credit_name": "Quantisnow",
   "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146",
   "evidence_from": ""
+ },
+ "microchip-q2-fy27-sales-1622b-above-guide": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Quantisnow",
+  "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608",
+  "evidence_from": ""
  }
 }
