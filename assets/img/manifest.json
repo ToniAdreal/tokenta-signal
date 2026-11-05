@@ -544,5 +544,19 @@
   "credit_name": "Quantisnow",
   "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608",
   "evidence_from": ""
+ },
+ "arteris-q3-2026-revenue-2577m-beats-estimates": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingView",
+  "hero_from": "https://www.tradingview.com/news/tradingview:86442eb62172c:0-arteris-3q-2026-revenue-25-77m-eps-0-23-10-q-summary/",
+  "evidence_from": ""
+ },
+ "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Business Wire",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
