@@ -162,10 +162,10 @@
  },
  "menlo-enterprise-ai-177b": {
   "hero": true,
-  "evidence": true,
+  "evidence": false,
   "credit_name": "Menlo Ventures Report Page",
   "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
-  "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
+  "evidence_from": ""
  },
  "meta-euro-bond-record-53b-orders": {
   "credit_name": "Le Private Banker (Bloomberg)",
@@ -418,33 +418,5 @@
   "credit_name": "RuntimeWire coverage",
   "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management",
   "evidence_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
- },
- "oracle-tencent-7b-cancelled": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Reuters report",
-  "hero_from": "https://northlandnewsradio.com/2026/11/03/oracle-abandons-7-billion-tencent-ai-deal-under-trump-pressure-ft-reports/",
-  "evidence_from": "https://northlandnewsradio.com/2026/11/03/oracle-abandons-7-billion-tencent-ai-deal-under-trump-pressure-ft-reports/"
- },
- "google-schools-ai-off-default": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "MediaNama report",
-  "hero_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/",
-  "evidence_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/"
- },
- "anthropic-s1a-17b-quarter": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "MadRobot report",
-  "hero_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/",
-  "evidence_from": "https://madrobot.blog/2026/11/02/anthropic-s-1a-17-billion-quarter-895-billion-compute/"
- },
- "amd-q3-1338b-2027": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "The Inference",
-  "hero_from": "https://theinference.org/article/amd-guided-q4-to-17-billion-as-data-center-sales-nearly-doubled-and-4-7-billion-of-debt-funds-the-ramp",
-  "evidence_from": "https://www.thingsofbusiness.com/news/a7e867138b/amd-reports-third-quarter-2026-financial-results"
  }
 }
