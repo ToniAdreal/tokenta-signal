@@ -432,5 +432,26 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/openai-publishes-community-compact-and-ai-campus-policy-blueprint/",
   "evidence_from": "https://madrobot.blog/2026/11/05/openai-community-compact-data-centres-power-bills/"
+ },
+ "core-scientific-q3-colocation-surge": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CryptoBriefing",
+  "hero_from": "https://cryptobriefing.com/core-scientific-q3-2026-revenue-colocation/",
+  "evidence_from": ""
+ },
+ "macom-q4-fy26-datacenter-surge": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Quantisnow",
+  "hero_from": "https://www.quantisnow.com/insight/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026-financial-6774663",
+  "evidence_from": ""
+ },
+ "menlo-enterprise-ai-177b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Menlo Ventures Report Page",
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+  "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
  }
 }
