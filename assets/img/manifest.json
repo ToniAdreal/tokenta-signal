@@ -28,7 +28,7 @@
   "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888"
  },
  "amd-q3-data-center-record": {
-  "credit_name": "AMD \u5b98\u65b9\u65b0\u95fb\u7a3f",
+  "credit_name": "AMD 官方新闻稿",
   "evidence": false,
   "evidence_from": "",
   "hero": false,
@@ -70,18 +70,18 @@
   "hero_from": "https://claude.com/resources/articles/message-threads"
  },
  "anthropic-s1a-895b-compute": {
-  "credit_name": "gHacks \u62a5\u9053",
+  "credit_name": "gHacks 报道",
   "evidence": true,
   "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/",
   "hero": true,
   "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/"
  },
  "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
-  "credit_name": "Business Wire",
-  "evidence": false,
-  "evidence_from": "",
   "hero": false,
-  "hero_from": ""
+  "evidence": false,
+  "credit_name": "Business Wire",
+  "hero_from": "",
+  "evidence_from": ""
  },
  "apple-intelligence-china-beta-live-qwen": {
   "credit_name": "Apple China newsroom announcement",
@@ -210,7 +210,7 @@
   "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/"
  },
  "eu-gemini-press-copyright": {
-  "credit_name": "Morningstar \u8f6c\u53d1\u9053\u743c\u65af\u62a5\u9053",
+  "credit_name": "Morningstar 转发道琼斯报道",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -364,7 +364,7 @@
   "hero_from": ""
  },
  "nvidia-city-ai-physical-agentic": {
-  "credit_name": "NVIDIA \u5b98\u65b9\u535a\u5ba2",
+  "credit_name": "NVIDIA 官方博客",
   "evidence": true,
   "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
   "hero": true,
@@ -518,7 +518,7 @@
   "hero_from": ""
  },
  "tesla-robotaxi-fort-worth": {
-  "credit_name": "Not a Tesla App \u62a5\u9053",
+  "credit_name": "Not a Tesla App 报道",
   "evidence": true,
   "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
   "hero": true,
