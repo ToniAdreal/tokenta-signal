@@ -495,5 +495,26 @@
   "credit_name": "Meta official blog",
   "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
   "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
+ },
+ "soundhound-q3-record-revenue-624": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GlobeNewswire via Quantisnow",
+  "hero_from": "https://www.quantisnow.com/insight/soundhound-ai-reports-record-q3-revenue-and-guides-to-sustained-6775997",
+  "evidence_from": ""
+ },
+ "akamai-q3-cloud-infrastructure-34": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Akamai release via Quantisnow",
+  "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888",
+  "evidence_from": ""
+ },
+ "innodata-q3-record-revenue-956": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "ACCESS Newswire",
+  "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173",
+  "evidence_from": ""
  }
 }
