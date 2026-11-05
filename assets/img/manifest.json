@@ -418,5 +418,19 @@
   "credit_name": "Reuters via TradingView",
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M068:0-foxconn-october-revenue-45-73-y-y/",
   "evidence_from": ""
+ },
+ "crowdstrike-kill-switch-495m": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "ITMunch report",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "openai-community-compact-campus-blueprint": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/openai-publishes-community-compact-and-ai-campus-policy-blueprint/",
+  "evidence_from": "https://madrobot.blog/2026/11/05/openai-community-compact-data-centres-power-bills/"
  }
 }
