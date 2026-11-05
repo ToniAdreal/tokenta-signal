@@ -488,5 +488,12 @@
   "credit_name": "Anthropic official blog",
   "hero_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
   "evidence_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+ },
+ "meta-muse-voice-us-rollout": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Meta official blog",
+  "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+  "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
  }
 }
