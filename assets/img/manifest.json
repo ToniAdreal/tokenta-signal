@@ -670,5 +670,12 @@
   "credit_name": "The Hacker News",
   "hero_from": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
   "evidence_from": ""
+ },
+ "ibm-quantum-system-two-chicago-nighthawk": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "University of Chicago",
+  "hero_from": "https://news.uchicago.edu/story/ibms-most-advanced-quantum-computer-unveiled-uchicagos-hyde-park-labs",
+  "evidence_from": ""
  }
 }
