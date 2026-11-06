@@ -565,5 +565,19 @@
   "credit_name": "Duke FM (Reuters republication)",
   "hero_from": "https://duke.fm/2026/11/05/exclusive-ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say/",
   "evidence_from": ""
+ },
+ "cloudflare-q3-2026-revenue-782m-fastest-4-years": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Quantisnow (Business Wire release)",
+  "hero_from": "https://www.quantisnow.com/insight/cloudflare-announces-third-quarter-2026-financial-results-6776578",
+  "evidence_from": ""
+ },
+ "atlassian-q1-fy27-revenue-1772m-shares-fall-17pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "SiliconANGLE",
+  "hero_from": "https://siliconangle.com/2026/11/05/atlassian-shares-fall-17-as-slower-subscription-growth-forecast-overshadows-earnings-beat/",
+  "evidence_from": ""
  }
 }
