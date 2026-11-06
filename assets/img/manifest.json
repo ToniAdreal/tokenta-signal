@@ -558,5 +558,12 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/"
+ },
+ "anthropic-ipo-roadshow-doubt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Duke FM (Reuters republication)",
+  "hero_from": "https://duke.fm/2026/11/05/exclusive-ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say/",
+  "evidence_from": ""
  }
 }
