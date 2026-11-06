@@ -628,5 +628,12 @@
   "credit_name": "Moderna Q3 2026 results (ACCESS Newswire)",
   "hero_from": "https://markets.financialcontent.com/stocks/article/accwirecq-2026-11-6-moderna-reports-third-quarter-2026-financial-results-and-provides-business-updates",
   "evidence_from": ""
+ },
+ "vistra-q3-2026-net-income-114b-ebitda-surge": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingView",
+  "hero_from": "https://www.tradingview.com/news/tradingview:6a04640bf5b0f:0-vistra-posts-1-14b-q3-net-income-raises-2026-guidance/",
+  "evidence_from": ""
  }
 }
