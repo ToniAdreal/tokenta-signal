@@ -579,5 +579,26 @@
   "credit_name": "SiliconANGLE",
   "hero_from": "https://siliconangle.com/2026/11/05/atlassian-shares-fall-17-as-slower-subscription-growth-forecast-overshadows-earnings-beat/",
   "evidence_from": ""
+ },
+ "airbnb-q3-2026-revenue-487b-fastest-3-years": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Airbnb Newsroom (official results)",
+  "hero_from": "https://news.airbnb.com/airbnb-q3-2026-financial-results",
+  "evidence_from": ""
+ },
+ "draftkings-q3-2026-guidance-cut-predictions-spend": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Zacks",
+  "hero_from": "https://www.zacks.com/stock/news/3025146/draftkings-dkng-reports-q3-earnings-what-key-metrics-have-to-say",
+  "evidence_from": ""
+ },
+ "affirm-q1-fy27-revenue-126b-credit-quality": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily",
+  "hero_from": "https://www.investors.com/news/technology/affirm-stock-q3-2026-earnings-afrm/",
+  "evidence_from": ""
  }
 }
