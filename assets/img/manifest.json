@@ -614,5 +614,12 @@
   "credit_name": "Reuters via TradingView",
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-05:newsml_PLX6396BN:0-brief-monster-beverage-q3-eps-usd-0-29/",
   "evidence_from": "https://www.tipranks.com/news/company-announcements/monster-beverage-reports-strong-third-quarter-sales-and-earnings-growth"
+ },
+ "openai-gpt-6-cyber-critical-daybreak": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "OpenAI announcement",
+  "hero_from": "https://openai.com/index/introducing-gpt-6-cyber",
+  "evidence_from": "https://openai.com/index/introducing-gpt-6-cyber"
  }
 }
