@@ -677,5 +677,12 @@
   "credit_name": "University of Chicago",
   "hero_from": "https://news.uchicago.edu/story/ibms-most-advanced-quantum-computer-unveiled-uchicagos-hyde-park-labs",
   "evidence_from": ""
+ },
+ "psi-aaronson-ambainis-conjecture-proof": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "PSI Aaronson-Ambainis proof announcement (PSI)",
+  "hero_from": "https://psi.inc/research/aaronson-ambainis/",
+  "evidence_from": "https://www.unite.ai/psi-reports-machine-checked-proof-of-aaronson-ambainis-conjecture/"
  }
 }
