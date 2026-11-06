@@ -642,5 +642,33 @@
   "credit_name": "TradingView",
   "hero_from": "https://www.tradingview.com/news/tradingview:32c14b0c11bf2:0-oklo-3q-2026-revenue-1-86m-10-q-summary/",
   "evidence_from": ""
+ },
+ "google-gemini-omni-1-2-flash": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google official blog",
+  "hero_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+  "evidence_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+ },
+ "analog-devices-alif-1-35b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechNode",
+  "hero_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/",
+  "evidence_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/"
+ },
+ "google-terawulf-anthropic-19b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TeraWulf 8-K filing",
+  "hero_from": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001628280-26-069810/wulfhawesvillecsaandepcmpr.htm",
+  "evidence_from": ""
+ },
+ "claude-xen-vm-escape": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Hacker News",
+  "hero_from": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
+  "evidence_from": ""
  }
 }
