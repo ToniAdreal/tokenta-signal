@@ -635,5 +635,12 @@
   "credit_name": "TradingView",
   "hero_from": "https://www.tradingview.com/news/tradingview:6a04640bf5b0f:0-vistra-posts-1-14b-q3-net-income-raises-2026-guidance/",
   "evidence_from": ""
+ },
+ "oklo-q3-2026-first-revenue-186m-loss-417m": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingView",
+  "hero_from": "https://www.tradingview.com/news/tradingview:32c14b0c11bf2:0-oklo-3q-2026-revenue-1-86m-10-q-summary/",
+  "evidence_from": ""
  }
 }
