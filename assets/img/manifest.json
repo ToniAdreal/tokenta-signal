@@ -600,5 +600,19 @@
   "credit_name": "Investor's Business Daily",
   "hero_from": "https://www.investors.com/news/technology/affirm-stock-q3-2026-earnings-afrm/",
   "evidence_from": ""
+ },
+ "bill-q1-fy27-revenue-3538m-profit-beat": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Zacks",
+  "hero_from": "https://www.zacks.com/stock/news/3024981/bill-holdings-bill-q1-earnings-how-key-metrics-compare-to-wall-street-estimates",
+  "evidence_from": ""
+ },
+ "monster-q3-2026-record-sales-256b-margin-squeeze": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Reuters via TradingView",
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-05:newsml_PLX6396BN:0-brief-monster-beverage-q3-eps-usd-0-29/",
+  "evidence_from": "https://www.tipranks.com/news/company-announcements/monster-beverage-reports-strong-third-quarter-sales-and-earnings-growth"
  }
 }
