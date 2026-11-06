@@ -684,5 +684,12 @@
   "credit_name": "PSI Aaronson-Ambainis proof announcement (PSI)",
   "hero_from": "https://psi.inc/research/aaronson-ambainis/",
   "evidence_from": "https://www.unite.ai/psi-reports-machine-checked-proof-of-aaronson-ambainis-conjecture/"
+ },
+ "terawulf-q3-2026-hpc-83pct-revenue": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Motley Fool",
+  "hero_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/",
+  "evidence_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/"
  }
 }
