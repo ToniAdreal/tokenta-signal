@@ -691,5 +691,12 @@
   "credit_name": "The Motley Fool",
   "hero_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/",
   "evidence_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/"
+ },
+ "microsoft-winds-down-oracle-ai-cloud-rental": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters report of Bloomberg News (Duke FM syndication)",
+  "hero_from": "https://duke.fm/2026/11/06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity-bloomberg-news-reports/",
+  "evidence_from": ""
  }
 }
