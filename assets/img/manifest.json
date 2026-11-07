@@ -698,5 +698,47 @@
   "credit_name": "Reuters report of Bloomberg News (Duke FM syndication)",
   "hero_from": "https://duke.fm/2026/11/06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity-bloomberg-news-reports/",
   "evidence_from": ""
+ },
+ "openai-11b-first-close-125t": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AI Stock Wire, citing Bloomberg",
+  "hero_from": "https://aistockwire.com/blog/openai-receives-11-billion-1-25-trillion-valuation-november-2026",
+  "evidence_from": ""
+ },
+ "nvidia-spil-cowos-billions": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Hindu BusinessLine, citing Reuters",
+  "hero_from": "https://www.thehindubusinessline.com/info-tech/ai-boom-turns-advanced-chip-packaging-into-the-next-battleground/article71673081.ece/amp/",
+  "evidence_from": ""
+ },
+ "nasdaq-correction-ai-selloff": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "ExplainX, citing CNBC",
+  "hero_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026",
+  "evidence_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026"
+ },
+ "thinking-machines-inkling-2-small": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "SiliconANGLE",
+  "hero_from": "https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/",
+  "evidence_from": ""
+ },
+ "mistral-skiplabs-fifth-deal": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Distill Intelligence",
+  "hero_from": "https://www.distillintelligence.com/briefings/ai-leaders-2026-11-06",
+  "evidence_from": ""
+ },
+ "anthropic-ipo-valuation-slide": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Paktechstan, citing Bloomberg and the Wall Street Journal",
+  "hero_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion",
+  "evidence_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion"
  }
 }
