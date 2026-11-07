@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps" viewBox="0 0 100 100">
+<title>Tokenta Signal</title>
+<rect x="0" y="0" width="100" height="100" fill="#000000"/>
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#E8ECF1"/>
+<stop offset="0.55" stop-color="#C9D0D9"/>
+<stop offset="1" stop-color="#7E858E"/>
+</linearGradient>
+</defs>
+<path fill="url(#g)" d="M26 28 Q50 21 74 28 L72 40 Q50 36 28 40 Z"/>
+<path fill="url(#g)" d="M35 45 L41 45 L37 77 Q31 78 30 71 Z"/>
+<path fill="url(#g)" d="M47 45 L53 45 L54 77 L46 77 Z"/>
+<path fill="url(#g)" d="M59 45 L65 45 L70 71 Q69 78 63 77 Z"/>
+</svg>
