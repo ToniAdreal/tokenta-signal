@@ -31,8 +31,8 @@ export default async function handler(req, res) {
   if (!email || !/^\d{6}$/.test(token)) {
     return res.status(400).json({ error: "invalid_code" });
   }
-  const url = process.env.SUPABASE_URL;
-  const anon = process.env.SUPABASE_ANON_KEY;
+  const url = process.env.TS_SUPABASE_URL || process.env.SUPABASE_URL;
+  const anon = process.env.TS_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY;
   if (!url || !anon) return res.status(500).json({ error: "not_configured" });
 
   try {
