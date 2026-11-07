@@ -224,12 +224,20 @@
   }
 
   /* ---------- boot ---------- */
+  function adoptHashSession() {
+    if (!location.hash || location.hash.indexOf("access_token=") === -1) return Promise.resolve();
+    var p = new URLSearchParams(location.hash.slice(1));
+    var at = p.get("access_token"), rt = p.get("refresh_token");
+    history.replaceState(null, "", location.pathname + location.search);
+    if (!at || !rt) return Promise.resolve();
+    return post("/api/auth/session", { access_token: at, refresh_token: rt }).catch(function () {});
+  }
   document.addEventListener("DOMContentLoaded", function () {
     var b = $("#auth-btn");
     if (b) b.addEventListener("click", function (e) {
       if (!state.authed) { e.preventDefault(); openModal(); }
     });
-    refresh().then(applyMeter);
+    adoptHashSession().then(function () { return refresh(); }).then(applyMeter);
     paintAccount();
   });
 })();

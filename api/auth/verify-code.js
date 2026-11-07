@@ -36,12 +36,19 @@ export default async function handler(req, res) {
   if (!url || !anon) return res.status(500).json({ error: "not_configured" });
 
   try {
-    const r = await fetch(url + "/auth/v1/verify", {
-      method: "POST",
-      headers: { apikey: anon, "Content-Type": "application/json" },
-      body: JSON.stringify({ type: "email", email, token }),
-    });
-    const data = await r.json().catch(() => ({}));
+    const attempt = (type) =>
+      fetch(url + "/auth/v1/verify", {
+        method: "POST",
+        headers: { apikey: anon, "Content-Type": "application/json" },
+        body: JSON.stringify({ type, email, token }),
+      });
+    let r = await attempt("email");
+    let data = await r.json().catch(() => ({}));
+    if (!r.ok || !data.access_token) {
+      // First-time registrations are issued a signup confirmation token.
+      r = await attempt("signup");
+      data = await r.json().catch(() => ({}));
+    }
     if (!r.ok || !data.access_token) {
       return res.status(401).json({ error: "code_rejected" });
     }
