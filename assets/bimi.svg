@@ -8,8 +8,8 @@
 <stop offset="1" stop-color="#7E858E"/>
 </linearGradient>
 </defs>
-<path fill="url(#g)" d="M26 28 Q50 21 74 28 L72 40 Q50 36 28 40 Z"/>
-<path fill="url(#g)" d="M35 45 L41 45 L37 77 Q31 78 30 71 Z"/>
-<path fill="url(#g)" d="M47 45 L53 45 L54 77 L46 77 Z"/>
-<path fill="url(#g)" d="M59 45 L65 45 L70 71 Q69 78 63 77 Z"/>
+<path fill="url(#g)" d="M18 31 Q50 25 82 31 L78 43 Q50 39 22 43 Z"/>
+<path fill="url(#g)" d="M32 47 L39 47 L35 82 Q28 83 27 75 Z"/>
+<path fill="url(#g)" d="M46 47 L54 47 L55 82 L45 82 Z"/>
+<path fill="url(#g)" d="M61 47 L68 47 L73 75 Q72 83 65 82 Z"/>
 </svg>
