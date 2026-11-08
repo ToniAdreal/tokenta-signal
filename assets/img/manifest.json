@@ -782,5 +782,12 @@
   "credit_name": "CNBC",
   "hero_from": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html",
   "evidence_from": ""
+ },
+ "anthropic-3-4b-gas-generators-onepwr": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Energy News Beat",
+  "hero_from": "https://energynewsbeat.co/electrical-generation/anthropics-reported-3-4-billion-power-move-read-the-equipment-order-before-the-electric-bill/",
+  "evidence_from": ""
  }
 }
