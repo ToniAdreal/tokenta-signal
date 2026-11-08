@@ -740,5 +740,12 @@
   "credit_name": "Paktechstan, citing Bloomberg and the Wall Street Journal",
   "hero_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion",
   "evidence_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion"
+ },
+ "anthropic-public-first-63m-midterms-10-of-17": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Pivot News",
+  "hero_from": "https://pivotnews.ai/public-sector/candidates-backing-stricter-ai-oversight-win-key",
+  "evidence_from": ""
  }
 }
