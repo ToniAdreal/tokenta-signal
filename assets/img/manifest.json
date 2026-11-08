@@ -747,5 +747,40 @@
   "credit_name": "Pivot News",
   "hero_from": "https://pivotnews.ai/public-sector/candidates-backing-stricter-ai-oversight-win-key",
   "evidence_from": ""
+ },
+ "chainalysis-breach-all-users-tokens": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Hacker News",
+  "hero_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+  "evidence_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html"
+ },
+ "axon-skydio-1-2b-exclusive": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "DroneXL",
+  "hero_from": "https://dronexl.co/2026/11/06/axon-skydio-1-2-billion-exclusive-police-distributor/",
+  "evidence_from": ""
+ },
+ "google-crusoe-wyoming-17b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/",
+  "evidence_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/"
+ },
+ "deepmind-rsa-1024-two-flaws": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "DataStudios",
+  "hero_from": "https://www.datastudios.org/post/google-deepmind-ai-agents-two-weaknesses-legacy-1024-bit-rsa",
+  "evidence_from": "https://santageai.com/news/2026/11/06/deepmind-ai-agents-rsa-1024-flaws"
+ },
+ "wehner-meta-fireworks-cfo": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CNBC",
+  "hero_from": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html",
+  "evidence_from": ""
  }
 }
