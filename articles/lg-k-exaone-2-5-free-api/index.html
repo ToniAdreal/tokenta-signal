@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LG Opens K-EXAONE 2.5 API Free, Reporting 70% Performance Gain — Tokenta Signal</title><meta name="description" content="LG AI Research announced on November 9, 2026 at Nvidia AI Day Seoul 2026 in Seoul that the API for K-EXAONE 2.5, its proprietary AI foundation model, is now free through the EXAONE API Platform. Developers, startups, companies and research institutions can use the model for service development and research at no cost by obtaining an API key. The 750-billion-parameter model, with 31 billion active parameters, is a technology-validation model built on the August 2026 release; LG reports more than 70 percent improvement across 24 internal metrics and agentic benchmark scores close to DeepSeek V4.1 Flash and GLM 5.3.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="LG AI Research announced on November 9, 2026 at Nvidia AI Day Seoul 2026 in Seoul that the API for K-EXAONE 2.5, its proprietary AI foundation model, is now free through the EXAONE API Platform. Developers, startups, companies and research institutions can use the model for service development and research at no cost by obtaining an API key. The 750-billion-parameter model, with 31 billion active parameters, is a technology-validation model built on the August 2026 release; LG reports more than 70 percent improvement across 24 internal metrics and agentic benchmark scores close to DeepSeek V4.1 Flash and GLM 5.3.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.09 04:09 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 261 · NVIDIA × SEOUL × PHYSICAL AI · Aju Press, reporting from Nvidia AI Day Seoul 2026</span><span><span class="live">●</span> ISSUE 260 · LG AI RESEARCH × K-EXAONE × SOVEREIGN AI · LG AI Research, announcing the free K-EXAONE 2.5 API</span><span><span class="live">●</span> ISSUE 259 · NVIDIA × JENSEN HUANG × GOVERNANCE · Engadget, reporting the Nvidia board statement</span><span><span class="live">●</span> ISSUE 258 · ANTHROPIC × ONEPWR × POWER · Reuters, reporting the Financial Times</span><span><span class="live">●</span> ISSUE 257 · ANTHROPIC × PUBLIC FIRST × MIDTERMS · BizToc, carrying Bloomberg (Emily Birnbaum)</span><span><span class="live">●</span> ISSUE 256 · MICROSOFT × ORACLE × AI CLOUD · Reuters report of Bloomberg News (Duke FM syndication)</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 261 · NVIDIA × SEOUL × PHYSICAL AI · Aju Press, reporting from Nvidia AI Day Seoul 2026</span><span><span class="live">●</span> ISSUE 260 · LG AI RESEARCH × K-EXAONE × SOVEREIGN AI · LG AI Research, announcing the free K-EXAONE 2.5 API</span><span><span class="live">●</span> ISSUE 259 · NVIDIA × JENSEN HUANG × GOVERNANCE · Engadget, reporting the Nvidia board statement</span><span><span class="live">●</span> ISSUE 258 · ANTHROPIC × ONEPWR × POWER · Reuters, reporting the Financial Times</span><span><span class="live">●</span> ISSUE 257 · ANTHROPIC × PUBLIC FIRST × MIDTERMS · BizToc, carrying Bloomberg (Emily Birnbaum)</span><span><span class="live">●</span> ISSUE 256 · MICROSOFT × ORACLE × AI CLOUD · Reuters report of Bloomberg News (Duke FM syndication)</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>LG Opens K-EXAONE 2.5 API Free, Reporting 70% Performance Gain</h1>
+<p class="deck">LG AI Research announced on November 9, 2026 at Nvidia AI Day Seoul 2026 that the API for K-EXAONE 2.5, its proprietary AI foundation model, is now free through the EXAONE API Platform, with access by API key for developers, startups, companies and research institutions. The 750-billion-parameter model, with 31 billion active parameters, is a technology-validation model built on the August 2026 release; LG reports more than 70 percent improvement across 24 internal metrics and agentic benchmark scores close to DeepSeek V4.1 Flash and GLM 5.3. LG aims to complete a frontier-level EXAONE model by January 2027.</p>
+<div class="meta">ISSUE 260 · 2026-11-09 · SOURCE / <b>LG AI Research, announcing the free K-EXAONE 2.5 API</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">LG AI RESEARCH × K-EXAONE × SOVEREIGN AI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/lg-k-exaone-2-5-free-api/hero.jpg" alt=""><figcaption class="figcap">IMAGE: MoneyToday — <a href="https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">750B</div><div class="lab">MODEL SIZE</div><div class="desc">Total parameters of K-EXAONE 2.5, with 31 billion active parameters; text-only, Korean and English, 512,000-token context window.</div></div><div class="metric"><div class="num">74.6</div><div class="lab">AUTOMATIONBENCH</div><div class="desc">AutomationBench score reported by LG for K-EXAONE 2.5, against DeepSeek V4.1 Flash at 74.9 and GLM 5.3 at 71.6.</div></div><div class="metric"><div class="num">+70%</div><div class="lab">PERFORMANCE GAIN</div><div class="desc">Overall performance improvement across 24 evaluation metrics reported by LG versus the model released in August 2026.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ANNOUNCEMENT — LG AI Research announced on November 9, 2026 at Nvidia AI Day Seoul 2026 in Seoul that the API for K-EXAONE 2.5 is now free through the EXAONE API Platform, accessible with an API key for service development and research.</li><li><b>02</b>THE MODEL — K-EXAONE 2.5 is a technology-validation model built on the August 2026 release, with 750 billion total parameters and 31 billion active, a 512,000-token context window, and vendor-reported agentic benchmark scores near DeepSeek V4.1 Flash and GLM 5.3.</li><li><b>03</b>THE WATCHPOINT — Whether independent evaluations confirm LG&#x27;s benchmark claims, how long free access lasts and what limits follow, and whether LG delivers the frontier-level EXAONE model it targets for January 2027.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>LG AI Research announced on Sunday, November 9, 2026 that it is opening the application programming interface for K-EXAONE 2.5, its proprietary artificial intelligence foundation model, free of charge. The announcement came at Nvidia AI Day Seoul 2026 at COEX in Seoul. Developers, startups, companies and research institutions can use the model for service development and research at no cost by obtaining an API key through the EXAONE API Platform.</p><p>K-EXAONE 2.5 is a technology-validation model built by applying additional training to the second-generation model LG released in August 2026. LG describes it as a 750-billion-parameter model with 31 billion active parameters, handling text in Korean and English with a 512,000-token context window and a January 2026 knowledge cutoff. The endpoint is OpenAI-compatible, using the model name k-exaone_v2.5. LG said its internal analysis shows overall performance across 24 evaluation metrics improved by more than 70 percent compared with the August release, and that it aims to complete a frontier-level EXAONE model by January 2027.</p>
+<h2><span class="en">WHY IT MATTERS</span>A Korean model enters the agentic race on price, not weights</h2><p>LG is not opening the model, it is opening access to it. K-EXAONE 2.5 arrives as a hosted API only, with no open weights announced, a contrast with the Apache 2.0 open-weight release of the earlier K-EXAONE 2.0. The free tier is a distribution move: anyone with an API key can test a Korean-built model inside existing OpenAI-compatible tooling, and LG gets real-world validation data ahead of the third-generation model it plans for January 2027.</p><p>The benchmark story is deliberately framed against Chinese frontier models rather than American ones. LG compared K-EXAONE 2.5 with DeepSeek V4.1 Flash and GLM 5.3 across four agentic benchmarks, scoring 74.6 on AutomationBench against DeepSeek at 74.9 and GLM at 71.6, and 59.2 on SWE-Bench Pro against 58.4 and 64.0. The numbers are vendor-reported and untested by third parties, but the comparison set itself is the signal: LG is positioning a sovereign Korean model as a peer of the leading Chinese open-weight systems.</p><h2><span class="en">WHY IT MATTERS</span>The sovereign AI pitch, made on Nvidia&#x27;s stage</h2><p>The venue matters as much as the model. LG announced the free API at Nvidia AI Day Seoul, the same event where Nvidia named LG AI Research as one of three finalists in South Korea&#x27;s government-backed sovereign AI project, alongside SK Telecom and Upstage, all building on Nvidia&#x27;s open Nemotron datasets. The free API and the government project are two halves of one strategy: a Korean model, trained and served at home, offered to domestic developers before the state picks its two winners early next year.</p><p>LG also said it is considering Nvidia&#x27;s Dynamo inference technology to improve the model&#x27;s efficiency and scalability, tying the Korean stack tighter to Nvidia&#x27;s serving software. The open question is durability: LG has not said how long free access lasts or what limits will apply once it ends, and the 70 percent improvement claim rests on LG&#x27;s own analysis, not an independent evaluation.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Free access is the product here, not the model</h2><p>Tokenta Signal&#x27;s judgment: LG is giving away the API, not the model, and that is the point. A free hosted endpoint turns K-EXAONE 2.5 into a low-friction trial for Korean developers, generates the real-world usage data a technology-validation model needs, and stakes LG&#x27;s claim in the sovereign AI contest before the government picks its two winners early next year. The benchmark scores against DeepSeek and GLM are vendor-reported and should be read as a positioning statement, not a verdict. What is verifiable is the offer itself: a 750-billion-parameter Korean model, free to call, on the day Nvidia&#x27;s Seoul stage put Korea&#x27;s sovereign AI race in the spotlight.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on LG AI Research&#x27;s own announcement of November 9, 2026, as published on its Medium account the same day, and on same-day reporting by MoneyToday and Europe Says from the Nvidia AI Day Seoul 2026 event. The benchmark figures, AutomationBench 74.6, SWE-Bench Pro 59.2, BrowseComp 78.0 and Claw-Eval 77.3, and the claim of more than 70 percent improvement across 24 metrics, are LG&#x27;s own internal measurements on public datasets and have not been independently verified. The free API access covers hosted use only; LG has not announced open weights for K-EXAONE 2.5, nor how long the free period will last. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>LG AI Research said on November 9, 2026 at Nvidia AI Day Seoul 2026 in Seoul that it will open the API for K-EXAONE 2.5, its upgraded in-house AI foundation model, free of charge, and reported agentic benchmark scores competitive with DeepSeek V4.1 Flash and GLM 5.3.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://medium.com/@lgairesearch/k-exaone-2-5-api-available-for-free-c0214cf9024e" target="_blank" rel="noopener">LG AI Research Opens K-EXAONE 2.5 API Free, Sees 70% Performance Gain ↗</a><br>medium.com · 2026-11-09 · LG AI Research, announcing the free K-EXAONE 2.5 API</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>LG AI Research: K-EXAONE 2.5 API Available for Free!<br><a href="https://medium.com/@lgairesearch/k-exaone-2-5-api-available-for-free-c0214cf9024e" target="_blank" rel="noopener">https://medium.com/@lgairesearch/k-exaone-2-5-api-available-for-free-c0214cf9024e</a></li><li>MoneyToday: LG AI Research Institute opens free access to &#x27;K-Exaone 2.5,&#x27; Boosting performance by over 70%<br><a href="https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792" target="_blank" rel="noopener">https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792</a></li><li>Europe Says: LG AI Research opens K-EXAONE 2.5 API free, sees 70% performance gain<br><a href="https://www.europesays.com/3362339/" target="_blank" rel="noopener">https://www.europesays.com/3362339/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-ai-day-seoul-physical-ai-nemotron/">Nvidia AI Day Seoul Opens With Physical AI Keynote and Nemotron Sovereign AI Push</a> <span class="meta">ISSUE 261</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-board-investigates-huang-foreign-intelligence/">Nvidia Board Opens Independent Investigation Into Reports CEO Huang Was Target of Foreign Intelligence Effort</a> <span class="meta">ISSUE 259</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-3-4b-gas-generators-onepwr/">Anthropic Takes Over $3.4B of Gas-Generator Orders to Power Its AI Data Centers, FT Reports</a> <span class="meta">ISSUE 258</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-public-first-63m-midterms-10-of-17/">Anthropic-Backed Public First Spent $63M+ as 10 of 17 AI-Safety Candidates Won</a> <span class="meta">ISSUE 257</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js" defer></script></body></html>

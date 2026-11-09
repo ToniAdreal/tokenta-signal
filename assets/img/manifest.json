@@ -796,5 +796,19 @@
   "credit_name": "Engadget, reporting the Nvidia board statement",
   "hero_from": "https://www.engadget.com/2310336/nvidia-is-investigating-reports-that-ceo-jensen-huang-was-the-target-of-chinese-spy-efforts/",
   "evidence_from": ""
+ },
+ "lg-k-exaone-2-5-free-api": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "MoneyToday",
+  "hero_from": "https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792",
+  "evidence_from": ""
+ },
+ "nvidia-ai-day-seoul-physical-ai-nemotron": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Aju Press, reporting from Nvidia AI Day Seoul 2026",
+  "hero_from": "https://www.ajupress.com/view/20261109111042035",
+  "evidence_from": ""
  }
 }
