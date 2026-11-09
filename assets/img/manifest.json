@@ -789,5 +789,12 @@
   "credit_name": "Energy News Beat",
   "hero_from": "https://energynewsbeat.co/electrical-generation/anthropics-reported-3-4-billion-power-move-read-the-equipment-order-before-the-electric-bill/",
   "evidence_from": ""
+ },
+ "nvidia-board-investigates-huang-foreign-intelligence": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Engadget, reporting the Nvidia board statement",
+  "hero_from": "https://www.engadget.com/2310336/nvidia-is-investigating-reports-that-ceo-jensen-huang-was-the-target-of-chinese-spy-efforts/",
+  "evidence_from": ""
  }
 }
