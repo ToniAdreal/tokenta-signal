@@ -231,11 +231,11 @@
   "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04"
  },
  "google-guided-learning-k12": {
-  "credit_name": "Google Official Blog",
-  "evidence": true,
-  "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
   "hero": true,
-  "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+  "evidence": true,
+  "credit_name": "Google Official Blog",
+  "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+  "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
  },
  "google-malaysia-15b-data-centers": {
   "credit_name": "Google official blog",
@@ -245,18 +245,18 @@
   "hero_from": "https://blog.google/intl/en-my/company-news/inside-google/google-investment-malaysia-digital-infrastructure-november-2026/"
  },
  "google-mandiant-llmjacking": {
-  "credit_name": "Google Cloud Official Blog Report",
-  "evidence": true,
-  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
   "hero": true,
-  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
+  "evidence": true,
+  "credit_name": "Google Cloud Official Blog Report",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
  },
  "google-xcpe-videostrong-botnet": {
-  "credit_name": "Google Threat Intelligence Team Official Blog",
-  "evidence": true,
-  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
   "hero": true,
-  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
+  "evidence": true,
+  "credit_name": "Google Threat Intelligence Team Official Blog",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
  },
  "innodata-q3-record-revenue-956": {
   "credit_name": "ACCESS Newswire",
@@ -483,11 +483,11 @@
   "hero_from": "https://marketcatalyst.ai/posts/snap-swings-to-q3-profit-as-eps-beats-at-0-03-but-revenue-misses-at-1-72b"
  },
  "snowflake-coco-cowork-bots": {
-  "credit_name": "Snowflake official blog",
-  "evidence": false,
-  "evidence_from": "",
   "hero": true,
-  "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/"
+  "evidence": true,
+  "credit_name": "Snowflake official blog",
+  "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+  "evidence_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/"
  },
  "soundhound-q3-record-revenue-624": {
   "credit_name": "GlobeNewswire via Quantisnow",
@@ -950,5 +950,26 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/",
   "evidence_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/"
+ },
+ "onto-innovation-q3-2026-record-revenue-410m": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Business Wire",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "google-cloud-pathways-ga-gke": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Cloud Blog",
+  "hero_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga",
+  "evidence_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga"
+ },
+ "edgevana-700m-blackwell-agreements": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Reuters via TradingView",
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/",
+  "evidence_from": "https://www.unite.ai/edgevana-signs-multi-year-agreements-to-deploy-nvidia-blackwell/"
  }
 }
