@@ -866,5 +866,12 @@
   "credit_name": "Unite.ai",
   "hero_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/",
   "evidence_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/"
+ },
+ "constellation-q3-2026-revenue-955b-eps-beat": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingKey",
+  "hero_from": "https://www.tradingkey.com/news/earnings/262296133-",
+  "evidence_from": ""
  }
 }
