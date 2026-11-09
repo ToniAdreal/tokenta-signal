@@ -1013,5 +1013,19 @@
   "credit_name": "StockStory via FinancialContent",
   "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-rocket-lab-nasdaqrklb-reports-bullish-q3-2026-guides-for-strong-sales-next-quarter",
   "evidence_from": ""
+ },
+ "jpmorganchase-claude-code-firm-wide": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+  "evidence_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code"
+ },
+ "ibm-cisco-claude-mythos-enterprise-security": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Cisco",
+  "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html",
+  "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html"
  }
 }
