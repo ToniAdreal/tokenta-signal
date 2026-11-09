@@ -852,5 +852,19 @@
   "credit_name": "MIT News, reporting the WorldParticle research from MIT and the University of British Columbia",
   "hero_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
   "evidence_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109"
+ },
+ "nvidia-korean-startup-investments-point2": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "NVIDIA Blog, announcing the investments at the MSIT-NVIDIA AI Startup Partnership Forum",
+  "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+  "evidence_from": ""
+ },
+ "nxp-unified-robotics-platform-physical-ai": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.ai",
+  "hero_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/",
+  "evidence_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/"
  }
 }
