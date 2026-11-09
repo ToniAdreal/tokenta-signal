@@ -1027,5 +1027,12 @@
   "credit_name": "Cisco",
   "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html",
   "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html"
+ },
+ "hive-digital-q2-2027-revenue-849m-loss-widens": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Quiver Quantitative",
+  "hero_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens",
+  "evidence_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens"
  }
 }
