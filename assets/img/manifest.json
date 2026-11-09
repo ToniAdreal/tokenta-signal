@@ -880,5 +880,54 @@
   "credit_name": "Google Blog",
   "hero_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
   "evidence_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+ },
+ "claude-agent-memory-dreaming": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/research/components-of-agent-memory",
+  "evidence_from": ""
+ },
+ "meta-wonder-memory-spaces": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Meta",
+  "hero_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+  "evidence_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai"
+ },
+ "microsoft-apm-dependabot": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Vinish",
+  "hero_from": "https://vinish.dev/github-dependabot-agent-package-manager-support",
+  "evidence_from": ""
+ },
+ "softbank-abb-blocked": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "ABB",
+  "hero_from": "https://www.abb.com/global/en/news/140154/update-on-divestment-of-abb-robotics",
+  "evidence_from": ""
+ },
+ "alphabet-qualcomm-548m": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MLQ News",
+  "hero_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/",
+  "evidence_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/"
+ },
+ "mitsui-jsr-11-6b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Analytics Insight",
+  "hero_from": "https://www.analyticsinsight.net/tech-news/top-tech-news-mitsuis-116-billion-jsr-deal-newmo-raises-135-million-and-more",
+  "evidence_from": ""
+ },
+ "cursor-openai-cutoff": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "InfoWorld",
+  "hero_from": "https://www.infoworld.com/article/4216503/cursor-customers-will-lose-access-to-openai-coding-models-in-november.html",
+  "evidence_from": ""
  }
 }
