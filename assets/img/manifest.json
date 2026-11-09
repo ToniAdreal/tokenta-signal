@@ -943,5 +943,12 @@
   "credit_name": "Anthropic",
   "hero_from": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
   "evidence_from": ""
+ },
+ "openai-chatgpt-enterprise-aws-marketplace": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/",
+  "evidence_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/"
  }
 }
