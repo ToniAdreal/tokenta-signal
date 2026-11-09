@@ -817,5 +817,12 @@
   "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility–Nvidia MOU signing",
   "hero_from": "https://www.koreajoongangdaily.com/business/kakao-mobility-and-nvidia-partner-on-level-4-autonomous-driving/12962591",
   "evidence_from": "https://www.unite.ai/kakao-mobility-signs-nvidia-mou-for-level-4-autonomous-driving/"
+ },
+ "rebellions-nvidia-nvlink-fusion-sovereign-ai": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Aju Press, reporting the Rebellions–Nvidia–SK Telecom announcement at Nvidia AI Day Seoul",
+  "hero_from": "https://www.ajupress.com/view/20261109151112816",
+  "evidence_from": ""
  }
 }
