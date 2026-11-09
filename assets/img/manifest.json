@@ -971,5 +971,19 @@
   "credit_name": "Reuters via TradingView",
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/",
   "evidence_from": "https://www.unite.ai/edgevana-signs-multi-year-agreements-to-deploy-nvidia-blackwell/"
+ },
+ "novanta-q3-2026-revenue-305m-beat": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Markets Daily",
+  "hero_from": "https://www.themarketsdaily.com/2026/11/07/novanta-novt-expected-to-release-earnings-on-monday.html",
+  "evidence_from": ""
+ },
+ "meta-instagram-ai-age-estimation-global": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Meta",
+  "hero_from": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/",
+  "evidence_from": "https://techcrunch.com/2026/11/09/meta-expands-instagrams-ai-age-guessing-tech-globally/"
  }
 }
