@@ -838,5 +838,19 @@
   "credit_name": "Adweek report",
   "hero_from": "https://www.adweek.com/media/anthropic-licensing-deal-ap-election/",
   "evidence_from": "https://aiweekly.co/alerts/anthropic-licenses-ap-election-data-in-first-publisher-deal"
+ },
+ "mit-flex-robot-language-corrections": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MIT News, announcing the FLEX study from MIT and New York University",
+  "hero_from": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109",
+  "evidence_from": "https://www.unite.ai/flex-teaches-robots-to-generalize-from-human-corrections/"
+ },
+ "mit-worldparticle-unified-physics-simulation": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MIT News, reporting the WorldParticle research from MIT and the University of British Columbia",
+  "hero_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+  "evidence_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109"
  }
 }
