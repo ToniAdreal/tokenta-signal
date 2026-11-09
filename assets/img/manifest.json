@@ -810,5 +810,12 @@
   "credit_name": "Aju Press, reporting from Nvidia AI Day Seoul 2026",
   "hero_from": "https://www.ajupress.com/view/20261109111042035",
   "evidence_from": ""
+ },
+ "kakao-mobility-nvidia-level4-mou": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility–Nvidia MOU signing",
+  "hero_from": "https://www.koreajoongangdaily.com/business/kakao-mobility-and-nvidia-partner-on-level-4-autonomous-driving/12962591",
+  "evidence_from": "https://www.unite.ai/kakao-mobility-signs-nvidia-mou-for-level-4-autonomous-driving/"
  }
 }
