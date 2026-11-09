@@ -985,5 +985,12 @@
   "credit_name": "Meta",
   "hero_from": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/",
   "evidence_from": "https://techcrunch.com/2026/11/09/meta-expands-instagrams-ai-age-guessing-tech-globally/"
+ },
+ "nvidia-point2-korea-rf": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "NVIDIA",
+  "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+  "evidence_from": ""
  }
 }
