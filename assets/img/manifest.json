@@ -936,5 +936,12 @@
   "credit_name": "Meta AI Research",
   "hero_from": "https://research.meta.ai/blog/muse-ember",
   "evidence_from": "https://research.meta.ai/blog/muse-ember"
+ },
+ "anthropic-claude-fable-mythos-5-2": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+  "evidence_from": ""
  }
 }
