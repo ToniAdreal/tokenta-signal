@@ -992,5 +992,19 @@
   "credit_name": "NVIDIA",
   "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
   "evidence_from": ""
+ },
+ "qualys-q3-2026-revenue-188m-beat": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "StockStory",
+  "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-qualys-nasdaqqlys-beats-q3-2026-sales-expectations-but-stock-drops",
+  "evidence_from": ""
+ },
+ "zeta-global-q3-2026-revenue-493m-beat": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Business Wire",
+  "hero_from": "https://lifestyle.q923radio.com/story/562220/zeta-global-reports-21st-consecutive-beat-and-raise-quarter-generates-positive-gaap-net-income-in-3q26-ytd-and-achieves-the-rule-of-71/",
+  "evidence_from": ""
  }
 }
