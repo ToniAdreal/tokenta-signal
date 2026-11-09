@@ -929,5 +929,12 @@
   "credit_name": "InfoWorld",
   "hero_from": "https://www.infoworld.com/article/4216503/cursor-customers-will-lose-access-to-openai-coding-models-in-november.html",
   "evidence_from": ""
+ },
+ "meta-muse-ember-smallest-model-haiku-cost": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Meta AI Research",
+  "hero_from": "https://research.meta.ai/blog/muse-ember",
+  "evidence_from": "https://research.meta.ai/blog/muse-ember"
  }
 }
