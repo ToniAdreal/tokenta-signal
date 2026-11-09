@@ -873,5 +873,12 @@
   "credit_name": "TradingKey",
   "hero_from": "https://www.tradingkey.com/news/earnings/262296133-",
   "evidence_from": ""
+ },
+ "google-tpu-8tx-8i-max-eighth-generation": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Blog",
+  "hero_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+  "evidence_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
  }
 }
