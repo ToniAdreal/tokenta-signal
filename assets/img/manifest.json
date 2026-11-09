@@ -824,5 +824,19 @@
   "credit_name": "Aju Press, reporting the Rebellions–Nvidia–SK Telecom announcement at Nvidia AI Day Seoul",
   "hero_from": "https://www.ajupress.com/view/20261109151112816",
   "evidence_from": ""
+ },
+ "openai-images-2-6-gif": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Verge",
+  "hero_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+  "evidence_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+ },
+ "anthropic-ap-licensing-deal": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Adweek report",
+  "hero_from": "https://www.adweek.com/media/anthropic-licensing-deal-ap-election/",
+  "evidence_from": "https://aiweekly.co/alerts/anthropic-licenses-ap-election-data-in-first-publisher-deal"
  }
 }
