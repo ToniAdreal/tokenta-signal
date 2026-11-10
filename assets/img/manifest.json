@@ -1034,5 +1034,26 @@
   "credit_name": "Quiver Quantitative",
   "hero_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens",
   "evidence_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens"
+ },
+ "nvidia-gr00t-2-isaac-lab-3-corl": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "NVIDIA Blog",
+  "hero_from": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+  "evidence_from": ""
+ },
+ "openai-control-room-research-kill-switch": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/",
+  "evidence_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/"
+ },
+ "openai-modretro-chromatic-codex-edition-200": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "RuntimeWire",
+  "hero_from": "https://runtimewire.com/article/openai-sells-200-codex-chromatic-handheld-that-turns-prompts-into-game-boy-games",
+  "evidence_from": "https://runtimewire.com/article/openai-developers-posts-one-word-teaser-for-november-9th"
  }
 }
