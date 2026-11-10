@@ -1167,5 +1167,12 @@
   "credit_name": "Engadget",
   "hero_from": "https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/",
   "evidence_from": "https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/"
+ },
+ "tsmc-1b-anthropic-openai-stakes": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Edge Research Team",
+  "hero_from": "https://edgeconsultancykw.com/tsmc-board-anthropic-openai-stakes-500-million-dividend-nt-9-capital-appropriations-40-93-billion/",
+  "evidence_from": ""
  }
 }
