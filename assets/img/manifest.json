@@ -1118,5 +1118,47 @@
   "credit_name": "MediaTek",
   "hero_from": "",
   "evidence_from": "https://www.mediatek.com/investor-relations/financial-information#monthly-reports"
+ },
+ "anthropic-ipo-roadshow-70-78-price-range": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/news/roadshow-launch",
+  "evidence_from": ""
+ },
+ "oracle-tencent-7b-cancelled": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters, citing the Financial Times",
+  "hero_from": "https://northlandnewsradio.com/2026/11/03/oracle-abandons-7-billion-tencent-ai-deal-under-trump-pressure-ft-reports/",
+  "evidence_from": ""
+ },
+ "google-schools-ai-off-default": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MediaNama",
+  "hero_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/",
+  "evidence_from": "https://www.medianama.com/2026/11/223-google-schools-switch-off-gemini/"
+ },
+ "meta-acquires-conductor": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/",
+  "evidence_from": ""
+ },
+ "amd-warrant-charge-1-07b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters via KWSN",
+  "hero_from": "https://kwsn.com/2026/11/03/amds-openai-meta-chip-deals-trigger-1-billion-quarterly-charge/",
+  "evidence_from": ""
+ },
+ "fal-13b-series-f-16b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+  "evidence_from": ""
  }
 }
