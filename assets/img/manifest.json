@@ -1188,5 +1188,12 @@
   "credit_name": "Barron's",
   "hero_from": "https://www.barrons.com/articles/coreweave-earnings-stock-price-7c0a24d8",
   "evidence_from": ""
+ },
+ "openai-q3-2026-revenue-10b-anthropic-17b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Seeking Alpha",
+  "hero_from": "https://seekingalpha.com/news/4670166-openai-revenue-tops-10b-in-q3-report",
+  "evidence_from": ""
  }
 }
