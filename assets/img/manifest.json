@@ -301,11 +301,11 @@
   "hero_from": ""
  },
  "menlo-enterprise-ai-177b": {
-  "hero": true,
-  "evidence": true,
   "credit_name": "Menlo Ventures Report Page",
-  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
-  "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
+  "evidence": true,
+  "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+  "hero": true,
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
  },
  "meta-conductor-coding-agents": {
   "credit_name": "TechCrunch report",
@@ -1111,19 +1111,5 @@
   "credit_name": "PR Newswire",
   "hero_from": "",
   "evidence_from": "https://third-news.com/article/53e30f3a-dcd7-11f1-9e75-9ca3ba08e13f"
- },
- "crowdstrike-kill-switch-495m": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "ITMunch report",
-  "hero_from": "https://itmunch.com/crowdstrike-ai-agent-kill-switch-fiddler-dreadnode/",
-  "evidence_from": ""
- },
- "amd-q3-1338b-2027": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "GlobeNewswire official release republication",
-  "hero_from": "https://www.thingsofbusiness.com/news/a7e867138b/amd-reports-third-quarter-2026-financial-results",
-  "evidence_from": ""
  }
 }
