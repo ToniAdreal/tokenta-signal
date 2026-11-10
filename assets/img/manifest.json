@@ -1070,13 +1070,6 @@
   "hero_from": "https://www.invenglobal.com/articles/28363/nhn-posts-q3-revenue-of-7583-billion-won-operating-profit-up-113",
   "evidence_from": "https://news.jkn.co.kr/editions/english/post/1082257"
  },
- "softbank-group-q2-2026-profit-2502t-nvidia-stake-sale": {
-  "hero": false,
-  "evidence": false,
-  "credit_name": "Business Hub Middle East",
-  "hero_from": "",
-  "evidence_from": ""
- },
  "anthropic-ipo-nov-19-20-debut-price-range-retracted": {
   "hero": true,
   "evidence": true,
@@ -1090,5 +1083,12 @@
   "credit_name": "Crypto Briefing",
   "hero_from": "https://cryptobriefing.com/opentable-chatgpt-integration-190000-diners/",
   "evidence_from": ""
+ },
+ "australia-ai-safety-regulator-openai-medicare-breach": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Australian Associated Press",
+  "hero_from": "https://aapnews.aap.com.au/news/ai-safety-watchdog-to-be-set-up-after-medicare-breach",
+  "evidence_from": "https://www.unite.ai/australia-releases-ai-safety-recommendations-after-openai-breach/"
  }
 }
