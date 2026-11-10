@@ -1104,5 +1104,12 @@
   "credit_name": "SoftBank Group",
   "hero_from": "https://group.softbank/en/ir/news/",
   "evidence_from": "https://group.softbank/en/ir/news/"
+ },
+ "ase-technology-october-2026-revenue-886b-471pct-yoy": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "PR Newswire",
+  "hero_from": "",
+  "evidence_from": "https://third-news.com/article/53e30f3a-dcd7-11f1-9e75-9ca3ba08e13f"
  }
 }
