@@ -1090,5 +1090,19 @@
   "credit_name": "Australian Associated Press",
   "hero_from": "https://aapnews.aap.com.au/news/ai-safety-watchdog-to-be-set-up-after-medicare-breach",
   "evidence_from": "https://www.unite.ai/australia-releases-ai-safety-recommendations-after-openai-breach/"
+ },
+ "wix-q3-2026-revenue-570m-base44-nears-250m-arr": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "GlobeNewswire via Morningstar",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "softbank-group-q2-fy2026-swings-1-1t-net-loss": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "SoftBank Group",
+  "hero_from": "https://group.softbank/en/ir/news/",
+  "evidence_from": "https://group.softbank/en/ir/news/"
  }
 }
