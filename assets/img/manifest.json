@@ -1093,10 +1093,10 @@
  },
  "wix-q3-2026-revenue-570m-base44-nears-250m-arr": {
   "hero": false,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "GlobeNewswire via Morningstar",
   "hero_from": "",
-  "evidence_from": ""
+  "evidence_from": "https://www.financialcontent.com/article/gnwcq-2026-11-10-wix-reports-third-quarter-2026-results"
  },
  "softbank-group-q2-fy2026-swings-1-1t-net-loss": {
   "hero": true,
