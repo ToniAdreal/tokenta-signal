@@ -1062,5 +1062,12 @@
   "credit_name": "SoftBank Group (official press release)",
   "hero_from": "https://group.softbank/en/news/press/20261109_0",
   "evidence_from": ""
+ },
+ "nhn-q3-2026-record-revenue-758b-ai-cloud-surge": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Inven Global",
+  "hero_from": "https://www.invenglobal.com/articles/28363/nhn-posts-q3-revenue-of-7583-billion-won-operating-profit-up-113",
+  "evidence_from": "https://news.jkn.co.kr/editions/english/post/1082257"
  }
 }
