@@ -1181,5 +1181,12 @@
   "credit_name": "Global Banking and Finance (Reuters)",
   "hero_from": "https://www.globalbankingandfinance.com/chipmaker-infineon-forecasts-strong-2027-growth-data-centre/",
   "evidence_from": ""
+ },
+ "coreweave-q3-2026-revenue-366b-interest-846m": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Barron's",
+  "hero_from": "https://www.barrons.com/articles/coreweave-earnings-stock-price-7c0a24d8",
+  "evidence_from": ""
  }
 }
