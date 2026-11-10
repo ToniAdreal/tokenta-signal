@@ -1111,5 +1111,12 @@
   "credit_name": "PR Newswire",
   "hero_from": "",
   "evidence_from": "https://third-news.com/article/53e30f3a-dcd7-11f1-9e75-9ca3ba08e13f"
+ },
+ "mediatek-october-2026-revenue-550b-577pct-yoy": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "MediaTek",
+  "hero_from": "",
+  "evidence_from": "https://www.mediatek.com/investor-relations/financial-information#monthly-reports"
  }
 }
