@@ -1132,5 +1132,12 @@
   "credit_name": "TradingKey",
   "hero_from": "https://www.tradingkey.com/analysis/stocks/us-stocks/262297791-tsmc-october-revenue-record-59-7-percent-yoy-ai-chip-demand-tradingkey",
   "evidence_from": ""
+ },
+ "d-wave-q3-2026-revenue-45m-bookings-374m-chips-100m": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters via TradingView",
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-10:newsml_PLX0XHBPQ:0-brief-d-wave-quantum-inc-q3-revenue-usd-4-513-million-vs-ibes-estimate-usd-4-33-million/",
+  "evidence_from": ""
  }
 }
