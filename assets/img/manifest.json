@@ -1146,5 +1146,26 @@
   "credit_name": "AlphaStreet",
   "hero_from": "https://news.alphastreet.com/bitdeer-technologies-group-releases-q3-2026-financial-results/",
   "evidence_from": "https://www.theenergymag.com/news/market-news/bitdeer-achieves-record-320-7-million-q3-2026-ai"
+ },
+ "nominal-240m-series-c-3b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/09/ai-hardware-startup-nominal-triples-valuation-to-3b-in-8-months/",
+  "evidence_from": ""
+ },
+ "amazon-fauna-home-robotics": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AI Agent Update",
+  "hero_from": "https://aiagentupdate.com/post/amazon-personal-robotics-fauna-2026-11-09",
+  "evidence_from": "https://www.unite.ai/amazon-builds-home-robotics-team-for-new-to-world-robot/"
+ },
+ "adobe-max-firefly-proactive-agents-google-partnership": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Engadget",
+  "hero_from": "https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/",
+  "evidence_from": "https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/"
  }
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adobe MAX: Firefly Assistant Turns Proactive as Google Ties Gemini Into Creative Cloud — Tokenta Signal</title><meta name="description" content="At Adobe MAX 2026 on November 10, Adobe announced a major expansion of Creative Cloud&#x27;s agentic capabilities: the Firefly AI Assistant now runs multi-step tasks with a planning mode for review and approval, always-on agents take on recurring work, and local MCP integrations open Photoshop, Illustrator, Premiere, and After Effects to third-party agents. Google simultaneously announced an expanded partnership bringing Acrobat into Drive and Gmail and Adobe tools into Gemini and AI Mode in Search.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="At Adobe MAX 2026 on November 10, Adobe announced a major expansion of Creative Cloud&#x27;s agentic capabilities: the Firefly AI Assistant now runs multi-step tasks with a planning mode for review and approval, always-on agents take on recurring work, and local MCP integrations open Photoshop, Illustrator, Premiere, and After Effects to third-party agents. Google simultaneously announced an expanded partnership bringing Acrobat into Drive and Gmail and Adobe tools into Gemini and AI Mode in Search.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.10 14:08 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 301 · ADOBE × GOOGLE × AGENTS · Engadget</span><span><span class="live">●</span> ISSUE 300 · BITDEER × AI CLOUD × EARNINGS · GlobeNewswire</span><span><span class="live">●</span> ISSUE 299 · D-WAVE × QUANTUM COMPUTING × EARNINGS · Business Wire via Morningstar</span><span><span class="live">●</span> ISSUE 298 · TSMC × SEMICONDUCTORS × AI SUPPLY CHAIN · TipRanks</span><span><span class="live">●</span> ISSUE 297 · ANTHROPIC × IPO · Anthropic</span><span><span class="live">●</span> ISSUE 296 · MEDIATEK × SEMICONDUCTORS × AI ACCELERATORS · MediaTek</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 301 · ADOBE × GOOGLE × AGENTS · Engadget</span><span><span class="live">●</span> ISSUE 300 · BITDEER × AI CLOUD × EARNINGS · GlobeNewswire</span><span><span class="live">●</span> ISSUE 299 · D-WAVE × QUANTUM COMPUTING × EARNINGS · Business Wire via Morningstar</span><span><span class="live">●</span> ISSUE 298 · TSMC × SEMICONDUCTORS × AI SUPPLY CHAIN · TipRanks</span><span><span class="live">●</span> ISSUE 297 · ANTHROPIC × IPO · Anthropic</span><span><span class="live">●</span> ISSUE 296 · MEDIATEK × SEMICONDUCTORS × AI ACCELERATORS · MediaTek</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Adobe MAX: Firefly Assistant Turns Proactive as Google Ties Gemini Into Creative Cloud</h1>
+<p class="deck">At Adobe MAX 2026 on November 10, Adobe announced a major expansion of Creative Cloud&#x27;s agentic capabilities: the Firefly AI Assistant now runs multi-step tasks with a planning mode for review and approval, always-on agents take on recurring work, a natural-language agent comes to the Premiere mobile app in private beta, and local MCP integrations open Photoshop, Illustrator, Premiere, and After Effects to third-party agents. Google simultaneously announced an expanded partnership bringing Acrobat into Drive and Gmail, Adobe tools into Gemini and AI Mode in Search, and a DeepMind image-model exploration for Photoshop.</p>
+<div class="meta">ISSUE 301 · 2026-11-10 · SOURCE / <b>Engadget</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ADOBE × GOOGLE × AGENTS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/adobe-max-firefly-proactive-agents-google-partnership/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Engadget — <a href="https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">MAX 2026</div><div class="lab">THE EVENT</div><div class="desc">Adobe MAX 2026 runs November 10 to 12 in Miami, with the opening keynote on November 10 from 9 to 11 a.m. ET. Announcements were published at 14:00 UTC.</div></div><div class="metric"><div class="num">5</div><div class="lab">AGENTIC UPDATES</div><div class="desc">Firefly AI Assistant upgrades announced: multi-step tasks with a planning mode for review and approval, persistent brand guidelines, always-on agents for recurring work, a Premiere mobile agent in private beta, and local MCP integrations across four Creative Cloud apps.</div></div><div class="metric"><div class="num">5</div><div class="lab">GOOGLE STRANDS</div><div class="desc">Google partnership strands announced at MAX: Acrobat pathway from Drive and Gmail, expanded Adobe connectors in Gemini and Gemini Enterprise, Adobe tools in AI Mode in Google Search, CX Enterprise Coworker in Gemini Enterprise, and a DeepMind image-model exploration for Photoshop.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE KEYNOTE — Adobe opened MAX 2026 in Miami on November 10, announcing a significant expansion of Creative Cloud&#x27;s agentic capabilities, led by a Firefly AI Assistant that carries out multi-step tasks with a planning mode for review and approval.</li><li><b>02</b>THE AGENTS — Always-on agents previewed for recurring work such as footage ingest, organization, LUTs, audio cleanup, and backup; a natural-language agent comes to the Premiere mobile app in private beta; local MCP integrations open Photoshop, Illustrator, Premiere, and After Effects to third-party agents.</li><li><b>03</b>THE PARTNERSHIP — Google announced an expanded partnership at MAX: Acrobat inside Drive and Gmail, Adobe connectors across Gemini and Gemini Enterprise, Adobe tools in AI Mode in Google Search, and a DeepMind image-model exploration for Photoshop.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Adobe used the opening keynote of MAX 2026 in Miami on November 10 to push its Creative Cloud suite from reactive AI features toward proactive agents. The updated Firefly AI Assistant can now carry out multi-step tasks: a new planning mode lets users review and edit the agent&#x27;s proposed workflow before approving it, and users can pick a specific model to orchestrate the tasks or leave the choice to Adobe. Brand controls are now persistent, with colors and brand guidelines defined once and applied across every project the assistant takes on.</p><p>Adobe also previewed always-on agents that handle recurring work without being asked each time. In a demo shared with Engadget, a user prompted the assistant to sort footage as it uploaded to a project; the assistant offered to organize the raw files, apply LUTs, clean up audio, and back the files up, then, once approved, prepared a social media promotion campaign for the project. The same agentic push reaches video editing: Premiere&#x27;s AI Assistant, powered by Adobe&#x27;s Creative Agent, now executes edits from natural-language requests, and a version is coming to the Premiere mobile app in private beta, turning footage into editable first cuts.</p><p>The keynote also opened Adobe&#x27;s apps to outside agents. Adobe is testing local Model Context Protocol integrations that let a user&#x27;s preferred third-party chatbot work directly inside native Photoshop, Illustrator, Premiere, and After Effects projects, editing layers and sequences while bins and sequences stay editable for the human editor to inspect or revise. In parallel, Google announced an expanded partnership at MAX: a direct pathway from Google Drive and Gmail into Adobe Acrobat, Adobe connectors expanded across Gemini and Gemini Enterprise, Adobe tools coming to AI Mode in Google Search, Adobe&#x27;s CX Enterprise Coworker agent available inside Gemini Enterprise, and a joint exploration with Google DeepMind of an image model for Photoshop that could enable near-real-time edits.</p>
+<h2><span class="en">WHY IT MATTERS</span>Proactive agents, with a human approval step</h2><p>The planning mode is the load-bearing detail. Adobe is not handing the timeline to an autonomous agent; it shows the proposed workflow first and waits for approval, then keeps the project editable afterward. That design answers the obvious objection to agentic editing, that a wrong move costs hours, by making the agent&#x27;s plan inspectable before anything runs.</p><p>The always-on agents extend the same logic to recurring chores: ingest, organization, LUTs, audio cleanup, and backup, the unglamorous work that fills an editor&#x27;s day. If the previews hold, the assistant stops being a button inside the app and becomes a standing workflow that runs in the background, which is the same direction Anthropic and OpenAI have taken with their own proactive agents.</p><h2><span class="en">THE PARTNERSHIP</span>Google&#x27;s models move into Adobe, Adobe&#x27;s tools move into Google</h2><p>The Google deal is a two-way swap rather than a single integration. Google&#x27;s frontier models and Gemini surface reach into Adobe&#x27;s apps, while Adobe&#x27;s creative and productivity tools reach into Drive, Gmail, Gemini, and AI Mode in Google Search, putting Acrobat one click from a file preview. For enterprise teams, Adobe&#x27;s CX Enterprise Coworker agent lands inside Gemini Enterprise, letting staff design graphics, work with PDFs, and launch campaigns without switching apps.</p><p>The DeepMind strand is the longest-dated piece: an image model for Photoshop aimed at near-real-time edits is an exploration, not a shipped feature. The near-term value sits in the Acrobat pathway and the Gemini connectors, both of which reduce the app-switching tax that has defined creative work for a decade.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Adobe&#x27;s agents ask first, then work in the background</h2><p>Tokenta Signal&#x27;s judgment: The planning mode is what makes this announcement credible. Adobe is shipping proactive agents with a human checkpoint built in, the workflow is shown before it runs and the project stays editable after, which is the right shape for creative work where a wrong automated move is expensive. The Google partnership is the quieter half of the story and possibly the larger one: Adobe tools inside Gemini and Search, and Google models inside Adobe apps, put the two companies&#x27; ecosystems inside each other rather than side by side. The honest check is availability, most of this is preview or private beta, and the always-on agents and MCP integrations have to survive real projects before they count as a platform shift rather than a keynote demo.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this report rest on Adobe&#x27;s MAX 2026 opening-keynote announcements, published November 10, 2026 at 14:00 UTC, read in full from Engadget&#x27;s briefing coverage, Google&#x27;s official blog post on the expanded Adobe partnership, and DPReview&#x27;s Premiere coverage. The Firefly AI Assistant&#x27;s always-on agents and the local Model Context Protocol integrations are previews, not generally available features, and the Premiere mobile agent is in private beta. The Disney-Adobe alliance announced November 9 is a separate event and is not covered here. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/adobe-max-firefly-proactive-agents-google-partnership/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.engadget.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>Engadget, read in full: at Adobe MAX on November 10, Adobe announced a significant expansion of Creative Cloud&#x27;s agentic capabilities, including a Firefly AI Assistant that carries out multi-step tasks with a planning mode for review and approval, always-on agents for recurring work, a Premiere mobile agent in private beta, and MCP connections for third-party agents in Photoshop, Illustrator, Premiere, and After Effects.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/" target="_blank" rel="noopener">Adobe Firefly AI Assistant can now take on recurring tasks for you ↗</a><br>engadget.com · 2026-11-10 · Engadget</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Engadget: Adobe Firefly AI Assistant can now take on recurring tasks for you<br><a href="https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/" target="_blank" rel="noopener">https://www.engadget.com/2311901/adobe-firefly-ai-assistant-can-now-take-on-recurring-tasks-for-you/</a></li><li>Google Blog: Google and Adobe partnership: new AI and app integrations<br><a href="https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/" target="_blank" rel="noopener">https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/</a></li><li>DPReview: Adobe&#x27;s Premiere updates bring more AI into the editing timeline<br><a href="https://www.dpreview.com/news/adobes-premiere-updates-bring-more-ai-into-the-editing-timeline/" target="_blank" rel="noopener">https://www.dpreview.com/news/adobes-premiere-updates-bring-more-ai-into-the-editing-timeline/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../australia-ai-safety-regulator-openai-medicare-breach/">Australia Sets Up AI Safety Regulator After OpenAI Agent Breach</a> <span class="meta">ISSUE 292</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../opentable-chatgpt-190k-diners-september/">ChatGPT Seated 190,000 OpenTable Diners in September</a> <span class="meta">ISSUE 291</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../softbank-grab-petros-malaysia-ai-infrastructure-185b/">SoftBank, Grab and PETROS Commit $1.85B to Build Malaysia AI Infrastructure</a> <span class="meta">ISSUE 287</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-modretro-chromatic-codex-edition-200/">OpenAI Sells $200 Codex Edition Chromatic That Turns Prompts Into Game Boy Games</a> <span class="meta">ISSUE 286</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js" defer></script></body></html>
