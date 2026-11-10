@@ -1,1129 +1,1136 @@
 {
-  "adobe-cx-coworker-third-party-ai": {
-    "credit_name": "Futurum Group",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://futurumgroup.com/insights/adobe-brings-cx-enterprise-coworker-into-third-party-ai-platforms/"
-  },
-  "affirm-q1-fy27-revenue-126b-credit-quality": {
-    "credit_name": "Investor's Business Daily",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.investors.com/news/technology/affirm-stock-q3-2026-earnings-afrm/"
-  },
-  "agility-nasdaq-debut-aglt": {
-    "credit_name": "WebProNews",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.webpronews.com/agility-robotics-nasdaq-aglt-humanoid-debut/"
-  },
-  "agility-spac-close-nasdaq-aglt": {
-    "credit_name": "Agility Robotics official press release",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-complete-business-combination"
-  },
-  "airbnb-q3-2026-revenue-487b-fastest-3-years": {
-    "credit_name": "Airbnb Newsroom (official results)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://news.airbnb.com/airbnb-q3-2026-financial-results"
-  },
-  "akamai-q3-cloud-infrastructure-34": {
-    "credit_name": "Akamai release via Quantisnow",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888"
-  },
-  "alphabet-qualcomm-548m": {
-    "credit_name": "MLQ News",
-    "evidence": true,
-    "evidence_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/",
-    "hero": true,
-    "hero_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/"
-  },
-  "amd-q3-data-center-record": {
-    "credit_name": "AMD \u5b98\u65b9\u65b0\u95fb\u7a3f",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "amd-taalas-2-9b": {
-    "credit_name": "Tech Insider report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://tech-insider.org/ca/amd-taalas-acquisition-toronto-ai-inference-chip-2026/"
-  },
-  "analog-devices-alif-1-35b": {
-    "credit_name": "TechNode",
-    "evidence": true,
-    "evidence_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/",
-    "hero": true,
-    "hero_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/"
-  },
-  "anthropic-3-4b-gas-generators-onepwr": {
-    "credit_name": "Energy News Beat",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://energynewsbeat.co/electrical-generation/anthropics-reported-3-4-billion-power-move-read-the-equipment-order-before-the-electric-bill/"
-  },
-  "anthropic-ap-licensing-deal": {
-    "credit_name": "Adweek report",
-    "evidence": true,
-    "evidence_from": "https://aiweekly.co/alerts/anthropic-licenses-ap-election-data-in-first-publisher-deal",
-    "hero": true,
-    "hero_from": "https://www.adweek.com/media/anthropic-licensing-deal-ap-election/"
-  },
-  "anthropic-claude-fable-mythos-5-2": {
-    "credit_name": "Anthropic",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-  },
-  "anthropic-claude-marketplace-partner-agents": {
-    "credit_name": "Anthropic announcement",
-    "evidence": true,
-    "evidence_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
-    "hero": true,
-    "hero_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace"
-  },
-  "anthropic-claude-personal-finance": {
-    "credit_name": "Anthropic official blog",
-    "evidence": true,
-    "evidence_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
-    "hero": true,
-    "hero_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
-  },
-  "anthropic-flashprove-provable-inference": {
-    "credit_name": "Anthropic official research post",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/anthropic-releases-flashprove-for-cryptographic-ai-inference-proofs/",
-    "hero": true,
-    "hero_from": "https://www.anthropic.com/research/provable-inference"
-  },
-  "anthropic-ipo-nov-19-20-debut-price-range-retracted": {
-    "credit_name": "Crypto Briefing",
-    "evidence": true,
-    "evidence_from": "https://shiftdelete.net/en/anthropic-ipo-price-range",
-    "hero": true,
-    "hero_from": "https://cryptobriefing.com/anthropic-targets-november-nasdaq-ipo-amid-ai-stock-downturn-wsj/"
-  },
-  "anthropic-ipo-roadshow-70-78-price-range": {
-    "credit_name": "Anthropic",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.anthropic.com/news/roadshow-launch"
-  },
-  "anthropic-ipo-roadshow-doubt": {
-    "credit_name": "Duke FM (Reuters republication)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://duke.fm/2026/11/05/exclusive-ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say/"
-  },
-  "anthropic-ipo-valuation-slide": {
-    "credit_name": "Paktechstan, citing Bloomberg and the Wall Street Journal",
-    "evidence": true,
-    "evidence_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion",
-    "hero": true,
-    "hero_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion"
-  },
-  "anthropic-message-threads-beta": {
-    "credit_name": "Anthropic official post",
-    "evidence": true,
-    "evidence_from": "https://claude.com/resources/articles/message-threads",
-    "hero": true,
-    "hero_from": "https://claude.com/resources/articles/message-threads"
-  },
-  "anthropic-public-first-63m-midterms-10-of-17": {
-    "credit_name": "Pivot News",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://pivotnews.ai/public-sector/candidates-backing-stricter-ai-oversight-win-key"
-  },
-  "anthropic-s1a-895b-compute": {
-    "credit_name": "gHacks \u62a5\u9053",
-    "evidence": true,
-    "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/",
-    "hero": true,
-    "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/"
-  },
-  "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
-    "credit_name": "Business Wire",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "apple-intelligence-china-beta-live-qwen": {
-    "credit_name": "Apple China newsroom announcement",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
-  },
-  "applovin-q3-2026-record-profit": {
-    "credit_name": "The Motley Fool earnings reaction",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.fool.com/investing/2026/11/04/applovin-turns-81-of-new-sales-into-profit-rapid-earnings-reaction/"
-  },
-  "arista-q3-ai-networking-record": {
-    "credit_name": "Fool independent analysis",
-    "evidence": true,
-    "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026",
-    "hero": true,
-    "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/"
-  },
-  "arm-q2-fye27-record-144b": {
-    "credit_name": "Arm official newsroom",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://newsroom.arm.com/news/arm-q2-fye27-results"
-  },
-  "arteris-q3-2026-revenue-2577m-beats-estimates": {
-    "credit_name": "TradingView",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/tradingview:86442eb62172c:0-arteris-3q-2026-revenue-25-77m-eps-0-23-10-q-summary/"
-  },
-  "ase-technology-october-2026-revenue-886b-471pct-yoy": {
-    "credit_name": "PR Newswire",
-    "evidence": true,
-    "evidence_from": "https://third-news.com/article/53e30f3a-dcd7-11f1-9e75-9ca3ba08e13f",
-    "hero": false,
-    "hero_from": ""
-  },
-  "atlassian-q1-fy27-revenue-1772m-shares-fall-17pct": {
-    "credit_name": "SiliconANGLE",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://siliconangle.com/2026/11/05/atlassian-shares-fall-17-as-slower-subscription-growth-forecast-overshadows-earnings-beat/"
-  },
-  "australia-ai-safety-regulator-openai-medicare-breach": {
-    "credit_name": "Australian Associated Press",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/australia-releases-ai-safety-recommendations-after-openai-breach/",
-    "hero": true,
-    "hero_from": "https://aapnews.aap.com.au/news/ai-safety-watchdog-to-be-set-up-after-medicare-breach"
-  },
-  "axon-skydio-1-2b-exclusive": {
-    "credit_name": "DroneXL",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://dronexl.co/2026/11/06/axon-skydio-1-2-billion-exclusive-police-distributor/"
-  },
-  "bill-q1-fy27-revenue-3538m-profit-beat": {
-    "credit_name": "Zacks",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.zacks.com/stock/news/3024981/bill-holdings-bill-q1-earnings-how-key-metrics-compare-to-wall-street-estimates"
-  },
-  "block-q3-earnings-cash-app": {
-    "credit_name": "Motley Fool analysis of the shareholder letter",
-    "evidence": true,
-    "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
-    "hero": true,
-    "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
-  },
-  "canva-1271-restructure-ai-costs": {
-    "credit_name": "TechCrunch report",
-    "evidence": true,
-    "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/",
-    "hero": true,
-    "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/"
-  },
-  "cat-wu-anthropic-openai-core-products": {
-    "credit_name": "RuntimeWire coverage",
-    "evidence": true,
-    "evidence_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management",
-    "hero": true,
-    "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
-  },
-  "chainalysis-breach-all-users-tokens": {
-    "credit_name": "The Hacker News",
-    "evidence": true,
-    "evidence_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
-    "hero": true,
-    "hero_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html"
-  },
-  "china-ndrc-ai-lifecycle-law": {
-    "credit_name": "Bloomberg Law report",
-    "evidence": true,
-    "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses",
-    "hero": true,
-    "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
-  },
-  "cisco-talos-volta-infostealer": {
-    "credit_name": "Cisco Talos official report",
-    "evidence": true,
-    "evidence_from": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
-    "hero": true,
-    "hero_from": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
-  },
-  "claude-agent-memory-dreaming": {
-    "credit_name": "Anthropic",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.anthropic.com/research/components-of-agent-memory"
-  },
-  "claude-vault-96-protein-structure": {
-    "credit_name": "Anthropic research report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
-  },
-  "claude-xen-vm-escape": {
-    "credit_name": "The Hacker News",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html"
-  },
-  "cloudflare-q3-2026-revenue-782m-fastest-4-years": {
-    "credit_name": "Quantisnow (Business Wire release)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/cloudflare-announces-third-quarter-2026-financial-results-6776578"
-  },
-  "coherent-q1-fy27-record-revenue": {
-    "credit_name": "StockStory",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://stockstory.org/us/stocks/nyse/cohr/news/earnings/coherent-nysecohr-beats-q3-cy2026-sales-expectations-provides-optimistic-revenue-guidance-for-next-quarter"
-  },
-  "constellation-q3-2026-revenue-955b-eps-beat": {
-    "credit_name": "TradingKey",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingkey.com/news/earnings/262296133-"
-  },
-  "core-scientific-q3-colocation-surge": {
-    "credit_name": "CryptoBriefing",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://cryptobriefing.com/core-scientific-q3-2026-revenue-colocation/"
-  },
-  "crowdstrike-ai-kill-switch": {
-    "credit_name": "Independent report",
-    "evidence": true,
-    "evidence_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls",
-    "hero": true,
-    "hero_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls"
-  },
-  "crowdstrike-fiddler-dreadnode": {
-    "credit_name": "dpa-AFX wire report",
-    "evidence": true,
-    "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/"
-  },
-  "cursor-openai-cutoff": {
-    "credit_name": "InfoWorld",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.infoworld.com/article/4216503/cursor-customers-will-lose-access-to-openai-coding-models-in-november.html"
-  },
-  "datadog-q3-2026-beat-weak-outlook": {
-    "credit_name": "Investor's Business Daily report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.investors.com/news/technology/datadog-stock-ddog-datadog-earnings-news-q32026/"
-  },
-  "deepmind-antigravity-cheminformatics": {
-    "credit_name": "DNA Insider",
-    "evidence": true,
-    "evidence_from": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
-    "hero": true,
-    "hero_from": "https://dnainsider.news/en/signal/google-deepmind-adds-cheminformatics-skills-to-google-antigravity-for-compound-search-and-macrocycle-design-902c0dba"
-  },
-  "deepmind-rsa-1024-two-flaws": {
-    "credit_name": "DataStudios",
-    "evidence": true,
-    "evidence_from": "https://santageai.com/news/2026/11/06/deepmind-ai-agents-rsa-1024-flaws",
-    "hero": true,
-    "hero_from": "https://www.datastudios.org/post/google-deepmind-ai-agents-two-weaknesses-legacy-1024-bit-rsa"
-  },
-  "draftkings-q3-2026-guidance-cut-predictions-spend": {
-    "credit_name": "Zacks",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.zacks.com/stock/news/3025146/draftkings-dkng-reports-q3-earnings-what-key-metrics-have-to-say"
-  },
-  "drax-brookfield-radiant-1gw": {
-    "credit_name": "AI data center page, Drax website",
-    "evidence": true,
-    "evidence_from": "https://www.drax.com/what-we-do/ai-data-centres/",
-    "hero": true,
-    "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/"
-  },
-  "edgevana-700m-blackwell-agreements": {
-    "credit_name": "Reuters via TradingView",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/edgevana-signs-multi-year-agreements-to-deploy-nvidia-blackwell/",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/"
-  },
-  "eu-gemini-press-copyright": {
-    "credit_name": "Morningstar \u8f6c\u53d1\u9053\u743c\u65af\u62a5\u9053",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law"
-  },
-  "foxconn-october-revenue-4573": {
-    "credit_name": "Reuters via TradingView",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M068:0-foxconn-october-revenue-45-73-y-y/"
-  },
-  "globalfoundries-q3-record-margin-tsmc-interposer": {
-    "credit_name": "Earnings-call coverage",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04"
-  },
-  "google-cloud-pathways-ga-gke": {
-    "credit_name": "Google Cloud Blog",
-    "evidence": true,
-    "evidence_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga",
-    "hero": true,
-    "hero_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga"
-  },
-  "google-crusoe-wyoming-17b": {
-    "credit_name": "Unite.AI",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/"
-  },
-  "google-gemini-omni-1-2-flash": {
-    "credit_name": "Google official blog",
-    "evidence": true,
-    "evidence_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-    "hero": true,
-    "hero_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
-  },
-  "google-guided-learning-k12": {
-    "credit_name": "Google Official Blog",
-    "evidence": true,
-    "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
-    "hero": true,
-    "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
-  },
-  "google-malaysia-15b-data-centers": {
-    "credit_name": "Google official blog",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://blog.google/intl/en-my/company-news/inside-google/google-investment-malaysia-digital-infrastructure-november-2026/"
-  },
-  "google-mandiant-llmjacking": {
-    "credit_name": "Google Cloud Official Blog Report",
-    "evidence": true,
-    "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
-    "hero": true,
-    "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
-  },
-  "google-terawulf-anthropic-19b": {
-    "credit_name": "TeraWulf 8-K filing",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001628280-26-069810/wulfhawesvillecsaandepcmpr.htm"
-  },
-  "google-tpu-8tx-8i-max-eighth-generation": {
-    "credit_name": "Google Blog",
-    "evidence": true,
-    "evidence_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
-    "hero": true,
-    "hero_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
-  },
-  "google-xcpe-videostrong-botnet": {
-    "credit_name": "Google Threat Intelligence Team Official Blog",
-    "evidence": true,
-    "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
-    "hero": true,
-    "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
-  },
-  "hive-digital-q2-2027-revenue-849m-loss-widens": {
-    "credit_name": "Quiver Quantitative",
-    "evidence": true,
-    "evidence_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens",
-    "hero": true,
-    "hero_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens"
-  },
-  "ibm-cisco-claude-mythos-enterprise-security": {
-    "credit_name": "Cisco",
-    "evidence": true,
-    "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html",
-    "hero": true,
-    "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html"
-  },
-  "ibm-quantum-system-two-chicago-nighthawk": {
-    "credit_name": "University of Chicago",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://news.uchicago.edu/story/ibms-most-advanced-quantum-computer-unveiled-uchicagos-hyde-park-labs"
-  },
-  "innodata-q3-record-revenue-956": {
-    "credit_name": "ACCESS Newswire",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173"
-  },
-  "iren-q1-fy27-ai-cloud-200m-target-slip": {
-    "credit_name": "AIStockWire",
-    "evidence": true,
-    "evidence_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026",
-    "hero": true,
-    "hero_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026"
-  },
-  "jpmorganchase-claude-code-firm-wide": {
-    "credit_name": "Anthropic",
-    "evidence": true,
-    "evidence_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
-    "hero": true,
-    "hero_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code"
-  },
-  "kakao-mobility-nvidia-level4-mou": {
-    "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility\u2013Nvidia MOU signing",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/kakao-mobility-signs-nvidia-mou-for-level-4-autonomous-driving/",
-    "hero": true,
-    "hero_from": "https://www.koreajoongangdaily.com/business/kakao-mobility-and-nvidia-partner-on-level-4-autonomous-driving/12962591"
-  },
-  "kimi-k31-pro-weights-public": {
-    "credit_name": "Moonshot AI",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.kimi.ai/blog/kimi-k3-1-pro"
-  },
-  "lambda-alabama-33b-red-clay-campus": {
-    "credit_name": "Lambda official blog",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/lambda-plans-alabama-ai-data-center-campus-in-lowndes-county/",
-    "hero": true,
-    "hero_from": "https://lambda.ai/blog/lambda-to-invest-33-billion-in-alabama-with-new-data-center"
-  },
-  "lg-k-exaone-2-5-free-api": {
-    "credit_name": "MoneyToday",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792"
-  },
-  "macom-q4-fy26-datacenter-surge": {
-    "credit_name": "Quantisnow",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026-financial-6774663"
-  },
-  "mediatek-october-2026-revenue-550b-577pct-yoy": {
-    "credit_name": "MediaTek",
-    "evidence": true,
-    "evidence_from": "https://www.mediatek.com/investor-relations/financial-information#monthly-reports",
-    "hero": false,
-    "hero_from": ""
-  },
-  "meituan-longcat-25-chinese-chips": {
-    "credit_name": "FourWeekMBA report",
-    "evidence": true,
-    "evidence_from": "https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm",
-    "hero": false,
-    "hero_from": ""
-  },
-  "menlo-enterprise-ai-177b": {
-    "credit_name": "Menlo Ventures Report Page",
-    "evidence": true,
-    "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
-    "hero": true,
-    "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
-  },
-  "meta-conductor-coding-agents": {
-    "credit_name": "TechCrunch report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
-  },
-  "meta-euro-bond-final-terms-9b": {
-    "credit_name": "AIStockWire report (final term sheet)",
-    "evidence": true,
-    "evidence_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026",
-    "hero": true,
-    "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026"
-  },
-  "meta-euro-bond-record-53b-orders": {
-    "credit_name": "Le Private Banker (Bloomberg)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://leprivatebanker.com/2026/11/04/meta-seeks-up-to-e9-billion-in-debut-euro-bond-sale-a-day-after-raising-15-billion-in-dollars/"
-  },
-  "meta-instagram-ai-age-estimation-global": {
-    "credit_name": "Meta",
-    "evidence": true,
-    "evidence_from": "https://techcrunch.com/2026/11/09/meta-expands-instagrams-ai-age-guessing-tech-globally/",
-    "hero": true,
-    "hero_from": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/"
-  },
-  "meta-muse-ember-smallest-model-haiku-cost": {
-    "credit_name": "Meta AI Research",
-    "evidence": true,
-    "evidence_from": "https://research.meta.ai/blog/muse-ember",
-    "hero": true,
-    "hero_from": "https://research.meta.ai/blog/muse-ember"
-  },
-  "meta-muse-voice-us-rollout": {
-    "credit_name": "Meta official blog",
-    "evidence": true,
-    "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
-    "hero": true,
-    "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
-  },
-  "meta-wonder-memory-spaces": {
-    "credit_name": "Meta",
-    "evidence": true,
-    "evidence_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
-    "hero": true,
-    "hero_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai"
-  },
-  "microchip-q2-fy27-sales-1622b-above-guide": {
-    "credit_name": "Quantisnow",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608"
-  },
-  "microsoft-apm-dependabot": {
-    "credit_name": "Vinish",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://vinish.dev/github-dependabot-agent-package-manager-support"
-  },
-  "microsoft-winds-down-oracle-ai-cloud-rental": {
-    "credit_name": "Reuters report of Bloomberg News (Duke FM syndication)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://duke.fm/2026/11/06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity-bloomberg-news-reports/"
-  },
-  "mistral-skiplabs-fifth-deal": {
-    "credit_name": "Distill Intelligence",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.distillintelligence.com/briefings/ai-leaders-2026-11-06"
-  },
-  "mit-flex-robot-language-corrections": {
-    "credit_name": "MIT News, announcing the FLEX study from MIT and New York University",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/flex-teaches-robots-to-generalize-from-human-corrections/",
-    "hero": true,
-    "hero_from": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109"
-  },
-  "mit-worldparticle-unified-physics-simulation": {
-    "credit_name": "MIT News, reporting the WorldParticle research from MIT and the University of British Columbia",
-    "evidence": true,
-    "evidence_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
-    "hero": true,
-    "hero_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109"
-  },
-  "mitsui-jsr-11-6b": {
-    "credit_name": "Analytics Insight",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.analyticsinsight.net/tech-news/top-tech-news-mitsuis-116-billion-jsr-deal-newmo-raises-135-million-and-more"
-  },
-  "moderna-q3-2026-revenue-131b-profit-beat": {
-    "credit_name": "Moderna Q3 2026 results (ACCESS Newswire)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://markets.financialcontent.com/stocks/article/accwirecq-2026-11-6-moderna-reports-third-quarter-2026-financial-results-and-provides-business-updates"
-  },
-  "monster-q3-2026-record-sales-256b-margin-squeeze": {
-    "credit_name": "Reuters via TradingView",
-    "evidence": true,
-    "evidence_from": "https://www.tipranks.com/news/company-announcements/monster-beverage-reports-strong-third-quarter-sales-and-earnings-growth",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-05:newsml_PLX6396BN:0-brief-monster-beverage-q3-eps-usd-0-29/"
-  },
-  "nasdaq-correction-ai-selloff": {
-    "credit_name": "ExplainX, citing CNBC",
-    "evidence": true,
-    "evidence_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026",
-    "hero": true,
-    "hero_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026"
-  },
-  "nhn-q3-2026-record-revenue-758b-ai-cloud-surge": {
-    "credit_name": "Inven Global",
-    "evidence": true,
-    "evidence_from": "https://news.jkn.co.kr/editions/english/post/1082257",
-    "hero": true,
-    "hero_from": "https://www.invenglobal.com/articles/28363/nhn-posts-q3-revenue-of-7583-billion-won-operating-profit-up-113"
-  },
-  "nice-q3-2026-ai-arr-392m": {
-    "credit_name": "Seeking Alpha report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://seekingalpha.com/news/4664551-nice-raises-2026-eps-guidance-after-q3-earnings-and-revenue-top-estimates"
-  },
-  "nooks-500m-cvf-revenue-agent-platform": {
-    "credit_name": "Reuters report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "novanta-q3-2026-revenue-305m-beat": {
-    "credit_name": "The Markets Daily",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.themarketsdaily.com/2026/11/07/novanta-novt-expected-to-release-earnings-on-monday.html"
-  },
-  "npci-tech-solutions-ai-blockchain": {
-    "credit_name": "Reuters report",
-    "evidence": true,
-    "evidence_from": "https://www.mediainfoline.com/brand/npci-announces-formation-of-npci-tech-solutions-limited-ntsl-as-a-wholly-owned-subsidiary",
-    "hero": false,
-    "hero_from": ""
-  },
-  "nvidia-ai-day-seoul-physical-ai-nemotron": {
-    "credit_name": "Aju Press, reporting from Nvidia AI Day Seoul 2026",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.ajupress.com/view/20261109111042035"
-  },
-  "nvidia-board-investigates-huang-foreign-intelligence": {
-    "credit_name": "Engadget, reporting the Nvidia board statement",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.engadget.com/2310336/nvidia-is-investigating-reports-that-ceo-jensen-huang-was-the-target-of-chinese-spy-efforts/"
-  },
-  "nvidia-city-ai-physical-agentic": {
-    "credit_name": "NVIDIA \u5b98\u65b9\u535a\u5ba2",
-    "evidence": true,
-    "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
-    "hero": true,
-    "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
-  },
-  "nvidia-cloud-partners-49pct-china-cap": {
-    "credit_name": "Silicon Report (Financial Times report)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.siliconreport.com/nvidia-tells-cloud-clients-to-sell-51-to-non-chinese-firms-ft-says"
-  },
-  "nvidia-gr00t-2-isaac-lab-3-corl": {
-    "credit_name": "NVIDIA Blog",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
-  },
-  "nvidia-korean-startup-investments-point2": {
-    "credit_name": "NVIDIA Blog, announcing the investments at the MSIT-NVIDIA AI Startup Partnership Forum",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
-  },
-  "nvidia-point2-korea-rf": {
-    "credit_name": "NVIDIA",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
-  },
-  "nvidia-spil-cowos-billions": {
-    "credit_name": "The Hindu BusinessLine, citing Reuters",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.thehindubusinessline.com/info-tech/ai-boom-turns-advanced-chip-packaging-into-the-next-battleground/article71673081.ece/amp/"
-  },
-  "nxp-unified-robotics-platform-physical-ai": {
-    "credit_name": "Unite.ai",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/"
-  },
-  "oklo-q3-2026-first-revenue-186m-loss-417m": {
-    "credit_name": "TradingView",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/tradingview:32c14b0c11bf2:0-oklo-3q-2026-revenue-1-86m-10-q-summary/"
-  },
-  "onto-innovation-q3-2026-record-revenue-410m": {
-    "credit_name": "Business Wire",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "openai-11b-first-close-125t": {
-    "credit_name": "AI Stock Wire, citing Bloomberg",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://aistockwire.com/blog/openai-receives-11-billion-1-25-trillion-valuation-november-2026"
-  },
-  "openai-adnoc-g42-industrial-ai": {
-    "credit_name": "",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "openai-chatgpt-enterprise-aws-marketplace": {
-    "credit_name": "Unite.AI",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/"
-  },
-  "openai-community-compact-campus-blueprint": {
-    "credit_name": "Unite.AI",
-    "evidence": true,
-    "evidence_from": "https://madrobot.blog/2026/11/05/openai-community-compact-data-centres-power-bills/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/openai-publishes-community-compact-and-ai-campus-policy-blueprint/"
-  },
-  "openai-control-room-research-kill-switch": {
-    "credit_name": "Unite.AI",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/"
-  },
-  "openai-dan-driscoll-national-security": {
-    "credit_name": "Unite.AI independent report",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/"
-  },
-  "openai-gpt-6-cyber-critical-daybreak": {
-    "credit_name": "OpenAI announcement",
-    "evidence": true,
-    "evidence_from": "https://openai.com/index/introducing-gpt-6-cyber",
-    "hero": true,
-    "hero_from": "https://openai.com/index/introducing-gpt-6-cyber"
-  },
-  "openai-grid-protectors-georgia": {
-    "credit_name": "New York Post independent report",
-    "evidence": true,
-    "evidence_from": "https://openai.com/index/grid-protectors-program/",
-    "hero": true,
-    "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/"
-  },
-  "openai-images-2-6-gif": {
-    "credit_name": "The Verge",
-    "evidence": true,
-    "evidence_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
-    "hero": true,
-    "hero_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
-  },
-  "openai-internal-security-warnings": {
-    "credit_name": "KWSN republication of the same Reuters article",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/"
-  },
-  "openai-lifeval-everyday-tasks": {
-    "credit_name": "ExplainX independent analysis",
-    "evidence": true,
-    "evidence_from": "https://openai.com/index/lifeval",
-    "hero": true,
-    "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026"
-  },
-  "openai-linux-kernel-948-root-exploits": {
-    "credit_name": "Interesting Engineering coverage",
-    "evidence": true,
-    "evidence_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits",
-    "hero": true,
-    "hero_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits"
-  },
-  "openai-modretro-chromatic-codex-edition-200": {
-    "credit_name": "RuntimeWire",
-    "evidence": true,
-    "evidence_from": "https://runtimewire.com/article/openai-developers-posts-one-word-teaser-for-november-9th",
-    "hero": true,
-    "hero_from": "https://runtimewire.com/article/openai-sells-200-codex-chromatic-handheld-that-turns-prompts-into-game-boy-games"
-  },
-  "openai-pando-git-backend": {
-    "credit_name": "ExplainX independent report",
-    "evidence": true,
-    "evidence_from": "https://openai.com/index/scaling-git-at-openai",
-    "hero": true,
-    "hero_from": "https://explainx.ai/blog/openai-pando-git-backend-codex-monorepo-5x-faster-pushes-petabyte-per-day-2026"
-  },
-  "openai-physical-engineering-astra": {
-    "credit_name": "Unite.AI report",
-    "evidence": true,
-    "evidence_from": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/"
-  },
-  "openai-pierre-computer-codex": {
-    "credit_name": "Unite.AI report",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
-  },
-  "opentable-chatgpt-190k-diners-september": {
-    "credit_name": "Crypto Briefing",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://cryptobriefing.com/opentable-chatgpt-integration-190000-diners/"
-  },
-  "pliant-80m-series-c-agentic-payments": {
-    "credit_name": "PYMNTS report",
-    "evidence": true,
-    "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/",
-    "hero": true,
-    "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/"
-  },
-  "psi-aaronson-ambainis-conjecture-proof": {
-    "credit_name": "PSI Aaronson-Ambainis proof announcement (PSI)",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/psi-reports-machine-checked-proof-of-aaronson-ambainis-conjecture/",
-    "hero": true,
-    "hero_from": "https://psi.inc/research/aaronson-ambainis/"
-  },
-  "qualcomm-q4-handset-miss": {
-    "credit_name": "Reuters report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": false,
-    "hero_from": ""
-  },
-  "qualys-q3-2026-revenue-188m-beat": {
-    "credit_name": "StockStory",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-qualys-nasdaqqlys-beats-q3-2026-sales-expectations-but-stock-drops"
-  },
-  "rebellions-nvidia-nvlink-fusion-sovereign-ai": {
-    "credit_name": "Aju Press, reporting the Rebellions\u2013Nvidia\u2013SK Telecom announcement at Nvidia AI Day Seoul",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.ajupress.com/view/20261109151112816"
-  },
-  "rocket-lab-q3-2026-record-revenue-268m-backlog": {
-    "credit_name": "StockStory via FinancialContent",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-rocket-lab-nasdaqrklb-reports-bullish-q3-2026-guides-for-strong-sales-next-quarter"
-  },
-  "semianalysis-gdpx-benchmark": {
-    "credit_name": "SemiAnalysis official announcement",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/",
-    "hero": true,
-    "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities"
-  },
-  "sequoia-10b-rewind-expansion": {
-    "credit_name": "TechCrunch report (full memo)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"
-  },
-  "snap-q3-2026-profit-beat-revenue-miss": {
-    "credit_name": "MarketCatalyst",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://marketcatalyst.ai/posts/snap-swings-to-q3-profit-as-eps-beats-at-0-03-but-revenue-misses-at-1-72b"
-  },
-  "snowflake-coco-cowork-bots": {
-    "credit_name": "Snowflake official blog",
-    "evidence": true,
-    "evidence_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
-    "hero": true,
-    "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/"
-  },
-  "softbank-abb-blocked": {
-    "credit_name": "ABB",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.abb.com/global/en/news/140154/update-on-divestment-of-abb-robotics"
-  },
-  "softbank-grab-petros-malaysia-ai-infrastructure-185b": {
-    "credit_name": "SoftBank Group (official press release)",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://group.softbank/en/news/press/20261109_0"
-  },
-  "softbank-group-q2-fy2026-swings-1-1t-net-loss": {
-    "credit_name": "SoftBank Group",
-    "evidence": true,
-    "evidence_from": "https://group.softbank/en/ir/news/",
-    "hero": true,
-    "hero_from": "https://group.softbank/en/ir/news/"
-  },
-  "soundhound-q3-record-revenue-624": {
-    "credit_name": "GlobeNewswire via Quantisnow",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/soundhound-ai-reports-record-q3-revenue-and-guides-to-sustained-6775997"
-  },
-  "supermicro-q1-fy27-record-sales": {
-    "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
-    "evidence": true,
-    "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
-  },
-  "synaptics-q1-fy27-revenue-294m-onsemi": {
-    "credit_name": "Quantisnow",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146"
-  },
-  "teradata-q3-2026-revenue-399m-cloud-arr": {
-    "credit_name": "PR Newswire",
-    "evidence": true,
-    "evidence_from": "https://third-news.com/article/88cc2a8e-d961-11f1-872b-9ca3ba08e13f",
-    "hero": false,
-    "hero_from": ""
-  },
-  "terawulf-q3-2026-hpc-83pct-revenue": {
-    "credit_name": "The Motley Fool",
-    "evidence": true,
-    "evidence_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/",
-    "hero": true,
-    "hero_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/"
-  },
-  "tesla-robotaxi-fort-worth": {
-    "credit_name": "Not a Tesla App \u62a5\u9053",
-    "evidence": true,
-    "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
-    "hero": true,
-    "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
-  },
-  "thinking-machines-inkling-2-small": {
-    "credit_name": "SiliconANGLE",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/"
-  },
-  "together-ai-compiler-polymorphic-inference": {
-    "credit_name": "Unite.AI",
-    "evidence": true,
-    "evidence_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/"
-  },
-  "traversal-120m-series-b": {
-    "credit_name": "Unite.AI report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.unite.ai/traversal-raises-120m-series-b-at-1b-valuation-to-expand-ai-sre/"
-  },
-  "tutor-intelligence-75m-series-b": {
-    "credit_name": "Tutor Intelligence company announcement",
-    "evidence": true,
-    "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
-    "hero": true,
-    "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
-  },
-  "uber-q3-2026-av-700-vehicles": {
-    "credit_name": "Reuters brief via TradingView",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-04:newsml_PLXR5JDMF:0-brief-uber-q3-gross-bookings-usd-59-819-million/"
-  },
-  "vistra-q3-2026-net-income-114b-ebitda-surge": {
-    "credit_name": "TradingView",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.tradingview.com/news/tradingview:6a04640bf5b0f:0-vistra-posts-1-14b-q3-net-income-raises-2026-guidance/"
-  },
-  "wehner-meta-fireworks-cfo": {
-    "credit_name": "CNBC",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html"
-  },
-  "wix-q3-2026-revenue-570m-base44-nears-250m-arr": {
-    "credit_name": "GlobeNewswire via Morningstar",
-    "evidence": true,
-    "evidence_from": "https://www.financialcontent.com/article/gnwcq-2026-11-10-wix-reports-third-quarter-2026-results",
-    "hero": false,
-    "hero_from": ""
-  },
-  "xiaomi-humanoid-8-hour-shift": {
-    "credit_name": "Electrek report",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/"
-  },
-  "zeta-global-q3-2026-revenue-493m-beat": {
-    "credit_name": "Business Wire",
-    "evidence": false,
-    "evidence_from": "",
-    "hero": true,
-    "hero_from": "https://lifestyle.q923radio.com/story/562220/zeta-global-reports-21st-consecutive-beat-and-raise-quarter-generates-positive-gaap-net-income-in-3q26-ytd-and-achieves-the-rule-of-71/"
-  }
+ "adobe-cx-coworker-third-party-ai": {
+  "credit_name": "Futurum Group",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://futurumgroup.com/insights/adobe-brings-cx-enterprise-coworker-into-third-party-ai-platforms/"
+ },
+ "affirm-q1-fy27-revenue-126b-credit-quality": {
+  "credit_name": "Investor's Business Daily",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.investors.com/news/technology/affirm-stock-q3-2026-earnings-afrm/"
+ },
+ "agility-nasdaq-debut-aglt": {
+  "credit_name": "WebProNews",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.webpronews.com/agility-robotics-nasdaq-aglt-humanoid-debut/"
+ },
+ "agility-spac-close-nasdaq-aglt": {
+  "credit_name": "Agility Robotics official press release",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.agilityrobotics.com/content/agility-robotics-and-churchill-capital-corp-xi-complete-business-combination"
+ },
+ "airbnb-q3-2026-revenue-487b-fastest-3-years": {
+  "credit_name": "Airbnb Newsroom (official results)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://news.airbnb.com/airbnb-q3-2026-financial-results"
+ },
+ "akamai-q3-cloud-infrastructure-34": {
+  "credit_name": "Akamai release via Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/akamai-reports-third-quarter-2026-financial-results-6775888"
+ },
+ "alphabet-qualcomm-548m": {
+  "credit_name": "MLQ News",
+  "evidence": true,
+  "evidence_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/",
+  "hero": true,
+  "hero_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/"
+ },
+ "amd-q3-data-center-record": {
+  "credit_name": "AMD 官方新闻稿",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "amd-taalas-2-9b": {
+  "credit_name": "Tech Insider report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://tech-insider.org/ca/amd-taalas-acquisition-toronto-ai-inference-chip-2026/"
+ },
+ "analog-devices-alif-1-35b": {
+  "credit_name": "TechNode",
+  "evidence": true,
+  "evidence_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/",
+  "hero": true,
+  "hero_from": "https://technode.global/2026/11/06/analog-devices-completes-alif-acquisition/"
+ },
+ "anthropic-3-4b-gas-generators-onepwr": {
+  "credit_name": "Energy News Beat",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://energynewsbeat.co/electrical-generation/anthropics-reported-3-4-billion-power-move-read-the-equipment-order-before-the-electric-bill/"
+ },
+ "anthropic-ap-licensing-deal": {
+  "credit_name": "Adweek report",
+  "evidence": true,
+  "evidence_from": "https://aiweekly.co/alerts/anthropic-licenses-ap-election-data-in-first-publisher-deal",
+  "hero": true,
+  "hero_from": "https://www.adweek.com/media/anthropic-licensing-deal-ap-election/"
+ },
+ "anthropic-claude-fable-mythos-5-2": {
+  "credit_name": "Anthropic",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+ },
+ "anthropic-claude-marketplace-partner-agents": {
+  "credit_name": "Anthropic announcement",
+  "evidence": true,
+  "evidence_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace",
+  "hero": true,
+  "hero_from": "https://claude.com/resources/articles/new-agents-and-products-claude-marketplace"
+ },
+ "anthropic-claude-personal-finance": {
+  "credit_name": "Anthropic official blog",
+  "evidence": true,
+  "evidence_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+  "hero": true,
+  "hero_from": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+ },
+ "anthropic-flashprove-provable-inference": {
+  "credit_name": "Anthropic official research post",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/anthropic-releases-flashprove-for-cryptographic-ai-inference-proofs/",
+  "hero": true,
+  "hero_from": "https://www.anthropic.com/research/provable-inference"
+ },
+ "anthropic-ipo-nov-19-20-debut-price-range-retracted": {
+  "credit_name": "Crypto Briefing",
+  "evidence": true,
+  "evidence_from": "https://shiftdelete.net/en/anthropic-ipo-price-range",
+  "hero": true,
+  "hero_from": "https://cryptobriefing.com/anthropic-targets-november-nasdaq-ipo-amid-ai-stock-downturn-wsj/"
+ },
+ "anthropic-ipo-roadshow-70-78-price-range": {
+  "credit_name": "Anthropic",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.anthropic.com/news/roadshow-launch"
+ },
+ "anthropic-ipo-roadshow-doubt": {
+  "credit_name": "Duke FM (Reuters republication)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://duke.fm/2026/11/05/exclusive-ai-backlash-could-threaten-anthropic-ipo-timing-potential-investors-say/"
+ },
+ "anthropic-ipo-valuation-slide": {
+  "credit_name": "Paktechstan, citing Bloomberg and the Wall Street Journal",
+  "evidence": true,
+  "evidence_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion",
+  "hero": true,
+  "hero_from": "https://paktechstan.com/article/anthropic-presses-ahead-with-ipo-roadshow-as-valuation-slides-to-1-1-1-3-trillion"
+ },
+ "anthropic-message-threads-beta": {
+  "credit_name": "Anthropic official post",
+  "evidence": true,
+  "evidence_from": "https://claude.com/resources/articles/message-threads",
+  "hero": true,
+  "hero_from": "https://claude.com/resources/articles/message-threads"
+ },
+ "anthropic-public-first-63m-midterms-10-of-17": {
+  "credit_name": "Pivot News",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://pivotnews.ai/public-sector/candidates-backing-stricter-ai-oversight-win-key"
+ },
+ "anthropic-s1a-895b-compute": {
+  "credit_name": "gHacks 报道",
+  "evidence": true,
+  "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/",
+  "hero": true,
+  "hero_from": "https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/"
+ },
+ "aosl-q1-fy27-revenue-1778m-ai-server-surge": {
+  "credit_name": "Business Wire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "apple-intelligence-china-beta-live-qwen": {
+  "credit_name": "Apple China newsroom announcement",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
+ },
+ "applovin-q3-2026-record-profit": {
+  "credit_name": "The Motley Fool earnings reaction",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.fool.com/investing/2026/11/04/applovin-turns-81-of-new-sales-into-profit-rapid-earnings-reaction/"
+ },
+ "arista-q3-ai-networking-record": {
+  "credit_name": "Fool independent analysis",
+  "evidence": true,
+  "evidence_from": "https://aistockwire.com/blog/arista-networks-anet-q3-2026-earnings-fastest-growth-since-ipo-november-2026",
+  "hero": true,
+  "hero_from": "https://www.fool.com/investing/2026/11/03/arista-revenue-up-58-as-q4-outlook-slows-rapid-ear/"
+ },
+ "arm-q2-fye27-record-144b": {
+  "credit_name": "Arm official newsroom",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://newsroom.arm.com/news/arm-q2-fye27-results"
+ },
+ "arteris-q3-2026-revenue-2577m-beats-estimates": {
+  "credit_name": "TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/tradingview:86442eb62172c:0-arteris-3q-2026-revenue-25-77m-eps-0-23-10-q-summary/"
+ },
+ "ase-technology-october-2026-revenue-886b-471pct-yoy": {
+  "credit_name": "PR Newswire",
+  "evidence": true,
+  "evidence_from": "https://third-news.com/article/53e30f3a-dcd7-11f1-9e75-9ca3ba08e13f",
+  "hero": false,
+  "hero_from": ""
+ },
+ "atlassian-q1-fy27-revenue-1772m-shares-fall-17pct": {
+  "credit_name": "SiliconANGLE",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://siliconangle.com/2026/11/05/atlassian-shares-fall-17-as-slower-subscription-growth-forecast-overshadows-earnings-beat/"
+ },
+ "australia-ai-safety-regulator-openai-medicare-breach": {
+  "credit_name": "Australian Associated Press",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/australia-releases-ai-safety-recommendations-after-openai-breach/",
+  "hero": true,
+  "hero_from": "https://aapnews.aap.com.au/news/ai-safety-watchdog-to-be-set-up-after-medicare-breach"
+ },
+ "axon-skydio-1-2b-exclusive": {
+  "credit_name": "DroneXL",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://dronexl.co/2026/11/06/axon-skydio-1-2-billion-exclusive-police-distributor/"
+ },
+ "bill-q1-fy27-revenue-3538m-profit-beat": {
+  "credit_name": "Zacks",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.zacks.com/stock/news/3024981/bill-holdings-bill-q1-earnings-how-key-metrics-compare-to-wall-street-estimates"
+ },
+ "block-q3-earnings-cash-app": {
+  "credit_name": "Motley Fool analysis of the shareholder letter",
+  "evidence": true,
+  "evidence_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/",
+  "hero": true,
+  "hero_from": "https://www.fool.com/investing/2026/11/03/block-s-adjusted-profit-jumps-as-losses-climb-rapid-earnings-reaction/"
+ },
+ "canva-1271-restructure-ai-costs": {
+  "credit_name": "TechCrunch report",
+  "evidence": true,
+  "evidence_from": "https://thetechportal.com/2026/11/04/canva-lays-off-22-of-its-workforce-as-growth-slows-for-the-first-time-in-a-decade/",
+  "hero": true,
+  "hero_from": "https://techcrunch.com/2026/11/04/canva-lays-off-over-1200-people-amid-slowing-growth/"
+ },
+ "cat-wu-anthropic-openai-core-products": {
+  "credit_name": "RuntimeWire coverage",
+  "evidence": true,
+  "evidence_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management",
+  "hero": true,
+  "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
+ },
+ "chainalysis-breach-all-users-tokens": {
+  "credit_name": "The Hacker News",
+  "evidence": true,
+  "evidence_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
+  "hero": true,
+  "hero_from": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html"
+ },
+ "china-ndrc-ai-lifecycle-law": {
+  "credit_name": "Bloomberg Law report",
+  "evidence": true,
+  "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses",
+  "hero": true,
+  "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
+ },
+ "cisco-talos-volta-infostealer": {
+  "credit_name": "Cisco Talos official report",
+  "evidence": true,
+  "evidence_from": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
+  "hero": true,
+  "hero_from": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+ },
+ "claude-agent-memory-dreaming": {
+  "credit_name": "Anthropic",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.anthropic.com/research/components-of-agent-memory"
+ },
+ "claude-vault-96-protein-structure": {
+  "credit_name": "Anthropic research report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.anthropic.com/research/investigating-vault-particles-with-claude"
+ },
+ "claude-xen-vm-escape": {
+  "credit_name": "The Hacker News",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html"
+ },
+ "cloudflare-q3-2026-revenue-782m-fastest-4-years": {
+  "credit_name": "Quantisnow (Business Wire release)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/cloudflare-announces-third-quarter-2026-financial-results-6776578"
+ },
+ "coherent-q1-fy27-record-revenue": {
+  "credit_name": "StockStory",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://stockstory.org/us/stocks/nyse/cohr/news/earnings/coherent-nysecohr-beats-q3-cy2026-sales-expectations-provides-optimistic-revenue-guidance-for-next-quarter"
+ },
+ "constellation-q3-2026-revenue-955b-eps-beat": {
+  "credit_name": "TradingKey",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingkey.com/news/earnings/262296133-"
+ },
+ "core-scientific-q3-colocation-surge": {
+  "credit_name": "CryptoBriefing",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://cryptobriefing.com/core-scientific-q3-2026-revenue-colocation/"
+ },
+ "crowdstrike-ai-kill-switch": {
+  "credit_name": "Independent report",
+  "evidence": true,
+  "evidence_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls",
+  "hero": true,
+  "hero_from": "https://news.s3dat.com/stories/crowdstrike-ai-kill-switch-gateway-controls"
+ },
+ "crowdstrike-fiddler-dreadnode": {
+  "credit_name": "dpa-AFX wire report",
+  "evidence": true,
+  "evidence_from": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-dreadnode-advance-ai-trust/",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/dpa_afx:1ba5ddc984269:0-crowdstrike-to-buy-dreadnode-fiddler-ai-to-boost-ai-trust/"
+ },
+ "cursor-openai-cutoff": {
+  "credit_name": "InfoWorld",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.infoworld.com/article/4216503/cursor-customers-will-lose-access-to-openai-coding-models-in-november.html"
+ },
+ "datadog-q3-2026-beat-weak-outlook": {
+  "credit_name": "Investor's Business Daily report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.investors.com/news/technology/datadog-stock-ddog-datadog-earnings-news-q32026/"
+ },
+ "deepmind-antigravity-cheminformatics": {
+  "credit_name": "DNA Insider",
+  "evidence": true,
+  "evidence_from": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+  "hero": true,
+  "hero_from": "https://dnainsider.news/en/signal/google-deepmind-adds-cheminformatics-skills-to-google-antigravity-for-compound-search-and-macrocycle-design-902c0dba"
+ },
+ "deepmind-rsa-1024-two-flaws": {
+  "credit_name": "DataStudios",
+  "evidence": true,
+  "evidence_from": "https://santageai.com/news/2026/11/06/deepmind-ai-agents-rsa-1024-flaws",
+  "hero": true,
+  "hero_from": "https://www.datastudios.org/post/google-deepmind-ai-agents-two-weaknesses-legacy-1024-bit-rsa"
+ },
+ "draftkings-q3-2026-guidance-cut-predictions-spend": {
+  "credit_name": "Zacks",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.zacks.com/stock/news/3025146/draftkings-dkng-reports-q3-earnings-what-key-metrics-have-to-say"
+ },
+ "drax-brookfield-radiant-1gw": {
+  "credit_name": "AI data center page, Drax website",
+  "evidence": true,
+  "evidence_from": "https://www.drax.com/what-we-do/ai-data-centres/",
+  "hero": true,
+  "hero_from": "https://www.drax.com/what-we-do/ai-data-centres/"
+ },
+ "edgevana-700m-blackwell-agreements": {
+  "credit_name": "Reuters via TradingView",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/edgevana-signs-multi-year-agreements-to-deploy-nvidia-blackwell/",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/"
+ },
+ "eu-gemini-press-copyright": {
+  "credit_name": "Morningstar 转发道琼斯报道",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law"
+ },
+ "foxconn-october-revenue-4573": {
+  "credit_name": "Reuters via TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_L3N46M068:0-foxconn-october-revenue-45-73-y-y/"
+ },
+ "globalfoundries-q3-record-margin-tsmc-interposer": {
+  "credit_name": "Earnings-call coverage",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://finance.biggo.com/news/US_GFS_2026-11-04"
+ },
+ "google-cloud-pathways-ga-gke": {
+  "credit_name": "Google Cloud Blog",
+  "evidence": true,
+  "evidence_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga",
+  "hero": true,
+  "hero_from": "https://cloud.google.com/blog/topics/ai-infrastructure/cloud-pathways-a-distributed-ml-runtime-is-ga"
+ },
+ "google-crusoe-wyoming-17b": {
+  "credit_name": "Unite.AI",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/crusoe-hands-google-a-pre-developed-wyoming-ai-data-center-site/"
+ },
+ "google-gemini-omni-1-2-flash": {
+  "credit_name": "Google official blog",
+  "evidence": true,
+  "evidence_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+  "hero": true,
+  "hero_from": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+ },
+ "google-guided-learning-k12": {
+  "credit_name": "Google Official Blog",
+  "evidence": true,
+  "evidence_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/",
+  "hero": true,
+  "hero_from": "https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/"
+ },
+ "google-malaysia-15b-data-centers": {
+  "credit_name": "Google official blog",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://blog.google/intl/en-my/company-news/inside-google/google-investment-malaysia-digital-infrastructure-november-2026/"
+ },
+ "google-mandiant-llmjacking": {
+  "credit_name": "Google Cloud Official Blog Report",
+  "evidence": true,
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models",
+  "hero": true,
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/llmjacking-monetizing-compromised-cloud-models"
+ },
+ "google-terawulf-anthropic-19b": {
+  "credit_name": "TeraWulf 8-K filing",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://investors.terawulf.com/sec-filings/all-sec-filings/content/0001628280-26-069810/wulfhawesvillecsaandepcmpr.htm"
+ },
+ "google-tpu-8tx-8i-max-eighth-generation": {
+  "credit_name": "Google Blog",
+  "evidence": true,
+  "evidence_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
+  "hero": true,
+  "hero_from": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+ },
+ "google-xcpe-videostrong-botnet": {
+  "credit_name": "Google Threat Intelligence Team Official Blog",
+  "evidence": true,
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet",
+  "hero": true,
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/shutting-the-door-on-the-xcpe-botnet"
+ },
+ "hive-digital-q2-2027-revenue-849m-loss-widens": {
+  "credit_name": "Quiver Quantitative",
+  "evidence": true,
+  "evidence_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens",
+  "hero": true,
+  "hero_from": "https://www.quiverquant.com/news/HIVE%20Digital%20Technologies%20(HIVE)%20Releases%20Q2%202027%20Earnings:%20Revenue%20Down,%20Net%20Loss%20Widens"
+ },
+ "ibm-cisco-claude-mythos-enterprise-security": {
+  "credit_name": "Cisco",
+  "evidence": true,
+  "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html",
+  "hero": true,
+  "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-unveils-frontier-ai-red-teaming-and-agent-observability-to-secure-the-agentic-enterprise.html"
+ },
+ "ibm-quantum-system-two-chicago-nighthawk": {
+  "credit_name": "University of Chicago",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://news.uchicago.edu/story/ibms-most-advanced-quantum-computer-unveiled-uchicagos-hyde-park-labs"
+ },
+ "innodata-q3-record-revenue-956": {
+  "credit_name": "ACCESS Newswire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/innodata-reports-record-third-quarter-2026-results-1238173"
+ },
+ "iren-q1-fy27-ai-cloud-200m-target-slip": {
+  "credit_name": "AIStockWire",
+  "evidence": true,
+  "evidence_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026",
+  "hero": true,
+  "hero_from": "https://aistockwire.com/blog/iren-iren-q1-fy27-revenue-beat-4-billion-target-january-microsoft-november-2026"
+ },
+ "jpmorganchase-claude-code-firm-wide": {
+  "credit_name": "Anthropic",
+  "evidence": true,
+  "evidence_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code",
+  "hero": true,
+  "hero_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code"
+ },
+ "kakao-mobility-nvidia-level4-mou": {
+  "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility–Nvidia MOU signing",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/kakao-mobility-signs-nvidia-mou-for-level-4-autonomous-driving/",
+  "hero": true,
+  "hero_from": "https://www.koreajoongangdaily.com/business/kakao-mobility-and-nvidia-partner-on-level-4-autonomous-driving/12962591"
+ },
+ "kimi-k31-pro-weights-public": {
+  "credit_name": "Moonshot AI",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+ },
+ "lambda-alabama-33b-red-clay-campus": {
+  "credit_name": "Lambda official blog",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/lambda-plans-alabama-ai-data-center-campus-in-lowndes-county/",
+  "hero": true,
+  "hero_from": "https://lambda.ai/blog/lambda-to-invest-33-billion-in-alabama-with-new-data-center"
+ },
+ "lg-k-exaone-2-5-free-api": {
+  "credit_name": "MoneyToday",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.mt.co.kr/en/industry/2026/11/09/2026110909413580792"
+ },
+ "macom-q4-fy26-datacenter-surge": {
+  "credit_name": "Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/macom-reports-fiscal-fourth-quarter-and-fiscal-year-2026-financial-6774663"
+ },
+ "mediatek-october-2026-revenue-550b-577pct-yoy": {
+  "credit_name": "MediaTek",
+  "evidence": true,
+  "evidence_from": "https://www.mediatek.com/investor-relations/financial-information#monthly-reports",
+  "hero": false,
+  "hero_from": ""
+ },
+ "meituan-longcat-25-chinese-chips": {
+  "credit_name": "FourWeekMBA report",
+  "evidence": true,
+  "evidence_from": "https://www.techtimes.com/articles/329925/20261103/meituan-releases-longcat-25-chinese-chips-benchmark-claims-await-independent-tests.htm",
+  "hero": false,
+  "hero_from": ""
+ },
+ "menlo-enterprise-ai-177b": {
+  "credit_name": "Menlo Ventures Report Page",
+  "evidence": true,
+  "evidence_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/",
+  "hero": true,
+  "hero_from": "https://menlovc.com/perspective/2026-the-state-of-enterprise-ai/"
+ },
+ "meta-conductor-coding-agents": {
+  "credit_name": "TechCrunch report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
+ },
+ "meta-euro-bond-final-terms-9b": {
+  "credit_name": "AIStockWire report (final term sheet)",
+  "evidence": true,
+  "evidence_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026",
+  "hero": true,
+  "hero_from": "https://aistockwire.com/blog/meta-meta-euro-dollar-bond-sale-84-billion-debt-november-2026"
+ },
+ "meta-euro-bond-record-53b-orders": {
+  "credit_name": "Le Private Banker (Bloomberg)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://leprivatebanker.com/2026/11/04/meta-seeks-up-to-e9-billion-in-debut-euro-bond-sale-a-day-after-raising-15-billion-in-dollars/"
+ },
+ "meta-instagram-ai-age-estimation-global": {
+  "credit_name": "Meta",
+  "evidence": true,
+  "evidence_from": "https://techcrunch.com/2026/11/09/meta-expands-instagrams-ai-age-guessing-tech-globally/",
+  "hero": true,
+  "hero_from": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/"
+ },
+ "meta-muse-ember-smallest-model-haiku-cost": {
+  "credit_name": "Meta AI Research",
+  "evidence": true,
+  "evidence_from": "https://research.meta.ai/blog/muse-ember",
+  "hero": true,
+  "hero_from": "https://research.meta.ai/blog/muse-ember"
+ },
+ "meta-muse-voice-us-rollout": {
+  "credit_name": "Meta official blog",
+  "evidence": true,
+  "evidence_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+  "hero": true,
+  "hero_from": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
+ },
+ "meta-wonder-memory-spaces": {
+  "credit_name": "Meta",
+  "evidence": true,
+  "evidence_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+  "hero": true,
+  "hero_from": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai"
+ },
+ "microchip-q2-fy27-sales-1622b-above-guide": {
+  "credit_name": "Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/microchip-technology-announces-financial-results-for-second-quarter-of-fiscal-6776608"
+ },
+ "microsoft-apm-dependabot": {
+  "credit_name": "Vinish",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://vinish.dev/github-dependabot-agent-package-manager-support"
+ },
+ "microsoft-winds-down-oracle-ai-cloud-rental": {
+  "credit_name": "Reuters report of Bloomberg News (Duke FM syndication)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://duke.fm/2026/11/06/microsoft-is-winding-down-oracle-deal-to-rent-ai-cloud-capacity-bloomberg-news-reports/"
+ },
+ "mistral-skiplabs-fifth-deal": {
+  "credit_name": "Distill Intelligence",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.distillintelligence.com/briefings/ai-leaders-2026-11-06"
+ },
+ "mit-flex-robot-language-corrections": {
+  "credit_name": "MIT News, announcing the FLEX study from MIT and New York University",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/flex-teaches-robots-to-generalize-from-human-corrections/",
+  "hero": true,
+  "hero_from": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109"
+ },
+ "mit-worldparticle-unified-physics-simulation": {
+  "credit_name": "MIT News, reporting the WorldParticle research from MIT and the University of British Columbia",
+  "evidence": true,
+  "evidence_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109",
+  "hero": true,
+  "hero_from": "https://news.mit.edu/2026/single-ai-model-simulates-many-substances-behavior-1109"
+ },
+ "mitsui-jsr-11-6b": {
+  "credit_name": "Analytics Insight",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.analyticsinsight.net/tech-news/top-tech-news-mitsuis-116-billion-jsr-deal-newmo-raises-135-million-and-more"
+ },
+ "moderna-q3-2026-revenue-131b-profit-beat": {
+  "credit_name": "Moderna Q3 2026 results (ACCESS Newswire)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://markets.financialcontent.com/stocks/article/accwirecq-2026-11-6-moderna-reports-third-quarter-2026-financial-results-and-provides-business-updates"
+ },
+ "monster-q3-2026-record-sales-256b-margin-squeeze": {
+  "credit_name": "Reuters via TradingView",
+  "evidence": true,
+  "evidence_from": "https://www.tipranks.com/news/company-announcements/monster-beverage-reports-strong-third-quarter-sales-and-earnings-growth",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-05:newsml_PLX6396BN:0-brief-monster-beverage-q3-eps-usd-0-29/"
+ },
+ "nasdaq-correction-ai-selloff": {
+  "credit_name": "ExplainX, citing CNBC",
+  "evidence": true,
+  "evidence_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026",
+  "hero": true,
+  "hero_from": "https://explainx.ai/blog/ai-stocks-crash-nov-5-2026-nvidia-micron-amd-coreweave-why-data-center-midterm-fears-bubble-2026"
+ },
+ "nhn-q3-2026-record-revenue-758b-ai-cloud-surge": {
+  "credit_name": "Inven Global",
+  "evidence": true,
+  "evidence_from": "https://news.jkn.co.kr/editions/english/post/1082257",
+  "hero": true,
+  "hero_from": "https://www.invenglobal.com/articles/28363/nhn-posts-q3-revenue-of-7583-billion-won-operating-profit-up-113"
+ },
+ "nice-q3-2026-ai-arr-392m": {
+  "credit_name": "Seeking Alpha report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://seekingalpha.com/news/4664551-nice-raises-2026-eps-guidance-after-q3-earnings-and-revenue-top-estimates"
+ },
+ "nooks-500m-cvf-revenue-agent-platform": {
+  "credit_name": "Reuters report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "novanta-q3-2026-revenue-305m-beat": {
+  "credit_name": "The Markets Daily",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.themarketsdaily.com/2026/11/07/novanta-novt-expected-to-release-earnings-on-monday.html"
+ },
+ "npci-tech-solutions-ai-blockchain": {
+  "credit_name": "Reuters report",
+  "evidence": true,
+  "evidence_from": "https://www.mediainfoline.com/brand/npci-announces-formation-of-npci-tech-solutions-limited-ntsl-as-a-wholly-owned-subsidiary",
+  "hero": false,
+  "hero_from": ""
+ },
+ "nvidia-ai-day-seoul-physical-ai-nemotron": {
+  "credit_name": "Aju Press, reporting from Nvidia AI Day Seoul 2026",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.ajupress.com/view/20261109111042035"
+ },
+ "nvidia-board-investigates-huang-foreign-intelligence": {
+  "credit_name": "Engadget, reporting the Nvidia board statement",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.engadget.com/2310336/nvidia-is-investigating-reports-that-ceo-jensen-huang-was-the-target-of-chinese-spy-efforts/"
+ },
+ "nvidia-city-ai-physical-agentic": {
+  "credit_name": "NVIDIA 官方博客",
+  "evidence": true,
+  "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
+  "hero": true,
+  "hero_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/"
+ },
+ "nvidia-cloud-partners-49pct-china-cap": {
+  "credit_name": "Silicon Report (Financial Times report)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.siliconreport.com/nvidia-tells-cloud-clients-to-sell-51-to-non-chinese-firms-ft-says"
+ },
+ "nvidia-gr00t-2-isaac-lab-3-corl": {
+  "credit_name": "NVIDIA Blog",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/"
+ },
+ "nvidia-korean-startup-investments-point2": {
+  "credit_name": "NVIDIA Blog, announcing the investments at the MSIT-NVIDIA AI Startup Partnership Forum",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
+ },
+ "nvidia-point2-korea-rf": {
+  "credit_name": "NVIDIA",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/"
+ },
+ "nvidia-spil-cowos-billions": {
+  "credit_name": "The Hindu BusinessLine, citing Reuters",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.thehindubusinessline.com/info-tech/ai-boom-turns-advanced-chip-packaging-into-the-next-battleground/article71673081.ece/amp/"
+ },
+ "nxp-unified-robotics-platform-physical-ai": {
+  "credit_name": "Unite.ai",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/nxp-launches-modular-robotics-platform-for-physical-ai-development/"
+ },
+ "oklo-q3-2026-first-revenue-186m-loss-417m": {
+  "credit_name": "TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/tradingview:32c14b0c11bf2:0-oklo-3q-2026-revenue-1-86m-10-q-summary/"
+ },
+ "onto-innovation-q3-2026-record-revenue-410m": {
+  "credit_name": "Business Wire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "openai-11b-first-close-125t": {
+  "credit_name": "AI Stock Wire, citing Bloomberg",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://aistockwire.com/blog/openai-receives-11-billion-1-25-trillion-valuation-november-2026"
+ },
+ "openai-adnoc-g42-industrial-ai": {
+  "credit_name": "",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "openai-chatgpt-enterprise-aws-marketplace": {
+  "credit_name": "Unite.AI",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/"
+ },
+ "openai-community-compact-campus-blueprint": {
+  "credit_name": "Unite.AI",
+  "evidence": true,
+  "evidence_from": "https://madrobot.blog/2026/11/05/openai-community-compact-data-centres-power-bills/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/openai-publishes-community-compact-and-ai-campus-policy-blueprint/"
+ },
+ "openai-control-room-research-kill-switch": {
+  "credit_name": "Unite.AI",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/openai-deploys-control-room-to-cut-off-research-model-output/"
+ },
+ "openai-dan-driscoll-national-security": {
+  "credit_name": "Unite.AI independent report",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/former-army-secretary-dan-driscoll-joins-openai-as-senior-counselor/"
+ },
+ "openai-gpt-6-cyber-critical-daybreak": {
+  "credit_name": "OpenAI announcement",
+  "evidence": true,
+  "evidence_from": "https://openai.com/index/introducing-gpt-6-cyber",
+  "hero": true,
+  "hero_from": "https://openai.com/index/introducing-gpt-6-cyber"
+ },
+ "openai-grid-protectors-georgia": {
+  "credit_name": "New York Post independent report",
+  "evidence": true,
+  "evidence_from": "https://openai.com/index/grid-protectors-program/",
+  "hero": true,
+  "hero_from": "https://nypost.com/2026/11/02/business/openai-plans-to-use-less-electricity-when-grid-is-strained-at-this-new-facility/"
+ },
+ "openai-images-2-6-gif": {
+  "credit_name": "The Verge",
+  "evidence": true,
+  "evidence_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+  "hero": true,
+  "hero_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
+ },
+ "openai-internal-security-warnings": {
+  "credit_name": "KWSN republication of the same Reuters article",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/"
+ },
+ "openai-lifeval-everyday-tasks": {
+  "credit_name": "ExplainX independent analysis",
+  "evidence": true,
+  "evidence_from": "https://openai.com/index/lifeval",
+  "hero": true,
+  "hero_from": "https://explainx.ai/blog/openai-lifeval-everyday-tasks-benchmark-gpt-6-astra-childcare-government-paperwork-2026"
+ },
+ "openai-linux-kernel-948-root-exploits": {
+  "credit_name": "Interesting Engineering coverage",
+  "evidence": true,
+  "evidence_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits",
+  "hero": true,
+  "hero_from": "https://interestingengineering.com/ai-robotics/openai-agents-linux-kernel-vulnerabilities-exploits"
+ },
+ "openai-modretro-chromatic-codex-edition-200": {
+  "credit_name": "RuntimeWire",
+  "evidence": true,
+  "evidence_from": "https://runtimewire.com/article/openai-developers-posts-one-word-teaser-for-november-9th",
+  "hero": true,
+  "hero_from": "https://runtimewire.com/article/openai-sells-200-codex-chromatic-handheld-that-turns-prompts-into-game-boy-games"
+ },
+ "openai-pando-git-backend": {
+  "credit_name": "ExplainX independent report",
+  "evidence": true,
+  "evidence_from": "https://openai.com/index/scaling-git-at-openai",
+  "hero": true,
+  "hero_from": "https://explainx.ai/blog/openai-pando-git-backend-codex-monorepo-5x-faster-pushes-petabyte-per-day-2026"
+ },
+ "openai-physical-engineering-astra": {
+  "credit_name": "Unite.AI report",
+  "evidence": true,
+  "evidence_from": "https://openai.com/index/accelerating-engineering-for-the-physical-world/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/openai-tests-astra-on-physical-engineering-from-devices-to-vehicles/"
+ },
+ "openai-pierre-computer-codex": {
+  "credit_name": "Unite.AI report",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/openai-to-acquire-pierre-computer-and-bring-code-storage-to-codex/"
+ },
+ "opentable-chatgpt-190k-diners-september": {
+  "credit_name": "Crypto Briefing",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://cryptobriefing.com/opentable-chatgpt-integration-190000-diners/"
+ },
+ "pliant-80m-series-c-agentic-payments": {
+  "credit_name": "PYMNTS report",
+  "evidence": true,
+  "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/",
+  "hero": true,
+  "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/pliant-raises-80-million-to-open-b2b-payments-to-ai-agents/"
+ },
+ "psi-aaronson-ambainis-conjecture-proof": {
+  "credit_name": "PSI Aaronson-Ambainis proof announcement (PSI)",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/psi-reports-machine-checked-proof-of-aaronson-ambainis-conjecture/",
+  "hero": true,
+  "hero_from": "https://psi.inc/research/aaronson-ambainis/"
+ },
+ "qualcomm-q4-handset-miss": {
+  "credit_name": "Reuters report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": false,
+  "hero_from": ""
+ },
+ "qualys-q3-2026-revenue-188m-beat": {
+  "credit_name": "StockStory",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-qualys-nasdaqqlys-beats-q3-2026-sales-expectations-but-stock-drops"
+ },
+ "rebellions-nvidia-nvlink-fusion-sovereign-ai": {
+  "credit_name": "Aju Press, reporting the Rebellions–Nvidia–SK Telecom announcement at Nvidia AI Day Seoul",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.ajupress.com/view/20261109151112816"
+ },
+ "rocket-lab-q3-2026-record-revenue-268m-backlog": {
+  "credit_name": "StockStory via FinancialContent",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://markets.financialcontent.com/stocks/article/stockstory-2026-11-9-rocket-lab-nasdaqrklb-reports-bullish-q3-2026-guides-for-strong-sales-next-quarter"
+ },
+ "semianalysis-gdpx-benchmark": {
+  "credit_name": "SemiAnalysis official announcement",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/semianalysis-launches-gdpx-benchmark-spanning-11-agentic-domains/",
+  "hero": true,
+  "hero_from": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities"
+ },
+ "sequoia-10b-rewind-expansion": {
+  "credit_name": "TechCrunch report (full memo)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://techcrunch.com/2026/11/04/sequoia-hits-rewind-undoing-20-years-of-expansion/"
+ },
+ "snap-q3-2026-profit-beat-revenue-miss": {
+  "credit_name": "MarketCatalyst",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://marketcatalyst.ai/posts/snap-swings-to-q3-profit-as-eps-beats-at-0-03-but-revenue-misses-at-1-72b"
+ },
+ "snowflake-coco-cowork-bots": {
+  "credit_name": "Snowflake official blog",
+  "evidence": true,
+  "evidence_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/",
+  "hero": true,
+  "hero_from": "https://www.snowflake.com/en/blog/ai-agents-governed-data-business-context/"
+ },
+ "softbank-abb-blocked": {
+  "credit_name": "ABB",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.abb.com/global/en/news/140154/update-on-divestment-of-abb-robotics"
+ },
+ "softbank-grab-petros-malaysia-ai-infrastructure-185b": {
+  "credit_name": "SoftBank Group (official press release)",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://group.softbank/en/news/press/20261109_0"
+ },
+ "softbank-group-q2-fy2026-swings-1-1t-net-loss": {
+  "credit_name": "SoftBank Group",
+  "evidence": true,
+  "evidence_from": "https://group.softbank/en/ir/news/",
+  "hero": true,
+  "hero_from": "https://group.softbank/en/ir/news/"
+ },
+ "soundhound-q3-record-revenue-624": {
+  "credit_name": "GlobeNewswire via Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/soundhound-ai-reports-record-q3-revenue-and-guides-to-sustained-6775997"
+ },
+ "supermicro-q1-fy27-record-sales": {
+  "credit_name": "Supermicro official earnings release (full text via Quantisnow)",
+  "evidence": true,
+  "evidence_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/supermicro-announces-first-quarter-of-fiscal-year-2027-financial-results-6769523"
+ },
+ "synaptics-q1-fy27-revenue-294m-onsemi": {
+  "credit_name": "Quantisnow",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.quantisnow.com/insight/synaptics-reports-first-quarter-fiscal-2027-results-6776146"
+ },
+ "teradata-q3-2026-revenue-399m-cloud-arr": {
+  "credit_name": "PR Newswire",
+  "evidence": true,
+  "evidence_from": "https://third-news.com/article/88cc2a8e-d961-11f1-872b-9ca3ba08e13f",
+  "hero": false,
+  "hero_from": ""
+ },
+ "terawulf-q3-2026-hpc-83pct-revenue": {
+  "credit_name": "The Motley Fool",
+  "evidence": true,
+  "evidence_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/",
+  "hero": true,
+  "hero_from": "https://www.fool.com/earnings/call-transcripts/2026/11/06/terawulf-wulf-q3-2026-earnings-call-transcript/"
+ },
+ "tesla-robotaxi-fort-worth": {
+  "credit_name": "Not a Tesla App 报道",
+  "evidence": true,
+  "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
+  "hero": true,
+  "hero_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth"
+ },
+ "thinking-machines-inkling-2-small": {
+  "credit_name": "SiliconANGLE",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://siliconangle.com/2026/11/06/thinking-machines-debuts-inkling-2-small-amid-reported-5b-fundraising-push/"
+ },
+ "together-ai-compiler-polymorphic-inference": {
+  "credit_name": "Unite.AI",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/together-ai-brings-continuous-compilation-to-production-inference/"
+ },
+ "traversal-120m-series-b": {
+  "credit_name": "Unite.AI report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.unite.ai/traversal-raises-120m-series-b-at-1b-valuation-to-expand-ai-sre/"
+ },
+ "tutor-intelligence-75m-series-b": {
+  "credit_name": "Tutor Intelligence company announcement",
+  "evidence": true,
+  "evidence_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/",
+  "hero": true,
+  "hero_from": "https://www.vcaonline.com/news/2026110201/tutor-intelligence-raises-75-million-series-b-led-by-andreessen-horowitz-to-scale-frontier-robotics-model-training-manufacturing-and-deployment/"
+ },
+ "uber-q3-2026-av-700-vehicles": {
+  "credit_name": "Reuters brief via TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/reuters.com,2026-11-04:newsml_PLXR5JDMF:0-brief-uber-q3-gross-bookings-usd-59-819-million/"
+ },
+ "vistra-q3-2026-net-income-114b-ebitda-surge": {
+  "credit_name": "TradingView",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.tradingview.com/news/tradingview:6a04640bf5b0f:0-vistra-posts-1-14b-q3-net-income-raises-2026-guidance/"
+ },
+ "wehner-meta-fireworks-cfo": {
+  "credit_name": "CNBC",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.cnbc.com/2026/11/07/dave-wehner-meta-fireworks-cfo.html"
+ },
+ "wix-q3-2026-revenue-570m-base44-nears-250m-arr": {
+  "credit_name": "GlobeNewswire via Morningstar",
+  "evidence": true,
+  "evidence_from": "https://www.financialcontent.com/article/gnwcq-2026-11-10-wix-reports-third-quarter-2026-results",
+  "hero": false,
+  "hero_from": ""
+ },
+ "xiaomi-humanoid-8-hour-shift": {
+  "credit_name": "Electrek report",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://electrek.co/2026/11/04/xiaomi-humanoid-robot-8-hour-shift-ev-factory/"
+ },
+ "zeta-global-q3-2026-revenue-493m-beat": {
+  "credit_name": "Business Wire",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://lifestyle.q923radio.com/story/562220/zeta-global-reports-21st-consecutive-beat-and-raise-quarter-generates-positive-gaap-net-income-in-3q26-ytd-and-achieves-the-rule-of-71/"
+ },
+ "tsmc-october-2026-revenue-5869b-597pct-yoy": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingKey",
+  "hero_from": "https://www.tradingkey.com/analysis/stocks/us-stocks/262297791-tsmc-october-revenue-record-59-7-percent-yoy-ai-chip-demand-tradingkey",
+  "evidence_from": ""
+ }
 }
