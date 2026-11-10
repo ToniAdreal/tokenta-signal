@@ -1055,5 +1055,12 @@
   "credit_name": "RuntimeWire",
   "hero_from": "https://runtimewire.com/article/openai-sells-200-codex-chromatic-handheld-that-turns-prompts-into-game-boy-games",
   "evidence_from": "https://runtimewire.com/article/openai-developers-posts-one-word-teaser-for-november-9th"
+ },
+ "softbank-grab-petros-malaysia-ai-infrastructure-185b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "SoftBank Group (official press release)",
+  "hero_from": "https://group.softbank/en/news/press/20261109_0",
+  "evidence_from": ""
  }
 }
