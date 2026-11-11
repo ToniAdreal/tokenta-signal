@@ -1195,5 +1195,12 @@
   "credit_name": "Seeking Alpha",
   "hero_from": "https://seekingalpha.com/news/4670166-openai-revenue-tops-10b-in-q3-report",
   "evidence_from": ""
+ },
+ "northwestern-polytechnical-h200-blacklist": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Business Standard (TBS News)",
+  "hero_from": "https://www.tbsnews.net/worldbiz/china/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-records",
+  "evidence_from": ""
  }
 }
