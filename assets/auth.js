@@ -1,9 +1,12 @@
 /* Tokenta Signal accounts: sign-in modal, session state, article meter.
-   Auth API lives on the auth subdomain (Vercel project tokenta-signal-auth).
+   Auth API is called SAME-ORIGIN (/api/auth/*): the functions are deployed
+   on this project too, and cross-origin cookie calls to the auth subdomain
+   proved unreliable in some browsers. The auth subdomain deployment remains
+   as the shared backend for the landing page.
    Free anonymous reading: 8 articles per calendar month (Reuters-style meter).
    Registered accounts read without the meter. */
 (function () {
-  var AUTH = "https://auth.tokenta.space";
+  var AUTH = "";
   var FREE_LIMIT = 8;
   var state = { authed: false, email: null, plan: null, checked: false };
 

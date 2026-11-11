@@ -300,7 +300,7 @@ def footer(prefix=""):
 <div><h5>NAVIGATION</h5><ul><li><a href="{prefix}">Home</a></li><li><a href="{prefix}latest/">Latest Wire</a></li><li><a href="{prefix}briefings/">Briefings</a></li><li><a href="{prefix}terminal/">Signal Terminal</a></li><li><a href="{prefix}methodology/">Methodology</a></li></ul></div>
 <div><h5>STANDARDS</h5><ul><li><a href="{prefix}methodology/">Source Standards</a></li><li><a href="{prefix}methodology/">Verification</a></li><li><a href="{prefix}methodology/">Corrections Policy</a></li><li><a href="{prefix}advertise/">Sponsorship</a></li></ul></div>
 <div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
-</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="{prefix}assets/auth.js?v=20261111-2" defer></script></body></html>"""
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="{prefix}assets/auth.js?v=20261111-3" defer></script></body></html>"""
 
 def wire_row(a, prefix=""):
     d = DESKS[a["_desk"]][0]
@@ -503,7 +503,7 @@ document.querySelectorAll('.trow').forEach(r=>r.addEventListener('click',()=>sho
 document.querySelectorAll('.fbtn').forEach(b=>b.addEventListener('click',()=>{{document.querySelectorAll('.fbtn').forEach(x=>x.classList.remove('on'));b.classList.add('on');const f=b.dataset.f;document.querySelectorAll('.trow').forEach(r=>r.style.display=(f==='all'||r.dataset.desk===f)?'grid':'none');}}));
 show(DATA[0].slug);
 document.addEventListener('keydown',e=>{{if((e.metaKey||e.ctrlKey)&&e.key==='k'){{e.preventDefault();location.href='../search/';}}}});
-</script><script src="../assets/auth.js?v=20261111-2" defer></script></body></html>"""
+</script><script src="../assets/auth.js?v=20261111-3" defer></script></body></html>"""
     page("terminal/index.html", tm)
 
     # ---------- SEARCH ----------
