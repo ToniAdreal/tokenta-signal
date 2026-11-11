@@ -46,9 +46,6 @@ nav.main{display:flex;gap:34px}
 nav.main a{font-size:14.5px;color:var(--silver)}
 nav.main a:hover{color:var(--txt)}
 .header-right{display:flex;align-items:center;gap:22px}
-.lang-toggle{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--dim)}
-.lang-toggle button{background:none;border:none;color:var(--dim);font:inherit;cursor:pointer;padding:2px 1px}
-.lang-toggle button.on{color:var(--txt)}
 .signin{font-size:14.5px;color:var(--silver)}
 .signin:hover{color:var(--txt)}
 .btn-head{height:46px;padding:0 22px;font-size:14px}
@@ -162,7 +159,7 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
 <div id="sweep"></div>
 <header>
   <div class="wrap header-in">
-    <a class="brand" href="./"><img src="assets/logo.png" alt="Tokenta Signal" /><span>Tokenta Signal</span></a>
+    <a class="brand" href="./"><img src="assets/logo.png" alt="Tokenta Signal" /></a>
     <nav class="main">
       <a href="#how" data-i18n="nav_product">Product</a>
       <a href="#desks" data-i18n="nav_intel">Intelligence</a>
@@ -172,7 +169,6 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
       <a href="https://signal.tokenta.space/pricing/" data-i18n="nav_plans">Plans</a>
     </nav>
     <div class="header-right">
-      <span class="lang-toggle"><button id="btn-en" class="on" type="button">EN</button> / <button id="btn-zh" type="button">中文</button></span>
       <a class="signin" href="https://signal.tokenta.space/account/" data-i18n="nav_signin">Sign in</a>
       <a class="btn btn-primary btn-head" href="https://signal.tokenta.space/terminal/" data-i18n="nav_terminal">Open Terminal ↗</a>
     </div>
@@ -561,7 +557,7 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
     </div>
     <footer>
       <div class="foot-row">
-        <a class="brand" href="./"><img src="assets/logo.png" alt="Tokenta Signal" /><span>Tokenta Signal</span></a>
+        <a class="brand" href="./"><img src="assets/logo.png" alt="Tokenta Signal" /></a>
         <nav class="foot-nav">
           <a href="#how" data-i18n="nav_product">Product</a>
           <a href="#workspace" data-i18n="nav_work">Workspaces</a>
@@ -576,93 +572,6 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
 </section>
 </main>
 <script>
-var I18N = {
-en: null,
-zh: {
-  nav_product:"产品", nav_intel:"情报", nav_work:"工作台", nav_brief:"简报", nav_method:"方法论", nav_plans:"方案",
-  nav_signin:"登录", nav_terminal:"打开终端 ↗", foot_standards:"编辑标准",
-  hero_eyebrow:"THE SIGNAL / 全球情报平台",
-  hero_h1:"穿透信息噪声，<br />看清真正重要的变化。",
-  hero_sub:"一个为理解世界变化而设计的情报平台。",
-  hero_body:"追踪人工智能、财经、机器人、Web3与科研前沿，把事件、来源和重要背景连接起来。",
-  hero_cta1:"探索 Signal Terminal ↗", hero_cta2:"了解 Signal 如何工作 ↓",
-  hero_micro:"公开资讯 / 来源可查 / 中英双语",
-  hero_view_event:"查看事件 ↗",
-  hero_caption:"一座围绕故事本身构建的研究终端，而不是互不相连的标题海洋。",
-  cover_eyebrow:"追踪塑造未来的力量",
-  cover1:"人工智能", cover2:"全球财经", cover3:"机器人", cover4:"Web3", cover5:"科学研究", cover6:"全球动态",
-  s03_eyebrow:"问题所在 / 标题太多，背景太少",
-  s03_h2:"标题告诉你发生了什么。<br />Signal 帮你解释为什么。",
-  s03_body:"新闻散落在出版机构、研究实验室和官方渠道之间。Signal 围绕事件、证据和关键实体来组织这些动态。",
-  s03_c1t:"发现动态", s03_c1b:"识别新的公告、报告和论文。",
-  s03_c2t:"看见事件", s03_c2b:"把描述同一底层变化的报道归到一起。",
-  s03_c3t:"追溯证据", s03_c3b:"查阅一手声明和独立报道。",
-  s03_c4t:"保持上下文", s03_c4b:"保存实体、监控更新、回到故事本身。",
-  s04_eyebrow:"SIGNAL 终端内部", s04_h2:"一个真实运转的世界视图。",
-  s04_body:"一个工作台，监控、研究并连接各类动态。面板在拟议产品中可自由配置。",
-  s04_search:"搜索事件、来源、实体...&nbsp;&nbsp;[ 紧凑 ]&nbsp;&nbsp;[ 保存布局 ]",
-  s04_note:"演示基于一份带日期、来源可查的编辑快照，并非实时连接的终端。",
-  s04_cta:"探索工作台 ↗", s04_link:"查看实时终端", s04_investigate:"深入查看该事件 ↗",
-  s05_eyebrow:"你能用它做什么",
-  s05_h2:"找到故事。看见证据。<br />盯住真正重要的事。",
-  s05_sub:"为读完标题之后仍然存在的问题而设计。",
-  s05_c1t:"全球通讯，<br />按事件组织。", s05_c1b:"看到跨行业的动态，不会把同一事件重复成几十条互不相连的标题。",
-  s05_c1l1:"按时间组织的新闻队列", s05_c1l2:"按类别与实体筛选", s05_c1l3:"清晰的原文来源链接",
-  s05_c2t:"每条说法<br />都有来路。", s05_c2b:"查阅谁在何时说了什么，以及一个演进中的故事里哪些部分仍未核实。",
-  s05_c2l1:"一手与独立来源", s05_c2l2:"事件更新与更正", s05_c2l3:"已知与未知",
-  s05_c3t:"你的研究，<br />集中一处。", s05_c3b:"围绕重要公司、技术和话题建立观察名单，提醒规则围绕证据设计。",
-  s05_c3l1:"自定义观察名单", s05_c3l2:"研究布局与保存的视图", s05_c3l3:"拟议的智能提醒",
-  s06_eyebrow:"全球视野 / 专注研究", s06_h2:"覆盖塑造未来的各个领域。",
-  s06_sub:"一个平台，多个编辑专区，统一的来源标准与事件模型。",
-  s06_d1t:"人工智能", s06_d1b:"基础模型、智能体、基础设施与安全。",
-  s06_d2t:"全球财经", s06_d2b:"资本、宏观经济变化与行业敞口。",
-  s06_d3t:"机器人", s06_d3b:"具身系统、仿真与部署。",
-  s06_d4t:"WEB3", s06_d4b:"协议基础设施、托管与治理。",
-  s06_d5t:"科学研究", s06_d5b:"论文、科学证据与开源。",
-  s06_d6t:"全球动态", s06_d6b:"政策、机构与全球动态。",
-  explore_desk:"进入专区 ↗",
-  s07_eyebrow:"一个事件不只是一个标题", s07_h2:"信心来自<br />上下文。",
-  s07_body:"Signal 建立在一个简单原则上：不让读者在看不到信息来源的情况下，去信任一份摘要。",
-  s07_cta:"了解方法论 ↗", s07_r1:"ADNOC 宣布一项合作", s07_r2:"路透社报道了该协议", s07_r3:"实测的部署收益",
-  s07_ledger:"查看来源台账 ↗",
-  s08_eyebrow:"两种语言，一个情报层。", s08_h2:"用你的语言读懂世界。",
-  s09_eyebrow:"SIGNAL 简报 / 编辑情报", s09_h2:"一份为变化中的世界<br />准备的简报。",
-  s09_body:"一周的重要动态，附背景、来源，以及接下来值得关注的问题。",
-  s09_cta:"查看简报 ↗", s09_micro:"来源可查的报道 / 背景 / 研究笔记",
-  s09_card_t:"一周里有分量的动态。",
-  s09_r1:"工业 AI 进入能源运营", s09_r2:"机器人智能竞赛", s09_r3:"Webb 与 Hubble 的猫头星云",
-  s10_eyebrow:"开放知识，更深的掌控。", s10_h2:"从新闻开始。<br />为情报留下。",
-  s10_c1t:"阅读与发现", s10_c1b:"开放获取公开报道、来源可查的事件页、研究专区与编辑简报。", s10_c1a:"进入门户 ↗",
-  s10_c2t:"打造你的专属视图", s10_c2b:"拟议的个人层：自定义观察名单、保存的布局、基于证据的监控与提醒。", s10_c2a:"预览终端 ↗",
-  s10_note:"商业方案与自动化功能均为拟议，本页不代表任何定价或已开通的订阅。",
-  s11_eyebrow:"常见问题 / 产品说明", s11_h2:"值得问的问题。",
-  q1:"Signal 到底是什么？", a1:"一个拟议的全球情报与事件研究平台，把公开来源的报道、证据与个人监控工具连接起来。",
-  q2:"Signal 是交易平台吗？", a2:"不是。Signal 是情报与研究平台，不执行交易、不托管资产、不提供投资建议；它组织公开报道，并展示其背后的证据。",
-  q3:"信息从哪里来？", a3:"来自公开可得的一手来源：官方公告、备案文件、研究论文与独立报道。每个事件页都链接回来源，你可以自己读原文。",
-  q4:"我可以用中文使用 Signal 吗？", a4:"Signal 按双语设计，本页提供英文与中文。新闻门户目前以英文发布，中文内容见公众号与视频号。",
-  q5:"情报流现在是实时的吗？", a5:"新闻门户全天候从公开来源更新，每篇报道都标注发布时间。本页展示的终端视图是示意快照，并非实时连接的服务。",
-  s11_foot:"查看方法论 / 编辑独立性 / 内容权利",
-  s12_eyebrow:"头条之外的情报",
-  s12_h2:"世界不会停下脚步。<br />让信号始终在视野之内。",
-  s12_sub:"换一种更有目的的方式，去发现、理解并跟踪塑造未来的动态。",
-  s12_cta1:"打开 Signal Terminal ↗", s12_cta2:"进入新闻门户 ↗"
-}};
-var EN = {};
-document.querySelectorAll("[data-i18n]").forEach(function(el){ EN[el.getAttribute("data-i18n")] = el.innerHTML; });
-function setLang(lang){
-  var dict = lang === "zh" ? I18N.zh : EN;
-  document.querySelectorAll("[data-i18n]").forEach(function(el){
-    var k = el.getAttribute("data-i18n");
-    if (dict[k] !== undefined) el.innerHTML = dict[k];
-  });
-  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-  document.getElementById("btn-en").classList.toggle("on", lang === "en");
-  document.getElementById("btn-zh").classList.toggle("on", lang === "zh");
-  try { localStorage.setItem("ts_landing_lang", lang); } catch(e){}
-}
-document.getElementById("btn-en").addEventListener("click", function(){ setLang("en"); });
-document.getElementById("btn-zh").addEventListener("click", function(){ setLang("zh"); });
-try { if (localStorage.getItem("ts_landing_lang") === "zh") setLang("zh"); } catch(e){}
 document.querySelectorAll(".faq-item").forEach(function(item){
   item.querySelector(".faq-q").addEventListener("click", function(){
     var open = item.classList.toggle("open");
