@@ -1,6 +1,7 @@
 // Tokenta Signal auth: verify the 6-digit email code, set session cookies.
 const ALLOWED = [
   "https://signal.tokenta.space",
+  "https://go.tokenta.space",
   "https://signals.tokenta.space",
   "https://tokenta-signal.vercel.app",
   "https://auth.tokenta.space",

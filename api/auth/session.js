@@ -3,6 +3,7 @@
 // page forwards them here once, we validate and set the session cookies.
 const ALLOWED = [
   "https://signal.tokenta.space",
+  "https://go.tokenta.space",
   "https://signals.tokenta.space",
   "https://tokenta-signal.vercel.app",
   "https://auth.tokenta.space",

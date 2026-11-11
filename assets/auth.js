@@ -20,7 +20,13 @@
       '<div style="background:#0A0A0A;border:1px solid #383838;border-top:3px solid #C9D0D9;max-width:420px;width:100%;padding:30px 28px;font-family:\'IBM Plex Sans\',Arial,sans-serif;color:#F4F4F4">' +
       '<div style="font-family:\'IBM Plex Mono\',monospace;font-size:11px;font-weight:700;letter-spacing:.14em;color:#C9D0D9">TOKENTA SIGNAL / ACCOUNT</div>' +
       '<h3 id="ts-am-title" style="font-family:\'IBM Plex Serif\',Georgia,serif;font-size:24px;font-weight:600;margin:12px 0 6px">Sign in or register</h3>' +
-      '<p id="ts-am-sub" style="color:#9A9A9A;font-size:13px;margin:0 0 18px">One account for the wire, briefings and the terminal. We email you a 6-digit code. No password, ever.</p>' +
+      '<p id="ts-am-sub" style="color:#9A9A9A;font-size:13px;margin:0 0 18px">One account for the wire, briefings and the terminal. Continue with a provider, or take a 6-digit email code. No password, ever.</p>' +
+      '<div id="ts-am-social">' +
+      '<button data-ts-provider="google" style="width:100%;background:#111;border:1px solid #383838;color:#F4F4F4;padding:12px;font-family:\'IBM Plex Mono\',monospace;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer;margin-bottom:10px">CONTINUE WITH GOOGLE</button>' +
+      '<button data-ts-provider="github" style="width:100%;background:#111;border:1px solid #383838;color:#F4F4F4;padding:12px;font-family:\'IBM Plex Mono\',monospace;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer;margin-bottom:10px">CONTINUE WITH GITHUB</button>' +
+      '<button data-ts-provider="twitter" style="width:100%;background:#111;border:1px solid #383838;color:#F4F4F4;padding:12px;font-family:\'IBM Plex Mono\',monospace;font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer;margin-bottom:4px">CONTINUE WITH X</button>' +
+      '<div style="display:flex;align-items:center;gap:12px;margin:14px 0 16px"><span style="flex:1;height:1px;background:#2A2A2A"></span><span style="font-family:\'IBM Plex Mono\',monospace;font-size:10px;letter-spacing:.14em;color:#6E6E6E">OR WITH EMAIL</span><span style="flex:1;height:1px;background:#2A2A2A"></span></div>' +
+      "</div>" +
       '<div id="ts-am-step1">' +
       '<label style="display:block;font-family:\'IBM Plex Mono\',monospace;font-size:11px;color:#9A9A9A;margin-bottom:6px">EMAIL ADDRESS</label>' +
       '<input id="ts-am-email" type="email" autocomplete="email" placeholder="you@example.com" style="width:100%;background:#111;border:1px solid #383838;color:#F4F4F4;padding:12px;font-size:15px;font-family:\'IBM Plex Mono\',monospace;box-sizing:border-box">' +
@@ -46,6 +52,8 @@
       msg("");
     });
     $("#ts-am-send", wrap).addEventListener("click", sendCode);
+    var provs = wrap.querySelectorAll("[data-ts-provider]");
+    for (var pi = 0; pi < provs.length; pi++) provs[pi].addEventListener("click", function () { social(this.getAttribute("data-ts-provider")); });
     $("#ts-am-verify", wrap).addEventListener("click", verifyCode);
     $("#ts-am-email", wrap).addEventListener("keydown", function (e) { if (e.key === "Enter") sendCode(); });
     $("#ts-am-code", wrap).addEventListener("keydown", function (e) { if (e.key === "Enter") verifyCode(); });
@@ -67,6 +75,12 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body || {}),
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); });
+  }
+
+  var SB = "https://axelczmkhxwrbhkrvmgv.supabase.co";
+  function social(provider) {
+    var back = location.origin + location.pathname;
+    window.location = SB + "/auth/v1/authorize?provider=" + provider + "&redirect_to=" + encodeURIComponent(back);
   }
 
   function sendCode() {

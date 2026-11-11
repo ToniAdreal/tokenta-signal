@@ -2,6 +2,7 @@
 // Supabase to revoke the current session (best effort).
 const ALLOWED = [
   "https://signal.tokenta.space",
+  "https://go.tokenta.space",
   "https://signals.tokenta.space",
   "https://tokenta-signal.vercel.app",
   "https://auth.tokenta.space",

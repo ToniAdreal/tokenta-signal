@@ -139,6 +139,28 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
 .rev{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
 .rev.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){#page{animation:none}.rev{opacity:1;transform:none;transition:none}body{transition:none}}
+/* sign-in modal */
+button.signin{background:none;border:none;font:inherit;cursor:pointer;padding:0}
+.amodal{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.85);align-items:center;justify-content:center;padding:20px}
+.amodal.open{display:flex}
+.amodal-card{background:#080808;border:1px solid var(--line);border-top:3px solid var(--acc);max-width:420px;width:100%;padding:30px 28px}
+.amodal .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--acc)}
+.amodal h3{font-family:var(--serif);font-size:24px;font-weight:500;margin:12px 0 6px}
+.amodal .sub{color:var(--dim);font-size:13.5px;margin-bottom:18px}
+.prov{display:block;width:100%;background:#111;border:1px solid var(--line);color:var(--txt);padding:13px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;cursor:pointer;margin-bottom:10px;text-align:center}
+.prov:hover{border-color:var(--acc)}
+.orow{display:flex;align-items:center;gap:12px;margin:14px 0 16px}
+.orow .line{flex:1;height:1px;background:var(--line)}
+.orow .txt{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--dim)}
+.amodal label{display:block;font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:6px}
+.amodal input{width:100%;background:#111;border:1px solid var(--line);color:var(--txt);padding:12px;font-size:15px;font-family:var(--mono)}
+.amodal .go{width:100%;margin-top:14px;background:#EDEEEC;color:#000;border:1px solid #EDEEEC;padding:13px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+.amodal .go:hover{background:var(--silver)}
+.amodal .amsg{min-height:18px;margin:14px 0 0;font-size:13px;color:var(--acc)}
+.amodal .aclose{margin-top:8px;background:none;border:none;color:var(--dim);font-family:var(--mono);font-size:11px;cursor:pointer;padding:4px 0}
+.amodal .codein{font-size:22px;letter-spacing:.35em;text-align:center}
+.amodal .alt{margin:12px 0 0;font-size:12px;color:var(--dim)}
+.amodal .alt a{color:var(--acc)}
 @media (max-width:1080px){
   .wrap{padding:0 24px}
   nav.main{display:none}
@@ -151,7 +173,6 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
   .closing h2{font-size:34px}
   .header-in{height:64px}
   .brand img{height:24px}
-  .signin{display:none}
 }
 </style>
 </head>
@@ -169,7 +190,7 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
       <a href="https://signal.tokenta.space/pricing/" data-i18n="nav_plans">Plans</a>
     </nav>
     <div class="header-right">
-      <a class="signin" href="https://signal.tokenta.space/account/" data-i18n="nav_signin">Sign in</a>
+      <button type="button" class="signin" id="signin-btn">Sign in</button>
       <a class="btn btn-primary btn-head" href="https://signal.tokenta.space/terminal/" data-i18n="nav_terminal">Open Terminal ↗</a>
     </div>
   </div>
@@ -571,6 +592,32 @@ body.leaving #sweep{transform:scaleX(1);transition:transform .34s ease}
   </div>
 </section>
 </main>
+<div class="amodal" id="amodal" role="dialog" aria-modal="true">
+  <div class="amodal-card">
+    <div class="kick">TOKENTA SIGNAL / ACCOUNT</div>
+    <h3 id="am-title">Sign in or register</h3>
+    <p class="sub" id="am-sub">One account for the wire, briefings and the terminal. Continue with a provider, or take a 6-digit email code. No password, ever.</p>
+    <div id="am-social">
+      <button class="prov" data-prov="google" type="button">CONTINUE WITH GOOGLE</button>
+      <button class="prov" data-prov="github" type="button">CONTINUE WITH GITHUB</button>
+      <button class="prov" data-prov="twitter" type="button">CONTINUE WITH X</button>
+      <div class="orow"><span class="line"></span><span class="txt">OR WITH EMAIL</span><span class="line"></span></div>
+    </div>
+    <div id="am-step1">
+      <label for="am-email">EMAIL ADDRESS</label>
+      <input id="am-email" type="email" autocomplete="email" placeholder="you@example.com" />
+      <button class="go" id="am-send" type="button">EMAIL ME A SIGN-IN CODE</button>
+    </div>
+    <div id="am-step2" style="display:none">
+      <label for="am-code">6-DIGIT CODE FROM YOUR EMAIL</label>
+      <input id="am-code" class="codein" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="------" />
+      <button class="go" id="am-verify" type="button">VERIFY AND SIGN IN</button>
+      <p class="alt">The email also carries a sign-in link if the code is awkward. <a href="#" id="am-back">Use a different email</a></p>
+    </div>
+    <p class="amsg" id="am-msg"></p>
+    <button class="aclose" id="am-close" type="button">CLOSE ✕</button>
+  </div>
+</div>
 <script>
 document.querySelectorAll(".faq-item").forEach(function(item){
   item.querySelector(".faq-q").addEventListener("click", function(){
@@ -598,6 +645,88 @@ document.querySelectorAll(".faq-item").forEach(function(item){
       });
     });
   }
+})();
+</script>
+<script>
+(function(){
+  var AUTH = "https://auth.tokenta.space";
+  var SB = "https://axelczmkhxwrbhkrvmgv.supabase.co";
+  var ACCOUNT = "https://signal.tokenta.space/account/";
+  var btn = document.getElementById("signin-btn");
+  var modal = document.getElementById("amodal");
+  var state = { authed: false, email: null };
+  var emailVal = "";
+  function post(path, body){ return fetch(AUTH + path, { method: "POST", credentials: "include", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body || {}) }).then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok: r.ok, j: j }; }); }); }
+  function msg(t){ var m = document.getElementById("am-msg"); if (m) m.textContent = t || ""; }
+  function openModal(){ modal.classList.add("open"); var e = document.getElementById("am-email"); if (e) e.focus(); }
+  function closeModal(){ modal.classList.remove("open"); }
+  function paint(){ if (btn) btn.textContent = state.authed ? "ACCOUNT" : "Sign in"; }
+  function refresh(){
+    return fetch(AUTH + "/api/auth/me", { credentials: "include" }).then(function(r){ return r.json(); }).then(function(j){
+      state.authed = !!j.authenticated; state.email = j.email || null; paint(); return state;
+    }).catch(function(){ paint(); });
+  }
+  function adoptHash(){
+    if (!location.hash || location.hash.indexOf("access_token=") === -1) return Promise.resolve();
+    var p = new URLSearchParams(location.hash.slice(1));
+    var at = p.get("access_token"), rt = p.get("refresh_token");
+    history.replaceState(null, "", location.pathname + location.search);
+    if (!at || !rt) return Promise.resolve();
+    return post("/api/auth/session", { access_token: at, refresh_token: rt }).catch(function(){});
+  }
+  if (btn) btn.addEventListener("click", function(){
+    if (state.authed) {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { window.location.href = ACCOUNT; return; }
+      document.body.classList.add("leaving");
+      setTimeout(function(){ window.location.href = ACCOUNT; }, 340);
+    } else openModal();
+  });
+  document.querySelectorAll("[data-prov]").forEach(function(b){
+    b.addEventListener("click", function(){
+      window.location = SB + "/auth/v1/authorize?provider=" + b.getAttribute("data-prov") + "&redirect_to=" + encodeURIComponent("https://go.tokenta.space/");
+    });
+  });
+  document.getElementById("am-close").addEventListener("click", closeModal);
+  modal.addEventListener("click", function(e){ if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") closeModal(); });
+  document.getElementById("am-back").addEventListener("click", function(e){
+    e.preventDefault();
+    document.getElementById("am-step2").style.display = "none";
+    document.getElementById("am-step1").style.display = "block";
+    msg("");
+  });
+  function sendCode(){
+    var email = (document.getElementById("am-email").value || "").trim();
+    if (!email) { msg("Enter your email address first."); return; }
+    msg("Sending your code…");
+    post("/api/auth/request-code", { email: email }).then(function(res){
+      if (res.ok) {
+        emailVal = email;
+        document.getElementById("am-step1").style.display = "none";
+        document.getElementById("am-step2").style.display = "block";
+        document.getElementById("am-title").textContent = "Check your email";
+        document.getElementById("am-sub").textContent = "We sent a 6-digit code to " + email + ". Enter it below to finish signing in.";
+        msg("");
+        var c = document.getElementById("am-code"); if (c) c.focus();
+      } else msg("That email could not be sent a code. Check the address and try again.");
+    }).catch(function(){ msg("Network problem. Try again in a moment."); });
+  }
+  function verifyCode(){
+    var code = (document.getElementById("am-code").value || "").trim();
+    if (!/^\d{6}$/.test(code)) { msg("The code is 6 digits, from the email we just sent."); return; }
+    msg("Verifying…");
+    post("/api/auth/verify-code", { email: emailVal, token: code }).then(function(res){
+      if (res.ok) {
+        msg("Signed in. Welcome to Tokenta Signal.");
+        refresh().then(function(){ setTimeout(closeModal, 600); });
+      } else msg("That code did not check out. Codes expire quickly, request a fresh one if needed.");
+    }).catch(function(){ msg("Network problem. Try again in a moment."); });
+  }
+  document.getElementById("am-send").addEventListener("click", sendCode);
+  document.getElementById("am-verify").addEventListener("click", verifyCode);
+  document.getElementById("am-email").addEventListener("keydown", function(e){ if (e.key === "Enter") sendCode(); });
+  document.getElementById("am-code").addEventListener("keydown", function(e){ if (e.key === "Enter") verifyCode(); });
+  adoptHash().then(refresh);
 })();
 </script>
 </body>
