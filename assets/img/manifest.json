@@ -1202,5 +1202,12 @@
   "credit_name": "The Business Standard (TBS News)",
   "hero_from": "https://www.tbsnews.net/worldbiz/china/pla-linked-chinese-university-bought-nvidia-h200-chips-despite-us-blacklist-records",
   "evidence_from": ""
+ },
+ "gemini-robotics-2-5-mercedes-apollo-96": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/apollo-2-humanoids-hit-96-in-mercedes-benz-sorting-proof-of-concept/",
+  "evidence_from": ""
  }
 }
