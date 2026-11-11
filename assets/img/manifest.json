@@ -1209,5 +1209,33 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/apollo-2-humanoids-hit-96-in-mercedes-benz-sorting-proof-of-concept/",
   "evidence_from": ""
+ },
+ "openai-businesses-chatgpt": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "PPC Land report",
+  "hero_from": "https://ppc.land/businesses-gain-chatgpt-click-and-mention-counts-in-openais-business-hub/",
+  "evidence_from": "https://madrobot.blog/2026/11/10/openai-chatgpt-business-agents-verified-profiles/"
+ },
+ "deepmind-alphaproof-code-signal": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Eesel",
+  "hero_from": "https://www.eesel.ai/blog/alphaproof-code",
+  "evidence_from": ""
+ },
+ "new-york-raise-act-registration": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Silicon Report",
+  "hero_from": "https://www.siliconreport.com/new-york-opens-ai-safety-portal-for-frontier-developers",
+  "evidence_from": ""
+ },
+ "oura-counsel-health-625m": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Reuters via Hot96",
+  "hero_from": "https://hot96.com/2026/11/10/smart-ring-maker-oura-to-acquire-counsel-health-for-625-million/",
+  "evidence_from": "https://www.unite.ai/oura-agrees-to-acquire-counsel-health-to-connect-ai-and-physician-care/"
  }
 }
