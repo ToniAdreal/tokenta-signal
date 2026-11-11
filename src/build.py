@@ -163,6 +163,9 @@ nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
 .t-group{display:inline-flex}
 @keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
 section{padding:56px 0;border-bottom:1px solid var(--line)}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
 .sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
