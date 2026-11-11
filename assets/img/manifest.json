@@ -1244,5 +1244,12 @@
   "credit_name": "Databricks official blog",
   "hero_from": "https://www.databricks.com/blog/new-genie-autonomous-ai-complex-enterprise-work",
   "evidence_from": "https://www.unite.ai/databricks-turns-genie-into-an-autonomous-enterprise-ai-coworker/"
+ },
+ "nvidia-board-prepares-oust-huang-second-affair": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily",
+  "hero_from": "https://www.investors.com/news/technology/nvidia-stock-ceo-jensen-huang-second-affair-nyt-report/",
+  "evidence_from": ""
  }
 }
