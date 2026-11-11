@@ -68,8 +68,16 @@
   function closeModal() { if (modal) modal.style.display = "none"; }
   window.TSAuth = { open: openModal, state: state, refresh: refresh, signOut: signOut };
 
+  function fetchT(url, opts, ms) {
+    var ctl = ("AbortController" in window) ? new AbortController() : null;
+    var timer = ctl ? setTimeout(function () { ctl.abort(); }, ms || 12000) : null;
+    var o = opts || {};
+    if (ctl) o.signal = ctl.signal;
+    return fetch(url, o).then(function (r) { if (timer) clearTimeout(timer); return r; }, function (e) { if (timer) clearTimeout(timer); throw e; });
+  }
+
   function post(path, body) {
-    return fetch(AUTH + path, {
+    return fetchT(AUTH + path, {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -119,9 +127,15 @@
     }).catch(function () { msg("Network problem. Try again in a moment."); });
   }
 
+  function fetchMe() {
+    return fetchT(AUTH + "/api/auth/me", { credentials: "include" }, 9000)
+      .then(function (r) { return r.json(); });
+  }
   function refresh() {
-    return fetch(AUTH + "/api/auth/me", { credentials: "include" })
-      .then(function (r) { return r.json(); })
+    return fetchMe()
+      .catch(function () {
+        return new Promise(function (res) { setTimeout(res, 1500); }).then(fetchMe);
+      })
       .then(function (j) {
         state.authed = !!j.authenticated;
         state.email = j.email || null;
@@ -131,7 +145,7 @@
         paintAccount();
         return state;
       })
-      .catch(function () { state.checked = true; paintButton(); return state; });
+      .catch(function () { state.checked = true; paintButton(); paintAccount(); return state; });
   }
 
   function signOut() {
@@ -253,5 +267,6 @@
     });
     adoptHashSession().then(function () { return refresh(); }).then(applyMeter);
     paintAccount();
+    setTimeout(function () { if (!state.checked) refresh(); }, 6000);
   });
 })();
