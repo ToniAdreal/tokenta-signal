@@ -1237,5 +1237,12 @@
   "credit_name": "Reuters via Hot96",
   "hero_from": "https://hot96.com/2026/11/10/smart-ring-maker-oura-to-acquire-counsel-health-for-625-million/",
   "evidence_from": "https://www.unite.ai/oura-agrees-to-acquire-counsel-health-to-connect-ai-and-physician-care/"
+ },
+ "databricks-genie-autonomous-ai-coworker": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Databricks official blog",
+  "hero_from": "https://www.databricks.com/blog/new-genie-autonomous-ai-complex-enterprise-work",
+  "evidence_from": "https://www.unite.ai/databricks-turns-genie-into-an-autonomous-enterprise-ai-coworker/"
  }
 }
