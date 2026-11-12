@@ -1251,5 +1251,12 @@
   "credit_name": "Investor's Business Daily",
   "hero_from": "https://www.investors.com/news/technology/nvidia-stock-ceo-jensen-huang-second-affair-nyt-report/",
   "evidence_from": ""
+ },
+ "nvidia-board-meets-decide-huang-future": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://www.koreajoongangdaily.com/world/nvidia-board-meets-to-decide-jensen-huangs-future-source-says/12968980",
+  "evidence_from": ""
  }
 }
