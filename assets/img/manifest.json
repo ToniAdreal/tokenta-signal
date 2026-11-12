@@ -1335,5 +1335,40 @@
   "credit_name": "Demokratis",
   "hero_from": "https://demokratis.co.id/en/nebius-shares-drop-capex-forecast",
   "evidence_from": ""
+ },
+ "fractile-720m-7b-valuation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Balderton",
+  "hero_from": "https://www.balderton.com/news/fractile-raises-720m-to-build-the-hardware-that-pushes-ais-frontier-forward/",
+  "evidence_from": ""
+ },
+ "mercor-750m-20b-valuation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Mercor",
+  "hero_from": "https://www.mercor.com/blog/series-d/",
+  "evidence_from": ""
+ },
+ "amd-epyc-venice-256-core": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AMD",
+  "hero_from": "https://www.amd.com/en/blogs/2026/amd-epyc-9006-sp7-based-platforms-are-now-shipping.html",
+  "evidence_from": ""
+ },
+ "anthropic-claude-office-suite": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/sheets-whiteboards-data",
+  "evidence_from": ""
+ },
+ "baidu-ernie-55-flash-preview": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "East Frontier",
+  "hero_from": "https://eastfrontier.com/2026/11/12/baidu-launches-ernie-5-5-flash-preview-with-open-weights-due-by-november-25/",
+  "evidence_from": ""
  }
 }
