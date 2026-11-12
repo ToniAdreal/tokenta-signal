@@ -1272,5 +1272,12 @@
   "credit_name": "InvestingLive, reporting Bloomberg",
   "hero_from": "https://investinglive.com/stocks/anthropic-ipo-oversubscribed-several-times-ahead-of-record-90-billion-listing/",
   "evidence_from": ""
+ },
+ "foxconn-q3-profit-775b-beats-forecasts": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Apple Almond",
+  "hero_from": "https://applealmondrealty.com/posts/54981",
+  "evidence_from": ""
  }
 }
