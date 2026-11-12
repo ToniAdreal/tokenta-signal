@@ -1370,5 +1370,12 @@
   "credit_name": "East Frontier",
   "hero_from": "https://eastfrontier.com/2026/11/12/baidu-launches-ernie-5-5-flash-preview-with-open-weights-due-by-november-25/",
   "evidence_from": ""
+ },
+ "nvidia-huang-resigns-kress-interim-ceo": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/",
+  "evidence_from": ""
  }
 }
