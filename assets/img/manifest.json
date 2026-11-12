@@ -1377,5 +1377,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/",
   "evidence_from": ""
+ },
+ "anthropic-supported-regions-china-cutoff": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/legal/supported-regions",
+  "evidence_from": ""
  }
 }
