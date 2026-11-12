@@ -1398,5 +1398,12 @@
   "credit_name": "Anthropic · Claude",
   "hero_from": "https://claude.com/resources/articles/claude-for-manufacturing",
   "evidence_from": "https://preprod.tipranks.com/news/the-fly/anthropic-announces-launch-of-claude-for-manufacturing-thefly-news"
+ },
+ "openai-daybreak-red-team-defense-factory": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
+  "evidence_from": ""
  }
 }
