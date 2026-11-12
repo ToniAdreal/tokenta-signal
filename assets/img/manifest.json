@@ -1421,10 +1421,10 @@
   "evidence_from": ""
  },
  "cerebras-q3-2026-adjusted-revenue-2309m-raises-2026-forecast": {
-  "hero": false,
+  "hero": true,
   "evidence": false,
-  "credit_name": "Reuters",
-  "hero_from": "",
+  "credit_name": "InvestingLive · Cerebras raises 2026 outlook, sees revenue tripling in 2027 as $26bn backlog builds",
+  "hero_from": "https://investinglive.com/stocks/cerebras-raises-2026-outlook-sees-revenue-tripling-in-2027-as-26bn-backlog-builds/",
   "evidence_from": ""
  }
 }
