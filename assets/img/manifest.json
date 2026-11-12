@@ -1384,5 +1384,19 @@
   "credit_name": "Anthropic",
   "hero_from": "https://www.anthropic.com/legal/supported-regions",
   "evidence_from": ""
+ },
+ "google-gemini-4-hydrogen-fast-agentic-model": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google · The Keyword",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+ },
+ "anthropic-claude-for-manufacturing-17-skills": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic · Claude",
+  "hero_from": "https://claude.com/resources/articles/claude-for-manufacturing",
+  "evidence_from": "https://preprod.tipranks.com/news/the-fly/anthropic-announces-launch-of-claude-for-manufacturing-thefly-news"
  }
 }
