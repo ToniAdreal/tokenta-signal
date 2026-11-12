@@ -1258,5 +1258,19 @@
   "credit_name": "Reuters",
   "hero_from": "https://www.koreajoongangdaily.com/world/nvidia-board-meets-to-decide-jensen-huangs-future-source-says/12968980",
   "evidence_from": ""
+ },
+ "nvidia-shareholder-lawsuit-kistenmacher": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters via MLQ",
+  "hero_from": "https://mlq.ai/news/nvidia-and-jensen-huang-sued-by-shareholders-over-statements-about-his-ties-to-a-megaspeed-executive/",
+  "evidence_from": ""
+ },
+ "anthropic-ipo-oversubscribed-multiple-times": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "InvestingLive, reporting Bloomberg",
+  "hero_from": "https://investinglive.com/stocks/anthropic-ipo-oversubscribed-several-times-ahead-of-record-90-billion-listing/",
+  "evidence_from": ""
  }
 }
