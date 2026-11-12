@@ -1321,5 +1321,12 @@
   "credit_name": "Business Wire via FinancialContent",
   "hero_from": "",
   "evidence_from": "https://markets.financialcontent.com/stocks/article/bizwire-2026-11-12-nebius-reports-third-quarter-2026-financial-results"
+ },
+ "nebius-2027-capex-40b-45b-revenue-slip-shares-reverse": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Demokratis",
+  "hero_from": "https://demokratis.co.id/en/nebius-shares-drop-capex-forecast",
+  "evidence_from": ""
  }
 }
