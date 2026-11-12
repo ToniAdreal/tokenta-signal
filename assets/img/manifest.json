@@ -1314,5 +1314,12 @@
   "credit_name": "About Amazon",
   "hero_from": "https://www.aboutamazon.com/news/aws/how-autonomous-ai-agents-built-aws-emulator",
   "evidence_from": "https://simonwillison.net/2026/Nov/11/aws-emulator/"
+ },
+ "nebius-q3-2026-revenue-981m-beats-2027-sales-12b-13b": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Business Wire via FinancialContent",
+  "hero_from": "",
+  "evidence_from": "https://markets.financialcontent.com/stocks/article/bizwire-2026-11-12-nebius-reports-third-quarter-2026-financial-results"
  }
 }
