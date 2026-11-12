@@ -1405,5 +1405,26 @@
   "credit_name": "The Register",
   "hero_from": "https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500",
   "evidence_from": ""
+ },
+ "cisco-q1-fy2027-record-revenue-185b-ai-infrastructure-9b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Cisco · Newsroom",
+  "hero_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html",
+  "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html"
+ },
+ "applied-materials-q4-fy2026-record-revenue-1041b-guides-111b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "StockStory · Applied Materials surprises with Q3 sales, inventory levels improve",
+  "hero_from": "https://stockstory.org/us/stocks/nasdaq/amat/news/earnings/applied-materials-surprises-with-q3-sales-inventory-levels-improve",
+  "evidence_from": ""
+ },
+ "cerebras-q3-2026-adjusted-revenue-2309m-raises-2026-forecast": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
