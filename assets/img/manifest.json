@@ -1286,5 +1286,19 @@
   "credit_name": "IT Home",
   "hero_from": "https://www.ithome.com/1/026/287.htm",
   "evidence_from": ""
+ },
+ "siemens-q4-fy2026-record-orders-3477b-raises-guidance": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Siemens",
+  "hero_from": "https://press.siemens.com/global/en/event/fourth-quarter-and-preliminary-figures-fiscal-2026",
+  "evidence_from": ""
+ },
+ "quanta-q3-2026-record-revenue-1115t-ai-servers-margin-475pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Crypto Briefing report",
+  "hero_from": "https://cryptobriefing.com/quanta-computer-record-revenue-ai-servers-margin/",
+  "evidence_from": ""
  }
 }
