@@ -1328,5 +1328,12 @@
   "credit_name": "Demokratis",
   "hero_from": "https://demokratis.co.id/en/nebius-shares-drop-capex-forecast",
   "evidence_from": ""
+ },
+ "nebius-call-capacity-delay-shares-slide-12pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Demokratis",
+  "hero_from": "https://demokratis.co.id/en/nebius-shares-drop-capex-forecast",
+  "evidence_from": ""
  }
 }
