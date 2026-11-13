@@ -1503,5 +1503,12 @@
   "credit_name": "Azure Blog",
   "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "microsoft-365-outage-0957-utc-update": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Azure Blog",
+  "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
+  "evidence_from": "https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html"
  }
 }
