@@ -1608,5 +1608,12 @@
   "credit_name": "Microsoft Service Health",
   "hero_from": "",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "spacex-starship-flight-15-booster-catch-aborted-gulf": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily",
+  "hero_from": "https://www.investors.com/news/spacex-starship-flight-15-launch-tower-catch-elon-musk-rocket-lab-electron-milestone-spcx-stock-rklb/",
+  "evidence_from": ""
  }
 }
