@@ -1601,5 +1601,12 @@
   "credit_name": "Reuters",
   "hero_from": "https://q106fm.com/2026/11/13/spacex-to-attempt-first-starship-spacecraft-recovery-on-land-in-15th-flight/",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-2200-utc-update": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Microsoft Service Health",
+  "hero_from": "",
+  "evidence_from": "https://status.cloud.microsoft"
  }
 }
