@@ -1573,5 +1573,26 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
   "evidence_from": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+ },
+ "microsoft-365-outage-2002-utc-update": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "MacRumors",
+  "hero_from": "https://www.macrumors.com/2026/11/13/microsoft-365-outage-resolving/",
+  "evidence_from": "https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html"
+ },
+ "apple-homeview-on-sale-299-siri-ai": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Apple Newsroom",
+  "hero_from": "https://www.apple.com/newsroom/2026/11/apple-homeview-available-today/",
+  "evidence_from": ""
+ },
+ "openai-backs-chip-export-control-bills": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Bloomberg Law",
+  "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/openai-joins-groundswell-of-support-for-ai-chip-control-measures",
+  "evidence_from": ""
  }
 }
