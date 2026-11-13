@@ -1433,5 +1433,12 @@
   "credit_name": "Politico, as reported by Nakoda",
   "hero_from": "https://news.nakoda.ai/article/tim-scott-asks-huang-lutnick-testify-congress-nvidia-inquiry",
   "evidence_from": "https://news.nakoda.ai/article/tim-scott-asks-huang-lutnick-testify-congress-nvidia-inquiry"
+ },
+ "microsoft-365-outage-exchange-copilot": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Azure Blog",
+  "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
+  "evidence_from": ""
  }
 }
