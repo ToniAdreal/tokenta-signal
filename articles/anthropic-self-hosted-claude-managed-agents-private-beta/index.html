@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anthropic Opens Self-Hosted Claude Managed Agents in Private Beta; the Model Still Runs Outside — Tokenta Signal</title><meta name="description" content="On November 12, 2026, Anthropic opened a private beta of self-hosted Claude Managed Agents, letting companies run the entire agent service, the harness, sandboxes, credentials and session history, on their own cloud or on-premises infrastructure. The model itself does not move home: each model call goes to a provider the customer picks, Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own gateway. Access is through the Anthropic account team, and no pricing or general-availability date has been published. Scheduled deployments, dreams and webhooks are unavailable on the self-hosted server.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="On November 12, 2026, Anthropic opened a private beta of self-hosted Claude Managed Agents, letting companies run the entire agent service, the harness, sandboxes, credentials and session history, on their own cloud or on-premises infrastructure. The model itself does not move home: each model call goes to a provider the customer picks, Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own gateway. Access is through the Anthropic account team, and no pricing or general-availability date has been published. Scheduled deployments, dreams and webhooks are unavailable on the self-hosted server.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.13 07:24 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 337 · OPENAI × INDIA × DATA RESIDENCY · The Hindu BusinessLine</span><span><span class="live">●</span> ISSUE 336 · ANTHROPIC × CLAUDE × SELF-HOSTING · Help Net Security, reporting Anthropic&#x27;s announcement</span><span><span class="live">●</span> ISSUE 335 · SPACEX × AI INFRASTRUCTURE × INVESTMENT · Unite.AI, reporting SpaceX&#x27;s statement and Reuters</span><span><span class="live">●</span> ISSUE 334 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 333 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 332 · MICROSOFT × OUTAGE × UPDATE · Azure Blog</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 337 · OPENAI × INDIA × DATA RESIDENCY · The Hindu BusinessLine</span><span><span class="live">●</span> ISSUE 336 · ANTHROPIC × CLAUDE × SELF-HOSTING · Help Net Security, reporting Anthropic&#x27;s announcement</span><span><span class="live">●</span> ISSUE 335 · SPACEX × AI INFRASTRUCTURE × INVESTMENT · Unite.AI, reporting SpaceX&#x27;s statement and Reuters</span><span><span class="live">●</span> ISSUE 334 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 333 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 332 · MICROSOFT × OUTAGE × UPDATE · Azure Blog</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Anthropic Opens Self-Hosted Claude Managed Agents in Private Beta; the Model Still Runs Outside</h1>
+<p class="deck">On November 12, 2026, Anthropic opened a private beta of self-hosted Claude Managed Agents: companies can run the whole agent service, harness, sandboxes, credentials and session history, on their own cloud or on-premises infrastructure. The model itself does not move: each call goes to a provider the customer picks, Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own gateway. Access is through the Anthropic account team; no pricing or general-availability date has been published. Scheduled deployments, dreams and webhooks are unavailable on the self-hosted server.</p>
+<div class="meta">ISSUE 336 · 2026-11-12 · SOURCE / <b>Help Net Security, reporting Anthropic&#x27;s announcement</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ANTHROPIC × CLAUDE × SELF-HOSTING</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/anthropic-self-hosted-claude-managed-agents-private-beta/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Help Net Security, reporting Anthropic&#x27;s announcement — <a href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">Nov 12, 2026</div><div class="lab">LAUNCH</div><div class="desc">Self-hosted Claude Managed Agents opened in private beta on November 12, 2026. The customer runs the cma-server, a PostgreSQL 16 or later database, and the sandbox workers; Anthropic has no remote access to the server or its logs.</div></div><div class="metric"><div class="num">Customer&#x27;s choice</div><div class="lab">MODEL ROUTING</div><div class="desc">Model calls go to a provider the customer picks: Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own model gateway. Claude itself still runs outside the customer&#x27;s network.</div></div><div class="metric"><div class="num">3+ gaps</div><div class="lab">MISSING FEATURES</div><div class="desc">Scheduled deployments, dreams and webhooks are unavailable on the self-hosted server, and web search and web fetch stay off until explicitly enabled. Nothing migrates from the hosted service; agents, skills, credentials and history must be rebuilt.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ANNOUNCEMENT — On November 12, 2026, Anthropic announced self-hosted Claude Managed Agents in private beta, via its ClaudeDevs account and platform release notes. Companies can run the whole Managed Agents service on their own infrastructure, and store agents, sessions and session history there. Access is through the Anthropic account team.</li><li><b>02</b>WHAT MOVES HOME — The customer operates the cma-server, a PostgreSQL 16 or later database, and the workers that run shell and file tools inside sandboxes. Model calls go to Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own gateway. The hosted service launched April 8, 2026; self-hosted sandboxes followed May 19, 2026.</li><li><b>03</b>THE WATCHPOINT — Watch for pricing and a general-availability date, neither published, and for whether scheduled deployments, dreams and webhooks arrive on the self-hosted server. Watch whether rivals follow Mistral&#x27;s November 6 VPC move and Anthropic&#x27;s self-hosting into the same enterprise perimeter pitch.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On November 12, 2026, Anthropic opened a private beta of self-hosted Claude Managed Agents, letting companies run the entire agent service on their own cloud or on-premises infrastructure. The agent harness, sandboxes, credentials and session history all live on the customer&#x27;s side of the perimeter. Access is through the customer&#x27;s Anthropic account team, and Anthropic has published no pricing, no list of covered countries and no schedule for leaving beta.</p><p>The customer operates three things: the Managed Agents server (cma-server), which serves the API, runs the agent loop and stores agents, sessions and their histories; a PostgreSQL 16 or later database for that history; and the workers that run shell and file tools inside the customer&#x27;s sandboxes. The server never runs an agent&#x27;s shell or file tools, and Anthropic says it has no remote access to the self-hosted server or its logs. The one thing that does not move home is the model itself: each model call goes to a provider the customer picks, Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own model gateway.</p><p>Claude Managed Agents began as a fully hosted service on April 8, 2026, with Anthropic running the infrastructure. On May 19, 2026, Anthropic added self-hosted sandboxes, moving an agent&#x27;s tool execution onto customer systems while Anthropic kept running the agent itself. The November 12 announcement brings the rest in-house. The private beta is not a feature-for-feature copy of the hosted service: scheduled deployments, dreams and webhooks are unavailable on the self-hosted server, and web search and web fetch stay off until explicitly enabled.</p>
+<h2><span class="en">WHY IT MATTERS</span>Self-hosted, but the model still phones home</h2><p>The distinction is the whole story. The harness, the credentials and the session history now sit inside the customer&#x27;s perimeter, which matters for agents that work unattended inside corporate systems, fixing broken builds, testing releases, triaging alerts and working through bug backlogs. But Claude itself still runs outside the customer&#x27;s network, so prompts go out and completions come back. Self-hosting the service does not by itself keep model traffic inside the customer&#x27;s network.</p><p>The security design carries over from the hosted service. Anthropic built Managed Agents around four principles: the harness that calls Claude is separated from the sandbox where the agent&#x27;s code runs, the agent loop, session history and vault secrets sit outside the sandbox, credentials are attached to requests by a proxy outside the sandbox for MCP tools and supported API calls, and each environment can be locked to a list of allowed hosts. Self-hosted customers can keep credentials in their own secrets manager, and the step-by-step log of every tool call exports over OpenTelemetry.</p><h2><span class="en">WHAT TO WATCH</span>The VPC race, and what is missing</h2><p>The move comes six days after Mistral took its Studio, with managed agents and apps, into the customer&#x27;s virtual private cloud on November 6. The direction of travel is the same: more autonomy, but with guardrails enterprises can actually operate. Watch whether Anthropic publishes pricing and a general-availability date, and whether the missing hosted features, scheduled deployments, dreams and webhooks, arrive on the self-hosted server.</p><p>Teams planning a move should read the gaps first. Nothing migrates from the hosted service: agents, skills, vault credentials, memory stores and session history all have to be rebuilt, and the Docker Compose setup in the documentation is for development only, with separate Helm-based deployment tooling recommended for a persistent install. The server, the database and the firewall rules are now the customer&#x27;s to run, and so is keeping them patched.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The agent moves in-house; the model stays out</h2><p>Tokenta Signal&#x27;s judgment: Anthropic is answering the enterprise objection that kept long-running agents out of regulated shops: the harness, the credentials and the history now live behind the customer&#x27;s firewall. But the model still runs outside, so this is control over the agent, not sovereignty over the intelligence. The private beta is narrow, the gaps are real, and the pricing is unstated. The test is whether the hosted features follow.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this article rest on Anthropic&#x27;s November 12, 2026 announcement of self-hosted Claude Managed Agents in private beta, made through its ClaudeDevs account and its platform release notes, and on Help Net Security&#x27;s November 12 report, published at 18:07 UTC. Feature gaps, access terms and the absence of pricing or a general-availability date are as stated in Anthropic&#x27;s announcement and documentation. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/anthropic-self-hosted-claude-managed-agents-private-beta/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.helpnetsecurity.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>Anthropic opened a private beta on November 12, 2026 that lets companies run the entire Claude Managed Agents service on their own cloud or on-premises infrastructure. The agent harness, sandboxes, credentials and session history all live on the customer&#x27;s side, while model calls go to a provider the customer picks: Anthropic by default, or Amazon Bedrock, Google, Microsoft Foundry, or the customer&#x27;s own gateway. Access is through the Anthropic account team; Anthropic has published no pricing or general-availability date.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener">Anthropic Opens Self-Hosted Claude Managed Agents in Private Beta; the Model Still Runs Outside ↗</a><br>helpnetsecurity.com · 2026-11-12 · Help Net Security, reporting Anthropic&#x27;s announcement</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Help Net Security: Self-hosted Claude Managed Agents keeps agent credentials in your environment<br><a href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener">https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/</a></li><li>AI Frontier Post: Anthropic lets enterprises self-host the full Claude Managed Agents stack, private beta now open<br><a href="https://aifrontierpost.com/articles/anthropic-self-hosted-claude-managed-agents-private-beta/" target="_blank" rel="noopener">https://aifrontierpost.com/articles/anthropic-self-hosted-claude-managed-agents-private-beta/</a></li><li>Pasquale Pillitteri: Anthropic launches self-hosted Claude Managed Agents in private beta<br><a href="https://pasqualepillitteri.it/en/news/32740/self-hosted-claude-managed-agents-private-beta" target="_blank" rel="noopener">https://pasqualepillitteri.it/en/news/32740/self-hosted-claude-managed-agents-private-beta</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-india-api-inference-residency-gpt-6-luna/">OpenAI Brings Local API Processing to India, Starting With GPT-6 Luna</a> <span class="meta">ISSUE 337</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../spacex-74b-ai-supercomputing-campuses-texas-arizona/">SpaceX Pledges Over $74 Billion for Two AI Supercomputing Campuses in Texas and Arizona; Both Face December 9 Votes</a> <span class="meta">ISSUE 335</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-0657-utc-update/">Microsoft 365 Outage Passes 14 Hours as 06:57 UTC Update Reports Only Marginal Success; Next Update Due 07:30 UTC</a> <span class="meta">ISSUE 334</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-0546-utc-update/">Update: Microsoft 365 Outage Passes 13 Hours as 05:46 UTC Update Reports No Malicious Activity; Next Update Due 07:00 UTC</a> <span class="meta">ISSUE 333</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

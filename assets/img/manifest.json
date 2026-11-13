@@ -1461,5 +1461,26 @@
   "credit_name": "Azure Blog",
   "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "spacex-74b-ai-supercomputing-campuses-texas-arizona": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI, reporting SpaceX's statement and Reuters",
+  "hero_from": "https://www.unite.ai/spacex-unveils-two-ai-supercomputing-campus-plans-in-texas-and-arizona/",
+  "evidence_from": "https://www.unite.ai/spacex-unveils-two-ai-supercomputing-campus-plans-in-texas-and-arizona/"
+ },
+ "anthropic-self-hosted-claude-managed-agents-private-beta": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Help Net Security, reporting Anthropic's announcement",
+  "hero_from": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/",
+  "evidence_from": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/"
+ },
+ "openai-india-api-inference-residency-gpt-6-luna": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Hindu BusinessLine",
+  "hero_from": "https://www.thehindubusinessline.com/info-tech/openaiannounceslocalaiprocessinginindiawithapi-inferenceresidency/article71692832.ece",
+  "evidence_from": "https://www.thehindubusinessline.com/info-tech/openaiannounceslocalaiprocessinginindiawithapi-inferenceresidency/article71692832.ece"
  }
 }
