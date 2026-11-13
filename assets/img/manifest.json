@@ -1566,5 +1566,12 @@
   "credit_name": "Q13 FOX",
   "hero_from": "https://q13fox.com/news/microsoft-apologizes-global-outage",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "openai-chatgpt-wallet-agent-payments": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+  "evidence_from": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
  }
 }
