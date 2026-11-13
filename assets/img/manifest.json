@@ -1594,5 +1594,12 @@
   "credit_name": "Bloomberg Law",
   "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/openai-joins-groundswell-of-support-for-ai-chip-control-measures",
   "evidence_from": ""
+ },
+ "spacex-starship-flight-15-faa-license-double-catch": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://q106fm.com/2026/11/13/spacex-to-attempt-first-starship-spacecraft-recovery-on-land-in-15th-flight/",
+  "evidence_from": ""
  }
 }
