@@ -1426,5 +1426,12 @@
   "credit_name": "InvestingLive · Cerebras raises 2026 outlook, sees revenue tripling in 2027 as $26bn backlog builds",
   "hero_from": "https://investinglive.com/stocks/cerebras-raises-2026-outlook-sees-revenue-tripling-in-2027-as-26bn-backlog-builds/",
   "evidence_from": ""
+ },
+ "senate-banking-scott-huang-lutnick-testify": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Politico, as reported by Nakoda",
+  "hero_from": "https://news.nakoda.ai/article/tim-scott-asks-huang-lutnick-testify-congress-nvidia-inquiry",
+  "evidence_from": "https://news.nakoda.ai/article/tim-scott-asks-huang-lutnick-testify-congress-nvidia-inquiry"
  }
 }
