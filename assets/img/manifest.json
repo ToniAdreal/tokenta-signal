@@ -1552,5 +1552,12 @@
   "credit_name": "Azure Blog",
   "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "microsoft-365-outage-1556-utc-update": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Azure Blog",
+  "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
+  "evidence_from": ""
  }
 }
