@@ -1643,5 +1643,12 @@
   "credit_name": "Associated Press",
   "hero_from": "https://www.nowgeorgia.com/flights-halted-at-airports-across-us-due-to-air-traffic-control-communications-problems-faa-says/",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-consumer-remediated": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "PulsAPI",
+  "hero_from": "https://www.pulsapi.com/services/microsoft-365",
+  "evidence_from": ""
  }
 }
