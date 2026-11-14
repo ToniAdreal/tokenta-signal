@@ -1692,5 +1692,26 @@
   "credit_name": "UK Met Office",
   "hero_from": "https://www.metoffice.gov.uk/blog/2026/exploring-future-forecasting-how-the-met-office-is-supporting-ai-innovation",
   "evidence_from": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
+ },
+ "google-samsung-intelligent-eyewear-395": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google",
+  "hero_from": "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/",
+  "evidence_from": "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/"
+ },
+ "united-bans-ai-agents-booking-flights": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Simple Flying",
+  "hero_from": "https://simpleflying.com/united-airlines-bans-ai-agents-booking-flights-check-in/",
+  "evidence_from": ""
+ },
+ "meta-muse-outbound-calls-paid-us": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/?ref=explainx",
+  "evidence_from": ""
  }
 }
