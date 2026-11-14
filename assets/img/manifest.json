@@ -1727,5 +1727,12 @@
   "credit_name": "Associated Press",
   "hero_from": "https://www.tmj4.com/life/travel/what-caused-the-faa-ground-stop-officials-point-to-router-failure",
   "evidence_from": ""
+ },
+ "faa-reuters-arkansas-texas-routers-l3harris-response": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Gizmodo",
+  "hero_from": "https://gizmodo.com/transportation-secretary-gestures-vaguely-at-copper-wiring-to-explain-flight-grounding-2000840089",
+  "evidence_from": ""
  }
 }
