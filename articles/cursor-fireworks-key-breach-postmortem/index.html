@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cursor Traces Its October Breach to a Leaked Fireworks Key — Tokenta Signal</title><meta name="description" content="Cursor published the findings of its two-week investigation into its October security incident on November 13, 2026, tracing the breach to an access key it had issued to Fireworks AI, which Cursor says was exposed by the vendor. An attacker used the key to copy coding agent traces from a shared read-only bucket; a small number of traces contained unredacted credentials, exposing API credentials for fewer than 0.01% of customers and traces for fewer than 0.05% of users. From there the attacker reached Cursor&#x27;s internal tools and, on October 29, placed malicious copies of Anthropic&#x27;s Claude Code extension, versions 2.1.312 and 2.1.313, on the cache serving the Cursor VS Code extension marketplace. At most 5,000 users potentially received the SSH-backdoored build during the roughly 11 hours it was live. Anthropic did not publish the copies, the incident was not a vulnerability in Anthropic&#x27;s product, and Open VSX never hosted the malware. Cursor says the incident is contained, with the last attacker activity on November 1 blocked, and has moved all inference off Fireworks, rotated all credentials, rebuilt the marketplace, and redeployed production.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Cursor published the findings of its two-week investigation into its October security incident on November 13, 2026, tracing the breach to an access key it had issued to Fireworks AI, which Cursor says was exposed by the vendor. An attacker used the key to copy coding agent traces from a shared read-only bucket; a small number of traces contained unredacted credentials, exposing API credentials for fewer than 0.01% of customers and traces for fewer than 0.05% of users. From there the attacker reached Cursor&#x27;s internal tools and, on October 29, placed malicious copies of Anthropic&#x27;s Claude Code extension, versions 2.1.312 and 2.1.313, on the cache serving the Cursor VS Code extension marketplace. At most 5,000 users potentially received the SSH-backdoored build during the roughly 11 hours it was live. Anthropic did not publish the copies, the incident was not a vulnerability in Anthropic&#x27;s product, and Open VSX never hosted the malware. Cursor says the incident is contained, with the last attacker activity on November 1 blocked, and has moved all inference off Fireworks, rotated all credentials, rebuilt the marketplace, and redeployed production.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.14 16:39 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 364 · CURSOR × SECURITY × SUPPLY CHAIN · Cursor</span><span><span class="live">●</span> ISSUE 363 · GOOGLE DEEPMIND × WEATHER AI × OPEN DATA · Google DeepMind</span><span><span class="live">●</span> ISSUE 362 · MICROSOFT × SECURITY × PHISHING · Y News</span><span><span class="live">●</span> ISSUE 361 · MICROSOFT × OUTAGE × CLOSED · University of Pennsylvania Mirror of Microsoft Service Health</span><span><span class="live">●</span> ISSUE 360 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 359 · FAA × SMART × AVIATION · Associated Press</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 364 · CURSOR × SECURITY × SUPPLY CHAIN · Cursor</span><span><span class="live">●</span> ISSUE 363 · GOOGLE DEEPMIND × WEATHER AI × OPEN DATA · Google DeepMind</span><span><span class="live">●</span> ISSUE 362 · MICROSOFT × SECURITY × PHISHING · Y News</span><span><span class="live">●</span> ISSUE 361 · MICROSOFT × OUTAGE × CLOSED · University of Pennsylvania Mirror of Microsoft Service Health</span><span><span class="live">●</span> ISSUE 360 · MICROSOFT × OUTAGE × UPDATE · Microsoft Service Health</span><span><span class="live">●</span> ISSUE 359 · FAA × SMART × AVIATION · Associated Press</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Cursor Traces Its October Breach to a Leaked Fireworks Key</h1>
+<p class="deck">Cursor published the findings of its two-week investigation on November 13, 2026: the October breach started with an access key it had issued to Fireworks AI, which Cursor says was exposed by Fireworks. An attacker used the key to copy coding agent traces from a shared read-only bucket; a small number of traces held unredacted credentials (under 0.01% of customers had API credentials exposed; traces exposed for under 0.05% of users). From there the attacker reached Cursor&#x27;s internal tools and, on October 29, placed malicious copies of Anthropic&#x27;s Claude Code extension (2.1.312/2.1.313) on the marketplace cache; at most 5,000 users potentially received the SSH-backdoored build during about 11 hours. Anthropic did not publish the copies and Open VSX never hosted the malware. Cursor says the incident is contained, with last attacker activity on November 1 blocked, and has moved all inference off Fireworks, rotated all credentials, rebuilt the marketplace and redeployed production. Verified against Cursor&#x27;s November 13 update and October 29 notice, both read in full, plus independent coverage by CybersecurityNews and FourWeekMBA.</p>
+<div class="meta">ISSUE 364 · 2026-11-13 · SOURCE / <b>Cursor</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">CURSOR × SECURITY × SUPPLY CHAIN</span><span class="tag">REPORTED + ANALYSIS</span></div>
+
+<div class="metrics"><div class="metric"><div class="num">5,000 users</div><div class="lab">POTENTIAL REACH</div><div class="desc">At most 5,000 users who requested the specific cached versions of Anthropic&#x27;s Claude Code extension on October 29, 2026 potentially received the malicious build, which was available for about 11 hours before Cursor removed it.</div></div><div class="metric"><div class="num">&lt;0.05% of users</div><div class="lab">DATA EXPOSURE</div><div class="desc">Coding agent traces were exposed for fewer than 0.05% of users, and fewer than 0.01% of customers had API credentials exposed from traces that had not been redacted.</div></div><div class="metric"><div class="num">Nov 1</div><div class="lab">CONTAINMENT</div><div class="desc">The last attacker activity Cursor has seen was on November 1, 2026, and it was blocked; Cursor has moved all inference traffic off Fireworks, deactivated the issued key, and cut off the vendor&#x27;s access to all shared datasets.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE FINDING — Cursor published the findings of its two-week investigation on November 13, 2026, tracing its October security incident to an access key it had issued to Fireworks AI, which Cursor says was exposed by the vendor.</li><li><b>02</b>THE CHAIN — The attacker used the key to copy coding agent traces from a shared read-only bucket, found unredacted credentials in a small number of traces, and on October 29 placed malicious copies of Anthropic&#x27;s Claude Code extension on the marketplace cache, potentially reaching at most 5,000 users.</li><li><b>03</b>THE RESPONSE — Cursor says the incident is contained, with last attacker activity on November 1 blocked, and has moved all inference off Fireworks, rotated all credentials, rebuilt the marketplace, redeployed production, and engaged external forensics experts.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Cursor published the findings of its two-week investigation into its October security incident on November 13, 2026, tracing the breach to a single access key it had issued to Fireworks AI, one of its inference vendors. In Cursor&#x27;s account, the key was exposed by Fireworks, and an attacker used it to copy data from a read-only storage bucket the two companies used to share data. The bucket held limited coding agent traces, mostly from 2025, from sessions not in Privacy Mode that Cursor was permitted to use for model training. A small number of those traces contained credentials that had not been redacted; fewer than 0.01% of customers had API credentials exposed, and traces were exposed for fewer than 0.05% of users.</p><p>Starting from those credentials, the attacker reached select software tools Cursor uses, and from there accessed archived non-production source code repositories, limited customer support data and email conversations, product usage metrics and contact details, summaries of some coding agent conversations, and credentials some users had sent to the support team. On October 29, using a stolen credential from that exposed data, the attacker placed malicious, unauthorized copies of Anthropic&#x27;s Claude Code extension, versions 2.1.312 and 2.1.313, directly on the cache that serves the Cursor VS Code extension marketplace. Anthropic did not publish the copies, the incident was not a vulnerability in Anthropic&#x27;s product, and the upstream registry Open VSX never hosted the malware. At most 5,000 users who requested the specific cached versions on October 29 potentially received the malicious build, which carried an SSH backdoor and was live for about 11 hours before Cursor removed it.</p><p>Cursor says it believes the incident is contained: the last attacker activity it has seen was on November 1, and it was blocked. The company has moved all inference traffic off Fireworks, deactivated the key it had issued to the vendor, cut off Fireworks&#x27; access to every dataset it had shared, rotated all exposed credentials and, as a precaution, all internal credentials, rebuilt the extension marketplace, redeployed all production infrastructure, and engaged external forensics experts. Privacy Mode prompts and code, customer code repositories, production systems, the Cursor app and its official updates, release signing keys, and other extensions were not affected, according to Cursor. Users who installed versions 2.1.312 or 2.1.313 from the Cursor marketplace on October 29 should follow the remediation steps in Cursor&#x27;s October 30 security notice; uninstalling the extension alone may not be enough, because the payload drops standalone persistence scripts.</p>
+<h2><span class="en">WHAT TO WATCH</span>The trace was the attack surface</h2><p>The mechanism is the part of the story that travels furthest. The attacker never needed a vulnerability in Cursor or in Claude Code. A vendor-held key opened a shared bucket, the bucket held agent traces that had not been fully redacted, and the credentials inside those traces opened the next door. The lesson is about data hygiene in AI tooling supply chains: traces kept for training are a credential store until they are proven otherwise, and a key issued to a vendor is only as safe as the vendor&#x27;s handling of it.</p><p>The open question is attribution timing. Cursor says the key was exposed by Fireworks, but Fireworks&#x27; own bulletin, last updated November 9, does not mention Cursor, and neither company has said when the key was taken, so it is not established whether the intrusion Fireworks disclosed on October 23 to 24 is the point of exposure. Watch whether Fireworks updates its account, and whether other Fireworks customers disclose related exposure. The incident also puts a spotlight on marketplace caches: the malicious build reached users through a cache, not through the registry, which is a distribution path worth auditing in any extension ecosystem.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A vendor key, an unredacted trace, and a marketplace cache</h2><p>Tokenta Signal&#x27;s judgment: this is a supply-chain breach in three hops, and none of them required a software vulnerability. A key issued to a vendor, traces stored for training that still held credentials, and a marketplace cache that did not check what it served. Cursor&#x27;s response is the right shape, cut the vendor off, rotate everything, rebuild the distribution path, but the structural lesson belongs to every team shipping an AI coding tool: training traces are sensitive data, vendor keys are blast radius, and the cache between a registry and a user is part of the trust boundary. Anyone who installed Claude Code 2.1.312 or 2.1.313 from Cursor&#x27;s marketplace on October 29 should run the remediation steps, not just uninstall.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts in this update rest on Cursor&#x27;s own incident update of November 13, 2026, read in full at 16:35 UTC on November 14, and its October 29 security notice, also read in full; both are Cursor&#x27;s account of its own investigation, and the claim that the key was exposed by Fireworks is Cursor&#x27;s attribution, not Fireworks&#x27;. Fireworks&#x27; own security bulletin, last updated November 9, does not mention Cursor, and neither company has said when the key was taken. Independent coverage by CybersecurityNews and FourWeekMBA reports the same chain, figures and containment statement. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://cursor.com/blog/claude-code-extension-security-notice" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/cursor-fireworks-key-breach-postmortem/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — cursor.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>Cursor blog post of November 13, 2026, read in full at 16:35 UTC on November 14, 2026. Cursor states that an attacker obtained an access key it had issued to Fireworks AI, that the key was exposed by Fireworks, and that the attacker used it to copy data from a read-only storage bucket holding limited coding agent traces, mostly from 2025, from sessions not in Privacy Mode. Fewer than 0.01% of customers had API credentials exposed and traces were exposed for fewer than 0.05% of users. On October 29 the attacker placed malicious copies of Anthropic&#x27;s Claude Code extension, versions 2.1.312 and 2.1.313, on the cache serving the Cursor VS Code extension marketplace; at most 5,000 users potentially received the build during about 11 hours. Cursor says the last attacker activity was on November 1 and was blocked, and that it has moved all inference off Fireworks.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener">Cursor Traces Its October Breach to a Leaked Fireworks Key ↗</a><br>cursor.com · 2026-11-13 · Cursor</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Cursor: An update on our recent security incident<br><a href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener">https://cursor.com/blog/security-incident-update</a></li><li>Cursor: Security notice — malicious version of Anthropic.claude-code (2.1.312 and 2.1.313)<br><a href="https://cursor.com/blog/claude-code-extension-security-notice" target="_blank" rel="noopener">https://cursor.com/blog/claude-code-extension-security-notice</a></li><li>CybersecurityNews: Cursor Reveals How a Leaked Fireworks AI Key Led to a Backdoored Claude Code Extension<br><a href="https://cybersecuritynews.com/cursor-data-breach/" target="_blank" rel="noopener">https://cybersecuritynews.com/cursor-data-breach/</a></li><li>FourWeekMBA: Cursor Moves All Inference Off Fireworks After Key Exposure<br><a href="https://fourweekmba.com/ai-cursor-moves-all-inference-off-fireworks-after-key-exposure/" target="_blank" rel="noopener">https://fourweekmba.com/ai-cursor-moves-all-inference-off-fireworks-after-key-exposure/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../deepmind-weathernext-3-pardig-satweave-datasets/">DeepMind Opens the Datasets Behind Its AI Weather Models</a> <span class="meta">ISSUE 363</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-phishing-campaign-warning/">Microsoft Warns of Phishing Campaign Exploiting the Microsoft 365 Outage</a> <span class="meta">ISSUE 362</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-business-exchange-restored/">Microsoft 365 Outage Fully Closed as Business and Exchange Incidents Marked Service Restored</a> <span class="meta">ISSUE 361</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-consumer-remediated/">Microsoft 365 Consumer Incident Remediated as Email Backlog Clears; Business Outage Still Open</a> <span class="meta">ISSUE 360</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

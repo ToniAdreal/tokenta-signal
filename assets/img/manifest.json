@@ -1713,5 +1713,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/?ref=explainx",
   "evidence_from": ""
+ },
+ "cursor-fireworks-key-breach-postmortem": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Cursor",
+  "hero_from": "",
+  "evidence_from": "https://cursor.com/blog/claude-code-extension-security-notice"
  }
 }
