@@ -1741,5 +1741,26 @@
   "credit_name": "Starlust",
   "hero_from": "https://starlust.org/live/starship-flight-15-live-updates-from-starbase-texas-as-spacex-attempts-its-most-ambitious-mission-ye-mwfhzf1o/",
   "evidence_from": "https://en.wikipedia.org/wiki/Starship_flight_15"
+ },
+ "openai-disbands-robotics-team-astra": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Fortune",
+  "hero_from": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
+  "evidence_from": ""
+ },
+ "langchain-300m-series-c-3b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "LangChain",
+  "hero_from": "https://www.langchain.com/blog/series-c",
+  "evidence_from": ""
+ },
+ "deepseek-app-tools-api": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AI Newsway",
+  "hero_from": "https://ainewsway.com/news/deepseek-opens-its-app-tools-to-api-users",
+  "evidence_from": ""
  }
 }
