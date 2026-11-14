@@ -1650,5 +1650,12 @@
   "credit_name": "PulsAPI",
   "hero_from": "https://www.pulsapi.com/services/microsoft-365",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-business-exchange-restored": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "StatusStack",
+  "hero_from": "https://statusstack.com/blog/microsoft-365-exchange-online-outage-november-12-2026",
+  "evidence_from": "https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html"
  }
 }
