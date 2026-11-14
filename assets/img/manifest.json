@@ -1622,5 +1622,12 @@
   "credit_name": "Reuters",
   "hero_from": "https://kwsn.com/2026/11/13/arms-haas-approached-by-nvidia-board-as-part-of-ceo-search-ft-reports/",
   "evidence_from": ""
+ },
+ "spacex-starship-flight-15-starlink-v3-deployed-booster-broke-apart": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Starlust",
+  "hero_from": "https://starlust.org/live/starship-flight-15-live-updates-from-starbase-texas-as-spacex-attempts-its-most-ambitious-mission-ye-mwfhzf1o/",
+  "evidence_from": "https://en.wikipedia.org/wiki/Starship_flight_15"
  }
 }
