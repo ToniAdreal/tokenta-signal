@@ -1720,5 +1720,12 @@
   "credit_name": "Cursor",
   "hero_from": "",
   "evidence_from": "https://cursor.com/blog/claude-code-extension-security-notice"
+ },
+ "faa-saturday-briefing-faulty-router-l3harris-maintenance": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Associated Press",
+  "hero_from": "https://www.tmj4.com/life/travel/what-caused-the-faa-ground-stop-officials-point-to-router-failure",
+  "evidence_from": ""
  }
 }
