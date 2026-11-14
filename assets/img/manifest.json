@@ -1615,5 +1615,12 @@
   "credit_name": "Investor's Business Daily",
   "hero_from": "https://www.investors.com/news/spacex-starship-flight-15-launch-tower-catch-elon-musk-rocket-lab-electron-milestone-spcx-stock-rklb/",
   "evidence_from": ""
+ },
+ "nvidia-board-approaches-arm-ceo-rene-haas-succession": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://kwsn.com/2026/11/13/arms-haas-approached-by-nvidia-board-as-part-of-ceo-search-ft-reports/",
+  "evidence_from": ""
  }
 }
