@@ -1685,5 +1685,12 @@
   "credit_name": "Y News",
   "hero_from": "https://ynews.digital/technology/microsoft-365-outage-phishing-scam-warning/",
   "evidence_from": ""
+ },
+ "deepmind-weathernext-3-pardig-satweave-datasets": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "UK Met Office",
+  "hero_from": "https://www.metoffice.gov.uk/blog/2026/exploring-future-forecasting-how-the-met-office-is-supporting-ai-innovation",
+  "evidence_from": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
  }
 }
