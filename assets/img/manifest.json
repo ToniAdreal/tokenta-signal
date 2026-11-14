@@ -1636,5 +1636,12 @@
   "credit_name": "Associated Press",
   "hero_from": "https://www.pbs.org/newshour/nation/faa-grounds-all-flights-at-u-s-airports-due-to-air-traffic-control-communications-problems",
   "evidence_from": ""
+ },
+ "faa-lifts-nationwide-ground-stop-after-four-hour-outage": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Associated Press",
+  "hero_from": "https://www.nowgeorgia.com/flights-halted-at-airports-across-us-due-to-air-traffic-control-communications-problems-faa-says/",
+  "evidence_from": ""
  }
 }
