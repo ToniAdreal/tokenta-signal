@@ -1678,5 +1678,12 @@
   "credit_name": "Dataquest India",
   "hero_from": "https://www.dqindia.com/data-and-ai/openai-brings-gpt-6-luna-api-processing-to-india-12804242",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-phishing-campaign-warning": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Y News",
+  "hero_from": "https://ynews.digital/technology/microsoft-365-outage-phishing-scam-warning/",
+  "evidence_from": ""
  }
 }
