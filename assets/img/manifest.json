@@ -1629,5 +1629,12 @@
   "credit_name": "Starlust",
   "hero_from": "https://starlust.org/live/starship-flight-15-live-updates-from-starbase-texas-as-spacex-attempts-its-most-ambitious-mission-ye-mwfhzf1o/",
   "evidence_from": "https://en.wikipedia.org/wiki/Starship_flight_15"
+ },
+ "faa-nationwide-ground-stop-smart-investigation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Associated Press",
+  "hero_from": "https://www.pbs.org/newshour/nation/faa-grounds-all-flights-at-u-s-airports-due-to-air-traffic-control-communications-problems",
+  "evidence_from": ""
  }
 }
