@@ -1657,5 +1657,26 @@
   "credit_name": "StatusStack",
   "hero_from": "https://statusstack.com/blog/microsoft-365-exchange-online-outage-november-12-2026",
   "evidence_from": "https://mailservices.isc.upenn.edu/computing/email/penno365/alerts/ms-incidents.html"
+ },
+ "microsoft-365-outage-12-hours": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Azure Blog",
+  "hero_from": "https://azureblog.co.uk/posts/microsoft-365-outage-12-november-2026/",
+  "evidence_from": ""
+ },
+ "spacex-74b-ai-supercomputing-campuses": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/spacex-unveils-two-ai-supercomputing-campus-plans-in-texas-and-arizona/",
+  "evidence_from": "https://www.unite.ai/spacex-unveils-two-ai-supercomputing-campus-plans-in-texas-and-arizona/"
+ },
+ "openai-india-api-inference-residency": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Dataquest India",
+  "hero_from": "https://www.dqindia.com/data-and-ai/openai-brings-gpt-6-luna-api-processing-to-india-12804242",
+  "evidence_from": ""
  }
 }
