@@ -1790,5 +1790,61 @@
   "credit_name": "GitHub Changelog",
   "hero_from": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
   "evidence_from": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot"
+ },
+ "agile-robots-500m-series-f-85b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Agile Robots",
+  "hero_from": "https://www.agile-robots.com/en/news/detail/physical-ai-leader-agile-robots-raises-500-million-series-f-funding/",
+  "evidence_from": ""
+ },
+ "gxo-apptronik-1000-apollo-loi": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "GXO",
+  "hero_from": "https://gxo.com/news_article/gxo-apptronik-expand-humanoid-robotics-partnership/",
+  "evidence_from": "https://www.unite.ai/gxo-targets-up-to-1-000-apollo-humanoids-if-warehouse-trials-succeed/"
+ },
+ "nvidia-gpu-scarcity-allegation-wsj": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechPowerUp",
+  "hero_from": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+  "evidence_from": "https://www.aiaffairs.com/markets/nvidia-openai-guarantee-gpu-financing-kress/"
+ },
+ "anthropic-ipo-six-times-oversubscribed": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "DailyMech",
+  "hero_from": "https://dailymech.com/articles/anthropic-ipo-six-times-oversubscribed-china-hong-kong-investors-shut-out.html",
+  "evidence_from": ""
+ },
+ "llama-cpp-ggml-v10": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Hugging Face",
+  "hero_from": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+  "evidence_from": ""
+ },
+ "google-antigravity-weil-conjectures": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Google Research",
+  "hero_from": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
+  "evidence_from": ""
+ },
+ "uber-doordash-airbnb-agent-orders": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Gizmodo",
+  "hero_from": "https://gizmodo.com/the-ai-agents-cant-find-anyone-to-help-yet-2000839258",
+  "evidence_from": ""
+ },
+ "xilect-robot-chip-500m-angel": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Gasgoo",
+  "hero_from": "https://autonews.gasgoo.com/articles/news/ubtech-metax-launch-chip-venture-angel-round-raises-500-million-yuan-at-4-billion-valuation-2121137920966295553?ref=aipolicydaily.org",
+  "evidence_from": ""
  }
 }
