@@ -1769,5 +1769,26 @@
   "credit_name": "Electrek",
   "hero_from": "https://electrek.co/2026/11/13/tesla-cybercab-personal-use-orders-299-subscription-geofence/",
   "evidence_from": ""
+ },
+ "anthropic-claude-meetings-google-meet-beta": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/claude-meetings",
+  "evidence_from": ""
+ },
+ "cloudflare-kitesurf-open-source-agent-browser": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cloudflare",
+  "hero_from": "https://blog.cloudflare.com/kitesurf-open-source",
+  "evidence_from": ""
+ },
+ "github-copilot-six-models-deprecated-december-14": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "GitHub Changelog",
+  "hero_from": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot",
+  "evidence_from": "https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot"
  }
 }
