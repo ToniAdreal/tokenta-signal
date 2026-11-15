@@ -1762,5 +1762,12 @@
   "credit_name": "AI Newsway",
   "hero_from": "https://ainewsway.com/news/deepseek-opens-its-app-tools-to-api-users",
   "evidence_from": ""
+ },
+ "tesla-cybercab-personal-orders-29990-299-subscription": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Electrek",
+  "hero_from": "https://electrek.co/2026/11/13/tesla-cybercab-personal-use-orders-299-subscription-geofence/",
+  "evidence_from": ""
  }
 }
