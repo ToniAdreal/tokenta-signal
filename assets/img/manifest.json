@@ -1860,5 +1860,12 @@
   "credit_name": "US Department of State",
   "hero_from": "https://www.state.gov/pax-silica/",
   "evidence_from": ""
+ },
+ "ula-vulcan-amazon-leo-failure": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Everything Space",
+  "hero_from": "https://everythingspace.online/reports/ulas-vulcan-centaur-set-to-return-to-flight-27gtba",
+  "evidence_from": ""
  }
 }
