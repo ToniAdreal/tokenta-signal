@@ -1846,5 +1846,12 @@
   "credit_name": "Gasgoo",
   "hero_from": "https://autonews.gasgoo.com/articles/news/ubtech-metax-launch-chip-venture-angel-round-raises-500-million-yuan-at-4-billion-valuation-2121137920966295553?ref=aipolicydaily.org",
   "evidence_from": ""
+ },
+ "seedance-2-5-flash-api-live": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "BytePlus on X",
+  "hero_from": "https://x.com/BytePlusGlobal/status/2120760891344036304",
+  "evidence_from": "https://mlllm.io/articles/3816-byteplus-announces-seedance-2-5-flash-video-generation-nearly-twice-as-fast-and-34-cheaper/"
  }
 }
