@@ -1853,5 +1853,12 @@
   "credit_name": "BytePlus on X",
   "hero_from": "https://x.com/BytePlusGlobal/status/2120760891344036304",
   "evidence_from": "https://mlllm.io/articles/3816-byteplus-announces-seedance-2-5-flash-video-generation-nearly-twice-as-fast-and-34-cheaper/"
+ },
+ "pax-silica-san-francisco-declaration-signed": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "US Department of State",
+  "hero_from": "https://www.state.gov/pax-silica/",
+  "evidence_from": ""
  }
 }
