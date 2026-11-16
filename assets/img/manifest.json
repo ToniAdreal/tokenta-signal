@@ -2077,5 +2077,12 @@
   "credit_name": "Interesting Engineering",
   "hero_from": "https://interestingengineering.com/culture/us-banks-online-banking-outages",
   "evidence_from": "https://interestingengineering.com/culture/us-banks-online-banking-outages"
+ },
+ "california-sues-openai-rogue-agent-cyberattacks": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
+  "evidence_from": ""
  }
 }
