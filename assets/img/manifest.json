@@ -1944,5 +1944,12 @@
   "credit_name": "TokenPost",
   "hero_from": "https://www.tokenpost.com/news/business/58171",
   "evidence_from": ""
+ },
+ "xpeng-q3-2026-record-revenue-q4-guidance": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CnEVPost",
+  "hero_from": "https://cnevpost.com/2026/11/16/xpeng-q3-2026-earnings/",
+  "evidence_from": ""
  }
 }
