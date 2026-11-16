@@ -49,11 +49,11 @@
   "hero_from": "https://mlq.ai/news/alphabet-discloses-new-548-million-qualcomm-stake-in-third-quarter-13f/"
  },
  "amd-q3-data-center-record": {
-  "credit_name": "AMD 官方新闻稿",
-  "evidence": false,
-  "evidence_from": "",
   "hero": false,
-  "hero_from": ""
+  "evidence": false,
+  "credit_name": "AMD 官方新闻稿",
+  "hero_from": "",
+  "evidence_from": ""
  },
  "amd-taalas-2-9b": {
   "credit_name": "Tech Insider report",
@@ -392,11 +392,11 @@
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/"
  },
  "eu-gemini-press-copyright": {
-  "credit_name": "Morningstar 转发道琼斯报道",
-  "evidence": false,
-  "evidence_from": "",
   "hero": true,
-  "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law"
+  "evidence": false,
+  "credit_name": "Morningstar 转发道琼斯报道",
+  "hero_from": "https://www.morningstar.com/news/dow-jones/202611035398/eu-court-adviser-warns-ai-chatbots-could-risk-infringing-copyright-law",
+  "evidence_from": ""
  },
  "foxconn-october-revenue-4573": {
   "credit_name": "Reuters via TradingView",
@@ -868,11 +868,11 @@
   "hero_from": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
  },
  "openai-internal-security-warnings": {
-  "credit_name": "KWSN republication of the same Reuters article",
-  "evidence": false,
-  "evidence_from": "",
   "hero": true,
-  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/"
+  "evidence": false,
+  "credit_name": "KWSN republication of the same Reuters article",
+  "hero_from": "https://kwsn.com/2026/11/03/openai-employees-warned-about-operational-security-lapses-for-years-sources-say/",
+  "evidence_from": ""
  },
  "openai-lifeval-everyday-tasks": {
   "hero": true,
@@ -1881,5 +1881,40 @@
   "credit_name": "Superpower Daily",
   "hero_from": "https://superpowerdaily.com/posts/lutnick-sought-narrower-ai-chip-controls-affecting-cantor-clients-nyt-finds",
   "evidence_from": ""
+ },
+ "goldman-sachs-claude-code-engineers-only": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "PYMNTS relay of Bloomberg reporting",
+  "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/",
+  "evidence_from": ""
+ },
+ "fal-series-f-16b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch report",
+  "hero_from": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
+  "evidence_from": ""
+ },
+ "uk-ncsc-ai-cyberattack-2028": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Reuters report",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "wired-400-apps-hidden-deepfake": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AppleInsider report",
+  "hero_from": "https://appleinsider.com/articles/26/11/02/hundreds-of-ai-apps-were-part-of-a-network-hiding-sexually-abusive-deepfake-tools",
+  "evidence_from": "https://www.siliconreport.com/wired-finds-over-400-domains-and-apps-hid-explicit-ai-features"
+ },
+ "openai-gpt-6-astra-lattice-standard-model": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Circuitry",
+  "hero_from": "https://thecircuitry.to/article/openai-publishes-a-candidate-lattice-take-on-the-standard-model",
+  "evidence_from": "https://thecircuitry.to/article/openai-publishes-a-candidate-lattice-take-on-the-standard-model"
  }
 }
