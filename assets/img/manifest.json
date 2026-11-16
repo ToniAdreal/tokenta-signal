@@ -1958,5 +1958,12 @@
   "credit_name": "Microsoft Preliminary Post-Incident Report (via Office-Watch)",
   "hero_from": "https://office-watch.com/2026/microsoft-365-outage-explained/",
   "evidence_from": "https://status.cloud.microsoft"
+ },
+ "tencent-hy4-flash-224b-cost-tier": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechNode",
+  "hero_from": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/",
+  "evidence_from": "https://www.unite.ai/tencent-launches-hy4-flash-as-a-lower-cost-multimodal-model/"
  }
 }
