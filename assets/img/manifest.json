@@ -1916,5 +1916,19 @@
   "credit_name": "The Circuitry",
   "hero_from": "https://thecircuitry.to/article/openai-publishes-a-candidate-lattice-take-on-the-standard-model",
   "evidence_from": "https://thecircuitry.to/article/openai-publishes-a-candidate-lattice-take-on-the-standard-model"
+ },
+ "trump-national-champions-nvidia-openai-anthropic-wsj": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "alibaba-qwen4-max-general-availability": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Dow Jones via TradingView",
+  "hero_from": "https://www.tradingview.com/news/DJN_DN20261115001552:0-alibaba-unveils-ai-model-with-stronger-performance-at-lower-cost/",
+  "evidence_from": "https://www.tradingview.com/news/DJN_DN20261115001552:0-alibaba-unveils-ai-model-with-stronger-performance-at-lower-cost/"
  }
 }
