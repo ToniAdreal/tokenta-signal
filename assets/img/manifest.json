@@ -2021,5 +2021,12 @@
   "credit_name": "DroneXL",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "stand-with-jensen-petition-173k-signatures": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/systems/2026/11/16/elon-musk-leads-silicon-valleys-campaign-to-put-jensen-huang-back-in-charge-at-nvidia/5310050",
+  "evidence_from": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
  }
 }
