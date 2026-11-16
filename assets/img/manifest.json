@@ -2105,5 +2105,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/tensorwave-signs-six-year-openai-deal-for-amd-powered-ai-capacity/",
   "evidence_from": "https://www.unite.ai/tensorwave-signs-six-year-openai-deal-for-amd-powered-ai-capacity/"
+ },
+ "google-gtig-fully-automated-ai-cyberattacks-exploit-agent": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Cloud Blog",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+  "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
  }
 }
