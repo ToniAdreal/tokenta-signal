@@ -2042,5 +2042,26 @@
   "credit_name": "Reuters",
   "hero_from": "https://wdsm710.com/2026/11/15/intel-sued-by-shareholders-following-29-stock-plunge/",
   "evidence_from": ""
+ },
+ "nvidia-rubin-hpc-nemotron-for-science-sc26": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "NVIDIA Blog",
+  "hero_from": "https://blogs.nvidia.com/sc26-news/",
+  "evidence_from": ""
+ },
+ "us-commerce-bis-remote-access-ai-chip-rule": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+  "evidence_from": ""
+ },
+ "openai-embedded-assessors-apollo-metr-transluce-goodfire": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/",
+  "evidence_from": "https://www.unite.ai/openai-signs-four-independent-assessors-for-embedded-safety-reviews/"
  }
 }

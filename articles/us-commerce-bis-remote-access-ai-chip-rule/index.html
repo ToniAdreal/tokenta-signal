@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>US Closes the Cloud Loophole on AI Chips With Remote-Access Rule — Tokenta Signal</title><meta name="description" content="The U.S. Commerce Department issued an interim final rule on November 16, 2026 closing the route that let Chinese companies reach advanced AI chips by renting compute from data centers in third countries. Licenses are now required for advanced chip exports to five diversion-risk countries and for data centers providing large-scale compute to restricted firms, with 90 days for existing operators to comply.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="The U.S. Commerce Department issued an interim final rule on November 16, 2026 closing the route that let Chinese companies reach advanced AI chips by renting compute from data centers in third countries. Licenses are now required for advanced chip exports to five diversion-risk countries and for data centers providing large-scale compute to restricted firms, with 90 days for existing operators to comply.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.16 20:40 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 390 · AI SAFETY × OPENAI · TechCrunch</span><span><span class="live">●</span> ISSUE 389 · POLICY × EXPORT CONTROLS · TechCrunch</span><span><span class="live">●</span> ISSUE 388 · SEMICONDUCTORS × NVIDIA · Morningstar</span><span><span class="live">●</span> ISSUE 387 · SEMICONDUCTORS × INTEL · TweakTown</span><span><span class="live">●</span> ISSUE 386 · AI SECURITY × FBI · BleepingComputer</span><span><span class="live">●</span> ISSUE 385 · NVIDIA × STAND WITH JENSEN · The Register</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 390 · AI SAFETY × OPENAI · TechCrunch</span><span><span class="live">●</span> ISSUE 389 · POLICY × EXPORT CONTROLS · TechCrunch</span><span><span class="live">●</span> ISSUE 388 · SEMICONDUCTORS × NVIDIA · Morningstar</span><span><span class="live">●</span> ISSUE 387 · SEMICONDUCTORS × INTEL · TweakTown</span><span><span class="live">●</span> ISSUE 386 · AI SECURITY × FBI · BleepingComputer</span><span><span class="live">●</span> ISSUE 385 · NVIDIA × STAND WITH JENSEN · The Register</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">WORLD & POLICY · SIGNAL REPORT</span>
+<h1>US Closes the Cloud Loophole on AI Chips With Remote-Access Rule</h1>
+<p class="deck">The U.S. Commerce Department issued an interim final rule on November 16, 2026 closing the route that let Chinese companies rent advanced AI chips remotely through overseas data centers. Licenses are now required for advanced chip exports to five diversion-risk countries and for data centers providing large-scale compute to restricted firms, with 90 days for existing operators to comply.</p>
+<div class="meta">ISSUE 389 · 2026-11-16 · SOURCE / <b>TechCrunch</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">POLICY × EXPORT CONTROLS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/us-commerce-bis-remote-access-ai-chip-rule/hero.jpg" alt=""><figcaption class="figcap">IMAGE: TechCrunch — <a href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">12M TPP</div><div class="lab">THE THRESHOLD</div><div class="desc">Total processing performance threshold above which a data center needs a license to provide compute to companies headquartered in China or other D:5 countries. TechCrunch estimates the threshold at roughly the output of about 750 NVIDIA H100 or H200 chips.</div></div><div class="metric"><div class="num">5</div><div class="lab">THE FIVE COUNTRIES</div><div class="desc">Countries added to the license requirement for advanced semiconductor exports: Indonesia, Malaysia, Singapore, Thailand and Brazil, which the Commerce Department says present a higher-than-normal risk of diversion. U.S.-headquartered companies are exempt from this country-level requirement.</div></div><div class="metric"><div class="num">90 days</div><div class="lab">THE GRACE PERIOD</div><div class="desc">Days existing data-center operators have from the rule&#x27;s effective date to obtain a license if they already provide covered compute to restricted firms. Comments on the interim final rule are due 60 days after Federal Register publication.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE TRIGGER — On November 12, 2026, Jensen Huang resigned as chief executive of NVIDIA amid reports tied to his personal conduct and U.S. security concerns, and scrutiny of semiconductor exports intensified.</li><li><b>02</b>THE RULE — On November 16, 2026, the Commerce Department&#x27;s Bureau of Industry and Security issued an interim final rule, RIN 0694-AK50, addressing remote access to advanced semiconductors and servers.</li><li><b>03</b>THE CONTROLS — The rule requires licenses to export advanced AI chips and servers to data centers anywhere if they may provide compute above 12 million total processing performance to companies headquartered in China or other D:5 countries, and adds a license requirement for chip exports to Indonesia, Malaysia, Singapore, Thailand and Brazil.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>The U.S. Commerce Department on November 16, 2026 issued an interim final rule that closes the route Chinese companies have used to reach advanced American AI chips by renting compute from data centers in third countries. The Bureau of Industry and Security rule requires a license to export, reexport or transfer advanced AI chips and servers to data centers anywhere in the world if they may provide compute to companies headquartered in China or other restricted destinations in the Country Group D:5 list, which includes Russia, Iran and North Korea.</p><p>The rule also adds a new license requirement for exports of advanced semiconductors to five countries the department says present a higher-than-normal risk of diversion: Indonesia, Malaysia, Singapore, Thailand and Brazil. Chips destined for companies based in the United States are exempt from that country-level requirement, though the remote-access limits still apply to them. The remote-access provisions apply to data centers or networks able to supply more than 12 million total processing performance, an export-control metric TechCrunch estimates at roughly the output of about 750 NVIDIA H100 or H200 chips.</p><p>Data centers already providing covered services have 90 days from the rule&#x27;s effective date to obtain a license. The rule also formally rescinds the Biden administration&#x27;s AI Diffusion Rule of January 2025, which sorted the world into tiers for chip access and which the current administration had already said it would not enforce. Comments on the interim final rule are due 60 days after it is published in the Federal Register, and the rule takes effect on publication.</p><p>The move comes four days after Jensen Huang resigned as chief executive of NVIDIA on November 12, amid reports tied to his personal conduct and U.S. security concerns, and it is the administration&#x27;s first policy response to that episode. Bloomberg tied the rule directly to the increased scrutiny over semiconductor exports that followed the resignation, according to one report of the announcement.</p>
+<h2><span class="en">WHY IT MATTERS</span>The target is compute, not chips</h2><p>Export controls have always had a gap: a company barred from buying an advanced chip could still rent its output from a data center in a country where the chip itself was legal. The interim final rule attacks that gap directly, shifting the control point from the shipment of hardware to the provision of compute. A data center anywhere in the world that sells large amounts of processing power to a Chinese-headquartered firm now needs a U.S. license, and the 12 million TPP threshold is set low enough to catch serious AI training, not just hobby-scale rentals.</p><p>The five-country license list is the sharper edge. Singapore and Malaysia in particular host large data-center capacity built to serve the region, and a license requirement there changes the economics of building AI infrastructure aimed at customers Washington restricts. The exemption for U.S.-headquartered companies softens the blow for American hyperscalers operating abroad, but it does not exempt them from the remote-access provisions.</p><h2><span class="en">WHAT TO WATCH</span>What to watch next</h2><p>Whether the rule survives its 60-day comment period intact, and how the Bureau of Industry and Security handles license applications from the five newly listed countries. A draft of the rule reported earlier in the week also covered Norway and South Africa; both were dropped from the final text, which suggests the list is still being negotiated in practice.</p><p>The market test comes with NVIDIA&#x27;s third-quarter earnings on November 17, after the market closes, and with the administration&#x27;s expected announcement of AI national champions within the week. Watch whether cloud providers with large Southeast Asian footprints disclose changes to their customer mix, and whether Chinese firms shift compute demand to domestic chips or to data centers below the 12 million TPP threshold.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>From controlling chips to controlling compute</h2><p>Tokenta Signal&#x27;s judgment: this rule is the logical endpoint of five years of chip controls. Every previous round restricted the hardware; this one restricts the output, and that is a much wider net, because compute can be rented from anywhere and the threshold is set to catch real training runs. The five-country list is the tell: Washington is no longer content to police the border of the chip itself and is now policing the map of where AI infrastructure gets built. The open question is enforcement. A license requirement for remote access depends on knowing who the end customer is, and data-center operators have every incentive to plead ignorance. The rule&#x27;s 90-day grace period is the window in which the industry will test how seriously the Bureau of Industry and Security means it.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts rest on TechCrunch&#x27;s November 16, 2026 report, read in full, and on Nextgov&#x27;s November 16, 2026 report, read in full. Both relay the Commerce Department&#x27;s Bureau of Industry and Security interim final rule, RIN 0694-AK50. The rule takes effect when published in the Federal Register; one secondary report&#x27;s suggestion that the license requirement itself takes effect in 90 days conflicts with the TechCrunch and Fortune accounts and is not used here. The 750-chip equivalence is TechCrunch&#x27;s estimate, not a figure in the rule. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>TechCrunch reported on November 16, 2026 that the Trump administration is rolling out new export controls on AI chips and data centers outside the U.S., requiring licenses for AI chips and servers sent to data centers anywhere if they may provide compute to companies in China or other restricted countries.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/" target="_blank" rel="noopener">US tightens AI chip export controls to deter Chinese companies from accessing compute remotely ↗</a><br>techcrunch.com · 2026-11-16 · TechCrunch</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>TechCrunch: US tightens AI chip export controls to deter Chinese companies from accessing compute remotely<br><a href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/" target="_blank" rel="noopener">https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/</a></li><li>Nextgov: Commerce Department moves to close AI chip loophole<br><a href="https://www.nextgov.com/artificial-intelligence/2026/11/commerce-department-moves-close-ai-chip-loophole/417255/" target="_blank" rel="noopener">https://www.nextgov.com/artificial-intelligence/2026/11/commerce-department-moves-close-ai-chip-loophole/417255/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-backs-chip-export-control-bills/">OpenAI Backs Three Bills to Tighten China&#x27;s Access to AI Chips</a> <span class="meta">ISSUE 352</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-supported-regions-china-cutoff/">Anthropic&#x27;s Regional Ban Takes Effect: Claude Off Limits in China, Hong Kong and Macau</a> <span class="meta">ISSUE 323</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../blackwell-fingerprints-china-models/">Inside Six Chinese Open Models, the Fingerprint of a Restricted Chip</a> <span class="meta">ISSUE 247</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../big-tech-sues-california-ab1709/">Google, TikTok and Meta Sue California to Block Its Under-16 Feed Ban</a> <span class="meta">ISSUE 226</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>
