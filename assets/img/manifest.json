@@ -1919,10 +1919,10 @@
  },
  "trump-national-champions-nvidia-openai-anthropic-wsj": {
   "hero": false,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "Reuters",
   "hero_from": "",
-  "evidence_from": ""
+  "evidence_from": "https://news.y0.exchange/article/amazon-microsoft-openai-anthropic-to-be-named-ai-national-champions-wsj"
  },
  "alibaba-qwen4-max-general-availability": {
   "hero": true,
