@@ -1884,17 +1884,17 @@
  },
  "goldman-sachs-claude-code-engineers-only": {
   "hero": true,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "PYMNTS relay of Bloomberg reporting",
   "hero_from": "https://www.pymnts.com/news/artificial-intelligence/2026/goldman-sachs-bars-bankers-from-employing-some-ai-tools/",
-  "evidence_from": ""
+  "evidence_from": "https://www.siliconreport.com/goldman-sachs-cuts-off-most-staff-from-claude-code-and-github"
  },
  "fal-series-f-16b": {
   "hero": true,
-  "evidence": false,
+  "evidence": true,
   "credit_name": "TechCrunch report",
   "hero_from": "https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/",
-  "evidence_from": ""
+  "evidence_from": "https://www.unite.ai/fal-announces-series-f-led-by-bessemer-to-expand-ai-inference-capacity/"
  },
  "uk-ncsc-ai-cyberattack-2028": {
   "hero": false,
@@ -1965,5 +1965,61 @@
   "credit_name": "TechNode",
   "hero_from": "https://technode.com/2026/11/16/tencent-launches-hy4-flash-cutting-ai-task-costs-by-95-in-internal-tests/",
   "evidence_from": "https://www.unite.ai/tencent-launches-hy4-flash-as-a-lower-cost-multimodal-model/"
+ },
+ "mirendil-1b-series-a": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Kurums",
+  "hero_from": "https://kurums.com/venture-funding-rounds-this-week-2026-11-09/",
+  "evidence_from": ""
+ },
+ "kuo-26m-google-tpus": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Dirty Static",
+  "hero_from": "https://dirtystatic.com/articles/openai-anthropic-reportedly-order-millions-google-tpus/",
+  "evidence_from": ""
+ },
+ "blackwell-fingerprints-china-models": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/ai-and-ml/2026/11/13/chinese-ai-labs-are-training-models-on-nvidias-blackwell-despite-export-controls-says-ex-openai-engineer/5309891",
+  "evidence_from": ""
+ },
+ "apple-health-ai-study-openevidence": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Apple Newsroom",
+  "hero_from": "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
+  "evidence_from": ""
+ },
+ "tencent-hy-realtime-voice": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Tech360",
+  "hero_from": "https://www.tech360.tv/tencent-s-voice-model-decides-when-to-search-and-can-sing",
+  "evidence_from": ""
+ },
+ "intel-core-ultra-3-robotics": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechWhoKnows",
+  "hero_from": "https://techwhoknows.com/hardware/intel-core-ultra-series-3-panther-lake-robotics-edge-ai-2026",
+  "evidence_from": ""
+ },
+ "huawei-cloudrobo-wm12-ascend": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Semicon Inside",
+  "hero_from": "https://semiconinside.com/huawei-cloudrobo-wm12-ascend-world-model/",
+  "evidence_from": ""
+ },
+ "uforce-700m-series-a-drones": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "DroneXL",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
