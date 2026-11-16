@@ -1930,5 +1930,12 @@
   "credit_name": "Dow Jones via TradingView",
   "hero_from": "https://www.tradingview.com/news/DJN_DN20261115001552:0-alibaba-unveils-ai-model-with-stronger-performance-at-lower-cost/",
   "evidence_from": "https://www.tradingview.com/news/DJN_DN20261115001552:0-alibaba-unveils-ai-model-with-stronger-performance-at-lower-cost/"
+ },
+ "apple-health-ai-usage-study-openevidence": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Apple Newsroom",
+  "hero_from": "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
+  "evidence_from": "https://www.unite.ai/apple-opens-u-s-study-of-trust-in-conversational-health-ai/"
  }
 }
