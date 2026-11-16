@@ -2063,5 +2063,19 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/",
   "evidence_from": "https://www.unite.ai/openai-signs-four-independent-assessors-for-embedded-safety-reviews/"
+ },
+ "trump-backs-huang-return-doubts-spy-claim": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
+  "evidence_from": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/"
+ },
+ "us-banks-online-outage-chase-bofa-wells-fargo-zelle": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Interesting Engineering",
+  "hero_from": "https://interestingengineering.com/culture/us-banks-online-banking-outages",
+  "evidence_from": "https://interestingengineering.com/culture/us-banks-online-banking-outages"
  }
 }
