@@ -1937,5 +1937,12 @@
   "credit_name": "Apple Newsroom",
   "hero_from": "https://www.apple.com/newsroom/2026/11/apple-launches-research-study-to-explore-the-use-of-ai-for-health/",
   "evidence_from": "https://www.unite.ai/apple-opens-u-s-study-of-trust-in-conversational-health-ai/"
+ },
+ "baidu-q3-2026-ai-cloud-94pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TokenPost",
+  "hero_from": "https://www.tokenpost.com/news/business/58171",
+  "evidence_from": ""
  }
 }
