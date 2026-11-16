@@ -2035,5 +2035,12 @@
   "credit_name": "BleepingComputer",
   "hero_from": "https://www.bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks/",
   "evidence_from": ""
+ },
+ "intel-shareholder-class-action-pc-demand-140b-wipeout": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://wdsm710.com/2026/11/15/intel-sued-by-shareholders-following-29-stock-plunge/",
+  "evidence_from": ""
  }
 }
