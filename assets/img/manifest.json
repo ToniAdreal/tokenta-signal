@@ -1867,5 +1867,19 @@
   "credit_name": "Everything Space",
   "hero_from": "https://everythingspace.online/reports/ulas-vulcan-centaur-set-to-return-to-flight-27gtba",
   "evidence_from": ""
+ },
+ "nvidia-huang-weighs-comeback-ft-reports": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://mymixfm.com/2026/11/15/jensen-huang-discusses-comeback-as-nvidia-ceo-with-allies-ft-reports/",
+  "evidence_from": ""
+ },
+ "lutnick-narrower-chip-controls-cantor-nyt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Superpower Daily",
+  "hero_from": "https://superpowerdaily.com/posts/lutnick-sought-narrower-ai-chip-controls-affecting-cantor-clients-nyt-finds",
+  "evidence_from": ""
  }
 }
