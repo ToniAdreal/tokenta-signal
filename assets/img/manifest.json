@@ -1951,5 +1951,12 @@
   "credit_name": "CnEVPost",
   "hero_from": "https://cnevpost.com/2026/11/16/xpeng-q3-2026-earnings/",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-preliminary-incident-report": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Microsoft Preliminary Post-Incident Report (via Office-Watch)",
+  "hero_from": "https://office-watch.com/2026/microsoft-365-outage-explained/",
+  "evidence_from": "https://status.cloud.microsoft"
  }
 }
