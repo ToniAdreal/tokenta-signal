@@ -2259,5 +2259,12 @@
   "credit_name": "Stocktwits",
   "hero_from": "https://stocktwits.com/news-articles/markets/equity/anthropic-s-new-ipo-filing-shows-amazon-google-will-own-over-a-quarter-of-the-claude-maker/cNbaxuHR9Ws",
   "evidence_from": ""
+ },
+ "nvidia-q3-fy2027-revenue-1158b-beats-q4-guide-130b": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "GamesBeat",
+  "hero_from": "https://gamesbeat.com/nvidias-october-quarter-earnings-hit-115-8b-up-103-with-data-center-revenue-up-110/",
+  "evidence_from": "https://www.coindesk.com/markets/2026/11/17/nvidia-tops-estimates-issues-strong-guidance-adds-usd150-billion-to-buyback-authorization"
  }
 }
