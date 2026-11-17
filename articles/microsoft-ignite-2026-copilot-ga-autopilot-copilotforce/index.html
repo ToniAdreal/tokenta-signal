@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Microsoft Ignite 2026: Copilot Goes GA, Autopilot Rolls Out, Salesforce Joins In — Tokenta Signal</title><meta name="description" content="Microsoft used the Ignite 2026 opening keynote on November 17, 2026 to make the new Copilot generally available, with Home and Office in Copilot live, Autopilot rolling out to Frontier customers, and Copilot Code coming in the following weeks. It also announced Copilotforce, a partnership bringing Salesforce into Microsoft Copilot with more than 38 pre-built sales skills, alongside Dynamics 365 in Copilot, an expanded Agent 365, Microsoft-Decision-1.1, Microsoft Perception, Cobalt 200 virtual machines and Azure Catalyst.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Microsoft used the Ignite 2026 opening keynote on November 17, 2026 to make the new Copilot generally available, with Home and Office in Copilot live, Autopilot rolling out to Frontier customers, and Copilot Code coming in the following weeks. It also announced Copilotforce, a partnership bringing Salesforce into Microsoft Copilot with more than 38 pre-built sales skills, alongside Dynamics 365 in Copilot, an expanded Agent 365, Microsoft-Decision-1.1, Microsoft Perception, Cobalt 200 virtual machines and Azure Catalyst.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.17 18:50 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 405 · MICROSOFT × COPILOT · Microsoft Source</span><span><span class="live">●</span> ISSUE 404 · BYTEDANCE × CHIP CURBS · ZeroHedge</span><span><span class="live">●</span> ISSUE 403 · GROK BOT × AGENT SAFETY · NewCore</span><span><span class="live">●</span> ISSUE 402 · JD.COM × EARNINGS · GlobeNewswire via Newsfilter</span><span><span class="live">●</span> ISSUE 401 · OPTIMIZELY × SUPPLY CHAIN · BleepingComputer</span><span><span class="live">●</span> ISSUE 400 · CORMA × SERIES A · TechCrunch</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 405 · MICROSOFT × COPILOT · Microsoft Source</span><span><span class="live">●</span> ISSUE 404 · BYTEDANCE × CHIP CURBS · ZeroHedge</span><span><span class="live">●</span> ISSUE 403 · GROK BOT × AGENT SAFETY · NewCore</span><span><span class="live">●</span> ISSUE 402 · JD.COM × EARNINGS · GlobeNewswire via Newsfilter</span><span><span class="live">●</span> ISSUE 401 · OPTIMIZELY × SUPPLY CHAIN · BleepingComputer</span><span><span class="live">●</span> ISSUE 400 · CORMA × SERIES A · TechCrunch</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Microsoft Ignite 2026: Copilot Goes GA, Autopilot Rolls Out, Salesforce Joins In</h1>
+<p class="deck">Microsoft used the Ignite 2026 keynote on November 17 to make the new Copilot generally available, with Home and Office in Copilot live, Autopilot rolling out to Frontier customers, and Copilot Code coming in the following weeks. It also announced Copilotforce, a partnership bringing Salesforce into Copilot with more than 38 pre-built sales skills, plus Dynamics 365 in Copilot, an expanded Agent 365, Microsoft-Decision-1.1, Microsoft Perception, Cobalt 200 virtual machines and Azure Catalyst.</p>
+<div class="meta">ISSUE 405 · 2026-11-17 · SOURCE / <b>Microsoft Source</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">MICROSOFT × COPILOT</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/microsoft-ignite-2026-copilot-ga-autopilot-copilotforce/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Microsoft Copilot Blog — <a href="https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">38+</div><div class="lab">COPILOTFORCE SKILLS</div><div class="desc">Pre-built sales skills in the Salesforce in Microsoft Copilot plugin, now in public preview.</div></div><div class="metric"><div class="num">330,000</div><div class="lab">VOLKSWAGEN ROLLOUT</div><div class="desc">Employees at Volkswagen Group being equipped with Copilot, with The Estee Lauder Companies expanding it to more than 14,000 people.</div></div><div class="metric"><div class="num">Up to 50%</div><div class="lab">COBALT 200 GAIN</div><div class="desc">Performance improvement of the generally available Cobalt 200 virtual machines over the previous generation; reaching 23 regions by year end.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE KEYNOTE — Satya Nadella opened Ignite 2026 on November 17, framing Copilot as the new operating system for work and the announcements around human ambition, intelligence and trust.</li><li><b>02</b>COPILOT GOES GA — The new Copilot reached general availability: Home, where Chat and Cowork come together, and Office in Copilot are live; Copilot Managed Runtime is generally available; Autopilot began rolling out to Frontier customers; Copilot Code follows in the coming weeks.</li><li><b>03</b>THE SALESFORCE PACT — Salesforce and Microsoft announced Copilotforce at Ignite: Salesforce in Microsoft Copilot in public preview with more than 38 pre-built sales skills, Sales Cloud in Teams in pilot, and Data 360 connected to Microsoft Fabric with bidirectional zero-copy access. Accenture is design partner and customer zero.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Microsoft used the opening keynote of Ignite 2026 on November 17, 2026 to declare Copilot the new operating system for work, moving it from an assistant that answers questions to a system that carries work forward on its own. Chief executive Satya Nadella framed the shift around three traits: human ambition at the center, ownership of an organization&#x27;s intelligence, and trust. The keynote, which ran into the evening UTC, put general availability, autonomous agents and a repaired relationship with Salesforce at the center of the program.</p><p>The core of the announcement is the new Copilot. Home, where Chat and Cowork come together, is now generally available, and Office is now built directly into the Copilot app. Copilot Code, which lets people build dashboards, trackers and apps in natural language, reaches general availability in the coming weeks, while Copilot Managed Runtime for securely hosting and managing apps is generally available now. Autopilot, a long-running agent that manages recurring tasks and moves projects forward without being prompted at every step, began rolling out to Frontier customers on November 17. A new Today experience inside Home is in private preview in the Copilot app and Outlook.</p><p>The most consequential partnership news is Copilotforce. Salesforce and Microsoft announced it at Ignite on November 17, bringing Salesforce into Microsoft&#x27;s productivity ecosystem after years of rivalry. Salesforce in Microsoft Copilot is a plugin in public preview with more than 38 pre-built sales skills, letting sellers ask natural-language questions, analyze opportunities, prepare for meetings and take CRM actions inside Copilot, grounded in Teams conversations, Outlook email and shared documents. Sales Cloud in Teams, which brings CRM insights into Teams, is in pilot, and Salesforce Data 360 connects to Microsoft Fabric through bidirectional zero-copy data access. Accenture is the design and implementation partner and customer zero, deploying the integrations across its global sales organization; it reports rolling out Copilot to more than 740,000 people and having 55,000 Salesforce users.</p><p>Microsoft also announced Dynamics 365 in Copilot, with updated plugins for Dynamics 365 Sales, Service, and Finance and Operations, and expanded Agent 365, adding Business Analytics so leaders can see what their AI costs and what it delivers, from task success to hours assisted. On the model side, Microsoft-Decision-1.1, a fast, low-cost decision model for routing, classification, prioritization, verification and workflow control, is now generally available, alongside new models for coding, cyber, image and audio. Microsoft Perception, which brings together specialized agents to find, defend and remediate vulnerabilities, powered by models including the MAI-Cyber line, is generally available. Cobalt 200 virtual machines, generally available today, deliver up to 50 percent better performance than the previous generation and will reach 23 regions by year end. Azure Catalyst brings Azure and GitHub agentic tools together in one connected experience. Microsoft cited Volkswagen Group equipping more than 330,000 employees with Copilot and The Estee Lauder Companies expanding it to more than 14,000 people.</p>
+<h2><span class="en">WHY IT MATTERS</span>The assistant era is over; the agent era has a price tag</h2><p>Every element of the Ignite package points the same way: from answering to acting. Autopilot is the clearest marker, an agent that keeps working on recurring tasks without being prompted, and Copilot Code hands app-building to the people closest to the problem. Microsoft is betting that the next unit of enterprise value is not a better answer but a finished task, and it is shipping the governance to match: Agent 365 Business Analytics, Execution Containers, built-in agent identity with Entra support, and Agent 365 policies enforced on every device.</p><p>The Salesforce deal is the tell. Two companies that spent years competing for the same enterprise budgets are now wiring their systems together, with zero-copy data sharing between Data 360 and Fabric and CRM actions executable from inside Copilot. That only happens when both sides believe the agentic layer, not the application, is where the next decade of lock-in lives. Whoever owns the agent&#x27;s working context owns the workflow.</p><h2><span class="en">WHAT TO WATCH</span>What to watch after the keynote</h2><p>First, whether Copilot Code lands on schedule in the coming weeks and whether Autopilot&#x27;s Frontier rollout produces real usage rather than demo usage; long-running agents that act without prompting are exactly the systems that surface trust failures first. Second, whether the Salesforce integration survives contact with real sales organizations: 38 pre-built skills is a starting catalog, not a proven workflow, and Accenture as customer zero is a friendly first deployment.</p><p>Third, the infrastructure economics. Cobalt 200 at up to 50 percent better performance and Microsoft-Decision-1.1 as a cheap routing model both point at the same problem: agentic workloads are expensive to run, and Microsoft is attacking cost from the silicon and the model side at once. The Ignite Book of News carries the full announcement list, and the sessions continue through the week.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The operating system for work is now an agent</h2><p>Tokenta Signal&#x27;s judgment: Ignite 2026 is Microsoft&#x27;s cleanest statement yet that the assistant era is over. The company is no longer selling a better way to ask questions; it is selling a system that finishes tasks, governs the agents that do them, and prices the whole estate. The Salesforce partnership is the strongest evidence for that reading: rivals do not wire their data together unless the layer above the application has become the prize. The risk is execution. Autopilot, Copilot Code and 38 sales skills are promises until real organizations run real work through them, and the trust machinery Microsoft announced alongside them will be tested by the first agent that acts wrongly without being asked.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts rest on Microsoft&#x27;s official Ignite 2026 Source article, read in full, published November 17, 2026 at 18:36 UTC, the Microsoft Copilot Blog post from the same day, and Salesforce&#x27;s Copilotforce announcement, read in full. Copilot Code is not yet generally available; Microsoft says it will reach general availability in the coming weeks. The Today experience inside Copilot Home is in private preview. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Microsoft announced the general availability of the new Copilot, including Home and Office in Copilot, at Ignite 2026 on November 17, alongside the Autopilot agent rollout to Frontier customers and Copilotforce, a partnership bringing Salesforce into Microsoft Copilot with more than 38 pre-built sales skills.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/" target="_blank" rel="noopener">Microsoft Ignite 2026: Empowering human ambition, intelligence and trust ↗</a><br>news.microsoft.com · 2026-11-17 · Microsoft Source</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Microsoft Source: Microsoft Ignite 2026: Empowering human ambition, intelligence and trust<br><a href="https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/" target="_blank" rel="noopener">https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/</a></li><li>Microsoft Copilot Blog: Copilot at Microsoft Ignite: Expanding what&#x27;s possible with intelligence built for work<br><a href="https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/" target="_blank" rel="noopener">https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/</a></li><li>Salesforce: Salesforce and Microsoft Announce Copilotforce<br><a href="https://www.salesforce.com/news/stories/copilotforce-announcement/" target="_blank" rel="noopener">https://www.salesforce.com/news/stories/copilotforce-announcement/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../bytedance-480m-nvidia-chip-loan-frozen-us-rule/">US Chip Curbs Freeze a $480M Loan for Nvidia Chips Bound for ByteDance</a> <span class="meta">ISSUE 404</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../grok-bot-31-unapproved-requests-newcore/">Grok Bot Reached for Corporate Data 31 Times Unasked, Then Said It Had Not</a> <span class="meta">ISSUE 403</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../optimizely-supply-chain-attack-178-sites-malware/">Optimizely Supply-Chain Attack Planted Malware on 178 Major Websites</a> <span class="meta">ISSUE 401</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-board-not-discussing-huang-return-cnbc/">Nvidia Board Is Not Discussing Huang&#x27;s Return, CNBC Reports</a> <span class="meta">ISSUE 399</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>
