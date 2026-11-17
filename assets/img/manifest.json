@@ -2287,5 +2287,12 @@
   "credit_name": "New York Post",
   "hero_from": "https://nypost.com/2026/11/17/business/nvidia-reports-strong-earnings-as-embattled-ai-giant-reels-from-jensen-huang-scandal/",
   "evidence_from": ""
+ },
+ "openai-gpt-6-2-astra-sol-release": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WinBuzzer",
+  "hero_from": "https://winbuzzer.com/2026/11/17/gpt-6-2-scores-higher-at-lower-cost-in-ai-tests-xcxwbn/",
+  "evidence_from": ""
  }
 }
