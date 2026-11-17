@@ -2133,5 +2133,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
   "evidence_from": ""
+ },
+ "optimizely-supply-chain-attack-178-sites-malware": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "BleepingComputer",
+  "hero_from": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
+  "evidence_from": ""
  }
 }
