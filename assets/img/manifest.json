@@ -2224,5 +2224,12 @@
   "credit_name": "Microsoft Copilot Blog",
   "hero_from": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/",
   "evidence_from": ""
+ },
+ "microsoft-mai-code-2-coding-models-github-copilot": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AI Parabellum",
+  "hero_from": "https://aiparabellum.com/microsoft-mai-code-2-cheaper-coding-models-github-copilot/",
+  "evidence_from": "https://aiparabellum.com/microsoft-mai-code-2-cheaper-coding-models-github-copilot/"
  }
 }
