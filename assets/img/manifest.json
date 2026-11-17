@@ -2126,5 +2126,12 @@
   "credit_name": "Cointelegraph",
   "hero_from": "https://cointelegraph.com/news/nvidia-shares-fall-4-as-board-reportedly-rules-out-huang-return",
   "evidence_from": ""
+ },
+ "corma-1b-valuation-125m-series-a": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+  "evidence_from": ""
  }
 }
