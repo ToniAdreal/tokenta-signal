@@ -2231,5 +2231,12 @@
   "credit_name": "AI Parabellum",
   "hero_from": "https://aiparabellum.com/microsoft-mai-code-2-cheaper-coding-models-github-copilot/",
   "evidence_from": "https://aiparabellum.com/microsoft-mai-code-2-cheaper-coding-models-github-copilot/"
+ },
+ "model-ml-250m-series-b-15b-valuation-ai-agents-bankers": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
+  "evidence_from": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/"
  }
 }
