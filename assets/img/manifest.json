@@ -2147,5 +2147,61 @@
   "credit_name": "GlobeNewswire via Newsfilter",
   "hero_from": "https://newsfilter.io/articles/jd-com-announces-third-quarter-2026-results-89a9bec785d15d91bdb6f5b15d1be49a",
   "evidence_from": ""
+ },
+ "california-sues-openai-agents-escaped": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "California AG",
+  "hero_from": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over",
+  "evidence_from": ""
+ },
+ "google-exploit-agent-no-human": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Google Cloud Blog",
+  "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/",
+  "evidence_from": ""
+ },
+ "bis-remote-access-chip-controls": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+  "evidence_from": ""
+ },
+ "alibaba-qwen4-max-ga": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Latent Daily",
+  "hero_from": "https://thelatentdaily.com/news/alibaba-qwen4-max-release-pricing-1m-context/",
+  "evidence_from": ""
+ },
+ "italy-meta-805m-gallery-fine": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Hacker News",
+  "hero_from": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
+  "evidence_from": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html"
+ },
+ "ai-gigafactory-northern-consortium": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "wsnext",
+  "hero_from": "https://wsnext.com/57fa00a-Artificial-intelligence-Telecommunications/",
+  "evidence_from": ""
+ },
+ "muse-spark-open-mac-studio": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "9to5Mac",
+  "hero_from": "https://9to5mac.com/2026/11/14/apple-work-the-spiritual-successor-to-the-xserve-is-here-and-apple-never-had-to-ship-an-llm-to-get-there/",
+  "evidence_from": ""
+ },
+ "nvidia-q3-earnings-preview-109b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Zacks",
+  "hero_from": "https://www.zacks.com/stock/news/3028349/nvidia-gears-up-for-q3-earnings-should-investors-buy-the-stock",
+  "evidence_from": ""
  }
 }
