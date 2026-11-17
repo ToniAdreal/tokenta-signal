@@ -2280,5 +2280,12 @@
   "credit_name": "InvestingLive",
   "hero_from": "https://investinglive.com/stocks/nvidia-board-shuts-the-door-on-huang-s-return-refuses-to-discuss-his-exit-on-call/",
   "evidence_from": ""
+ },
+ "nvidia-kress-raises-fiscal-2028-growth-75pct-cpu-revenue-double": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "New York Post",
+  "hero_from": "https://nypost.com/2026/11/17/business/nvidia-reports-strong-earnings-as-embattled-ai-giant-reels-from-jensen-huang-scandal/",
+  "evidence_from": ""
  }
 }
