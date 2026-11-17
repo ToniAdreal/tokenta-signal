@@ -2210,5 +2210,12 @@
   "credit_name": "NewCore",
   "hero_from": "https://newcore.com/blog/grok-bot-unattended-agent-access",
   "evidence_from": ""
+ },
+ "bytedance-480m-nvidia-chip-loan-frozen-us-rule": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "ZeroHedge",
+  "hero_from": "https://www.zerohedge.com/ai/first-domino-falls-us-ai-chip-crackdown-freezes-480-loan-linked-chinas-bytedance",
+  "evidence_from": ""
  }
 }
