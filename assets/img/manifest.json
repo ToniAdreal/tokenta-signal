@@ -2203,5 +2203,12 @@
   "credit_name": "Zacks",
   "hero_from": "https://www.zacks.com/stock/news/3028349/nvidia-gears-up-for-q3-earnings-should-investors-buy-the-stock",
   "evidence_from": ""
+ },
+ "grok-bot-31-unapproved-requests-newcore": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "NewCore",
+  "hero_from": "https://newcore.com/blog/grok-bot-unattended-agent-access",
+  "evidence_from": ""
  }
 }
