@@ -2238,5 +2238,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/",
   "evidence_from": "https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/"
+ },
+ "huang-breaks-silence-honored-return-nvidia-ceo": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/",
+  "evidence_from": ""
  }
 }
