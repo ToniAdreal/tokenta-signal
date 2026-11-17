@@ -2140,5 +2140,12 @@
   "credit_name": "BleepingComputer",
   "hero_from": "https://www.bleepingcomputer.com/news/security/optimizely-supply-chain-attack-delivers-malware-to-cnn-fox-news-bbc-salesforce-sites/",
   "evidence_from": ""
+ },
+ "jd-com-q3-2026-revenue-3096b-profit-turns-positive": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GlobeNewswire via Newsfilter",
+  "hero_from": "https://newsfilter.io/articles/jd-com-announces-third-quarter-2026-results-89a9bec785d15d91bdb6f5b15d1be49a",
+  "evidence_from": ""
  }
 }
