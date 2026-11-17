@@ -2273,5 +2273,12 @@
   "credit_name": "PYMNTS",
   "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/genesis-ai-raises-500-million-to-scale-robots-with-human-like-dexterity/",
   "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/genesis-ai-raises-500-million-to-scale-robots-with-human-like-dexterity/"
+ },
+ "nvidia-board-rules-out-huang-return-heidrick-struggles-ceo-search": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "InvestingLive",
+  "hero_from": "https://investinglive.com/stocks/nvidia-board-shuts-the-door-on-huang-s-return-refuses-to-discuss-his-exit-on-call/",
+  "evidence_from": ""
  }
 }
