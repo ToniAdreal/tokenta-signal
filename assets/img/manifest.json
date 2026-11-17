@@ -2266,5 +2266,12 @@
   "credit_name": "GamesBeat",
   "hero_from": "https://gamesbeat.com/nvidias-october-quarter-earnings-hit-115-8b-up-103-with-data-center-revenue-up-110/",
   "evidence_from": "https://www.coindesk.com/markets/2026/11/17/nvidia-tops-estimates-issues-strong-guidance-adds-usd150-billion-to-buyback-authorization"
+ },
+ "genesis-ai-500m-series-a-35b-valuation-general-purpose-robots": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "PYMNTS",
+  "hero_from": "https://www.pymnts.com/news/investment-tracker/2026/genesis-ai-raises-500-million-to-scale-robots-with-human-like-dexterity/",
+  "evidence_from": "https://www.pymnts.com/news/investment-tracker/2026/genesis-ai-raises-500-million-to-scale-robots-with-human-like-dexterity/"
  }
 }
