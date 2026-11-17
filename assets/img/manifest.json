@@ -2252,5 +2252,12 @@
   "credit_name": "Zacks",
   "hero_from": "https://www.zacks.com/stock/news/3028349/nvidia-gears-up-for-q3-earnings-should-investors-buy-the-stock",
   "evidence_from": ""
+ },
+ "anthropic-s1a-amendment-amazon-google-284pct-stakes-26b-placement": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Stocktwits",
+  "hero_from": "https://stocktwits.com/news-articles/markets/equity/anthropic-s-new-ipo-filing-shows-amazon-google-will-own-over-a-quarter-of-the-claude-maker/cNbaxuHR9Ws",
+  "evidence_from": ""
  }
 }
