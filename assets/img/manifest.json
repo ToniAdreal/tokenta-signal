@@ -2112,5 +2112,12 @@
   "credit_name": "Google Cloud Blog",
   "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
   "evidence_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
+ },
+ "commerce-designates-33-ai-export-packages-amd-leads-11": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "AIStockWire",
+  "hero_from": "https://aistockwire.com/blog/what-are-ai-national-champions-commerce-33-export-packages-amd-november-2026",
+  "evidence_from": "https://www.tradingview.com/news/seekingalpha:55a4c77ea094b:0-trump-eyes-national-champion-status-for-nvidia-amazon-microsoft-and-other-ai-firms-report/"
  }
 }
