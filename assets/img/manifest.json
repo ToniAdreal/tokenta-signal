@@ -2119,5 +2119,12 @@
   "credit_name": "AIStockWire",
   "hero_from": "https://aistockwire.com/blog/what-are-ai-national-champions-commerce-33-export-packages-amd-november-2026",
   "evidence_from": "https://www.tradingview.com/news/seekingalpha:55a4c77ea094b:0-trump-eyes-national-champion-status-for-nvidia-amazon-microsoft-and-other-ai-firms-report/"
+ },
+ "nvidia-board-not-discussing-huang-return-cnbc": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cointelegraph",
+  "hero_from": "https://cointelegraph.com/news/nvidia-shares-fall-4-as-board-reportedly-rules-out-huang-return",
+  "evidence_from": ""
  }
 }
