@@ -2294,5 +2294,12 @@
   "credit_name": "WinBuzzer",
   "hero_from": "https://winbuzzer.com/2026/11/17/gpt-6-2-scores-higher-at-lower-cost-in-ai-tests-xcxwbn/",
   "evidence_from": ""
+ },
+ "character-ai-privacy-ombudsman-order-user-data-sale": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Nodera.ai",
+  "hero_from": "https://www.nodera.ai/guides/character-ai-bankruptcy",
+  "evidence_from": ""
  }
 }
