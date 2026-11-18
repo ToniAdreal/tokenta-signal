@@ -2364,5 +2364,12 @@
   "credit_name": "Reuters via TBS",
   "hero_from": "https://www.tbsnews.net/tech/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-1605026",
   "evidence_from": ""
+ },
+ "openai-models-14pct-ppa-amd-flagship-gpu-chip-design": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Decoder",
+  "hero_from": "https://the-decoder.com/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/",
+  "evidence_from": ""
  }
 }
