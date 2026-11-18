@@ -2345,10 +2345,10 @@
   "evidence_from": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
  },
  "klarna-ai-assistant": {
-  "hero": false,
+  "hero": true,
   "evidence": false,
-  "credit_name": "Business Wire",
-  "hero_from": "",
+  "credit_name": "Seeking Alpha",
+  "hero_from": "https://seekingalpha.com/news/4673809-klarna-rolls-out-ai-assistant-for-shopping-bookings-everyday-tasks",
   "evidence_from": ""
  },
  "vals-models-civilian-targets": {
