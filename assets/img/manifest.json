@@ -2385,5 +2385,19 @@
   "credit_name": "Reuters",
   "hero_from": "https://www.mix1069.com/2026/11/18/anthropic-prices-blockbuster-ipo-at-83-a-share-source-says/",
   "evidence_from": ""
+ },
+ "palo-alto-networks-applied-compute-4-5b-all-stock": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://kwsn.com/2026/11/18/palo-alto-to-buy-ai-startup-applied-compute-for-4-5-billion/",
+  "evidence_from": ""
+ },
+ "google-gemini-4-neon-coding-agent-index": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
  }
 }
