@@ -2322,5 +2322,47 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
   "evidence_from": ""
+ },
+ "waymo-freeway-grounded": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/waymo-suspends-freeway-rides-nationwide-after-california-dmv-order/",
+  "evidence_from": ""
+ },
+ "anthropic-ipo-ownership-stakes": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+  "evidence_from": ""
+ },
+ "gemini-history-training-split": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Blog",
+  "hero_from": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+  "evidence_from": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+ },
+ "klarna-ai-assistant": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Business Wire",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "vals-models-civilian-targets": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Vals",
+  "hero_from": "https://www.vals.ai/blogs/autonomous-warfare",
+  "evidence_from": ""
+ },
+ "reuters-distillation-china-industrial": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters via TBS",
+  "hero_from": "https://www.tbsnews.net/tech/china-taps-us-ai-models-train-homegrown-rivals-chip-curbs-bite-1605026",
+  "evidence_from": ""
  }
 }
