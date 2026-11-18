@@ -2308,5 +2308,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
   "evidence_from": ""
+ },
+ "microsoft-agent-framework-pypi-compromise-credential-stealer": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Wiz",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
