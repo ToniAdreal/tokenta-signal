@@ -2315,5 +2315,12 @@
   "credit_name": "Wiz",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "nvidia-ends-h200-shipments-china-kress-closes-trump-channel": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+  "evidence_from": ""
  }
 }
