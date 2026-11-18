@@ -2371,5 +2371,12 @@
   "credit_name": "The Decoder",
   "hero_from": "https://the-decoder.com/openai-says-its-models-delivered-a-years-worth-of-chip-optimization-on-top-of-amds-own-engineering/",
   "evidence_from": ""
+ },
+ "google-genie-4-project-genie-ai-ultra-rollout": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google DeepMind",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
  }
 }
