@@ -2378,5 +2378,12 @@
   "credit_name": "Google DeepMind",
   "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
   "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+ },
+ "anthropic-prices-ipo-83-above-range": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "https://www.mix1069.com/2026/11/18/anthropic-prices-blockbuster-ipo-at-83-a-share-source-says/",
+  "evidence_from": ""
  }
 }
