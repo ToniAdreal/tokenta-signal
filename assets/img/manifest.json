@@ -2301,5 +2301,12 @@
   "credit_name": "Nodera.ai",
   "hero_from": "https://www.nodera.ai/guides/character-ai-bankruptcy",
   "evidence_from": ""
+ },
+ "nvidia-startup-stakes-65-5b-kress-shift": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+  "evidence_from": ""
  }
 }
