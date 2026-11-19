@@ -2441,5 +2441,12 @@
   "credit_name": "Hugging Face",
   "hero_from": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
   "evidence_from": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B"
+ },
+ "alibaba-september-quarter-2026-ai-cloud-53pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingView",
+  "hero_from": "https://www.tradingview.com/news/business_wire:aa25cb580dfad:0-alibaba-group-announces-september-quarter-2026-results-and-interim-results-for-the-six-months-ended-september-30-2026",
+  "evidence_from": ""
  }
 }
