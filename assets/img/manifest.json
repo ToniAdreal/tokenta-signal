@@ -2420,5 +2420,12 @@
   "credit_name": "Superpower Daily",
   "hero_from": "https://superpowerdaily.com/posts/openai-estimates-coding-agents-finish-46-of-its-two-to-four-hour-research-tasks",
   "evidence_from": ""
+ },
+ "google-gemini-4-neon-orchestrator": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google official blog",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
  }
 }

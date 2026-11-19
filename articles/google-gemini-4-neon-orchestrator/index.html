@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Four models in five weeks, and Neon takes the orchestrator&#x27;s seat — Tokenta Signal</title><meta name="description" content="Google released Gemini 4 Neon, the fourth model in the Gemini 4 family, on November 18, priced at $3 per million input tokens and $15 per million output tokens, ranking third on the Intelligence Index with a score of 61. In Google&#x27;s design it does not compete as a soloist; it orchestrates, directing clusters of Hydrogen sub-agents through long tasks.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Google released Gemini 4 Neon, the fourth model in the Gemini 4 family, on November 18, priced at $3 per million input tokens and $15 per million output tokens, ranking third on the Intelligence Index with a score of 61. In Google&#x27;s design it does not compete as a soloist; it orchestrates, directing clusters of Hydrogen sub-agents through long tasks.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.19 05:20 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 426 · OPENAI × RESEARCH ACCELERATION · OpenAI</span><span><span class="live">●</span> ISSUE 425 · ANTHROPIC × IPO · Anthropic</span><span><span class="live">●</span> ISSUE 424 · CALIFORNIA × AI REGULATION · Unite.AI</span><span><span class="live">●</span> ISSUE 423 · GOOGLE × GEMINI 4 NEON · Google</span><span><span class="live">●</span> ISSUE 422 · PALO ALTO NETWORKS × APPLIED COMPUTE · Reuters</span><span><span class="live">●</span> ISSUE 421 · ANTHROPIC × IPO · BeInCrypto</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 426 · OPENAI × RESEARCH ACCELERATION · OpenAI</span><span><span class="live">●</span> ISSUE 425 · ANTHROPIC × IPO · Anthropic</span><span><span class="live">●</span> ISSUE 424 · CALIFORNIA × AI REGULATION · Unite.AI</span><span><span class="live">●</span> ISSUE 423 · GOOGLE × GEMINI 4 NEON · Google</span><span><span class="live">●</span> ISSUE 422 · PALO ALTO NETWORKS × APPLIED COMPUTE · Reuters</span><span><span class="live">●</span> ISSUE 421 · ANTHROPIC × IPO · BeInCrypto</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Four models in five weeks, and Neon takes the orchestrator&#x27;s seat</h1>
+<p class="deck">The selling point this time is the division of labour. Neon&#x27;s pricing and benchmarks point at the same position: it acts as the lead agent, splitting tasks, assigning work and checking results, while cheaper Hydrogen runs the volume underneath. The frontier race is shifting from who is smartest to whose team gets the work done.</p>
+<div class="meta">ISSUE 269 · 2026-11-18 · SOURCE / <b>Google official blog</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">GEMINI 4 × NEON</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/google-gemini-4-neon-orchestrator/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Google official blog — <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">61</div><div class="lab">AA INTELLIGENCE INDEX</div><div class="desc">Third on the Intelligence Index at the xhigh thinking level, behind only larger, slower models. Opus 5.5 scores 59, Sol 57.</div></div><div class="metric"><div class="num">39.0%</div><div class="lab">SWE-SWEEP IN ANTIGRAVITY</div><div class="desc">The coding score inside Google&#x27;s own Antigravity harness, nearly four times Opus 5.5&#x27;s best. On the neutral mini-SWE harness it falls to 12.8.</div></div><div class="metric"><div class="num">$16,843</div><div class="lab">VENDING-BENCH 2 REVENUE</div><div class="desc">Simulated revenue from running a business long-term, first place. The test is whether a long task actually gets finished.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE LINEUP — Argon on October 13, Carbon on November 10, Hydrogen on November 12, Neon on November 18. Four elements in five weeks.</li><li><b>02</b>THE PRICE LADDER — Hydrogen holds the low end and the free tier, Neon the middle, Carbon the top. Once the promotional pricing ends on December 1, Neon&#x27;s token price runs a quarter below Carbon&#x27;s.</li><li><b>03</b>THE ORCHESTRATION — Neon acts as lead agent in Antigravity, splitting tasks, dispatching Hydrogen sub-agents in parallel, collecting results, and keeping long sessions alive with context compression.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Argon led off on October 13, Carbon on November 10, Hydrogen on November 12, and Neon arrived on November 18. The Gemini 4 family shipped four models in five weeks, all named from the periodic table, and the model picker in AI Studio is laid out as a periodic table itself. The division of labour was written into the launch: Carbon takes the hardest long-horizon projects, Hydrogen handles fast everyday execution, and Neon fills the high-frequency complex work in between.</p><p>Neon&#x27;s spec sheet is restrained. Input costs $3 per million tokens, cached input $0.15, output $15, with a 1 million-token context window and four thinking levels. There is no free tier; the API opens on the paid tier only, while Pro and Ultra subscribers get it directly in the Gemini app and Antigravity. The official model card shows it was adapted from the Carbon line, with knowledge current to March 2026.</p>
+<h2><span class="en">THE ORCHESTRATOR</span>The lead agent&#x27;s job is the one it does best</h2><p>Google states Neon&#x27;s positioning plainly in the official blog. It can run long tasks on its own, or serve as the orchestrator, directing parallel Hydrogen sub-agents inside Antigravity. The supporting engineering detail is fewer repeated file reads, proactive progress reports while it works, and stable context compression across long sessions.</p><p>In the official demo, a team of Neon agents broke one image down into a spreadsheet of 100,000 cells, running more than 500,000 live formulas for edge detection, depth calculation and relighting, without embedding the image or writing a script. Chubby, a tester who received the model a day early, ran 17 interactive demos in Antigravity; 13 sessions at the xhigh level triggered 762 tool calls in total. Three buggy programs passed all tests after its fixes, all four planted bugs in a code review were found, and it flagged two more edge cases on its own, leap-second validation and folder replacement.</p><h2><span class="en">THE SCORECARD</span>On the scorecard, it loses only three</h2><p>Google&#x27;s official comparison table puts Neon against Claude Opus 5.5 and GPT-6.2 Sol. Across 19 items, Neon loses three: Terminal-Bench 4.1 at 65.2 against Opus at 65.8, FrontierCode at 46.2 against 47.3, and Chartography at 73.5 against Sol at 75.1. It leads on most of the rest. SWE-sweep scores 39.0 inside Google&#x27;s own Antigravity harness, nearly four times the best rival score. Switch to the neutral mini-SWE harness and the lead shrinks to 12.8 against 11.6. The same model on a different harness can differ by a factor of three, and that row is the most revealing line in the table.</p><p>The results beyond coding are equally clear. Vending-Bench 2, which simulates running a business over the long term, puts Neon first with $16,843, and the Artificial Analysis Coding Agent Index puts it first at 58.6. Cursor published same-day measurements on its default tier: CursorBench 4.1 at 63.7, averaging $6.54 per task, on the cost-effectiveness frontier. Security is a separate track: Neon for cyber scores 90.5 on SEC-bench Pro and 51.3 on WebExploitBench, and opens over the coming days through the Fairwind Program to trusted defenders.</p><h2><span class="en">ALSO TODAY</span>Also today, Anthropic prices at $83</h2><p>On the same day, Anthropic set its initial public offering price at $83 per share, above the earlier $70 to $78 range, expanding the offering to 980 million shares and raising about $81.3 billion, a record for an IPO. The shares list on Nasdaq on November 19 under the ticker ANT. The Amazon and Google ownership stakes covered in yesterday&#x27;s piece are unchanged; only the price moved, and the market paid more than the company asked.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM SINGLE MODELS TO MODEL TEAMS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From single models to model teams</div><div class="desc">A lead agent plus a cluster of sub-agents is now the officially recommended architecture. Models are released by job description, and the orchestrator seat gets its own price and its own scorecard.</div></div><div class="metric"><div class="lab">FROM TOKEN PRICE TO TASK COST</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From token price to task price</div><div class="desc">Google has changed the terms of the pitch. Neon&#x27;s token price still sits above Carbon&#x27;s promotional rate; the selling point is a 32% lower cost per completed task. The buyer&#x27;s arithmetic becomes what one finished task actually costs.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Selling the team, not the soloist</h2><p>Tokenta Signal&#x27;s judgment: Neon&#x27;s specs do not dazzle; its position is exact. Google has laid out four models by job description, and the orchestrator seat now stands on its own. The frontier race is shifting from which model is smartest to whose agent team can actually finish a long task. What matters next is whether this division of labour produces real retention inside Antigravity. Demo videos do not count.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">Benchmark figures in this piece rest on Google&#x27;s official disclosures and third-party measurements from Artificial Analysis, Cursor and others. Testing harnesses differ between vendors, so scores cannot be compared directly. The Anthropic offering price at the end is a published term of the offering. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/google-gemini-4-neon-orchestrator/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — blog.google · CLICK TO OPEN THE ORIGINAL ↗</div><p>Google&#x27;s official blog published &#x27;Introducing Gemini 4 Neon&#x27; on November 18: the fourth model in the Gemini 4 family, ranked third on the Intelligence Index with a score of 61, built for fast end-to-end execution of complex software engineering, knowledge work and science workflows.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">Introducing Gemini 4 Neon ↗</a><br>blog.google · 2026-11-18 · Google official blog</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Google: Introducing Gemini 4 Neon<br><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/" target="_blank" rel="noopener">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/</a></li><li>Google DeepMind: Gemini 4 Neon Model Evaluation<br><a href="https://deepmind.google/models/evals-methodology/gemini-4-neon" target="_blank" rel="noopener">https://deepmind.google/models/evals-methodology/gemini-4-neon</a></li><li>PYMNTS: Anthropic Sets Record With $81.3 Billion Share Sale Before Nasdaq Debut<br><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-sets-record-with-81-3-billion-share-sale-before-nasdaq-debut/" target="_blank" rel="noopener">https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-sets-record-with-81-3-billion-share-sale-before-nasdaq-debut/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-research-acceleration-jagged-frontier/">OpenAI: Coding Agents Now Finish 46% of Two-to-Four-Hour Research Tasks Alone</a> <span class="meta">ISSUE 426</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../newsom-california-frontier-ai-oversight-shutdown-powers/">California Proposes Mandatory Frontier AI Oversight, State Shutdown Powers</a> <span class="meta">ISSUE 424</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-gemini-4-neon-coding-agent-index/">Google Launches Gemini 4 Neon, Its Fast Mid-Tier Model, Topping the Coding Agent Index</a> <span class="meta">ISSUE 423</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-genie-4-project-genie-ai-ultra-rollout/">Google Opens Genie 4 to AI Ultra Subscribers as Worlds You Can Rewrite Mid-Walk</a> <span class="meta">ISSUE 420</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>
