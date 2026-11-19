@@ -2434,5 +2434,12 @@
   "credit_name": "TradingView",
   "hero_from": "https://www.tradingview.com/news/stocktwits:d38b019ff094b:0-elon-musk-names-2-anthropic-favorites-ahead-of-its-ipo-flags-a-risk-to-10-gw-opportunity-for-spacex/",
   "evidence_from": ""
+ },
+ "ovhcloud-olala-mini-7a1b-weights-live-hugging-face": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Hugging Face",
+  "hero_from": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B",
+  "evidence_from": "https://huggingface.co/OVHaiLLM/Olala-v1.0-mini-7A1B"
  }
 }
