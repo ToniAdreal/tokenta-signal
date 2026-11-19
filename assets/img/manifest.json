@@ -2497,5 +2497,12 @@
   "credit_name": "New York Post",
   "hero_from": "https://nypost.com/2026/11/19/business/anthropic-to-begin-trading-at-about-110-per-share-in-record-setting-ipo/",
   "evidence_from": ""
+ },
+ "anthropic-closes-first-day-97-17-up-17pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Matteo Ferrando",
+  "hero_from": "https://matteoferrando.com/en/sooner-than-expected/anthropic-goes-public/",
+  "evidence_from": ""
  }
 }
