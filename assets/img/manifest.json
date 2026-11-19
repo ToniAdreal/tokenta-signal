@@ -2462,5 +2462,26 @@
   "credit_name": "Overduin PLLC",
   "hero_from": "https://www.overduinpllc.com/post/after-the-affair-how-washington-is-rewriting-ai-chip-rules",
   "evidence_from": ""
+ },
+ "gao-covert-tests-attack-plans": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechTimes",
+  "hero_from": "https://www.techtimes.com/articles/331074/20261119/gao-bypassed-ai-chatbot-safeguards-chatgpt-claude-gemini-grok-attack-plans-under-12-hours.htm",
+  "evidence_from": "https://www.gao.gov/products/gao-27-108814"
+ },
+ "science-corp-series-d-prima": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Science Corp",
+  "hero_from": "https://science.xyz/news/series-d/",
+  "evidence_from": "https://techcrunch.com/2026/11/17/science-corporations-brain-tech-is-worth-3-5-billion-after-new-funding/"
+ },
+ "boston-dynamics-globalfoundries-atlas": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Boston Dynamics",
+  "hero_from": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
+  "evidence_from": ""
  }
 }
