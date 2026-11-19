@@ -2483,5 +2483,12 @@
   "credit_name": "Boston Dynamics",
   "hero_from": "https://bostondynamics.com/news/boston-dynamics-globalfoundries-expand-robotics-collaboration/",
   "evidence_from": ""
+ },
+ "google-blue-origin-suncatcher-new-glenn-2029": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/"
  }
 }
