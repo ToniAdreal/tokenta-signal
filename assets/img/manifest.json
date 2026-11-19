@@ -2490,5 +2490,12 @@
   "credit_name": "Google",
   "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/",
   "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/"
+ },
+ "anthropic-opens-111-50-up-34pct-record-ipo-debut": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "New York Post",
+  "hero_from": "https://nypost.com/2026/11/19/business/anthropic-to-begin-trading-at-about-110-per-share-in-record-setting-ipo/",
+  "evidence_from": ""
  }
 }
