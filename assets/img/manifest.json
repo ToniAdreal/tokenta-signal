@@ -2504,5 +2504,12 @@
   "credit_name": "Matteo Ferrando",
   "hero_from": "https://matteoferrando.com/en/sooner-than-expected/anthropic-goes-public/",
   "evidence_from": ""
+ },
+ "intuit-q1-fy2027-mailchimp-sale-368b-bending-spoons": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Kunkafa",
+  "hero_from": "https://kunkafa.com/news/intuit-earnings-beat-credit-karma-outlook-after-hours",
+  "evidence_from": ""
  }
 }
