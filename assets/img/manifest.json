@@ -2448,5 +2448,12 @@
   "credit_name": "TradingView",
   "hero_from": "https://www.tradingview.com/news/business_wire:aa25cb580dfad:0-alibaba-group-announces-september-quarter-2026-results-and-interim-results-for-the-six-months-ended-september-30-2026",
   "evidence_from": ""
+ },
+ "pdd-q3-2026-revenue-flat-miss-temu-duty": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GlobeNewswire (via Things Of Business)",
+  "hero_from": "https://www.thingsofbusiness.in/news/59cdccc996/pdd-holdings-announces-third-quarter-2026-unaudited-financial-results",
+  "evidence_from": ""
  }
 }
