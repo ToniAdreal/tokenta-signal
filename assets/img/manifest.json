@@ -2427,5 +2427,12 @@
   "credit_name": "Google official blog",
   "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
   "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+ },
+ "musk-anthropic-10-gigawatts-spacex-compute": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TradingView",
+  "hero_from": "https://www.tradingview.com/news/stocktwits:d38b019ff094b:0-elon-musk-names-2-anthropic-favorites-ahead-of-its-ipo-flags-a-risk-to-10-gw-opportunity-for-spacex/",
+  "evidence_from": ""
  }
 }
