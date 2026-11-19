@@ -2406,5 +2406,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/newsom-proposes-mandatory-frontier-ai-oversight-and-shutdown-powers/",
   "evidence_from": "https://www.unite.ai/newsom-proposes-mandatory-frontier-ai-oversight-and-shutdown-powers/"
+ },
+ "anthropic-confirms-83-ipo-980m-shares-record-deal": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+  "evidence_from": ""
  }
 }
