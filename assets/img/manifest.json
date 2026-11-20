@@ -2686,5 +2686,12 @@
   "credit_name": "LangChain",
   "hero_from": "https://www.langchain.com/blog/langsmith-tool-gateway",
   "evidence_from": "https://www.unite.ai/langchain-launches-langsmith-tool-gateway-to-govern-agent-tool-calls/"
+ },
+ "nvidia-sec-accounting-probe-shares-plunge-14pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Motley Fool",
+  "hero_from": "https://www.fool.com/investing/2026/11/20/nvidia-stock-plunge-wipes-out-nearly-usd500-billion-in-one-day-as-sec-reportedly-probes-its-accounting/",
+  "evidence_from": ""
  }
 }
