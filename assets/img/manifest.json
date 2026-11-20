@@ -2511,5 +2511,12 @@
   "credit_name": "Kunkafa",
   "hero_from": "https://kunkafa.com/news/intuit-earnings-beat-credit-karma-outlook-after-hours",
   "evidence_from": ""
+ },
+ "california-ag-subpoenas-nvidia-huang-china-chips": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "California Attorney General",
+  "hero_from": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-serves-investigative-subpoena-nvidia",
+  "evidence_from": ""
  }
 }
