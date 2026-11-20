@@ -112,7 +112,7 @@
   "hero_from": "https://www.amd.com/en/blogs/2026/amd-epyc-9006-sp7-based-platforms-are-now-shipping.html"
  },
  "amd-q3-data-center-record": {
-  "credit_name": "AMD 官方新闻稿",
+  "credit_name": "AMD \u5b98\u65b9\u65b0\u95fb\u7a3f",
   "evidence": false,
   "evidence_from": "",
   "hero": false,
@@ -154,7 +154,7 @@
   "hero_from": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
  },
  "anthropic-claude-for-manufacturing-17-skills": {
-  "credit_name": "Anthropic · Claude",
+  "credit_name": "Anthropic \u00b7 Claude",
   "evidence": true,
   "evidence_from": "https://preprod.tipranks.com/news/the-fly/anthropic-announces-launch-of-claude-for-manufacturing-thefly-news",
   "hero": true,
@@ -215,6 +215,13 @@
   "evidence_from": "https://www.unite.ai/anthropic-releases-flashprove-for-cryptographic-ai-inference-proofs/",
   "hero": true,
   "hero_from": "https://www.anthropic.com/research/provable-inference"
+ },
+ "anthropic-greenshoe-exercised-93-5b-ipo-closes": {
+  "credit_name": "VolFlash via wallstcn",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://volflash.com/e/83f0d9ea306887d6"
  },
  "anthropic-ipo-nov-19-20-debut-price-range-retracted": {
   "credit_name": "Crypto Briefing",
@@ -301,7 +308,7 @@
   "hero_from": "https://pivotnews.ai/public-sector/candidates-backing-stricter-ai-oversight-win-key"
  },
  "anthropic-s1a-895b-compute": {
-  "credit_name": "gHacks 报道",
+  "credit_name": "gHacks \u62a5\u9053",
   "evidence": true,
   "evidence_from": "https://rrtechpulse.com/stories/anthropic-s1-amendment-895b-compute-commitments/",
   "hero": true,
@@ -320,6 +327,13 @@
   "evidence_from": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/",
   "hero": true,
   "hero_from": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/"
+ },
+ "anthropic-slides-toward-ipo-price-day-two-premarket": {
+  "credit_name": "MarketWatch",
+  "evidence": false,
+  "evidence_from": "",
+  "hero": true,
+  "hero_from": "https://www.marketwatch.com/story/anthropics-stock-slides-closer-to-ipo-price-and-drags-down-the-ai-trade-cc43a0c4"
  },
  "anthropic-supported-regions-china-cutoff": {
   "credit_name": "Anthropic",
@@ -364,7 +378,7 @@
   "hero_from": "https://www.apple.com.cn/newsroom/2026/10/apple-intelligence-features-are-coming-to-users-in-china/"
  },
  "applied-materials-q4-fy2026-record-revenue-1041b-guides-111b": {
-  "credit_name": "StockStory · Applied Materials surprises with Q3 sales, inventory levels improve",
+  "credit_name": "StockStory \u00b7 Applied Materials surprises with Q3 sales, inventory levels improve",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -517,6 +531,13 @@
   "hero": true,
   "hero_from": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-serves-investigative-subpoena-nvidia"
  },
+ "california-ai-safety-shutdown": {
+  "credit_name": "Governor of California",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/newsom-proposes-mandatory-frontier-ai-oversight-and-shutdown-powers/",
+  "hero": true,
+  "hero_from": "https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/"
+ },
  "california-sues-openai-agents-escaped": {
   "credit_name": "California AG",
   "evidence": false,
@@ -546,7 +567,7 @@
   "hero_from": "https://runtimewire.com/article/cat-wu-joins-openai-core-products-product-management"
  },
  "cerebras-q3-2026-adjusted-revenue-2309m-raises-2026-forecast": {
-  "credit_name": "InvestingLive · Cerebras raises 2026 outlook, sees revenue tripling in 2027 as $26bn backlog builds",
+  "credit_name": "InvestingLive \u00b7 Cerebras raises 2026 outlook, sees revenue tripling in 2027 as $26bn backlog builds",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -574,7 +595,7 @@
   "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/china-plans-broad-ai-guardrails-after-global-security-lapses"
  },
  "cisco-q1-fy2027-record-revenue-185b-ai-infrastructure-9b": {
-  "credit_name": "Cisco · Newsroom",
+  "credit_name": "Cisco \u00b7 Newsroom",
   "evidence": true,
   "evidence_from": "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html",
   "hero": true,
@@ -770,7 +791,7 @@
   "hero_from": "https://www.tradingview.com/news/reuters.com,2026:newsml_FWN46Q1J2:0-edgevana-signs-700-mln-in-ai-infrastructure-agreements-as-committed-demand-reaches-7-bln/"
  },
  "eu-gemini-press-copyright": {
-  "credit_name": "Morningstar 转发道琼斯报道",
+  "credit_name": "Morningstar \u8f6c\u53d1\u9053\u743c\u65af\u62a5\u9053",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -924,7 +945,7 @@
   "hero_from": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold/"
  },
  "google-gemini-4-hydrogen-fast-agentic-model": {
-  "credit_name": "Google · The Keyword",
+  "credit_name": "Google \u00b7 The Keyword",
   "evidence": true,
   "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
   "hero": true,
@@ -1134,7 +1155,7 @@
   "hero_from": "https://claude.com/resources/articles/jpmorganchase-expands-claude-code"
  },
  "kakao-mobility-nvidia-level4-mou": {
-  "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility–Nvidia MOU signing",
+  "credit_name": "Korea JoongAng Daily, reporting the Kakao Mobility\u2013Nvidia MOU signing",
   "evidence": true,
   "evidence_from": "https://www.unite.ai/kakao-mobility-signs-nvidia-mou-for-level-4-autonomous-driving/",
   "hero": true,
@@ -1469,6 +1490,13 @@
   "hero": true,
   "hero_from": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/"
  },
+ "microsoft-ignite-seven-mai-models": {
+  "credit_name": "Microsoft Source",
+  "evidence": true,
+  "evidence_from": "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/",
+  "hero": false,
+  "hero_from": ""
+ },
  "microsoft-mai-code-2-coding-models-github-copilot": {
   "credit_name": "AI Parabellum",
   "evidence": true,
@@ -1701,7 +1729,7 @@
   "hero_from": "https://investinglive.com/stocks/nvidia-board-shuts-the-door-on-huang-s-return-refuses-to-discuss-his-exit-on-call/"
  },
  "nvidia-city-ai-physical-agentic": {
-  "credit_name": "NVIDIA 官方博客",
+  "credit_name": "NVIDIA \u5b98\u65b9\u535a\u5ba2",
   "evidence": true,
   "evidence_from": "https://blogs.nvidia.com/blog/cities-physical-agentic-ai-applications/",
   "hero": true,
@@ -1818,6 +1846,13 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/"
+ },
+ "nvidia-vera-rubin-azure-running-ignite": {
+  "credit_name": "NVIDIA Blog",
+  "evidence": true,
+  "evidence_from": "https://www.unite.ai/nvidia-expands-microsoft-ai-collaboration-with-vera-rubin-and-nemotron/",
+  "hero": true,
+  "hero_from": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/"
  },
  "nxp-unified-robotics-platform-physical-ai": {
   "credit_name": "Unite.ai",
@@ -2128,7 +2163,7 @@
   "hero_from": "https://cryptobriefing.com/quanta-computer-record-revenue-ai-servers-margin/"
  },
  "rebellions-nvidia-nvlink-fusion-sovereign-ai": {
-  "credit_name": "Aju Press, reporting the Rebellions–Nvidia–SK Telecom announcement at Nvidia AI Day Seoul",
+  "credit_name": "Aju Press, reporting the Rebellions\u2013Nvidia\u2013SK Telecom announcement at Nvidia AI Day Seoul",
   "evidence": false,
   "evidence_from": "",
   "hero": true,
@@ -2359,7 +2394,7 @@
   "hero_from": "https://www.teslarati.com/teslas-cybercab-fleet-just-had-its-biggest-day-ever/"
  },
  "tesla-robotaxi-fort-worth": {
-  "credit_name": "Not a Tesla App 报道",
+  "credit_name": "Not a Tesla App \u62a5\u9053",
   "evidence": true,
   "evidence_from": "https://www.notateslaapp.com/news/4932/tesla-expands-robotaxi-service-launches-unsupervised-rides-in-fort-worth",
   "hero": true,
@@ -2546,33 +2581,5 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://lifestyle.q923radio.com/story/562220/zeta-global-reports-21st-consecutive-beat-and-raise-quarter-generates-positive-gaap-net-income-in-3q26-ytd-and-achieves-the-rule-of-71/"
- },
- "california-ai-safety-shutdown": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "Governor of California",
-  "hero_from": "https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/",
-  "evidence_from": "https://www.unite.ai/newsom-proposes-mandatory-frontier-ai-oversight-and-shutdown-powers/"
- },
- "microsoft-ignite-seven-mai-models": {
-  "hero": false,
-  "evidence": true,
-  "credit_name": "Microsoft Source",
-  "hero_from": "",
-  "evidence_from": "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"
- },
- "nvidia-vera-rubin-azure-running-ignite": {
-  "hero": true,
-  "evidence": true,
-  "credit_name": "NVIDIA Blog",
-  "hero_from": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/",
-  "evidence_from": "https://www.unite.ai/nvidia-expands-microsoft-ai-collaboration-with-vera-rubin-and-nemotron/"
- },
- "anthropic-greenshoe-exercised-93-5b-ipo-closes": {
-  "hero": true,
-  "evidence": false,
-  "credit_name": "VolFlash via wallstcn",
-  "hero_from": "https://volflash.com/e/83f0d9ea306887d6",
-  "evidence_from": ""
  }
 }
