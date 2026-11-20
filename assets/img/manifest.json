@@ -2616,5 +2616,12 @@
   "credit_name": "Google Blog",
   "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/",
   "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
+ },
+ "openai-performance-factory-codex-chatgpt": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "OpenAI",
+  "hero_from": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/",
+  "evidence_from": ""
  }
 }
