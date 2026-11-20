@@ -2567,5 +2567,12 @@
   "credit_name": "NVIDIA Blog",
   "hero_from": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/",
   "evidence_from": "https://www.unite.ai/nvidia-expands-microsoft-ai-collaboration-with-vera-rubin-and-nemotron/"
+ },
+ "anthropic-greenshoe-exercised-93-5b-ipo-closes": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "VolFlash via wallstcn",
+  "hero_from": "https://volflash.com/e/83f0d9ea306887d6",
+  "evidence_from": ""
  }
 }
