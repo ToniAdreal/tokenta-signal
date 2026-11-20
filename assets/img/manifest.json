@@ -2623,5 +2623,19 @@
   "credit_name": "OpenAI",
   "hero_from": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/",
   "evidence_from": ""
+ },
+ "anthropic-stabilization-position-closed-morgan-stanley": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "microsoft-agent-framework-pypi-compromise": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Wiz",
+  "hero_from": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+  "evidence_from": ""
  }
 }
