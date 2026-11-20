@@ -2525,5 +2525,12 @@
   "credit_name": "Dow Jones via TradingView",
   "hero_from": "https://www.tradingview.com/news/DJN_DN20261119011325:0-asian-equities-fall-as-anthropic-s-blockbuster-ipo-fails-to-staunch-ai-stock-selloff/",
   "evidence_from": ""
+ },
+ "tesla-cybercab-public-rides-dallas-v15": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Teslarati",
+  "hero_from": "https://www.teslarati.com/teslas-cybercab-fleet-just-had-its-biggest-day-ever/",
+  "evidence_from": ""
  }
 }
