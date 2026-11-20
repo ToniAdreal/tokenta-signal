@@ -2546,5 +2546,26 @@
   "evidence_from": "",
   "hero": true,
   "hero_from": "https://lifestyle.q923radio.com/story/562220/zeta-global-reports-21st-consecutive-beat-and-raise-quarter-generates-positive-gaap-net-income-in-3q26-ytd-and-achieves-the-rule-of-71/"
+ },
+ "california-ai-safety-shutdown": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Governor of California",
+  "hero_from": "https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/",
+  "evidence_from": "https://www.unite.ai/newsom-proposes-mandatory-frontier-ai-oversight-and-shutdown-powers/"
+ },
+ "microsoft-ignite-seven-mai-models": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Microsoft Source",
+  "hero_from": "",
+  "evidence_from": "https://news.microsoft.com/source/2026/11/17/microsoft-ignite-2026-empowering-human-ambition-intelligence-and-trust/"
+ },
+ "nvidia-vera-rubin-azure-running-ignite": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "NVIDIA Blog",
+  "hero_from": "https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/",
+  "evidence_from": "https://www.unite.ai/nvidia-expands-microsoft-ai-collaboration-with-vera-rubin-and-nemotron/"
  }
 }
