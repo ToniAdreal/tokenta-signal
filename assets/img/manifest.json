@@ -2518,5 +2518,12 @@
   "credit_name": "California Attorney General",
   "hero_from": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-serves-investigative-subpoena-nvidia",
   "evidence_from": ""
+ },
+ "softbank-plunges-16pct-asian-ai-selloff-anthropic-debut": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Dow Jones via TradingView",
+  "hero_from": "https://www.tradingview.com/news/DJN_DN20261119011325:0-asian-equities-fall-as-anthropic-s-blockbuster-ipo-fails-to-staunch-ai-stock-selloff/",
+  "evidence_from": ""
  }
 }
