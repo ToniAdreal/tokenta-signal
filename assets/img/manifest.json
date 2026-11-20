@@ -2637,5 +2637,26 @@
   "credit_name": "Wiz",
   "hero_from": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
   "evidence_from": ""
+ },
+ "deepseek-closes-100b-yuan-round-star-ipo-prep": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Caixin Global",
+  "hero_from": "https://www.caixinglobal.com/2026-11-20/deepseek-closes-100-billion-yuan-funding-round-102506825.html",
+  "evidence_from": ""
+ },
+ "european-commission-confirms-ai-assisted-cyberattack": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103",
+  "evidence_from": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/"
+ },
+ "cognition-devin-macos-ec2-mac-bare-metal": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AWS Architecture Blog",
+  "hero_from": "https://aws.amazon.com/blogs/architecture/ai-coding-agents-on-amazon-ec2-mac-how-cognition-scales-devin-for-macos/",
+  "evidence_from": ""
  }
 }
