@@ -2646,11 +2646,11 @@
   "hero_from": ""
  },
  "uk-ncsc-ai-cyberattack-2028": {
-  "credit_name": "Reuters report",
-  "evidence": true,
-  "evidence_from": "",
   "hero": false,
-  "hero_from": ""
+  "evidence": true,
+  "credit_name": "Reuters report",
+  "hero_from": "",
+  "evidence_from": ""
  },
  "ula-vulcan-amazon-leo-failure": {
   "credit_name": "Everything Space",
@@ -2833,5 +2833,26 @@
   "credit_name": "RSS Feeds Cloud",
   "hero_from": "https://rssfeeds.cloudsite.builders/2026/11/21/openrouter-minimax-exposure-why-zero-data-retention-labels-failed/",
   "evidence_from": ""
+ },
+ "trump-tremendous-tax-overseas-data-centers": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Gizmodo",
+  "hero_from": "https://gizmodo.com/trump-says-hell-prevent-u-s-companies-from-building-data-centers-overseas-2000843201",
+  "evidence_from": ""
+ },
+ "cairn-ai-agents-monai-zero-day-root": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Amazon Threat Intelligence (AWS Security Blog)",
+  "hero_from": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+  "evidence_from": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html"
+ },
+ "cursor-house-report-prc-open-weight-models": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Seeking Alpha",
+  "hero_from": "https://www.tradingview.com/news/seekingalpha:3106e6b6f094b:0-spacex-s-ai-coding-platform-cursor-considers-phasing-out-use-of-chinese-models-report/",
+  "evidence_from": "https://aiweekly.co/alerts/cursor-tells-house-it-may-drop-chinese-open-weight-models"
  }
 }
