@@ -2707,5 +2707,12 @@
   "credit_name": "Scientific American",
   "hero_from": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/",
   "evidence_from": ""
+ },
+ "anthropic-ipo-closes-93-5b-greenshoe-full-shares-slide": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "New York Post",
+  "hero_from": "https://nypost.com/2026/11/20/business/anthropic-stock-plunges-nearly-10-erasing-most-of-its-gains-since-historic-ipo/",
+  "evidence_from": ""
  }
 }
