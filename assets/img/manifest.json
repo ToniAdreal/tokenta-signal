@@ -2714,5 +2714,12 @@
   "credit_name": "New York Post",
   "hero_from": "https://nypost.com/2026/11/20/business/anthropic-stock-plunges-nearly-10-erasing-most-of-its-gains-since-historic-ipo/",
   "evidence_from": ""
+ },
+ "crowdstrike-in-talks-to-buy-zscaler-265b-combination": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Bloomberg Law",
+  "hero_from": "https://news.bloomberglaw.com/mergers-and-acquisitions/crowdstrike-is-said-in-talks-to-buy-cybersecurity-firm-zscaler",
+  "evidence_from": ""
  }
 }
