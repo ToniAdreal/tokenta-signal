@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lean and Mathlib Certify Alpöge&#x27;s Riemann Proof; No Human Has Read It — Tokenta Signal</title><meta name="description" content="The Lean and Mathlib communities issued a joint statement on November 21, 2026, endorsed by the Lean FRO and the Mathlib Initiative, certifying that Levent Alpöge&#x27;s Lean proof of the Riemann Hypothesis is correct. The statement closes the verification loop opened by Alpöge&#x27;s November 20 release of a 17-million-line Lean library: the statement matches Mathlib&#x27;s own definition, the library compiles, two independent comparators confirm it proves exactly that statement, and several independent proof checkers validated the proof. No human has read the 250,000-page-equivalent argument, and the Clay Institute&#x27;s one-million-dollar prize still requires peer-reviewed publication and two years of scrutiny.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="The Lean and Mathlib communities issued a joint statement on November 21, 2026, endorsed by the Lean FRO and the Mathlib Initiative, certifying that Levent Alpöge&#x27;s Lean proof of the Riemann Hypothesis is correct. The statement closes the verification loop opened by Alpöge&#x27;s November 20 release of a 17-million-line Lean library: the statement matches Mathlib&#x27;s own definition, the library compiles, two independent comparators confirm it proves exactly that statement, and several independent proof checkers validated the proof. No human has read the 250,000-page-equivalent argument, and the Clay Institute&#x27;s one-million-dollar prize still requires peer-reviewed publication and two years of scrutiny.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.21 16:33 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 462 · OPENROUTER × MINIMAX × DATA RETENTION · RSS Feeds Cloud</span><span><span class="live">●</span> ISSUE 461 · RIEMANN HYPOTHESIS × LEAN × FORMAL PROOF · Lean and Mathlib Communities</span><span><span class="live">●</span> ISSUE 460 · METR × AI R&amp;D × TIME HORIZONS · METR</span><span><span class="live">●</span> ISSUE 459 · MICROSOFT × OUTAGE × FINAL REPORT · Microsoft Final Post-Incident Report (via 365Fanatic)</span><span><span class="live">●</span> ISSUE 458 · NAVIER-STOKES × AI · Terence Tao</span><span><span class="live">●</span> ISSUE 457 · COREWEAVE × NEOCLOUD × DEBT FINANCING · BeInCrypto</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 462 · OPENROUTER × MINIMAX × DATA RETENTION · RSS Feeds Cloud</span><span><span class="live">●</span> ISSUE 461 · RIEMANN HYPOTHESIS × LEAN × FORMAL PROOF · Lean and Mathlib Communities</span><span><span class="live">●</span> ISSUE 460 · METR × AI R&amp;D × TIME HORIZONS · METR</span><span><span class="live">●</span> ISSUE 459 · MICROSOFT × OUTAGE × FINAL REPORT · Microsoft Final Post-Incident Report (via 365Fanatic)</span><span><span class="live">●</span> ISSUE 458 · NAVIER-STOKES × AI · Terence Tao</span><span><span class="live">●</span> ISSUE 457 · COREWEAVE × NEOCLOUD × DEBT FINANCING · BeInCrypto</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Lean and Mathlib Certify Alpöge&#x27;s Riemann Proof; No Human Has Read It</h1>
+<p class="deck">The Lean and Mathlib communities certified Alpöge&#x27;s Riemann proof correct; understanding the proof is now the open problem.</p>
+<div class="meta">ISSUE 461 · 2026-11-21 · SOURCE / <b>Lean and Mathlib Communities</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">RIEMANN HYPOTHESIS × LEAN × FORMAL PROOF</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/lean-mathlib-certify-alpoge-riemann-proof/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Lean and Mathlib Communities — <a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">17M lines</div><div class="lab">THE PROOF</div><div class="desc">Lines of Lean code in the library Alpöge released on November 20, across 175,187 files in a 14-part archive.</div></div><div class="metric"><div class="num">4 of 4</div><div class="lab">THE CHECKS</div><div class="desc">Xena Project verification criteria satisfied, covering the statement, compilation, statement matching and proof validity.</div></div><div class="metric"><div class="num">250,000+ pages</div><div class="lab">THE GAP</div><div class="desc">Prose equivalent of the full argument, which no human has read, including the author.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE CLAIM — November 20: Alpöge releases the 17-million-line Lean library with Claude.</li><li><b>02</b>THE CHECKS — November 20-21: the community compiles, compares and kernel-checks the proof.</li><li><b>03</b>THE CERTIFICATION — November 21: the Lean and Mathlib joint statement certifies the proof correct.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>On November 20, 2026, Levent Alpöge, a mathematician on Anthropic&#x27;s technical staff and a junior fellow at the Harvard Society of Fellows, released a four-page note titled Remark alongside a 14-part archive of 175,187 Lean 4 files, claiming a machine-checked proof of the Riemann Hypothesis and the Generalized Riemann Hypothesis developed with Claude over several months. The archive totals 239.3 megabytes and expands to more than 61.5 gigabytes of proof data; Alpöge says the final theoretical pieces aligned late on Sunday, November 15, and that he consulted Anthropic chief executive Dario Amodei before publishing. On November 21, the Lean and Mathlib communities issued a joint statement, endorsed by the Lean FRO and the Mathlib Initiative: &quot;We have full confidence that Alpöge&#x27;s proof of the Riemann Hypothesis is correct, and we congratulate him on this achievement. We hereby certify that both the statement and the proof of the Riemann Hypothesis are correct.&quot;</p><p>The certification rests on four criteria the community published on November 12 through the Xena Project, and the statement says all four are satisfied. First, the statement is correct: it is Mathlib&#x27;s own RiemannHypothesis definition, vetted by experts in Lean and number theory, so readers need not trust a statement written by the proof&#x27;s authors. Second, the library compiles: dozens of people reproduced the same raw proof export with zero errors under Lean 4.33.1 and Mathlib 4.33.1, all 175,187 modules accepted. Third, the code proves the correct statement: the community added a file isolating the hypothesis that imports only Mathlib, and two independent tools, comparator and con-leche in compare mode, confirmed over 51,692 challenge declarations that the theorem proved is exactly Mathlib&#x27;s statement. Fourth, the proof is valid: the exported raw proof was checked by Lean&#x27;s official kernel, the con-leche and con-ron checkers, and independent third-party checkers written in different programming languages. The con-leche and con-ron checkers carry formal proofs, relative to set theory, that they cannot accept a false proof, and the checks ran on an inert export, out of reach of hypothetical malicious code in the proof sources. An axiom audit confirmed the headline theorems depend only on Lean&#x27;s three standard axioms: propositional extensionality, classical choice and quotient soundness.</p><p>What the certification does not settle is understanding. A natural-language exposition of the argument would span more than 250,000 pages, and Alpöge told the Associated Press he does not yet fully understand the proof himself; he plans academic lectures and a human-readable synthesis to distill it. A second, all-human proof claim landed the same day: Alessandro Masullo&#x27;s Generalized Riemann Hypothesis draft, The Music of the Prime, hurried out by Stanford&#x27;s Ravi Vakil after months of review by Brian Conrad. The Clay Mathematics Institute&#x27;s one-million-dollar prize still requires publication in a qualifying peer-reviewed journal and at least two years of open examination before formal deliberation. MIT&#x27;s Andrew Sutherland, who coordinated the verification effort, publishes an extensive overview of the checks, and the broader mathematics establishment continues to regard the proof as unverified pending human comprehension.</p>
+<h2><span class="en">WHY IT MATTERS</span>Certification is not comprehension</h2><p>The verification stack is the story as much as the theorem. The community answered the obvious objection, that Lean itself might have a flaw the proof exploits, with checkers that are formally proven incapable of accepting a false proof, with independent kernels in different languages, and with checks run on an inert export that malicious code cannot touch. The statement-matching step matters most: a 17-million-line proof is worthless if it proves a subtly different statement, and two independent comparators confirmed it proves exactly the hypothesis Mathlib defines. By every criterion the community published in advance, correctness is now a settled computational fact.</p><p>What remains is the human part, and it will take years. Nobody has read the argument, including its author, and the rival all-human draft is still under review. The open question has shifted from whether the hypothesis is true to why it is true, and whether the ideas inside 17 million lines of machine argument can be compressed into mathematics a person can hold in their head. That compression, not the certificate, is what the Clay process and the planned lectures are for.</p><h2><span class="en">WHAT TO WATCH</span>What to watch after the certificate</h2><p>Watch Alpöge&#x27;s lectures and human-readable synthesis for the first compressed account of the method, a descendant of Stepanov&#x27;s method that chains theta lifts between unitary groups, and whether independent number theorists find the ideas sound once they can see them. Watch the readings of Masullo&#x27;s all-human draft, which would give the result a second, human route if it holds up. And watch the Clay process: peer-reviewed publication plus two years of scrutiny is a long road, and the prize deliberation cannot start until it is travelled.</p><p>Watch also for the pattern to repeat. Google&#x27;s Antigravity team reported machine-checked formalizations of the Weil conjectures and Hilbert&#x27;s tenth problem on November 13, and the Riemann episode is now the template for how such claims get tested: public artifact, independent compilation, statement comparison, kernel replay. The next claim that arrives without a public artifact, or without a comparator run, will be judged against this one.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM CLAIM TO CERTIFICATION</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From claim to certification</div><div class="desc">Alpöge&#x27;s November 20 release was a claim with a compiling artifact. Within a day, the Lean and Mathlib communities certified both the statement and the proof correct against their four published criteria.</div></div><div class="metric"><div class="lab">FROM READING TO CHECKING</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From reading proofs to checking code</div><div class="desc">A 250,000-page-equivalent argument cannot be refereed by reading. Verification moved to compilation, statement comparison and independent kernel checks run on an inert export.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Lean and Mathlib Certify Alpöge&#x27;s Riemann Proof; No Human Has Read It</h2><p>Tokenta Signal&#x27;s judgment: The proof is now a computational fact and a human mystery at the same time. The Lean and Mathlib communities ran the strongest verification available: the statement is Mathlib&#x27;s own, the library compiles everywhere, two comparators confirm it proves exactly that statement, and independent checkers, some formally proven incapable of accepting a false proof, validated the export. That settles correctness by every criterion the community published in advance. It settles nothing about understanding: 250,000 pages of machine argument, an author who says he does not yet fully grasp it, a rival human draft under review, and a Clay process that demands publication plus two years. The milestone is real, and so is the work ahead.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The joint statement certifies the Riemann Hypothesis as formalized in Mathlib; Alpöge&#x27;s archive also claims the Generalized Riemann Hypothesis. Certification is a machine-checking result, not peer review: the Clay Mathematics Institute requires publication in a qualifying peer-reviewed journal and two years of open examination before prize deliberation, and no human has yet read the full argument. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/lean-mathlib-certify-alpoge-riemann-proof/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — math.mit.edu · CLICK TO OPEN THE ORIGINAL ↗</div><p>The Lean and Mathlib communities issued a joint statement on November 21, 2026, certifying that Levent Alpöge&#x27;s Lean proof of the Riemann Hypothesis is correct. The 17-million-line library released on November 20 compiles without errors, two independent comparators confirm it proves exactly Mathlib&#x27;s statement of the hypothesis, and independent proof checkers validated the export. No human has read the argument, which would fill more than 250,000 pages of prose.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" target="_blank" rel="noopener">Lean verification of the Riemann Hypothesis ↗</a><br>leanprover-community.github.io · 2026-11-21 · Lean and Mathlib Communities</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Lean and Mathlib Communities: Lean verification of the Riemann Hypothesis<br><a href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/" target="_blank" rel="noopener">https://leanprover-community.github.io/blog/posts/riemann-hypothesis/</a></li><li>CASRAI: 175,000-File Lean Riemann Hypothesis Proof Claim<br><a href="https://casrai.org/news/anthropic-levent-alpoge-claude-lean-riemann-hypothesis-claim-2026" target="_blank" rel="noopener">https://casrai.org/news/anthropic-levent-alpoge-claude-lean-riemann-hypothesis-claim-2026</a></li><li>MIT (Andrew Sutherland): RH Lean proof verification files<br><a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener">https://math.mit.edu/~drew/grh/</a></li><li>Scientific American: The AI Riemann hypothesis proof is almost certainly true, independent mathematicians attest<br><a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/" target="_blank" rel="noopener">https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openrouter-minimax-prompts-read-third-party/">OpenRouter Warns MiniMax Prompts May Have Been Read by a Third Party</a> <span class="meta">ISSUE 462</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../metr-time-horizons-2-ai-rd-capabilities/">METR: Frontier AI Now Matches Skilled Humans on 27-Hour Tasks; Horizons Still Doubling Every 3.6 Months</a> <span class="meta">ISSUE 460</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../microsoft-365-outage-final-post-incident-report/">Microsoft 365 Final Report: Four Factors Behind the November 12 Outage; Fixes Run Into 2027</a> <span class="meta">ISSUE 459</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../alpoge-buckmaster-unforced-navier-stokes-blowup/">Alpöge and Buckmaster Claim Unforced Navier-Stokes Blow-Up, Closing OpenAI&#x27;s Forcing Loophole</a> <span class="meta">ISSUE 458</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>
