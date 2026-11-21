@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anthropic Mathematician Says Claude Proved Riemann; Independent Checks Are Holding — Tokenta Signal</title><meta name="description" content="Anthropic mathematician Levent Alpöge said on Friday, November 20, 2026, that he and Claude have proved the Riemann hypothesis, first posed in 1859, and released a Lean formalization; he also claims the Generalized Riemann Hypothesis. Independent mathematicians including MIT&#x27;s Andrew Sutherland separately compiled the Lean proof without issues. A comparator run is still pending, there is no preprint or peer review, and a second human proof claim by Alessandro Masullo landed the same day. The Clay Mathematics Institute&#x27;s $1 million prize requires peer-reviewed publication and two years of scrutiny. This flash follows the Anthropic IPO in flashes 440, 441, 443 and 447.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Anthropic mathematician Levent Alpöge said on Friday, November 20, 2026, that he and Claude have proved the Riemann hypothesis, first posed in 1859, and released a Lean formalization; he also claims the Generalized Riemann Hypothesis. Independent mathematicians including MIT&#x27;s Andrew Sutherland separately compiled the Lean proof without issues. A comparator run is still pending, there is no preprint or peer review, and a second human proof claim by Alessandro Masullo landed the same day. The Clay Mathematics Institute&#x27;s $1 million prize requires peer-reviewed publication and two years of scrutiny. This flash follows the Anthropic IPO in flashes 440, 441, 443 and 447.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.21 00:18 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 452 · ANTHROPIC × RIEMANN HYPOTHESIS · Scientific American</span><span><span class="live">●</span> ISSUE 451 · US SENATE × AI FINANCING · IANS</span><span><span class="live">●</span> ISSUE 450 · NVIDIA × SEC PROBE · Reuters</span><span><span class="live">●</span> ISSUE 449 · LANGCHAIN × AGENTS · LangChain</span><span><span class="live">●</span> ISSUE 448 · TENCENT × HY4 · Sulat</span><span><span class="live">●</span> ISSUE 447 · ANTHROPIC × FRIDAY CLOSE · CNN</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 452 · ANTHROPIC × RIEMANN HYPOTHESIS · Scientific American</span><span><span class="live">●</span> ISSUE 451 · US SENATE × AI FINANCING · IANS</span><span><span class="live">●</span> ISSUE 450 · NVIDIA × SEC PROBE · Reuters</span><span><span class="live">●</span> ISSUE 449 · LANGCHAIN × AGENTS · LangChain</span><span><span class="live">●</span> ISSUE 448 · TENCENT × HY4 · Sulat</span><span><span class="live">●</span> ISSUE 447 · ANTHROPIC × FRIDAY CLOSE · CNN</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Anthropic Mathematician Says Claude Proved Riemann; Independent Checks Are Holding</h1>
+<p class="deck">Anthropic mathematician Levent Alpöge said on Friday, November 20, 2026, that he and Claude have proved the Riemann hypothesis and released a Lean formalization; he also claims the Generalized Riemann Hypothesis. Independent mathematicians including MIT&#x27;s Andrew Sutherland separately compiled the Lean proof without issues. A comparator run is still pending, there is no preprint or peer review, and a second human proof claim by Alessandro Masullo landed the same day. The Clay $1 million prize requires peer-reviewed publication and two years of scrutiny. This flash follows the Anthropic IPO in flashes 440, 441, 443 and 447.</p>
+<div class="meta">ISSUE 452 · 2026-11-20 · SOURCE / <b>Scientific American</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ANTHROPIC × RIEMANN HYPOTHESIS</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/anthropic-alpoge-claude-riemann-hypothesis-lean-proof/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Scientific American — <a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">1859</div><div class="lab">THE PROBLEM&#x27;S AGE</div><div class="desc">Year Bernhard Riemann first posed the hypothesis about the hidden pattern in the distribution of prime numbers; it has stood open ever since.</div></div><div class="metric"><div class="num">2</div><div class="lab">TWO PROOFS, ONE DAY</div><div class="desc">Proofs of the Riemann hypothesis claimed on the same day: Alpöge&#x27;s AI-assisted Lean formalization and Alessandro Masullo&#x27;s human-written draft, put out by American Mathematical Society president Ravi Vakil.</div></div><div class="metric"><div class="num">$1M</div><div class="lab">THE PRIZE AT STAKE</div><div class="desc">Clay Mathematics Institute prize for each Millennium Prize Problem, payable only after peer-reviewed publication and two years of scrutiny; neither claim is near that bar.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE CLAIM — On Friday, November 20, 2026, Anthropic mathematician Levent Alpöge posted a note saying he believes he has, working with Claude, discovered a proof of the Riemann hypothesis and its generalization, and released a Lean formalization of the proof.</li><li><b>02</b>THE INDEPENDENT CHECK — Independent researchers including MIT mathematician Andrew Sutherland separately compiled Alpöge&#x27;s Lean proof without issues; Sutherland told Scientific American the chance anything is fishy is approximately zero.</li><li><b>03</b>THE CAVEAT — A comparator run is still pending to verify the code does not redefine any symbol in the theorem statement and compiles under independent kernels; there is no preprint and no peer review, and the Clay prize requires publication plus two years of scrutiny.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Levent Alpöge, a mathematician at Anthropic, posted a four-page note on his personal website on Friday, November 20, 2026, saying he believes he has, working with Claude, discovered a proof of the Riemann hypothesis, first posed in 1859 and widely regarded as the most important open question in pure mathematics. He said the same method also settles the Generalized Riemann Hypothesis. Alongside the note he released a Lean formalization of the proof, code a computer can check step by step. He said a full written argument would be extremely long, that he had not yet mastered all of the mathematics involved, and that he planned to write it up properly. He consulted Anthropic chief executive Dario Amodei before announcing, and acknowledged the timing, a day after Anthropic&#x27;s record stock market debut, could be viewed cynically.</p><p>Independent mathematicians have now run the code themselves. Andrew Sutherland of MIT and other researchers separately compiled Alpöge&#x27;s Lean proof without issues. &quot;The Lean proof has been compiled and independently rechecked by the Lean kernel with only the three standard axioms,&quot; Sutherland told Scientific American. &quot;Honestly the chance that anything is fishy here is approximately zero.&quot; That is a substantive check: a Lean proof that compiles error-free is usually taken as confirmation that each step&#x27;s logic is correct. But one check remains. Researchers are still running a comparator run, which verifies the code does not redefine the meaning of any symbol in the theorem statement and that it compiles under several independent kernels, not only Lean&#x27;s official one. Kevin Buzzard of Imperial College London, who raised the question, wrote that the process typically takes a matter of hours.</p><p>The same day brought a second claim. Ravi Vakil, president of the American Mathematical Society, put out a draft by Alessandro Masullo claiming the Generalized Riemann Hypothesis by an entirely human route, work Stanford&#x27;s Brian Conrad had been vetting for months. Two proofs of the same problem landing on the same day is, on its own, a reason for care: the community has not yet had time to read either one. Brian Conrey, a leading specialist on the Riemann hypothesis, called the moment monumental but told AFP he had not yet seen a manuscript, only Alpöge&#x27;s remarks, and had asked for a copy. The hypothesis is one of seven Clay Millennium Prize Problems, each carrying a $1 million prize; under the institute&#x27;s rules a solution must be published in a peer-reviewed journal and withstand two years of scrutiny.</p>
+<h2><span class="en">WHY IT MATTERS</span>A compiled proof is not yet a confirmed proof</h2><p>The distinction matters more than the headline. Lean compilation checks that every step follows from the last. The comparator run checks that the steps prove the thing claimed, rather than a subtly different statement smuggled in through a redefinition. Until that run passes, the correct word is &quot;claimed,&quot; and Scientific American&#x27;s own editor&#x27;s note calls the story developing. The August precedent cuts both ways: an unreleased Claude improved a long-standing Riemann-related result, and OpenAI&#x27;s claim to have solved the Navier-Stokes equations two months ago still awaits full vetting.</p><p>What is already new is the method. Alpöge&#x27;s notes show months of open-ended work with Claude across mathematical areas since October 6, with several key steps dated November 15. If the comparator run passes, it caps a year in which AI&#x27;s mathematical capability went from unreliable student to the solver of a 167-year-old problem, and Hector Pasten&#x27;s description of a &quot;Rosetta Stone&quot; between branches of mathematics starts to look literal.</p><h2><span class="en">WHAT TO WATCH</span>The comparator run, the human draft, and the Clay clock</h2><p>Watch first for the comparator run result, expected within hours, and for whether independent kernels reproduce the compilation. Then watch for the full written argument Alpöge promised, and for readings of the Masullo draft, which has the advantage of months of private vetting but the disadvantage of arriving the same day as its rival. Either claim reaching a journal starts the Clay Institute&#x27;s two-year scrutiny clock; neither prize is close. The near-term signal is narrower: whether working mathematicians start building on the new ideas, which Carlo Pagano called very plausible on first inspection, or find the gap the comparator run was designed to catch.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The compilation is real; the word is still &#x27;claimed&#x27;</h2><p>Tokenta Signal&#x27;s judgment: the independent Lean compilation is a genuine verification step, not a press release, and Sutherland&#x27;s assessment carries weight. But a proof that compiles is not a proof that is confirmed until the comparator run rules out a redefined statement and the theorem is checked against the actual Riemann hypothesis. Two proofs landing on the same day, one AI-assisted and one human, is either a remarkable coincidence or a warning that the community has not yet had time to read either. Keep &quot;claimed&quot; in the headline until the comparator run passes and a readable argument exists. If it does pass, this is the biggest mathematics story of the century, and it happened the day after Anthropic went public.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The claim and the independent Lean compilation come from Scientific American&#x27;s verification report and the AFP report, both read in full; the second same-day claim comes from DataCamp&#x27;s report. The proof has not been peer-reviewed, no preprint has been published, and the comparator run that would rule out a redefined statement is still pending. The Clay Mathematics Institute requires peer-reviewed publication and two years of scrutiny before awarding its $1 million prize. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Anthropic mathematician Levent Alpöge said on Friday, November 20, 2026, that he and Claude have proved the Riemann hypothesis and released a Lean formalization. Independent mathematicians including MIT&#x27;s Andrew Sutherland have separately compiled the Lean proof; a comparator run is still pending.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/" target="_blank" rel="noopener">The AI Riemann Hypothesis Proof Is Almost Certainly True, Independent Mathematicians Attest ↗</a><br>scientificamerican.com · 2026-11-20 · Scientific American</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Scientific American: The AI Riemann hypothesis proof is almost certainly true, independent mathematicians attest<br><a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/" target="_blank" rel="noopener">https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/</a></li><li>Scientific American: Anthropic mathematician claims to prove Riemann hypothesis, most famous problem in all of math<br><a href="https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/" target="_blank" rel="noopener">https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/</a></li><li>AFP via phys.org: Anthropic researcher says he and Claude proved the Riemann hypothesis, first posed in 1859<br><a href="https://phys.org/news/2026-11-anthropic-claude-math-greatest-riddle.html" target="_blank" rel="noopener">https://phys.org/news/2026-11-anthropic-claude-math-greatest-riddle.html</a></li><li>DataCamp: Riemann Hypothesis: Two Proofs in One Day, One Using AI<br><a href="https://www.datacamp.com/blog/ai-solved-riemann-hypothesis" target="_blank" rel="noopener">https://www.datacamp.com/blog/ai-solved-riemann-hypothesis</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../senate-audit-ai-act-sec-ai-financing-disclosure/">Four Senators Move to Force the AI Boom&#x27;s Financing Into the Open</a> <span class="meta">ISSUE 451</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-sec-accounting-probe-shares-plunge-14pct/">SEC Is Examining Nvidia&#x27;s Accounting, and the Stock Fell 14% in a Day</a> <span class="meta">ISSUE 450</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../langchain-langsmith-tool-gateway-public-beta/">LangChain Puts LangSmith Tool Gateway in Public Beta to Govern Agent Tool Calls</a> <span class="meta">ISSUE 449</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tencent-hy4-open-weights-770b/">Tencent Releases Open Weights for Hy4, Its 770B-Parameter Flagship, Under a New Licence</a> <span class="meta">ISSUE 448</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

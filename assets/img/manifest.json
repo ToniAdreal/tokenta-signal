@@ -2693,5 +2693,19 @@
   "credit_name": "Motley Fool",
   "hero_from": "https://www.fool.com/investing/2026/11/20/nvidia-stock-plunge-wipes-out-nearly-usd500-billion-in-one-day-as-sec-reportedly-probes-its-accounting/",
   "evidence_from": ""
+ },
+ "senate-audit-ai-act-sec-ai-financing-disclosure": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Oossa",
+  "hero_from": "https://oossa.com/en/anthropic-s-ipo-sparks-new-ai-oversight-push-in-congress",
+  "evidence_from": ""
+ },
+ "anthropic-alpoge-claude-riemann-hypothesis-lean-proof": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Scientific American",
+  "hero_from": "https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/",
+  "evidence_from": ""
  }
 }
