@@ -2854,5 +2854,12 @@
   "credit_name": "Seeking Alpha",
   "hero_from": "https://www.tradingview.com/news/seekingalpha:3106e6b6f094b:0-spacex-s-ai-coding-platform-cursor-considers-phasing-out-use-of-chinese-models-report/",
   "evidence_from": "https://aiweekly.co/alerts/cursor-tells-house-it-may-drop-chinese-open-weight-models"
+ },
+ "tsmc-samsung-pause-shipments-bis-chip-rules": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "CASRAI",
+  "hero_from": "https://casrai.org/news/tsmc-samsung-suspend-china-chip-shipments-bis-rule-2026",
+  "evidence_from": "https://aiweekly.co/alerts/tsmc-pauses-shipments-as-new-us-chip-rules-hit-beyond-ai"
  }
 }
