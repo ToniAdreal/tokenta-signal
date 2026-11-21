@@ -2742,5 +2742,12 @@
   "credit_name": "Sell The News",
   "hero_from": "https://sellthenews.org/catalyx/stocks/CRWV",
   "evidence_from": ""
+ },
+ "alpoge-buckmaster-unforced-navier-stokes-blowup": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Scientific American via Briefly",
+  "hero_from": "https://briefly.co/anchor/OMG_science/story/ai-just-solved-the-real-navier-stokes-problem",
+  "evidence_from": ""
  }
 }
