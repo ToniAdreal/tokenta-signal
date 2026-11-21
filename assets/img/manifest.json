@@ -2749,5 +2749,12 @@
   "credit_name": "Scientific American via Briefly",
   "hero_from": "https://briefly.co/anchor/OMG_science/story/ai-just-solved-the-real-navier-stokes-problem",
   "evidence_from": ""
+ },
+ "microsoft-365-outage-final-post-incident-report": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Microsoft Final Post-Incident Report (via 365Fanatic)",
+  "hero_from": "https://www.365fanatic.com/m365-outage-12-november-2026-final-report/",
+  "evidence_from": "https://status.cloud.microsoft"
  }
 }
