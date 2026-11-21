@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tesla Begins FSD v15 Rollout, Claims 25x Safety Gain With New Reality View — Tokenta Signal</title><meta name="description" content="Tesla announced on X on November 21, 2026 that Full Self-Driving (Supervised) v15 is now starting to roll out to a first wave of customers, with wide release targeted for December. The release notes cite a new vision encoder shared between FSD, Robotaxi and Optimus, trained on millions of internet videos, which Tesla says improves the critical intervention rate by 25x, plus a new live Tesla Reality View visualization, fleet-learned navigation, and improved detection of road signs, potholes, debris, small animals and standing water, along with a speed-camera slowdown and Bike Rack Mode. Tesla disclosed no build number, vehicle eligibility list, or rollout regions, and FSD remains supervised.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Tesla announced on X on November 21, 2026 that Full Self-Driving (Supervised) v15 is now starting to roll out to a first wave of customers, with wide release targeted for December. The release notes cite a new vision encoder shared between FSD, Robotaxi and Optimus, trained on millions of internet videos, which Tesla says improves the critical intervention rate by 25x, plus a new live Tesla Reality View visualization, fleet-learned navigation, and improved detection of road signs, potholes, debris, small animals and standing water, along with a speed-camera slowdown and Bike Rack Mode. Tesla disclosed no build number, vehicle eligibility list, or rollout regions, and FSD remains supervised.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.21 22:41 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 468 · AUTONOMY × TESLA × FSD × ROBOTAXI · Electrek</span><span><span class="live">●</span> ISSUE 467 · CLOUD × M&amp;A × AMAZON × DECART · Seeking Alpha</span><span><span class="live">●</span> ISSUE 466 · CHIPS × EXPORT CONTROLS × TSMC × SAMSUNG · CASRAI</span><span><span class="live">●</span> ISSUE 465 · CURSOR × OPEN-WEIGHT MODELS × CONGRESS · House Committee on Homeland Security</span><span><span class="live">●</span> ISSUE 464 · AI AGENTS × ZERO-DAY × CYBERSECURITY · Amazon Threat Intelligence (AWS Security Blog)</span><span><span class="live">●</span> ISSUE 463 · TRUMP × DATA CENTERS × AI BUILDOUT · Reuters</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 468 · AUTONOMY × TESLA × FSD × ROBOTAXI · Electrek</span><span><span class="live">●</span> ISSUE 467 · CLOUD × M&amp;A × AMAZON × DECART · Seeking Alpha</span><span><span class="live">●</span> ISSUE 466 · CHIPS × EXPORT CONTROLS × TSMC × SAMSUNG · CASRAI</span><span><span class="live">●</span> ISSUE 465 · CURSOR × OPEN-WEIGHT MODELS × CONGRESS · House Committee on Homeland Security</span><span><span class="live">●</span> ISSUE 464 · AI AGENTS × ZERO-DAY × CYBERSECURITY · Amazon Threat Intelligence (AWS Security Blog)</span><span><span class="live">●</span> ISSUE 463 · TRUMP × DATA CENTERS × AI BUILDOUT · Reuters</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">ROBOTICS & AI · SIGNAL REPORT</span>
+<h1>Tesla Begins FSD v15 Rollout, Claims 25x Safety Gain With New Reality View</h1>
+<p class="deck">Tesla announced on X on November 21, 2026 that Full Self-Driving (Supervised) v15 is now starting to roll out to a first wave of customers, with wide release targeted for December. The release notes cite a new vision encoder Tesla says improves the critical intervention rate by 25x, plus a new live Tesla Reality View visualization, fleet-learned navigation, and fixes aimed at signs, potholes, school zones and speed cameras.</p>
+<div class="meta">ISSUE 468 · 2026-11-21 · SOURCE / <b>Electrek</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">AUTONOMY × TESLA × FSD × ROBOTAXI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/tesla-fsd-v15-rollout-reality-view/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Electrek — <a href="https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">Nov 21</div><div class="lab">THE ROLLOUT</div><div class="desc">Tesla announced on X on November 21, 2026 that FSD v15 is now starting to roll out to a first wave of customers; wide release is targeted for December 2026.</div></div><div class="metric"><div class="num">25x</div><div class="lab">THE CLAIM</div><div class="desc">Tesla says the new vision encoder, trained on millions of internet videos, improves the critical intervention rate by 25x; Tesla publishes no underlying number, so the claim is unverified.</div></div><div class="metric"><div class="num">Reality View</div><div class="lab">THE VIEW</div><div class="desc">New Tesla Reality View replaces the separate model signals with a single end-to-end visualization using less compute, letting drivers see and interact with what FSD plans to do.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE PROMISE — In April 2026, Elon Musk said FSD v15 would far exceed human levels of safety; in August, Tesla told JPMorgan v15 was a step-change built on seven core technologies, about 40 percent of them already running in its Robotaxi fleet in Austin.</li><li><b>02</b>THE LAUNCH — On November 21, 2026, Tesla announced on X that FSD v15 is now starting to roll out, and its Tesla Super Intelligence account posted the full release notes; Ashok Elluswamy confirmed the first wave of customers gets it today.</li><li><b>03</b>THE FEATURES — The release notes cite a new vision encoder shared between FSD, Robotaxi and Optimus, Tesla Reality View, fleet-learned navigation, and improved detection of signs, potholes, debris, small animals and standing water, plus speed-camera slowdown and Bike Rack Mode.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Tesla announced on X on Saturday, November 21, 2026 that Full Self-Driving (Supervised) v15 is &quot;now starting to roll out&quot; to a first wave of customers, with wide release targeted for December. Tesla AI software lead Ashok Elluswamy confirmed the rollout starts today to early-access users, writing that &quot;FSD v15 releasing to the first wave of customers today.&quot;</p><p>The release notes say v15 upgrades every part of the end-to-end driving network. The headline change is a new vision encoder shared between FSD, Robotaxi and Optimus, trained on millions of internet videos, which Tesla says improves the critical intervention rate by 25x. A new live visualization, Tesla Reality View, replaces the separate model signals with a single end-to-end view that uses less compute and lets drivers see and interact with what FSD plans to do.</p><p>The update also targets FSD&#x27;s most complained-about weaknesses: improved detection of road signs, small animals, road debris, chains, potholes, road details and deep standing water; better speed handling for each driver profile, school zones, speed limits and inclement weather; fleet-learned navigation for the start and end of trips; parking selection from personalized parking history; and a speed-camera slowdown plus a new Bike Rack Mode.</p>
+<h2><span class="en">WHY IT MATTERS</span>The 25x claim is the right metric with no number behind it</h2><p>The critical intervention rate is the correct yardstick for progress toward unsupervised driving, and a 25x improvement would be enormous if it held across the fleet. Electrek notes its own earlier data suggested FSD v14 could go a couple thousand miles between critical interventions, which would put v15 near 50,000 miles, well beyond the roughly 10,000 miles it has said Tesla needs for a limited unsupervised service.</p><p>But Tesla still does not publish the underlying number, only the multiplier, and FSD has never improved in a straight line: v14 arrived in October 2025 with hallucinations, brake stabbing and excessive speeding, improved, then went backward in the v14.2 updates. The claim is worth watching precisely because it is specific enough to be tested by early owners&#x27; data, and vague enough that Tesla has not yet had to prove it.</p><h2><span class="en">WHAT IS STILL UNKNOWN</span>The weak spots on the list are the ones regulators are watching</h2><p>Almost every driving improvement in v15 targets an area where FSD struggles today and where regulators are already looking. A September test by Brussels nonprofit Johanna.be found FSD exceeded the limit in 55 percent of the 30 km/h zones it drove through, and NHTSA is reviewing a petition claiming Tesla&#x27;s Robotaxis speed through active school zones, on top of an investigation opened in October 2025 into FSD traffic-law violations.</p><p>What is not yet known is how much better v15 actually is, which vehicles get it first, or when the wide December release lands. Tesla previously told investors its AI4 computer is enough to run v15. One change goes the other way: Tesla is decreasing the strictness of driver monitoring in higher-speed profiles even as sleeping drivers on FSD keep making headlines.</p>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A step-change claim that owners&#x27; data will now have to prove</h2><p>Tokenta Signal&#x27;s judgment: v15 is the update Tesla has been promising since April, when Elon Musk said it would far exceed human levels of safety, and since August, when Tesla told JPMorgan it was a step-change built on seven core technologies. The release notes finally name the mechanism: a vision encoder trained on millions of internet videos and shared across FSD, Robotaxi and Optimus. The claim to discount is the 25x multiplier on its own, because Tesla publishes no baseline intervention number to check it against. The claim to act on is the target list: signs, potholes, school zones and speed cameras are exactly where FSD&#x27;s failures are documented and where regulators are watching, so the first weeks of owner data will settle whether this is the step-change or another point release that goes backward.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">Tesla&#x27;s &quot;25x better handling of safety critical cases&quot; is a multiplier without a published baseline: the release notes say the new vision encoder improves the critical intervention rate by 25x, but Tesla publishes no underlying intervention number, so the claim cannot be independently checked. The rollout is to a first wave of customers only, with wide release targeted for December; Tesla disclosed no build number, vehicle eligibility list, or rollout regions. FSD v15 remains Full Self-Driving (Supervised): drivers must stay alert and ready to take over. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Tesla announced on X on November 21, 2026 that Full Self-Driving (Supervised) v15 is now starting to roll out to a first wave of customers, with a new vision encoder Tesla says improves the critical intervention rate by 25x and a new live Tesla Reality View visualization.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/" target="_blank" rel="noopener">Tesla starts rolling out FSD v15 with 25x safety claim ↗</a><br>electrek.co · 2026-11-21 · Electrek</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Electrek: Tesla launches FSD v15, targets its biggest weaknesses, from signs to potholes<br><a href="https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/" target="_blank" rel="noopener">https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/</a></li><li>DriveTeslaCanada: Tesla Begins FSD v15 Rollout With Major Safety and Navigation Upgrades<br><a href="https://driveteslacanada.ca/news/tesla-fsd-v15-rollout/" target="_blank" rel="noopener">https://driveteslacanada.ca/news/tesla-fsd-v15-rollout/</a></li><li>Tesla on X: FSD v15 now starting to roll out<br><a href="https://x.com/Tesla" target="_blank" rel="noopener">https://x.com/Tesla</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-performance-factory-codex-chatgpt/">OpenAI&#x27;s Performance Factory Lets Codex Agents Hunt ChatGPT Slowdowns</a> <span class="meta">ISSUE 442</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-cybercab-personal-orders-29990-299-subscription/">Tesla Opens Cybercab Orders at $29,990, but the Car Won&#x27;t Move Without a $299 Monthly Subscription</a> <span class="meta">ISSUE 368</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-daybreak-red-team-defense-factory/">OpenAI Launches Daybreak Red Team and Defense Factory at Cyber Keynote</a> <span class="meta">ISSUE 326</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../databricks-genie-autonomous-ai-coworker/">Databricks Turns Genie Into an Always-On Autonomous AI Coworker</a> <span class="meta">ISSUE 308</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

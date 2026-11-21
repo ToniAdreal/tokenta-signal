@@ -2861,5 +2861,19 @@
   "credit_name": "CASRAI",
   "hero_from": "https://casrai.org/news/tsmc-samsung-suspend-china-chip-shipments-bis-rule-2026",
   "evidence_from": "https://aiweekly.co/alerts/tsmc-pauses-shipments-as-new-us-chip-rules-hit-beyond-ai"
+ },
+ "amazon-decart-7-5b-deal-nearing": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Seeking Alpha",
+  "hero_from": "https://www.tradingview.com/news/seekingalpha:71b3d28ff094b:0-amazon-nearing-7-5b-deal-to-buy-ai-start-up-decart-ft/",
+  "evidence_from": "https://www.tradingview.com/news/seekingalpha:71b3d28ff094b:0-amazon-nearing-7-5b-deal-to-buy-ai-start-up-decart-ft/"
+ },
+ "tesla-fsd-v15-rollout-reality-view": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Electrek",
+  "hero_from": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
+  "evidence_from": ""
  }
 }
