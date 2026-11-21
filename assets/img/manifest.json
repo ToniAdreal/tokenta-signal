@@ -2721,5 +2721,12 @@
   "credit_name": "Bloomberg Law",
   "hero_from": "https://news.bloomberglaw.com/mergers-and-acquisitions/crowdstrike-is-said-in-talks-to-buy-cybersecurity-firm-zscaler",
   "evidence_from": ""
+ },
+ "cognition-in-talks-75b-valuation-new-funding": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Seeking Alpha via TradingView",
+  "hero_from": "https://www.tradingview.com/news/seekingalpha:25fdd72ab094b:0-ai-coding-platform-cognition-embarks-on-new-2b-funding-round-report/",
+  "evidence_from": ""
  }
 }
