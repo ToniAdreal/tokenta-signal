@@ -2728,5 +2728,12 @@
   "credit_name": "Seeking Alpha via TradingView",
   "hero_from": "https://www.tradingview.com/news/seekingalpha:25fdd72ab094b:0-ai-coding-platform-cognition-embarks-on-new-2b-funding-round-report/",
   "evidence_from": ""
+ },
+ "windows-fastunlock-narrator-lock-screen-bypass-bitlocker": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Hacker News",
+  "hero_from": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+  "evidence_from": ""
  }
 }
