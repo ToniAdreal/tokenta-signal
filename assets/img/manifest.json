@@ -2931,5 +2931,19 @@
   "credit_name": "The Register",
   "hero_from": "https://www.theregister.com/legal/2026/11/20/us-let-nvidia-and-amd-sell-bucketloads-of-chips-to-military-linked-chinese-companies/5311200",
   "evidence_from": ""
+ },
+ "google-suncatcher-blue-origin-new-glenn": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Blog",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/google-research/blue-origin-project-suncatcher-partnership/"
+ },
+ "mailchimp-bending-spoons-3-68b-sale": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/20/bending-spoons-buys-mailchimp-for-3-68-billion/",
+  "evidence_from": "https://techcrunch.com/2026/11/20/bending-spoons-buys-mailchimp-for-3-68-billion/"
  }
 }
