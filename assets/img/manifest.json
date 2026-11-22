@@ -2889,5 +2889,19 @@
   "credit_name": "OpenRouter",
   "hero_from": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
   "evidence_from": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html"
+ },
+ "nvidia-inception-diffusion-acquisition-talks": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Decoder",
+  "hero_from": "https://the-decoder.com/nvidia-bets-at-least-500-million-on-inceptions-diffusion-models-to-strengthen-its-open-source-nemotron-lineup/",
+  "evidence_from": ""
+ },
+ "metr-alignment-eval-tells-opus": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "METR",
+  "hero_from": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
+  "evidence_from": ""
  }
 }
