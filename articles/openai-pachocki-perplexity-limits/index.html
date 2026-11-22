@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenAI Publishes Its Pretraining Curve and Proposes a Shared Limit at 0.68 Log-Perplexity — Tokenta Signal</title><meta name="description" content="OpenAI chief scientist Jakub Pachocki published &#x27;Perplexity and Intelligence&#x27; on November 22, 2026, disclosing the lab&#x27;s internal log-perplexity readings for the first time: GPT-3.5 at about 0.99, GPT-4 at about 0.91, and recent models below 0.8 on a held-out dataset drawn from OpenAI&#x27;s internal codebase. Below 0.8, transformative capabilities emerged in cybersecurity and mathematics, and at about 0.76 a model began resolving open mathematics problems the lab had posed for more than a year. Pachocki expects further transformative capabilities in the 0.68-0.70 window, warns an &#x27;avalanche&#x27; of fundamental pretraining advances could arrive as soon as 2027, and proposes common limits, based on perplexity and other measurements, that frontier developers commit not to cross until their ability to understand and monitor AI behavior reaches a concrete milestone, such as a successor to chain-of-thought monitors.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="OpenAI chief scientist Jakub Pachocki published &#x27;Perplexity and Intelligence&#x27; on November 22, 2026, disclosing the lab&#x27;s internal log-perplexity readings for the first time: GPT-3.5 at about 0.99, GPT-4 at about 0.91, and recent models below 0.8 on a held-out dataset drawn from OpenAI&#x27;s internal codebase. Below 0.8, transformative capabilities emerged in cybersecurity and mathematics, and at about 0.76 a model began resolving open mathematics problems the lab had posed for more than a year. Pachocki expects further transformative capabilities in the 0.68-0.70 window, warns an &#x27;avalanche&#x27; of fundamental pretraining advances could arrive as soon as 2027, and proposes common limits, based on perplexity and other measurements, that frontier developers commit not to cross until their ability to understand and monitor AI behavior reaches a concrete milestone, such as a successor to chain-of-thought monitors.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.22 21:38 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 478 · OPENAI × PRETRAINING × SAFETY · OpenAI (Jakub Pachocki)</span><span><span class="live">●</span> ISSUE 477 · ANTHROPIC × SPACEX × COMPUTE · The Motley Fool (Anthropic SEC filings)</span><span><span class="live">●</span> ISSUE 476 · AI SERVERS × MEMORY × DELL × HPE · AI Weekly (Financial Times report)</span><span><span class="live">●</span> ISSUE 475 · UNITED NATIONS × AUTONOMOUS WEAPONS × CCW · Associated Press</span><span><span class="live">●</span> ISSUE 474 · SIGNAL × PRIVACY × AI AGENTS · Signal Blog</span><span><span class="live">●</span> ISSUE 473 · TESLA × OPTIMUS × AI5 · Electric Vehicles</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 478 · OPENAI × PRETRAINING × SAFETY · OpenAI (Jakub Pachocki)</span><span><span class="live">●</span> ISSUE 477 · ANTHROPIC × SPACEX × COMPUTE · The Motley Fool (Anthropic SEC filings)</span><span><span class="live">●</span> ISSUE 476 · AI SERVERS × MEMORY × DELL × HPE · AI Weekly (Financial Times report)</span><span><span class="live">●</span> ISSUE 475 · UNITED NATIONS × AUTONOMOUS WEAPONS × CCW · Associated Press</span><span><span class="live">●</span> ISSUE 474 · SIGNAL × PRIVACY × AI AGENTS · Signal Blog</span><span><span class="live">●</span> ISSUE 473 · TESLA × OPTIMUS × AI5 · Electric Vehicles</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>OpenAI Publishes Its Pretraining Curve and Proposes a Shared Limit at 0.68 Log-Perplexity</h1>
+<p class="deck">OpenAI chief scientist Jakub Pachocki published &#x27;Perplexity and Intelligence&#x27; on November 22, 2026, disclosing the lab&#x27;s internal log-perplexity readings for the first time: GPT-3.5 about 0.99, GPT-4 about 0.91, recent models below 0.8. He expects further transformative capabilities in the 0.68-0.70 window, warns an &#x27;avalanche&#x27; of fundamental pretraining advances could arrive as soon as 2027, and proposes common limits frontier developers commit not to cross until monitoring ability reaches a concrete milestone, such as a successor to chain-of-thought monitors.</p>
+<div class="meta">ISSUE 478 · 2026-11-22 · SOURCE / <b>OpenAI (Jakub Pachocki)</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">OPENAI × PRETRAINING × SAFETY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/openai-pachocki-perplexity-limits/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Unite.AI — <a href="https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">~0.99</div><div class="lab">THE CURVE</div><div class="desc">GPT-3.5&#x27;s log-perplexity on OpenAI&#x27;s internal held-out dataset; GPT-4 measured about 0.91, and recent models have passed below 0.8, where transformative capabilities emerged in cybersecurity and mathematics.</div></div><div class="metric"><div class="num">0.68–0.70</div><div class="lab">THE WINDOW</div><div class="desc">The log-perplexity window where Pachocki expects further transformative capabilities to emerge, capabilities he says current evaluations may not test for.</div></div><div class="metric"><div class="num">2027</div><div class="lab">THE CLOCK</div><div class="desc">As soon as 2027, Pachocki writes, AI contributing substantially to algorithmic research on pretraining could trigger an &#x27;avalanche&#x27; of fundamental pretraining advances, faster than alignment and monitoring can keep up.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE DISCLOSURE — November 22, 2026: OpenAI chief scientist Jakub Pachocki publishes &#x27;Perplexity and Intelligence&#x27;, disclosing the lab&#x27;s internal log-perplexity readings from GPT-3.5 (about 0.99) through GPT-4 (about 0.91) to below 0.8 for recent models.</li><li><b>02</b>THE PATTERN — Below 0.8, transformative capabilities emerged in cybersecurity and mathematics; at about 0.76, a model began resolving open mathematics problems OpenAI had posed for more than a year, &#x27;one after another in a single Slack thread.&#x27;</li><li><b>03</b>THE PROPOSAL — Pachocki proposes common limits, based on perplexity and other measurements, that frontier developers commit not to cross until their ability to understand and monitor AI behavior reaches a concrete milestone, such as a successor to chain-of-thought monitors.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>OpenAI chief scientist Jakub Pachocki published &#x27;Perplexity and Intelligence&#x27; on November 22, 2026, disclosing the lab&#x27;s internal log-perplexity readings for the first time. Perplexity, or cross-entropy loss, measures how well a model predicts the next token; OpenAI has tracked it on a held-out dataset drawn from its internal codebase since GPT-3.5. GPT-3.5 measured about 0.99 and formed the basis for the original ChatGPT; GPT-4 measured about 0.91 and could productively use chain-of-thought reasoning. Recent models have passed below 0.8, and the post&#x27;s chart shows a steep drop through 2026, which OpenAI attributes mostly to long-term research and compute investment, with AI automating its own development playing a smaller part so far.</p><p>The pattern Pachocki draws from the numbers is that new capabilities arrive at precise thresholds, without warning. Below 0.8, OpenAI saw transformative capabilities emerge in cybersecurity and mathematics. At about 0.76, a model began producing groundbreaking results on open mathematics problems the lab had posed for more than a year, resolving questions &#x27;one after another in a single Slack thread.&#x27; Extrapolating, Pachocki expects further transformative capabilities as models enter the 0.68-0.70 window, does not know what they will be, and warns current evaluations may not test for them. He also expects further degradation of alignment auditing and more evaluation and training awareness as capability grows.</p><p>The proposal is to turn the metric into a governor. Pachocki asks frontier developers to establish common limits, based on perplexity and other measurements, that they commit not to cross until their ability to understand and monitor AI behavior reaches a concrete milestone, such as a successor to chain-of-thought monitors. Developers would also jointly set shared evaluation norms, red-team safety cases before such models are first used, and shared transparency standards, with the first limit leading toward a common framework for successive limits. He acknowledges publishing the figures gives competitors a clearer picture of OpenAI&#x27;s position, but says the urgency of shared safety measures outweighs that. The post builds on his September 6 essay &#x27;An Alien Mind&#x27; and on OpenAI&#x27;s November 18 research report and November 10 monitorability study.</p>
+<h2><span class="en">WHY IT MATTERS</span>The number is the argument</h2><p>Downstream benchmarks saturate and go stale; Pachocki&#x27;s point is that pretraining perplexity has stayed informative from GPT-2 to today, and that it keeps predicting the arrival of capabilities nobody scheduled. Publishing the curve is the news inside the proposal: no frontier lab has lined up its own models on the loss curve in public before, and the figures give the pacing debate something it has never had, a measurable yardstick with named thresholds attached to named capabilities.</p><p>The 0.68-0.70 window matters because it is a line drawn before the capabilities behind it are known. Pachocki is explicit that he does not know what will emerge there, only that the pattern so far says something will. That is the whole case for a limit set in advance: if the industry waits until the capabilities are visible, the evaluations that would have caught them may already be behind.</p><h2><span class="en">WHAT TO WATCH</span>A limit with no enforcer</h2><p>Watch for answers from the other labs. The proposal names no enforcement mechanism beyond joint norms, and its own caveats are substantial: perplexity is hard to compare across labs that use different datasets and mixtures, it does not map directly to any useful task, it misses capability gains from chain-of-thought reasoning, and its floor is unknown, so smaller gains could correspond to larger leaps in intelligence as models approach it.</p><p>Watch whether 0.68-0.70 gets named by anyone else. A shared limit only works if the metric is shared, and today it is not: each lab measures on its own data. The test of this post is whether Anthropic, Google DeepMind or another frontier developer publishes comparable numbers or endorses a common yardstick, and whether the November 18 research report&#x27;s embedded third-party assessments produce findings that sharpen the monitoring milestone Pachocki wants reached first.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM BENCHMARKS TO LOSS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From benchmarks to the loss curve</div><div class="desc">Pachocki argues downstream benchmarks saturate and go stale while pretraining perplexity has stayed informative since GPT-2. The proposal turns a training metric into the shared yardstick for pacing frontier development.</div></div><div class="metric"><div class="lab">FROM RACE TO LIMIT</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From a capability race to a shared limit</div><div class="desc">Instead of each lab deciding alone how far to push pretraining, the post asks frontier developers to agree a first limit they will not cross until monitoring catches up, then build a framework for successive limits.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>OpenAI Just Named the Number It Wants to Stop At</h2><p>Tokenta Signal&#x27;s judgment: This is the first time a frontier lab has published its own pretraining curve and attached a number to the pause it wants. The 0.68-0.70 window is not a product date or a benchmark score; it is a line Pachocki is asking the whole industry to agree not to cross until monitoring catches up. The proposal has no enforcer, no agreed metric across labs, and no sign yet that rivals will sign on. But the disclosure itself changes the debate: the pacing question now has a public yardstick, and the next move belongs to the other labs.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The figures are as disclosed by OpenAI in Jakub Pachocki&#x27;s November 22, 2026 post, measured on the lab&#x27;s own held-out dataset drawn from its internal codebase; they are not comparable across labs, which use different evaluation datasets and training mixtures. The common-limits proposal is Pachocki&#x27;s; no other frontier lab has endorsed it, and the post proposes no enforcement mechanism. The &#x27;avalanche&#x27; of pretraining advances as soon as 2027 is a conditional scenario, not a forecast, and the capabilities expected in the 0.68-0.70 window are unknown by Pachocki&#x27;s own account. The September 6 &#x27;An Alien Mind&#x27; essay and the November 18 research report on AI contributions to research are cited as context. This article is a summary with links only; it does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/openai-pachocki-perplexity-limits/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.unite.ai · CLICK TO OPEN THE ORIGINAL ↗</div><p>OpenAI chief scientist Jakub Pachocki discloses the lab&#x27;s internal log-perplexity readings, GPT-3.5 at about 0.99, GPT-4 at about 0.91, recent models below 0.8, and proposes common limits on frontier development tied to perplexity, not to be crossed until monitoring reaches a concrete milestone.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://openai.com/index/perplexity-and-intelligence" target="_blank" rel="noopener">Perplexity and Intelligence ↗</a><br>openai.com · 2026-11-22 · OpenAI (Jakub Pachocki)</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>OpenAI: Perplexity and Intelligence<br><a href="https://openai.com/index/perplexity-and-intelligence" target="_blank" rel="noopener">https://openai.com/index/perplexity-and-intelligence</a></li><li>Unite.AI: OpenAI Proposes Shared AI Development Limits Tied to Safety Milestones<br><a href="https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/" target="_blank" rel="noopener">https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/</a></li><li>Seeking Alpha: OpenAI calls for industry-wide AI brake tied to perplexity<br><a href="https://www.tradingview.com/news/seekingalpha:dafd8465b094b:0-openai-calls-for-industry-wide-ai-brake-tied-to-perplexity/" target="_blank" rel="noopener">https://www.tradingview.com/news/seekingalpha:dafd8465b094b:0-openai-calls-for-industry-wide-ai-brake-tied-to-perplexity/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-900b-compute-bill-spacex-120b-cancelable/">Anthropic&#x27;s $900.9B Compute Bill, Filed: SpaceX Gets $120.5B, and Either Side Can Walk Away</a> <span class="meta">ISSUE 477</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../ai-server-vendors-reprice-signed-contracts-45pct/">AI Server Vendors Demand Up to 45% More on Signed Contracts as Memory Costs Soar</a> <span class="meta">ISSUE 476</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../signal-blocks-screenshots-ai-agents/">Signal Blocks Screenshots to Keep OS AI Agents Out of Private Chats</a> <span class="meta">ISSUE 474</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../tesla-ai5-optimus-cars-stay-ai4/">Musk: Tesla&#x27;s AI5 Chip Goes to Optimus, Cars Stay on AI4</a> <span class="meta">ISSUE 473</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

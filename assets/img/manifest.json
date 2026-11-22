@@ -2994,5 +2994,12 @@
   "credit_name": "The Motley Fool (Anthropic SEC filings)",
   "hero_from": "https://www.fool.com/investing/2026/11/20/anthropic-ipo-here-s-what-its-spending-commitments-mean-to-microsoft-spacex-amazon-and-alphabet/",
   "evidence_from": ""
+ },
+ "openai-pachocki-perplexity-limits": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/",
+  "evidence_from": "https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/"
  }
 }
