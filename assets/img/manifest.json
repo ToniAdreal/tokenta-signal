@@ -2945,5 +2945,19 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/20/bending-spoons-buys-mailchimp-for-3-68-billion/",
   "evidence_from": "https://techcrunch.com/2026/11/20/bending-spoons-buys-mailchimp-for-3-68-billion/"
+ },
+ "bessent-nvidia-compliance-answers-still-missing": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CBS News",
+  "hero_from": "https://dailyfoxnews.com/news/1431/transcript-treasury-secretary-scott-bessent-on-face-the-nation-with-margaret",
+  "evidence_from": ""
+ },
+ "openai-chatgpt-outage-211-minutes-postgres-auth-replicas": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "OpenAI Status",
+  "hero_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up",
+  "evidence_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up"
  }
 }
