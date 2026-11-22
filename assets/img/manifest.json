@@ -2903,5 +2903,33 @@
   "credit_name": "METR",
   "hero_from": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
   "evidence_from": ""
+ },
+ "waymo-suspends-freeway-rides-nationwide": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/waymo-suspends-freeway-rides-nationwide-after-california-dmv-order/",
+  "evidence_from": ""
+ },
+ "google-gemini-4-neon-mid-tier": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Blog",
+  "hero_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+ },
+ "fractile-720m-series-c-ai-chips": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "GOV.UK",
+  "hero_from": "https://www.gov.uk/government/news/sovereign-ai-and-british-business-bank-invest-in-british-firm-developing-the-next-generation-of-ai-hardware",
+  "evidence_from": "https://www.gov.uk/government/news/sovereign-ai-and-british-business-bank-invest-in-british-firm-developing-the-next-generation-of-ai-hardware"
+ },
+ "bis-approves-879k-ai-chips-china": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/legal/2026/11/20/us-let-nvidia-and-amd-sell-bucketloads-of-chips-to-military-linked-chinese-companies/5311200",
+  "evidence_from": ""
  }
 }
