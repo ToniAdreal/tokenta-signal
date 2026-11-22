@@ -2980,5 +2980,19 @@
   "credit_name": "Associated Press",
   "hero_from": "https://www.lapost.com/content/nations-at-un-talks-on-ai-killer-robots-agree-to-more-talks-but-no-firm-commitment-to-rein-them-in",
   "evidence_from": ""
+ },
+ "ai-server-vendors-reprice-signed-contracts-45pct": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Dawan Africa",
+  "hero_from": "https://www.dawan.africa/news/ai-server-prices-rise-up-to-45percent-after-deals",
+  "evidence_from": "https://aiweekly.co/alerts/dell-hpe-lenovo-supermicro-repricing-signed-ai-server-deals"
+ },
+ "anthropic-900b-compute-bill-spacex-120b-cancelable": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Motley Fool (Anthropic SEC filings)",
+  "hero_from": "https://www.fool.com/investing/2026/11/20/anthropic-ipo-here-s-what-its-spending-commitments-mean-to-microsoft-spacex-amazon-and-alphabet/",
+  "evidence_from": ""
  }
 }
