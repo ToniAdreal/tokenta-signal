@@ -2875,5 +2875,12 @@
   "credit_name": "Electrek",
   "hero_from": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/",
   "evidence_from": ""
+ },
+ "alibaba-qwen-training-t-head-chips": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechNode",
+  "hero_from": "https://technode.com/2026/11/20/alibaba-uses-its-own-chips-to-train-next-generation-qwen-model/",
+  "evidence_from": ""
  }
 }
