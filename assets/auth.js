@@ -88,9 +88,10 @@
     }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); });
   }
 
+  var SB = "https://axelczmkhxwrbhkrvmgv.supabase.co";
   function social(provider) {
     var back = location.origin + location.pathname;
-    window.location = "https://auth.tokenta.space/api/auth/oauth/" + provider + "?return=" + encodeURIComponent(back);
+    window.location = SB + "/auth/v1/authorize?provider=" + provider + "&redirect_to=" + encodeURIComponent(back);
   }
 
   function sendCode() {
@@ -254,28 +255,20 @@
   }
 
   /* ---------- boot ---------- */
-  function linkSignIn() {
-    var p = new URLSearchParams(location.search);
-    var email = p.get("ts_email"), code = p.get("ts_code");
-    if (!email || !code) return Promise.resolve();
-    history.replaceState(null, "", location.pathname + location.hash);
-    openModal();
-    var em = $("#ts-am-email"); if (em) em.value = email;
-    modal.dataset.email = email;
-    $("#ts-am-step1").style.display = "none";
-    $("#ts-am-step2").style.display = "block";
-    $("#ts-am-title").textContent = "Check your email";
-    $("#ts-am-sub").textContent = "Signing you in with the link from your email.";
-    var c = $("#ts-am-code"); if (c) c.value = code;
-    verifyCode();
-    return Promise.resolve();
+  function adoptHashSession() {
+    if (!location.hash || location.hash.indexOf("access_token=") === -1) return Promise.resolve();
+    var p = new URLSearchParams(location.hash.slice(1));
+    var at = p.get("access_token"), rt = p.get("refresh_token");
+    history.replaceState(null, "", location.pathname + location.search);
+    if (!at || !rt) return Promise.resolve();
+    return post("/api/auth/session", { access_token: at, refresh_token: rt }).catch(function () {});
   }
   document.addEventListener("DOMContentLoaded", function () {
     var b = $("#auth-btn");
     if (b) b.addEventListener("click", function (e) {
       if (!state.authed) { e.preventDefault(); openModal(); }
     });
-    linkSignIn().then(function () { return refresh(); }).then(applyMeter);
+    adoptHashSession().then(function () { return refresh(); }).then(applyMeter);
     paintAccount();
     setTimeout(function () { if (!state.checked) refresh(); }, 6000);
   });
