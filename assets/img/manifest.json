@@ -2959,5 +2959,26 @@
   "credit_name": "OpenAI Status",
   "hero_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up",
   "evidence_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up"
+ },
+ "tesla-ai5-optimus-cars-stay-ai4": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Paul Tan",
+  "hero_from": "https://paultan.org/2026/11/22/tesla-fsd-v15-rollout/",
+  "evidence_from": ""
+ },
+ "signal-blocks-screenshots-ai-agents": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Signal Blog",
+  "hero_from": "https://signal.org/blog/protecting-your-privacy/",
+  "evidence_from": "https://signal.org/blog/protecting-your-privacy/"
+ },
+ "un-ccw-killer-robots-no-binding-rules-2028": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Associated Press",
+  "hero_from": "https://www.lapost.com/content/nations-at-un-talks-on-ai-killer-robots-agree-to-more-talks-but-no-firm-commitment-to-rein-them-in",
+  "evidence_from": ""
  }
 }

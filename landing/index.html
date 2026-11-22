@@ -650,7 +650,6 @@ document.querySelectorAll(".faq-item").forEach(function(item){
 <script>
 (function(){
   var AUTH = "https://auth.tokenta.space";
-  var SB = "https://axelczmkhxwrbhkrvmgv.supabase.co";
   var ACCOUNT = "https://signal.tokenta.space/account/";
   var btn = document.getElementById("signin-btn");
   var modal = document.getElementById("amodal");
@@ -667,12 +666,8 @@ document.querySelectorAll(".faq-item").forEach(function(item){
     }).catch(function(){ paint(); });
   }
   function adoptHash(){
-    if (!location.hash || location.hash.indexOf("access_token=") === -1) return Promise.resolve();
-    var p = new URLSearchParams(location.hash.slice(1));
-    var at = p.get("access_token"), rt = p.get("refresh_token");
-    history.replaceState(null, "", location.pathname + location.search);
-    if (!at || !rt) return Promise.resolve();
-    return post("/api/auth/session", { access_token: at, refresh_token: rt }).catch(function(){});
+    if (location.hash && location.hash.indexOf("access_token") !== -1) history.replaceState(null, "", location.pathname + location.search);
+    return Promise.resolve();
   }
   if (btn) btn.addEventListener("click", function(){
     if (state.authed) {
@@ -683,7 +678,7 @@ document.querySelectorAll(".faq-item").forEach(function(item){
   });
   document.querySelectorAll("[data-prov]").forEach(function(b){
     b.addEventListener("click", function(){
-      window.location = SB + "/auth/v1/authorize?provider=" + b.getAttribute("data-prov") + "&redirect_to=" + encodeURIComponent("https://go.tokenta.space/");
+      window.location = AUTH + "/api/auth/oauth/" + b.getAttribute("data-prov") + "?return=" + encodeURIComponent("https://go.tokenta.space/");
     });
   });
   document.getElementById("am-close").addEventListener("click", closeModal);
