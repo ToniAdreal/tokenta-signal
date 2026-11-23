@@ -3050,5 +3050,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/sierra-raises-1-75b-in-series-f-funding-at-30b-valuation/",
   "evidence_from": "https://www.unite.ai/sierra-raises-1-75b-in-series-f-funding-at-30b-valuation/"
+ },
+ "applied-digital-54b-150mw-hyperscaler-lease": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Applied Digital",
+  "hero_from": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
+  "evidence_from": ""
  }
 }
