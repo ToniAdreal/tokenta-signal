@@ -3029,5 +3029,12 @@
   "credit_name": "WIRED",
   "hero_from": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
   "evidence_from": ""
+ },
+ "nvidia-china-turnaround-threatened-customers-cancel-orders": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Reuters",
+  "hero_from": "https://longbridge.com/en/news/306481119",
+  "evidence_from": "https://longbridge.com/en/news/306481119"
  }
 }
