@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Walmart Lets Meta&#x27;s Muse Shop and Check Out, Opening Agent Commerce for Black Friday — Tokenta Signal</title><meta name="description" content="Walmart&#x27;s Agent Gateway went live with Meta&#x27;s Muse on November 23, 2026, letting the AI agent find Black Friday deals, build a basket and complete checkout inside the conversation. It is the first live implementation of the Gateway Walmart announced on October 21, and the first time a major retailer has let an outside AI agent transact on its storefront.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Walmart&#x27;s Agent Gateway went live with Meta&#x27;s Muse on November 23, 2026, letting the AI agent find Black Friday deals, build a basket and complete checkout inside the conversation. It is the first live implementation of the Gateway Walmart announced on October 21, and the first time a major retailer has let an outside AI agent transact on its storefront.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.23 23:40 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 506 · GOOGLE × SEARCH × PERSONALIZATION · Google</span><span><span class="live">●</span> ISSUE 505 · WALMART × META × AGENTIC COMMERCE · The Verge</span><span><span class="live">●</span> ISSUE 504 · CISCO × OPENAI × SECURITY · Cisco</span><span><span class="live">●</span> ISSUE 503 · ANTHROPIC × CODING AGENTS × GITHUB · Anthropic</span><span><span class="live">●</span> ISSUE 502 · ANTHROPIC × CREDIT × IPO · The Wall Street Journal</span><span><span class="live">●</span> ISSUE 501 · POLITICS × MARKETS · The Times</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 506 · GOOGLE × SEARCH × PERSONALIZATION · Google</span><span><span class="live">●</span> ISSUE 505 · WALMART × META × AGENTIC COMMERCE · The Verge</span><span><span class="live">●</span> ISSUE 504 · CISCO × OPENAI × SECURITY · Cisco</span><span><span class="live">●</span> ISSUE 503 · ANTHROPIC × CODING AGENTS × GITHUB · Anthropic</span><span><span class="live">●</span> ISSUE 502 · ANTHROPIC × CREDIT × IPO · The Wall Street Journal</span><span><span class="live">●</span> ISSUE 501 · POLITICS × MARKETS · The Times</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Walmart Lets Meta&#x27;s Muse Shop and Check Out, Opening Agent Commerce for Black Friday</h1>
+<p class="deck">Walmart&#x27;s Agent Gateway went live with Meta&#x27;s Muse on November 23, 2026, letting the AI agent find Black Friday deals, build a basket and complete checkout inside the conversation. It is the first live implementation of the Gateway Walmart announced on October 21, and the first time a major retailer has let an outside AI agent transact on its storefront.</p>
+<div class="meta">ISSUE 505 · 2026-11-23 · SOURCE / <b>The Verge</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">WALMART × META × AGENTIC COMMERCE</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/walmart-agent-gateway-meta-muse-checkout-live/hero.jpg" alt=""><figcaption class="figcap">IMAGE: The Verge — <a href="https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">1ST</div><div class="lab">OUTSIDE AGENT TO CHECK OUT</div><div class="desc">First live implementation of Walmart&#x27;s Agent Gateway, and the first time a major retailer has let an outside AI agent complete purchases on its storefront, per The Verge.</div></div><div class="metric"><div class="num">3</div><div class="lab">STEPS FROM ASK TO CHECKOUT</div><div class="desc">Tell Muse what is needed, sign in and set up an Agent Profile with a spending limit, then check out inside the conversation, per Walmart&#x27;s instructions as reported by The Verge.</div></div><div class="metric"><div class="num">OCT 21</div><div class="lab">GATEWAY ANNOUNCED</div><div class="desc">Walmart announced the Agent Gateway, Agent Profiles and agent terms on October 21, 2026, with customer profiles rolling out in November, per Unite.AI.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE ANNOUNCEMENT — October 21, 2026: Walmart announces the Agent Gateway, Agent Profiles and Agentic Access Terms, saying browser-based agents are sluggish and error-prone on human-designed websites and offering an MCP-based path instead.</li><li><b>02</b>THE LAUNCH — November 23, 2026: the Gateway goes live with Meta&#x27;s Muse as the first agent, The Verge reports. Walmart first told the publication the launch was delayed to November 24, then said the same day it would roll out on November 23 after all.</li><li><b>03</b>HOW IT WORKS — Tell Muse what is needed; sign in to Walmart and set up an Agent Profile with a spending limit on the first add-to-cart; check out inside the conversation with a saved card, at Walmart.com prices, under Walmart&#x27;s return policy.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Walmart&#x27;s Agent Gateway went live with Meta&#x27;s Muse on November 23, 2026, The Verge reported, the first live implementation of the agent-shopping system Walmart announced on October 21. Muse can now find and purchase Black Friday deals on Walmart.com, searching products, building a basket and completing checkout without leaving the conversation. The launch date itself was confused through the day: Walmart first told The Verge the rollout was delayed to November 24, then contacted the publication again to say it would go out on November 23 after all.</p><p>The purchase runs in three steps, as Walmart describes them. A shopper tells Muse what is needed — a television deal, for example, or Black Friday items available for delivery — and Muse explores products and builds the basket. The shopper then signs in to Walmart, and the first time an item is added to the cart, sets up an Agent Profile, including a spending limit. Checkout completes inside the conversation using a card already saved in the Walmart account, at the same prices shown on Walmart.com, with Walmart&#x27;s return policy applying.</p><p>The controls are the point. An Agent Profile gives the agent a dedicated space inside the customer&#x27;s Walmart account, separate from the customer&#x27;s own purchases, where the shopper can set spending limits, approve purchases and review everything Muse bought. The Gateway is designed so agents can find relevant products without receiving the customer&#x27;s purchase history, and the agent never receives raw stored payment-card data, according to Walmart&#x27;s Agentic Access Terms as described by Unite.AI. Walmart calls Muse support &quot;just the beginning&quot;, with shopping experiences for other AI agents and apps on the way — a deliberate contrast with Amazon and eBay, which have blocked AI agents from browsing their platforms.</p>
+<h2><span class="en">WHY IT MATTERS</span>Checkout is the line between an agent that advises and an agent that transacts.</h2><p>Until now, shopping agents recommended and humans clicked buy. Walmart let one cross the line on a major storefront days before Black Friday. Amazon and eBay chose the opposite — block agents outright. Walmart chose to channel them through a gateway it controls, with profiles, limits and approvals. The contrast is now a live experiment with two models, and the holiday season is the test bed.</p><p>The move also reframes who owns the customer relationship. The purchase happens inside Muse&#x27;s conversation, on Walmart&#x27;s rails, under Walmart&#x27;s rules — Muse sees the same prices as Walmart.com, and Walmart&#x27;s return policy applies. Meta gets the transaction moment; Walmart keeps the account, the payment method and the audit trail.</p><h2><span class="en">THE WATCHPOINT</span>The controls are the product, and Black Friday is the stress test.</h2><p>Spending limits, per-purchase approval and a separate purchase history are what make the delegation acceptable; without them it is an agent with a credit card. The Gateway is still an early beta with invitation-only access, and Walmart says it may be suspended at any time, per Unite.AI.</p><p>The honest test is not the launch demo but the first disputed charge, the first wrong item, and the first overspend at holiday volume. If the controls hold, every other retailer faces the same choice Walmart just made. If they fail on the first Black Friday complaint, the walled gardens win the argument.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM RECOMMENDATION TO TRANSACTION</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From agents that recommend to agents that transact</div><div class="desc">Shopping assistants have so far stopped at the basket. Walmart&#x27;s Gateway lets Muse finish the purchase inside the conversation, moving agentic commerce from advice to an actual transaction on a major retailer&#x27;s storefront.</div></div><div class="metric"><div class="lab">FROM BLOCKING AGENTS TO CHANNELING THEM</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From blocking agents to channeling them</div><div class="desc">Amazon and eBay have blocked AI agents from their platforms. Walmart took the opposite route: a gateway it controls, with Agent Profiles, spending limits and approval rules, betting that channeled agents beat banned ones.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Walmart just let an agent hold the wallet, with rules attached.</h2><p>Tokenta Signal&#x27;s judgment: this is the first real-world test of agentic checkout at retail scale, and the timing — days before Black Friday — is deliberate. The product is not the shopping; it is the control layer: Agent Profiles, spending limits, approval rules and a purchase history the shopper can audit. If those controls hold at holiday volume, every other retailer faces the same choice Walmart just made. If they fail on the first disputed charge, the walled gardens win the argument.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts are as reported by The Verge on November 23, 2026, read in full, and corroborated by Unite.AI, which also notes that Walmart&#x27;s own Agent Gateway page presents Muse shopping as currently available. Walmart first told The Verge the launch was delayed to November 24, then contacted the publication again the same day to say it would roll out on November 23; the article carries both updates, the second superseding the first. No Walmart or Meta executive is quoted by name in The Verge&#x27;s article. Dollar figures for approval thresholds appear only in the article&#x27;s illustration, not its text, and are not repeated here. Walmart describes the overall Gateway as an early beta with invitation-only access, per Unite.AI. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/walmart-agent-gateway-meta-muse-checkout-live/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — www.theverge.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>Walmart&#x27;s Agent Gateway went live with Meta&#x27;s Muse on November 23, 2026: the agent can find Black Friday deals, build a basket and check out inside the conversation, under customer-set spending limits and Agent Profiles.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" target="_blank" rel="noopener">Meta Muse can do your Black Friday shopping at Walmart ↗</a><br>theverge.com · 2026-11-23 · The Verge</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>The Verge: Meta Muse can do your Black Friday shopping at Walmart<br><a href="https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday" target="_blank" rel="noopener">https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday</a></li><li>Unite.AI: Walmart Enables Muse Shopping Through Its Agent Gateway<br><a href="https://www.unite.ai/walmart-enables-muse-shopping-through-its-agent-gateway/" target="_blank" rel="noopener">https://www.unite.ai/walmart-enables-muse-shopping-through-its-agent-gateway/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../google-ai-mode-personal-intelligence-wallet-drive-gemini/">Google Search AI Mode Can Now Read Your Wallet, With Drive and Gemini Next</a> <span class="meta">ISSUE 506</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../cisco-openai-shirudo-agent-built-linux-shields/">Cisco and OpenAI Open Source Shirudo, Letting AI Agents Shield Linux Systems From Exploits</a> <span class="meta">ISSUE 504</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-claude-ship-ai-agents-review-fix-approve-code/">Anthropic Launches Claude Ship, Letting AI Agents Review, Fix and Approve Code Changes</a> <span class="meta">ISSUE 503</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../trump-convinced-nvidia-board-huang-return-record-day/">Trump Says He Convinced Nvidia&#x27;s Board to Bring Back Huang; the Stock Posts Its Best Day Since 2003</a> <span class="meta">ISSUE 501</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

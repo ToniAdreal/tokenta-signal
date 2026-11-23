@@ -3232,5 +3232,26 @@
   "credit_name": "Anthropic",
   "hero_from": "https://claude.com/resources/articles/introducing-claude-ship",
   "evidence_from": "https://claude.com/resources/articles/introducing-claude-ship"
+ },
+ "cisco-openai-shirudo-agent-built-linux-shields": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Cisco",
+  "hero_from": "https://blogs.cisco.com/news/expanding-the-defenders-window-with-self-defending-infrastructure",
+  "evidence_from": "https://blogs.cisco.com/news/expanding-the-defenders-window-with-self-defending-infrastructure"
+ },
+ "walmart-agent-gateway-meta-muse-checkout-live": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Verge",
+  "hero_from": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+  "evidence_from": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday"
+ },
+ "google-ai-mode-personal-intelligence-wallet-drive-gemini": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google",
+  "hero_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+  "evidence_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/"
  }
 }
