@@ -3001,5 +3001,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/",
   "evidence_from": "https://www.unite.ai/openai-proposes-shared-ai-development-limits-tied-to-safety-milestones/"
+ },
+ "simplexity-ant-group-100m-pre-series-a-1-6b-valuation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Bloomberg Law",
+  "hero_from": "https://news.bloomberglaw.com/capital-markets/ant-group-bets-on-simplexity-to-thrive-in-chinas-humanoid-race",
+  "evidence_from": ""
  }
 }
