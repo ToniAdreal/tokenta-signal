@@ -3073,11 +3073,11 @@
   "evidence_from": ""
  },
  "thinking-machines-inkling-2-mini-open-weights": {
-  "hero": false,
-  "evidence": false,
+  "hero": true,
+  "evidence": true,
   "credit_name": "Thinking Machines Lab",
-  "hero_from": "",
-  "evidence_from": ""
+  "hero_from": "https://venturebeat.com/technology/thinking-machines-wows-with-inkling-2-mini-looped-transformer-model-that-runs-locally-on-laptops",
+  "evidence_from": "https://thinkingmachines.ai/news/inkling-2-mini/"
  },
  "oracle-openai-300b-fully-funded": {
   "hero": true,
@@ -3126,6 +3126,20 @@
   "evidence": false,
   "credit_name": "EU Startups News",
   "hero_from": "https://eustartups.news/black-forest-labs-secures-investment-from-nvidia-and-andreessen-horowitz-for-ai-world-model-development/",
+  "evidence_from": ""
+ },
+ "nvidia-board-reinstates-jensen-huang-ceo": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "NVIDIA",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "amazon-buys-decart-optimization-stack-75b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Calcalist",
+  "hero_from": "https://www.calcalistech.com/ctechnews/article/g0mtcg4mi",
   "evidence_from": ""
  }
 }
