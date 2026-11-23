@@ -3183,5 +3183,26 @@
   "credit_name": "Anthropic",
   "hero_from": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
   "evidence_from": ""
+ },
+ "vercel-audited-zdr-ai-gateway": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Vercel",
+  "hero_from": "https://vercel.com/blog/introducing-audited-zdr-on-ai-gateway",
+  "evidence_from": "https://vercel.com/blog/introducing-audited-zdr-on-ai-gateway"
+ },
+ "embo-110m-seed-a16z-robot-world-models": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.ai",
+  "hero_from": "https://www.unite.ai/robot-ai-startup-embo-secures-110m-seed-investment-led-by-a16z/",
+  "evidence_from": "https://www.unite.ai/robot-ai-startup-embo-secures-110m-seed-investment-led-by-a16z/"
+ },
+ "china-telecom-xing4-1-preview-open-weights": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Hugging Face",
+  "hero_from": "https://huggingface.co/XingChen-AGI/Xing4.1-Preview",
+  "evidence_from": "https://huggingface.co/XingChen-AGI/Xing4.1-Preview"
  }
 }
