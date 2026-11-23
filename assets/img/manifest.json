@@ -3204,5 +3204,19 @@
   "credit_name": "Hugging Face",
   "hero_from": "https://huggingface.co/XingChen-AGI/Xing4.1-Preview",
   "evidence_from": "https://huggingface.co/XingChen-AGI/Xing4.1-Preview"
+ },
+ "us-blacklists-megaspeed-entity-list-nvidia-scandal": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "RR Tech Pulse",
+  "hero_from": "https://rrtechpulse.com/stories/entity-list-megaspeed-seven-entities/",
+  "evidence_from": ""
+ },
+ "trump-convinced-nvidia-board-huang-return-record-day": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Times",
+  "hero_from": "https://www.thetimes.com/business/companies-markets/article/jensen-huang-ceo-nvidia-reinstated-latest-news-zrr6jhqvm",
+  "evidence_from": ""
  }
 }
