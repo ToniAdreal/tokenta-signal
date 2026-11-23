@@ -3022,5 +3022,12 @@
   "credit_name": "WTBX (Reuters relay)",
   "hero_from": "https://wtbx.com/2026/11/23/crowdstrike-bets-on-network-security-with-43-9-billion-zscaler-deal/",
   "evidence_from": ""
+ },
+ "oregon-virginia-sue-spacex-grok-deepfakes": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WIRED",
+  "hero_from": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
+  "evidence_from": ""
  }
 }
