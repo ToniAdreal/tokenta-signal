@@ -3122,10 +3122,10 @@
   "evidence_from": ""
  },
  "black-forest-labs-nvidia-a16z-world-models": {
-  "hero": false,
+  "hero": true,
   "evidence": false,
   "credit_name": "EU Startups News",
-  "hero_from": "",
+  "hero_from": "https://eustartups.news/black-forest-labs-secures-investment-from-nvidia-and-andreessen-horowitz-for-ai-world-model-development/",
   "evidence_from": ""
  }
 }
