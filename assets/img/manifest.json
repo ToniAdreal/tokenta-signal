@@ -3225,5 +3225,12 @@
   "credit_name": "FinanceFeeds",
   "hero_from": "https://financefeeds.com/anthropic-stock-bond-funds-expect-bb-rating-on-900-billion-commitments/",
   "evidence_from": ""
+ },
+ "anthropic-claude-ship-ai-agents-review-fix-approve-code": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/introducing-claude-ship",
+  "evidence_from": "https://claude.com/resources/articles/introducing-claude-ship"
  }
 }
