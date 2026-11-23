@@ -3008,5 +3008,12 @@
   "credit_name": "Bloomberg Law",
   "hero_from": "https://news.bloomberglaw.com/capital-markets/ant-group-bets-on-simplexity-to-thrive-in-chinas-humanoid-race",
   "evidence_from": ""
+ },
+ "agon-70m-series-a-defence-ai-simulation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "BusinessCloud",
+  "hero_from": "https://businesscloud.co.uk/news/agon-lands-53m-series-a-at-450m-valuation/",
+  "evidence_from": ""
  }
 }
