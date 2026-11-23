@@ -3036,5 +3036,12 @@
   "credit_name": "Reuters",
   "hero_from": "https://longbridge.com/en/news/306481119",
   "evidence_from": "https://longbridge.com/en/news/306481119"
+ },
+ "us-banks-tighten-ai-agent-controls-rogue-safeguards": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WNCY",
+  "hero_from": "https://wncy.com/2026/11/23/exclusive-some-us-banks-tighten-ai-agent-controls-on-concern-about-models-escaping-safeguards/",
+  "evidence_from": ""
  }
 }
