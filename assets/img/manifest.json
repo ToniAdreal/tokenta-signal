@@ -3155,5 +3155,12 @@
   "credit_name": "Z.ai",
   "hero_from": "https://z.ai/blog/glm-5.4",
   "evidence_from": ""
+ },
+ "openai-academic-researchers-50k-grants-open": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CASRAI",
+  "hero_from": "https://casrai.org/news/openai-academic-researchers-200000-free-access-2026",
+  "evidence_from": ""
  }
 }
