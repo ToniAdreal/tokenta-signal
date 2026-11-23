@@ -3162,5 +3162,19 @@
   "credit_name": "CASRAI",
   "hero_from": "https://casrai.org/news/openai-academic-researchers-200000-free-access-2026",
   "evidence_from": ""
+ },
+ "openai-openworks-small-business-ai-partners": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AICoder",
+  "hero_from": "https://aicoder.com/news/news-20261123-openai-openworks-funds-local-ai-experts-free-help-us-small-businesses-8000-monthly-stipend-20-city-pilot",
+  "evidence_from": ""
+ },
+ "deepmind-gemini-agents-lean-quantum-algorithms": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "GitHub",
+  "hero_from": "https://github.com/google-deepmind/formal-quantum-computation",
+  "evidence_from": ""
  }
 }
