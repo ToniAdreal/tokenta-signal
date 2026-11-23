@@ -3148,5 +3148,12 @@
   "credit_name": "Arm Newsroom",
   "hero_from": "https://newsroom.arm.com/news/arm-ceo-rene-haas-long-term-commitment-to-lead-companys-next-phase-of-growth",
   "evidence_from": "https://group.softbank/en/news/press/20261123"
+ },
+ "z-ai-glm-5-4-loop-transformer-vision": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Z.ai",
+  "hero_from": "https://z.ai/blog/glm-5.4",
+  "evidence_from": ""
  }
 }

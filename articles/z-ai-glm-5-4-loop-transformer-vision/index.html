@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Z.ai Ships GLM-5.4, Its First Loop Transformer Flagship, With Vision — Tokenta Signal</title><meta name="description" content="Z.ai released GLM-5.4 on November 23, 2026, its first flagship built on a Loop Transformer: 28 layers of the roughly 750-billion-parameter GLM-5 base run twice, which Z.ai says reaches intelligence comparable to 2-trillion to 3-trillion parameter models. The model adds vision to the mainline flagship for the first time, supports a 1-million-token context, and is live for GLM Coding Plan subscribers with 50% more weekly quota than GLM-5.3. API access and open weights are pending safety review, and no benchmark scores for GLM-5.4 itself have been published yet.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Z.ai released GLM-5.4 on November 23, 2026, its first flagship built on a Loop Transformer: 28 layers of the roughly 750-billion-parameter GLM-5 base run twice, which Z.ai says reaches intelligence comparable to 2-trillion to 3-trillion parameter models. The model adds vision to the mainline flagship for the first time, supports a 1-million-token context, and is live for GLM Coding Plan subscribers with 50% more weekly quota than GLM-5.3. API access and open weights are pending safety review, and no benchmark scores for GLM-5.4 itself have been published yet.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.23 17:24 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 492 · MODELS × CODING · Z.ai</span><span><span class="live">●</span> ISSUE 491 · CHIPS × LEADERSHIP · Arm Newsroom</span><span><span class="live">●</span> ISSUE 490 · CLOUD × CUSTOM SILICON · Amazon</span><span><span class="live">●</span> ISSUE 489 · CHIPS × LEADERSHIP · NVIDIA</span><span><span class="live">●</span> ISSUE 488 · AI STARTUPS × WORLD MODELS · EU Startups News</span><span><span class="live">●</span> ISSUE 487 · AI AGENTS × BENCHMARKS · arXiv</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 492 · MODELS × CODING · Z.ai</span><span><span class="live">●</span> ISSUE 491 · CHIPS × LEADERSHIP · Arm Newsroom</span><span><span class="live">●</span> ISSUE 490 · CLOUD × CUSTOM SILICON · Amazon</span><span><span class="live">●</span> ISSUE 489 · CHIPS × LEADERSHIP · NVIDIA</span><span><span class="live">●</span> ISSUE 488 · AI STARTUPS × WORLD MODELS · EU Startups News</span><span><span class="live">●</span> ISSUE 487 · AI AGENTS × BENCHMARKS · arXiv</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Z.ai Ships GLM-5.4, Its First Loop Transformer Flagship, With Vision</h1>
+<p class="deck">Z.ai released GLM-5.4 on November 23, 2026, its first flagship built on a Loop Transformer: 28 layers of the roughly 750-billion-parameter GLM-5 base run twice, which Z.ai says reaches intelligence comparable to 2-trillion to 3-trillion parameter models. The model adds vision to the mainline flagship for the first time, supports a 1-million-token context, and is live for GLM Coding Plan subscribers with 50% more weekly quota than GLM-5.3. API access and open weights are pending safety review, and no benchmark scores for GLM-5.4 itself have been published yet.</p>
+<div class="meta">ISSUE 492 · 2026-11-23 · SOURCE / <b>Z.ai</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">MODELS × CODING</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/z-ai-glm-5-4-loop-transformer-vision/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Z.ai — <a href="https://z.ai/blog/glm-5.4" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">~750B</div><div class="lab">BASE MODEL SCALE</div><div class="desc">Parameter scale of the GLM-5 base model, whose 28 layers run twice in GLM-5.4; Z.ai claims intelligence comparable to 2-trillion to 3-trillion parameter models.</div></div><div class="metric"><div class="num">1M tokens</div><div class="lab">CONTEXT WINDOW</div><div class="desc">Context window supported by GLM-5.4, selectable as glm-5.4[1m] in Claude Code and glm-5.4 in other supported tools.</div></div><div class="metric"><div class="num">+50%</div><div class="lab">WEEKLY QUOTA VS GLM-5.3</div><div class="desc">Additional weekly quota for GLM Coding Plan subscribers on GLM-5.4 compared with GLM-5.3, at lower credit multipliers per token.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE RELEASE — November 23, 2026: Z.ai releases GLM-5.4 and publishes the technical blog &quot;Toward Generalized Coding with Our First Loop Transformer.&quot; Zixuan Li announces it is available to all GLM Coding Plan users, with new vision capabilities and 50% more weekly quota than GLM-5.3.</li><li><b>02</b>THE ARCHITECTURE — The model loops 28 layers of the roughly 750-billion-parameter GLM-5 base twice, with per-token gates, a hybrid KV cache and sparse attention index reuse to keep the second pass cheap. Z.ai claims intelligence comparable to 2-trillion to 3-trillion parameter models, and reports up to 200 tokens per second off-peak and 70 to 80 at peak load.</li><li><b>03</b>THE ACCESS — GLM-5.4 is live in the GLM Coding Plan, ZCode and Z.ai Chat, with a 1-million-token context and vision input for visual coding. General API access is listed as coming soon after a safety evaluation, and open weights are planned after safety hardening, with no dates given.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Z.ai released GLM-5.4 on November 23, 2026, its first flagship model built on a Loop Transformer architecture, and made it available to all GLM Coding Plan subscribers, along with ZCode and Z.ai Chat. API access is listed as coming soon and will open after a safety evaluation, while the open weights are planned for release once safety hardening is complete.</p><p>The model loops 28 layers of the roughly 750-billion-parameter GLM-5 base model twice, reusing the same weights for a second, deeper pass. Z.ai says the result reaches intelligence levels comparable to models in the 2-trillion to 3-trillion parameter class. GLM-5.4 also adds vision to the mainline flagship for the first time, so developers can hand it a screenshot of a broken interface alongside the code, and it supports a 1-million-token context window. Zixuan Li said subscribers on weekly quotas get 50% more GLM-5.4 allowance than they had on GLM-5.3, at lower credit multipliers.</p><p>Z.ai frames the release as the start of Generalized Coding, where code becomes the foundation for tasks well beyond software development. Its demos include a self-narrated music video, a 6-axis robotic arm modeled in FreeCAD, a complete game, and an interactive 3D bird-watching scene built from pure geometry and custom shaders. The company is open about one limitation: the model tends to get caught in overly long &quot;marathon thinking&quot; loops, though Z.ai says the extra self-correction still lifts accuracy.</p>
+<h2><span class="en">WHY IT MATTERS</span>Depth instead of size, at the moment rivals are racing to trillions of parameters.</h2><p>The loop is a bet that compute depth can substitute for parameter count. Where the recent frontier race has been won by adding parameters, with Alibaba&#x27;s Qwen4-Max at a reported 2.4 trillion, Z.ai claims 2-trillion to 3-trillion level intelligence from a 750-billion base by running the same 28 layers twice.</p><p>If the claim survives independent benchmarks, it moves the efficiency frontier for everyone building at this scale. Until then it is a company claim, not a result: Z.ai has published no benchmark scores for GLM-5.4 itself, and a team member said they will come later. The honest read is to watch the scores, not the slogan.</p><h2><span class="en">THE EXPERIMENT</span>Three engineering changes make the loop affordable at 750B scale.</h2><p>A naive loop would multiply memory cost with each pass. Z.ai&#x27;s blog describes three fixes: independent per-token gates that write each pass&#x27;s updates back into the residual stream in proportion, a hybrid KV cache where the extra loop costs one sliding window instead of a full cache, and reuse of the first pass&#x27;s sparse attention indices at zero extra indexing cost.</p><p>The design was validated progressively on 1-billion, 4-billion, 30-billion and 750-billion base models rather than trained from scratch as a looped model, which Z.ai says still trails unshared models on the same compute budget. On a 30-billion ablation with about 10% more training compute, the looped version showed its largest gains in math, scientific reasoning and long-context tasks, and cut average output length by 10 to 14% on benchmarks such as GPQA-Diamond and MMLU-Pro.</p><h2><span class="en">WHAT IS NEXT</span>Subscription first, open weights later.</h2><p>GLM-5.4 reaches developers first inside the paid Coding Plan, where it runs at up to 200 tokens per second off-peak and 70 to 80 at peak load, and where it can be selected as glm-5.4[1m] in Claude Code. The general API and the weights both wait on safety work, with no dates attached.</p><p>Watch for three things: published benchmark scores for GLM-5.4 itself, the API opening after safety evaluation, and the larger next model Z.ai says is coming soon, which it describes as carrying forward everything learned from looping.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM BIGGER MODELS TO DEEPER PASSES</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From adding parameters to reusing them</div><div class="desc">The frontier race has been won by stacking parameters. GLM-5.4 runs the same 28 layers twice instead, trading parameter count for compute depth and claiming the intelligence of a model three to four times its size.</div></div><div class="metric"><div class="lab">FROM CODING TO GENERALIZED CODING</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From code-only models to code as a general medium</div><div class="desc">Vision joins the mainline flagship, and Z.ai frames the release as Generalized Coding: code as the starting point for video, games, 3D scenes and CAD, not just software.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A Real Efficiency Bet, With a Claim Still Awaiting Its Scores.</h2><p>Tokenta Signal&#x27;s judgment: the engineering is concrete and the headline is not yet proven. Per-token gates, a hybrid KV cache and sparse-index reuse are specific answers to the real cost of looping at 750-billion scale, and the 30-billion ablation gives the design a measured basis. The 2-trillion to 3-trillion comparison, by contrast, arrives with no published scores for GLM-5.4 itself. Treat the release as a usable coding upgrade with cheaper quota and new vision, and the scale claim as a test awaiting its benchmark.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts are as stated in Z.ai&#x27;s technical blog post &quot;Toward Generalized Coding with Our First Loop Transformer&quot; (z.ai, November 23, 2026), in Z.ai lead Zixuan Li&#x27;s announcement on X the same day, and in independent coverage by Winbuzzer and TestingCatalog on November 23, 2026. The comparison to 2-trillion to 3-trillion parameter models is Z.ai&#x27;s own claim: no benchmark scores for GLM-5.4 itself have been published yet, so the claim has not been independently verified. GLM-5.4 is available now only through the GLM Coding Plan, ZCode and Z.ai Chat; general API access and open weights are pending safety evaluation and safety hardening, with no dates given. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Z.ai released GLM-5.4 on November 23, 2026, its first flagship built on a Loop Transformer: 28 layers of the roughly 750-billion-parameter GLM-5 base run twice, adding vision and a 1-million-token context. The model is live for GLM Coding Plan subscribers, with 50% more weekly quota than GLM-5.3; API access and open weights are pending safety review.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://z.ai/blog/glm-5.4" target="_blank" rel="noopener">Z.ai ships GLM-5.4, a looped 750B flagship with vision ↗</a><br>z.ai · 2026-11-23 · Z.ai</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Z.ai: Toward Generalized Coding with Our First Loop Transformer<br><a href="https://z.ai/blog/glm-5.4" target="_blank" rel="noopener">https://z.ai/blog/glm-5.4</a></li><li>Winbuzzer: Zhipu&#x27;s New GLM-5.4 AI Model Adds Image Input<br><a href="https://winbuzzer.com/2026/11/23/zhipus-glm-5-4-adds-image-input-for-coding-xcxwbn/" target="_blank" rel="noopener">https://winbuzzer.com/2026/11/23/zhipus-glm-5-4-adds-image-input-for-coding-xcxwbn/</a></li><li>TestingCatalog: Z.ai launches GLM-5.4, its first Loop Transformer model<br><a href="https://www.testingcatalog.com/z-ai-launches-glm-5-4-its-first-loop-transformer-model/" target="_blank" rel="noopener">https://www.testingcatalog.com/z-ai-launches-glm-5-4-its-first-loop-transformer-model/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../arm-haas-extends-through-2033-softbank-vice-chairman/">Arm CEO Rene Haas Extends Through 2033, Takes SoftBank Vice Chairman Role</a> <span class="meta">ISSUE 491</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../nvidia-board-reinstates-jensen-huang-ceo/">Nvidia Board Reinstates Jensen Huang as CEO, 11 Days After His Resignation</a> <span class="meta">ISSUE 489</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../swe-cowork-coding-agents-under-8pct-workplace-tasks/">Top Coding Agents Finish Fewer Than 8% of Tasks in a Simulated Workplace</a> <span class="meta">ISSUE 487</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../us-banks-tighten-ai-agent-controls-rogue-safeguards/">US Banks Tighten Controls on Their Own AI Agents After Models Escaped Safeguards</a> <span class="meta">ISSUE 484</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>
