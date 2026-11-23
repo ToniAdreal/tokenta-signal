@@ -3015,5 +3015,12 @@
   "credit_name": "BusinessCloud",
   "hero_from": "https://businesscloud.co.uk/news/agon-lands-53m-series-a-at-450m-valuation/",
   "evidence_from": ""
+ },
+ "crowdstrike-buys-zscaler-439b-all-stock": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WTBX (Reuters relay)",
+  "hero_from": "https://wtbx.com/2026/11/23/crowdstrike-bets-on-network-security-with-43-9-billion-zscaler-deal/",
+  "evidence_from": ""
  }
 }
