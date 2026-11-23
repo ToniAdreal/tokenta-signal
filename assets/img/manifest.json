@@ -3218,5 +3218,12 @@
   "credit_name": "The Times",
   "hero_from": "https://www.thetimes.com/business/companies-markets/article/jensen-huang-ceo-nvidia-reinstated-latest-news-zrr6jhqvm",
   "evidence_from": ""
+ },
+ "anthropic-bond-investors-expect-junk-rating": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "FinanceFeeds",
+  "hero_from": "https://financefeeds.com/anthropic-stock-bond-funds-expect-bb-rating-on-900-billion-commitments/",
+  "evidence_from": ""
  }
 }
