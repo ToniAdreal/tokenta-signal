@@ -3141,5 +3141,12 @@
   "credit_name": "Calcalist",
   "hero_from": "https://www.calcalistech.com/ctechnews/article/g0mtcg4mi",
   "evidence_from": ""
+ },
+ "arm-haas-extends-through-2033-softbank-vice-chairman": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Arm Newsroom",
+  "hero_from": "https://newsroom.arm.com/news/arm-ceo-rene-haas-long-term-commitment-to-lead-companys-next-phase-of-growth",
+  "evidence_from": "https://group.softbank/en/news/press/20261123"
  }
 }
