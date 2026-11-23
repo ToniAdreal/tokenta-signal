@@ -3057,5 +3057,75 @@
   "credit_name": "Applied Digital",
   "hero_from": "https://ir.applieddigital.com/news-events/press-releases/detail/165/applied-digital-secures-new-150-mw-18-year-lease-with",
   "evidence_from": ""
+ },
+ "openai-211-minute-outage-75pct-failure": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "OpenAI Status",
+  "hero_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up",
+  "evidence_from": "https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up"
+ },
+ "openai-perplexity-speedometer-common-limits": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Dealroom",
+  "hero_from": "https://dealroom.co/news/174824-openai-publishes-its-internal-pretraining-curve-and-proposes-industry-wi/",
+  "evidence_from": ""
+ },
+ "thinking-machines-inkling-2-mini-open-weights": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Thinking Machines Lab",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "oracle-openai-300b-fully-funded": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Oracle",
+  "hero_from": "https://www.oracle.com/news/announcement/oracle-statement-2026-11-20/",
+  "evidence_from": ""
+ },
+ "isomorphic-labs-5b-series-c": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/",
+  "evidence_from": ""
+ },
+ "together-ai-prompt-leak-coding-agent": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Together AI",
+  "hero_from": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+  "evidence_from": ""
+ },
+ "alibaba-qwen4-max-api-only": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Alibaba Group",
+  "hero_from": "https://www.alibabagroup.com/en-US/document-2060139246777270272",
+  "evidence_from": ""
+ },
+ "microsoft-gpt-62-sol-copilot-mai": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Microsoft",
+  "hero_from": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229",
+  "evidence_from": ""
+ },
+ "swe-cowork-coding-agents-under-8pct-workplace-tasks": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AIstify",
+  "hero_from": "https://aistify.com/swe-cowork-ai-coding-agents-workplace-task-completion/",
+  "evidence_from": ""
+ },
+ "black-forest-labs-nvidia-a16z-world-models": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "EU Startups News",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
