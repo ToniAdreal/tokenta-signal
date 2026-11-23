@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anthropic Opens Zero-Retention Enterprise Safeguards in Public Beta — Tokenta Signal</title><meta name="description" content="Anthropic said on November 23, 2026, that Enterprise Frontier Safeguards is now in public beta, adding automated safety monitoring for sophisticated misuse while keeping zero data retention: neither Anthropic nor any cloud provider retains enterprise data. Developed with more than 100 customers including a quarter of the Fortune 100, it runs on the Claude Platform, Claude Platform on AWS, Amazon Bedrock and Claude on Google Cloud, with Microsoft Foundry support coming soon.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Anthropic said on November 23, 2026, that Enterprise Frontier Safeguards is now in public beta, adding automated safety monitoring for sophisticated misuse while keeping zero data retention: neither Anthropic nor any cloud provider retains enterprise data. Developed with more than 100 customers including a quarter of the Fortune 100, it runs on the Claude Platform, Claude Platform on AWS, Amazon Bedrock and Claude on Google Cloud, with Microsoft Foundry support coming soon.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.23 20:22 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 496 · ANTHROPIC × ENTERPRISE AI · Anthropic</span><span><span class="live">●</span> ISSUE 495 · DEEPMIND × QUANTUM · Google DeepMind</span><span><span class="live">●</span> ISSUE 494 · OPENAI × SMALL BUSINESS · OpenAI</span><span><span class="live">●</span> ISSUE 493 · OPENAI × RESEARCH · OpenAI Help Center</span><span><span class="live">●</span> ISSUE 492 · MODELS × CODING · Z.ai</span><span><span class="live">●</span> ISSUE 491 · CHIPS × LEADERSHIP · Arm Newsroom</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 496 · ANTHROPIC × ENTERPRISE AI · Anthropic</span><span><span class="live">●</span> ISSUE 495 · DEEPMIND × QUANTUM · Google DeepMind</span><span><span class="live">●</span> ISSUE 494 · OPENAI × SMALL BUSINESS · OpenAI</span><span><span class="live">●</span> ISSUE 493 · OPENAI × RESEARCH · OpenAI Help Center</span><span><span class="live">●</span> ISSUE 492 · MODELS × CODING · Z.ai</span><span><span class="live">●</span> ISSUE 491 · CHIPS × LEADERSHIP · Arm Newsroom</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Anthropic Opens Zero-Retention Enterprise Safeguards in Public Beta</h1>
+<p class="deck">Anthropic said on November 23, 2026, that Enterprise Frontier Safeguards is now in public beta, adding automated safety monitoring for sophisticated misuse while keeping zero data retention: neither Anthropic nor any cloud provider retains enterprise data. Developed with more than 100 customers including a quarter of the Fortune 100, it runs on the Claude Platform, Claude Platform on AWS, Amazon Bedrock and Claude on Google Cloud, with Microsoft Foundry support coming soon.</p>
+<div class="meta">ISSUE 496 · 2026-11-23 · SOURCE / <b>Anthropic</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ANTHROPIC × ENTERPRISE AI</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/anthropic-enterprise-frontier-safeguards-public-beta/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Anthropic — <a href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">100+</div><div class="lab">CUSTOMERS IN DEVELOPMENT</div><div class="desc">Customers EFS was developed with since its September announcement, including a quarter of the Fortune 100 and firms in healthcare, financial services and law.</div></div><div class="metric"><div class="num">25%</div><div class="lab">FORTUNE 100 IN THE BETA</div><div class="desc">Share of the Fortune 100 among the customers that helped develop EFS; Bridgewater, Salesforce and Stripe evaluated it in private beta.</div></div><div class="metric"><div class="num">4</div><div class="lab">PLATFORMS AT LAUNCH</div><div class="desc">Platforms where EFS is available at launch: Claude Platform, Claude Platform on AWS, Amazon Bedrock and Claude on Google Cloud. Microsoft Foundry support is coming soon.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE DEVELOPMENT — Anthropic announced Enterprise Frontier Safeguards in September 2026 and developed it with more than 100 customers, including a quarter of the Fortune 100; Bridgewater, Salesforce and Stripe evaluated it in private beta.</li><li><b>02</b>THE BETA — On November 23, 2026, Anthropic opened EFS in public beta for eligible business customers, with an article explaining how automated safety monitoring works on data stored entirely on customer-controlled infrastructure.</li><li><b>03</b>THE MECHANISM — Customers bring their own Amazon S3 or Google Cloud Storage; automated monitoring scans that data for misuse patterns and raises a Safety Case — ID, harm category, status and flagged transcript IDs, no inputs or outputs — for the customer&#x27;s team to review.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Anthropic said on November 23, 2026, that Enterprise Frontier Safeguards (EFS) is now in public beta. EFS adds automated safety monitoring for sophisticated misuse while remaining compatible with zero data retention: neither Anthropic nor any cloud provider retains an enterprise customer&#x27;s data. The system is available on the Claude Platform, Claude Platform on AWS, Amazon Bedrock, and Claude on Google Cloud, with support for Microsoft Foundry coming soon.</p><p>The mechanism puts storage in the customer&#x27;s hands. Inputs and outputs are written to storage the customer controls — Amazon S3 or Google Cloud Storage in the customer&#x27;s own account — and deleted promptly from Anthropic&#x27;s side. The customer configures its own access policies and audit logging and encrypts safety data with its own keys. Anthropic&#x27;s automated safety monitoring reads that customer-held data to look for misuse patterns across many requests. No operator personnel at Anthropic or the cloud provider access inputs and outputs, and the data is never used for model or classifier training.</p><p>When the monitoring finds a risk, it creates a Safety Case for the customer&#x27;s team to review. The case carries an ID, a harm category, a status and flagged transcript IDs, but no inputs or outputs, and can be read from the customer&#x27;s cloud storage or through an API, or fed into security information and event management systems. Anthropic first announced EFS in September and developed it with more than 100 customers, including a quarter of the Fortune 100; Bridgewater, Salesforce and Stripe evaluated it in private beta. Eligible customers will be notified with instructions on how to join.</p>
+<h2><span class="en">WHY IT MATTERS</span>The safety layer that holds none of the data.</h2><p>Enterprise AI adoption has run into a hard conflict: safety monitoring needs to see traffic, and regulated customers need nobody to hold it. Anthropic&#x27;s answer is to split the two — monitoring runs on data that lives only in storage the customer owns and controls.</p><p>That split matters because the threat EFS is built for is not a single bad prompt. Anthropic&#x27;s September threat report describes an operation against roughly fifty organizations in which an AI agent divided an attack among many parallel agents and saved harvested credentials between sessions. Viewed one request at a time, the attack looked benign. Catching it requires seeing across requests, which is exactly what zero-retention customers previously could not get.</p><h2><span class="en">WHAT CHANGED</span>From 30-day retention to customer-held storage.</h2><p>Until now, Anthropic&#x27;s most advanced models required the company to retain customer prompts and responses for at least 30 days so safety monitoring could run. EFS removes that trade-off: the monitoring still runs, but the data it reads sits in the customer&#x27;s own cloud account, under the customer&#x27;s keys.</p><p>The design also draws a line around human access. Only automated safety monitoring can touch the data — no person at Anthropic or the cloud provider reviews inputs and outputs, and nothing is used for training.</p><h2><span class="en">WHAT IS NEXT</span>Watch adoption, and the Microsoft Foundry follow-through.</h2><p>The near test is uptake among the regulated customers EFS was built with — healthcare, financial services and law firms, where data-visibility rules are strictest. Anthropic developed the system with more than 100 customers, so the beta starts with a real user base rather than a blank slate.</p><p>The other test is breadth. Microsoft Foundry support is promised but not yet shipped, and the beta is limited to eligible business customers who are notified directly. Whether EFS becomes the default way enterprises run Claude under zero retention depends on both landing.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM 30-DAY RETENTION TO CUSTOMER-HELD STORAGE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From Anthropic-held retention to customer-held storage</div><div class="desc">The most advanced models previously required Anthropic to retain prompts and responses for at least 30 days. Under EFS, data lives only in storage the customer controls, under the customer&#x27;s keys.</div></div><div class="metric"><div class="lab">FROM SINGLE REQUESTS TO PATTERNS ACROSS REQUESTS</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From per-request screening to cross-request monitoring</div><div class="desc">Real-time classifiers screen individual requests, but sophisticated attacks split across many requests. EFS adds automated monitoring that looks for misuse patterns across requests, on customer-held data.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>Safety Monitoring Without Holding the Data.</h2><p>Tokenta Signal&#x27;s judgment: this is the right fix for the right conflict. Regulated enterprises would not accept a safety system that required handing over their data, and a safety system that could not see across requests could not catch the multi-agent attacks Anthropic itself documented. EFS resolves the tension by moving the monitoring to the customer&#x27;s storage rather than moving the data to the monitor. The honest limits are the rollout&#x27;s: a beta for eligible customers only, Microsoft Foundry still to come. If adoption among the banks, hospitals and law firms it was built with follows, zero-retention monitoring becomes the enterprise default rather than the exception.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts are as stated in Anthropic&#x27;s article &#x27;Zero data retention with Enterprise Frontier Safeguards is now in beta&#x27; (claude.com, published November 23, 2026), read in full on November 23, 2026, and in RuntimeWire&#x27;s report of the launch (published November 23, 2026, 12:26 p.m. CT). The beta is open to eligible business customers; Microsoft Foundry support is coming soon and is not yet available. Launch coverage notes the beta covers the Fable and Mythos model families, which previously required Anthropic to retain prompts and responses for at least 30 days. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Anthropic said on November 23, 2026, that Enterprise Frontier Safeguards is now in public beta, adding automated safety monitoring for sophisticated misuse while keeping zero data retention: customer data lives only in storage the customer controls.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener">Anthropic opens zero-retention safeguards beta ↗</a><br>claude.com · 2026-11-23 · Anthropic</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Anthropic: Zero data retention with Enterprise Frontier Safeguards is now in beta<br><a href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener">https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards</a></li><li>RuntimeWire: Anthropic opens Claude safeguards beta with customer-controlled storage<br><a href="https://runtimewire.com/article/anthropic-puts-claude-misuse-monitoring-in-the-customer-s-cloud-to-preserve-zero" target="_blank" rel="noopener">https://runtimewire.com/article/anthropic-puts-claude-misuse-monitoring-in-the-customer-s-cloud-to-preserve-zero</a></li><li>Emergent: Anthropic Zero Data Retention Policy Launches for Claude AI<br><a href="https://emergent.sh/news/anthropic-zero-data-retention-policy-launches" target="_blank" rel="noopener">https://emergent.sh/news/anthropic-zero-data-retention-policy-launches</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../deepmind-gemini-agents-lean-quantum-algorithms/">DeepMind&#x27;s Gemini Agent Teams Find Faster Quantum Algorithms, Proved in Lean</a> <span class="meta">ISSUE 495</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-openworks-small-business-ai-partners/">OpenAI Launches OpenWorks to Fund Local AI Experts for Small Businesses</a> <span class="meta">ISSUE 494</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-academic-researchers-50k-grants-open/">OpenAI Opens 50,000 Free ChatGPT Grants for Academic Researchers</a> <span class="meta">ISSUE 493</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../z-ai-glm-5-4-loop-transformer-vision/">Z.ai Ships GLM-5.4, Its First Loop Transformer Flagship, With Vision</a> <span class="meta">ISSUE 492</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

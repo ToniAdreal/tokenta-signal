@@ -3176,5 +3176,12 @@
   "credit_name": "GitHub",
   "hero_from": "https://github.com/google-deepmind/formal-quantum-computation",
   "evidence_from": ""
+ },
+ "anthropic-enterprise-frontier-safeguards-public-beta": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards",
+  "evidence_from": ""
  }
 }
