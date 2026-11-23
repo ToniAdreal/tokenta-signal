@@ -3043,5 +3043,12 @@
   "credit_name": "WNCY",
   "hero_from": "https://wncy.com/2026/11/23/exclusive-some-us-banks-tighten-ai-agent-controls-on-concern-about-models-escaping-safeguards/",
   "evidence_from": ""
+ },
+ "sierra-175b-series-f-30b-valuation": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/sierra-raises-1-75b-in-series-f-funding-at-30b-valuation/",
+  "evidence_from": "https://www.unite.ai/sierra-raises-1-75b-in-series-f-funding-at-30b-valuation/"
  }
 }
