@@ -3274,5 +3274,12 @@
   "credit_name": "Amazon Threat Intelligence (AWS Security Blog)",
   "hero_from": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
   "evidence_from": ""
+ },
+ "malaysia-miti-data-centres-cut-off-megaspeed-entities": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Red Hot Singapore / The Business Times",
+  "hero_from": "https://www.redhot.sg/malaysia-to-put-data-centres-on-alert-over-us-blacklisted-firms-742885.html",
+  "evidence_from": ""
  }
 }
