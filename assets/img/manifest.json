@@ -3379,5 +3379,47 @@
   "credit_name": "Hugging Face",
   "hero_from": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
   "evidence_from": ""
+ },
+ "anthropic-claude-ship-beta": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/introducing-claude-ship",
+  "evidence_from": "https://claude.com/resources/articles/introducing-claude-ship"
+ },
+ "nvidia-huang-reinstated-31-pct": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CNN",
+  "hero_from": "https://www.cnn.com/2026/11/23/business/live-news/jensen-huang-reinstated-as-ceo-of-nvidia",
+  "evidence_from": ""
+ },
+ "deepseek-15b-86b-valuation-v41-flash": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Crypto Briefing",
+  "hero_from": "https://cryptobriefing.com/deepseek-founder-wealth-55-billion/",
+  "evidence_from": "https://cryptobriefing.com/deepseek-founder-wealth-55-billion/"
+ },
+ "deepmind-quantum-lean-gemini-290x": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google DeepMind",
+  "hero_from": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/?utm_source=linkedin&utm_medium=social&utm_campaign=&utm_content=",
+  "evidence_from": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/?utm_source=linkedin&utm_medium=social&utm_campaign=&utm_content="
+ },
+ "google-search-personal-intelligence-wallet-drive": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google",
+  "hero_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+  "evidence_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/"
+ },
+ "openai-gpt-62-sol-chat-tab": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "9to5Mac",
+  "hero_from": "https://9to5mac.com/2026/11/23/chatgpt-expands-gpt-6-2-sol-as-openai-sets-retirement-date-for-two-models/",
+  "evidence_from": ""
  }
 }
