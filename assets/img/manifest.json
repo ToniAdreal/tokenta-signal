@@ -3288,5 +3288,12 @@
   "credit_name": "Arianespace",
   "hero_from": "https://www.youtube.com/watch?v=45PPBgvLYUI",
   "evidence_from": ""
+ },
+ "analog-devices-q4-fy2026-record-results": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily",
+  "hero_from": "https://www.investors.com/news/technology/adi-stock-analog-devices-fiscal-q4-2026-report/",
+  "evidence_from": ""
  }
 }
