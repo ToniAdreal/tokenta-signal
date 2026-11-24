@@ -3267,5 +3267,12 @@
   "credit_name": "Reuters",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "cisa-kev-monai-label-cve-2026-133968": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Amazon Threat Intelligence (AWS Security Blog)",
+  "hero_from": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
+  "evidence_from": ""
  }
 }
