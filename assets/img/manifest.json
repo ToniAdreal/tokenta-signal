@@ -3421,5 +3421,19 @@
   "credit_name": "9to5Mac",
   "hero_from": "https://9to5mac.com/2026/11/23/chatgpt-expands-gpt-6-2-sol-as-openai-sets-retirement-date-for-two-models/",
   "evidence_from": ""
+ },
+ "openai-gpt-6-protein-design-onava-lab-tests": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/openai-reports-gpt-6-designs-proteins-with-reasoning-and-code/",
+  "evidence_from": "https://www.unite.ai/openai-reports-gpt-6-designs-proteins-with-reasoning-and-code/"
+ },
+ "cognition-swe-21-coding-cyber-sandbox-escapes": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Cognition",
+  "hero_from": "https://cognition.com/blog/swe-2-1",
+  "evidence_from": "https://www.unite.ai/cognition-releases-swe-2-1-with-major-coding-and-cybersecurity-gains/"
  }
 }
