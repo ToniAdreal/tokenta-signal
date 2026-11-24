@@ -3295,5 +3295,19 @@
   "credit_name": "Investor's Business Daily",
   "hero_from": "https://www.investors.com/news/technology/adi-stock-analog-devices-fiscal-q4-2026-report/",
   "evidence_from": ""
+ },
+ "cognition-devin-bots-persistent-ai-managers": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cognition",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "openai-chatgpt-for-sales-plugins": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechRepublic",
+  "hero_from": "https://www.techrepublic.com/article/news-openai-chatgpt-for-sales-plugins/",
+  "evidence_from": ""
  }
 }
