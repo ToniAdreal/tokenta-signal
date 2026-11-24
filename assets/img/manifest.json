@@ -3281,5 +3281,12 @@
   "credit_name": "Red Hot Singapore / The Business Times",
   "hero_from": "https://www.redhot.sg/malaysia-to-put-data-centres-on-alert-over-us-blacklisted-firms-742885.html",
   "evidence_from": ""
+ },
+ "amazon-leo-le-04-ariane-6-liftoff": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Arianespace",
+  "hero_from": "https://www.youtube.com/watch?v=45PPBgvLYUI",
+  "evidence_from": ""
  }
 }
