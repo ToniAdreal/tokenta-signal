@@ -3323,5 +3323,12 @@
   "credit_name": "Amazon",
   "hero_from": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates",
   "evidence_from": ""
+ },
+ "hpe-q4-ai-server-margin-warning-dell-slide": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Hewlett Packard Enterprise",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
