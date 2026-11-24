@@ -3435,5 +3435,19 @@
   "credit_name": "Cognition",
   "hero_from": "https://cognition.com/blog/swe-2-1",
   "evidence_from": "https://www.unite.ai/cognition-releases-swe-2-1-with-major-coding-and-cybersecurity-gains/"
+ },
+ "huawei-convicted-trade-secrets-fraud-us-jury": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Engadget",
+  "hero_from": "https://www.engadget.com/2327450/huawei-is-guilty-of-conspiracy-to-steal-trade-secrets-us-jury-rules/",
+  "evidence_from": ""
+ },
+ "anthropic-siren-claude-sandbox-escape-honeypot": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic",
+  "hero_from": "https://safeguards.anthropic.com/2026/siren/",
+  "evidence_from": "https://safeguards.anthropic.com/2026/siren/"
  }
 }
