@@ -3253,5 +3253,12 @@
   "credit_name": "Google",
   "hero_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
   "evidence_from": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/"
+ },
+ "claude-vp-vnp-valiant-conjecture-claim": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://github.com/anthropics/formal-math/tree/main/vp-vnp",
+  "evidence_from": ""
  }
 }
