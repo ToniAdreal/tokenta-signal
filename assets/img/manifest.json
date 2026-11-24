@@ -3309,5 +3309,12 @@
   "credit_name": "TechRepublic",
   "hero_from": "https://www.techrepublic.com/article/news-openai-chatgpt-for-sales-plugins/",
   "evidence_from": ""
+ },
+ "uber-nuro-lucid-driverless-robotaxi-bay-area": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Business Wire (via 6ix)",
+  "hero_from": "https://6ix.com/news/nuro-lucid-and-uber-begin-driverless-testing-on-public-roads-in-the-san-francisco-bay-area",
+  "evidence_from": ""
  }
 }
