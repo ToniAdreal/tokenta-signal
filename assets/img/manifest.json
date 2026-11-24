@@ -3316,5 +3316,12 @@
   "credit_name": "Business Wire (via 6ix)",
   "hero_from": "https://6ix.com/news/nuro-lucid-and-uber-begin-driverless-testing-on-public-roads-in-the-san-francisco-bay-area",
   "evidence_from": ""
+ },
+ "amazon-leo-le-04-deployment-confirmed": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Amazon",
+  "hero_from": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates",
+  "evidence_from": ""
  }
 }
