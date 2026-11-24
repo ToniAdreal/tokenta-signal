@@ -3358,5 +3358,26 @@
   "credit_name": "CNN",
   "hero_from": "https://www.cnn.com/2026/11/24/tech/jensen-huang-apologies-employees-therapy?cid=external-feeds_iluminar_meta",
   "evidence_from": ""
+ },
+ "dell-q3-fy27-record-revenue-ai-server-surge": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Investor's Business Daily",
+  "hero_from": "https://www.investors.com/news/technology/dell-stock-fiscal-q3-2027-earnings/",
+  "evidence_from": ""
+ },
+ "hp-inc-q4-fy26-earnings-beat-dividend-raise": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "MarketBeat",
+  "hero_from": "https://www.marketbeat.com/instant-alerts/earnings-hp-nyse-hpq-posts-quarterly-earnings-results-beats-expectations-by-008-eps-2026-11-24/",
+  "evidence_from": ""
+ },
+ "baidu-ernie-55-flash-preview-weights-apache-20": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Hugging Face",
+  "hero_from": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
+  "evidence_from": ""
  }
 }
