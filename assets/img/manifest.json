@@ -3330,5 +3330,12 @@
   "credit_name": "Hewlett Packard Enterprise",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "alfozan-released-1m-bond-openai-bugging-case": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Business Insider",
+  "hero_from": "https://www.daily8.com/en/article/d8_6ffbefea4020352edfe880fac64a6740ab9aec5f28693cf110d6e4c1c6eb4f6b",
+  "evidence_from": ""
  }
 }
