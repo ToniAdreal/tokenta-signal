@@ -3344,5 +3344,12 @@
   "credit_name": "Investor's Business Daily",
   "hero_from": "https://www.investors.com/news/technology/dell-stock-fiscal-q3-2027-earnings/",
   "evidence_from": ""
+ },
+ "hp-q4-fy2026-ai-pc-memory-cost-squeeze": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "MarkedChart",
+  "hero_from": "https://markedchart.com/wire/story/a3066d6b4a34299b",
+  "evidence_from": ""
  }
 }
