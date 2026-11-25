@@ -3449,5 +3449,12 @@
   "credit_name": "Anthropic",
   "hero_from": "https://safeguards.anthropic.com/2026/siren/",
   "evidence_from": "https://safeguards.anthropic.com/2026/siren/"
+ },
+ "microsoft-code-red-historic-outage-response": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Fox News, reporting Reuters",
+  "hero_from": "https://foxnews.com/us/microsoft-declares-code-red-historic-service-outage",
+  "evidence_from": ""
  }
 }
