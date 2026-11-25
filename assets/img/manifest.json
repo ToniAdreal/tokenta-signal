@@ -3610,5 +3610,12 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
   "evidence_from": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/"
+ },
+ "new-york-bans-ai-chatbot-toys-five-years": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "New York Governor's Office",
+  "hero_from": "https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot",
+  "evidence_from": ""
  }
 }
