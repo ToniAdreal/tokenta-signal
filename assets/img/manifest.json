@@ -3505,5 +3505,12 @@
   "credit_name": "Connecticut AG",
   "hero_from": "https://portal.ct.gov/ag/press-releases/2026-press-releases/attorney-general-tong-challenges-plan-to-auction-off-character-ai-private-chats",
   "evidence_from": ""
+ },
+ "us-intel-no-evidence-mss-directed-alice-huang-affair": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Zubiqo, via The New York Times",
+  "hero_from": "https://zubiqo.com/news/us-intel-tells-aides-no-evidence-mss-directed-nvidia-ceo-jensen-huang-affair-nyt-reports-wtm2az",
+  "evidence_from": "https://www.techmeme.com/261124/p52"
  }
 }
