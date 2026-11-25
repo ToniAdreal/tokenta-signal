@@ -3617,5 +3617,12 @@
   "credit_name": "New York Governor's Office",
   "hero_from": "https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot",
   "evidence_from": ""
+ },
+ "doj-no-formal-probe-huang-reinstatement": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "New York Post",
+  "hero_from": "https://nypost.com/2026/11/25/us-news/i-dont-think-jensen-huang-needs-a-pardon-jd-vance-says-i-talked-to-the-attorney-general/",
+  "evidence_from": ""
  }
 }
