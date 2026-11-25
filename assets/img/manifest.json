@@ -3477,5 +3477,12 @@
   "credit_name": "Nodera",
   "hero_from": "https://www.nodera.ai/alternatives/character-ai",
   "evidence_from": ""
+ },
+ "anthropic-skills-over-mcp-public-beta": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+  "evidence_from": "https://www.unite.ai/anthropic-brings-server-supplied-skills-and-background-tasks-to-claude/"
  }
 }
