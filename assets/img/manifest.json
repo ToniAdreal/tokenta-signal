@@ -3547,5 +3547,12 @@
   "credit_name": "Interesting Engineering",
   "hero_from": "https://interestingengineering.com/culture/openai-exact-2-25-matrix-multiplication-exponent",
   "evidence_from": "https://interestingengineering.com/culture/openai-exact-2-25-matrix-multiplication-exponent"
+ },
+ "xpeng-ai-day-2026-iron-qualified-work-partner": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI",
+  "hero_from": "https://www.unite.ai/xpeng-positions-iron-humanoid-as-an-autonomous-work-partner/",
+  "evidence_from": "https://www.unite.ai/xpeng-positions-iron-humanoid-as-an-autonomous-work-partner/"
  }
 }
