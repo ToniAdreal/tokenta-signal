@@ -3526,5 +3526,26 @@
   "credit_name": "Politico, via McKinney Times",
   "hero_from": "http://mckinneytimes.com/stories/house-duo-wants-oversight-for-self-improving-ai-models,2283362",
   "evidence_from": ""
+ },
+ "us-trustee-disney-character-ai-license-objection": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "PPC Land",
+  "hero_from": "",
+  "evidence_from": ""
+ },
+ "tidal-bans-ai-generated-music-29m-tracks": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Engadget",
+  "hero_from": "https://www.engadget.com/2326812/tidal-is-banning-ai-generated-music-entirely/",
+  "evidence_from": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/"
+ },
+ "openai-matrix-multiplication-exponent-nine-fourths": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Interesting Engineering",
+  "hero_from": "https://interestingengineering.com/culture/openai-exact-2-25-matrix-multiplication-exponent",
+  "evidence_from": "https://interestingengineering.com/culture/openai-exact-2-25-matrix-multiplication-exponent"
  }
 }
