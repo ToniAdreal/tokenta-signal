@@ -3456,5 +3456,12 @@
   "credit_name": "Fox News, reporting Reuters",
   "hero_from": "https://foxnews.com/us/microsoft-declares-code-red-historic-service-outage",
   "evidence_from": ""
+ },
+ "meta-muse-instagram-dms-rollout": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+  "evidence_from": ""
  }
 }
