@@ -3498,5 +3498,12 @@
   "credit_name": "KuCoin",
   "hero_from": "https://www.kucoin.com/news/flash/dell-technologies-surpasses-earnings-estimates-despite-11-9-stock-drop",
   "evidence_from": "https://ainightcap.beehiiv.com/p/anthropic-slips-below-its-ipo-price-65bd"
+ },
+ "character-ai-42-state-ags-challenge-chat-sale": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Connecticut AG",
+  "hero_from": "https://portal.ct.gov/ag/press-releases/2026-press-releases/attorney-general-tong-challenges-plan-to-auction-off-character-ai-private-chats",
+  "evidence_from": ""
  }
 }
