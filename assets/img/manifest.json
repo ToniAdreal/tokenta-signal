@@ -3554,5 +3554,12 @@
   "credit_name": "Unite.AI",
   "hero_from": "https://www.unite.ai/xpeng-positions-iron-humanoid-as-an-autonomous-work-partner/",
   "evidence_from": "https://www.unite.ai/xpeng-positions-iron-humanoid-as-an-autonomous-work-partner/"
+ },
+ "anthropic-spacexai-compute-rental-31b-month": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Decoder",
+  "hero_from": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/",
+  "evidence_from": "https://www.siliconreport.com/anthropic-pays-xai-roughly-3-1b-a-month-for-compute-nyt-reports"
  }
 }
