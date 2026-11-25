@@ -3519,5 +3519,12 @@
   "credit_name": "Anthropic",
   "hero_from": "https://claude.com/resources/articles/install-as-app",
   "evidence_from": ""
+ },
+ "house-rsi-safety-act-self-improving-ai-oversight": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Politico, via McKinney Times",
+  "hero_from": "http://mckinneytimes.com/stories/house-duo-wants-oversight-for-self-improving-ai-models,2283362",
+  "evidence_from": ""
  }
 }
