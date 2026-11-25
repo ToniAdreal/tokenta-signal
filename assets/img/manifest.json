@@ -3568,5 +3568,26 @@
   "credit_name": "Robot Embodiment",
   "hero_from": "",
   "evidence_from": "https://robotembodiment.com/articles/xpeng-iron-humanoid.html"
+ },
+ "microsoft-amd-helios-azure-validation": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "AMD",
+  "hero_from": "https://newsroom.amd.com/news/microsoft-running-workload-validation-amd-helios-rackscale-solution/",
+  "evidence_from": ""
+ },
+ "nvidia-b300-lead-time-40-weeks": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Wccftech",
+  "hero_from": "https://wccftech.com/nvidia-faces-booming-demand-despite-woes-as-b300-lead-times-reportedly-stretch-to-40-weeks-for-new-orders-gb300-buyers-now-face-14-to-26-weeks-says-report/",
+  "evidence_from": ""
+ },
+ "cloudera-digital-sovereignty-mistral": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cloudera",
+  "hero_from": "https://www.cloudera.com/about/news-and-blogs/press-releases/2026-11-24-cloudera-launches-digital-sovereignty-solution-that-gives-enterprises-control-of-data-and-ai-across-the-entire-lifecycle.html",
+  "evidence_from": ""
  }
 }
