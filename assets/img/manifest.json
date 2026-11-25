@@ -3624,5 +3624,12 @@
   "credit_name": "New York Post",
   "hero_from": "https://nypost.com/2026/11/25/us-news/i-dont-think-jensen-huang-needs-a-pardon-jd-vance-says-i-talked-to-the-attorney-general/",
   "evidence_from": ""
+ },
+ "booker-questions-nvidia-huang-return-antitrust": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Bloomberg Law",
+  "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/nvidia-board-chair-queried-by-senator-on-federal-communications",
+  "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/nvidia-board-chair-queried-by-senator-on-federal-communications"
  }
 }
