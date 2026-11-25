@@ -3631,5 +3631,12 @@
   "credit_name": "Bloomberg Law",
   "hero_from": "https://news.bloomberglaw.com/artificial-intelligence/nvidia-board-chair-queried-by-senator-on-federal-communications",
   "evidence_from": "https://news.bloomberglaw.com/artificial-intelligence/nvidia-board-chair-queried-by-senator-on-federal-communications"
+ },
+ "riemann-lake-comparator-v4360-pass": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "MIT (Andrew Sutherland)",
+  "hero_from": "",
+  "evidence_from": "https://math.mit.edu/~drew/grh/"
  }
 }
