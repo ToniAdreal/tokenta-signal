@@ -3463,5 +3463,19 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
   "evidence_from": ""
+ },
+ "trump-huang-pardon-option-senate-testimony": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/24/trump-reportedly-says-pardoning-jensen-huang-is-an-option-but-that-he-doesnt-think-it-will-be-necessary/",
+  "evidence_from": "https://techcrunch.com/2026/11/24/trump-reportedly-says-pardoning-jensen-huang-is-an-option-but-that-he-doesnt-think-it-will-be-necessary/"
+ },
+ "character-ai-judge-approves-smirks-pangs-stalking-horse": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Nodera",
+  "hero_from": "https://www.nodera.ai/alternatives/character-ai",
+  "evidence_from": ""
  }
 }
