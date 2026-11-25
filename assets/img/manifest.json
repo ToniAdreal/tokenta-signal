@@ -3561,5 +3561,12 @@
   "credit_name": "The Decoder",
   "hero_from": "https://the-decoder.com/anthropics-appetite-for-compute-is-pushing-xai-toward-a-rent-over-build-strategy/",
   "evidence_from": "https://www.siliconreport.com/anthropic-pays-xai-roughly-3-1b-a-month-for-compute-nyt-reports"
+ },
+ "xpeng-driver-assist-subscription-yoyo-01-robotaxi": {
+  "hero": false,
+  "evidence": true,
+  "credit_name": "Robot Embodiment",
+  "hero_from": "",
+  "evidence_from": "https://robotembodiment.com/articles/xpeng-iron-humanoid.html"
  }
 }
