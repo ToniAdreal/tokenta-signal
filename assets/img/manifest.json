@@ -3512,5 +3512,12 @@
   "credit_name": "Zubiqo, via The New York Times",
   "hero_from": "https://zubiqo.com/news/us-intel-tells-aides-no-evidence-mss-directed-nvidia-ceo-jensen-huang-affair-nyt-reports-wtm2az",
   "evidence_from": "https://www.techmeme.com/261124/p52"
+ },
+ "anthropic-claude-artifacts-install-as-app": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://claude.com/resources/articles/install-as-app",
+  "evidence_from": ""
  }
 }
