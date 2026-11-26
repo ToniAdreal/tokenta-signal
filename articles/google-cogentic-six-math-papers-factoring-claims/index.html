@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Google&#x27;s Cogentic Posts Six AI-Written Math Papers, Including a Factoring Claim — Tokenta Signal</title><meta name="description" content="Google Research posted six new mathematics papers on November 25, 2026, all produced by Cogentic, a multi-agent proof system built on Gemini 4. The headline paper claims an unconditional integer factorization algorithm in time L_N[1/3, O(1)], and a second claims deterministic subexponential factoring. Neither has been peer-reviewed, and the promised Lean formalizations have not yet been released.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Google Research posted six new mathematics papers on November 25, 2026, all produced by Cogentic, a multi-agent proof system built on Gemini 4. The headline paper claims an unconditional integer factorization algorithm in time L_N[1/3, O(1)], and a second claims deterministic subexponential factoring. Neither has been peer-reviewed, and the promised Lean formalizations have not yet been released.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.26 02:12 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 552 · GOOGLE × COGENTIC × MATHEMATICS × CRYPTOGRAPHY · Google Research</span><span><span class="live">●</span> ISSUE 551 · 1PASSWORD × CYBERSECURITY × BREACH DISCLOSURE · 1Password</span><span><span class="live">●</span> ISSUE 550 · FINCEN × CYBERSECURITY × TREASURY · Reuters</span><span><span class="live">●</span> ISSUE 549 · SPACEX × FCC × ORBITAL COMPUTE · Reuters</span><span><span class="live">●</span> ISSUE 548 · RIEMANN HYPOTHESIS × LEAN × FORMAL PROOF · MIT (Andrew Sutherland)</span><span><span class="live">●</span> ISSUE 547 · NVIDIA × ANTITRUST · Reuters</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 552 · GOOGLE × COGENTIC × MATHEMATICS × CRYPTOGRAPHY · Google Research</span><span><span class="live">●</span> ISSUE 551 · 1PASSWORD × CYBERSECURITY × BREACH DISCLOSURE · 1Password</span><span><span class="live">●</span> ISSUE 550 · FINCEN × CYBERSECURITY × TREASURY · Reuters</span><span><span class="live">●</span> ISSUE 549 · SPACEX × FCC × ORBITAL COMPUTE · Reuters</span><span><span class="live">●</span> ISSUE 548 · RIEMANN HYPOTHESIS × LEAN × FORMAL PROOF · MIT (Andrew Sutherland)</span><span><span class="live">●</span> ISSUE 547 · NVIDIA × ANTITRUST · Reuters</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">WEB3 INFRASTRUCTURE · SIGNAL REPORT</span>
+<h1>Google&#x27;s Cogentic Posts Six AI-Written Math Papers, Including a Factoring Claim</h1>
+<p class="deck">Google Research posted six new mathematics papers to its public GitHub repository on November 25, 2026, all produced by Cogentic, a multi-agent proof system built on Gemini 4. The headline paper claims an unconditional integer factorization algorithm in time L_N[1/3, O(1)], matching the number field sieve&#x27;s exponent without unproven assumptions, and a second paper claims deterministic subexponential factoring at L_N[3/4]. The papers have not been peer-reviewed, no outside mathematician has verified them, and the promised Lean 4 formalizations have not yet been released. The release does not claim polynomial-time factoring and does not break RSA encryption.</p>
+<div class="meta">ISSUE 552 · 2026-11-25 · SOURCE / <b>Google Research</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">GOOGLE × COGENTIC × MATHEMATICS × CRYPTOGRAPHY</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/google-cogentic-six-math-papers-factoring-claims/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Google Research — <a href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">L_N[1/3, O(1)]</div><div class="lab">FACTORING CLAIM</div><div class="desc">The headline paper claims a randomized algorithm that returns the complete prime factorization of any integer in expected time L_N[1/3, 105], matching the number field sieve&#x27;s exponent without relying on unproven number-theoretic assumptions, improving on the L[1/2] bound proved in 1992.</div></div><div class="metric"><div class="num">L_N[3/4]</div><div class="lab">DETERMINISTIC FACTORING</div><div class="desc">A second paper in the November 25 batch claims deterministic subexponential factoring with a worst-case bound of L_N[3/4], with no randomness and no unproven assumptions. The previous best deterministic bound, from 2021, was roughly the fifth root of N.</div></div><div class="metric"><div class="num">6 NEW, 10 TOTAL</div><div class="lab">PAPERS IN THE BATCH</div><div class="desc">The November 25 batch holds six papers; the repository folder now holds ten Cogentic papers in total, with earlier batches dated October 30, November 18 and November 23, 2026. None has been peer-reviewed, and the promised Lean 4 formalizations have not yet been released.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE SYSTEM IS INTRODUCED — September 30, 2026: Google Research posts an arXiv preprint introducing Cogentic, a multi-agent harness for automated proof discovery built on Gemini, with domain experts independently verifying early results.</li><li><b>02</b>THE EARLY BATCHES — October 30 to November 23, 2026: Cogentic papers appear in the Google Research repository in batches, covering game theory, learning-theoretic compression and combinatorial auctions.</li><li><b>03</b>THE SIX-PAPER BATCH — November 25, 2026: Google Research posts six new Cogentic papers, including unconditional integer factorization in L_N[1/3, O(1)], deterministic subexponential factoring, faster discrete logarithms, a 1/5-approximate Nash equilibrium algorithm, a log-rank bound and an edge-reconstruction proof.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Google Research posted six new mathematics papers to its public GitHub repository on November 25, 2026, all produced by Cogentic, a multi-agent proof system built on Gemini 4, with human involvement limited to the initial prompt. The batch covers number theory, game theory, communication complexity and graph theory, and the repository now holds ten Cogentic papers in total, with earlier batches dated October 30, November 18 and November 23.</p><p>The headline paper claims an unconditional integer factorization algorithm running in time L_N[1/3, O(1)]: a randomized algorithm that returns the complete prime factorization of any integer in expected time L_N[1/3, 105], with deterministic workspace L_N[1/3, 40]. The 1/3 exponent matches the growth rate of the number field sieve, the fastest factoring method used in practice, but without relying on the unproven assumptions cryptographers have leaned on since the early 1990s. It improves on the L[1/2] bound Hendrik Lenstra and Carl Pomerance proved in 1992.</p><p>A second paper drops randomness altogether and claims a deterministic subexponential factoring bound of L_N[3/4], where every deterministic factoring algorithm proved before it scaled exponentially with the number of digits; the previous best deterministic bound, from University of New South Wales mathematician David Harvey in 2021, was roughly the fifth root of N. Harvey said Google&#x27;s new results appear to be a better complexity bound. The remaining four papers claim faster discrete logarithms in small-characteristic fields, a polynomial-time algorithm for 1/5-approximate Nash equilibria in two-player games, a break of the square-root barrier for the log-rank conjecture, and a proof of Harary&#x27;s 1964 edge-reconstruction conjecture for dense graphs.</p>
+<h2><span class="en">WHY IT MATTERS</span>A 34-year gap, closed on paper.</h2><p>The factoring claim is the one that will draw the attention. An unconditional algorithm at the number field sieve&#x27;s exponent has been the open target since Lenstra and Pomerance proved L[1/2] in 1992: matching the sieve&#x27;s speed without assuming unproven number theory. If the proof holds, it is the first time a machine has closed a gap of that age in pure mathematics, and it arrives one day after OpenAI&#x27;s nine-paper drop claiming the matrix multiplication exponent is exactly 9/4, which this site covered as flash 540.</p><p>The deterministic paper matters almost as much. Removing randomness from subexponential factoring, with a worst-case bound of L_N[3/4], would move the result from a method that works in expectation to one that always works within the bound. That is the difference between a fast algorithm and a guaranteed one, and it is the claim Harvey, whose own bound it would beat, has publicly called a better complexity bound.</p><h2><span class="en">WHAT REMAINS</span>Claims, not theorems, until the checks land.</h2><p>None of this is verified yet. The papers have not been peer-reviewed, no outside mathematician has checked the proofs, and the complete Lean 4 formalizations the papers say have been finished will appear only in companion submissions that have not been released. The repository&#x27;s own README says the folder is not an official Google product. OpenAI&#x27;s own math collection carries the same warning, and three of its manuscripts were withdrawn after a sign error, which is the right precedent for how to treat this batch.</p><p>Two clarifications matter for readers who saw the rumors. This is not a claim of polynomial-time factoring, and it does not break RSA: the stated constant, 105, is far larger than the number field sieve&#x27;s heuristic constant of about 1.92, and the algorithm routes numbers up to 210,000 to plain trial division. A separate online rumor that some lab has cracked factoring in P has no evidence behind it and is not this release.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM HEURISTIC SPEED TO UNCONDITIONAL PROOF</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From heuristic speed to unconditional proof</div><div class="desc">The number field sieve&#x27;s 1/3 exponent was a heuristic rate that depended on unproven assumptions; Cogentic&#x27;s paper claims the same exponent with a proof that assumes nothing.</div></div><div class="metric"><div class="lab">FROM ONE LAB&#x27;S MATH RACE TO TWO</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From one lab&#x27;s math race to two</div><div class="desc">OpenAI&#x27;s nine-paper drop on November 24 claimed the matrix multiplication exponent is exactly 9/4; Google&#x27;s six-paper batch on November 25 answers with factoring, discrete logarithms and game theory.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>A serious claim from a real system, still awaiting its check.</h2><p>Cogentic is not a press release with a theorem attached; it is a published system with a track record, an arXiv paper from September, and earlier batches that domain experts independently verified. That is what separates this from the factoring-in-P rumor circulating alongside it, which has no evidence at all. But a track record is not a proof, and the proofs here have not been checked by anyone outside the system that wrote them. The honest posture is the one this site took with OpenAI&#x27;s 9/4 claim: report the claim precisely, mark it unverified, and wait for the Lean formalizations and independent scrutiny. If they hold, a 34-year gap just closed. If they do not, the retraction will be as instructive as the claim.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts are as posted by Google Research and as reported by RDWorldOnline and AI Frontier Post, all read this round. None of the six papers has been peer-reviewed, and no outside mathematician has independently verified the proofs; the complete Lean 4 formalizations the papers say exist have not yet been released. The papers do not claim polynomial-time factoring and do not break RSA encryption. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><a class="ev-fig" href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers" target="_blank" rel="noopener" style="display:block"><img src="../../assets/img/google-cogentic-six-math-papers-factoring-claims/evidence.jpg" alt="Screenshot of the primary source page" loading="lazy"></a><div class="figcap">SCREENSHOT: SOURCE PAGE — github.com · CLICK TO OPEN THE ORIGINAL ↗</div><p>Google Research posted six new mathematics papers to its public GitHub repository on November 25, 2026, all produced by Cogentic, a multi-agent proof system built on Gemini 4. The headline paper claims an unconditional integer factorization algorithm in time L_N[1/3, O(1)], matching the number field sieve&#x27;s exponent without unproven assumptions, and a second paper claims deterministic subexponential factoring. The papers have not been peer-reviewed and the promised Lean 4 formalizations have not yet been released. The release does not claim polynomial-time factoring and does not break RSA encryption.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers" target="_blank" rel="noopener">Unconditional Integer Factorization in Time L_N[1/3, O(1)] ↗</a><br>github.com · 2026-11-25 · Google Research</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Google Research: Cogentic Research Papers<br><a href="https://github.com/google-research/google-research/tree/master/cogentic_research_papers" target="_blank" rel="noopener">https://github.com/google-research/google-research/tree/master/cogentic_research_papers</a></li><li>RDWorldOnline: Google&#x27;s Gemini 4 agent claims six math proofs in a day, including one on factoring 30 years in the making<br><a href="https://www.rdworldonline.com/google-cogentic-ai-integer-factoring-bounds-lean-proofs/" target="_blank" rel="noopener">https://www.rdworldonline.com/google-cogentic-ai-integer-factoring-bounds-lean-proofs/</a></li><li>AI Frontier Post: Google&#x27;s Cogentic agent posts six math papers, claiming proofs for problems open since 1964<br><a href="https://aifrontierpost.com/articles/google-cogentic-six-math-papers/" target="_blank" rel="noopener">https://aifrontierpost.com/articles/google-cogentic-six-math-papers/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-gpt-6-astra-lattice-standard-model/">GPT-6 Astra Leads the Proof Behind a Candidate Lattice Definition of the Standard Model</a> <span class="meta">ISSUE 377</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../terawulf-q3-2026-hpc-83pct-revenue/">TeraWulf&#x27;s AI Leases Now Drive 83% of Revenue as Bitcoin Mining Fades</a> <span class="meta">ISSUE 255</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../npci-tech-solutions-ai-blockchain/">India&#x27;s Payments Authority NPCI Spins Up AI and Blockchain Arm: NTSL, Its Fourth Subsidiary</a> <span class="meta">ISSUE 196</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../anthropic-flashprove-provable-inference/">Anthropic&#x27;s FlashProve Gives Model Answers a Cryptographic Receipt Proving Which Weights Produced Them</a> <span class="meta">ISSUE 169</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

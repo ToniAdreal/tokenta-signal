@@ -3652,5 +3652,19 @@
   "credit_name": "The Register",
   "hero_from": "https://www.theregister.com/security/2026/11/25/us-treasury-financial-crimes-unit-becomes-latest-fed-breach-victim/5312165",
   "evidence_from": ""
+ },
+ "1password-discloses-breach-customer-data-taken-vaults-safe": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "1Password",
+  "hero_from": "https://1password.com/blog/update-on-nov-2026-security-incident",
+  "evidence_from": "https://techcrunch.com/2026/11/25/1password-said-hackers-broke-into-its-internal-systems-but-customer-passwords-are-safe/"
+ },
+ "google-cogentic-six-math-papers-factoring-claims": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google Research",
+  "hero_from": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
+  "evidence_from": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers"
  }
 }
