@@ -3694,5 +3694,26 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
   "evidence_from": ""
+ },
+ "deepmind-ai-agents-control-gemini-experiment-compute": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Decoder",
+  "hero_from": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+  "evidence_from": ""
+ },
+ "anthropic-shorter-grh-lean-proof-76k-lines": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Wikipedia",
+  "hero_from": "https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis",
+  "evidence_from": ""
+ },
+ "nvidia-nemotron-image-30b-open-weights": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Hugging Face",
+  "hero_from": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
+  "evidence_from": ""
  }
 }
