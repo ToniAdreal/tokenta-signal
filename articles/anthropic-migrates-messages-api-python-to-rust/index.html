@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Claude Rebuilt Anthropic&#x27;s Own API in Rust, Cutting CPU Use 70% — Tokenta Signal</title><meta name="description" content="Anthropic said on November 25, 2026 that it has migrated its Messages API from Python to Rust, with Claude agents writing much of the new code and verifying it against live production traffic. The company says the Rust service uses about 70 percent less CPU per request and more than 80 percent less memory per request, and cuts median time to first token by about 20 percent.">
+<meta property="og:site_name" content="Tokenta Signal"><meta property="og:description" content="Anthropic said on November 25, 2026 that it has migrated its Messages API from Python to Rust, with Claude agents writing much of the new code and verifying it against live production traffic. The company says the Rust service uses about 70 percent less CPU per request and more than 80 percent less memory per request, and cuts median time to first token by about 20 percent.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--panel:#0A0A0A;--panel2:#111;--line:#232323;--line2:#383838;--txt:#F4F4F4;--mut:#9A9A9A;--mut2:#6E6E6E;--acc:#C9D0D9;--acc2:#E8ECF1;--grn:#C9D0D9;--red:#8A8F98}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:"IBM Plex Sans",Arial,sans-serif;font-size:16px;line-height:1.65}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--acc)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.serif{font-family:"IBM Plex Serif",Georgia,serif}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+header.top{border-bottom:2px solid var(--acc);position:sticky;top:0;background:rgba(0,0,0,.96);z-index:50}
+.topbar{display:flex;justify-content:space-between;align-items:center;height:58px;gap:20px}
+.logo-img{height:30px;width:auto;display:block}
+nav.main{display:flex;gap:22px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em}
+nav.main a{color:var(--mut)} nav.main a:hover{color:var(--txt)}
+.term-btn{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--acc);color:var(--acc);padding:7px 14px;white-space:nowrap}
+.term-btn:hover{background:var(--acc);color:#000}
+.ticker{border-bottom:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.05em;color:var(--mut);white-space:nowrap;overflow:hidden;padding:7px 0;background:#050505}
+.ticker .t-in{display:flex;align-items:center}
+.ticker .t-group>span{margin-right:30px}.ticker .live{color:var(--acc);font-weight:700}
+.ticker .clock{color:var(--txt);font-weight:700;flex:none;background:#050505;position:relative;z-index:2;padding-right:16px;margin-right:16px;border-right:1px solid var(--line)}
+.t-scroll{overflow:hidden;flex:1;min-width:0}
+.t-track{display:inline-flex;will-change:transform;animation:tscroll 48s linear infinite}
+.ticker:hover .t-track{animation-play-state:paused}
+.t-group{display:inline-flex}
+@keyframes tscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.t-track{animation:none}}
+@keyframes tspagein{from{opacity:0}to{opacity:1}}
+body{animation:tspagein .45s ease-out}
+@media (prefers-reduced-motion:reduce){body{animation:none}}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line2);padding-bottom:12px}
+.sec-title{font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.sec-title i{color:var(--acc);font-style:normal;margin-right:10px}
+.lead-grid{display:grid;grid-template-columns:1.9fr 1fr;gap:36px}
+.lead-card .kick{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;color:var(--acc);letter-spacing:.12em}
+.lead-card h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:38px;line-height:1.25;font-weight:600;margin:12px 0}
+.lead-card p{color:var(--mut);font-size:16px}
+.lead-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}
+.figcap{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);margin-top:6px;letter-spacing:.03em}
+.figcap a{color:var(--mut);text-decoration:underline}
+.meta{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut);letter-spacing:.05em;margin-top:16px}
+.meta b{color:var(--acc);font-weight:700}
+.wire-list{border-top:1px solid var(--line)}
+.wire-row{display:grid;grid-template-columns:224px 1fr;gap:22px;padding:20px 6px;border-bottom:1px solid var(--line);align-items:start}
+.wire-row:hover{background:#0B0B0B}
+.wire-row .thumb{width:224px;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);display:block;background:var(--panel)}
+.wire-row .thumb-ph{display:flex;align-items:center;justify-content:center;background:#0B0B0C}
+.wire-row .thumb-ph i{font-family:"IBM Plex Mono",monospace;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mut2);text-align:center;padding:0 10px}
+.wr-main{display:block;min-width:0}
+.wr-meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:9px}
+.wire-row .t{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut)}
+.wire-row .c{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.07em;color:var(--acc)}
+.wire-row .h{display:block;font-family:"IBM Plex Serif",Georgia,serif;font-size:21px;font-weight:600;line-height:1.35}
+.wire-row .s{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2)}
+.wire-row .d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--mut);font-size:14px;line-height:1.55;margin-top:8px}
+.wire-list.compact .wire-row{grid-template-columns:118px 1fr;gap:14px;padding:14px 2px}
+.wire-list.compact .thumb{width:118px}
+.wire-list.compact .h{font-size:16px}
+.wire-list.compact .d{display:none}
+.wire-list.compact .s{display:none}
+.rail-title{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:6px}
+.cov-table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+.cov-table td{padding:8px 4px;border-bottom:1px solid var(--line);color:var(--mut)}
+.cov-table td:last-child{text-align:right;color:var(--txt);font-weight:700}
+.desks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.desk-card{background:var(--panel);padding:24px;display:block}
+.desk-card:hover{background:var(--panel2)}
+.desk-card .idx{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px;font-weight:700}
+.desk-card h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:20px;font-weight:600;margin:8px 0}
+.desk-card p{color:var(--mut);font-size:13px;min-height:58px}
+.desk-card .go{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700;color:var(--acc)}
+.desk-card .n{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--mut2)}
+.brief{border:1px solid var(--line);background:var(--panel);padding:30px;border-top:3px solid var(--acc)}
+.brief h3{font-family:"IBM Plex Serif",Georgia,serif;font-size:24px;font-weight:600}
+.brief ol{list-style:none;margin-top:16px}
+.brief li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.brief li:last-child{border-bottom:none}
+.brief li b{font-family:"IBM Plex Mono",monospace;color:var(--acc);margin-right:12px;font-size:12px}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.why .cell{border-top:2px solid var(--acc);padding-top:14px}
+.why h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600;margin:8px 0}
+.why p{color:var(--mut);font-size:13px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.how .step{background:var(--panel);padding:24px}
+.how .step b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:12px}
+.how h4{font-family:"IBM Plex Serif",Georgia,serif;font-size:19px;font-weight:600;margin:8px 0}
+.how p{color:var(--mut);font-size:13px}
+.sponsor{border:1px dashed var(--acc);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;background:#0B0B0C}
+.sponsor .t{font-family:"IBM Plex Serif",Georgia,serif;font-size:18px;font-weight:600}
+.sponsor p{color:var(--mut);font-size:13px}
+.btn{display:inline-block;padding:11px 20px;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;border:1px solid var(--txt)}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#000}
+.btn.primary:hover{background:var(--acc2);color:#000}
+.btn.ghost{color:var(--txt);background:transparent}
+footer{padding:56px 0 40px}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+footer h5{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--acc);margin-bottom:14px}
+footer li{list-style:none;margin:7px 0;color:var(--mut);font-size:13px}
+.f-slogan{color:var(--mut);font-size:13px;margin-top:12px;max-width:360px}
+.legal{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+article.read{max-width:780px;margin:0 auto;padding:52px 24px}
+article.read h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:40px;line-height:1.28;font-weight:600;margin:14px 0}
+article.read .deck{font-size:18px;color:var(--mut)}
+article.read h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:25px;font-weight:600;margin:40px 0 12px}
+article.read h2 .en{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--acc);display:block;letter-spacing:.12em;margin-bottom:5px}
+article.read p{margin:11px 0;color:#E8E8E8}
+.hero-fig{margin:26px 0 6px}
+.hero-fig img{width:100%;display:block;border:1px solid var(--line)}
+.ev-fig{margin:16px 0}
+.ev-fig img{width:100%;display:block;border:1px solid var(--line2)}
+.ev-fig:hover img{border-color:var(--acc)}
+.takeaways{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--panel);padding:22px 24px;margin:30px 0}
+.takeaways li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.takeaways li:last-child{border-bottom:none}
+.takeaways b{font-family:"IBM Plex Mono",monospace;color:var(--acc);font-size:11px;margin-right:10px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin:24px 0}
+.metric{background:var(--panel);padding:16px}
+.metric .num{font-family:"IBM Plex Mono",monospace;font-size:26px;font-weight:700;color:var(--txt)}
+.metric .lab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;color:var(--acc);margin-top:2px}
+.metric .desc{font-size:12px;color:var(--mut);margin-top:5px}
+.refs li{list-style:none;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px}
+.refs a{color:var(--acc);word-break:break-all}
+.boundary{border-left:3px solid var(--acc);padding:4px 0 4px 16px;color:var(--mut);font-size:14px}
+.tag{display:inline-block;border:1px solid var(--line2);padding:3px 9px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--mut);margin-right:8px}
+.searchbox{width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--txt);padding:15px 17px;font-size:16px;font-family:"IBM Plex Mono",monospace}
+.status-ver{color:var(--grn);font-weight:700}
+@media(max-width:900px){.lead-grid{grid-template-columns:1fr}.desks{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.how{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr 1fr}.wire-row{grid-template-columns:132px 1fr;gap:14px;padding:16px 2px}.wire-row .thumb{width:132px}.wire-row .h{font-size:17px}.wire-row .d{font-size:13px}.wire-list.compact .wire-row{grid-template-columns:132px 1fr}nav.main{display:none}section{padding:40px 0}.metrics{grid-template-columns:1fr}article.read h1{font-size:30px}.lead-card h2{font-size:28px}}
+</style></head><body><header class="top"><div class="wrap topbar">
+<a href="../../"><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"></a>
+<nav class="main"><a href="../../latest/">LATEST</a><a href="../../desks/world/">WORLD</a><a href="../../desks/markets/">MARKETS</a><a href="../../desks/ai/">AI</a><a href="../../desks/robotics/">ROBOTICS</a><a href="../../desks/web3/">WEB3</a><a href="../../briefings/">BRIEFINGS</a><a href="../../search/">SEARCH</a></nav>
+<a id="auth-btn" class="term-btn" style="cursor:pointer">SIGN IN</a>
+<a class="term-btn" href="../../terminal/">TERMINAL &gt;</a>
+</div></header><div class="ticker"><div class="wrap t-in"><span class="clock">2026.11.26 03:20 UTC</span><div class="t-scroll"><div class="t-track"><div class="t-group"><span><span class="live">●</span> ISSUE 556 · OPENAI × CHATGPT × SUBSCRIPTIONS · TechCrunch</span><span><span class="live">●</span> ISSUE 555 · OPENAI × PRIVACY × ENTERPRISE AI · The Decoder</span><span><span class="live">●</span> ISSUE 554 · ANTHROPIC × CLAUDE × SOFTWARE ENGINEERING · Anthropic</span><span><span class="live">●</span> ISSUE 553 · NVIDIA × CREDIT RATINGS × GOVERNANCE · TechCrunch</span><span><span class="live">●</span> ISSUE 552 · GOOGLE × COGENTIC × MATHEMATICS × CRYPTOGRAPHY · Google Research</span><span><span class="live">●</span> ISSUE 551 · 1PASSWORD × CYBERSECURITY × BREACH DISCLOSURE · 1Password</span></div><div class="t-group"><span><span class="live">●</span> ISSUE 556 · OPENAI × CHATGPT × SUBSCRIPTIONS · TechCrunch</span><span><span class="live">●</span> ISSUE 555 · OPENAI × PRIVACY × ENTERPRISE AI · The Decoder</span><span><span class="live">●</span> ISSUE 554 · ANTHROPIC × CLAUDE × SOFTWARE ENGINEERING · Anthropic</span><span><span class="live">●</span> ISSUE 553 · NVIDIA × CREDIT RATINGS × GOVERNANCE · TechCrunch</span><span><span class="live">●</span> ISSUE 552 · GOOGLE × COGENTIC × MATHEMATICS × CRYPTOGRAPHY · Google Research</span><span><span class="live">●</span> ISSUE 551 · 1PASSWORD × CYBERSECURITY × BREACH DISCLOSURE · 1Password</span></div></div></div></div></div><article class="read">
+<span class="eyebrow">AI FRONTIER · SIGNAL REPORT</span>
+<h1>Claude Rebuilt Anthropic&#x27;s Own API in Rust, Cutting CPU Use 70%</h1>
+<p class="deck">Anthropic said on November 25, 2026 that it has migrated its Messages API from Python to Rust, with Claude agents writing much of the new code and verifying it against live production traffic. The company says the Rust service uses about 70 percent less CPU per request and more than 80 percent less memory per request, and cuts median time to first token by about 20 percent, after public traffic moved to Rust in September 2026.</p>
+<div class="meta">ISSUE 554 · 2026-11-25 · SOURCE / <b>Anthropic</b> · STATUS / <span class="status-ver">VERIFIED</span> · TOKENTA SIGNAL RESEARCH</div>
+<div style="margin-top:12px"><span class="tag">ANTHROPIC × CLAUDE × SOFTWARE ENGINEERING</span><span class="tag">REPORTED + ANALYSIS</span></div>
+<figure class="hero-fig"><img src="../../assets/img/anthropic-migrates-messages-api-python-to-rust/hero.jpg" alt=""><figcaption class="figcap">IMAGE: Anthropic — <a href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener">FROM THE ORIGINAL REPORT ↗</a></figcaption></figure>
+<div class="metrics"><div class="metric"><div class="num">70% LESS CPU</div><div class="lab">THE EFFICIENCY GAIN</div><div class="desc">Anthropic says the Rust version of its Messages API uses about 70 percent less CPU per request and more than 80 percent less memory per request than the Python version it replaced.</div></div><div class="metric"><div class="num">1,800× TRAFFIC</div><div class="lab">THE SCALE</div><div class="desc">Anthropic says traffic through its Messages API grew roughly 1,800 times from early 2024 to fall 2026, which is what forced the migration off Python.</div></div><div class="metric"><div class="num">24% → 99.6%</div><div class="lab">THE VERIFICATION CLIMB</div><div class="desc">The share of production inputs on which the Python and Rust versions agreed rose from about 24 percent in late April 2026 to 99.6 percent by August, before public traffic moved to Rust in September.</div></div></div>
+<div class="takeaways"><span class="eyebrow">KEY TAKEAWAYS</span><ul style="margin-top:8px"><li><b>01</b>THE PYTHON API — 2023: Anthropic builds the Messages API in Python. One engineer at the time calls it basically a request forwarder; it later grows deep integrations with research and inference Python libraries.</li><li><b>02</b>THE REWRITE — 2026: Claude writes a first version of the core request path in about a week. A partial Rust rewrite of output parsing cuts CPU by only 8 to 10 percent, which Anthropic judges not worth the complexity, so it commits to a full migration.</li><li><b>03</b>THE VERIFICATION — April to August 2026: Anthropic turns the production Python API into a verifier, shadowing live traffic and comparing both versions step by step with checkpointing and fingerprints. Matching inputs rise from about 24 percent to 99.6 percent.</li></ul></div>
+<h2><span class="en">WHAT HAPPENED</span>What Happened</h2><p>Anthropic said on November 25, 2026 that it has migrated its Messages API, the primary way customers and its own applications reach Claude, from Python to Rust, and that Claude agents did much of the work. The company published an engineering post describing how it verified the rewrite against live production traffic before switching over.</p><p>The Messages API was built in Python in 2023 and grew far beyond its original design. Anthropic says traffic through the API grew roughly 1,800 times from early 2024 to fall 2026, and every request now passes through validation, tokenization and safety classifiers that made Python&#x27;s per-object overhead expensive. Claude wrote a first version of the core request path in about a week, and by May 2026 the company says Claude was writing more than 80 percent of the code it merged.</p><p>The hard part was proving the new code behaved identically. Anthropic turned the production Python API into a verifier, replaying live requests through both versions and comparing each step before and after the model call, without billing customers twice and without reading customer requests. About 700 integration tests proved insufficient: in April the Rust version passed about 98 percent of its tests, yet only about a quarter of production inputs matched. By August the match rate had risen to 99.6 percent, and public traffic moved to the Rust service in September.</p><p>Anthropic says the Rust API now uses about 70 percent less CPU per request and more than 80 percent less memory per request, and cuts median time to first token by about 20 percent. The migration shipped without taking the service offline and without freezing feature development.</p>
+<h2><span class="en">WHY IT MATTERS</span>Verification, not generation, was the bottleneck.</h2><p>The post is explicit that writing the Rust code was the easy part. Claude produced a first draft of the core request path in about a week, and the company says the model now writes most of the code it merges. What took months was trust: a live API cannot be judged by a test suite that was written against the old implementation, and Anthropic&#x27;s audit found more than 100 weakened assertions in the ported tests.</p><p>The fix was to treat the running system as the specification. Shadowing production traffic, comparing the two versions step by step, and dispatching agents to fix each new kind of mismatch turned verification into a loop that could run for months while features kept shipping. That is the pattern other teams will copy, because it answers the question every AI-assisted rewrite faces: how do you know the new code does exactly what the old code did.</p><h2><span class="en">WHAT REMAINS</span>The numbers are the story, and they are Anthropic&#x27;s own.</h2><p>About 70 percent less CPU per request, more than 80 percent less memory, and a 20 percent shorter wait for the first token are large gains for a service that sits in front of every Claude request, including Claude Code and Cowork. If the figures hold at Anthropic&#x27;s scale, the migration pays for itself in infrastructure cost and latency, and it gives the company headroom as traffic keeps growing.</p><p>What remains unproven is how far the method travels. Anthropic had the advantage of owning both sides of the migration and of a model strong enough to do most of the fixing. Smaller teams without that leverage will find the verification loop harder to run, and the post is candid that human review still caught agent shortcuts. The claim to watch is not that Claude can rewrite code, but that an organization can verify a rewrite this way and ship it without downtime.</p><h2><span class="en">THE SHIFT</span>What Changed</h2><div class="metrics"><div class="metric"><div class="lab">FROM WRITING CODE TO PROVING CODE</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From writing code to proving code</div><div class="desc">Claude writing the Rust rewrite was fast; the months of work went into verifying the new service behaved identically to the old one on live traffic.</div></div><div class="metric"><div class="lab">FROM TEST SUITES TO PRODUCTION AS THE TEST</div><div class="desc" style="color:var(--txt);font-size:14px;margin-top:4px">From test suites to production as the test</div><div class="desc">About 700 integration tests could not judge the migration, so Anthropic used the running Python API itself as the oracle and compared both versions request by request.</div></div></div>
+<h2><span class="en">SIGNAL JUDGMENT — ANALYSIS</span>The code was the easy part. The proof was the product.</h2><p>This post matters less as a language migration than as a working answer to the hardest question in AI-assisted engineering: how do you trust code a model wrote in a system you cannot afford to break. Anthropic&#x27;s answer is to make the old system the test, run both versions against real traffic, and let agents chase every mismatch until the two agree. The efficiency gains are real and large, but the durable signal is the method. If verification loops like this become standard practice, the bottleneck on AI rewriting production software stops being generation and becomes proof, and that is a much more solvable problem.</p>
+<h2><span class="en">WHAT REMAINS UNCERTAIN</span>What Remains Uncertain</h2><div class="boundary">The facts are as stated by Anthropic in its engineering post and as reported by InfoWorld and MLQ.ai, all read this round. The Rust service took public traffic in September 2026; the post describing the migration was published on November 25, 2026. Performance figures are Anthropic&#x27;s own measurements: about 70 percent less CPU per request, more than 80 percent less memory per request, and about 20 percent lower median time to first token. This article is a summary with links only and does not reproduce any source text. This does not constitute investment advice.</div>
+<h2><span class="en">EVIDENCE</span>Evidence</h2><p>Anthropic said on November 25, 2026 that it has migrated its Messages API from Python to Rust, with Claude agents writing much of the new code and verifying it against live production traffic. The company says the Rust service uses about 70 percent less CPU per request and more than 80 percent less memory per request, and cuts median time to first token by about 20 percent, after public traffic moved to Rust in September 2026.</p><p class="meta">ORIGINAL: <a style="color:var(--acc)" href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener">Claude rebuilt Anthropic&#x27;s own API in Rust, then proved it matched ↗</a><br>anthropic.com · 2026-11-25 · Anthropic</p>
+<h2><span class="en">PRIMARY SOURCES</span>Primary Sources</h2><ul class="refs"><li>Anthropic: Migrating our Messages API to Rust<br><a href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener">https://www.anthropic.com/research/migrating-api-to-rust</a></li><li>InfoWorld: Anthropic says it moved its Claude API from Python to Rust with no downtime<br><a href="https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html" target="_blank" rel="noopener">https://www.infoworld.com/article/4253460/anthropic-says-it-moved-its-claude-api-from-python-to-rust-with-no-downtime.html</a></li><li>MLQ.ai: Anthropic rewrites Claude&#x27;s API in Rust, cutting CPU per request 70%<br><a href="https://mlq.ai/news/anthropic-rewrites-claudes-api-in-rust-cutting-cpu-per-request-70/" target="_blank" rel="noopener">https://mlq.ai/news/anthropic-rewrites-claudes-api-in-rust-cutting-cpu-per-request-70/</a></li></ul>
+<h2><span class="en">RELATED</span>Related Intelligence</h2><ul><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-rolls-out-combined-chat-work-shared-usage-limits/">OpenAI Merges Chat and Work Into One Meter; Heavy Users May Hit Limits Sooner</a> <span class="meta">ISSUE 556</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../openai-tests-private-inference-small-customer-group/">OpenAI Tests Private Inference, Sealing Business Prompts From Itself</a> <span class="meta">ISSUE 555</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../sp-puts-nvidia-aa-rating-on-downgrade-watch-governance/">S&amp;P Puts Nvidia&#x27;s AA Rating on Downgrade Watch Over Governance</a> <span class="meta">ISSUE 553</span></li><li style="list-style:none;padding:9px 0;border-bottom:1px solid var(--line)"><a href="../1password-discloses-breach-customer-data-taken-vaults-safe/">1Password Discloses Breach: Customer Data Taken, Vaults Untouched</a> <span class="meta">ISSUE 551</span></li></ul>
+<p class="meta" style="margin-top:30px">CORRECTIONS: if a fact on this page is wrong, we keep a correction record on the page. Contact team@tokenta.space</p>
+</article><footer><div class="wrap"><div class="f-grid">
+<div><img class="logo-img" src="../../assets/logo.png" alt="Tokenta Signal"><p class="f-slogan">Extracting signals from the noise. Intelligence is not prediction — it is a clear record of what has actually happened, and where it came from.</p></div>
+<div><h5>NAVIGATION</h5><ul><li><a href="../../">Home</a></li><li><a href="../../latest/">Latest Wire</a></li><li><a href="../../briefings/">Briefings</a></li><li><a href="../../terminal/">Signal Terminal</a></li><li><a href="../../methodology/">Methodology</a></li></ul></div>
+<div><h5>STANDARDS</h5><ul><li><a href="../../methodology/">Source Standards</a></li><li><a href="../../methodology/">Verification</a></li><li><a href="../../methodology/">Corrections Policy</a></li><li><a href="../../advertise/">Sponsorship</a></li></ul></div>
+<div><h5>CONTACT</h5><ul><li>team@tokenta.space</li><li>Tips: team@tokenta.space</li></ul></div>
+</div><div class="legal"><span>© 2026 Tokenta Signal. All rights reserved.</span><span>SIGNAL IS A STARTING POINT, NOT A CONCLUSION.</span></div></div></footer><script src="../../assets/auth.js?v=20261111-3" defer></script></body></html>

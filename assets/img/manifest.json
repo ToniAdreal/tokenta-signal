@@ -3673,5 +3673,26 @@
   "credit_name": "TechCrunch",
   "hero_from": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
   "evidence_from": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+ },
+ "anthropic-migrates-messages-api-python-to-rust": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Anthropic",
+  "hero_from": "https://www.anthropic.com/research/migrating-api-to-rust",
+  "evidence_from": ""
+ },
+ "openai-tests-private-inference-small-customer-group": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "The Decoder",
+  "hero_from": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/",
+  "evidence_from": "https://www.unite.ai/openai-begins-limited-customer-trials-of-alpha-private-inference/"
+ },
+ "openai-rolls-out-combined-chat-work-shared-usage-limits": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+  "evidence_from": ""
  }
 }
