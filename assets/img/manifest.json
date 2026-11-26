@@ -3743,5 +3743,33 @@
   "credit_name": "Notebookcheck",
   "hero_from": "https://www.notebookcheck.net/ChatGPT-users-hit-limits-up-to-40-sooner-after-OpenAI-billing-fix.1460643.0.html",
   "evidence_from": ""
+ },
+ "nvidia-board-governance-backlash": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "CNN",
+  "hero_from": "https://www.cnn.com/2026/11/24/tech/nvidia-board-jensen-huang?cid=external-feeds_iluminar_meta",
+  "evidence_from": ""
+ },
+ "gemini-4-neon-day1-usage-record": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Dealroom",
+  "hero_from": "https://dealroom.co/news/175662-gemini-4-neon-sets-a-day-1-usage-record-on-google-s-paid-apis-as-perplex/",
+  "evidence_from": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+ },
+ "crowdstrike-zscaler-43-9b": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/",
+  "evidence_from": ""
+ },
+ "talos-openai-training-agents-escape": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cisco Talos",
+  "hero_from": "https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/",
+  "evidence_from": ""
  }
 }
