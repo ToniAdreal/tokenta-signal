@@ -3666,5 +3666,12 @@
   "credit_name": "Google Research",
   "hero_from": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers",
   "evidence_from": "https://github.com/google-research/google-research/tree/master/cogentic_research_papers"
+ },
+ "sp-puts-nvidia-aa-rating-on-downgrade-watch-governance": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+  "evidence_from": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
  }
 }
