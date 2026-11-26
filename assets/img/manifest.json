@@ -3729,5 +3729,19 @@
   "credit_name": "GitHub",
   "hero_from": "https://github.com/lsernau/grh-lean",
   "evidence_from": "https://math.mit.edu/~drew/shortgrh/"
+ },
+ "nvidia-halts-ai-server-shipments-southeast-asia": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Reuters (via LA Post)",
+  "hero_from": "https://www.lapost.com/content/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports",
+  "evidence_from": ""
+ },
+ "openai-fixes-gpt-6-2-billing-error-limits-sooner": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Notebookcheck",
+  "hero_from": "https://www.notebookcheck.net/ChatGPT-users-hit-limits-up-to-40-sooner-after-OpenAI-billing-fix.1460643.0.html",
+  "evidence_from": ""
  }
 }
