@@ -3722,5 +3722,12 @@
   "credit_name": "WinBuzzer",
   "hero_from": "https://winbuzzer.com/2026/11/25/openrouter-drops-three-ai-hosting-companies-after-test-credentials-leak-from-prompts-xcxwbn/",
   "evidence_from": ""
+ },
+ "shorter-riemann-proof-paranoid-comparator-pass": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "GitHub",
+  "hero_from": "https://github.com/lsernau/grh-lean",
+  "evidence_from": "https://math.mit.edu/~drew/shortgrh/"
  }
 }
