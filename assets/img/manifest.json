@@ -3715,5 +3715,12 @@
   "credit_name": "Hugging Face",
   "hero_from": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B",
   "evidence_from": ""
+ },
+ "minimax-named-dragos-prompt-leak": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "WinBuzzer",
+  "hero_from": "https://winbuzzer.com/2026/11/25/openrouter-drops-three-ai-hosting-companies-after-test-credentials-leak-from-prompts-xcxwbn/",
+  "evidence_from": ""
  }
 }
