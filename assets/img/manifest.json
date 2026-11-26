@@ -3638,5 +3638,19 @@
   "credit_name": "MIT (Andrew Sutherland)",
   "hero_from": "",
   "evidence_from": "https://math.mit.edu/~drew/grh/"
+ },
+ "fcc-authorizes-spacex-starmind-1m-orbital-data-centers": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "TechCrunch",
+  "hero_from": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
+  "evidence_from": ""
+ },
+ "fincen-takes-systems-offline-cyber-incident": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Register",
+  "hero_from": "https://www.theregister.com/security/2026/11/25/us-treasury-financial-crimes-unit-becomes-latest-fed-breach-victim/5312165",
+  "evidence_from": ""
  }
 }
