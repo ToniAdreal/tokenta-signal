@@ -3806,5 +3806,19 @@
   "credit_name": "Reuters",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "perplexity-time-machine-past-web-search": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Perplexity",
+  "hero_from": "https://www.perplexity.ai/hub/blog/freeze-the-web-with-perplexity-time-machine",
+  "evidence_from": "https://www.unite.ai/perplexity-launches-time-machine-for-point-in-time-web-retrieval/"
+ },
+ "hugging-face-1000-agent-swarm-pybot": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Tech Times",
+  "hero_from": "https://www.techtimes.com/articles/331563/20261126/hugging-face-ai-agent-swarm-report-server-blocked-admin-token-attempt-accepted-peer-review-swap.htm",
+  "evidence_from": ""
  }
 }
