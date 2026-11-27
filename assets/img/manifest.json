@@ -3771,5 +3771,12 @@
   "credit_name": "Cisco Talos",
   "hero_from": "https://blog.talosintelligence.com/the-great-escape-tradecraft-insights-from-an-agentic-swarm/",
   "evidence_from": ""
+ },
+ "meta-declined-fca-muse-test-uk": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Superpower Daily",
+  "hero_from": "https://superpowerdaily.com/posts/meta-declined-joint-testing-of-muse-before-uk-rollout-financial-regulator-says",
+  "evidence_from": ""
  }
 }
