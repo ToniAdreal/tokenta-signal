@@ -3778,5 +3778,33 @@
   "credit_name": "Superpower Daily",
   "hero_from": "https://superpowerdaily.com/posts/meta-declined-joint-testing-of-muse-before-uk-rollout-financial-regulator-says",
   "evidence_from": ""
+ },
+ "bank-of-england-ai-financing-financial-stability-warning": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "StockAnalysis",
+  "hero_from": "https://stockanalysis.com/news/boe-financial-stability-report-ai-november-2026/",
+  "evidence_from": ""
+ },
+ "neuralink-fda-approves-link-pivotal-bci-trial-als": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Neuralink",
+  "hero_from": "https://neuralink.com/updates/neuralink-receives-fda-approval-to-launch-link-pivotal-study/",
+  "evidence_from": ""
+ },
+ "google-workspace-mcp-servers-ga-tiered-pricing": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Google for Developers",
+  "hero_from": "https://developers.google.com/workspace/guides/quota-usage-tiers",
+  "evidence_from": "https://developers.google.com/workspace/guides/quota-usage-tiers"
+ },
+ "sap-prepares-sizeable-job-cuts-ai-restructuring": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "Reuters",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
