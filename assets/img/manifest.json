@@ -3820,5 +3820,19 @@
   "credit_name": "Tech Times",
   "hero_from": "https://www.techtimes.com/articles/331563/20261126/hugging-face-ai-agent-swarm-report-server-blocked-admin-token-attempt-accepted-peer-review-swap.htm",
   "evidence_from": ""
+ },
+ "polinrider-north-korea-poisons-7600-github-repos": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Hacker News",
+  "hero_from": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
+  "evidence_from": ""
+ },
+ "openai-nine-math-manuscripts-smale-hirsch-vp-vnp": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "MLQ.ai",
+  "hero_from": "https://mlq.ai/news/openai-posts-unreviewed-proofs-claiming-answers-to-smales-ninth-problem-and-valiants-vp-vs-vnp-question/",
+  "evidence_from": ""
  }
 }
