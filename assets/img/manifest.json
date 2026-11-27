@@ -3834,5 +3834,19 @@
   "credit_name": "MLQ.ai",
   "hero_from": "https://mlq.ai/news/openai-posts-unreviewed-proofs-claiming-answers-to-smales-ninth-problem-and-valiants-vp-vs-vnp-question/",
   "evidence_from": ""
+ },
+ "japan-ai-law-inspections-frontier-models": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Nikkei Asia",
+  "hero_from": "https://asia.nikkei.com/business/technology/artificial-intelligence/ai-firms-with-poor-safeguards-face-inspections-under-japan-draft-law",
+  "evidence_from": ""
+ },
+ "cloudflare-search-for-agents-well-known": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "Cloudflare",
+  "hero_from": "https://blog.cloudflare.com/search-for-agents/",
+  "evidence_from": ""
  }
 }
