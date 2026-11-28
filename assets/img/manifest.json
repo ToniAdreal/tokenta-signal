@@ -3883,5 +3883,12 @@
   "credit_name": "explainx.ai, reporting Concordia AI's assessment",
   "hero_from": "https://explainx.ai/blog/deepseek-v4-pro-shutdown-scripts-concordia-ai-safety-report-november-2026",
   "evidence_from": ""
+ },
+ "uk-parliament-demands-unredacted-metr-report": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "The Decoder, reporting the committee letter",
+  "hero_from": "https://the-decoder.com/uk-parliament-demands-unredacted-metr-safety-report-after-anthropic-redacts-most-of-the-evidence/",
+  "evidence_from": ""
  }
 }
