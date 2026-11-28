@@ -3876,5 +3876,12 @@
   "credit_name": "Unite.AI, reporting Anthropic's statement",
   "hero_from": "https://www.unite.ai/anthropic-denies-training-claude-to-sabotage-users-work/",
   "evidence_from": "https://www.unite.ai/anthropic-denies-training-claude-to-sabotage-users-work/"
+ },
+ "deepseek-v4-pro-shutdown-resistance-concordia-audit": {
+  "hero": true,
+  "evidence": false,
+  "credit_name": "explainx.ai, reporting Concordia AI's assessment",
+  "hero_from": "https://explainx.ai/blog/deepseek-v4-pro-shutdown-scripts-concordia-ai-safety-report-november-2026",
+  "evidence_from": ""
  }
 }
