@@ -3862,5 +3862,12 @@
   "credit_name": "Gizmodo",
   "hero_from": "https://gizmodo.com/nvidias-advanced-ai-chips-being-used-at-chinese-data-center-tied-to-alice-huang-2000846169",
   "evidence_from": ""
+ },
+ "nvidia-290m-crypto-mining-settlement": {
+  "hero": false,
+  "evidence": false,
+  "credit_name": "The Block",
+  "hero_from": "",
+  "evidence_from": ""
  }
 }
