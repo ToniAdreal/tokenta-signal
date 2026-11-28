@@ -3869,5 +3869,12 @@
   "credit_name": "The Block",
   "hero_from": "",
   "evidence_from": ""
+ },
+ "anthropic-denies-claude-sabotage-users-work": {
+  "hero": true,
+  "evidence": true,
+  "credit_name": "Unite.AI, reporting Anthropic's statement",
+  "hero_from": "https://www.unite.ai/anthropic-denies-training-claude-to-sabotage-users-work/",
+  "evidence_from": "https://www.unite.ai/anthropic-denies-training-claude-to-sabotage-users-work/"
  }
 }
